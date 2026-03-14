@@ -94,3 +94,42 @@ Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHea
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
+
+---
+
+## VoiceoverGuy Website (`artifacts/web`)
+
+**Goal:** Faithful Next.js 14 (App Router) rebuild of voiceoverguy.co.uk — Guy Harris, professional British male voiceover artist.
+
+### Architecture
+
+- **Framework:** Next.js 14.2.29 (App Router, Server Components)
+- **Port:** 22333 (dev and start scripts bind to `0.0.0.0:22333`)
+- **Styling:** Custom CSS in `src/app/globals.css` (no Tailwind — vanilla CSS with CSS variables)
+- **Fonts:** Ubuntu (headings) + Open Sans (body) via Google Fonts `@import` in CSS
+- **Brand colours:** Primary red `#9C060B`, dark crimson `#7a0508`, black, white
+
+### Key Files
+
+- `src/app/layout.tsx` — Root layout with Navbar + Footer
+- `src/app/globals.css` — All global styles + CSS variables
+- `src/app/page.tsx` — Homepage
+- `src/components/Navbar.tsx` — Full navbar with all dropdowns (client component)
+- `src/components/Footer.tsx` — Footer with social links
+- `src/components/FaqAccordion.tsx` — Interactive FAQ accordion (client component)
+- `src/components/ContactForm.tsx` — Contact form with live pricing calculator (client component)
+- `src/components/NewsSection.tsx` — Latest news with show-more toggle (client component)
+- `src/data/news.ts` — All 34 news items from live site
+- `src/data/projects.ts` — Portfolio project data for dynamic [slug] route
+
+### Pages Built
+
+Core pages: `/`, `/voiceoverguy`, `/commercial-voiceover`, `/apple-voice-style`, `/voice-of-god`, `/santa-voice`, `/david-attenborough-voice`, `/football-commentator-voice`, `/FAQ`, `/contact-guy`, `/voiceover-studio`
+
+Dynamic route: `/[slug]` — serves portfolio/project pages from `src/data/projects.ts`
+
+404: `src/app/not-found.tsx`
+
+### React Version Note
+
+React 19.1.0 is used (from workspace catalog). Next.js 14 expects React 18 but works correctly with React 19 despite peer warning. Do not downgrade React — it is pinned at 19.1.0 for the Expo mobile artifact.

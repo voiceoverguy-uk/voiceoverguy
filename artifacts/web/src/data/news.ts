@@ -1,0 +1,125 @@
+export interface NewsItem {
+  text: string;
+  linkText?: string;
+  linkHref?: string;
+  prefix?: string;
+  suffix?: string;
+}
+
+// Populated from live site voiceoverguy.co.uk — 14 Mar 2026
+// TODO: replace with CMS or API feed
+export const newsItems: NewsItem[] = [
+  {
+    text: "How is your breath? Need a freshen? You need the Breath CO Mouthwash! Oh, I voiced the ad!",
+    linkText: "Check it out!",
+    linkHref: "https://www.voiceoverguy.co.uk/",
+  },
+  {
+    text: "So proud to be LEGO Minifigure CakeGuy for Legoland Resort Windsor. You'll hear him every day at the Daily Park Opening Ceremony in 2026.",
+  },
+  {
+    text: "My daughter continues to do well with her Voice work. Still only 9 she's had some nice jobs already in 2026. And it's only Feb!.",
+  },
+  {
+    text: "Awesome to be the Voice of God for the TV Choice Awards 2026 for the 5th year running. Hob Nob'ing with celebs getting celeb messages for my daughter.",
+  },
+  {
+    text: "Shhhhh.... back in the studio exhausting my character voices for a top secret project with Team-17. Can't wait to share more.",
+  },
+  {
+    text: "Currently playing 3 robots in The Last Person on Earth. A new Podcast series. Listen for HVMP, D10 and Tin Man.",
+  },
+  {
+    text: "My voice of Santa was added to a fantastic animation for P&O social media campaign. I can't wait to share. The animation looked stunning!",
+  },
+  {
+    text: "Voiceover Studio Finder 2.0 launched. Soon to be the No.1 site for finding a local Voiceover booth for agencies or travelling Voiceover artists.",
+    linkText: "Voiceover Studio Finder",
+    linkHref: "/voiceover-studio-finder",
+  },
+  {
+    text: "Listen out for Santa in 2025 on the Global Radio Network as part of the massive amount of money given away on CASH CALL.",
+  },
+  {
+    text: "Is there a Free Santa or Father Christmas Script Generator? Ho Ho Ho yes there is!",
+    linkText: "The Santa Script Generator.",
+    linkHref: "/santa-script-generator",
+  },
+  {
+    text: "Coming soon! Now the voice of Mr Messy and Mr Funny for the Mr Men series.",
+  },
+  {
+    text: "Is there a David Attenborough Script Generator? There is! We built a FREE",
+    linkText: "David Attenborough Script Generator.",
+    linkHref: "/attenborough-script-generator",
+  },
+  {
+    text: "The Artificial Intelligence of - AI GUY! Professional Human Voiceover or AI?",
+    linkText: "Click Here",
+    linkHref: "/ai-guy-human-vs-ai-voiceover",
+    suffix: " to learn why Human First!",
+  },
+  {
+    text: "It's Halloween time! — if you're looking for some Spooky Halloween Laughs, have a listen and see how I can bring your project to life.",
+  },
+  {
+    text: "HIDE The Corpse Promo - My Matt Berry & Patrick Stewart Voice mashed up for this hilarious promo. Need a British Male Voice?",
+  },
+  {
+    text: "XM Trading asked me to voice their male promo voice. Might give this a go!",
+  },
+  {
+    text: "Ideal for knackered parents who like their formula bottle prep stress-free... The Nuby Milk Race Commentator Voice.",
+  },
+  {
+    text: "Fantasy EFL asked for me to help promote their new product (coming soon)",
+  },
+  {
+    text: "Want to hear Santa live on the radio? Check out On-Air Chat with Santa – the festive favourite!",
+  },
+  {
+    text: "Skipton Building Society wanted to promote their energy saving retrofit products, so I was happy to help with the male voice over.",
+  },
+  {
+    text: "Currently voicing the competition spot on Britains Got Talent 2025.",
+  },
+  {
+    text: "GB News back for 2025 with the competitions. You'll hear me on the promos delivered with fun and energy.",
+  },
+  {
+    text: "Thomas & Friends All Engines Go' - The Voice of Salty, and The Voice of Winston Plus The Blue Troublesome Tanker.",
+  },
+  {
+    text: "The studio Yorkshire continues to be hired for actors at Emmerdale and Games producers for local Yorkshire talent. Book Now.",
+  },
+  {
+    text: "Take a behind-the-scenes look at my recording setup on the Studio Tour — where the voices come to life.",
+  },
+  {
+    text: "Ever wondered what life in a VO booth really looks like? Check out my Voiceover Cartoons series – light-hearted fun from inside the soundproof box!",
+  },
+  {
+    text: "Off to Butlins? Enjoy... The Voice of The Masked Singer! Oh and of course, the voiceovers for it.",
+  },
+  {
+    text: "Nice to add Compare the Meerkat as a client this year too. Internal thing. Can't share sadly.",
+  },
+  {
+    text: "For GuruBox they needed a Craig Cash Gogglebox style VoiceOver. I think I delivered well.",
+  },
+  {
+    text: "The voice promoting Gregory Porter's UK Tour on TV across the UK.",
+  },
+  {
+    text: "Back on the TV with the Harpic Fresh Stickers on TV and the Web, thats me.",
+  },
+  {
+    text: "National Radio advert for Samsung OLed TV",
+  },
+  {
+    text: "Stephen Mulherns fab ITV Show In for a Penny - Seabrooks sponsorship.",
+  },
+  {
+    text: "As heard on Vernon Kays Ultra Ultra Marathon on BBC Radio 2 for Children in Need 2023.",
+  },
+];
