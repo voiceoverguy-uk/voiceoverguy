@@ -21,8 +21,8 @@ import InnerPage from '@/components/InnerPage';
         <InnerPage sections={[
           { text: data.s4 },
           { vimeoId: data.s7 },
-          { vimeoId: data.s8 },
           { text: data.s5 },
+          { vimeoId: data.s8 },
           { text: data.s6 },
           { vimeoId: data.s9 },
           { text: data.s10 },

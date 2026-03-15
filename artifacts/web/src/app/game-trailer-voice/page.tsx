@@ -25,8 +25,8 @@ import InnerPage from '@/components/InnerPage';
           { youtubeId: data.s8 },
           { text: data.s6 },
           { youtubeId: data.s9 },
-          { youtubeId: data.s10 },
           { text: data.s11 },
+          { youtubeId: data.s10 },
           { text: data.s12 },
           { youtubeId: data.s13 },
         ]} />

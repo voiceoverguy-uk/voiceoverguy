@@ -21,8 +21,8 @@ import InnerPage from '@/components/InnerPage';
         <InnerPage sections={[
           ...(data.s4 ? [{ text: data.s4 }] : []),
           ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
-          ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
           ...(data.s5 ? [{ text: data.s5 }] : []),
+          ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
           ...(data.s6 ? [{ text: data.s6 }] : []),
           { imageSrc: '/assets/images/halloween-voice-og.jpg', imageAlt: 'Halloween Voice – Guy Harris' },
         ]} />
