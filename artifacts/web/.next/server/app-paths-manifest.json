@@ -1,7 +1,7 @@
 {
   "/page": "app/page.js",
   "/david-attenborough-voice/page": "app/david-attenborough-voice/page.js",
-  "/apple-voice-style/page": "app/apple-voice-style/page.js",
+  "/[slug]/page": "app/[slug]/page.js",
   "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
-  "/[slug]/page": "app/[slug]/page.js"
+  "/apple-voice-style/page": "app/apple-voice-style/page.js"
 }

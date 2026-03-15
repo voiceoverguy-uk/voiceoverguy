@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import NewsSection from '@/components/NewsSection';
+import ReviewBlock from '@/components/ReviewBlock';
 
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
@@ -112,9 +113,7 @@ export default function Home() {
             </p>
           </div>
 
-          <p className="star-rating">
-            ⭐ Rated 5.0 <span className="stars">★★★★★</span> by 119 Clients
-          </p>
+          <ReviewBlock />
         </div>
       </section>
 
