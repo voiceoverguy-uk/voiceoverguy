@@ -20,9 +20,9 @@ const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-character-voices.jpg',
     titleOverlay: 'Character Voices',
-    captionLine1: 'Character',
-    captionHighlight: 'Voice',
-    captionLine1End: 'Showreel',
+    captionLine1: '',
+    captionHighlight: 'Character',
+    captionLine1End: 'Voice Showreel',
     href: 'https://www.youtube.com/watch?v=Ad85PPvSfbc',
   },
   {
@@ -36,17 +36,17 @@ const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-explainer-voices.jpg',
     titleOverlay: 'Explainer Voices',
-    captionLine1: 'Explainer',
-    captionHighlight: 'Video',
-    captionLine1End: 'Showreel',
+    captionLine1: '',
+    captionHighlight: 'Explainer',
+    captionLine1End: 'Video Showreel',
     href: 'https://www.youtube.com/watch?v=TGD6Btk4twk',
   },
   {
     img: '/assets/images/voiceoverguy-home-what-i-do.jpg',
     titleOverlay: 'This is what I do...',
     captionLine1: 'Well? This is what',
-    captionHighlight: 'i',
-    captionLine1End: 'do',
+    captionHighlight: 'i do',
+    captionLine1End: '',
     href: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
   },
   {
@@ -146,10 +146,7 @@ export default function Home() {
           <p>
             Running an event, awards show or big stage production? My{' '}
             <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
-            delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>,<br />
-            <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong>{' '}
-            and the <strong>National History Museum</strong>. If you need a bold,<br />
-            authoritative announcer voice that fills the room and lifts the atmosphere — you&apos;ve found the right Guy.
+            delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere — you&apos;ve found the right Guy.
           </p>
         </div>
       </section>
@@ -167,7 +164,7 @@ export default function Home() {
             want a voice who just gets it right, you&apos;ve found the right Guy.
           </p>
           <p>
-            <Link href="/voiceoverguy" className="red-link">Read the full story →</Link>
+            <Link href="/why-use-voiceoverguy" className="red-link">Read the full story →</Link>
           </p>
         </div>
       </section>
@@ -231,11 +228,8 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section">
         <div className="container">
-          <p style={{ textAlign: 'center', marginBottom: '4px' }}>
-            Not sure where to start? Here are my most requested styles — from commercial reads to character voices.
-          </p>
           <p style={{ textAlign: 'center', marginBottom: '24px' }}>
-            Each video below gives you a quick taste of how I can bring your project to life.
+            Not sure where to start? Here are my most requested styles — from commercial reads to character voices. Each video below gives you a quick taste of how I can bring your project to life.
           </p>
           <div className="video-grid">
             {videoTiles.map(v => (
