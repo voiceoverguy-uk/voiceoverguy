@@ -15,7 +15,7 @@ const videoTiles = [
     captionLine1: 'Male',
     captionHighlight: 'Voiceover',
     captionLine1End: 'Showreel',
-    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
+    href: 'https://www.youtube.com/watch?v=9bs4CJ4RixI',
   },
   {
     img: '/assets/images/voiceoverguy-home-character-voices.jpg',
@@ -23,7 +23,7 @@ const videoTiles = [
     captionLine1: 'Character',
     captionHighlight: 'Voice',
     captionLine1End: 'Showreel',
-    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
+    href: 'https://www.youtube.com/watch?v=Ad85PPvSfbc',
   },
   {
     img: '/assets/images/voiceoverguy-home-apple-voice.jpg',
@@ -31,7 +31,7 @@ const videoTiles = [
     captionLine1: 'Apple',
     captionHighlight: 'iPhone',
     captionLine1End: 'TV Ads',
-    href: 'https://www.youtube.com/watch?v=V6HuBB4WqxQ',
+    href: 'https://www.youtube.com/watch?v=uYDQObLc1vw',
   },
   {
     img: '/assets/images/voiceoverguy-home-explainer-voices.jpg',
@@ -39,7 +39,7 @@ const videoTiles = [
     captionLine1: 'Explainer',
     captionHighlight: 'Video',
     captionLine1End: 'Showreel',
-    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
+    href: 'https://www.youtube.com/watch?v=TGD6Btk4twk',
   },
   {
     img: '/assets/images/voiceoverguy-home-what-i-do.jpg',
@@ -47,7 +47,7 @@ const videoTiles = [
     captionLine1: 'Well? This is what',
     captionHighlight: 'i',
     captionLine1End: 'do',
-    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
+    href: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
   },
   {
     img: '/assets/images/voiceoverguy-home-voice-of-santa.jpg',
@@ -130,7 +130,7 @@ export default function Home() {
             Choose from{' '}
             <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
             <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
-            <Link href="/pathe-news-voice" className="red-link">Pathé News Voiceover</Link>,{' '}
+            <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
             <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,<br />
             and his highly requested{' '}
             <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
@@ -182,7 +182,7 @@ export default function Home() {
           </p>
           <p>
             Her clear, natural young girl voice is ideal for animation, radio, and commercials.<br />
-            <a href="#" className="red-link">Listen to her child voiceover demos</a> or visit{' '}
+            <Link href="/arabella-harris-girl-child-voiceover-kid" className="red-link">Listen to her child voiceover demos</Link> or visit{' '}
             <a href="https://www.arabellaharris.com" target="_blank" rel="noopener noreferrer" className="red-link">ArabellaHarris.com</a>{' '}
             to learn more.
           </p>
