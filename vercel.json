@@ -1,6 +1,14 @@
 {
-  "framework": "nextjs",
+  "framework": null,
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/web run build",
-  "outputDirectory": "artifacts/web/.next"
+  "outputDirectory": "artifacts/web/out",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ]
 }
