@@ -81,11 +81,11 @@ export default function Navbar() {
           {/* Nav items */}
           <ul className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar">
             <li className="nav-item" role="none">
-              <Link href="/" className="nav-link" role="menuitem">Home</Link>
+              <Link href="/" className="nav-link" role="menuitem"><span className="nav-icon">🏠</span> Home</Link>
             </li>
 
             <li className="nav-item" role="none">
-              <Link href="/voiceoverguy" className="nav-link" role="menuitem">&nbsp;Who&nbsp;</Link>
+              <Link href="/voiceoverguy" className="nav-link" role="menuitem"><span className="nav-icon">ℹ</span>&nbsp;Who&nbsp;</Link>
             </li>
 
             {/* Voice Demos */}
@@ -101,7 +101,7 @@ export default function Navbar() {
                 onClick={() => toggleMobile('voice')}
 
               >
-                &nbsp;Voice Demos&nbsp;<span className="chevron">▾</span>
+                <span className="nav-icon">🎙</span>&nbsp;Voice Demos&nbsp;<span className="chevron">▾</span>
               </button>
               <ul className="dropdown-menu" role="menu">
                 {voiceDemos.map(item => (
@@ -125,7 +125,7 @@ export default function Navbar() {
                 onClick={() => toggleMobile('char')}
 
               >
-                &nbsp;Character Demos&nbsp;<span className="chevron">▾</span>
+                <span className="nav-icon">👤</span>&nbsp;Character Demos&nbsp;<span className="chevron">▾</span>
               </button>
               <ul className="dropdown-menu" role="menu">
                 {characterDemos.map(item => (
@@ -149,7 +149,7 @@ export default function Navbar() {
                 onClick={() => toggleMobile('video')}
 
               >
-                &nbsp;Video&nbsp;<span className="chevron">▾</span>
+                <span className="nav-icon">🎬</span>&nbsp;Video&nbsp;<span className="chevron">▾</span>
               </button>
               <ul className="dropdown-menu" role="menu">
                 {videos.map(item => (
@@ -170,11 +170,11 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item" role="none">
-              <Link href="/voiceover-news" className="nav-link" role="menuitem">&nbsp;News &amp; Blog&nbsp;</Link>
+              <Link href="/voiceover-news" className="nav-link" role="menuitem"><span className="nav-icon">📰</span>&nbsp;News &amp; Blog&nbsp;</Link>
             </li>
 
             <li className="nav-item" role="none">
-              <Link href="/FAQ" className="nav-link" role="menuitem">&nbsp;FAQ&apos;s&nbsp;</Link>
+              <Link href="/FAQ" className="nav-link" role="menuitem"><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
             </li>
 
             {/* Contact & How Much */}
@@ -182,16 +182,20 @@ export default function Navbar() {
               className={`nav-item${openItem === 'contact' ? ' mobile-open' : ''}`}
               role="none"
             >
-              <button
+              <span
                 className="nav-link"
-                role="menuitem"
                 aria-haspopup="true"
                 aria-expanded={openItem === 'contact'}
-                onClick={() => toggleMobile('contact')}
-
               >
-                &nbsp;Contact &amp; How Much&nbsp;<span className="chevron">▾</span>
-              </button>
+                <Link href="/contact-guy" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  <span className="nav-icon">📞</span>&nbsp;Contact &amp; How Much&nbsp;
+                </Link>
+                <button
+                  className="chevron-btn"
+                  aria-label="Toggle contact dropdown"
+                  onClick={(e) => { e.preventDefault(); toggleMobile('contact'); }}
+                >▾</button>
+              </span>
               <div className="contact-dropdown" role="menu">
                 <div className="contact-dropdown-left">
                   <h4>Get in touch with Guy</h4>
@@ -227,7 +231,7 @@ export default function Navbar() {
                 onClick={() => toggleMobile('links')}
 
               >
-                &nbsp;Links&nbsp;<span className="chevron">▾</span>
+                <span className="nav-icon">🔗</span>&nbsp;Links&nbsp;<span className="chevron">▾</span>
               </button>
               <div className="mega-menu" role="menu">
                 <div className="mega-menu-header">

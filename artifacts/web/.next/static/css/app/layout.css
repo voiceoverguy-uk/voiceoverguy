@@ -199,6 +199,26 @@ button.nav-link {
   text-decoration: none;
 }
 
+.nav-icon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.chevron-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 4px 6px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.nav-item:hover .chevron-btn {
+  transform: rotate(180deg);
+}
+
 .nav-link .chevron {
   font-size: 10px;
   transition: transform 0.2s;
@@ -271,8 +291,8 @@ button.nav-link {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  width: 360px;
+  right: 0;
+  width: 620px;
   background-color: #1a1a1a;
   border-top: 3px solid var(--red);
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
@@ -307,16 +327,19 @@ button.nav-link {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0;
+  gap: 0;
 }
 
 .mega-menu-links li a {
   display: flex;
   flex-direction: column;
-  padding: 8px 0;
+  padding: 10px 8px;
   color: #ddd;
   font-size: 13px;
   text-decoration: none;
-  border-bottom: 1px solid #2a2a2a;
   transition: color 0.15s;
 }
 
@@ -1310,6 +1333,10 @@ textarea.form-control {
 
   .contact-dropdown {
     flex-direction: column;
+  }
+
+  .mega-menu-links {
+    grid-template-columns: 1fr;
   }
 
   .features-grid {
