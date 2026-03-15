@@ -11,50 +11,50 @@ export const metadata: Metadata = {
 const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
-    title: 'Commercial Voice',
-    subtitle: 'Male',
-    subtitleBold: 'Voiceover',
-    subtitleEnd: 'Showreel',
-    href: 'https://www.youtube.com/watch?v=COMMERCIAL_ID',
+    titleOverlay: 'Commercial Voice',
+    captionLine1: 'Male',
+    captionHighlight: 'Voiceover',
+    captionLine1End: 'Showreel',
+    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
   },
   {
     img: '/assets/images/voiceoverguy-home-character-voices.jpg',
-    title: 'Character Voices',
-    subtitle: 'Character',
-    subtitleBold: 'Voice',
-    subtitleEnd: 'Showreel',
-    href: 'https://www.youtube.com/watch?v=CHARACTER_ID',
+    titleOverlay: 'Character Voices',
+    captionLine1: 'Character',
+    captionHighlight: 'Voice',
+    captionLine1End: 'Showreel',
+    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
   },
   {
     img: '/assets/images/voiceoverguy-home-apple-voice.jpg',
-    title: 'The Apple Voice',
-    subtitle: 'Apple',
-    subtitleBold: 'iPhone',
-    subtitleEnd: 'TV Ads',
+    titleOverlay: 'The Apple Voice',
+    captionLine1: 'Apple',
+    captionHighlight: 'iPhone',
+    captionLine1End: 'TV Ads',
     href: 'https://www.youtube.com/watch?v=V6HuBB4WqxQ',
   },
   {
     img: '/assets/images/voiceoverguy-home-explainer-voices.jpg',
-    title: 'Explainer Voices',
-    subtitle: 'Explainer',
-    subtitleBold: 'Video',
-    subtitleEnd: 'Showreel',
-    href: 'https://www.youtube.com/watch?v=EXPLAINER_ID',
+    titleOverlay: 'Explainer Voices',
+    captionLine1: 'Explainer',
+    captionHighlight: 'Video',
+    captionLine1End: 'Showreel',
+    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
   },
   {
     img: '/assets/images/voiceoverguy-home-what-i-do.jpg',
-    title: 'This is what I do...',
-    subtitle: 'Well? This is what',
-    subtitleBold: 'i',
-    subtitleEnd: 'do',
-    href: 'https://www.youtube.com/watch?v=WHATIDO_ID',
+    titleOverlay: 'This is what I do...',
+    captionLine1: 'Well? This is what',
+    captionHighlight: 'i',
+    captionLine1End: 'do',
+    href: 'https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ',
   },
   {
     img: '/assets/images/voiceoverguy-home-voice-of-santa.jpg',
-    title: 'Voice of Santa',
-    subtitle: 'Ho Ho Ho! The Voice of',
-    subtitleBold: 'Santa',
-    subtitleEnd: '',
+    titleOverlay: 'Voice of Santa',
+    captionLine1: 'Ho Ho Ho! The Voice of',
+    captionHighlight: 'Santa',
+    captionLine1End: '',
     href: 'https://www.youtube.com/watch?v=P44bGiUI0vE',
   },
 ];
@@ -106,8 +106,8 @@ export default function Home() {
 
           <div className="hero-bio">
             <p>
-              Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.
-              Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands
+              Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
+              Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
               including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
             </p>
           </div>
@@ -125,13 +125,13 @@ export default function Home() {
             <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
           </p>
           <p>
-            If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
-            Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
+            If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,<br />
+            Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.<br />
             Choose from{' '}
             <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
             <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
             <Link href="/pathe-news-voice" className="red-link">Pathé News Voiceover</Link>,{' '}
-            <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,{' '}
+            <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,<br />
             and his highly requested{' '}
             <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
             — just ask Google.
@@ -146,9 +146,9 @@ export default function Home() {
           <p>
             Running an event, awards show or big stage production? My{' '}
             <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
-            delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>,{' '}
+            delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>,<br />
             <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong>{' '}
-            and the <strong>National History Museum</strong>. If you need a bold,
+            and the <strong>National History Museum</strong>. If you need a bold,<br />
             authoritative announcer voice that fills the room and lifts the atmosphere — you&apos;ve found the right Guy.
           </p>
         </div>
@@ -159,11 +159,11 @@ export default function Home() {
         <div className="container">
           <h2>Why Clients Choose Me</h2>
           <p>
-            Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned
+            Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned{' '}
             that clients want the same three things: reliability, speed, and audio that sounds brilliant first time.
           </p>
           <p>
-            I&apos;m in the studio every day, I take direction well, and I keep your project moving without fuss or drama. If you
+            I&apos;m in the studio every day, I take direction well, and I keep your project moving without fuss or drama. If you{' '}
             want a voice who just gets it right, you&apos;ve found the right Guy.
           </p>
           <p>
@@ -177,11 +177,11 @@ export default function Home() {
         <div className="container">
           <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
           <p>
-            Meet <strong>Arabella Harris</strong> — a 9-year-old professional child voiceover artist with national credits including Tesco,
+            Meet <strong>Arabella Harris</strong> — a 9-year-old professional child voiceover artist with national credits including Tesco,<br />
             Sainsbury&apos;s, and Nickelodeon.
           </p>
           <p>
-            Her clear, natural young girl voice is ideal for animation, radio, and commercials.{' '}
+            Her clear, natural young girl voice is ideal for animation, radio, and commercials.<br />
             <a href="#" className="red-link">Listen to her child voiceover demos</a> or visit{' '}
             <a href="https://www.arabellaharris.com" target="_blank" rel="noopener noreferrer" className="red-link">ArabellaHarris.com</a>{' '}
             to learn more.
@@ -231,7 +231,7 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section">
         <div className="container">
-          <p style={{ textAlign: 'center', marginBottom: '8px' }}>
+          <p style={{ textAlign: 'center', marginBottom: '4px' }}>
             Not sure where to start? Here are my most requested styles — from commercial reads to character voices.
           </p>
           <p style={{ textAlign: 'center', marginBottom: '24px' }}>
@@ -248,14 +248,14 @@ export default function Home() {
                 >
                   <img
                     src={v.img}
-                    alt={v.title}
+                    alt={v.titleOverlay}
                     width={400}
                     height={225}
                     loading="lazy"
                   />
                 </a>
                 <div className="video-caption">
-                  <p>{v.subtitle} <span className="text-red">{v.subtitleBold}</span> {v.subtitleEnd}</p>
+                  <p>{v.captionLine1} <span className="text-red">{v.captionHighlight}</span> {v.captionLine1End}</p>
                 </div>
               </div>
             ))}
@@ -286,55 +286,70 @@ export default function Home() {
             <div className="feature-block">
               <h3>🌍 Heard Worldwide</h3>
               <p>
-                As a British male voiceover artist, my voice is heard worldwide, delivering over 100
-                projects weekly across TV, radio, online, and gaming. From global campaigns to niche
-                projects, I&apos;m here to bring your script to life, no matter where in the world you are.
+                As a British male voiceover artist, my voice
+                is heard worldwide, delivering over 100
+                projects weekly across TV, radio, online, and
+                gaming. From global campaigns to niche
+                projects, I&apos;m here to bring your script to life,
+                no matter where in the world you are.
               </p>
             </div>
             <div className="feature-block">
               <h3>🚀 Same Day Delivery</h3>
               <p>
-                Need a voiceover fast? With a 99% same-day delivery rate, I&apos;ll provide professionally
-                voiced and edited audio (mp3 or WAV) in less than 24 hours. Trust my quick turnaround
-                to keep your project on schedule and on budget.
+                Need a voiceover fast?
+                With a 99% same-day delivery rate, I&apos;ll
+                provide professionally voiced and edited
+                audio (mp3 or WAV) in less than 24 hours.
+                Trust my quick turnaround to keep your
+                project on schedule and on budget.
               </p>
             </div>
             <div className="feature-block">
               <h3>📍 Location</h3>
               <p>
-                Based in West Yorkshire, I&apos;m perfectly positioned for remote and in-person sessions.
-                Whether you need a{' '}
-                <Link href="/voiceover-studio" className="red-link">studio-quality recording</Link>,
-                a live-directed session or fast delivery for your{' '}
-                <Link href="/explainer-video-voice" className="red-link">explainer video</Link>,
-                I&apos;ll make it smooth and stress-free.
+                Based in West Yorkshire, I&apos;m perfectly
+                positioned for remote and in-person
+                sessions. Whether you need a{' '}
+                <Link href="/voiceover-studio" className="red-link">studio-quality
+                recording</Link>, a live-directed session or fast
+                delivery for your{' '}
+                <Link href="/explainer-video-voice" className="red-link">explainer video</Link>, I&apos;ll make it
+                smooth and stress-free.
               </p>
             </div>
             <div className="feature-block">
               <h3>✅ Pro vs Cheaper Alternative?</h3>
               <p>
-                Why choose professional? A high-quality voiceover elevates your project in ways cheaper
-                alternatives simply can&apos;t match. With decades of experience, I deliver standout
-                voiceovers that engage your audience and add value to your brand.
+                Why choose professional? A high-quality
+                voiceover elevates your project in ways
+                cheaper alternatives simply can&apos;t match.
+                With decades of experience, I deliver
+                standout voiceovers that engage your
+                audience and add value to your brand.
               </p>
             </div>
             <div className="feature-block">
               <h3>🎙️ Bespoke Demos</h3>
               <p>
-                Hear the difference with a free bespoke demo tailored to your specific project.
-                Avoid generic showreels! — Let me ensure I&apos;m the perfect fit for your brand or
-                project before booking your VoiceOver.{' '}
+                Hear the difference with a free bespoke
+                demo tailored to your specific project.
+                Avoid generic showreels!— Let me ensure
+                I&apos;m the perfect fit for your brand or project
+                before booking your VoiceOver.{' '}
                 <Link href="/contact-guy" className="red-link">Get in touch today.</Link>
               </p>
             </div>
             <div className="feature-block">
               <h3>💻 Studio Tech</h3>
               <p>
-                Save on studio fees with remote directing! Using Cleanfeed, Source Connect Nexus,
-                Riverside, Zoom, Teams, and more, I deliver broadcast-quality audio from my Yorkshire
+                Save on studio fees with remote directing!
+                Using Cleanfeed, Source Connect Nexus,
+                Riverside, Zoom, Teams, and more, I deliver
+                broadcast-quality audio from my Yorkshire
                 based{' '}
-                <Link href="/voiceover-studio" className="red-link">voiceover-studio</Link>.
-                Let our tech and experience make it all stress-free.
+                <Link href="/voiceover-studio" className="red-link">voiceover-studio</Link>. Let our tech and
+                experience make it all stress-free.
               </p>
             </div>
           </div>

@@ -86,16 +86,16 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav className="navbar" role="navigation" aria-label="Main navigation">
-        <div className="navbar-inner">
-          {/* Logo */}
+        <div className="navbar-logo-row">
           <Link href="/" className="navbar-logo">
             <img
               src="/assets/images/guy-harris-voiceover.png"
               alt="Guy Harris VoiceoverGuy"
-              style={{ height: '55px', width: 'auto' }}
+              style={{ height: '60px', width: 'auto' }}
             />
           </Link>
-
+        </div>
+        <div className="navbar-inner">
           {/* Mobile toggle */}
           <button
             className="navbar-toggle"
