@@ -391,8 +391,7 @@ button.nav-link {
 
 /* ===== SEARCH BAR ===== */
 .search-bar {
-  background-color: #f0f0f0;
-  border-top: 1px solid #ddd;
+  background-color: var(--white);
   border-bottom: 1px solid #ddd;
   padding: 8px 0;
 }
