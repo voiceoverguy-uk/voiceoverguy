@@ -205,8 +205,8 @@ export default function Navbar() {
                 </div>
                 <div className="contact-dropdown-right">
                   <img
-                    src="https://www.voiceoverguy.co.uk/assets/images/voiceover-studio-cartoon.jpg"
-                    alt="VoiceoverGuy studio cartoon"
+                    src="/assets/images/voicoverguy-contact.png"
+                    alt="VoiceoverGuy contact"
                     width={100}
                     height={100}
                   />
