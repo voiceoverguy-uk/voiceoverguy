@@ -258,9 +258,10 @@ export default function Home() {
       </section>
 
       {/* CLIENT LOGOS */}
-      <section style={{ padding: '10px 0' }}>
-        <div className="container">
-          <div className="client-logos">
+      <section className="client-logos-section">
+        <div className="client-logos-border client-logos-border--top" />
+        <div className="client-logos-marquee-wrapper">
+          <div className="client-logos-marquee">
             {clientLogos.map(logo => (
               <img
                 key={logo.alt}
@@ -269,8 +270,19 @@ export default function Home() {
                 loading="lazy"
               />
             ))}
+            <div aria-hidden="true" style={{ display: 'contents' }}>
+              {clientLogos.map(logo => (
+                <img
+                  key={`${logo.alt}-dup`}
+                  src={logo.src}
+                  alt=""
+                  loading="lazy"
+                />
+              ))}
+            </div>
           </div>
         </div>
+        <div className="client-logos-border client-logos-border--bottom" />
       </section>
 
       {/* FEATURE BLOCKS */}

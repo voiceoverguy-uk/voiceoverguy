@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pages": {
     "/page": [
       "static/chunks/webpack.js",
@@ -22,4 +23,7 @@
       "static/chunks/app/_not-found/page.js"
     ]
   }
+=======
+  "pages": {}
+>>>>>>> e52fbd0 (Task #6: Clients marquee – colour logos & tapered border lines)
 }
