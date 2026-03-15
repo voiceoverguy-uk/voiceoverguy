@@ -1,6 +1,6 @@
 {
-  "framework": null,
+  "framework": "nextjs",
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm -w typecheck:libs && pnpm -r --filter \"@workspace/api-server\" run build",
-  "outputDirectory": "artifacts/api-server/dist"
+  "buildCommand": "pnpm --filter @workspace/web run build",
+  "outputDirectory": "artifacts/web/.next"
 }
