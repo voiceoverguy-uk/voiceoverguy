@@ -21,15 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[slug]/page.js"
     ],
-    "/FAQ/page": [
+    "/voiceoverguy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/FAQ/page.js"
+      "static/chunks/app/voiceoverguy/page.js"
     ],
-    "/contact-guy/page": [
+    "/david-attenborough-voice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact-guy/page.js"
+      "static/chunks/app/david-attenborough-voice/page.js"
     ]
   }
 }
