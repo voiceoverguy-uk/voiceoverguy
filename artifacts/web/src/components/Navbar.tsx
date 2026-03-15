@@ -61,7 +61,7 @@ export default function Navbar() {
             <img
               src="/assets/images/guy-harris-voiceover.png"
               alt="Guy Harris VoiceoverGuy"
-              style={{ height: '60px', width: 'auto' }}
+              style={{ height: '105px', width: 'auto' }}
             />
           </Link>
         </div>
