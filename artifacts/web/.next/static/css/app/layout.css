@@ -1,7 +1,34 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/.pnpm/next@14.2.29_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.29_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/app/globals.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/fonts/GOTHIC.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/fonts/GOTHICB.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/fonts/GOTHICBI.TTF') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/fonts/GOTHICI.TTF') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --red: #9C060B;
@@ -28,7 +55,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: var(--text);
@@ -37,7 +64,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu', Arial, sans-serif;
+  font-family: 'Century Gothic', Arial, sans-serif;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -1268,5 +1295,278 @@ textarea.form-control {
 
 .sc-embed {
   margin: 24px 0;
+}
+
+/* =============================================
+   INNER PAGES
+   ============================================= */
+
+.inner-page {
+  padding-bottom: 60px;
+}
+
+.inner-hero {
+  background: #fff;
+  padding: 36px 24px 28px;
+  border-bottom: 3px solid var(--red);
+  margin-bottom: 0;
+}
+
+.inner-hero h1 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.inner-hero p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 0.5em;
+}
+
+.inner-hero strong {
+  font-weight: 700;
+}
+
+/* The .ident class from old site = red highlight text */
+.ident, .isred, span.ident { color: var(--red); }
+a.isred { color: var(--red); }
+a.isred:hover { color: var(--red-dark); text-decoration: underline; }
+
+/* Full-width parallax/section wrapper */
+.inner-parallax {
+  background: #fff;
+  padding: 0 16px;
+}
+
+.inner-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Divider bar between sections */
+.inner-bar {
+  height: 4px;
+  background: var(--red);
+  margin: 0;
+}
+
+/* Standard two-column row */
+.inner-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+  gap: 32px;
+  align-items: start;
+  padding: 32px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.inner-row:last-child {
+  border-bottom: none;
+}
+
+.inner-row.reverse {
+  direction: rtl;
+}
+
+.inner-row.reverse > * {
+  direction: ltr;
+}
+
+@media (max-width: 768px) {
+  .inner-row {
+    grid-template-columns: 1fr;
+  }
+  .inner-row.reverse {
+    direction: ltr;
+  }
+}
+
+.inner-col {
+  padding: 8px 0;
+}
+
+.inner-col h2 {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin-bottom: 12px;
+  margin-top: 8px;
+  color: #111;
+}
+
+.inner-col p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.8em;
+}
+
+.inner-col ul, .inner-col ol {
+  margin-bottom: 0.8em;
+  padding-left: 1.5em;
+}
+
+.inner-col li {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.inner-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-top: 8px;
+}
+
+/* YouTube / Vimeo responsive embed */
+.embed-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.embed-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* HTML5 audio mini player */
+.mini-audio {
+  margin: 16px 0;
+}
+
+.mini-audio audio {
+  width: 100%;
+  max-width: 420px;
+}
+
+.mini-audio p {
+  font-size: 0.85em;
+  opacity: 0.7;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Studio page 360 tour */
+.studio-tour-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  margin: 20px 0;
+}
+
+.studio-tour-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Full-width section (for s3 wide content) */
+.inner-full {
+  padding: 28px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Contact page */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+  gap: 32px;
+  padding: 32px 0;
+}
+
+@media (max-width: 768px) {
+  .contact-layout { grid-template-columns: 1fr; }
+}
+
+/* FAQ on inner page */
+.inner-faq {
+  padding: 24px 0;
+}
+
+/* Cartoon / video grid */
+.cartoon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 24px;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.cartoon-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.cartoon-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 24px;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.video-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--red);
+}
+
+
+/* FAQ page – SQL-rendered div classes */
+.faq-question {
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: default;
+  border-top: 1px solid #e0e0e0;
+}
+.faq-item:first-child .faq-question {
+  border-top: none;
+}
+.faq-answer {
+  padding-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey-dark);
+}
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* video-item image fill */
+.video-item img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Cartoons-intro text */
+.cartoons-intro {
+  margin-bottom: 24px;
 }
 

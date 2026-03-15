@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import pages from '@/data/pages.json';
+
+const data = (pages as Record<string, Record<string, string>>)['seo20'];
 
 export const metadata: Metadata = {
-  title: 'Contact Guy – Book a Voiceover | VoiceoverGuy',
-  description: 'Contact Guy Harris to book a voiceover, get a quote or ask a question. Paste your script for an instant price guide. Fast response guaranteed.',
+  title: data.s1,
+  description: data.s2,
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/contact-guy' },
 };
 

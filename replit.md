@@ -99,60 +99,108 @@ Utility scripts package. Each script is a `.ts` file in `src/` with a correspond
 
 ## VoiceoverGuy Website (`artifacts/web`)
 
-**Goal:** Faithful Next.js 14 (App Router) rebuild of voiceoverguy.co.uk — Guy Harris, professional British male voiceover artist.
+**Goal:** Faithful Next.js 14 (App Router) rebuild of voiceoverguy.co.uk — Guy Harris, professional British male voiceover artist. All content sourced from the original SQL database to preserve exact wording and Google rankings.
 
 ### Architecture
 
 - **Framework:** Next.js 14.2.29 (App Router, Server Components)
 - **Port:** 22333 (dev and start scripts bind to `0.0.0.0:22333`)
 - **Styling:** Custom CSS in `src/app/globals.css` (no Tailwind — vanilla CSS with CSS variables)
-- **Fonts:** Ubuntu (headings) + Open Sans (body) via Google Fonts `@import` in CSS
+- **Fonts:** Century Gothic (GOTHIC.TTF, GOTHICB.TTF, GOTHICBI.TTF, GOTHICI.TTF) via `@font-face` in globals.css. Files in `public/fonts/`.
 - **Brand colours:** Primary red `#9C060B`, dark crimson `#7a0508`, black, white
+- **Content source:** `src/data/pages.json` — all 1,067 SQL rows parsed from `attached_assets/cl10-admin2_1773602381109.sql`
 
 ### Key Files
 
 - `src/app/layout.tsx` — Root layout with Navbar + Footer
-- `src/app/globals.css` — All global styles + CSS variables
+- `src/app/globals.css` — All global styles + CSS variables + @font-face
 - `src/app/page.tsx` — Homepage
 - `src/components/Navbar.tsx` — Full navbar with all dropdowns (client component)
 - `src/components/Footer.tsx` — Footer with social links
-- `src/components/FaqAccordion.tsx` — Interactive FAQ accordion (client component)
+- `src/components/InnerPage.tsx` — Shared inner page layout: alternating two-column rows with text, YouTube embeds, Vimeo embeds, images; fullWidth support
 - `src/components/ContactForm.tsx` — Contact form with live pricing calculator (client component)
 - `src/components/NewsSection.tsx` — Latest news with show-more toggle (client component)
-- `src/data/news.ts` — All 34 news items from live site
-- `src/data/projects.ts` — Portfolio project data for dynamic [slug] route
+- `src/data/pages.json` — All SQL content (1,067 rows) decoded from HTML entities, with real CR+LF characters
+- `src/data/news.ts` — News item data
 
-### Pages Built
+### SQL Group → Page Mapping
 
-Core pages: `/`, `/voiceoverguy`, `/commercial-voiceover`, `/apple-voice-style`, `/voice-of-god`, `/santa-voice`, `/david-attenborough-voice`, `/football-commentator-voice`, `/FAQ`, `/contact-guy`, `/voiceover-studio`
+| SQL Group | Page Slug |
+|-----------|-----------|
+| seo | Homepage |
+| seo2 | /voiceoverguy (Who) — s7=meta title, s8=meta desc, s9=YouTube URL |
+| seo4 | /commercial-voiceover |
+| seo5 | /apple-voice-style |
+| seo6 | /narration-voice |
+| seo7 | /voice-of-god |
+| seo8 | /on-hold-voice |
+| seo9 | /voiceover-imaging |
+| seo10 | /movie-trailer-voice (s5,s7,s8,s9,s11 are YouTube IDs) |
+| seo11 | /character-voiceover |
+| seo12 | /santa-voice |
+| seo13 | /football-commentator-voice |
+| seo14 | /pirate-voice |
+| seo15 | /gameshow-host |
+| seo16 | /pathe-news-voice |
+| seo17 | /halloween-voice |
+| seo18 | /david-attenborough-voice |
+| seo19 | /explainer-video-voice (Vimeo IDs, not YouTube) |
+| seo20 | /contact-guy |
+| seo21 | /voiceover-videos (v1-v21 = captions) |
+| seo24 | /voiceover-cartoons |
+| seo25 | /voiceover-studio (PHP template layout) |
+| seo26 | /game-trailer-voice |
+| faqseo2 | /faq (faqs7=title, faqs8=desc, faqs2-faqs13=Q&A) |
 
-Dynamic route: `/[slug]` — serves portfolio/project pages from `src/data/projects.ts`
+### Pages Built (23 total)
+
+- `/` — Homepage with audio showreels, video thumbnails, client logos, news
+- `/voiceoverguy` — Who page with profile photos and YouTube embed
+- `/commercial-voiceover`, `/apple-voice-style` — with dual YouTube embeds
+- `/narration-voice`, `/voice-of-god`, `/on-hold-voice`, `/voiceover-imaging` — standard demo pages
+- `/character-voiceover`, `/santa-voice`, `/football-commentator-voice`, `/pirate-voice` — character pages
+- `/gameshow-host`, `/pathe-news-voice`, `/halloween-voice`, `/david-attenborough-voice` — specialty pages
+- `/movie-trailer-voice` — 5 YouTube embeds in alternating layout
+- `/explainer-video-voice` — Vimeo embeds (8-9 digit IDs)
+- `/game-trailer-voice` — extended layout with 6 YouTube embeds
+- `/voiceover-studio` — follows PHP exactly: s3+360° tour iframe, then 7 alternating image+text rows
+- `/voiceover-videos` — 21-item thumbnail grid with SQL captions (v1-v21)
+- `/voiceover-cartoons` — 76 cartoon images in responsive grid
+- `/faq` — FAQ list from SQL faqseo2 group
+- `/contact-guy` — Contact form with pricing table
+
+Dynamic route: `/[slug]` — catch-all for future project pages
 
 404: `src/app/not-found.tsx`
 
-### Static Assets (extracted from zip)
+### Static Assets (1,533 files extracted from zip)
 
-All assets extracted from `attached_assets/assets_1773447812268.zip` into `artifacts/web/public/assets/`:
-- **Logo:** `assets/images/guy-harris-voiceover.png` (+ `.webp`)
-- **Audio showreels:** `assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3`, `-character-showreel.mp3`, `-explainer-video-showreel.mp3`
-- **Arabella Harris audio:** `assets/audio/arabella-harris-age-9-showreel-2025.mp3`
-- **Homepage video thumbnails:** `assets/images/voiceoverguy-home-*.jpg` (6 custom illustrated thumbnails)
-- **Client logos:** `assets/images/clients/` (115 PNG logos — Apple, Disney, BBC, Microsoft, etc.)
+All in `artifacts/web/public/assets/`:
+- `assets/images/` — page hero images, OG images, who photos, client logos
+- `assets/images/studio/` — 7 studio photos (voiceoverguy-voicover-studio1-7.jpg)
+- `assets/images/cartoons/` — 76 cartoon PNG images by George Raggett
+- `assets/audio/` — 44 MP3 files (showreels + client demos)
+- `assets/fonts/` — see `public/fonts/` for Century Gothic TTFs
 
-### Homepage Content (verbatim from live site)
+### InnerPage Component Contract
 
-The homepage uses exact verbatim text from the original voiceoverguy.co.uk. Key sections in order:
-1. Hero (light grey background, native audio player, star rating)
-2. Awards / credentials paragraph with links
-3. Event or Awards Night Voiceover?
-4. Why Clients Choose Me + "Read the full story →"
-5. Need a British Child Voiceover? (Arabella Harris)
-6. Ready to book CTA
-7. Three showreel audio players (Commercial, Character, Explainer)
-8. Six video tiles with custom illustrated thumbnails
-9. Client logos strip (greyscale → colour on hover)
-10. Six feature blocks (Heard Worldwide, Same Day Delivery, Location, Pro vs Cheaper Alternative?, Bespoke Demos, Studio Tech)
-11. Latest News section
+`InnerPage` takes a `sections: Section[]` array. Each section can have:
+- `text?: string` — rendered as HTML via `dangerouslySetInnerHTML`
+- `youtubeId?: string` — 11-char YouTube ID → responsive iframe embed
+- `vimeoId?: string` — 7-10 digit Vimeo ID → responsive iframe embed  
+- `imageSrc?: string` — image URL
+- `imageAlt?: string` — image alt text
+- `fullWidth?: boolean` — renders full-width instead of half-column
+
+Sections are paired into 2-column rows (alternating reversed for visual balance). Odd-count sections render full-width.
+
+### Important Notes
+
+- **pages.json**: Contains real CR+LF characters (char codes 13, 10), not literal `\r\n`. The parser properly converts SQL escape sequences to actual characters.
+- **seo2 field anomaly**: s1 contains H1 HTML, s7 is the meta title, s8 is meta description (reversed from standard pattern)
+- **Vimeo IDs**: seo19 uses 8-9 digit Vimeo IDs in s7-s15
+- **Studio page layout**: Follows the PHP template exactly — `s3 + 360° iframe, s4+studio1, studio7+s5, s6+studio3, studio4+s7, s8+studio5, studio6+s9, s10+studio2`
+- **Audio**: SQL stores native HTML5 `<audio>` tags pointing to `/assets/audio/*.mp3`
 
 ### React Version Note
 
