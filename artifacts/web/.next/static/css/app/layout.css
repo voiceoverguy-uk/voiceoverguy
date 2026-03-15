@@ -1,3 +1,6 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.29_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.29_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
   font-family: 'Century Gothic';
   src: url('/fonts/GOTHIC.TTF') format('truetype');
@@ -117,6 +120,7 @@ ul, ol {
 .navbar {
   background-color: var(--white);
   border-bottom: 1px solid var(--grey-mid);
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -357,7 +361,7 @@ button.nav-link {
 }
 
 .contact-dropdown-left {
-  flex: 1;
+  flex: 1 1;
 }
 
 .contact-dropdown-left h4 {
@@ -630,6 +634,7 @@ button.nav-link {
 .showreel-players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
   gap: 24px;
   padding: 20px 0;
 }
@@ -762,6 +767,7 @@ audio {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
   gap: 24px;
   margin-top: 32px;
 }
@@ -789,6 +795,7 @@ audio {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
   gap: 16px;
   margin-top: 24px;
 }
@@ -839,6 +846,7 @@ audio {
 .showreels {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   gap: 20px;
   margin-top: 24px;
 }
@@ -971,6 +979,7 @@ audio {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
   gap: 40px;
   margin-top: 24px;
 }
@@ -1378,6 +1387,7 @@ textarea.form-control {
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
   gap: 32px;
   align-items: start;
 }
@@ -1450,6 +1460,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .inner-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
   gap: 32px;
   align-items: start;
   padding: 32px 0;
@@ -1576,6 +1587,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
   gap: 32px;
   padding: 32px 0;
 }
@@ -1593,6 +1605,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .cartoon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 24px;
   gap: 24px;
   padding: 24px 0;
 }
@@ -1612,6 +1625,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 24px;
   gap: 24px;
   padding: 24px 0;
 }
@@ -1658,3 +1672,4 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .cartoons-intro {
   margin-bottom: 24px;
 }
+
