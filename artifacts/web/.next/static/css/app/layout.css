@@ -450,90 +450,149 @@ ul, ol {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #3a0205 50%, #1a1a1a 100%);
-  color: var(--white);
-  padding: 60px 0;
+  background: linear-gradient(180deg, #d8d8d8 0%, #e8e8e8 30%, #dcdcdc 100%);
+  color: var(--text);
+  padding: 50px 0 40px;
   text-align: center;
   position: relative;
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--red);
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.hero h1 {
-  font-size: 2.6rem;
+.hero h1 .text-red {
+  color: var(--red);
   font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--white);
 }
 
 .hero h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #ccc;
-  margin-bottom: 24px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
 }
 
 .hero-bio {
   max-width: 800px;
-  margin: 0 auto 24px;
+  margin: 0 auto 20px;
   font-size: 15px;
   line-height: 1.8;
-  color: #ddd;
+  color: var(--text);
 }
 
 .star-rating {
   display: inline-block;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 30px;
-  padding: 8px 20px;
   font-size: 14px;
-  color: #ffd700;
-  margin-bottom: 12px;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.star-rating:hover {
-  background: rgba(255,255,255,0.15);
-  color: #ffd700;
+  color: var(--text);
+  margin-bottom: 0;
   text-decoration: none;
 }
 
-.star-rating .rating-count {
-  color: #fff;
+.star-rating .stars {
+  color: #ffa500;
 }
 
-.awards-line {
-  font-size: 13px;
-  color: #bbb;
-  margin-bottom: 24px;
-  font-style: italic;
+/* ===== HOMEPAGE SECTIONS ===== */
+.home-section {
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.home-section h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.home-section h2 .text-red {
+  color: var(--red);
+}
+
+.home-section p {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-section a.red-link {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-section a.red-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.client-logos img {
+  height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.client-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ===== SHOWREEL PLAYERS ===== */
+.showreel-players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.showreel-player-item {
+  text-align: center;
+}
+
+.showreel-player-item audio {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.showreel-player-item p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.showreel-player-item p .text-red {
+  color: var(--red);
+  font-weight: 700;
 }
 
 /* ===== AUDIO PLAYER ===== */
 .audio-player-wrap {
-  margin: 20px auto;
-  max-width: 600px;
+  margin: 10px auto 20px;
+  max-width: 500px;
 }
 
 audio {
   width: 100%;
   margin-bottom: 8px;
-}
-
-audio::-webkit-media-controls-panel {
-  background-color: #2a2a2a;
 }
 
 /* ===== CONTENT SECTIONS ===== */
@@ -561,6 +620,23 @@ audio::-webkit-media-controls-panel {
 
 .section-dark a {
   color: #ffa0a0;
+}
+
+/* Video tile captions */
+.video-caption {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.video-caption p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.video-caption p .text-red {
+  color: var(--red);
+  font-weight: 700;
 }
 
 .section h2 {
@@ -1099,6 +1175,9 @@ textarea.form-control {
     grid-template-columns: repeat(2, 1fr);
   }
   .showreels {
+    grid-template-columns: 1fr;
+  }
+  .showreel-players {
     grid-template-columns: 1fr;
   }
   .contact-grid {

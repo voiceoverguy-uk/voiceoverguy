@@ -130,6 +130,30 @@ Dynamic route: `/[slug]` — serves portfolio/project pages from `src/data/proje
 
 404: `src/app/not-found.tsx`
 
+### Static Assets (extracted from zip)
+
+All assets extracted from `attached_assets/assets_1773447812268.zip` into `artifacts/web/public/assets/`:
+- **Logo:** `assets/images/guy-harris-voiceover.png` (+ `.webp`)
+- **Audio showreels:** `assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3`, `-character-showreel.mp3`, `-explainer-video-showreel.mp3`
+- **Arabella Harris audio:** `assets/audio/arabella-harris-age-9-showreel-2025.mp3`
+- **Homepage video thumbnails:** `assets/images/voiceoverguy-home-*.jpg` (6 custom illustrated thumbnails)
+- **Client logos:** `assets/images/clients/` (115 PNG logos — Apple, Disney, BBC, Microsoft, etc.)
+
+### Homepage Content (verbatim from live site)
+
+The homepage uses exact verbatim text from the original voiceoverguy.co.uk. Key sections in order:
+1. Hero (light grey background, native audio player, star rating)
+2. Awards / credentials paragraph with links
+3. Event or Awards Night Voiceover?
+4. Why Clients Choose Me + "Read the full story →"
+5. Need a British Child Voiceover? (Arabella Harris)
+6. Ready to book CTA
+7. Three showreel audio players (Commercial, Character, Explainer)
+8. Six video tiles with custom illustrated thumbnails
+9. Client logos strip (greyscale → colour on hover)
+10. Six feature blocks (Heard Worldwide, Same Day Delivery, Location, Pro vs Cheaper Alternative?, Bespoke Demos, Studio Tech)
+11. Latest News section
+
 ### React Version Note
 
 React 19.1.0 is used (from workspace catalog). Next.js 14 expects React 18 but works correctly with React 19 despite peer warning. Do not downgrade React — it is pinned at 19.1.0 for the Expo mobile artifact.

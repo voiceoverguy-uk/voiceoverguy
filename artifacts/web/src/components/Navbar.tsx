@@ -89,8 +89,11 @@ export default function Navbar() {
         <div className="navbar-inner">
           {/* Logo */}
           <Link href="/" className="navbar-logo">
-            <span className="navbar-logo-main">Guy Harris</span>
-            <span className="navbar-logo-sub">VoiceoverGuy</span>
+            <img
+              src="/assets/images/guy-harris-voiceover.png"
+              alt="Guy Harris VoiceoverGuy"
+              style={{ height: '55px', width: 'auto' }}
+            />
           </Link>
 
           {/* Mobile toggle */}
