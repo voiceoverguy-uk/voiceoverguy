@@ -177,47 +177,6 @@ export default function Navbar() {
               <Link href="/FAQ" className="nav-link" role="menuitem"><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
             </li>
 
-            {/* Contact & How Much */}
-            <li
-              className={`nav-item${openItem === 'contact' ? ' mobile-open' : ''}`}
-              role="none"
-            >
-              <span
-                className="nav-link"
-                aria-haspopup="true"
-                aria-expanded={openItem === 'contact'}
-              >
-                <Link href="/contact-guy" style={{ color: 'inherit', textDecoration: 'none' }}>
-                  <span className="nav-icon">📞</span>&nbsp;Contact &amp; How Much&nbsp;
-                </Link>
-                <button
-                  className="chevron-btn"
-                  aria-label="Toggle contact dropdown"
-                  onClick={(e) => { e.preventDefault(); toggleMobile('contact'); }}
-                >▾</button>
-              </span>
-              <div className="contact-dropdown" role="menu">
-                <div className="contact-dropdown-left">
-                  <h4>Get in touch with Guy</h4>
-                  <p>Email: <a href="mailto:guy@voiceoverguy.co.uk">Guy(at)VoiceoverGuy.co.uk</a></p>
-                  <p>Tel: <a href="tel:+447973350178">+44 (0)7973 350 178</a></p>
-                  <p><span>Source Connect NEXUS:</span> VoiceoverGuy</p>
-                  <p><span>Cleanfeed:</span> VoiceoverGuy</p>
-                  <Link href="/contact-guy" className="cta-btn" style={{ display: 'inline-block', marginTop: '10px', fontSize: '12px', padding: '6px 14px' }}>
-                    Contact Guy
-                  </Link>
-                </div>
-                <div className="contact-dropdown-right">
-                  <img
-                    src="/assets/images/voicoverguy-contact.png"
-                    alt="VoiceoverGuy contact"
-                    width={100}
-                    height={100}
-                  />
-                </div>
-              </div>
-            </li>
-
             {/* Links */}
             <li
               className={`nav-item${openItem === 'links' ? ' mobile-open' : ''}`}
@@ -256,6 +215,47 @@ export default function Navbar() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </li>
+
+            {/* Contact & How Much */}
+            <li
+              className={`nav-item${openItem === 'contact' ? ' mobile-open' : ''}`}
+              role="none"
+            >
+              <span
+                className="nav-link"
+                aria-haspopup="true"
+                aria-expanded={openItem === 'contact'}
+              >
+                <Link href="/contact-guy" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  <span className="nav-icon">📞</span>&nbsp;Contact &amp; How Much&nbsp;
+                </Link>
+                <button
+                  className="chevron-btn"
+                  aria-label="Toggle contact dropdown"
+                  onClick={(e) => { e.preventDefault(); toggleMobile('contact'); }}
+                >▾</button>
+              </span>
+              <div className="contact-dropdown" role="menu">
+                <div className="contact-dropdown-left">
+                  <h4>Get in touch with Guy</h4>
+                  <p>Email: <a href="mailto:guy@voiceoverguy.co.uk">Guy(at)VoiceoverGuy.co.uk</a></p>
+                  <p>Tel: <a href="tel:+447973350178">+44 (0)7973 350 178</a></p>
+                  <p><span>Source Connect NEXUS:</span> VoiceoverGuy</p>
+                  <p><span>Cleanfeed:</span> VoiceoverGuy</p>
+                  <Link href="/contact-guy" className="cta-btn" style={{ display: 'inline-block', marginTop: '10px', fontSize: '12px', padding: '6px 14px' }}>
+                    Contact Guy
+                  </Link>
+                </div>
+                <div className="contact-dropdown-right">
+                  <img
+                    src="/assets/images/voicoverguy-contact.png"
+                    alt="VoiceoverGuy contact"
+                    width={100}
+                    height={100}
+                  />
+                </div>
               </div>
             </li>
           </ul>
