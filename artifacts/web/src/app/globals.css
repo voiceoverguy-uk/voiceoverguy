@@ -556,9 +556,20 @@ button.nav-link {
 
 /* ===== HOMEPAGE SECTIONS ===== */
 .home-section {
+  position: relative;
   padding: 40px 0;
   text-align: center;
-  border-top: 1px solid #ccc;
+}
+
+.home-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 1px;
+  background: #ccc;
 }
 
 .home-section h2 {
