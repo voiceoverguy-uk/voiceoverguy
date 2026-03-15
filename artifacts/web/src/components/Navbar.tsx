@@ -99,7 +99,7 @@ export default function Navbar() {
                 aria-haspopup="true"
                 aria-expanded={openItem === 'voice'}
                 onClick={() => toggleMobile('voice')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+
               >
                 &nbsp;Voice Demos&nbsp;<span className="chevron">▾</span>
               </button>
@@ -123,7 +123,7 @@ export default function Navbar() {
                 aria-haspopup="true"
                 aria-expanded={openItem === 'char'}
                 onClick={() => toggleMobile('char')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+
               >
                 &nbsp;Character Demos&nbsp;<span className="chevron">▾</span>
               </button>
@@ -147,7 +147,7 @@ export default function Navbar() {
                 aria-haspopup="true"
                 aria-expanded={openItem === 'video'}
                 onClick={() => toggleMobile('video')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+
               >
                 &nbsp;Video&nbsp;<span className="chevron">▾</span>
               </button>
@@ -188,7 +188,7 @@ export default function Navbar() {
                 aria-haspopup="true"
                 aria-expanded={openItem === 'contact'}
                 onClick={() => toggleMobile('contact')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+
               >
                 &nbsp;Contact &amp; How Much&nbsp;<span className="chevron">▾</span>
               </button>
@@ -225,7 +225,7 @@ export default function Navbar() {
                 aria-haspopup="true"
                 aria-expanded={openItem === 'links'}
                 onClick={() => toggleMobile('links')}
-                style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+
               >
                 &nbsp;Links&nbsp;<span className="chevron">▾</span>
               </button>
