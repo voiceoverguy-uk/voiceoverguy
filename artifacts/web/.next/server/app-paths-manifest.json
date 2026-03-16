@@ -1,6 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/[slug]/page": "app/[slug]/page.js",
-  "/voiceoverguy/page": "app/voiceoverguy/page.js",
-  "/FAQ/page": "app/FAQ/page.js"
+  "/voice-of-god/page": "app/voice-of-god/page.js",
+  "/[slug]/page": "app/[slug]/page.js"
 }

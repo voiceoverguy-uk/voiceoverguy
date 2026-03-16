@@ -30,6 +30,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/FAQ/page.js"
+    ],
+    "/voice-of-god/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voice-of-god/page.js"
     ]
   }
 }
