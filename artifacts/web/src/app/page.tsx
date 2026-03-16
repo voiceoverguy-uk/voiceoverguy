@@ -103,6 +103,8 @@ export default function Home() {
             src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
           />
 
+          <div className="client-logos-border" style={{ margin: '18px auto' }} />
+
           <div className="hero-bio">
             <p>
               Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}

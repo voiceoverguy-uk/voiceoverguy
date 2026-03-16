@@ -15,20 +15,23 @@ async function fetchFromGoogle(): Promise<{ rating: number; reviewCount: number 
     return { rating: DEFAULT_RATING, reviewCount: DEFAULT_COUNT };
   }
 
-  const url = `https://places.googleapis.com/v1/places/${PLACE_ID}?fields=rating,userRatingCount&key=${apiKey}`;
+  const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=rating,user_ratings_total&key=${apiKey}`;
 
-  const resp = await fetch(url, {
-    headers: { "Content-Type": "application/json" },
-  });
+  const resp = await fetch(url);
 
   if (!resp.ok) {
     throw new Error(`Google Places API returned ${resp.status}`);
   }
 
   const data = await resp.json();
+
+  if (data.status !== "OK") {
+    throw new Error(`Google Places API status: ${data.status}`);
+  }
+
   return {
-    rating: data.rating ?? DEFAULT_RATING,
-    reviewCount: data.userRatingCount ?? DEFAULT_COUNT,
+    rating: data.result?.rating ?? DEFAULT_RATING,
+    reviewCount: data.result?.user_ratings_total ?? DEFAULT_COUNT,
   };
 }
 
