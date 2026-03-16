@@ -39,8 +39,7 @@ export default function Footer() {
         </p>
 
         <p className="footer-copyright">
-          Guy Harris · English Male VoiceoverGuy · Tel:{' '}
-          <a href="tel:+447973350178">+44 (0)7973 350 178</a>
+          Guy Harris · English Male VoiceoverGuy
         </p>
 
         <p className="footer-copyright" style={{ marginTop: '8px' }}>
