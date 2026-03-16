@@ -1,0 +1,65 @@
+Please tidy and refine the /voiceover-cartoons page so it feels cleaner, more intentional, and more premium.
+
+Goals:
+- Improve the layout and spacing
+- Fix the awkward text block sitting under the red divider line above the category filters
+- Add a polite sharing / credit note
+- Keep the page elegant, readable, and SEO-friendly
+- IMPORTANT: do not use em dashes anywhere in the copy. Use commas, full stops, or standard hyphens instead.
+
+Tasks:
+
+1. Remove or rework the current paragraph block that sits directly under the red divider line and above the category filter buttons. It currently feels visually stranded and badly positioned.
+   - Do NOT leave it as a loose floating paragraph.
+   - Instead, move that messaging into a properly styled intro-to-gallery section.
+   - Best solution:
+     - Keep the main hero intro as it is near the top
+     - Then place a much shorter supporting sentence above the filters, styled as a small centred gallery intro
+     - Example tone:
+       "Browse the cartoons by category below, from studio life and client briefs to Santa sessions, character voices, and audio editing mishaps."
+
+2. Improve formatting around the red divider line:
+   - Add more breathing space above and below it
+   - Make sure the transition from intro copy to gallery controls feels deliberate
+   - The category filters should feel anchored to the gallery, not glued under a random paragraph
+
+3. Add a small sharing / credit notice near the bottom of the page, just above the footer or beneath the final copy block.
+   - Use this exact wording:
+     "These are original VoiceoverGuy cartoons. If you'd like to share or feature one, just get in touch first and please credit VoiceoverGuy.co.uk when using it."
+   - Make "get in touch" link to the contact page
+   - Style this note tastefully, for example:
+     - smaller text
+     - soft boxed background or subtle divider above it
+     - centred or left-aligned depending on what looks most premium
+   - It should feel friendly, not legalistic
+
+4. Refine the typography and layout of the lower content section ("About These Voiceover Cartoons"):
+   - Increase spacing slightly so it breathes more
+   - Ensure line length is comfortable to read
+   - Keep the heading strong and clean
+   - Make the final page section feel balanced with the gallery above it
+
+5. Keep the existing filter buttons and gallery card layout, but tighten visual consistency:
+   - Ensure even spacing between filter pills
+   - Ensure gallery cards align neatly
+   - Keep image cards uniform in height and padding
+   - Preserve hover effects and responsiveness
+
+6. Copy polish:
+   - Remove any em dashes from all visible copy on the page
+   - Replace with commas or full stops where needed
+   - Keep the tone natural, British, polished, and lightly witty if appropriate
+   - Avoid sounding robotic or over-written
+
+7. SEO and accessibility:
+   - Keep one clear H1 only
+   - Preserve descriptive image alt text
+   - Make sure the new sharing note is plain text HTML, not hidden in JavaScript
+   - Maintain internal links already added in the lower section
+
+8. Final visual aim:
+   - The page should feel like a curated illustrated gallery, not a pile of thumbnails with text dropped in random places
+   - The section above the filters should look purposeful and minimal
+   - The whole page should feel more premium and editorial
+
+Please implement directly and keep the styling consistent with the VoiceoverGuy brand.

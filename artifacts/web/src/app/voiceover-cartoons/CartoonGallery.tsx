@@ -600,6 +600,10 @@ export default function CartoonGallery() {
 
   return (
     <>
+      <p className="cartoon-gallery-lead">
+        Browse by category below, from studio life and client briefs to Santa sessions, character voices, and audio editing mishaps.
+      </p>
+
       <nav className="cartoon-filters" aria-label="Filter cartoons by category">
         {FILTERS.map(f => (
           <button
