@@ -184,6 +184,7 @@ Blog index: `/voiceover-news` — 3-column card grid of 246 publishable posts, s
 - **Images:** 567 thumbnail files in `public/assets/img/blog/`
 - **Encoding:** SQL file is UTF-8 with cp1252 double-encoding; `fixEncoding()` reverses it via explicit Unicode escape patterns covering all common cp1252 mojibake sequences
 - **Key constraints:** rawDate preserved alongside normalised date; slugs never altered; conflicting slugs excluded from static params
+- **JSON-LD Schema:** `src/lib/buildSchema.ts` — generates per-post BlogPosting, BreadcrumbList, VideoObject (YouTube/Vimeo), AudioObject (local MP3) structured data; injected automatically in BlogPost component; sitewide author (Guy Harris) and publisher (VoiceoverGuy) constants; validates video IDs to reject iframe HTML; skips schema for posts with empty pageTitle
 
 ### Static Assets (1,533 files extracted from zip)
 

@@ -3,6 +3,7 @@ import type { BlogPost as BlogPostType } from '@/data/blog-posts';
 import blogPosts from '@/data/blog-posts';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import MiniPlayer from '@/components/MiniPlayer';
+import { buildAllBlogSchemas } from '@/lib/buildSchema';
 
 interface Props {
   post: BlogPostType;
@@ -136,8 +137,17 @@ export default function BlogPost({ post }: Props) {
 
   const relatedPosts = getRelatedPosts(post.id, 3);
 
+  const schemas = buildAllBlogSchemas(post);
+
   return (
     <>
+      {schemas.map((schema, i) => (
+        <script
+          key={`schema-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <div className="page-header">
         <div className="container">
           <h1>{post.pageTitle}</h1>
