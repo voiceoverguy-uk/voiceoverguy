@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import LiveSearch from './LiveSearch';
 import { voiceDemos, characterDemos } from '@/data/demos';
 
@@ -26,15 +26,32 @@ const links = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openItem, setOpenItem] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  const closeMobile = useCallback(() => {
+    setMobileOpen(false);
+    setOpenItem(null);
+  }, []);
 
   const toggleMobile = (label: string) => {
     setOpenItem(prev => prev === label ? null : label);
   };
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleTapOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        closeMobile();
+      }
+    };
+    document.addEventListener('mousedown', handleTapOutside);
+    return () => document.removeEventListener('mousedown', handleTapOutside);
+  }, [mobileOpen, closeMobile]);
+
   return (
     <>
       {/* Main Navbar */}
-      <nav className="navbar" role="navigation" aria-label="Main navigation">
+      <nav className="navbar" role="navigation" aria-label="Main navigation" ref={navRef}>
         <div className="navbar-logo-row">
           <Link href="/" className="navbar-logo">
             <img
@@ -58,7 +75,10 @@ export default function Navbar() {
           </button>
 
           {/* Nav items */}
-          <ul className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar">
+          <ul className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar" onClick={(e) => {
+            const target = e.target as HTMLElement;
+            if (target.closest('a')) closeMobile();
+          }}>
             <li className="nav-item" role="none">
               <Link href="/" className="nav-link" role="menuitem"><span className="nav-icon">🏠</span> Home</Link>
             </li>

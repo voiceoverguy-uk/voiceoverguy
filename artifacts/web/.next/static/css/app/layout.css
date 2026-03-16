@@ -581,6 +581,8 @@ button.nav-link {
   border: none;
   cursor: pointer;
   padding: 8px;
+  position: relative;
+  z-index: 10001;
 }
 
 .navbar-toggle span {
