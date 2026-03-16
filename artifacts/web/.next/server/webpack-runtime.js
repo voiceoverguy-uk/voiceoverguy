@@ -125,11 +125,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("8c242c272efe0ddd")
-=======
-/******/ 		__webpack_require__.h = () => ("8c14b7dc85fc84cf")
->>>>>>> 7c29f5f (Task #32: Search bar bottom padding increase)
+/******/ 		__webpack_require__.h = () => ("f4806c7539435a14")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

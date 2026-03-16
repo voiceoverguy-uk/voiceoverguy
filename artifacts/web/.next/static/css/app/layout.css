@@ -420,7 +420,7 @@ button.nav-link {
 .search-bar {
   background-color: var(--white);
   border-bottom: 1px solid #ddd;
-  padding: 8px 0;
+  padding: 8px 0 20px;
 }
 
 .search-bar-inner {

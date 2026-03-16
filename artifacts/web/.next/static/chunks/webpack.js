@@ -192,11 +192,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = function() { return "b19ee18731bbd19c"; }
-=======
-/******/ 		__webpack_require__.h = function() { return "1bb21de3b87daa38"; }
->>>>>>> 7c29f5f (Task #32: Search bar bottom padding increase)
+/******/ 		__webpack_require__.h = function() { return "4e2290d5607d8be0"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
