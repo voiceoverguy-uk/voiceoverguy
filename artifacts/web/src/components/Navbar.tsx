@@ -20,7 +20,7 @@ const links = [
   { label: 'Studio Finder', subtitle: 'Needs a Voiceover Studio?', href: '/voiceover-studio-finder' },
   { label: 'Santa Radio', subtitle: 'The biggest online Christmas Radio', href: 'https://www.santaradio.co.uk', external: true },
   { label: "The UK's Voice of Santa", subtitle: "The Favourite Santa Voice!", href: '/santa-voice' },
-  { label: 'Voiceover Studio Yorkshire', subtitle: "Professional recording booth", href: '/voiceover-studio-hire' },
+  { label: 'Voiceover Studio Yorkshire', subtitle: "Professional recording booth", href: 'https://voiceoverstudiofinder.com/VoiceoverGuy', external: true },
 ];
 
 export default function Navbar() {
