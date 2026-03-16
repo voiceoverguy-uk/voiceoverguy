@@ -1,8 +1,15 @@
 import Link from 'next/link';
 import type { BlogPost as BlogPostType } from '@/data/blog-posts';
+import blogPosts from '@/data/blog-posts';
 
 interface Props {
   post: BlogPostType;
+}
+
+function isValidImageFilename(filename: string): boolean {
+  if (!filename) return false;
+  const trimmed = filename.trim();
+  return trimmed.length >= 4 && trimmed.includes('.');
 }
 
 function normaliseHtml(html: string): string {
@@ -54,21 +61,11 @@ function MediaBlock({ post }: { post: BlogPostType }) {
     );
   }
 
-  if (post.image) {
-    return (
-      <img
-        src={`/assets/img/blog/${post.image}`}
-        alt={post.alt || post.pageTitle}
-        className="blog-post-img"
-      />
-    );
-  }
-
   return null;
 }
 
 function NImage({ filename, alt }: { filename: string; alt?: string }) {
-  if (!filename) return null;
+  if (!isValidImageFilename(filename)) return null;
   const src = filename.startsWith('http') ? filename : `/assets/img/blog/${filename}`;
   return (
     <img
@@ -79,25 +76,51 @@ function NImage({ filename, alt }: { filename: string; alt?: string }) {
   );
 }
 
-export default function BlogPost({ post }: Props) {
-  const hasMedia = !!(
-    post.video ||
-    (post.whatVideo && post.whatVideo !== '0') ||
-    post.image
-  );
+function getRelatedPosts(currentId: number, count: number): BlogPostType[] {
+  const publishable = blogPosts.filter(p => !p.conflictsWithCorePage && p.id !== currentId);
+  if (publishable.length === 0) return [];
 
-  const hasSections =
-    post.ntext1 || post.nimage1 ||
-    post.ntext2 || post.nimage2 ||
-    post.ntext3 || post.nimage3 ||
-    post.ntext4 || post.nimage4;
+  const picks: BlogPostType[] = [];
+  const total = publishable.length;
+  const prime = 7919;
+  for (let i = 0; i < count && i < total; i++) {
+    const idx = ((currentId * prime + i * 1301) % total + total) % total;
+    const candidate = publishable[idx];
+    if (!picks.find(p => p.id === candidate.id)) {
+      picks.push(candidate);
+    } else {
+      for (let j = 1; j < total; j++) {
+        const altIdx = (idx + j) % total;
+        const alt = publishable[altIdx];
+        if (!picks.find(p => p.id === alt.id)) {
+          picks.push(alt);
+          break;
+        }
+      }
+    }
+  }
+  return picks;
+}
+
+export default function BlogPost({ post }: Props) {
+  const hasVideoEmbed = (() => {
+    const wv = (post.whatVideo || '').trim();
+    const video = (post.video || '').trim();
+    if (wv === '1' && video && !video.startsWith('<iframe')) return true;
+    if (wv === '2' && video) return true;
+    if (wv === '3' || video.startsWith('<iframe')) return true;
+    return false;
+  })();
+
+  const hasImage = isValidImageFilename(post.image);
+  const hasRow1Media = hasVideoEmbed || (!hasVideoEmbed && hasImage);
 
   const ntextSections = [
     { text: post.ntext1, image: post.nimage1 },
     { text: post.ntext2, image: post.nimage2 },
     { text: post.ntext3, image: post.nimage3 },
     { text: post.ntext4, image: post.nimage4 },
-  ].filter(s => s.text || s.image);
+  ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image));
 
   const displayDate = post.date
     ? new Date(post.date + 'T00:00:00').toLocaleDateString('en-GB', {
@@ -105,6 +128,8 @@ export default function BlogPost({ post }: Props) {
         month: 'long',
       })
     : post.rawDate || null;
+
+  const relatedPosts = getRelatedPosts(post.id, 3);
 
   return (
     <>
@@ -127,44 +152,87 @@ export default function BlogPost({ post }: Props) {
             <div className="blog-post-date">{displayDate}</div>
           )}
 
-          <div className={`blog-post-main ${hasMedia ? 'two-col' : 'one-col'}`}>
+          {/* Row 1: text1 + media embed (or image-only if no video) */}
+          <div className={`blog-post-main ${hasRow1Media ? 'two-col' : 'one-col'}`}>
             {post.text1 && (
               <div
                 className="blog-text-col"
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(post.text1) }}
               />
             )}
-            {hasMedia && (
+            {hasVideoEmbed && (
               <div className="blog-media-col">
                 <MediaBlock post={post} />
               </div>
             )}
+            {!hasVideoEmbed && hasImage && (
+              <div className="blog-media-col">
+                <img
+                  src={`/assets/img/blog/${post.image}`}
+                  alt={post.alt || post.pageTitle}
+                  className="blog-post-img"
+                />
+              </div>
+            )}
           </div>
 
-          {post.text2 && (
+          {/* Row 2: image + text2 (when video is in row 1 and image exists) */}
+          {hasVideoEmbed && hasImage && post.text2 && post.text2.trim() ? (
+            <div className="blog-post-section two-col">
+              <div className="blog-media-col">
+                <img
+                  src={`/assets/img/blog/${post.image}`}
+                  alt={post.alt || post.pageTitle}
+                  className="blog-post-img"
+                />
+              </div>
+              <div
+                className="blog-text-col"
+                dangerouslySetInnerHTML={{ __html: normaliseHtml(post.text2) }}
+              />
+            </div>
+          ) : hasVideoEmbed && hasImage && !(post.text2 && post.text2.trim()) ? (
+            <div className="blog-post-section">
+              <img
+                src={`/assets/img/blog/${post.image}`}
+                alt={post.alt || post.pageTitle}
+                className="blog-post-img"
+                style={{ maxWidth: '50%' }}
+              />
+            </div>
+          ) : post.text2 && post.text2.trim() ? (
             <div className="blog-post-section">
               <div
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(post.text2) }}
               />
             </div>
-          )}
+          ) : null}
 
           {ntextSections.map((sec, i) => {
             const reverse = i % 2 === 0;
-            const textEl = sec.text ? (
+            const hasText = sec.text && sec.text.trim();
+            const hasImg = isValidImageFilename(sec.image);
+            const textEl = hasText ? (
               <div
                 className="blog-text-col"
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(sec.text) }}
               />
             ) : null;
-            const imgEl = sec.image ? (
+            const imgEl = hasImg ? (
               <div className="blog-media-col">
                 <NImage filename={sec.image} alt={post.alt} />
               </div>
             ) : null;
+
+            if (!textEl && !imgEl) return null;
+
+            const isTwoCol = textEl && imgEl;
             return (
-              <div key={i} className="blog-post-section two-col">
-                {reverse ? <>{textEl}{imgEl}</> : <>{imgEl}{textEl}</>}
+              <div key={i} className={`blog-post-section ${isTwoCol ? 'two-col' : ''}`}>
+                {isTwoCol
+                  ? (reverse ? <>{textEl}{imgEl}</> : <>{imgEl}{textEl}</>)
+                  : <>{textEl}{imgEl}</>
+                }
               </div>
             );
           })}
@@ -177,9 +245,6 @@ export default function BlogPost({ post }: Props) {
           )}
 
           <div className="blog-post-cta">
-            <Link href="/contact-guy" className="cta-btn">
-              Book Guy for a Similar Voiceover
-            </Link>
             <Link href="/voiceover-news" className="cta-btn cta-btn--outline">
               ← Back to News &amp; Blog
             </Link>
@@ -188,34 +253,28 @@ export default function BlogPost({ post }: Props) {
         </div>
       </section>
 
-      <aside className="blog-sidebar-strip">
-        <div className="container">
-          <div className="blog-sidebar-inner">
-            <div className="sidebar-box">
-              <h3>Book Guy Harris</h3>
-              <p>Need a British male voiceover for your next project? Get in touch directly.</p>
-              <Link href="/contact-guy" className="cta-btn" style={{ display: 'block', textAlign: 'center' }}>
-                Contact Guy
-              </Link>
-              <p className="sidebar-phone">
-                <a href="tel:+447973350178">+44 (0)7973 350 178</a>
-              </p>
-            </div>
-            <div className="sidebar-box">
-              <h3>Voice Services</h3>
-              <ul>
-                <li><Link href="/commercial-voiceover">Commercial Voiceover</Link></li>
-                <li><Link href="/voice-of-god">Voice of God</Link></li>
-                <li><Link href="/santa-voice">Santa Voice</Link></li>
-                <li><Link href="/david-attenborough-voice">Attenborough Style</Link></li>
-                <li><Link href="/character-voiceover">Character Voiceovers</Link></li>
-                <li><Link href="/game-trailer-voice">Game Trailer Voice</Link></li>
-                <li><Link href="/narration-voice">Narration</Link></li>
-              </ul>
+      {relatedPosts.length > 0 && (
+        <section className="blog-related-strip">
+          <div className="container">
+            <div className="blog-related-grid">
+              {relatedPosts.map(rp => (
+                <Link key={rp.id} href={`/${rp.url}`} className="blog-related-card">
+                  {isValidImageFilename(rp.image) && (
+                    <div className="blog-related-img-wrap">
+                      <img
+                        src={`/assets/img/blog/${rp.image}`}
+                        alt={rp.alt || rp.pageTitle}
+                        className="blog-related-img"
+                      />
+                    </div>
+                  )}
+                  <div className="blog-related-title">{rp.pageTitle}</div>
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </aside>
+        </section>
+      )}
     </>
   );
 }
