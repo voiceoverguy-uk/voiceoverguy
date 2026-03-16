@@ -1,8 +1,8 @@
-// File: /home/runner/workspace/artifacts/web/src/app/voiceover-news/page.tsx
-import * as entry from '../../../../src/app/voiceover-news/page.js'
+// File: /home/runner/workspace/artifacts/web/src/app/contact-guy/page.tsx
+import * as entry from '../../../../src/app/contact-guy/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/voiceover-news/page.js')
+type TEntry = typeof import('../../../../src/app/contact-guy/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{

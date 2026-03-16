@@ -3,8 +3,27 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { newsItems } from '@/data/news';
+import type { Segment } from '@/data/news';
 
 const INITIAL_COUNT = 8;
+
+function renderSegment(segment: Segment, index: number) {
+  if (segment.type === 'text') {
+    return <span key={index}>{segment.text}</span>;
+  }
+  if (segment.external) {
+    return (
+      <a key={index} href={segment.href} target="_blank" rel="noopener noreferrer">
+        {segment.text}
+      </a>
+    );
+  }
+  return (
+    <Link key={index} href={segment.href}>
+      {segment.text}
+    </Link>
+  );
+}
 
 export default function NewsSection() {
   const [showAll, setShowAll] = useState(false);
@@ -17,23 +36,7 @@ export default function NewsSection() {
         <ul className="news-list">
           {visible.map((item, i) => (
             <li key={i}>
-              {item.prefix && <span>{item.prefix}</span>}
-              {item.text}
-              {item.linkText && item.linkHref ? (
-                <>
-                  {' '}
-                  {item.linkHref.startsWith('http') ? (
-                    <a href={item.linkHref} target="_blank" rel="noopener noreferrer">
-                      {item.linkText}
-                    </a>
-                  ) : (
-                    <Link href={item.linkHref}>{item.linkText}</Link>
-                  )}
-                </>
-              ) : item.linkText ? (
-                <span> {item.linkText}</span>
-              ) : null}
-              {item.suffix && <span>{item.suffix}</span>}
+              {item.segments.map((seg, j) => renderSegment(seg, j))}
             </li>
           ))}
         </ul>
