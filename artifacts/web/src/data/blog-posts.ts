@@ -32,6 +32,7 @@ export interface BlogPost {
   nimage3: string;           // image paired with ntext3
   nimage4: string;           // image paired with ntext4
   conflictsWithCorePage: boolean; // true = slug already handled by a core Next.js page
+  localAudio?: string;       // optional local MP3 path, replaces SoundCloud embed
 }
 
 const blogPosts: BlogPost[] = [
@@ -7556,6 +7557,7 @@ const blogPosts: BlogPost[] = [
     "alt": "vernon-kay-ultra-ultra-marathon-challenge-uk-trailer-voice",
     "rating": "5",
     "twitter": "",
+    "localAudio": "/assets/audio/vernon-kay-ultra-ultra-marathon-challenge-promo.mp3",
     "homeText": "Trailer voice - BBC’s Ultra Marathon",
     "santa": "",
     "ntext1": "",

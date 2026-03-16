@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { BlogPost as BlogPostType } from '@/data/blog-posts';
 import blogPosts from '@/data/blog-posts';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
+import MiniPlayer from '@/components/MiniPlayer';
 
 interface Props {
   post: BlogPostType;
@@ -106,7 +107,8 @@ function getRelatedPosts(currentId: number, count: number): BlogPostType[] {
 }
 
 export default function BlogPost({ post }: Props) {
-  const hasVideoEmbed = (() => {
+  const hasLocalAudio = !!(post.localAudio && post.localAudio.trim());
+  const hasVideoEmbed = !hasLocalAudio && (() => {
     const wv = (post.whatVideo || '').trim();
     const video = (post.video || '').trim();
     if (wv === '1' && video && !video.startsWith('<iframe')) return true;
@@ -155,13 +157,18 @@ export default function BlogPost({ post }: Props) {
             <div className="blog-post-date">{displayDate}</div>
           )}
 
-          {/* Row 1: text1 + video embed (or text1 only if no video) */}
-          <div className={`blog-post-main ${hasVideoEmbed ? 'two-col' : 'one-col'}`}>
+          {/* Row 1: text1 + video/audio embed (or text1 only if no media) */}
+          <div className={`blog-post-main ${(hasVideoEmbed || hasLocalAudio) ? 'two-col' : 'one-col'}`}>
             {post.text1 && (
               <div
                 className="blog-text-col"
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(post.text1) }}
               />
+            )}
+            {hasLocalAudio && (
+              <div className="blog-media-col">
+                <MiniPlayer src={post.localAudio!} title={post.pageTitle} />
+              </div>
             )}
             {hasVideoEmbed && (
               <div className="blog-media-col">
