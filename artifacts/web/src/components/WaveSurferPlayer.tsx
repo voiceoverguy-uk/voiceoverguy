@@ -5,7 +5,7 @@ import type WaveSurfer from "wavesurfer.js";
 
 interface WaveSurferPlayerProps {
   src: string;
-  label: string;
+  label?: string;
   compact?: boolean;
 }
 
@@ -90,7 +90,7 @@ export default function WaveSurferPlayer({ src, label, compact = false }: WaveSu
 
   return (
     <div className={rootClass}>
-      {!compact && <p className="wavesurfer-label" dangerouslySetInnerHTML={{ __html: label }} />}
+      {!compact && label && <p className="wavesurfer-label" dangerouslySetInnerHTML={{ __html: label }} />}
       <div className="wavesurfer-controls">
         <button
           type="button"
@@ -131,7 +131,7 @@ export default function WaveSurferPlayer({ src, label, compact = false }: WaveSu
           />
         </div>
       </div>
-      {compact && <p className="wavesurfer-label" dangerouslySetInnerHTML={{ __html: label }} />}
+      {compact && label && <p className="wavesurfer-label" dangerouslySetInnerHTML={{ __html: label }} />}
     </div>
   );
 }

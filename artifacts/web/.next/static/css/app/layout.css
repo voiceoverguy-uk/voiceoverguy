@@ -1,3 +1,6 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.29_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!../../node_modules/.pnpm/next@14.2.29_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
   font-family: 'Century Gothic';
   src: url('/fonts/GOTHIC.TTF') format('truetype');
@@ -116,6 +119,7 @@ ul, ol {
 .navbar {
   background-color: var(--white);
   border-bottom: 1px solid var(--grey-mid);
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -324,6 +328,7 @@ button.nav-link {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0;
   gap: 0;
 }
 
@@ -378,7 +383,7 @@ button.nav-link {
 }
 
 .contact-dropdown-left {
-  flex: 1;
+  flex: 1 1;
 }
 
 .contact-dropdown-left h4 {
@@ -769,6 +774,7 @@ button.nav-link {
 .showreel-players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
   gap: 24px;
   padding: 20px 0;
 }
@@ -842,13 +848,14 @@ button.nav-link {
 }
 
 .wavesurfer-waveform {
-  flex: 1;
+  flex: 1 1;
   min-width: 0;
 }
 
 .wavesurfer-time {
   flex-shrink: 0;
   font-size: 0.8rem;
+  font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
   color: var(--text);
   opacity: 0.7;
@@ -871,7 +878,8 @@ button.nav-link {
   width: 60px;
   height: 4px;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   outline: none;
@@ -1029,6 +1037,7 @@ audio {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
   gap: 24px;
   margin-top: 32px;
 }
@@ -1056,6 +1065,7 @@ audio {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
   gap: 16px;
   margin-top: 24px;
 }
@@ -1106,6 +1116,7 @@ audio {
 .showreels {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   gap: 20px;
   margin-top: 24px;
 }
@@ -1238,6 +1249,7 @@ audio {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
   gap: 40px;
   margin-top: 24px;
 }
@@ -1263,6 +1275,7 @@ audio {
 .contact-top-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
   gap: 40px;
   margin-bottom: 48px;
 }
@@ -1270,6 +1283,7 @@ audio {
 .contact-mid-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
   gap: 40px;
   margin-bottom: 48px;
   padding: 36px;
@@ -1791,6 +1805,7 @@ textarea.form-control--compact {
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
   gap: 32px;
   align-items: start;
 }
@@ -1863,6 +1878,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .inner-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
   gap: 32px;
   align-items: start;
   padding: 32px 0;
@@ -1989,6 +2005,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
   gap: 32px;
   padding: 32px 0;
 }
@@ -2045,6 +2062,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .cartoon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 20px;
   gap: 20px;
   padding: 8px 0 32px;
 }
@@ -2294,6 +2312,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 24px;
   gap: 24px;
   padding: 24px 0;
 }
@@ -2349,6 +2368,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 28px;
   gap: 28px;
 }
 
@@ -2400,7 +2420,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding: 14px 16px 18px;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 1;
 }
 
 .blog-card-date {
@@ -2428,7 +2448,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   font-size: 13px;
   color: var(--grey-dark);
   line-height: 1.6;
-  flex: 1;
+  flex: 1 1;
 }
 
 .blog-card-excerpt p {
@@ -2551,6 +2571,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .blog-related-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
   gap: 24px;
 }
 
@@ -2625,6 +2646,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .blog-enquiry-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
   gap: 16px;
   margin-bottom: 14px;
 }
@@ -2781,7 +2803,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .vog-player-controls {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2843,7 +2865,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .vog-scrub-wrap {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -2941,7 +2963,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .vog-track-name {
-  flex: 1;
+  flex: 1 1;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3018,7 +3040,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .mini-player-info {
-  flex: 1;
+  flex: 1 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -3064,7 +3086,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .mini-player-scrub-wrap {
-  flex: 1;
+  flex: 1 1;
   min-width: 0;
 }
 
@@ -3117,3 +3139,4 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
     height: 80px;
   }
 }
+

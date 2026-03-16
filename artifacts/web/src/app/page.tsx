@@ -101,7 +101,6 @@ export default function Home() {
 
           <WaveSurferPlayer
             src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
-            label="Guy Harris Showreel 2025"
           />
 
           <div className="hero-bio">
