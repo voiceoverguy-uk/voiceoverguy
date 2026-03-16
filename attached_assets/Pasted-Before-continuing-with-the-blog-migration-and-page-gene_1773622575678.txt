@@ -1,0 +1,78 @@
+Before continuing with the blog migration and page generation, please follow these final rules carefully.
+
+This is a preservation-first rebuild. SEO continuity is critical.
+
+1. Preserve all existing live root-level slugs exactly as they are today.
+Do not rename, tidy, shorten, correct spelling, or “improve” any existing slug.
+Examples that must remain exactly the same:
+- /vernon-kay-ultra-ultra-marathon-challenge-uk-trailer-voice
+- /le-becks-natual-voiceover
+- /nfl-cbs-sports-king-henry-voice-patrick-stewart
+
+2. The SQL database is a migration source only, not the permanent runtime system.
+Use the SQL to extract and map the existing blog/project data into a clean Next.js content layer.
+Do not build the new site to depend on the old SQL database.
+
+3. Build the migrated posts as static/generated Next.js pages while preserving the exact existing root-level URLs.
+Google must see these as the same pages at the same paths.
+
+4. Use a clean typed content structure for the migrated blog/project posts.
+Map the old admin fields into a reusable content model and shared blog/project page component.
+
+5. Preserve the old admin content structure faithfully:
+- text1 + media block
+- image + text2 block
+- optional additional text/image rows
+- final bottom text
+Only render blocks that actually contain content.
+Do not invent filler text for empty fields.
+
+6. Treat main/core site pages differently from migrated blog/project posts.
+Main/core pages should continue to use the live site, existing screenshots, PHP structure, and the previously analysed admin/database-driven content as their source of truth.
+Do not let the blog SQL overwrite or interfere with the structure/content rules already established for the main pages.
+
+7. Preserve all visible wording exactly where it exists.
+Do not paraphrase, modernise, shorten, rewrite, or “improve” copy.
+Use the live rendered page and my admin screenshots as authoritative references.
+
+8. Dates:
+Normalise valid dates into YYYY-MM-DD where possible.
+Do NOT invent or interpolate missing dates from neighbouring IDs.
+If a date is missing or unreliable, flag it clearly for review instead of guessing.
+
+9. Metadata and schema:
+Generate per-page metadata from the migrated content fields:
+- title
+- meta description
+- canonical
+- Open Graph
+- Twitter tags
+- appropriate schema
+Preserve schema intent, but keep the structured data clean and valid.
+
+10. Route safety:
+Ensure migrated root-level blog/project slugs do not conflict with fixed core routes like:
+- /voiceoverguy
+- /santa-voice
+- /voice-of-god
+- /apple-voice-style
+- /FAQ
+- /contact-guy
+and all other fixed navigation pages.
+
+11. Link integrity:
+As part of this migration, validate internal links used in migrated blog/project pages against the known live site structure and migrated routes.
+Do not silently create broken internal links.
+For external links, preserve them as-is unless obviously malformed.
+If a link target is missing, broken, unknown, or unresolved, flag it clearly for review rather than guessing.
+Do not use placeholder # links.
+
+12. Future workflow:
+After migration, the system should make future posts easy to add by creating one structured content entry rather than manually coding a full new page every time.
+
+Please now update the migration plan accordingly and proceed in this order:
+A. Create the clean typed migrated content layer
+B. Build the reusable blog/project page component
+C. Generate the migrated root-level pages with exact existing slugs
+D. Validate route conflicts and internal links
+E. Report any missing dates, missing links, or unresolved fields for review
