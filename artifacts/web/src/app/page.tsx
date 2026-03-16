@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import NewsSection from '@/components/NewsSection';
 import ReviewBlock from '@/components/ReviewBlock';
+import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
@@ -98,12 +99,10 @@ export default function Home() {
           </h1>
           <h2>Voice heard Worldwide</h2>
 
-          <div className="audio-player-wrap">
-            <audio controls preload="none">
-              <source src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
+          <WaveSurferPlayer
+            src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
+            label="Guy Harris Showreel 2025"
+          />
 
           <div className="hero-bio">
             <p>
@@ -203,22 +202,25 @@ export default function Home() {
         <div className="container">
           <div className="showreel-players">
             <div className="showreel-player-item">
-              <audio controls preload="none">
-                <source src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3" type="audio/mpeg" />
-              </audio>
-              <p><span className="text-red">Commercial</span> Showreel 2025</p>
+              <WaveSurferPlayer
+                src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
+                label='<span class="text-red">Commercial</span> Showreel 2025'
+                compact
+              />
             </div>
             <div className="showreel-player-item">
-              <audio controls preload="none">
-                <source src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3" type="audio/mpeg" />
-              </audio>
-              <p><span className="text-red">Character</span> Voices Showreel 2025</p>
+              <WaveSurferPlayer
+                src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
+                label='<span class="text-red">Character</span> Voices Showreel 2025'
+                compact
+              />
             </div>
             <div className="showreel-player-item">
-              <audio controls preload="none">
-                <source src="/assets/audio/guy-harris-voiceoverguy-explainer-video-showreel.mp3" type="audio/mpeg" />
-              </audio>
-              <p><span className="text-red">Explainer Video</span> Showreel 2025</p>
+              <WaveSurferPlayer
+                src="/assets/audio/guy-harris-voiceoverguy-explainer-video-showreel.mp3"
+                label='<span class="text-red">Explainer Video</span> Showreel 2025'
+                compact
+              />
             </div>
           </div>
         </div>
