@@ -80,7 +80,7 @@ export default function Navbar() {
             if (target.closest('a')) closeMobile();
           }}>
             <li className="nav-item" role="none">
-              <Link href="/" className="nav-link" role="menuitem"><span className="nav-icon">🏠</span> Home</Link>
+              <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.png" alt="" className="nav-home-icon" /> Home</Link>
             </li>
 
             <li className="nav-item" role="none">

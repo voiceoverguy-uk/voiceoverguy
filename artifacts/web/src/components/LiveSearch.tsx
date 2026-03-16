@@ -13,6 +13,95 @@ interface SearchResult {
   relevance: number;
 }
 
+const PHRASES_REGULAR = [
+  'What voice do you need? Start typing...',
+  'Search British, narration, explainer...',
+  'Looking for a voiceover? Start here...',
+];
+
+const PHRASES_HALLOWEEN = [
+  'Need something spooky? Start typing...',
+  'Search spooky, sinister, Halloween...',
+  'Looking for a creepy voice? Start here...',
+];
+
+const PHRASES_SANTA = [
+  'Looking for the voice of Santa? Start typing...',
+  'Search Santa, festive, Christmas...',
+  'Need a festive voice? Start here...',
+];
+
+function getSeasonalPhrases(): string[] {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+
+  if (month === 10) return PHRASES_HALLOWEEN;
+  if (month === 11 || (month === 12 && day <= 25)) return PHRASES_SANTA;
+  return PHRASES_REGULAR;
+}
+
+function useReducedMotion(): boolean {
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduced(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReduced(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  return reduced;
+}
+
+function useTypewriter(phrases: string[], active: boolean, reducedMotion: boolean) {
+  const [display, setDisplay] = useState('');
+  const activeRef = useRef(active);
+  activeRef.current = active;
+
+  useEffect(() => {
+    if (reducedMotion) {
+      setDisplay(phrases[0]);
+      return;
+    }
+
+    if (!active) {
+      return;
+    }
+
+    let cancelled = false;
+    let phraseIndex = 0;
+
+    async function sleep(ms: number) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function run() {
+      while (!cancelled && activeRef.current) {
+        const phrase = phrases[phraseIndex % phrases.length];
+
+        for (let i = 0; i <= phrase.length; i++) {
+          if (cancelled || !activeRef.current) return;
+          setDisplay(phrase.slice(0, i));
+          await sleep(50);
+        }
+
+        await sleep(1800);
+        if (cancelled || !activeRef.current) return;
+
+        setDisplay('');
+        await sleep(400);
+
+        phraseIndex++;
+      }
+    }
+
+    run();
+    return () => { cancelled = true; };
+  }, [phrases, active, reducedMotion]);
+
+  return display;
+}
+
 function getBlogThumbnail(post: typeof blogPosts[0]): string {
   if (post.whatVideo === '1' && post.video) {
     return `https://img.youtube.com/vi/${post.video}/mqdefault.jpg`;
@@ -128,8 +217,14 @@ export default function LiveSearch() {
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [isFocused, setIsFocused] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const listboxId = 'live-search-listbox';
+
+  const phrases = useMemo(() => getSeasonalPhrases(), []);
+  const reducedMotion = useReducedMotion();
+  const showFakePlaceholder = !isFocused && query.length === 0;
+  const typedText = useTypewriter(phrases, showFakePlaceholder, reducedMotion);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -187,25 +282,34 @@ export default function LiveSearch() {
 
   return (
     <div className="live-search-container" ref={containerRef}>
-      <input
-        type="search"
-        className="search-input"
-        placeholder="What voice do you need? Attenborough, Santa, Narration, Explainer… start typing."
-        aria-label="Search voiceover styles"
-        role="combobox"
-        aria-expanded={isOpen}
-        aria-controls={listboxId}
-        aria-activedescendant={activeIndex >= 0 ? `live-search-option-${activeIndex}` : undefined}
-        aria-autocomplete="list"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        onFocus={() => {
-          if (debouncedQuery.trim().length > 0 && results.length > 0) {
-            setIsOpen(true);
-          }
-        }}
-      />
+      <div className="search-input-wrapper">
+        <input
+          type="search"
+          className="search-input"
+          aria-label="Search voiceover styles"
+          role="combobox"
+          aria-expanded={isOpen}
+          aria-controls={listboxId}
+          aria-activedescendant={activeIndex >= 0 ? `live-search-option-${activeIndex}` : undefined}
+          aria-autocomplete="list"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
+          onFocus={() => {
+            setIsFocused(true);
+            if (debouncedQuery.trim().length > 0 && results.length > 0) {
+              setIsOpen(true);
+            }
+          }}
+          onBlur={() => setIsFocused(false)}
+        />
+        {showFakePlaceholder && (
+          <span className="search-fake-placeholder" aria-hidden="true">
+            {typedText}
+            <span className="search-cursor" />
+          </span>
+        )}
+      </div>
       {isOpen && results.length > 0 && (
         <ul className="live-search-dropdown" role="listbox" id={listboxId}>
           {results.map((result, idx) => (

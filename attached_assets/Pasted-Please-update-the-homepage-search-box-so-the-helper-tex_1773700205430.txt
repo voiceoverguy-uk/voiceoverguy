@@ -1,0 +1,83 @@
+Please update the homepage search box so the helper text becomes a typed, animated “fake placeholder” inside the search field, using the existing site font and styling rather than a literal typewriter font.
+
+Goal:
+Make the search box feel more alive and premium, while also allowing the prompt text to change automatically by date for seasonal promotion.
+
+What to build:
+1. Do NOT rely on the native HTML placeholder for the animated text.
+   - Build a layered fake placeholder element positioned inside the search input.
+   - It should sit visually where placeholder text normally appears.
+   - It must not block clicks.
+   - It should disappear immediately when the user focuses the field or starts typing.
+   - If the field is empty again after blur, the animated helper can return.
+
+2. Use a typewriter-style animation effect, but keep the CURRENT SITE FONT, not Courier or any novelty typewriter font.
+   - Text appears letter by letter
+   - Smooth, subtle pacing
+   - Slight pause at the end
+   - Then clear and move to the next phrase
+   - Keep it classy, not gimmicky
+   - Mobile friendly
+   - No layout shift while animating
+
+3. Use date-based phrase sets automatically:
+   - Regular mode: Dec 26 to Sept 30
+   - Halloween mode: Oct 1 to Oct 31
+   - Santa mode: Nov 1 to Dec 25
+
+4. Rotate through short phrases for each season.
+   Use these exact phrase sets:
+
+   REGULAR:
+   - What voice do you need? Start typing...
+   - Search British, narration, explainer...
+   - Looking for a voiceover? Start here...
+
+   HALLOWEEN:
+   - Need something spooky? Start typing...
+   - Search spooky, sinister, Halloween...
+   - Looking for a creepy voice? Start here...
+
+   SANTA:
+   - Looking for the voice of Santa? Start typing...
+   - Search Santa, festive, Christmas...
+   - Need a festive voice? Start here...
+
+5. Timing:
+   - Type at a natural speed, around 45–60ms per character
+   - Pause briefly when the full phrase is complete
+   - Clear before the next phrase starts
+   - Small pause before typing the next phrase
+   - Keep the whole thing smooth and not too slow
+
+6. Behaviour rules:
+   - Stop animation on focus
+   - Hide fake placeholder once user types
+   - If input becomes empty again and loses focus, resume animation
+   - Respect reduced motion preferences:
+     - if prefers-reduced-motion is enabled, show one static seasonal phrase only, no typing animation
+   - Ensure accessibility is not harmed
+   - Native placeholder can remain empty or minimal for fallback, but the animated layer should be the visible experience
+
+7. Styling:
+   - Match the current design of the search bar
+   - Keep text soft grey like proper placeholder text
+   - Do not make it too dark
+   - No quirky fonts
+   - No flashy blinking cursor unless it is extremely subtle
+   - Slight focus polish is welcome:
+     - soft transition
+     - subtle border or glow using the brand red, but keep it tasteful
+
+8. Code quality:
+   - Keep the logic clean and maintainable
+   - Put the seasonal date selection into a small helper function
+   - Make the phrase arrays easy to edit later
+   - Avoid unnecessary dependencies if this can be done cleanly with existing stack/tools
+   - Make sure it works properly on desktop and mobile
+
+9. Important:
+   - Do not use em dashes anywhere in visible text or comments
+   - Keep the implementation lightweight and polished
+
+Please implement it fully, wire it into the existing homepage search box, and preserve the current layout and styling.
