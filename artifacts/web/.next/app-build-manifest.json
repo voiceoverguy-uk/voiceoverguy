@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/contact-guy/page": [
+    "/voiceover-cartoons/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact-guy/page.js"
+      "static/chunks/app/voiceover-cartoons/page.js"
     ],
     "/[slug]/page": [
       "static/chunks/webpack.js",
