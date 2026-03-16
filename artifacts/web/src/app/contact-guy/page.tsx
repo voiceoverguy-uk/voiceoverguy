@@ -24,51 +24,26 @@ export default function ContactGuy() {
       <section className="contact-section">
         <div className="container">
 
-          {/* ROW 1: Contact info + photo */}
+          {/* ROW 1: Compact form left, photo right */}
           <div className="contact-top-grid">
-            <div className="contact-info">
+            <div className="contact-form-col">
               <h2>Contact <span className="ident">Guy</span></h2>
-              <p>
-                Or you can connect for LIVE sessions.<br />
-                <strong>Source NEXUS:</strong>{' '}
-                <a
-                  href="https://nexus.source-elements.com/voiceoverguy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ident"
-                >
-                  VoiceoverGuy
-                </a>
+              <p style={{ fontSize: '14px', marginBottom: '16px', lineHeight: '1.6' }}>
+                It&#39;s always great to hear from new clients — please do get in touch
+                and let&#39;s make your project sound epic!
               </p>
-              <p>
-                <strong>Cleanfeed:</strong>{' '}
-                <a
-                  href="https://cleanfeed.net/join?voiceoverguy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ident"
-                >
-                  VoiceoverGuy
-                </a>
-              </p>
-              <p><strong>Skype:</strong> VoiceoverGuy</p>
-              <p><strong>Studio Location:</strong> Yorkshire, UK</p>
-              <p style={{ marginTop: '16px' }}>
-                It&#39;s always great to hear from new clients.<br />
-                Please do get in touch and lets make your project sound epic!
-              </p>
+              <ContactForm compact />
             </div>
 
             <div className="contact-photo">
               <img
                 src="/assets/images/voiceover-contact.jpg"
                 alt="Guy Harris voiceover recording studio — Get in touch"
-                style={{ width: '100%', borderRadius: '6px' }}
               />
             </div>
           </div>
 
-          {/* ROW 2: Cost info + What you get */}
+          {/* ROW 2: Cost + PayPal left, What you get + connect links right */}
           <div className="contact-mid-grid">
             <div className="contact-cost">
               <h2>So, <span className="ident">whats it gonna </span>cost then?</h2>
@@ -93,17 +68,30 @@ export default function ContactGuy() {
                 <li>We will work together until you get the desired outcome.</li>
                 <li>All audio is broadcast quality from a professional recording studio.</li>
               </ul>
-            </div>
-          </div>
 
-          {/* ROW 3: Contact form */}
-          <div className="contact-form-row">
-            <div className="contact-form-wrap">
-              <h2>Send Guy a Message</h2>
-              <p style={{ fontSize: '13px', color: '#666', marginBottom: '16px' }}>
-                Describe what you need and Guy will come back with a quote promptly.
+              <h2 style={{ marginTop: '28px' }}>Connect for <span className="ident">LIVE</span> sessions</h2>
+              <p style={{ fontSize: '14px', marginBottom: '8px' }}>
+                <strong>Source NEXUS:</strong>{' '}
+                <a
+                  href="https://nexus.source-elements.com/voiceoverguy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ident"
+                >
+                  VoiceoverGuy
+                </a>
               </p>
-              <ContactForm />
+              <p style={{ fontSize: '14px' }}>
+                <strong>Cleanfeed:</strong>{' '}
+                <a
+                  href="https://cleanfeed.net/join?voiceoverguy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ident"
+                >
+                  VoiceoverGuy
+                </a>
+              </p>
             </div>
           </div>
 

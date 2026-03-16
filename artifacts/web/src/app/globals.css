@@ -1156,6 +1156,7 @@ audio {
 }
 
 .contact-info h2,
+.contact-form-col h2,
 .contact-cost h2,
 .contact-get h2 {
   font-size: 1.4rem;
@@ -1164,6 +1165,7 @@ audio {
 }
 
 .contact-info p,
+.contact-form-col p,
 .contact-cost p,
 .contact-get p {
   font-size: 14px;
@@ -1172,6 +1174,7 @@ audio {
 }
 
 .contact-info a,
+.contact-form-col a,
 .contact-cost a,
 .contact-get a {
   color: var(--red);
@@ -1199,9 +1202,16 @@ audio {
   font-weight: 700;
 }
 
+.contact-photo {
+  display: flex;
+  align-items: flex-start;
+}
+
 .contact-photo img {
   border-radius: 6px;
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .form-group {
@@ -1237,6 +1247,15 @@ audio {
 textarea.form-control {
   resize: vertical;
   min-height: 120px;
+}
+
+.form-control--compact {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+textarea.form-control--compact {
+  min-height: 80px;
 }
 
 .char-counter {

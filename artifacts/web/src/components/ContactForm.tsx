@@ -14,7 +14,17 @@ interface FieldErrors {
   message?: string;
 }
 
-export default function ContactForm() {
+interface ContactFormProps {
+  compact?: boolean;
+  pageTitle?: string;
+  pageUrl?: string;
+}
+
+export default function ContactForm({
+  compact = false,
+  pageTitle = 'Contact Guy',
+  pageUrl = '/contact-guy',
+}: ContactFormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -63,8 +73,8 @@ export default function ContactForm() {
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
-          pageTitle: 'Contact Guy',
-          pageUrl: '/contact-guy',
+          pageTitle,
+          pageUrl,
           website: honeypotRef.current?.value ?? '',
         }),
       });
@@ -84,12 +94,15 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div style={{ padding: '32px 0', textAlign: 'center' }}>
+      <div style={{ padding: '24px 0', textAlign: 'center' }}>
         <p style={{ fontSize: '18px', fontWeight: 700, color: '#9C060B', marginBottom: '8px' }}>Message sent — thank you!</p>
         <p style={{ color: '#555', fontSize: '14px' }}>Guy will get back to you as soon as he can.</p>
       </div>
     );
   }
+
+  const groupStyle = compact ? { marginBottom: '10px' } : { marginBottom: '16px' };
+  const labelStyle = compact ? { fontSize: '12px' } : {};
 
   return (
     <form onSubmit={handleSubmit} noValidate>
@@ -103,12 +116,12 @@ export default function ContactForm() {
         style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
       />
 
-      <div className="form-group">
-        <label htmlFor="contact-name">Your name *</label>
+      <div className="form-group" style={groupStyle}>
+        <label htmlFor="contact-name" style={labelStyle}>Your name *</label>
         <input
           id="contact-name"
           type="text"
-          className={`form-control${errors.name ? ' form-control--error' : ''}`}
+          className={`form-control${errors.name ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
           value={name}
           onChange={e => { setName(e.target.value); setErrors(p => ({ ...p, name: undefined })); }}
           required
@@ -118,12 +131,12 @@ export default function ContactForm() {
         {errors.name && <span className="blog-enquiry-error">{errors.name}</span>}
       </div>
 
-      <div className="form-group">
-        <label htmlFor="contact-email">Email address *</label>
+      <div className="form-group" style={groupStyle}>
+        <label htmlFor="contact-email" style={labelStyle}>Email address *</label>
         <input
           id="contact-email"
           type="email"
-          className={`form-control${errors.email ? ' form-control--error' : ''}`}
+          className={`form-control${errors.email ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
           value={email}
           onChange={e => { setEmail(e.target.value); setErrors(p => ({ ...p, email: undefined })); }}
           required
@@ -133,17 +146,17 @@ export default function ContactForm() {
         {errors.email && <span className="blog-enquiry-error">{errors.email}</span>}
       </div>
 
-      <div className="form-group">
-        <label htmlFor="contact-message">
+      <div className="form-group" style={groupStyle}>
+        <label htmlFor="contact-message" style={labelStyle}>
           Your message *{' '}
-          <span style={{ fontWeight: 400, color: '#888', fontSize: '12px' }}>
+          <span style={{ fontWeight: 400, color: '#888', fontSize: '11px' }}>
             — paste your script or describe what you need
           </span>
         </label>
         <textarea
           id="contact-message"
-          className={`form-control${errors.message ? ' form-control--error' : ''}`}
-          rows={8}
+          className={`form-control${errors.message ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
+          rows={compact ? 4 : 8}
           value={message}
           onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
           required
@@ -159,7 +172,7 @@ export default function ContactForm() {
         {errors.message && <span className="blog-enquiry-error">{errors.message}</span>}
       </div>
 
-      <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: compact ? '12px' : '20px' }}>
         <button
           type="submit"
           className="submit-btn"
