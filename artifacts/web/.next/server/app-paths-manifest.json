@@ -1,5 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/voiceover-news/page": "app/voiceover-news/page.js",
-  "/[slug]/page": "app/[slug]/page.js"
-}
