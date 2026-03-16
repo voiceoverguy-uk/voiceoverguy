@@ -85,7 +85,7 @@ function useTypewriter(phrases: string[], active: boolean, reducedMotion: boolea
           await sleep(50);
         }
 
-        await sleep(1800);
+        await sleep(3800);
         if (cancelled || !activeRef.current) return;
 
         setDisplay('');
