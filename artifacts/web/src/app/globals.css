@@ -1961,6 +1961,115 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin: 0;
 }
 
+/* ===== BLOG ENQUIRY FORM ===== */
+.blog-enquiry-section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--grey-mid);
+}
+
+.blog-enquiry-intro {
+  font-size: 15px;
+  color: var(--grey-dark);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.blog-enquiry-form {
+  max-width: 640px;
+}
+
+.blog-enquiry-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.blog-enquiry-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.blog-enquiry-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.blog-enquiry-row .blog-enquiry-field {
+  margin-bottom: 0;
+}
+
+.blog-enquiry-error {
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 4px;
+}
+
+.blog-enquiry-error--server {
+  display: block;
+  margin-top: 10px;
+}
+
+.form-control--error {
+  border-color: #c0392b !important;
+}
+
+.blog-enquiry-footer {
+  margin-top: 4px;
+}
+
+.blog-enquiry-btn {
+  display: inline-block;
+  background: var(--red);
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 11px 28px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.blog-enquiry-btn:hover:not(:disabled) {
+  background: var(--red-dark);
+}
+
+.blog-enquiry-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.blog-enquiry-success {
+  background: #f0faf4;
+  border: 1px solid #a8d5b5;
+  border-radius: 4px;
+  padding: 18px 20px;
+  max-width: 480px;
+}
+
+.blog-enquiry-success strong {
+  display: block;
+  font-size: 15px;
+  color: #2a6b3e;
+  margin-bottom: 4px;
+}
+
+.blog-enquiry-success p {
+  font-size: 13px;
+  color: #4a7a5a;
+  margin: 0;
+}
+
 /* ===== RESPONSIVE BLOG ===== */
 @media (max-width: 1024px) {
   .blog-grid {
@@ -1983,5 +2092,8 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   }
   .blog-post-cta {
     flex-direction: column;
+  }
+  .blog-enquiry-row {
+    grid-template-columns: 1fr;
   }
 }

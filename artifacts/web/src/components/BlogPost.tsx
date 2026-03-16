@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { BlogPost as BlogPostType } from '@/data/blog-posts';
 import blogPosts from '@/data/blog-posts';
+import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 
 interface Props {
   post: BlogPostType;
@@ -241,6 +242,8 @@ export default function BlogPost({ post }: Props) {
               ← Back to News &amp; Blog
             </Link>
           </div>
+
+          <BlogEnquiryForm pageTitle={post.pageTitle} pageUrl={post.url} />
 
         </div>
       </section>
