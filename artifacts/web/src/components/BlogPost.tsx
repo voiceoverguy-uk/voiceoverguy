@@ -77,7 +77,9 @@ function NImage({ filename, alt }: { filename: string; alt?: string }) {
 }
 
 function getRelatedPosts(currentId: number, count: number): BlogPostType[] {
-  const publishable = blogPosts.filter(p => !p.conflictsWithCorePage && p.id !== currentId);
+  const publishable = blogPosts.filter(
+    p => !p.conflictsWithCorePage && p.id !== currentId && isValidImageFilename(p.image)
+  );
   if (publishable.length === 0) return [];
 
   const picks: BlogPostType[] = [];
