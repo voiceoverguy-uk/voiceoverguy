@@ -40,6 +40,46 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/commercial-voiceover/page.js"
+    ],
+    "/santa-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/santa-voice/page.js"
+    ],
+    "/football-commentator-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/football-commentator-voice/page.js"
+    ],
+    "/gameshow-host/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/gameshow-host/page.js"
+    ],
+    "/halloween-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/halloween-voice/page.js"
+    ],
+    "/pathe-news-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pathe-news-voice/page.js"
+    ],
+    "/narration-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/narration-voice/page.js"
+    ],
+    "/explainer-video-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/explainer-video-voice/page.js"
+    ],
+    "/voice-of-god/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voice-of-god/page.js"
     ]
   }
 }
