@@ -172,11 +172,7 @@ export default function ContactForm() {
       </div>
 
       <p style={{ fontSize: '12px', color: '#888', marginTop: '10px' }}>
-        Or call Guy direct:{' '}
-        <a href="tel:+447973350178" style={{ color: '#9C060B', fontWeight: 600 }}>
-          +44 (0)7973 350 178
-        </a>
-        {' '}· Email:{' '}
+        Email:{' '}
         <a href="mailto:guy@voiceoverguy.co.uk" style={{ color: '#9C060B', fontWeight: 600 }}>
           guy@voiceoverguy.co.uk
         </a>

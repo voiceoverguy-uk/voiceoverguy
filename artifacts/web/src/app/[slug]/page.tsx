@@ -128,9 +128,6 @@ export default function SlugPage({ params }: Props) {
                   <Link href="/contact-guy" className="cta-btn" style={{ display: 'block', textAlign: 'center' }}>
                     Contact Guy
                   </Link>
-                  <p style={{ fontSize: '12px', marginTop: '10px', textAlign: 'center' }}>
-                    <a href="tel:+447973350178">+44 (0)7973 350 178</a>
-                  </p>
                 </div>
 
                 <div className="sidebar-box">

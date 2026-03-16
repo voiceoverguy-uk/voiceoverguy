@@ -40,7 +40,6 @@ export default function FAQ() {
               <div className="sidebar-box">
                 <h3>Quick Contact</h3>
                 <p style={{ fontSize: '13px' }}><strong>Email:</strong> <a href="mailto:guy@voiceoverguy.co.uk">guy@voiceoverguy.co.uk</a></p>
-                <p style={{ fontSize: '13px' }}><strong>Tel:</strong> <a href="tel:+447973350178">+44 (0)7973 350 178</a></p>
                 <p style={{ fontSize: '13px' }}><strong>Source Connect:</strong> VoiceoverGuy</p>
                 <p style={{ fontSize: '13px' }}><strong>Cleanfeed:</strong> VoiceoverGuy</p>
                 <Link href="/contact-guy" className="cta-btn" style={{ display: 'block', textAlign: 'center', marginTop: '12px' }}>

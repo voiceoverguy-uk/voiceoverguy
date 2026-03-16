@@ -36,10 +36,6 @@ export default function ContactGuy() {
                 <a href="mailto:guy@voiceoverguy.co.uk">guy@voiceoverguy.co.uk</a>
               </p>
               <p>
-                <strong>Tel:</strong>{' '}
-                <a href="tel:+447973350178">+44 (0)7973 350 178</a>
-              </p>
-              <p>
                 <strong>Source Connect NEXUS:</strong> VoiceoverGuy
               </p>
               <p>

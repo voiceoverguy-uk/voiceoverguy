@@ -241,7 +241,6 @@ export default function Navbar() {
                 <div className="contact-dropdown-left">
                   <h4>Get in touch with Guy</h4>
                   <p>Email: <a href="mailto:guy@voiceoverguy.co.uk">Guy(at)VoiceoverGuy.co.uk</a></p>
-                  <p>Tel: <a href="tel:+447973350178">+44 (0)7973 350 178</a></p>
                   <p><span>Source Connect NEXUS:</span> VoiceoverGuy</p>
                   <p><span>Cleanfeed:</span> VoiceoverGuy</p>
                   <Link href="/contact-guy" className="cta-btn" style={{ display: 'inline-block', marginTop: '10px', fontSize: '12px', padding: '6px 14px' }}>
