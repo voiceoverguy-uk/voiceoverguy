@@ -113,7 +113,7 @@ export default function BlogPost({ post }: Props) {
   })();
 
   const hasImage = isValidImageFilename(post.image);
-  const hasRow1Media = hasVideoEmbed || (!hasVideoEmbed && hasImage);
+  const hasText2 = !!(post.text2 && post.text2.trim());
 
   const ntextSections = [
     { text: post.ntext1, image: post.nimage1 },
@@ -152,8 +152,8 @@ export default function BlogPost({ post }: Props) {
             <div className="blog-post-date">{displayDate}</div>
           )}
 
-          {/* Row 1: text1 + media embed (or image-only if no video) */}
-          <div className={`blog-post-main ${hasRow1Media ? 'two-col' : 'one-col'}`}>
+          {/* Row 1: text1 + video embed (or text1 only if no video) */}
+          <div className={`blog-post-main ${hasVideoEmbed ? 'two-col' : 'one-col'}`}>
             {post.text1 && (
               <div
                 className="blog-text-col"
@@ -165,19 +165,10 @@ export default function BlogPost({ post }: Props) {
                 <MediaBlock post={post} />
               </div>
             )}
-            {!hasVideoEmbed && hasImage && (
-              <div className="blog-media-col">
-                <img
-                  src={`/assets/img/blog/${post.image}`}
-                  alt={post.alt || post.pageTitle}
-                  className="blog-post-img"
-                />
-              </div>
-            )}
           </div>
 
-          {/* Row 2: image + text2 (when video is in row 1 and image exists) */}
-          {hasVideoEmbed && hasImage && post.text2 && post.text2.trim() ? (
+          {/* Row 2: image (left) + text2 (right) — image always goes here */}
+          {hasImage && hasText2 ? (
             <div className="blog-post-section two-col">
               <div className="blog-media-col">
                 <img
@@ -191,16 +182,15 @@ export default function BlogPost({ post }: Props) {
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(post.text2) }}
               />
             </div>
-          ) : hasVideoEmbed && hasImage && !(post.text2 && post.text2.trim()) ? (
+          ) : hasImage && !hasText2 ? (
             <div className="blog-post-section">
               <img
                 src={`/assets/img/blog/${post.image}`}
                 alt={post.alt || post.pageTitle}
                 className="blog-post-img"
-                style={{ maxWidth: '50%' }}
               />
             </div>
-          ) : post.text2 && post.text2.trim() ? (
+          ) : hasText2 ? (
             <div className="blog-post-section">
               <div
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(post.text2) }}
