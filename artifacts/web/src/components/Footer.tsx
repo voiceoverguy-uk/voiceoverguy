@@ -1,8 +1,7 @@
 import Link from 'next/link';
+import CurrentYear from './CurrentYear';
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -34,7 +33,7 @@ export default function Footer() {
         <p className="footer-tagline">
           <strong>Guy Harris – Award Winning British Male Voiceover</strong>
           {' – © 2000 – '}
-          {year}
+          <CurrentYear />
           {' VoiceoverGuy ®'}
         </p>
 

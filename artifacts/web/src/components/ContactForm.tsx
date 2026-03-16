@@ -126,7 +126,7 @@ export default function ContactForm() {
         <label htmlFor="contact-message">
           Your script or message *{' '}
           <span style={{ fontWeight: 400, color: '#888', fontSize: '12px' }}>
-            — paste your script here for an instant price guide
+            — paste your script or describe what you need
           </span>
         </label>
         <textarea
@@ -140,7 +140,7 @@ export default function ContactForm() {
         />
         <div className="char-counter">
           <span>Word count: <strong>{wordCount}</strong></span>
-          <span>Tip: paste your full script for an accurate estimate</span>
+          <span>Tip: paste your full script for an accurate quote</span>
         </div>
       </div>
 
@@ -171,12 +171,6 @@ export default function ContactForm() {
         </button>
       </div>
 
-      <p style={{ fontSize: '12px', color: '#888', marginTop: '10px' }}>
-        Email:{' '}
-        <a href="mailto:guy@voiceoverguy.co.uk" style={{ color: '#9C060B', fontWeight: 600 }}>
-          guy@voiceoverguy.co.uk
-        </a>
-      </p>
     </form>
   );
 }
