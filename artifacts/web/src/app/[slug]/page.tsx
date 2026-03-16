@@ -150,7 +150,11 @@ export default function SlugPage({ params }: Props) {
 
   const post = getBlogPost(params.slug);
   if (post && !post.conflictsWithCorePage) {
-    return <BlogPost post={post} />;
+    return (
+      <div className="blog-post-page">
+        <BlogPost post={post} />
+      </div>
+    );
   }
 
   notFound();

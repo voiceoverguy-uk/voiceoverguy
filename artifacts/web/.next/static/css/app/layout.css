@@ -2145,6 +2145,15 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin: 0;
 }
 
+/* ===== BLOG POST PAGE BACKGROUND ===== */
+.blog-post-page {
+  background-image: url('/assets/images/voicoverguy-background-home.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;
+}
+
 /* ===== BLOG POST ===== */
 .blog-post-body {
   padding: 40px 0 48px;
