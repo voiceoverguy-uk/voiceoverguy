@@ -1,8 +1,1 @@
-{
-  "/apple-voice-style/page": "app/apple-voice-style/page.js",
-  "/narration-voice/page": "app/narration-voice/page.js",
-  "/explainer-video-voice/page": "app/explainer-video-voice/page.js",
-  "/voice-of-god/page": "app/voice-of-god/page.js",
-  "/page": "app/page.js",
-  "/voiceoverguy/page": "app/voiceoverguy/page.js"
-}
+{}
