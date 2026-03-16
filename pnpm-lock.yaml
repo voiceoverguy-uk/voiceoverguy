@@ -79,6 +79,9 @@ importers:
         specifier: ^6.0.0
         version: 6.9.3
     devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.11.0
       '@vercel/node':
         specifier: ^5.0.0
         version: 5.6.15(rollup@4.59.0)

@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 import { EnquiryInput } from '../lib/api-zod/src/enquiry';
