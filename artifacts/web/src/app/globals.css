@@ -57,7 +57,9 @@ body {
   line-height: 1.6;
   color: var(--text);
   background-color: #f5f5f5;
-  background-image: url('/assets/images/voicoverguy-background-home.jpg');
+  background-image:
+    linear-gradient(rgba(245,245,245,0.88), rgba(245,245,245,0.88)),
+    url('/assets/images/voicoverguy-background-home.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -1436,26 +1438,31 @@ textarea.form-control--compact {
   padding: 0 15px;
 }
 
-.footer-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-
-.footer-social a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.85);
-}
-
 .footer-copyright {
   color: rgba(255,255,255,0.7);
   font-size: 12px;
   margin-top: 8px;
+}
+
+.footer-bottom-row {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.footer-bottom-row a {
+  color: rgba(255,255,255,0.85);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .footer-tagline {
