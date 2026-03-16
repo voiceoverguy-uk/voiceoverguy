@@ -40,7 +40,7 @@ export default function Navbar() {
             <img
               src="/assets/images/guy-harris-voiceover.png"
               alt="Guy Harris VoiceoverGuy"
-              style={{ height: '85px', width: 'auto' }}
+              className="navbar-logo-img"
             />
           </Link>
         </div>

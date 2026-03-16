@@ -141,6 +141,18 @@ ul, ol {
   text-decoration: none;
 }
 
+.navbar-logo-img {
+  height: 85px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo-img {
+    height: auto;
+    max-width: 75%;
+  }
+}
+
 .navbar-inner {
   display: flex;
   align-items: center;
