@@ -1,0 +1,58 @@
+Build a premium, SEO-friendly gallery layout for the /voiceover-cartoons page.
+
+Keep the existing cartoons and intro content, but redesign the page into a polished gallery experience.
+
+Requirements:
+	1.	Create a stronger hero section at the top with:
+	•	H1: Voiceover Cartoons by Guy Harris
+	•	a short supporting paragraph explaining these are original cartoons inspired by real-life voiceover studio sessions, clients, auditions, character work, editing, Santa jobs, and recording booth humour
+	•	a small credit line for illustrator George Raggett
+	2.	Replace the single endless image wall with a structured gallery layout:
+	•	add filter buttons across the top of the gallery
+	•	categories should include:
+All, Studio Life, Clients & Briefs, Character Voices, Santa & Christmas, Audio Editing & Tech, Industry Humour, Auditions & Agents
+	•	each cartoon should belong to one or more categories based on its filename/title
+	3.	Show the cartoons in clean responsive cards:
+	•	equal spacing
+	•	soft shadow
+	•	rounded corners
+	•	subtle hover effect
+	•	image first, then title underneath
+	•	optional short caption for featured cartoons only
+	4.	Add a lightbox/modal on click:
+	•	larger image
+	•	title
+	•	short descriptive caption
+	•	previous / next navigation
+	•	keyboard escape to close
+	5.	Performance:
+	•	use lazy loading for gallery images
+	•	serve WebP where available
+	•	include width and height attributes
+	•	ensure the page does not shift around while images load
+	6.	SEO:
+	•	keep one clear H1 only
+	•	add a short SEO text block below the hero and another one near the bottom
+	•	naturally reference terms like:
+voiceover cartoons, voiceover humour, recording studio life, British voiceover artist, home studio, character voiceovers, Santa voiceover, audio editing
+	•	add internal links in the lower text area to relevant pages such as Santa voice, spooky voice, character voiceovers, movie trailer voice, on hold voice, studio-related pages, and news/blog
+	7.	Image metadata:
+	•	generate clean alt text for every image using a consistent format like:
+Voiceover cartoon about [topic] by Guy Harris
+	•	do not use raw filenames as alt text
+	•	generate readable titles from filenames, for example:
+Scary Voices
+Phone Patching
+Own Studio
+Time Stretching
+	•	convert filenames to lowercase hyphenated URLs where needed
+	8.	Add structured data:
+	•	CollectionPage
+	•	BreadcrumbList
+	•	ImageGallery or equivalent gallery-friendly schema
+	•	include Guy Harris as creator where appropriate
+	9.	Design:
+	•	keep it on-brand with VoiceoverGuy styling
+	•	use a cleaner, more premium gallery feel than the current plain thumbnail wall
+	•	desktop should feel airy and organised
+	•	mobile should stack beautifully with no sideways overflow
