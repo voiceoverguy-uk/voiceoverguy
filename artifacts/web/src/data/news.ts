@@ -33,7 +33,9 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("Awesome to be the Voice of God for the TV Choice Awards 2026 for the 5th year running. Hob Nob'ing with celebs getting celeb messages for my daughter."),
+      t("Awesome to be the Voice of God for the "),
+      link("TV Choice Awards 2026", "/tv-choice-awards-voice-of-god-voiceover"),
+      t(" for the 5th year running. Hob Nob'ing with celebs getting celeb messages for my daughter."),
     ],
   },
   {
