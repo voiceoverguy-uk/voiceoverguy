@@ -1,8 +1,8 @@
 {
-  "/page": "app/page.js",
   "/contact-guy/page": "app/contact-guy/page.js",
+  "/page": "app/page.js",
   "/[slug]/page": "app/[slug]/page.js",
   "/voiceover-news/page": "app/voiceover-news/page.js",
-  "/voiceover-cartoons/page": "app/voiceover-cartoons/page.js",
-  "/voiceover-studio/page": "app/voiceover-studio/page.js"
+  "/voiceover-studio/page": "app/voiceover-studio/page.js",
+  "/voiceover-cartoons/page": "app/voiceover-cartoons/page.js"
 }
