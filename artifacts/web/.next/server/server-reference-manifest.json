@@ -1,5 +1,9 @@
 {
   "node": {},
   "edge": {},
-  "encryptionKey": "fYE6v7BnPmfskaDYrJKIfjLXIf5rP59R4UGvmqwjq1k="
+<<<<<<< HEAD
+  "encryptionKey": "Sv9elHC+TbuzVC7WrhVEnGyiC7KAUkHsfccCFh/xZEI="
+=======
+  "encryptionKey": "si1Jkz8IU8f63VY+USIcx05VOM71BDn2e28iFXAmDkI="
+>>>>>>> 7c29f5f (Task #32: Search bar bottom padding increase)
 }

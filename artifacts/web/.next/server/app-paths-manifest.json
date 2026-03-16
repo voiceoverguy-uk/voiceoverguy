@@ -1,5 +1,11 @@
 {
-  "/[slug]/page": "app/[slug]/page.js",
+<<<<<<< HEAD
+  "/page": "app/page.js"
+=======
   "/page": "app/page.js",
-  "/voiceover-news/page": "app/voiceover-news/page.js"
+  "/voiceover-news/page": "app/voiceover-news/page.js",
+  "/voiceover-cartoons/page": "app/voiceover-cartoons/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/voiceover-studio/page": "app/voiceover-studio/page.js"
+>>>>>>> 7c29f5f (Task #32: Search bar bottom padding increase)
 }
