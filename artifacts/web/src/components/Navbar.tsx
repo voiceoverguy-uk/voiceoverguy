@@ -2,29 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-
-const voiceDemos = [
-  { label: 'Apple Voice Style', href: '/apple-voice-style' },
-  { label: 'Commercial Voiceover', href: '/commercial-voiceover' },
-  { label: 'Explainer Video Voiceover', href: '/explainer-video-voice' },
-  { label: 'Narration Voice', href: '/narration-voice' },
-  { label: 'Voice of God', href: '/voice-of-god' },
-  { label: 'Imaging Voice', href: '/voiceover-imaging' },
-  { label: 'Movie Trailer Voice', href: '/movie-trailer-voice' },
-  { label: 'Game Trailer Voice', href: '/game-trailer-voice' },
-  { label: 'On Hold Voice', href: '/on-hold-voice' },
-];
-
-const characterDemos = [
-  { label: 'David Attenborough Voice', href: '/david-attenborough-voice' },
-  { label: "The UK's Official Voice of Santa", href: '/santa-voice' },
-  { label: 'Football Commentator Voice', href: '/football-commentator-voice' },
-  { label: 'Gameshow Host Voice', href: '/gameshow-host' },
-  { label: 'Spooky Halloween Voice', href: '/halloween-voice' },
-  { label: 'My Character Voiceovers', href: '/character-voiceover' },
-  { label: 'Pirate Voice – Ah ha!', href: '/pirate-voice' },
-  { label: 'Pathe News Voice', href: '/pathe-news-voice' },
-];
+import LiveSearch from './LiveSearch';
+import { voiceDemos, characterDemos } from '@/data/demos';
 
 const videos = [
   { title: 'Voice of Santa', subtitle: "The Uk's Father Christmas", href: 'https://www.youtube.com/watch?v=P44bGiUI0vE' },
@@ -263,12 +242,7 @@ export default function Navbar() {
         {/* Search Bar */}
         <div className="search-bar">
           <div className="search-bar-inner">
-            <input
-              type="search"
-              className="search-input"
-              placeholder="What voice do you need? Attenborough, Santa, Narration, Explainer… start typing."
-              aria-label="Search voiceover styles"
-            />
+            <LiveSearch />
           </div>
         </div>
       </nav>
