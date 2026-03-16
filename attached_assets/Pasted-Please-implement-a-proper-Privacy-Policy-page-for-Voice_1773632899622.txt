@@ -1,0 +1,100 @@
+Please implement a proper Privacy Policy page for VoiceoverGuy and wire it into the site footer and blog enquiry form.
+
+Important rules:
+- Use UK English spelling.
+- Keep the tone clear, professional, and human — not American legal waffle.
+- Do not mention services or tracking tools unless they are genuinely relevant to this site build.
+- Do not claim that we sell personal data. We do not sell personal data.
+- Do not claim we use Google Analytics unless it is actually installed on the site. Google Search Console is not the same thing.
+- Do mention embedded third-party media where relevant (YouTube, Vimeo, SoundCloud), because those may use cookies or similar technologies.
+- Build this as a clean static page in Next.js with proper metadata.
+- Add a footer link to /privacy-policy.
+- Add a short privacy notice line below the new blog enquiry form with a link to /privacy-policy.
+
+Create this page:
+- /privacy-policy
+
+Use this page title:
+Privacy Policy | VoiceoverGuy
+
+Use a sensible meta description around:
+Learn how VoiceoverGuy collects, uses and protects personal information when you get in touch, browse the site, or use embedded media and enquiry forms.
+
+Page heading:
+Privacy Policy
+
+Use the following body copy exactly, unless minor HTML formatting improvements are needed:
+
+---
+<h1>Privacy Policy</h1>
+
+<p>Last updated: [AUTO-INSERT TODAY'S DATE IN YYYY-MM-DD FORMAT]</p>
+
+<p>This Privacy Policy explains how VoiceoverGuy collects, uses and protects your personal information when you use this website, get in touch, or submit an enquiry.</p>
+
+<h2>Who we are</h2>
+<p>VoiceoverGuy is the trading name used by Guy Harris for professional voiceover services. If you have any questions about this Privacy Policy or how your information is used, please contact: <a href="mailto:enquiries@voiceoverguy.co.uk">enquiries@voiceoverguy.co.uk</a>.</p>
+
+<h2>What information we collect</h2>
+<p>Depending on how you use the site, we may collect:</p>
+<ul>
+  <li>Your name</li>
+  <li>Your email address</li>
+  <li>The contents of any message you send</li>
+  <li>The page you were viewing when you submitted an enquiry</li>
+  <li>Technical information needed to protect the site and process submissions, such as server logs or IP-related request information where available</li>
+</ul>
+
+<h2>How we use your information</h2>
+<p>We use personal information to:</p>
+<ul>
+  <li>Respond to enquiries and discuss potential voiceover work</li>
+  <li>Provide quotes or information you have asked for</li>
+  <li>Maintain the security and reliability of the website and enquiry systems</li>
+  <li>Keep internal business records of genuine enquiries and client communications</li>
+</ul>
+
+<h2>Lawful basis for processing</h2>
+<p>We process personal information where it is necessary to respond to your enquiry or take steps at your request before entering into a contract. We may also process information where it is in our legitimate interests to run, protect and improve the website and respond to genuine business enquiries.</p>
+
+<h2>How long we keep your information</h2>
+<p>We keep enquiry information only for as long as reasonably necessary to deal with your message, any follow-up work, and related business record-keeping. We do not keep personal information for longer than necessary.</p>
+
+<h2>Who we share information with</h2>
+<p>We do not sell your personal data.</p>
+<p>We may share limited information with service providers who help us run the website or process enquiries, where necessary. This may include website hosting providers, email delivery services, and embedded media providers such as YouTube, Vimeo or SoundCloud where content is loaded from those services.</p>
+
+<h2>Search performance and website tools</h2>
+<p>We may use services such as Google Search Console to understand how the website performs in Google Search. This helps us monitor search visibility and improve pages. Search Console is a website owner reporting tool and is separate from Google Analytics.</p>
+
+<h2>Cookies and embedded content</h2>
+<p>This website may use strictly necessary technologies required for the site to function properly. In addition, some pages include embedded third-party content such as YouTube videos, Vimeo videos, or SoundCloud audio players. These third-party services may use cookies or similar technologies when their content loads.</p>
+<p>Where possible, embedded media should be configured in the most privacy-friendly way available, such as YouTube's privacy-enhanced mode where suitable.</p>
+<p>If additional non-essential cookies, analytics, or tracking technologies are introduced later, this policy should be updated and any required consent mechanism should be reviewed.</p>
+
+<h2>Your rights</h2>
+<p>You may have the right to request access to the personal information we hold about you, ask for incorrect information to be corrected, request deletion where appropriate, or object to certain uses of your information. To make a request, please email <a href="mailto:enquiries@voiceoverguy.co.uk">enquiries@voiceoverguy.co.uk</a>.</p>
+
+<h2>How to complain</h2>
+<p>If you have a concern about how your personal information is handled, please contact us first and we will try to resolve it. You also have the right to complain to the Information Commissioner's Office (ICO) in the UK if you believe your information has been handled improperly.</p>
+
+<h2>Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time to reflect changes to the website, enquiry systems, or legal requirements. The latest version will always be posted on this page.</p>
+---
+
+Implementation requirements:
+1. Create the page at /privacy-policy using the site's existing design system, fonts, and brand red #9C060B.
+2. Add a footer link to /privacy-policy.
+3. Under the compact blog enquiry form, add this short line in small text:
+   “By sending this message, you agree that we may use your details to respond to your enquiry. See our Privacy Policy.”
+   Link “Privacy Policy” to /privacy-policy.
+4. Make sure the privacy policy page has clean metadata and is indexable.
+5. If YouTube embeds are being used in the rebuilt site, review whether they can use YouTube privacy-enhanced mode where practical.
+6. Do not add a cookie banner in this task. Just implement the Privacy Policy page and the inline form notice.
+7. If the site currently has any obvious third-party embeds or services already in use beyond YouTube, Vimeo, SoundCloud, Resend, hosting, and Search Console, include them only if they are clearly present in the codebase.
+
+After implementation, show me:
+- the new /privacy-policy page
+- where the footer link was added
+- the new privacy line under the blog enquiry form
+- whether YouTube embeds were switched to privacy-enhanced mode or if any could not be changed

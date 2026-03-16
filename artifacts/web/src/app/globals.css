@@ -1132,6 +1132,78 @@ audio {
   color: var(--red);
 }
 
+/* Contact page — three-row layout */
+.contact-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.contact-mid-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+  padding: 36px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 8px;
+}
+
+.contact-form-row {
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.contact-info h2,
+.contact-cost h2,
+.contact-get h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--red);
+}
+
+.contact-info p,
+.contact-cost p,
+.contact-get p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.contact-info a,
+.contact-cost a,
+.contact-get a {
+  color: var(--red);
+}
+
+.contact-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.contact-bullets li {
+  font-size: 14px;
+  line-height: 1.7;
+  padding-left: 18px;
+  position: relative;
+  color: var(--text);
+}
+
+.contact-bullets li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.contact-photo img {
+  border-radius: 6px;
+  width: 100%;
+}
+
 .form-group {
   margin-bottom: 16px;
 }
@@ -1388,6 +1460,16 @@ textarea.form-control {
   }
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+  .contact-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-mid-grid {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .contact-form-row {
+    max-width: 100%;
   }
 }
 
