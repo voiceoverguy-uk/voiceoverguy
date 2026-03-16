@@ -7,6 +7,8 @@ interface Props {
   pageUrl: string;
 }
 
+const MIN_WORDS = 8;
+
 function countWords(s: string): number {
   return s.trim().replace(/\s+/g, ' ').split(' ').filter(Boolean).length;
 }
@@ -26,6 +28,10 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
   const [serverError, setServerError] = useState('');
   const honeypotRef = useRef<HTMLInputElement>(null);
 
+  const wordCount = countWords(message);
+  const messageReady = wordCount >= MIN_WORDS;
+  const remaining = MIN_WORDS - wordCount;
+
   function validate(): FieldErrors {
     const e: FieldErrors = {};
     if (!name.trim()) e.name = 'Please enter your name.';
@@ -36,7 +42,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
     }
     if (!message.trim()) {
       e.message = 'Please enter a message.';
-    } else if (countWords(message) < 8) {
+    } else if (!messageReady) {
       e.message = 'Please write at least 8 words so I can understand your project.';
     }
     return e;
@@ -149,6 +155,13 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
             onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
             placeholder="Tell me a little about your project…"
           />
+          {message.length > 0 && (
+            <span className={`blog-enquiry-wordcount${messageReady ? ' blog-enquiry-wordcount--ok' : ''}`}>
+              {messageReady
+                ? '✓ Ready to send'
+                : `${wordCount} / ${MIN_WORDS} words — ${remaining} more needed`}
+            </span>
+          )}
           {errors.message && <span className="blog-enquiry-error">{errors.message}</span>}
         </div>
 
@@ -157,6 +170,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
             type="submit"
             className="blog-enquiry-btn"
             disabled={status === 'sending'}
+            style={{ opacity: messageReady ? 1 : 0.38, transition: 'opacity 0.2s' }}
           >
             {status === 'sending' ? 'Sending…' : 'Send Message'}
           </button>

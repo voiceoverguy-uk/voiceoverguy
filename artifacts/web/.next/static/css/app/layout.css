@@ -2038,6 +2038,18 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   border-color: #c0392b !important;
 }
 
+.blog-enquiry-wordcount {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #c0392b;
+  transition: color 0.2s;
+}
+
+.blog-enquiry-wordcount--ok {
+  color: #2a7a45;
+}
+
 .blog-enquiry-footer {
   margin-top: 4px;
 }
