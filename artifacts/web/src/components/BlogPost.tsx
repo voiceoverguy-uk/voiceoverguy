@@ -167,7 +167,7 @@ export default function BlogPost({ post }: Props) {
             )}
             {hasLocalAudio && (
               <div className="blog-media-col">
-                <MiniPlayer src={post.localAudio!} title={post.pageTitle} />
+                <MiniPlayer src={post.localAudio!} title={post.pageTitle} artwork={isValidImageFilename(post.image) ? `/assets/img/blog/${post.image}` : undefined} />
               </div>
             )}
             {hasVideoEmbed && (
