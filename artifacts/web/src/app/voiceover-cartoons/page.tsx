@@ -81,15 +81,15 @@ export default function Page() {
             </p>
             <p>
               If you enjoy the cartoons, you might also enjoy hearing the real thing. Guy voices{' '}
-              <a href="/character-voiceovers">character voiceovers</a>,{' '}
+              <a href="/character-voiceover">character voiceovers</a>,{' '}
               <a href="/movie-trailer-voice">movie trailer voices</a>,{' '}
               <a href="/santa-voice">Santa voiceover calls</a>,{' '}
-              <a href="/spooky-voice">spooky and scary voices</a>,{' '}
-              <a href="/on-hold">telephone on-hold messages</a>, and much more.
+              <a href="/halloween-voice">spooky and scary voices</a>,{' '}
+              <a href="/on-hold-voice">telephone on-hold messages</a>, and much more.
             </p>
             <p>
               Have an idea for a cartoon that captures something from the voiceover world? Guy is always open to suggestions — get in touch via the{' '}
-              <a href="/contact-and-how-much">contact page</a> or browse the{' '}
+              <a href="/contact-guy">contact page</a> or browse the{' '}
               <a href="/news-blog">News &amp; Blog</a> for more voiceover humour and industry insights.
             </p>
             <p className="cartoons-raggett-credit">
