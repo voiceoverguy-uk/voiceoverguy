@@ -1702,6 +1702,11 @@ textarea.form-control--compact {
     background: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     padding: 8px 0;
+    z-index: 10000;
+  }
+
+  .live-search-container {
+    z-index: 1;
   }
 
   .navbar-nav.open {
