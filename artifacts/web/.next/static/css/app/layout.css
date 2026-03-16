@@ -2880,8 +2880,8 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   background: #f2f2f2;
   border-radius: 6px;
   overflow: hidden;
-  max-width: 780px;
-  margin: 0 auto 32px;
+  max-width: 600px;
+  margin: 24px auto 32px;
   font-family: inherit;
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }

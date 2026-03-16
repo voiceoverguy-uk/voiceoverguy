@@ -27,7 +27,7 @@ export default function Page() {
         </div>
       </div>
 
-      <InnerPage sections={[
+      <InnerPage pageTitle={data.s1} pageSlug="voice-of-god" sections={[
         ...(data.s4 ? [{ text: data.s4 }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),

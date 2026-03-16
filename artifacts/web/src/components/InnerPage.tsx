@@ -1,4 +1,5 @@
 import React from 'react';
+import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 
 interface Section {
   text?: string;
@@ -11,6 +12,8 @@ interface Section {
 
 interface InnerPageProps {
   sections: Section[];
+  pageTitle?: string;
+  pageSlug?: string;
 }
 
 function normalizeHTML(html: string): string {
@@ -57,7 +60,7 @@ function VimeoEmbed({ id }: { id: string }) {
   );
 }
 
-export default function InnerPage({ sections }: InnerPageProps) {
+export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPageProps) {
   const pairs: Array<[Section, Section | null]> = [];
   let i = 0;
 
@@ -133,6 +136,13 @@ export default function InnerPage({ sections }: InnerPageProps) {
             </div>
           );
         })}
+
+        {pageTitle && pageSlug && (
+          <BlogEnquiryForm
+            pageTitle={pageTitle}
+            pageUrl={`https://www.voiceoverguy.co.uk/${pageSlug}`}
+          />
+        )}
       </div>
     </div>
   );

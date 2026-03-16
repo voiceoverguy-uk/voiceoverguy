@@ -18,7 +18,7 @@ import InnerPage from '@/components/InnerPage';
           </section>
         )}
         <div className="inner-bar" />
-        <InnerPage sections={[
+        <InnerPage pageTitle={data.s1} pageSlug="movie-trailer-voice" sections={[
           { text: data.s4 },
           { youtubeId: data.s7 },
           { youtubeId: data.s5 },
