@@ -30,6 +30,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/commercial-voiceover/page.js"
+    ],
+    "/voiceoverguy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voiceoverguy/page.js"
     ]
   }
 }
