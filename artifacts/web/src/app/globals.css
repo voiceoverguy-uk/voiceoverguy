@@ -1415,7 +1415,7 @@ textarea.form-control--compact {
 .footer {
   background-color: var(--red-dark);
   color: rgba(255,255,255,0.85);
-  padding: 32px 0;
+  padding: 22px 0 18px;
   text-align: center;
   font-size: 13px;
 }
@@ -1435,16 +1435,10 @@ textarea.form-control--compact {
   padding: 0 15px;
 }
 
-.footer-copyright {
-  color: rgba(255,255,255,0.7);
-  font-size: 12px;
-  margin-top: 8px;
-}
-
 .footer-bottom-row {
   color: rgba(255,255,255,0.7);
   font-size: 12px;
-  margin-top: 8px;
+  margin-top: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1464,12 +1458,12 @@ textarea.form-control--compact {
 
 .footer-tagline {
   font-size: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .footer-sister-sites {
-  margin-top: 20px;
-  padding-top: 18px;
+  margin-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
 }

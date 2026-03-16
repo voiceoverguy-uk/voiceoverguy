@@ -12,10 +12,6 @@ export default function Footer() {
           {' VoiceoverGuy ®'}
         </p>
 
-        <p className="footer-copyright">
-          Guy Harris · English Male VoiceoverGuy
-        </p>
-
         <p className="footer-bottom-row">
           <a
             href="https://www.youtube.com/channel/UCBKf-ETUIQ5dgh1WNLifhEQ"

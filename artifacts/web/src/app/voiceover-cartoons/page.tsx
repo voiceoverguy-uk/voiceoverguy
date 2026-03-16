@@ -54,13 +54,6 @@ export default function Page() {
           <p>
             These original cartoons were born out of years of real-life voiceover studio sessions: late-night deadlines, oddly specific client briefs, technical gremlins, Santa jobs, character voices, and the general absurdity of life as a British voiceover artist. Each one is a moment from the booth, captured in ink.
           </p>
-          <p className="cartoons-credit">
-            Illustrated by the brilliant{' '}
-            <a href="https://www.instagram.com/georgeraggett/" target="_blank" rel="noopener noreferrer">
-              George Raggett
-            </a>
-            , designed and conceived by Guy Harris.
-          </p>
         </div>
       </section>
 
@@ -93,7 +86,8 @@ export default function Page() {
               All cartoons illustrated by{' '}
               <a href="https://www.instagram.com/georgeraggett/" target="_blank" rel="noopener noreferrer">
                 George Raggett
-              </a>.
+              </a>
+              , designed and conceived by Guy Harris.
             </p>
           </div>
 
