@@ -56,7 +56,6 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: var(--text);
-  background-color: #f5f5f5;
   background-image: url('/assets/images/voicoverguy-background-home.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -811,7 +810,7 @@ audio {
 }
 
 .section-alt {
-  background-color: var(--white);
+  background-color: transparent;
 }
 
 .section-dark {
@@ -907,7 +906,7 @@ audio {
 }
 
 .feature-block {
-  background: var(--white);
+  background: transparent;
   border-top: 4px solid var(--red);
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -992,7 +991,7 @@ audio {
 
 /* ===== NEWS SECTION ===== */
 .news-section {
-  background: var(--white);
+  background: transparent;
   padding: 48px 0;
 }
 
@@ -1399,7 +1398,7 @@ textarea.form-control--compact {
 }
 
 .sidebar-box {
-  background: var(--white);
+  background: transparent;
   border: 1px solid var(--grey-mid);
   border-top: 4px solid var(--red);
   padding: 20px;
@@ -1649,7 +1648,7 @@ textarea.form-control--compact {
 }
 
 .inner-hero {
-  background: #fff;
+  background: transparent;
   padding: 36px 24px 28px;
   border-bottom: 3px solid var(--red);
   margin-bottom: 0;
@@ -1679,7 +1678,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 /* Full-width parallax/section wrapper */
 .inner-parallax {
-  background: #fff;
+  background: transparent;
   padding: 0 16px;
 }
 
@@ -2124,19 +2123,6 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .blog-card-excerpt p {
   margin: 0;
 }
-
-/* ===== BLOG POST PAGE BACKGROUND ===== */
-.blog-post-page {
-  background-image: url('/assets/images/voicoverguy-background-home.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: scroll;
-}
-
-.blog-post-page .inner-hero { background: transparent; }
-.blog-post-page .inner-parallax { background: transparent; }
-.blog-post-page .blog-post-body { background: transparent; }
 
 /* ===== BLOG POST ===== */
 .blog-post-body {
