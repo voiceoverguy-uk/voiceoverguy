@@ -1467,6 +1467,48 @@ textarea.form-control--compact {
   margin-bottom: 6px;
 }
 
+.footer-sister-sites {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+.footer-sister-heading {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+}
+
+.footer-sister-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-sister-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-sister-links a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-sister-sep {
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 10px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
   .features-grid {

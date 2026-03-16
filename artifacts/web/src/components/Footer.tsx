@@ -49,6 +49,21 @@ export default function Footer() {
           {' · '}
           <Link href="/FAQ">FAQ</Link>
         </p>
+
+        <div className="footer-sister-sites" aria-label="Related specialist sites from Guy Harris">
+          <p className="footer-sister-heading">Explore More from Guy Harris</p>
+          <p className="footer-sister-links">
+            <a href="https://www.voiceofgod.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Voice of God – specialist voiceover site">Voice of God</a>
+            <span className="footer-sister-sep" aria-hidden="true">·</span>
+            <a href="https://www.santaguy.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Santa Guy – Santa voiceover specialist">Santa Guy</a>
+            <span className="footer-sister-sep" aria-hidden="true">·</span>
+            <a href="https://www.pathevoice.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Pathé Voice – Pathé-style voiceover">Pathé Voice</a>
+            <span className="footer-sister-sep" aria-hidden="true">·</span>
+            <a href="https://halloweenvoice.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Halloween Voice – spooky voiceover specialist">Halloween Voice</a>
+            <span className="footer-sister-sep" aria-hidden="true">·</span>
+            <a href="https://www.arabellaharris.com/" target="_blank" rel="noopener noreferrer" aria-label="Arabella Harris Voiceover">Arabella Harris Voiceover</a>
+          </p>
+        </div>
       </div>
     </footer>
   );
