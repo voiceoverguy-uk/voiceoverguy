@@ -103,8 +103,49 @@ export default function Home() {
             src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
           />
 
-          <div className="client-logos-border" style={{ margin: '18px auto' }} />
+          <ReviewBlock />
 
+          <div className="hero-cta-wrapper">
+            <Link href="/contact-guy" className="hero-cta-button">
+              Get in Touch Today
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT LOGOS */}
+      <section className="client-logos-section">
+        <div className="container">
+          <div className="client-logos-border client-logos-border--top" />
+          <div className="client-logos-marquee-wrapper">
+            <div className="client-logos-marquee">
+              {clientLogos.map(logo => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                />
+              ))}
+              <div aria-hidden="true" style={{ display: 'contents' }}>
+                {clientLogos.map(logo => (
+                  <img
+                    key={`${logo.alt}-dup`}
+                    src={logo.src}
+                    alt=""
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="client-logos-border client-logos-border--bottom" />
+        </div>
+      </section>
+
+      {/* HERO BIO */}
+      <section className="home-section">
+        <div className="container">
           <div className="hero-bio">
             <p>
               Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
@@ -112,8 +153,6 @@ export default function Home() {
               including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
             </p>
           </div>
-
-          <ReviewBlock />
         </div>
       </section>
 
@@ -257,34 +296,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* CLIENT LOGOS */}
-      <section className="client-logos-section">
-        <div className="client-logos-border client-logos-border--top" />
-        <div className="client-logos-marquee-wrapper">
-          <div className="client-logos-marquee">
-            {clientLogos.map(logo => (
-              <img
-                key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                loading="lazy"
-              />
-            ))}
-            <div aria-hidden="true" style={{ display: 'contents' }}>
-              {clientLogos.map(logo => (
-                <img
-                  key={`${logo.alt}-dup`}
-                  src={logo.src}
-                  alt=""
-                  loading="lazy"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="client-logos-border client-logos-border--bottom" />
       </section>
 
       {/* FEATURE BLOCKS */}
