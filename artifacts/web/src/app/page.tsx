@@ -204,97 +204,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HERO BIO */}
-      <section className="home-section">
+      {/* CLUSTER A: CREDENTIALS & TRUST */}
+      <section className="home-cluster">
         <div className="container">
-          <div className="hero-bio">
+          <div className="home-block">
+            <div className="hero-bio">
+              <p>
+                Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
+                Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
+                including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
+              </p>
+            </div>
+          </div>
+          <div className="home-block">
             <p>
-              Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
-              Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
-              including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
+              <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
+            </p>
+            <p>
+              If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
+              Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
+              Choose from{' '}
+              <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
+              <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
+              <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
+              <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,{' '}
+              and his highly requested{' '}
+              <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
+              — just ask Google.
             </p>
           </div>
         </div>
       </section>
 
-      {/* AWARDS / CREDENTIALS */}
-      <section className="home-section">
+      {/* CLUSTER B: SPECIALIST SERVICES */}
+      <section className="home-cluster home-cluster--left">
         <div className="container">
-          <p>
-            <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
-          </p>
-          <p>
-            If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,<br />
-            Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.<br />
-            Choose from{' '}
-            <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
-            <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
-            <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
-            <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,<br />
-            and his highly requested{' '}
-            <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
-            — just ask Google.
-          </p>
+          <div className="home-block">
+            <h2>Event or Awards Night Voiceover?</h2>
+            <p>
+              Running an event, awards show or big stage production? My{' '}
+              <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
+              delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere, you&apos;ve found the right Guy.
+            </p>
+          </div>
+          <div className="home-block">
+            <h2>Why Clients Choose Me</h2>
+            <p>
+              Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned{' '}
+              that clients want the same three things: reliability, speed, and audio that sounds brilliant first time.
+            </p>
+            <p>
+              I&apos;m in the studio every day, I take direction well, and I keep your project moving without fuss or drama. If you{' '}
+              want a voice who just gets it right, you&apos;ve found the right Guy.
+            </p>
+            <p>
+              <Link href="/why-use-voiceoverguy" className="red-link">Read the full story →</Link>
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* EVENT OR AWARDS NIGHT */}
-      <section className="home-section">
+      {/* CLUSTER C: CHILD VOICEOVER */}
+      <section className="home-cluster home-cluster--left">
         <div className="container">
-          <h2>Event or Awards Night Voiceover?</h2>
-          <p>
-            Running an event, awards show or big stage production? My{' '}
-            <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
-            delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere — you&apos;ve found the right Guy.
-          </p>
-        </div>
-      </section>
-
-      {/* WHY CLIENTS CHOOSE ME */}
-      <section className="home-section">
-        <div className="container">
-          <h2>Why Clients Choose Me</h2>
-          <p>
-            Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned{' '}
-            that clients want the same three things: reliability, speed, and audio that sounds brilliant first time.
-          </p>
-          <p>
-            I&apos;m in the studio every day, I take direction well, and I keep your project moving without fuss or drama. If you{' '}
-            want a voice who just gets it right, you&apos;ve found the right Guy.
-          </p>
-          <p>
-            <Link href="/why-use-voiceoverguy" className="red-link">Read the full story →</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* ARABELLA HARRIS */}
-      <section className="home-section">
-        <div className="container">
-          <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
-          <p>
-            Meet <strong>Arabella Harris</strong> — a 9-year-old professional child voiceover artist with national credits including Tesco,<br />
-            Sainsbury&apos;s, and Nickelodeon.
-          </p>
-          <p>
-            Her clear, natural young girl voice is ideal for animation, radio, and commercials.<br />
-            <Link href="/arabella-harris-girl-child-voiceover-kid" className="red-link">Listen to her child voiceover demos</Link> or visit{' '}
-            <a href="https://www.arabellaharris.com" target="_blank" rel="noopener noreferrer" className="red-link">ArabellaHarris.com</a>{' '}
-            to learn more.
-          </p>
-        </div>
-      </section>
-
-      {/* READY TO BOOK CTA */}
-      <section className="home-section">
-        <div className="container">
-          <p>
-            Ready to book a professional voice that&apos;s fast, reliable and broadcast-quality?
-          </p>
-          <p>
-            <Link href="/contact-guy" className="red-link">Get in touch today</Link>{' '}
-            — I&apos;m in the studio and ready to help.
-          </p>
+          <div className="home-block">
+            <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
+            <p>
+              Meet <strong>Arabella Harris</strong>, a 9-year-old professional child voiceover artist with national credits including Tesco,{' '}
+              Sainsbury&apos;s, and Nickelodeon.
+            </p>
+            <p>
+              Her clear, natural young girl voice is ideal for animation, radio, and commercials.{' '}
+              <Link href="/arabella-harris-girl-child-voiceover-kid" className="red-link">Listen to her child voiceover demos</Link> or visit{' '}
+              <a href="https://www.arabellaharris.com" target="_blank" rel="noopener noreferrer" className="red-link">ArabellaHarris.com</a>{' '}
+              to learn more.
+            </p>
+          </div>
+          <div className="home-block home-block--cta">
+            <p>
+              Ready to book a professional voice that&apos;s fast, reliable and broadcast-quality?{' '}
+              <Link href="/contact-guy" className="red-link">Get in touch today</Link>{' '}
+              — I&apos;m in the studio and ready to help.
+            </p>
+          </div>
         </div>
       </section>
 

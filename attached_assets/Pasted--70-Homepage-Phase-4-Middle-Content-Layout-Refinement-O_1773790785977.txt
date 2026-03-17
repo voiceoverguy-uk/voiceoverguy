@@ -1,0 +1,96 @@
+#70 - Homepage Phase 4: Middle Content Layout Refinement
+
+Objective
+Improve the readability and structure of the 6 stacked .home-section blocks between video thumbnails and the red-top feature boxes. Group them into 3 logical clusters, reduce divider repetition, tighten text width, and improve visual hierarchy. No content removal, no schema/URL changes, no em dashes.
+
+Current State (page.tsx lines 207-299)
+Six consecutive .home-section blocks, each centred text with a 240px grey ::before divider:
+
+Hero Bio (Guy Harris intro paragraph)
+Awards/Credentials (multi-award-winning, broadcast-quality, service links)
+Event or Awards Night (Voice of God, brand list)
+Why Clients Choose Me (reliability/speed/quality + "Read the full story" link)
+Arabella Harris (British child voiceover + demo links)
+Ready to Book CTA ("Get in touch today" line)
+
+Plan
+
+1. Group into 3 clusters via wrapper classes (page.tsx)
+
+Replace the 6 individual .home-section wrappers with 3 grouped wrappers:
+
+Cluster A: Credentials & Trust
+- Hero Bio paragraph
+- Awards/Credentials paragraph
+
+Cluster B: Specialist Services
+- Event or Awards Night
+- Why Clients Choose Me
+
+Cluster C: Child Voiceover
+- Arabella Harris section
+- Ready to Book CTA line
+
+Each cluster gets a single .home-cluster class. Only the cluster, not each inner block, gets a divider.
+
+Keep each inner content area visually distinct inside the cluster. Do not collapse multiple sections into one large paragraph block.
+
+2. CSS changes (globals.css)
+
+New .home-cluster class:
+- position: relative
+- padding: 40px 0
+- text-align: center
+
+.home-cluster::before:
+- 240px wide
+- 1px height
+- colour #ccc
+- centred
+- visually consistent with the existing divider style
+
+Only one divider per cluster, not per paragraph block.
+
+Inner blocks within clusters:
+- Replace the 6 .home-section wrappers with .home-block
+- .home-block: padding 16px 0
+- No divider on .home-block
+
+Text readability:
+- Reduce .home-block p max-width from 900px to about 680px for easier scanning
+- Add a .home-block--left modifier for optional left-aligned body text
+- Use left-aligned body text within clusters B and C only if it improves readability and still feels visually consistent with the homepage
+- Keep headings centred
+- Keep cluster A body text centred
+
+Headings:
+- Keep h2 styling as-is
+- Add slightly more bottom margin to h2 within clusters, around 20px
+
+CTA hierarchy:
+- “Read the full story” link: keep as inline red-link, subtle arrow, font-weight 600
+- Arabella links: keep as red-link inline text
+- Ready to Book line: make it lighter and more supportive, smaller font around 13px, colour around #888, no red button styling
+
+3. Divider reduction
+
+Current:
+- 6 dividers, one per .home-section
+
+Target:
+- 3 dividers, one per .home-cluster
+
+Keep divider styling subtle and consistent.
+
+Files
+- artifacts/web/src/app/page.tsx
+  Restructure the 6 sections into 3 cluster wrappers
+- artifacts/web/src/app/globals.css
+  Add .home-cluster and .home-block classes, tighten max-width, optional left-align modifier, CTA hierarchy updates
+
+DO NOT
+- Remove any SEO copy or links
+- Change schema or URLs
+- Touch hero, logos, showreels, video tiles, feature blocks, or news
+- Introduce em dashes, gradients, cards, or decorative effects
+- Redesign the full homepage

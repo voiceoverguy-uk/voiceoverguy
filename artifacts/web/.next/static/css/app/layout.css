@@ -803,6 +803,83 @@ button.nav-link {
   text-decoration: underline;
 }
 
+/* ===== HOME CLUSTERS (grouped middle content) ===== */
+.home-cluster {
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.home-cluster::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 1px;
+  background: #ccc;
+}
+
+.home-cluster--left {
+  text-align: left;
+}
+
+.home-cluster--left h2 {
+  text-align: center;
+}
+
+.home-block {
+  padding: 16px 0;
+}
+
+.home-cluster h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.home-cluster h2 .text-red {
+  color: var(--red);
+}
+
+.home-cluster p {
+  max-width: 680px;
+  margin: 0 auto 14px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-cluster--left p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-cluster a.red-link {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-cluster a.red-link:hover {
+  text-decoration: underline;
+}
+
+.home-block--cta {
+  padding-top: 8px;
+}
+
+.home-block--cta p {
+  font-size: 13px;
+  color: #888;
+}
+
+.home-block--cta a.red-link {
+  font-weight: 600;
+  color: var(--red);
+}
+
 /* ===== HERO CTA ===== */
 .hero-cta-wrapper {
   text-align: center;
