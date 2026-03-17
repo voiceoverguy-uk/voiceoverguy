@@ -139,6 +139,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="client-logos-border client-logos-border--bottom" />
         </div>
       </section>
 

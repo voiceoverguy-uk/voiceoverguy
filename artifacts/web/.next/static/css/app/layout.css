@@ -897,6 +897,10 @@ button.nav-link {
   padding-bottom: 24px;
 }
 
+.showreel-section::before {
+  display: none;
+}
+
 .showreel-players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
