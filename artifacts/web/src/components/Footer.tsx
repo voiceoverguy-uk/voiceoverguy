@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <p className="footer-tagline">
-          <strong>Guy Harris – Award Winning British Male Voiceover</strong>
+          <strong>Guy Harris – British Male Voiceover</strong>
           {' – © 2000 – '}
           <CurrentYear />
           {' VoiceoverGuy ®'}
