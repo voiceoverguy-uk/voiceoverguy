@@ -122,10 +122,19 @@ ul, ol {
 .navbar {
   background-color: var(--white);
   border-bottom: 1px solid var(--grey-mid);
-  position: sticky;
-  top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  width: 100%;
+}
+
+.navbar.navbar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar-spacer {
+  display: none;
 }
 
 .navbar-logo-row {

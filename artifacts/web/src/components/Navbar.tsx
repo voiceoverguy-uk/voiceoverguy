@@ -27,6 +27,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openItem, setOpenItem] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+  const spacerRef = useRef<HTMLDivElement>(null);
+  const isFixedRef = useRef(false);
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
@@ -48,9 +51,28 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleTapOutside);
   }, [mobileOpen, closeMobile]);
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (!logoRef.current || !navRef.current) return;
+      const logoBottom = logoRef.current.getBoundingClientRect().bottom;
+      const shouldFix = logoBottom <= 0;
+      if (shouldFix !== isFixedRef.current) {
+        isFixedRef.current = shouldFix;
+        navRef.current.classList.toggle('navbar--fixed', shouldFix);
+        if (spacerRef.current) {
+          spacerRef.current.style.display = shouldFix ? 'block' : 'none';
+          spacerRef.current.style.height = shouldFix ? `${navRef.current.offsetHeight}px` : '0';
+        }
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
-      <div className="navbar-logo-row">
+      <div className="navbar-logo-row" ref={logoRef}>
         <Link href="/" className="navbar-logo">
           <img
             src="/assets/images/guy-harris-voiceover.png"
@@ -61,6 +83,7 @@ export default function Navbar() {
       </div>
       {/* Main Navbar */}
       <nav className="navbar" role="navigation" aria-label="Main navigation" ref={navRef}>
+
         <div className="navbar-inner">
           {/* Mobile toggle */}
           <button
@@ -266,6 +289,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+      <div className="navbar-spacer" ref={spacerRef} />
     </>
   );
 }
