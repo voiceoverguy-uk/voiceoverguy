@@ -1,17 +1,11 @@
 export type BlogRating = 'highest' | 'middle' | 'lowest' | 'not-a-blog';
 
 const LEGACY_MAP: Record<string, BlogRating> = {
+  '6': 'highest',
   '5': 'highest',
   '3': 'middle',
   '1': 'lowest',
   '0': 'not-a-blog',
-};
-
-const TIER_ORDER: Record<BlogRating, number> = {
-  'highest': 0,
-  'middle': 1,
-  'lowest': 2,
-  'not-a-blog': 3,
 };
 
 export function fromLegacyRating(value: string): BlogRating {
