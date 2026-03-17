@@ -139,7 +139,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="client-logos-border client-logos-border--bottom" />
         </div>
       </section>
 
@@ -175,8 +174,8 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section">
         <div className="container">
-          <p style={{ textAlign: 'center', marginBottom: '24px' }}>
-            Not sure where to start? Here are my most requested styles — from commercial reads to character voices. Each video below gives you a quick taste of how I can bring your project to life.
+          <p className="video-intro-text">
+            Not sure where to start? Here are my most requested styles, from commercial reads to character voices. Each video gives you a quick taste of how I can bring your project to life.
           </p>
           <div className="video-grid">
             {videoTiles.map(v => (
