@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/' },
 };
 
+const arabellaAge = (() => {
+  const today = new Date();
+  const dob = new Date(2016, 5, 4);
+  let age = today.getFullYear() - dob.getFullYear();
+  if (today.getMonth() < 5 || (today.getMonth() === 5 && today.getDate() < 4)) age--;
+  return age;
+})();
+
 const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
@@ -270,7 +278,7 @@ export default function Home() {
           <div className="home-block">
             <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
             <p>
-              Meet <strong>Arabella Harris</strong>, a 9-year-old professional child voiceover artist with national credits including Tesco,{' '}
+              Meet <strong>Arabella Harris</strong>, a {arabellaAge}-year-old professional child voiceover artist with national credits including Tesco,{' '}
               Sainsbury&apos;s, and Nickelodeon.
             </p>
             <p>
