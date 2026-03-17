@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return { title: 'Page Not Found | VoiceoverGuy' };
+  return { title: 'Page Not Found' };
 }
 
 export default function SlugPage({ params }: Props) {

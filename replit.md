@@ -152,7 +152,18 @@ Utility scripts package. Each script is a `.ts` file in `src/` with a correspond
 | seo26 | /game-trailer-voice |
 | faqseo2 | /faq (faqs7=title, faqs8=desc, faqs2-faqs13=Q&A) |
 
-### Pages Built (23 total)
+### SEO Infrastructure
+
+- **robots.txt:** `public/robots.txt` — allows all crawlers, points to sitemap
+- **sitemap.xml:** `public/sitemap.xml` — 272 URLs with priority tiers (homepage 1.00, core services 0.80, blog posts 0.64)
+- **Canonical tags:** All pages have `alternates.canonical` set — layout.tsx has `metadataBase`, static pages set it in `export const metadata`, dynamic [slug] pages set it in `generateMetadata`
+- **Title template:** Layout uses `template: '%s | VoiceoverGuy'` — page-level titles must NOT include "VoiceoverGuy" suffix (layout adds it automatically)
+- **JSON-LD:** Blog posts get BlogPosting + BreadcrumbList + VideoObject/AudioObject schemas via `buildSchema.ts`, rendered in `BlogPost.tsx`
+- **Privacy Policy:** `src/app/privacy-policy/page.tsx` — linked from Footer on every page
+- **Redirects:** `vercel.json` has 301 redirects for legacy slugs (arabella-harris-voiceover-kid, studiotour, maskedsinger-voiceover, british-voiceover, news-blog)
+- **OG image:** `/assets/images/og-image-guy-harris.jpg`
+
+### Pages Built (24 total, including privacy-policy)
 
 - `/` — Homepage with audio showreels, video thumbnails, client logos, news
 - `/voiceoverguy` — Who page with profile photos and YouTube embed
