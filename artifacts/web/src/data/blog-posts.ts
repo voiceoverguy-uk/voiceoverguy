@@ -4101,7 +4101,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/pathe-news-voice-pub-visit-guy-harris.mp3"
   },
   {
     "id": 762,
@@ -5061,7 +5062,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/morrisons-cockney-wonky-guy-harris.mp3"
   },
   {
     "id": 835,
@@ -5413,7 +5415,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/pj-welsh-accent-voiceoverguy.mp3"
   },
   {
     "id": 856,
@@ -6597,7 +6600,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/pizza-hut-football-commentary-voice-guy-harris.mp3"
   },
   {
     "id": 922,
@@ -6661,7 +6665,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/mr-intoxico-evil-voiceover-guy-harris.mp3"
   },
   {
     "id": 924,
@@ -6693,7 +6698,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/count-dracula-voice-guy-harris.mp3"
   },
   {
     "id": 925,
@@ -6725,7 +6731,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/super-hero-voice-guy-harris.mp3"
   },
   {
     "id": 926,
@@ -6757,7 +6764,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/pantomime-dame-guy-harris.mp3"
   },
   {
     "id": 928,
@@ -6981,7 +6989,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/renton-trainspotting-guy-harris.mp3"
   },
   {
     "id": 936,
@@ -7781,7 +7790,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/samsung-hard-sell-guy-harris.mp3"
   },
   {
     "id": 970,
@@ -7878,7 +7888,8 @@ const blogPosts: BlogPost[] = [
     "nimage2": "guy-ai-voiceoverguy-robots-trash-studio.jpg",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": false,
+    "localAudio": "/assets/audio/guy-ai-voice-sample-guy-harris.mp3"
   },
   {
     "id": 973,
