@@ -1,5 +1,6 @@
 {
   "/page": "app/page.js",
-  "/[slug]/page": "app/[slug]/page.js",
-  "/voiceover-news/page": "app/voiceover-news/page.js"
+  "/explainer-video-voice/page": "app/explainer-video-voice/page.js",
+  "/character-voiceover/page": "app/character-voiceover/page.js",
+  "/commercial-voiceover/page": "app/commercial-voiceover/page.js"
 }
