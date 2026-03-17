@@ -54,12 +54,11 @@ function MediaBlock({ post }: { post: BlogPostType }) {
     );
   }
 
-  if (wv === '3' || video.startsWith('<iframe')) {
-    const raw = video.startsWith('<iframe') ? video : `<iframe${video.split('<iframe')[1]}`;
+  if (video.startsWith('<iframe')) {
     return (
       <div
         className="sc-embed"
-        dangerouslySetInnerHTML={{ __html: raw }}
+        dangerouslySetInnerHTML={{ __html: video }}
       />
     );
   }
@@ -114,7 +113,7 @@ export default function BlogPost({ post }: Props) {
     const video = (post.video || '').trim();
     if (wv === '1' && video && !video.startsWith('<iframe')) return true;
     if (wv === '2' && video) return true;
-    if (wv === '3' || video.startsWith('<iframe')) return true;
+    if (video.startsWith('<iframe')) return true;
     return false;
   })();
 
