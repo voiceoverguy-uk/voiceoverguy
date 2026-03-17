@@ -41,7 +41,7 @@ function MediaBlock({ post }: { post: BlogPostType }) {
     );
   }
 
-  if (wv === '2' && video) {
+  if (wv === '2' && video && !video.startsWith('<iframe')) {
     return (
       <div className="embed-wrap">
         <iframe
