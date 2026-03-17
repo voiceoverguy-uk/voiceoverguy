@@ -172,6 +172,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* VIDEO TILES */}
+      <section className="section">
+        <div className="container">
+          <p style={{ textAlign: 'center', marginBottom: '24px' }}>
+            Not sure where to start? Here are my most requested styles — from commercial reads to character voices. Each video below gives you a quick taste of how I can bring your project to life.
+          </p>
+          <div className="video-grid">
+            {videoTiles.map(v => (
+              <div key={v.img}>
+                <a
+                  href={v.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="video-thumb"
+                >
+                  <img
+                    src={v.img}
+                    alt={v.titleOverlay}
+                    width={400}
+                    height={225}
+                    loading="lazy"
+                  />
+                </a>
+                <div className="video-caption">
+                  <p>{v.captionLine1} <span className="text-red">{v.captionHighlight}</span> {v.captionLine1End}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* HERO BIO */}
       <section className="home-section">
         <div className="container">
@@ -263,38 +295,6 @@ export default function Home() {
             <Link href="/contact-guy" className="red-link">Get in touch today</Link>{' '}
             — I&apos;m in the studio and ready to help.
           </p>
-        </div>
-      </section>
-
-      {/* VIDEO TILES */}
-      <section className="section">
-        <div className="container">
-          <p style={{ textAlign: 'center', marginBottom: '24px' }}>
-            Not sure where to start? Here are my most requested styles — from commercial reads to character voices. Each video below gives you a quick taste of how I can bring your project to life.
-          </p>
-          <div className="video-grid">
-            {videoTiles.map(v => (
-              <div key={v.img}>
-                <a
-                  href={v.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="video-thumb"
-                >
-                  <img
-                    src={v.img}
-                    alt={v.titleOverlay}
-                    width={400}
-                    height={225}
-                    loading="lazy"
-                  />
-                </a>
-                <div className="video-caption">
-                  <p>{v.captionLine1} <span className="text-red">{v.captionHighlight}</span> {v.captionLine1End}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
