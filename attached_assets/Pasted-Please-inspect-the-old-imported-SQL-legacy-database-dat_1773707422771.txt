@@ -1,0 +1,70 @@
+Please inspect the old imported SQL / legacy database data in this project and see whether the old blog system included a rating field used for blog ordering.
+
+What I am looking for:
+- A column or field that may store values like:
+  - NOT A BLOG
+  - Lowest Rating
+  - Middle Rating
+  - Highest Rating
+- Or any equivalent numeric / enum / text field used to control blog priority or display order
+
+Please do the following:
+
+1. Search the legacy SQL import, old schema, migration files, seed files, and any old blog-related tables for fields such as:
+   - rating
+   - blog_rating
+   - priority
+   - display_order
+   - sort_order
+   - featured
+   - status
+   - anything similar that looks like blog ranking logic
+
+2. If found, tell me:
+   - which table it is in
+   - the exact column name
+   - the data type
+   - sample values found
+   - whether it appears to match the old blog rating system
+
+3. If the old rating field exists, re-implement it in the new blog system:
+   - Add a blog rating field to the new blog data model
+   - Allowed values:
+     - highest
+     - middle
+     - lowest
+     - not-a-blog
+   - Default new blog posts to middle unless explicitly set otherwise
+
+4. Recreate the old display behaviour:
+   - Highest-rated blog posts appear first
+   - Middle-rated posts appear next
+   - Lowest-rated posts appear last
+   - Within each rating group, randomise the order on each page load or build, whichever is more appropriate for the architecture
+   - Exclude not-a-blog items from blog listings entirely
+
+5. Apply this logic anywhere blog cards are listed, especially:
+   - homepage blog areas
+   - news/blog index pages
+   - related blog sections if appropriate
+
+6. Preserve clean, predictable code:
+   - Use a normalised rating value in code such as:
+     - highest
+     - middle
+     - lowest
+     - not-a-blog
+   - Map old legacy values to the new clean values if needed
+
+7. If the old SQL does NOT contain this field:
+   - still add the new rating field to the current blog system
+   - update the blog content structure so we can manually set each future post as highest, middle or lowest
+   - make the listing logic work exactly as described above
+
+8. Keep the implementation simple, readable and future-proof.
+   I want to be able to specify blog rating when creating future posts.
+
+Please also give me a short summary at the end explaining:
+- whether the old rating field was found
+- what was implemented
+- where I can set the rating for future blog posts
