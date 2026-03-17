@@ -16,15 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/voice-of-god/page": [
+    "/apple-voice-style/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/voice-of-god/page.js"
-    ],
-    "/commercial-voiceover/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/commercial-voiceover/page.js"
+      "static/chunks/app/apple-voice-style/page.js"
     ]
   }
 }

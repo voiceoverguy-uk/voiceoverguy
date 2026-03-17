@@ -50,17 +50,17 @@ export default function Navbar() {
 
   return (
     <>
+      <div className="navbar-logo-row">
+        <Link href="/" className="navbar-logo">
+          <img
+            src="/assets/images/guy-harris-voiceover.png"
+            alt="Guy Harris VoiceoverGuy"
+            className="navbar-logo-img"
+          />
+        </Link>
+      </div>
       {/* Main Navbar */}
       <nav className="navbar" role="navigation" aria-label="Main navigation" ref={navRef}>
-        <div className="navbar-logo-row">
-          <Link href="/" className="navbar-logo">
-            <img
-              src="/assets/images/guy-harris-voiceover.png"
-              alt="Guy Harris VoiceoverGuy"
-              className="navbar-logo-img"
-            />
-          </Link>
-        </div>
         <div className="navbar-inner">
           {/* Mobile toggle */}
           <button
