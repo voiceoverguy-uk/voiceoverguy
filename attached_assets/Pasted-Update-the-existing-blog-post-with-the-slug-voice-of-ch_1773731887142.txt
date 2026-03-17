@@ -1,0 +1,61 @@
+Update the existing blog post with the slug:
+
+voice-of-cheese-worm-in-worms-games
+
+Please keep the layout and styling consistent with the other blog posts on the new VoiceoverGuy site. Use British spelling throughout, keep the tone fun, confident and professional, and do not use em dashes.
+
+Replace the blog content with the following:
+
+Title:
+The Voice of Cheese Worm for WORMS
+
+Date:
+2025-12-01
+
+Rating:
+highest
+
+Intro line:
+Back for my fifth WORMS game, I returned to voice Cheese Worm for one of gaming's most loved and recognisable franchises.
+
+Main text (block 1):
+<p>When I was first asked to be part of <strong>WORMS</strong> many years ago, I had no idea just how big and beloved the game was. Out of all the projects I get to voice, this is one that genuinely surprises people the most when I mention it.</p>
+<p>If I tell anyone who is even slightly into video games that I voice many of the characters in <strong>WORMS</strong>, they are usually blown away. It is one of those titles people have grown up with, played with friends, laughed along with and remembered for years. So yes, there is a very good chance that the worms you have been hearing over the last 10+ years have mostly been me.</p>
+
+Text block 2:
+<p>The <strong>WORMS</strong> games are known for their chaotic turn-based battles, where teams of cartoon worms take each other on using everything from bazookas and grenades to exploding sheep and completely ridiculous weapons. That mix of strategy, silliness and total mayhem is exactly what has made the series so popular for so long.</p>
+<p>Voicing a character like Cheese Worm means finding the right level of personality, energy and comedy so the voice fits perfectly into that madcap world. The performance needs to feel playful, distinctive and memorable, helping give the game even more character while matching the offbeat humour fans expect from <strong>Team17's WORMS</strong>.</p>
+
+Bottom text:
+<p>I do not normally speak in quite such a high-pitched way in everyday life, which is probably a relief to everyone around me. But if you are looking for character voice work with real personality, energy and flexibility, I can certainly help. If you would like to know more about my voice work for <strong>WORMS</strong>, <strong>Team17</strong> or any other game or character project, please do get in touch using the form below.</p>
+
+Home excerpt:
+Guy Harris returns as Cheese Worm in WORMS, continuing more than a decade of character voice work for the iconic Team17 game series.
+
+Main image filename:
+cheese-worm-team-17-voice.jpg
+
+Media type:
+YouTube
+
+YouTube video ID:
+EKBZmTXi67U
+
+Meta description:
+Guy Harris is the voice of Cheese Worm in WORMS, bringing character, comedy and energy to one of Team17's most iconic game franchises.
+
+Search terms:
+voice of worms","worms voice actor","cheese worm voice","team17 worms voiceover","video game character voice actor","guy harris worms","worms game voices
+
+Please also do the following:
+1. Keep the existing slug exactly as it is: voice-of-cheese-worm-in-worms-games
+2. Make sure the YouTube embed displays correctly and responsively.
+3. Use the uploaded image cheese-worm-team-17-voice.jpg from the standard blog image folder.
+4. Add tasteful internal links within the blog copy if relevant pages already exist on the site, especially:
+   - character voiceover pages
+   - gaming or animation related voice pages
+   - homepage
+5. Make sure the blog listing card uses the Home excerpt and main image correctly.
+6. Preserve clean spacing and a premium layout.
+7. Ensure the metadata and page structure are SEO-friendly.
+8. Apply the rating as highest so this post is prioritised correctly in blog listings if the rating system is active.

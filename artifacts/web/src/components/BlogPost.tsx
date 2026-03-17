@@ -128,13 +128,6 @@ export default function BlogPost({ post }: Props) {
     { text: post.ntext4, image: post.nimage4 },
   ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image));
 
-  const displayDate = post.date
-    ? new Date(post.date + 'T00:00:00').toLocaleDateString('en-GB', {
-        year: 'numeric',
-        month: 'long',
-      })
-    : post.rawDate || null;
-
   const relatedPosts = getRelatedPosts(post.id, 3);
 
   const schemas = buildAllBlogSchemas(post);
@@ -162,10 +155,6 @@ export default function BlogPost({ post }: Props) {
 
       <section className="blog-post-body">
         <div className="container">
-
-          {displayDate && (
-            <div className="blog-post-date">{displayDate}</div>
-          )}
 
           {/* Row 1: text1 + video/audio embed (or text1 only if no media) */}
           <div className={`blog-post-main ${(hasVideoEmbed || hasLocalAudio) ? 'two-col' : 'one-col'}`}>

@@ -13,13 +13,6 @@ export const metadata: Metadata = {
 };
 
 function PostCard({ post }: { post: (typeof blogPosts)[0] }) {
-  const displayDate = post.date
-    ? new Date(post.date + 'T00:00:00').toLocaleDateString('en-GB', {
-        year: 'numeric',
-        month: 'short',
-      })
-    : post.rawDate || null;
-
   const excerpt = post.homeText || post.info || '';
 
   return (
@@ -37,7 +30,6 @@ function PostCard({ post }: { post: (typeof blogPosts)[0] }) {
         )}
       </div>
       <div className="blog-card-body">
-        {displayDate && <span className="blog-card-date">{displayDate}</span>}
         <h2 className="blog-card-title">{post.pageTitle}</h2>
         {excerpt && (
           <p
