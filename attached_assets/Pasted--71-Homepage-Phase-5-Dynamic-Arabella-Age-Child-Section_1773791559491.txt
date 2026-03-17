@@ -1,0 +1,94 @@
+#71 - Homepage Phase 5: Dynamic Arabella Age + Child Section Polish + Feature Box Tidy
+
+Objective
+Make Arabella’s age update automatically each year on 4 June, lightly refine the lower child voiceover/contact area, and subtly modernise the 6 red-top feature boxes so they feel more polished and consistent with the improved homepage. No SEO copy removal, no schema/URL changes, no em dashes.
+
+GOALS
+1. Replace the hardcoded “9-year-old” text in the Arabella homepage section with a dynamic age based on her date of birth
+2. Lightly improve spacing and hierarchy in the lower child voiceover/contact area
+3. Subtly refine the 6 red-top feature boxes so they feel more premium and less legacy
+4. Do not redesign the homepage or disturb the progress already made
+
+IMPORTANT
+- Do not remove important homepage copy
+- Do not change schema
+- Do not alter URLs or internal links
+- Do not introduce em dashes
+- Keep the existing VoiceoverGuy branding and red colour
+- Keep the page elegant, minimal, premium and easy to scan
+- This is a careful refinement only, not a redesign
+
+PART 1 — DYNAMIC ARABELLA AGE
+In the “Need a British Child Voiceover?” homepage section, replace the hardcoded age text with a dynamic calculation based on:
+
+Date of birth: 2016-06-04
+
+Requirements:
+- The displayed age should update automatically each year on 4 June
+- She should show as 9 until 3 June 2026
+- She should show as 10 from 4 June 2026
+- The logic should continue updating correctly in future years
+- Keep the rest of the sentence and wording unchanged apart from replacing the hardcoded age value
+- Implement this cleanly in the homepage code, not as a manual text update
+
+Preferred implementation:
+- Use a small helper or inline utility in the homepage component
+- Keep the code simple and readable
+- No unnecessary overengineering
+
+PART 2 — CHILD SECTION POLISH
+Please lightly refine the lower child voiceover/contact area:
+
+This includes:
+- “Need a British Child Voiceover?”
+- the Arabella paragraph and inline links
+- the lighter “Ready to book…” / “Get in touch today” line underneath
+
+Requirements:
+- Keep all wording and links intact
+- Improve spacing so the section feels a little cleaner and more intentional
+- Make the lower contact line feel supportive and elegant, not awkward or tacked on
+- Keep the heading clear and prominent
+- Keep inline links visible but not over-dominant
+- Preserve the calm premium feel of the page
+
+PART 3 — FEATURE BOX TIDY
+Please subtly refine the 6 red-top feature boxes below the middle content section:
+
+Boxes:
+- Heard Worldwide
+- Same Day Delivery
+- Location
+- Pro vs Cheaper Alternative?
+- Bespoke Demos
+- Studio Tech
+
+Requirements:
+- Do not change the box copy
+- Do not change link destinations
+- Keep the red top border treatment
+- Keep the 2x3 grid layout
+- Maintain responsive behaviour
+
+Visual refinement goals:
+- Slightly improve spacing inside the boxes
+- Ensure heading spacing is consistent across all 6
+- Make paragraph spacing and line-height feel cleaner
+- Slightly refine shadow/border treatment if needed so boxes feel a bit more premium
+- Ensure box heights feel visually balanced
+- Avoid anything flashy or over-designed
+- Keep them clean, modern and consistent with the rest of the improved homepage
+
+DO NOT
+- Do not redesign the hero
+- Do not move logos, MP3s or video thumbnails
+- Do not alter the Latest Voiceover News section yet
+- Do not alter the footer yet
+- Do not add gradients, cards within cards, glow effects, or decorative clutter
+- Do not use em dashes
+
+Files likely involved
+- artifacts/web/src/app/page.tsx
+- artifacts/web/src/app/globals.css
+
+Please implement this as a careful next-step refinement only.
