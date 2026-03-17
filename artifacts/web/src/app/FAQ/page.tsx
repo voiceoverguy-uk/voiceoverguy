@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
-import { SchemaScripts, webPage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage } from '@/lib/staticPageSchema';
 
 export const metadata: Metadata = {
   title: "FAQ – Voiceover Questions Answered",
@@ -81,15 +81,12 @@ export default function FAQ() {
         </div>
       </section>
       <SchemaScripts schemas={[
-        webPage('FAQ', 'Voiceover FAQ', 'Everything you need to know about booking Guy Harris for a voiceover \u2014 pricing, turnaround, formats, remote direction, studio, and more.'),
-        breadcrumb('FAQ', 'FAQ'),
         faqPage('FAQ', [
-          { q: 'How much does a voiceover cost?', a: "Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around \u00A349\u2013\u00A399. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout." },
-          { q: 'How quickly can you turnaround a voiceover?', a: 'Most voiceovers are delivered within 4\u20138 hours if received before 4pm. For urgent projects I offer a 2-hour turnaround. I have a professional studio at home so I can record any time, day or evening, seven days a week.' },
-          { q: 'What file format will I receive?', a: 'I deliver in broadcast quality WAV (24-bit, 44.1kHz or 48kHz) as standard. I can also provide MP3, AIFF, or any other format you require.' },
-          { q: 'Can I direct the session remotely?', a: "Absolutely. I'm set up for directed remote sessions via Source Connect NEXUS, Cleanfeed, Zoom, Microsoft Teams, Skype, or any platform you prefer." },
-          { q: "Where is Guy Harris's voiceover studio?", a: 'My broadcast-quality studio is based in Wakefield, West Yorkshire. I work with clients across the UK and internationally, with same-day delivery as standard.' },
-          { q: 'What voiceover styles does Guy Harris offer?', a: 'I cover everything from warm commercial reads to dramatic character voices, David Attenborough impressions, Santa voiceover, movie trailer voice, football commentator, and more.' },
+          { q: 'What is your turnaround time?', a: "Same day in most cases, with standard projects delivered within 24 hours. I\u2019m in the studio every day, so if you have an urgent job or last-minute change, I can usually accommodate it quickly." },
+          { q: 'What audio formats do you deliver?', a: 'Most clients request WAV or MP3, but I can also provide AIFF or other formats on request. All audio is recorded in my broadcast-quality studio so it drops straight into your edit.' },
+          { q: 'Can I direct a voiceover session live?', a: 'Yes. You can direct the session live via Cleanfeed, Source-Connect, Zoom, or a simple phone patch. This way you can give feedback in real time and sign off the read before we wrap.' },
+          { q: 'What rights do I get with the voiceover?', a: "Usage and broadcast rights are agreed in advance so everything is clear. We\u2019ll confirm where and how long the audio will be used \u2013 for example, local radio, national TV, online, internal, or paid media \u2013 and licence it appropriately." },
+          { q: 'Do you provide revisions?', a: 'Yes. If I make a mistake, or the read needs a small tweak, I\u2019m happy to fix it. Larger script changes or new scripts may incur an additional session fee, but I always keep things fair and transparent.' },
         ]),
       ]} />
     </>

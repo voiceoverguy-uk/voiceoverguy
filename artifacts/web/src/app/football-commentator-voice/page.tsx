@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, localBusiness, faqPage, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, localBusiness, faqPage, breadcrumb, audioObject, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo13'];
 
@@ -14,13 +14,15 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('football-commentator-voice', 'Guy Harris provides professional football commentator voiceovers for advertising, gaming, apps, corporate events and social media.'),
-  breadcrumb('football-commentator-voice', 'Football Commentator Voice'),
-  localBusiness('football-commentator-voice', 'Professional football commentator voiceover services for ads, games, apps and events.'),
+  localBusiness('football-commentator-voice', 'Guy Harris is a British voiceover artist known for his football commentator-style voice, used by BBC, Netflix, and major sports brands.'),
   faqPage('football-commentator-voice', [
-    { q: 'Can I hire a football commentator voiceover?', a: 'Yes. Guy Harris provides professional football commentator voiceover for commercials, games, apps and corporate events.' },
-    { q: 'What sports commentator voices does Guy Harris offer?', a: 'Guy Harris offers classic football commentary, match-day announcer, and pundit-style voiceover for all types of sports content.' },
+    { q: 'Can I hire Guy Harris for a football commentator-style voiceover?', a: 'Yes, Guy Harris is available to voice football-style commentaries for TV, radio, promos, and comedy spots. His voice is trusted by major broadcasters and sports clubs.' },
+    { q: 'Is the voiceover studio located in Wakefield, West Yorkshire?', a: "Yes, Guy\u2019s voiceover studio is based in Wakefield, West Yorkshire and offers remote and in-person directed sessions." },
+    { q: "What\u2019s included in a football commentator voiceover session?", a: 'Voiceover sessions include a live directed call, multiple takes, and delivery in your preferred format. Fast turnaround and professional audio are guaranteed.' },
   ]),
+  breadcrumb('football-commentator-voice', 'Football Commentator Voice'),
+  audioObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'Professional football commentator-style voiceover demo by Guy Harris.', '/assets/audio/football-commentator-showreel-guy-harris.mp3', 'PT72S'),
+  videoObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'High-energy football commentator-style voiceover demo.', 'T9opwMc46Ms'),
 ];
 
 export default function Page() {

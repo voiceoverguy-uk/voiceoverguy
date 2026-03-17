@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blog-posts';
 import { sortByRating } from '@/lib/blogRating';
-import { SchemaScripts, webPage, breadcrumb } from '@/lib/staticPageSchema';
+import { SchemaScripts } from '@/lib/staticPageSchema';
 
 export const metadata: Metadata = {
   title: 'Voiceover News & Blog - Guy Harris',
@@ -70,20 +70,20 @@ export default function VoiceoverNewsPage() {
         </div>
       </section>
       <SchemaScripts schemas={[
-        webPage('voiceover-news', 'Voiceover News & Blog', 'The latest voiceover news, stories, and samples from British male voiceover artist Guy Harris. TV ads, game trailers, character voices, and more.'),
-        breadcrumb('voiceover-news', 'Voiceover News'),
         {
           '@context': 'https://schema.org',
           '@type': 'Blog',
-          '@id': 'https://www.voiceoverguy.co.uk/voiceover-news#blog',
+          name: 'Voiceover News & Blog',
           url: 'https://www.voiceoverguy.co.uk/voiceover-news',
-          name: 'VoiceoverGuy Blog',
-          description: 'Voiceover news, samples and stories from British male voiceover artist Guy Harris.',
-          publisher: {
-            '@type': 'Person',
-            name: 'Guy Harris',
-            url: 'https://www.voiceoverguy.co.uk',
-          },
+          description: 'The latest news and blog updates from British male voiceover Guy Harris, including character projects and seasonal campaigns.',
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Voiceover News & Blog \u2013 Guy Harris',
+          description: 'Explore voiceover news and blog posts from British voiceover artist Guy Harris. Discover seasonal campaigns, client work, and voice acting insights.',
+          url: 'https://www.voiceoverguy.co.uk/voiceover-news',
+          image: 'https://www.voiceoverguy.co.uk/assets/images/og-image.jpg',
         },
       ]} />
     </>

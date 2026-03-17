@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, serviceSchema, faqPage, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage, audioObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo26'];
 
@@ -14,13 +14,11 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('game-trailer-voice', 'Guy Harris is a leading British game trailer voiceover artist trusted by studios for dramatic, cinematic voice performances.'),
-  breadcrumb('game-trailer-voice', 'Game Trailer Voice'),
-  serviceSchema('game-trailer-voice', 'Game Trailer Voiceover', 'Professional game trailer voiceover by Guy Harris \u2013 epic, cinematic narration for AAA and indie game trailers, teasers and launch videos.'),
   faqPage('game-trailer-voice', [
-    { q: 'Can Guy Harris voice a game trailer?', a: 'Yes. Guy Harris has provided game trailer voiceovers for titles including Worms W.M.D, Boom Beach and others, delivering cinematic, dramatic narration.' },
-    { q: 'What style of voice is used for game trailers?', a: 'Game trailers typically use deep, dramatic, cinematic narration. Guy Harris is experienced in epic trailer reads, villain voices, and high-energy character deliveries.' },
+    { q: 'Can you voice a dramatic game trailer?', a: 'Yes, Guy Harris specialises in voicing game trailers with high-impact, cinematic delivery. His voice brings drama, tension, and emotion to every campaign.' },
+    { q: 'Do you offer quick turnaround on game trailer voiceovers?', a: "Absolutely. Guy\u2019s broadcast-quality studio is available daily for rapid delivery\u2014perfect for gaming trailers with tight deadlines or last-minute requests." },
   ]),
+  audioObject('game-trailer-voice', 'Guy Harris Game Trailer Voiceover Demo', 'Listen to Guy Harris deliver a powerful and cinematic voiceover, perfect for gaming trailers and launch campaigns.', '/assets/audio/guy-harris-voiceoverguy-game-trailer-showreel.mp3', 'PT1M14S'),
 ];
 
 export default function Page() {

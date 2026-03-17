@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo2'];
 
@@ -14,11 +14,10 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('voiceoverguy', 'Guy Harris is VoiceoverGuy \u2013 an award-winning British male voiceover artist with over 25 years of experience in TV, radio, gaming, animation, events and digital media.', {
+  profilePage('voiceoverguy', 'Guy Harris is an award-winning British voiceover artist with over 25 years of experience, known for his versatility in character voices such as Santa, Attenborough, Pirate, and Gameshow Host.', {
     alternateName: 'VoiceoverGuy',
     worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
   }),
-  breadcrumb('voiceoverguy', 'VoiceoverGuy'),
 ];
 
 export default function Page() {

@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, faqPage, audioObject } from '@/lib/staticPageSchema';
+import { SchemaScripts } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo16'];
 
@@ -14,13 +14,20 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('pathe-news-voice', 'Guy Harris performs a classic Path\u00E9 News style voiceover \u2013 the iconic British newsreel voice for commercials, events, documentaries and social content.'),
-  breadcrumb('pathe-news-voice', 'Path\u00E9 News Voice'),
-  audioObject('pathe-news-voice', 'Path\u00E9 News Voice Demo \u2013 Guy Harris', 'A Path\u00E9 News-style voiceover demo in the classic 1940s British newsreel style performed by Guy Harris.', '/assets/audio/guy-harris-voiceoverguy-pathe-demo.mp3'),
-  faqPage('pathe-news-voice', [
-    { q: 'Can I hire a Path\u00E9 News voiceover artist?', a: 'Yes. Guy Harris provides a professional Path\u00E9 News style voiceover \u2013 the classic British newsreel voice for adverts, events and documentary content.' },
-    { q: 'What is the Path\u00E9 News voice?', a: 'The Path\u00E9 News voice is the iconic British newsreel narration style from the 1930s\u201360s. Guy Harris recreates this voice authentically for modern productions.' },
-  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Guy Harris',
+    jobTitle: 'Pathe News Style Voiceover Artist',
+    url: 'https://www.voiceoverguy.co.uk/pathe-news-voice',
+    image: 'https://www.voiceoverguy.co.uk/assets/images/pathe-voice-og.jpg',
+    sameAs: [
+      'https://www.linkedin.com/in/voiceoverguy/',
+      'https://www.youtube.com/user/voiceoverguyharris',
+    ],
+    worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
+    description: 'Guy Harris recreates the classic British Pathe News voice with 1940s flair and mid-Atlantic precision \u2013 trusted for documentaries, adverts and nostalgic content.',
+  },
 ];
 
 export default function Page() {

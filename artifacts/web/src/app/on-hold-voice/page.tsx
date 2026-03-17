@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, localBusiness, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo8'];
 
@@ -14,12 +14,10 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('on-hold-voice', 'Guy Harris provides professional on-hold voiceover for business telephone systems, IVR, auto-attendant and voicemail greetings.'),
-  breadcrumb('on-hold-voice', 'On Hold Voice'),
-  localBusiness('on-hold-voice', 'Professional on-hold voiceover and IVR recordings for business telephone systems across the UK.'),
   faqPage('on-hold-voice', [
-    { q: 'Can I hire Guy Harris for on-hold voiceover?', a: 'Yes. Guy Harris provides professional on-hold messages, IVR prompts, auto-attendant greetings and voicemail recordings for businesses of all sizes.' },
-    { q: 'How much does on-hold voiceover cost?', a: 'On-hold voiceover pricing depends on the number of messages and script length. Most projects start from \u00A349.99. Contact Guy for a fast quote.' },
+    { q: 'Can you provide on-hold voiceover recordings for businesses?', a: 'Yes. Guy Harris is a professional voiceover artist with extensive experience recording on-hold messages for clients such as Baxi, Bupa, NS&I and more.' },
+    { q: "What\u2019s included in your on-hold voiceover service?", a: 'Typically, clients receive professionally recorded messages with multiple tone options and delivered as WAV or MP3 files, ready to be uploaded to any phone system.' },
+    { q: 'Where is your voiceover studio based?', a: 'Guy Harris records from a broadcast-quality studio in Wakefield, West Yorkshire, serving clients across the UK and globally.' },
   ]),
 ];
 

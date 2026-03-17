@@ -16,51 +16,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/commercial-voiceover/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/commercial-voiceover/page.js"
-    ],
-    "/santa-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/santa-voice/page.js"
-    ],
-    "/character-voiceover/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/character-voiceover/page.js"
-    ],
-    "/david-attenborough-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/david-attenborough-voice/page.js"
-    ],
-    "/voiceover-studio/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voiceover-studio/page.js"
-    ],
-    "/FAQ/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/FAQ/page.js"
-    ],
-    "/voiceover-news/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voiceover-news/page.js"
-    ],
-    "/voice-of-god/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voice-of-god/page.js"
-    ],
-    "/explainer-video-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/explainer-video-voice/page.js"
-    ],
     "/game-trailer-voice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -106,6 +61,16 @@
       "static/chunks/main-app.js",
       "static/chunks/app/pirate-voice/page.js"
     ],
+    "/voiceover-studio/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voiceover-studio/page.js"
+    ],
+    "/voiceoverguy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voiceoverguy/page.js"
+    ],
     "/pathe-news-voice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -116,10 +81,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/voiceover-imaging/page.js"
     ],
-    "/voiceoverguy/page": [
+    "/voiceover-news/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/voiceoverguy/page.js"
+      "static/chunks/app/voiceover-news/page.js"
+    ],
+    "/FAQ/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/FAQ/page.js"
     ]
   }
 }

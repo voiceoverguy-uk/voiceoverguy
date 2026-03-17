@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, serviceSchema, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo10'];
 
@@ -14,12 +14,10 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('movie-trailer-voice', 'Guy Harris provides professional movie trailer voiceover \u2013 dramatic, deep narration for film trailers, teasers and promotional content.'),
-  breadcrumb('movie-trailer-voice', 'Movie Trailer Voice'),
-  serviceSchema('movie-trailer-voice', 'Movie Trailer Voiceover', 'Professional movie trailer voiceover by Guy Harris \u2013 cinematic, dramatic narration for trailers, promos and film campaigns.'),
   faqPage('movie-trailer-voice', [
-    { q: 'Can I hire a movie trailer voiceover artist?', a: 'Yes. Guy Harris provides cinematic movie trailer voiceovers \u2013 deep, dramatic narration for trailers, teasers and promotional campaigns.' },
-    { q: 'What makes a great movie trailer voice?', a: 'A great movie trailer voice is deep, dramatic and commanding. Guy Harris delivers professional movie trailer narration with impact and gravitas.' },
+    { q: 'Can I hire Guy Harris for a movie trailer voiceover?', a: 'Yes. Guy Harris provides movie trailer-style voiceovers for TV, radio, film, events, and online use. His voice has been featured in campaigns for BBC, ITV, and major games and promos.' },
+    { q: 'What styles of movie trailer voice can Guy deliver?', a: 'Guy can deliver both UK and US-style movie trailer voices, ranging from deep dramatic tones to parody-style trailers with impact.' },
+    { q: "Where is Guy\u2019s voiceover studio located?", a: 'Guy records from his professional studio in Wakefield, West Yorkshire. Sessions can be directed live via Source Connect, Cleanfeed, or Zoom.' },
   ]),
 ];
 

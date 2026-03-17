@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, webPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo5'];
 
@@ -14,12 +14,16 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('apple-voice-style', 'Guy Harris delivers the calm, understated Apple-style voiceover for tech brands, product launches and digital campaigns.'),
-  breadcrumb('apple-voice-style', 'Apple Voice Style'),
-  faqPage('apple-voice-style', [
-    { q: 'Who does the voiceover for Apple ads?', a: 'Apple uses a range of professional voice artists. Guy Harris provides an Apple-style voiceover \u2013 warm, smooth, minimalist narration ideal for tech brands and product launches.' },
-    { q: 'Can I hire an Apple-style voiceover?', a: 'Yes. Guy Harris is a British male voiceover artist who specialises in calm, understated narration matching the Apple advertising style.' },
-  ]),
+  webPage('apple-voice-style', 'Apple Voice Style | Guy Harris \u2013 British Voiceover Artist', 'Guy Harris delivers premium Apple-style voiceovers \u2013 sleek, minimal, and trusted by the world\u2019s top brands.'),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: 'Apple Voice Style',
+    description: "Looking for that clean, minimalist Apple commercial narration style? Guy Harris delivers just that \u2013 a trusted British voiceover artist who\u2019s worked with Apple and many more.",
+    url: 'https://www.voiceoverguy.co.uk/apple-voice-style',
+    image: 'https://www.voiceoverguy.co.uk/assets/images/apple-voice-style-og.jpg',
+    author: { '@type': 'Person', name: 'Guy Harris' },
+  },
 ];
 
 export default function Page() {

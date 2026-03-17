@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, breadcrumb, localBusiness, audioObject, videoObject, faqPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo17'];
 
@@ -14,11 +14,15 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('halloween-voice', 'Guy Harris delivers creepy, dramatic Halloween voiceovers for ads, events, attractions, games and seasonal campaigns.'),
   breadcrumb('halloween-voice', 'Halloween Voice'),
+  localBusiness('halloween-voice', 'British male voiceover artist specialising in character voices, commercials, promos and Halloween voiceovers.'),
+  audioObject('halloween-voice', 'Halloween Voiceover Showreel \u2013 Guy Harris', 'Spooky and fun Halloween voice styles including Dracula, Vincent Price and Joker tones.', '/assets/audio/guy-harris-voiceoverguy-halloween-showreel.mp3', 'PT1M2S'),
+  videoObject('halloween-voice', 'Halloween Voices \u2013 Spooky Voiceovers \u2013 Dracula & Vincent Price', 'A showcase of spooky Halloween voiceovers including Vincent Price and Dracula styles.', 'bmMpk16zuSs', '1'),
+  videoObject('halloween-voice', 'Joker Impression \u2013 The Dark Knight', 'A Joker voice impression inspired by Heath Ledger, ideal for spooky promos and villain trailers.', 'OMlBk5QBnyM', '2'),
   faqPage('halloween-voice', [
-    { q: 'Can I hire a Halloween voiceover artist?', a: 'Yes. Guy Harris provides spooky, dramatic Halloween voices for adverts, attractions, escape rooms, podcasts and seasonal campaigns.' },
-    { q: 'What Halloween voice styles are available?', a: 'Guy Harris offers vampire, zombie, ghost narrator, creepy announcer and horror trailer styles \u2013 from campy fun to genuinely chilling.' },
+    { q: 'Can you provide spooky Halloween character voices?', a: 'Yes. Guy Harris performs Dracula, Ghost Face, Joker impressions, Vincent Price-style narration and more for Halloween ads, promos and events.' },
+    { q: 'Do you offer fast turnaround for Halloween voiceovers?', a: 'Most Halloween scripts are voiced the same day, recorded in a broadcast-quality studio with Zoom, Cleanfeed or Source Connect-style remote direction.' },
+    { q: 'Where have your Halloween voices been used?', a: "Guy\u2019s Halloween voiceovers have featured on BBC Radio 1, Asda, Thorpe Park Fright Nights, Poundland and countless YouTube and social media campaigns." },
   ]),
 ];
 

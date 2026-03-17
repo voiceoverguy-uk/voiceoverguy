@@ -1,7 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage, audioObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo15'];
 
@@ -14,12 +14,11 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('gameshow-host', 'Guy Harris provides professional gameshow host voiceover for TV, radio, podcasts, YouTube and live events with an energetic, engaging style.'),
-  breadcrumb('gameshow-host', 'Gameshow Host'),
   faqPage('gameshow-host', [
-    { q: 'Can I hire a gameshow host voiceover?', a: 'Yes. Guy Harris provides energetic gameshow host voiceovers for TV, radio, apps, podcasts and live events.' },
-    { q: 'What does a gameshow host voiceover sound like?', a: 'A gameshow host voiceover is upbeat, dramatic and engaging \u2013 perfect for quiz shows, game apps, corporate events and promotional content.' },
+    { q: 'Can I hire Guy Harris for a gameshow-style voiceover?', a: 'Yes! Guy Harris offers dynamic, high-energy gameshow host voiceovers ideal for promos, intros, and live events. Contact Guy to book.' },
+    { q: 'What does a gameshow voiceover include?', a: 'A gameshow voiceover includes bold, exciting delivery to build suspense and engagement. Great for prize reveals, countdowns, and high-stakes intros.' },
   ]),
+  audioObject('gameshow-host', 'Gameshow Host Voice Demo \u2013 Guy Harris', 'Listen to Guy Harris perform his lively, engaging gameshow host voice. Perfect for game formats, quizzes, and entertainment intros.', '/assets/audio/guy-harris-voiceoverguy-gameshow-host.mp3', 'PT1M5S'),
 ];
 
 export default function Page() {

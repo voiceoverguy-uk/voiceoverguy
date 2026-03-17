@@ -1,6 +1,6 @@
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
-import { SchemaScripts, webPage, breadcrumb, localBusiness, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, localBusiness, faqPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo25'];
 
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  webPage('voiceover-studio', 'VoiceoverGuy Studio', 'Professional voiceover studio in Wakefield, West Yorkshire. Take a 360\u00B0 virtual tour and see the broadcast-quality recording setup used by Guy Harris.'),
-  breadcrumb('voiceover-studio', 'Voiceover Studio'),
+  profilePage('voiceover-studio', 'Professional voiceover studio in Wakefield, West Yorkshire. Take a 360\u00B0 virtual tour and see the broadcast-quality recording setup used by Guy Harris.'),
   localBusiness('voiceover-studio', 'Professional voiceover recording studio in Wakefield, West Yorkshire offering broadcast-quality audio, same-day delivery and remote session capability.'),
   faqPage('voiceover-studio', [
-    { q: 'Where is VoiceoverGuy\u2019s recording studio?', a: 'The VoiceoverGuy studio is based in Wakefield, West Yorkshire, UK \u2013 equipped for broadcast-quality recording with same-day delivery.' },
-    { q: 'Can I connect to the studio remotely?', a: 'Yes. The studio supports live-directed sessions via Source Connect, Cleanfeed, Zoom, Teams and phone patch.' },
+    { q: 'Where is the voiceover studio located?', a: 'The studio is in Wakefield, West Yorkshire, within easy reach of Leeds and the wider Yorkshire region, with free on-site parking.' },
+    { q: 'Can I hire the studio for my own voice work?', a: 'Yes, the studio is available to hire for voiceover and podcast sessions and has been used by actors from Emmerdale and other national broadcasters.' },
+    { q: 'Can I connect remotely to direct a session?', a: 'Yes, remote direction is available via Source Connect, Cleanfeed, Nexus, Zoom or a simple phone patch so you can listen in and direct in real time from anywhere.' },
   ]),
 ];
 
