@@ -133,6 +133,10 @@ ul, ol {
   left: 0;
 }
 
+.navbar.navbar--fixed .search-bar {
+  display: none;
+}
+
 .navbar-spacer {
   display: none;
 }
