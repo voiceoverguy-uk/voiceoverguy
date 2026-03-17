@@ -10,14 +10,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/' },
 };
 
-const arabellaAge = (() => {
-  const today = new Date();
-  const dob = new Date(2016, 5, 4);
-  let age = today.getFullYear() - dob.getFullYear();
-  if (today.getMonth() < 5 || (today.getMonth() === 5 && today.getDate() < 4)) age--;
-  return age;
-})();
-
 const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
@@ -97,6 +89,14 @@ const clientLogos = [
 ];
 
 export default function Home() {
+  const arabellaAge = (() => {
+    const today = new Date();
+    const dob = new Date(2016, 5, 4);
+    let age = today.getFullYear() - dob.getFullYear();
+    if (today.getMonth() < 5 || (today.getMonth() === 5 && today.getDate() < 4)) age--;
+    return age;
+  })();
+
   return (
     <>
       {/* HERO */}

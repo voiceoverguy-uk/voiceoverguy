@@ -1266,10 +1266,9 @@ audio {
 
 .feature-block {
   background: transparent;
-  border-top: 3px solid var(--red);
-  border-radius: 0 0 6px 6px;
   border: 1px solid rgba(0,0,0,0.04);
   border-top: 3px solid var(--red);
+  border-radius: 0 0 6px 6px;
   padding: 28px 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
