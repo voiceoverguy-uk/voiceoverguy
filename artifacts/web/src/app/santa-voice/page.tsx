@@ -1,35 +1,50 @@
 import InnerPage from '@/components/InnerPage';
-  import pages from '@/data/pages.json';
-  import type { Metadata } from 'next';
+import pages from '@/data/pages.json';
+import type { Metadata } from 'next';
+import { SchemaScripts, webPage, breadcrumb, serviceSchema, faqPage, audioObject } from '@/lib/staticPageSchema';
 
-  const data = (pages as Record<string, Record<string, string>>)['seo12'];
+const data = (pages as Record<string, Record<string, string>>)['seo12'];
 
-  export const metadata: Metadata = {
+export const metadata: Metadata = {
   alternates: {
     canonical: `https://www.voiceoverguy.co.uk/santa-voice`,
   },
-    title: data.s1,
-    description: data.s2,
-  };
+  title: data.s1,
+  description: data.s2,
+};
 
-  export default function Page() {
-    return (
-      <main className="inner-page">
-        {data.s3 && (
-          <section className="inner-hero">
-            <div className="inner-container" dangerouslySetInnerHTML={{ __html: data.s3 }} />
-          </section>
-        )}
-        <div className="inner-bar" />
-        <InnerPage pageTitle={data.s1} pageSlug="santa-voice" sections={[
-          ...(data.s4 ? [{ text: data.s4 }] : []),
-          ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
-          ...(data.s5 ? [{ text: data.s5 }] : []),
-          ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
-          ...(data.s6 ? [{ text: data.s6 }] : []),
-          { imageSrc: '/assets/images/santa-voice-guy-harris.jpg', imageAlt: 'Santa Voice – Guy Harris' },
-        ]} />
-      </main>
-    );
-  }
-  
+const schemas = [
+  webPage('santa-voice', 'Santa Voice \u2013 Guy Harris', "Guy Harris is the UK's No.1 Voice of Santa, trusted by BBC Radio 1, BBC Radio 2, Heart, Capital, ITV, Asda, Tesco, Butlins and more for Father Christmas voiceovers."),
+  breadcrumb('santa-voice', 'Santa Voice'),
+  serviceSchema('santa-voice', 'Santa Voiceover', "Professional Santa Claus / Father Christmas voiceover by Guy Harris \u2013 the UK's most-booked Voice of Santa for radio, TV, events and campaigns."),
+  audioObject('santa-voice', 'Santa Voice Demo \u2013 Guy Harris', 'A compilation of Santa Claus voiceover performances by Guy Harris for radio, TV and commercial campaigns.', '/assets/audio/guy-harris-voiceoverguy-santa-demo.mp3'),
+  faqPage('santa-voice', [
+    { q: 'Who is the best Santa voiceover artist in the UK?', a: "Guy Harris is widely considered the UK's No.1 Voice of Santa, with credits for BBC Radio 1, BBC Radio 2, Heart, Capital, ITV, Asda, Tesco and Butlins." },
+    { q: 'Can I hire a Santa voice for my Christmas campaign?', a: 'Yes. Guy Harris provides professional Santa Claus voiceovers for TV, radio, digital campaigns, corporate events, personalised messages and more.' },
+    { q: 'What does a Santa voiceover cost?', a: 'Pricing depends on usage and length. Most Santa voiceover projects start from \u00A349.99 for web use. Contact Guy for a fast, no-obligation quote.' },
+    { q: 'Can Guy Harris do a live Santa voice at my event?', a: 'Yes. Guy Harris provides live Voice of Santa performances for grottos, shopping centres, corporate events and Christmas light switch-ons.' },
+    { q: 'Is this a real Santa voice or AI?', a: 'This is a real human performance by professional British voice artist Guy Harris \u2013 not AI-generated.' },
+  ]),
+];
+
+export default function Page() {
+  return (
+    <main className="inner-page">
+      {data.s3 && (
+        <section className="inner-hero">
+          <div className="inner-container" dangerouslySetInnerHTML={{ __html: data.s3 }} />
+        </section>
+      )}
+      <div className="inner-bar" />
+      <InnerPage pageTitle={data.s1} pageSlug="santa-voice" sections={[
+        ...(data.s4 ? [{ text: data.s4 }] : []),
+        ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
+        ...(data.s5 ? [{ text: data.s5 }] : []),
+        ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
+        ...(data.s6 ? [{ text: data.s6 }] : []),
+        { imageSrc: '/assets/images/santa-voice-guy-harris.jpg', imageAlt: 'Santa Voice \u2013 Guy Harris' },
+      ]} />
+      <SchemaScripts schemas={schemas} />
+    </main>
+  );
+}

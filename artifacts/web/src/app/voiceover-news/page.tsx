@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blog-posts';
 import { sortByRating } from '@/lib/blogRating';
+import { SchemaScripts, webPage, breadcrumb } from '@/lib/staticPageSchema';
 
 export const metadata: Metadata = {
   title: 'Voiceover News & Blog - Guy Harris',
@@ -68,6 +69,23 @@ export default function VoiceoverNewsPage() {
           </div>
         </div>
       </section>
+      <SchemaScripts schemas={[
+        webPage('voiceover-news', 'Voiceover News & Blog', 'The latest voiceover news, stories, and samples from British male voiceover artist Guy Harris. TV ads, game trailers, character voices, and more.'),
+        breadcrumb('voiceover-news', 'Voiceover News'),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          '@id': 'https://www.voiceoverguy.co.uk/voiceover-news#blog',
+          url: 'https://www.voiceoverguy.co.uk/voiceover-news',
+          name: 'VoiceoverGuy Blog',
+          description: 'Voiceover news, samples and stories from British male voiceover artist Guy Harris.',
+          publisher: {
+            '@type': 'Person',
+            name: 'Guy Harris',
+            url: 'https://www.voiceoverguy.co.uk',
+          },
+        },
+      ]} />
     </>
   );
 }

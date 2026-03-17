@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
+import { SchemaScripts, webPage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
 
 export const metadata: Metadata = {
   title: "FAQ – Voiceover Questions Answered",
@@ -79,6 +80,18 @@ export default function FAQ() {
           </div>
         </div>
       </section>
+      <SchemaScripts schemas={[
+        webPage('FAQ', 'Voiceover FAQ', 'Everything you need to know about booking Guy Harris for a voiceover \u2014 pricing, turnaround, formats, remote direction, studio, and more.'),
+        breadcrumb('FAQ', 'FAQ'),
+        faqPage('FAQ', [
+          { q: 'How much does a voiceover cost?', a: "Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around \u00A349\u2013\u00A399. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout." },
+          { q: 'How quickly can you turnaround a voiceover?', a: 'Most voiceovers are delivered within 4\u20138 hours if received before 4pm. For urgent projects I offer a 2-hour turnaround. I have a professional studio at home so I can record any time, day or evening, seven days a week.' },
+          { q: 'What file format will I receive?', a: 'I deliver in broadcast quality WAV (24-bit, 44.1kHz or 48kHz) as standard. I can also provide MP3, AIFF, or any other format you require.' },
+          { q: 'Can I direct the session remotely?', a: "Absolutely. I'm set up for directed remote sessions via Source Connect NEXUS, Cleanfeed, Zoom, Microsoft Teams, Skype, or any platform you prefer." },
+          { q: "Where is Guy Harris's voiceover studio?", a: 'My broadcast-quality studio is based in Wakefield, West Yorkshire. I work with clients across the UK and internationally, with same-day delivery as standard.' },
+          { q: 'What voiceover styles does Guy Harris offer?', a: 'I cover everything from warm commercial reads to dramatic character voices, David Attenborough impressions, Santa voiceover, movie trailer voice, football commentator, and more.' },
+        ]),
+      ]} />
     </>
   );
 }
