@@ -1,0 +1,87 @@
+I want a follow-up technical clarification audit on the current VoiceoverGuy rebuild.
+
+Please do not make changes yet. This task is to inspect, explain clearly, and only then recommend any fixes.
+
+CONTEXT
+We have already completed a broad SEO and migration audit. I now want clarification on route structure, homepage handling, blog generation, sitemap/robots output, and especially the reported “675 schema blocks across 242 pages”.
+
+Please inspect the codebase and answer the following clearly and accurately.
+
+1. HOMEPAGE STRUCTURE
+- Identify exactly which file or route generates the public homepage at:
+  https://www.voiceoverguy.co.uk/
+- Confirm whether this is a root page.tsx, index route, or another route mechanism
+- Explain clearly which internal file is the actual homepage source
+- Confirm that Google will see this as / and not as an index file URL
+
+2. BLOG / POST ROUTING STRUCTURE
+- Identify exactly how blog posts and project pages are generated
+- Confirm whether they are created from:
+  - a dynamic [slug] route
+  - a shared template
+  - JSON data
+  - TS data files
+  - imported database content
+  - or a combination of these
+- Explain why individual blog files may not appear as separate .tsx files in GitHub
+- Show which file is the master template for blog/post rendering
+- Show which data file(s) supply the content and slugs
+
+3. SITEMAP + ROBOTS REVIEW
+Please inspect the actual sitemap and robots implementation in the codebase and confirm:
+- which file generates robots.txt
+- which file generates sitemap.xml
+- whether they are correct for production
+- whether they use the production domain only
+- whether the homepage is correctly listed as https://www.voiceoverguy.co.uk/
+- whether any important routes are missing
+- whether any URLs should not be in the sitemap
+
+4. SCHEMA BLOCK COUNT — IMPORTANT
+You previously reported that there are “675 schema blocks across 242 pages”.
+I want you to inspect this properly and explain it in plain English.
+
+Please answer:
+- exactly what was counted
+- whether this count refers to unique schema objects or duplicated render occurrences
+- whether React / RSC payload duplication inflated the count
+- whether any pages are outputting the same JSON-LD more than once
+- whether any schema is duplicated in a way that could confuse Google
+- whether the schema output is clean, intentional, and valid
+- whether the number sounds healthy or suspicious after proper inspection
+
+5. PAGE TYPE BREAKDOWN
+Please classify the site into page types and tell me roughly how many pages are in each group, for example:
+- homepage
+- static service pages
+- blog posts
+- project pages
+- utility pages
+- legal pages
+- search/filter pages if any
+
+6. MP3 EMBED UPDATE CHECK
+I have replaced 11 SoundCloud embeds with embedded MP3 players on 11 posts.
+Please inspect those pages and confirm:
+- whether the new embedded MP3 players render properly
+- whether they are lighter and cleaner than the SoundCloud embeds
+- whether any schema, metadata, or media handling needs adjusting because of the switch
+- whether AudioObject is still being generated correctly where relevant
+
+OUTPUT FORMAT
+Please respond with:
+- Executive summary
+- Homepage source
+- Blog/post architecture
+- Sitemap and robots findings
+- Schema count explanation
+- Any duplication concerns
+- MP3 embed findings
+- Recommended actions, if any
+
+IMPORTANT
+- Do not make code changes yet
+- Do not guess
+- Be precise
+- If the “675 schema blocks” figure includes duplication from build artefacts or RSC payloads, say so plainly
+- I want truth over impressive-sounding numbers
