@@ -1,0 +1,121 @@
+I want you to port the valuable old PHP schema into the new VoiceoverGuy build, but do it selectively, cleanly, and without carrying forward outdated or overstuffed markup.
+
+IMPORTANT:
+- This is a pre-launch SEO continuity task.
+- Preserve the useful schema intent from the old site where it genuinely helps.
+- Do not blindly copy every old schema block.
+- Lightly modernise and simplify where appropriate.
+- Keep everything accurate, relevant, and maintainable.
+
+GOAL
+The old PHP site had strong schema on many static service pages. I want to preserve the SEO value of that work in the new build, but I do NOT want:
+- fake phone numbers
+- unnecessary clutter
+- irrelevant schema types
+- overstuffed pages with 10+ schema blocks unless clearly justified
+
+INSTRUCTIONS
+
+1. ADD /privacy-policy TO THE SITEMAP
+- Add https://www.voiceoverguy.co.uk/privacy-policy to sitemap.xml if it is still missing
+- Confirm it appears in the final sitemap output
+- Do not create duplicate entries
+
+2. PORT OLD STATIC-PAGE SCHEMA SELECTIVELY
+Inspect the old PHP schema mapping you already found and port the useful schema to the matching static pages in the new build.
+
+Pages to prioritise include:
+- /commercial-voiceover
+- /character-voiceover
+- /david-attenborough-voice
+- /explainer-video-voice
+- /voice-of-god
+- /game-trailer-voice
+- /apple-voice-style
+- /football-commentator-voice
+- /gameshow-host
+- /halloween-voice
+- /movie-trailer-voice
+- /narration-voice
+- /on-hold-voice
+- /pirate-voice
+- /santa-voice
+- /voiceover-studio
+- /voiceoverguy
+- /voiceover-news
+- /pathe-news-voice
+- /FAQ
+and other old static pages where schema clearly existed and was useful
+
+3. KEEP THE GOOD, DROP THE RUBBISH
+Please preserve and port schema types where they are genuinely useful, such as:
+- FAQPage
+- BreadcrumbList
+- WebPage or ProfilePage
+- Person
+- Service
+- AudioObject
+- VideoObject
+- LocalBusiness only where genuinely useful and can be kept clean
+
+Do NOT preserve or add:
+- fake phone numbers
+- placeholder values
+- unnecessary RadioStation schema
+- schema on 404 pages
+- redundant repeated WebSite/SearchAction blocks where they add no value
+- anything inaccurate, bloated, or off-topic
+
+4. PHONE NUMBER RULE
+I do NOT want my phone number embedded in the new site schema.
+Therefore:
+- remove any phone number field from old schema when porting
+- do not add a telephone property unless I explicitly ask later
+- if LocalBusiness is retained, keep it clean without phone number
+
+5. REDUCE OVERSTUFFED PAGES
+Some old pages had very heavy schema, especially:
+- /character-voiceover
+- /santa-voice
+
+Please simplify these.
+Target:
+- around 5 to 6 high-value schema blocks max per page unless there is a very strong reason otherwise
+
+For those pages, prioritise the most useful schema only:
+- WebPage or ProfilePage
+- BreadcrumbList
+- FAQPage if present on the page
+- Service if appropriate
+- AudioObject if real audio exists
+- VideoObject if real video exists
+
+6. HOMEPAGE
+Review the old homepage schema and improve the new homepage carefully where it genuinely helps, but:
+- do not restore aggregateRating if it is invalid, risky, or likely to trigger Search Console issues
+- do not include phone number
+- keep homepage schema clean and credible
+
+7. IMPLEMENTATION STYLE
+- Reuse shared helpers where sensible so this is maintainable
+- Keep @id, url, and canonical references consistent
+- Use full production URLs
+- Use valid ISO dates where needed
+- Make sure each schema block is rendered once only
+- Avoid duplication
+
+8. VALIDATION + REPORT
+After implementing, provide:
+- list of pages updated
+- schema types added per page
+- pages intentionally excluded and why
+- confirmation that /privacy-policy is now in the sitemap
+- note of any old schema intentionally not preserved
+- confirmation that no telephone field was added
+- any pages still lacking schema and whether that is acceptable
+
+IMPORTANT
+- Favour accuracy and continuity over quantity
+- Preserve what was genuinely helping
+- Clean up what was excessive, outdated, fake, or irrelevant
+- This is not a licence to invent lots of new schema
