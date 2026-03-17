@@ -21,18 +21,20 @@ export default function ReviewBlock() {
 
   return (
     <div className="review-block">
-      <div className="review-stars">★★★★★</div>
-      <p className="review-text">
-        Rated <span className="review-highlight">{rating}</span> on Google by{' '}
-        <span className="review-highlight">{count}</span> Happy Clients
-      </p>
+      <div className="review-inline">
+        <span className="review-stars">★★★★★</span>
+        <p className="review-text">
+          Rated <span className="review-highlight">{rating}</span> on Google by{' '}
+          <span className="review-highlight">{count}</span> happy clients
+        </p>
+      </div>
       <a
         href="https://www.google.com/search?q=voiceoverguy+guy+harris+reviews"
         target="_blank"
         rel="noopener noreferrer"
         className="review-cta"
       >
-        READ REVIEWS ON GOOGLE &rarr;
+        Read reviews on Google &rarr;
       </a>
     </div>
   );

@@ -143,6 +143,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* THREE SHOWREEL AUDIO PLAYERS */}
+      <section className="home-section showreel-section">
+        <div className="container">
+          <div className="showreel-players">
+            <div className="showreel-player-item">
+              <WaveSurferPlayer
+                src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
+                label='<span class="text-red">Commercial</span> Showreel 2025'
+                compact
+              />
+            </div>
+            <div className="showreel-player-item">
+              <WaveSurferPlayer
+                src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
+                label='<span class="text-red">Character</span> Voices Showreel 2025'
+                compact
+              />
+            </div>
+            <div className="showreel-player-item">
+              <WaveSurferPlayer
+                src="/assets/audio/guy-harris-voiceoverguy-explainer-video-showreel.mp3"
+                label='<span class="text-red">Explainer Video</span> Showreel 2025'
+                compact
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* HERO BIO */}
       <section className="home-section">
         <div className="container">
@@ -234,35 +263,6 @@ export default function Home() {
             <Link href="/contact-guy" className="red-link">Get in touch today</Link>{' '}
             — I&apos;m in the studio and ready to help.
           </p>
-        </div>
-      </section>
-
-      {/* THREE SHOWREEL AUDIO PLAYERS */}
-      <section className="home-section">
-        <div className="container">
-          <div className="showreel-players">
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
-                label='<span class="text-red">Commercial</span> Showreel 2025'
-                compact
-              />
-            </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
-                label='<span class="text-red">Character</span> Voices Showreel 2025'
-                compact
-              />
-            </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/guy-harris-voiceoverguy-explainer-video-showreel.mp3"
-                label='<span class="text-red">Explainer Video</span> Showreel 2025'
-                compact
-              />
-            </div>
-          </div>
         </div>
       </section>
 
