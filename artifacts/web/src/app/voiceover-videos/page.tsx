@@ -4,6 +4,9 @@ import pages from '@/data/pages.json';
   const data = (pages as Record<string, Record<string, string>>)['seo21'];
 
   export const metadata: Metadata = {
+  alternates: {
+    canonical: `https://www.voiceoverguy.co.uk/voiceover-videos`,
+  },
     title: data.s1,
     description: data.s2,
   };

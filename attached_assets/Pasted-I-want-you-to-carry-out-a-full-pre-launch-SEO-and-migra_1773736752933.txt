@@ -1,0 +1,217 @@
+I want you to carry out a full pre-launch SEO and migration parity audit for the new VoiceoverGuy.co.uk build.
+
+IMPORTANT:
+- Be thorough, not superficial.
+- Use the live sitemap XML as the source of truth for the current site:
+  https://www.voiceoverguy.co.uk/sitemap.xml
+- Crawl every URL listed in that sitemap.
+- Compare each current live URL against the equivalent page in the new build.
+- Produce a structured report with clear PASS / WARNING / FAIL results.
+- Do not make assumptions. Check properly.
+- Do not rewrite content unless I explicitly ask later. This task is for auditing, parity checking, and flagging risks before launch.
+
+GOAL:
+I am moving the existing VoiceoverGuy.co.uk site to a new build and likely hosting it on Vercel. I want Google to continue seeing this as the same established site, not a risky reinvention. The domain will remain the same. Most slugs, content, internal links, and key page structures have been preserved. I want you to find anything that could harm rankings, indexing, crawlability, canonicals, structured data, or page parity before launch.
+
+AUDIT SCOPE
+
+1. SITEMAP CRAWL
+- Fetch and parse every URL from:
+  https://www.voiceoverguy.co.uk/sitemap.xml
+- Treat this sitemap as the baseline list of current indexable pages.
+- Confirm whether all sitemap URLs exist in the new build.
+- Flag any missing pages, changed slugs, unexpected redirects, 404s, 500s, or duplicate routes.
+
+2. URL PARITY CHECK
+For every URL in the sitemap, compare current live site vs new build and check:
+- HTTP status code
+- Final resolved URL
+- Whether slug/path is unchanged
+- Whether trailing slash behaviour is consistent
+- Whether there are uppercase/lowercase duplicates
+- Whether any URL is missing or moved
+
+If a page is missing in the new build:
+- flag it clearly
+- suggest the most relevant 301 redirect target if appropriate
+
+3. INDEXABILITY + ROBOTS
+Check every tested page for:
+- meta robots tag
+- x-robots-tag if applicable
+- robots.txt blocking issues
+- whether page is indexable
+- whether key assets needed for rendering are blocked
+- accidental noindex or disallow rules
+- canonicalised pages that should actually be self-indexable
+
+Flag any page that should be indexable but is not.
+
+4. CANONICAL AUDIT
+Check canonicals on all tested pages and flag:
+- canonicals pointing to preview, staging, Replit, or Vercel URLs
+- canonicals pointing to the wrong live URL
+- missing self-referencing canonicals
+- canonical chains
+- canonical mismatches with sitemap URLs
+- canonicals on pages that resolve elsewhere
+
+All production canonicals should point to:
+https://www.voiceoverguy.co.uk/...
+
+5. META + HEADING PARITY
+For each page compare:
+- page title
+- meta description
+- H1
+- main page intent
+
+Flag:
+- missing titles
+- missing meta descriptions
+- titles that changed substantially without clear reason
+- H1 missing or changed in a way that may alter search intent
+- pages where the new version appears weaker, thinner, or less commercially focused than the current live page
+
+Do not obsess over tiny wording differences. Focus on SEO-significant differences.
+
+6. INTERNAL LINKING AUDIT
+Check and compare internal links across the site and flag:
+- broken internal links
+- orphan pages
+- pages in sitemap with weak or no internal links
+- important old internal links missing from the new build
+- nav/footer/body links that now point incorrectly
+- dead links that still exist
+- opportunity to preserve or improve internal linking without changing the core site structure
+
+Pay special attention to key commercial and reputation pages such as:
+- homepage
+- male voiceover related pages
+- British voiceover related pages
+- English voiceover related pages
+- Santa / Christmas voiceover pages
+- David Attenborough pages
+- important ranking blog posts
+
+7. STRUCTURED DATA AUDIT
+Check whether structured data exists and whether it has been preserved or improved appropriately.
+
+Test for presence and validity of relevant schema such as:
+- Person / Profile signals
+- LocalBusiness where relevant
+- BreadcrumbList
+- BlogPosting on blog posts
+- VideoObject where videos exist
+- AudioObject where audio exists
+- FAQPage only where genuinely appropriate
+
+Flag:
+- missing schema that exists on the current site
+- broken JSON-LD
+- invalid fields
+- schema pointing to wrong URLs
+- missing absolute URLs
+- missing ISO dates where needed
+- any structured data regression that could reduce Google understanding of the site
+
+8. OPEN GRAPH / SOCIAL META
+Check each page for:
+- og:title
+- og:description
+- og:url
+- og:image
+- twitter card tags where applicable
+- correct absolute URLs
+- no preview/staging URLs leaking into metadata
+
+Flag missing or broken social metadata on important pages.
+
+9. IMAGE + MEDIA CHECKS
+Audit:
+- broken image paths
+- missing featured images
+- image URLs changed unexpectedly
+- alt text regressions where relevant
+- broken embedded YouTube / Vimeo / audio assets
+- media schema mismatches
+- large unoptimised images that may hurt performance
+
+10. MOBILE + RENDERING CHECKS
+Check key templates on mobile and flag:
+- horizontal overflow / side scrolling
+- missing or hidden headings/copy
+- major layout shifts
+- mobile nav issues
+- content present on desktop but missing on mobile
+- buttons or links too close together
+- any rendering issue that could affect mobile-first indexing or usability
+
+11. PERFORMANCE RISK CHECK
+For key pages, audit likely performance risks including:
+- large images
+- unnecessary JS bloat
+- layout shift risks
+- poor font loading
+- excessive client-side rendering where static/server rendering would be better
+- slow-loading hero sections
+- anything likely to hurt LCP or CLS
+
+Do not just give generic Lighthouse fluff. Be specific about what is actually present in this build.
+
+12. SITEMAP QUALITY CHECK
+Also audit the new build’s sitemap output and confirm:
+- all key indexable pages are included
+- no 404 pages included
+- no redirected URLs included
+- no preview URLs included
+- no canonical-mismatched URLs included
+- only preferred production URLs are listed
+- robots.txt references the correct sitemap location
+
+13. REDIRECT READINESS
+Check whether any old URLs that no longer exist need redirect handling.
+Produce a redirect recommendation list for:
+- removed pages
+- cleaned-up dead links
+- any legacy URLs discovered during crawl or internal linking checks
+
+Use 301 redirect recommendations only where appropriate and map to the closest relevant page.
+
+14. PRIORITY RISK SUMMARY
+At the end, produce a clear summary in this exact order:
+
+A. Critical issues to fix before launch
+B. Important issues to fix soon after launch
+C. Nice-to-have improvements
+D. Pages that are safe and show strong parity
+E. Any areas where the new build is actually better than the live site
+
+15. OUTPUT FORMAT
+I want the output to be easy to review as a human.
+Please structure it like this:
+
+- Executive summary
+- Audit methodology
+- Table of tested URLs with status and notes
+- Critical findings
+- Warnings
+- Passed checks
+- Redirect recommendations
+- Launch readiness verdict
+
+Where useful, include short code or file-level recommendations.
+
+IMPORTANT BEHAVIOURAL RULES
+- Do not make random design changes.
+- Do not rewrite ranking content just because you feel like it.
+- Do not remove existing SEO signals unless they are clearly harmful or broken.
+- Preserve what is already working.
+- Treat this as a migration-risk prevention audit, not a redesign exercise.
+- Be conservative with recommendations on high-performing pages.
+- Assume that keeping trusted SEO signals stable is more important than chasing novelty.
+
+CONTEXT
+This site already performs very well in Google for valuable queries such as British male voiceover, male voice, voice of Santa, and related AI snippets / AI overview visibility. The main objective is to preserve and protect existing trust, relevance, and rankings while benefiting from cleaner code, faster hosting, better internal maintenance, and fewer dead links.
+
+Please begin by crawling the live sitemap URL and building the full parity audit from there.

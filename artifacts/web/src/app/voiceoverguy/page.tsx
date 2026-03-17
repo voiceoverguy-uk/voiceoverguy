@@ -5,6 +5,9 @@ import InnerPage from '@/components/InnerPage';
   const data = (pages as Record<string, Record<string, string>>)['seo2'];
 
   export const metadata: Metadata = {
+  alternates: {
+    canonical: `https://www.voiceoverguy.co.uk/voiceoverguy`,
+  },
     title: data.s7,
     description: data.s8,
   };

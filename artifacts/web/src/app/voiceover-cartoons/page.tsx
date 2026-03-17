@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import CartoonGallery from './CartoonGallery';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `https://www.voiceoverguy.co.uk/voiceover-cartoons`,
+  },
   title: 'Voiceover Cartoons | Guy Harris British Voiceover Artist',
   description: 'Original voiceover cartoons by Guy Harris, illustrated by George Raggett. Funny, relatable humour from real-life British recording studio sessions, character voiceovers, Santa jobs, and audio editing.',
 };

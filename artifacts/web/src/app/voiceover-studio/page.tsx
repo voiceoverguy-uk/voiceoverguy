@@ -8,6 +8,9 @@ import pages from '@/data/pages.json';
   }
 
   export const metadata: Metadata = {
+  alternates: {
+    canonical: `https://www.voiceoverguy.co.uk/voiceover-studio`,
+  },
     title: data.s1,
     description: data.s2,
   };

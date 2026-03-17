@@ -4,7 +4,7 @@ import blogPosts from '@/data/blog-posts';
 import { sortByRating } from '@/lib/blogRating';
 
 export const metadata: Metadata = {
-  title: 'Voiceover News & Blog | VoiceoverGuy - Guy Harris',
+  title: 'Voiceover News & Blog - Guy Harris',
   description:
     'The latest voiceover news, stories, and samples from British male voiceover artist Guy Harris. TV ads, game trailers, character voices, and more.',
   alternates: {

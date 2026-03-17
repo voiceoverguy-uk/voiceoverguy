@@ -4,6 +4,14 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/web run build",
   "outputDirectory": "artifacts/web/out",
+  "redirects": [
+    { "source": "/arabella-harris-voiceover-kid", "destination": "/arabella-harris-girl-child-voiceover-kid", "statusCode": 301 },
+    { "source": "/studiotour/index.html", "destination": "/voiceover-studio", "statusCode": 301 },
+    { "source": "/studiotour", "destination": "/voiceover-studio", "statusCode": 301 },
+    { "source": "/maskedsinger-voiceover", "destination": "/masked-singer-voice-of-god-butlins", "statusCode": 301 },
+    { "source": "/british-voiceover", "destination": "/voiceoverguy", "statusCode": 301 },
+    { "source": "/news-blog", "destination": "/voiceover-news", "statusCode": 301 }
+  ],
   "headers": [
     {
       "source": "/(.*)",

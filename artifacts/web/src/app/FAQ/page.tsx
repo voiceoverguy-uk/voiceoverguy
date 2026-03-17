@@ -3,7 +3,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: "FAQ – Voiceover Questions Answered | VoiceoverGuy",
+  title: "FAQ – Voiceover Questions Answered",
   description: "Everything you need to know about booking Guy Harris for a voiceover — pricing, turnaround, formats, remote direction, studio, and more.",
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/FAQ' },
 };

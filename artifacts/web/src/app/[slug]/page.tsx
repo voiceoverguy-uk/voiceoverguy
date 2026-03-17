@@ -19,9 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject(params.slug);
   if (project) {
     return {
-      title: project.metaTitle
-        ? `${project.metaTitle} | VoiceoverGuy`
-        : project.title,
+      title: project.metaTitle || project.title,
       description: project.metaDescription,
       alternates: {
         canonical: `https://www.voiceoverguy.co.uk/${params.slug}`,
@@ -32,9 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(params.slug);
   if (post && !post.conflictsWithCorePage) {
     return {
-      title: post.metaTitle
-        ? `${post.metaTitle} | VoiceoverGuy`
-        : `${post.pageTitle} | VoiceoverGuy`,
+      title: post.metaTitle || post.pageTitle,
       description: post.pageDesc || post.info || '',
       alternates: {
         canonical: `https://www.voiceoverguy.co.uk/${params.slug}`,

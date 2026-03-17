@@ -6,6 +6,9 @@ import type { Metadata } from 'next';
 const data = (pages as Record<string, Record<string, string>>)['seo7'];
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: `https://www.voiceoverguy.co.uk/voice-of-god`,
+  },
   title: data.s1,
   description: data.s2,
 };
