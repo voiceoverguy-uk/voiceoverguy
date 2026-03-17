@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import blogPosts from '@/data/blog-posts';
+import { sortByRating } from '@/lib/blogRating';
 
 export const metadata: Metadata = {
   title: 'Voiceover News & Blog | VoiceoverGuy - Guy Harris',
@@ -11,11 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-const publishedPosts = blogPosts
-  .filter(p => !p.conflictsWithCorePage)
-  .sort((a, b) => b.id - a.id);
-
-function PostCard({ post }: { post: (typeof publishedPosts)[0] }) {
+function PostCard({ post }: { post: (typeof blogPosts)[0] }) {
   const displayDate = post.date
     ? new Date(post.date + 'T00:00:00').toLocaleDateString('en-GB', {
         year: 'numeric',
@@ -54,6 +51,10 @@ function PostCard({ post }: { post: (typeof publishedPosts)[0] }) {
 }
 
 export default function VoiceoverNewsPage() {
+  const publishedPosts = sortByRating(
+    blogPosts.filter(p => !p.conflictsWithCorePage && p.blogRating !== 'not-a-blog')
+  );
+
   return (
     <>
       <div className="page-header">
