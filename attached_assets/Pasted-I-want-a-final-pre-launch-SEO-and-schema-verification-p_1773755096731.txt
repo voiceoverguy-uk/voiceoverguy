@@ -1,0 +1,137 @@
+I want a final pre-launch SEO and schema verification pass for the new VoiceoverGuy.co.uk build.
+
+IMPORTANT:
+- This is a verification-only task.
+- Do NOT make changes unless you first identify a real issue and clearly flag it.
+- Do NOT redesign, rewrite, or “improve” things speculatively.
+- This is a belt-and-braces final inspection to confirm the migration preserves the old site’s SEO continuity and technical setup as safely as possible.
+
+GOAL
+Before I point the real domain to this new build, I want you to verify that we have done everything reasonable to preserve the trusted SEO signals of the original site while keeping the new build clean, stable, and production-safe.
+
+Please inspect the ACTUAL current build output and codebase and answer the checks below precisely.
+
+1. SITEMAP FINAL CHECK
+Please verify:
+- /privacy-policy is now present in sitemap.xml
+- the homepage / is present in sitemap.xml
+- all sitemap URLs use the production domain only:
+  https://www.voiceoverguy.co.uk/
+- there are no preview, staging, Replit, or Vercel preview URLs in the sitemap
+- there are no obvious missing key pages that should be in the sitemap
+- there are no URLs in the sitemap that should not be there
+
+2. ROBOTS FINAL CHECK
+Please verify:
+- robots.txt exists and is accessible
+- it allows crawling appropriately
+- it references the correct production sitemap URL
+- there are no accidental disallow rules or noindex problems affecting important pages
+
+3. CANONICAL FINAL CHECK
+Please verify on key pages:
+- canonicals exist
+- canonicals point to the correct production URL
+- no canonical points to preview/staging/Replit/Vercel URLs
+- no key page is missing a canonical
+- no obvious canonical mismatch exists between page URL and canonical URL
+
+Please check at least:
+- homepage
+- commercial-voiceover
+- character-voiceover
+- david-attenborough-voice
+- santa-voice
+- voiceover-studio
+- voiceoverguy
+- voiceover-news
+- one or two representative blog posts
+
+4. SCHEMA FINAL CHECK
+Please verify that the final schema implementation is correct and stable.
+
+I want confirmation of all of the following:
+- each important static page renders the intended schema types
+- the static pages now match the old PHP schema approach where intended
+- no page accidentally has schema copied from the wrong page
+- no telephone property exists anywhere in any schema block
+- no AggregateRating has been reintroduced
+- no preview/staging/Replit/Vercel URLs appear in any JSON-LD
+- each schema block is valid JSON-LD and rendered cleanly
+- there are no accidental duplicates beyond normal Next.js/RSC behaviour
+- voiceover-videos, contact-guy, and privacy-policy are intentionally schema-free and that is acceptable
+- FAQPage only appears where the FAQ content is genuinely present on the page
+- AudioObject only appears where real audio is present
+- VideoObject only appears where real video is present
+
+5. STATIC PAGE SPOT-CHECK
+Please do a final spot-check of these pages and confirm their final schema types are exactly what they should be:
+- /commercial-voiceover
+- /character-voiceover
+- /david-attenborough-voice
+- /explainer-video-voice
+- /voice-of-god
+- /game-trailer-voice
+- /apple-voice-style
+- /football-commentator-voice
+- /gameshow-host
+- /halloween-voice
+- /movie-trailer-voice
+- /narration-voice
+- /on-hold-voice
+- /pirate-voice
+- /santa-voice
+- /voiceover-studio
+- /voiceoverguy
+- /voiceover-news
+- /pathe-news-voice
+- /FAQ
+- /voiceover-imaging
+
+For each one, confirm:
+- final schema types present
+- whether this matches the old PHP intent
+- whether anything still looks off
+
+6. HOMEPAGE FINAL CHECK
+Please confirm:
+- homepage Person schema is present
+- homepage schema is enriched appropriately from the old site
+- no telephone field exists
+- no AggregateRating exists
+- no invalid or risky review markup exists
+- nested LocalBusiness, if present, is clean and production-safe
+
+7. INTERNAL LINK + ROUTE SANITY CHECK
+Please verify:
+- no important page is accidentally orphaned
+- no newly added schema work broke any page route
+- no broken internal links were introduced during the schema changes
+- no page imports a wrong shared schema config by mistake
+
+8. OUTPUT FORMAT
+Please respond using this exact structure:
+
+A. Executive summary
+B. Sitemap check
+C. Robots check
+D. Canonical check
+E. Homepage check
+F. Static page schema verification table
+G. Pages intentionally left schema-free
+H. Any issues found
+I. Final launch readiness verdict
+
+9. VERDICT RULE
+End with one of these exact verdicts:
+- READY TO LAUNCH
+- READY TO LAUNCH WITH MINOR FIXES
+- NOT READY TO LAUNCH
+
+IMPORTANT
+- Be precise
+- Be conservative
+- Truth over reassurance
+- This is the final technical verification pass before domain cutover
+- If everything is good, say so clearly
+- If anything is wrong, flag only real issues, not theoretical nice-to-haves
