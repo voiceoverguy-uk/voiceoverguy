@@ -3609,3 +3609,42 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
     padding: 20px 15px;
   }
 }
+
+/* ── Generator Promo Blocks (on landing pages) ── */
+.generator-promo {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f7f7f7;
+  border-top: 1px solid #e0e0e0;
+}
+
+.generator-promo h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.generator-promo p {
+  max-width: 580px;
+  margin: 0 auto 20px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.generator-promo-btn {
+  display: inline-block;
+  background: #9C060B;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.generator-promo-btn:hover {
+  background: #7a0508;
+}

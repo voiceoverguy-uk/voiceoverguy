@@ -1,4 +1,5 @@
 import InnerPage from '@/components/InnerPage';
+import Link from 'next/link';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
 import { SchemaScripts, profilePage, breadcrumb, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
@@ -43,6 +44,19 @@ export default function Page() {
         ...(data.s6 ? [{ text: data.s6 }] : []),
         { imageSrc: '/assets/images/attenborough-script-generator.jpg', imageAlt: 'David Attenborough Impression \u2013 Guy Harris' },
       ]} />
+      <section className="generator-promo">
+        <div className="container">
+          <h2>Try the Free Attenborough Script Generator</h2>
+          <p>
+            Got a fun scenario in mind? Use the free Attenborough Script Generator to turn any scene into
+            a nature-documentary-style narration. Then hire Guy Harris to voice the final script and bring
+            it to life for real.
+          </p>
+          <Link href="/attenborough-script-generator" className="generator-promo-btn">
+            Try the Attenborough Script Generator
+          </Link>
+        </div>
+      </section>
       <SchemaScripts schemas={schemas} />
     </main>
   );

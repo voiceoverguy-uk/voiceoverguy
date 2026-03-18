@@ -21,6 +21,8 @@ const links = [
   { label: 'Santa Radio', subtitle: 'The biggest online Christmas Radio', href: 'https://www.santaradio.co.uk', external: true },
   { label: "The UK's Voice of Santa", subtitle: "The Favourite Santa Voice!", href: '/santa-voice' },
   { label: 'Voiceover Studio Yorkshire', subtitle: "Professional recording booth", href: 'https://voiceoverstudiofinder.com/VoiceoverGuy', external: true },
+  { label: 'Attenborough Script Generator', subtitle: 'Free AI script tool', href: '/attenborough-script-generator' },
+  { label: 'Santa Script Generator', subtitle: 'Free festive message tool', href: '/santa-script-generator' },
 ];
 
 export default function Navbar() {

@@ -1,4 +1,5 @@
 import InnerPage from '@/components/InnerPage';
+import Link from 'next/link';
 import pages from '@/data/pages.json';
 import type { Metadata } from 'next';
 import { SchemaScripts, webPage, breadcrumb, serviceSchema, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
@@ -46,6 +47,19 @@ export default function Page() {
         ...(data.s6 ? [{ text: data.s6 }] : []),
         { imageSrc: '/assets/images/santa-voice-guy-harris.jpg', imageAlt: 'Santa Voice \u2013 Guy Harris' },
       ]} />
+      <section className="generator-promo">
+        <div className="container">
+          <h2>Try the Free Santa Script Generator</h2>
+          <p>
+            Want a personalised message from Father Christmas? Use the free Santa Script Generator to create
+            a festive, one-of-a-kind message in seconds. Then book Guy Harris to voice it professionally
+            and make Christmas truly magical.
+          </p>
+          <Link href="/santa-script-generator" className="generator-promo-btn">
+            Try the Santa Script Generator
+          </Link>
+        </div>
+      </section>
       <SchemaScripts schemas={schemas} />
     </main>
   );
