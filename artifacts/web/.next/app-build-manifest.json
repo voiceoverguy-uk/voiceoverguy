@@ -1,253 +1,35 @@
 {
   "pages": {
-    "/not-found": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/not-found-aadc6128ed3d9457.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/_not-found/page-c56ec4582ea804ef.js"
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/css/913cecfa117908b5.css",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/layout-fcc7526ec57198b3.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
-    "/[slug]/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/[slug]/page-ac46a02f7215be49.js"
-    ],
-    "/apple-voice-style/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/apple-voice-style/page-d638add8b7139fd3.js"
-    ],
-    "/contact-guy/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/contact-guy/page-1ab8357bc42c00d1.js"
-    ],
-    "/commercial-voiceover/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/commercial-voiceover/page-1d672ceb8d4eea0f.js"
-    ],
-    "/FAQ/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/FAQ/page-8e58ae25d0ef15bd.js"
-    ],
-    "/character-voiceover/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/character-voiceover/page-c53b4a8ff0fe31e2.js"
-    ],
-    "/david-attenborough-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/david-attenborough-voice/page-b023392534182f5a.js"
-    ],
-    "/explainer-video-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/explainer-video-voice/page-a7be93c3a93ee004.js"
-    ],
-    "/gameshow-host/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/gameshow-host/page-47cf484a3a28fa17.js"
-    ],
-    "/game-trailer-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/game-trailer-voice/page-a8d1a252e081d18f.js"
-    ],
-    "/narration-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/narration-voice/page-7280e8034f3c949e.js"
-    ],
-    "/movie-trailer-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/movie-trailer-voice/page-62fccde9388481a0.js"
-    ],
-    "/football-commentator-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/football-commentator-voice/page-6bb07159bf2c8712.js"
-    ],
-    "/halloween-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/halloween-voice/page-011f4c703890b8c4.js"
-    ],
-    "/on-hold-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/on-hold-voice/page-80b4069ec2aa978c.js"
-    ],
-    "/pirate-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/pirate-voice/page-6aba64f0faea8c63.js"
-    ],
-    "/privacy-policy/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/privacy-policy/page-cc0152bfaa1e596d.js"
-    ],
-    "/pathe-news-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/pathe-news-voice/page-1d46e01c77b6b045.js"
-    ],
-    "/voice-of-god/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/voice-of-god/page-4c39d1beaedce33b.js"
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ],
     "/santa-voice/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/santa-voice/page-d4f6e9697a579e5e.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/santa-voice/page.js"
     ],
-    "/voiceover-cartoons/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/voiceover-cartoons/page-a3c743b8d4164766.js"
+    "/movie-trailer-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/movie-trailer-voice/page.js"
     ],
-    "/voiceover-imaging/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/voiceover-imaging/page-bd86f54e8e53818d.js"
-    ],
-    "/voiceover-news/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/voiceover-news/page-7b70fe2246446e07.js"
-    ],
-    "/voiceover-studio/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/voiceover-studio/page-0a7e45bf490a1b90.js"
-    ],
-    "/voiceover-videos/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/voiceover-videos/page-151ddc9f9fd1f5e4.js"
-    ],
-    "/voiceoverguy/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/voiceoverguy/page-a729471b01e90c0f.js"
-    ],
-    "/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/page-a2ed461946565f92.js"
-    ],
-    "/attenborough-script-generator/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/attenborough-script-generator/page-cde224b89cfd8174.js"
-    ],
-    "/attenborough-script-generator/layout": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/attenborough-script-generator/layout-6409590e57411dc3.js"
-    ],
-    "/santa-script-generator/page": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/132-db8bf87a4696e60a.js",
-      "static/chunks/app/santa-script-generator/page-7c6f1f36447257d3.js"
-    ],
-    "/santa-script-generator/layout": [
-      "static/chunks/webpack-7f3fa47585b53d17.js",
-      "static/chunks/27bebc07-4e6cbdde44fcb542.js",
-      "static/chunks/848-0c32d57860ed019b.js",
-      "static/chunks/main-app-901eec3f3c2adb4a.js",
-      "static/chunks/app/santa-script-generator/layout-916f31ef11c796b8.js"
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
