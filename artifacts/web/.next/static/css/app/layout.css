@@ -1427,7 +1427,7 @@ audio {
   font-size: 9rem;
   line-height: 1;
   color: #ccc;
-  opacity: 0.25;
+  opacity: 0.15;
   position: absolute;
   pointer-events: none;
   -webkit-user-select: none;

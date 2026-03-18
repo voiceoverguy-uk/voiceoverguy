@@ -28,17 +28,20 @@ export default function RotatingQuotes() {
     reducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion.current) return;
 
-    const tick = () => {
+    let fadeOutTimer: ReturnType<typeof setTimeout>;
+
+    const interval = setInterval(() => {
       setVisible(false);
-      const fadeOut = setTimeout(() => {
+      fadeOutTimer = setTimeout(() => {
         setIndex(i => (i + 1) % quotes.length);
         setVisible(true);
       }, FADE_DURATION);
-      return fadeOut;
-    };
+    }, CYCLE);
 
-    const interval = setInterval(tick, CYCLE);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(fadeOutTimer);
+    };
   }, []);
 
   return (
