@@ -1,4 +1,5 @@
 import pages from '@/data/pages.json';
+import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
 import { SchemaScripts, profilePage, localBusiness, faqPage } from '@/lib/staticPageSchema';
 
@@ -31,7 +32,7 @@ export default function Page() {
     <main className="inner-page">
       <section className="inner-hero">
         <div className="inner-container">
-          <div dangerouslySetInnerHTML={{ __html: data.s3 || '' }} />
+          <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s3 || '') }} />
           <div className="studio-tour-wrap">
             <iframe
               src="https://www.voiceoverguy.co.uk/studiotour/index.html"
@@ -45,31 +46,31 @@ export default function Page() {
       <div className="inner-parallax">
         <div className="inner-container">
           <div className="inner-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s4 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s4 || '') }} /></div>
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio1.jpg" alt="Voiceover Studio \u2013 VoiceoverGuy" /></div>
           </div>
           <div className="inner-row reverse">
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio7.jpg" alt="Yorkshire Voiceover Studio" /></div>
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s5 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s5 || '') }} /></div>
           </div>
           <div className="inner-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s6 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s6 || '') }} /></div>
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio3.jpg" alt="West Yorkshire Voiceover Studio" /></div>
           </div>
           <div className="inner-row reverse">
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio4.jpg" alt="Leeds Voiceover Studio" /></div>
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s7 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s7 || '') }} /></div>
           </div>
           <div className="inner-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s8 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s8 || '') }} /></div>
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio5.jpg" alt="Voiceover Studio for Hire in West Yorkshire" /></div>
           </div>
           <div className="inner-row reverse">
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio6.jpg" alt="Professional Voiceover Booth in Yorkshire" /></div>
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s9 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s9 || '') }} /></div>
           </div>
           <div className="inner-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: data.s10 || '' }} /></div>
+            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s10 || '') }} /></div>
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio2.jpg" alt="Wakefield Voiceover Studio" /></div>
           </div>
         </div>

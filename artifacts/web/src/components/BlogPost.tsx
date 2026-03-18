@@ -4,6 +4,7 @@ import blogPosts from '@/data/blog-posts';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import MiniPlayer from '@/components/MiniPlayer';
 import { buildAllBlogSchemas } from '@/lib/buildSchema';
+import { normaliseHtml } from '@/lib/normaliseHtml';
 
 interface Props {
   post: BlogPostType;
@@ -13,14 +14,6 @@ function isValidImageFilename(filename: string): boolean {
   if (!filename) return false;
   const trimmed = filename.trim();
   return trimmed.length >= 4 && trimmed.includes('.');
-}
-
-function normaliseHtml(html: string): string {
-  if (!html) return '';
-  return html
-    .replace(/https?:\/\/www\.voiceoverguy\.co\.uk\/assets\//g, '/assets/')
-    .replace(/https?:\/\/voiceoverguy\.co\.uk\/assets\//g, '/assets/')
-    .replace(/<a href="([^"\/][^"]*)"([^>]*)>/g, '<a href="/$1"$2>');
 }
 
 function MediaBlock({ post }: { post: BlogPostType }) {

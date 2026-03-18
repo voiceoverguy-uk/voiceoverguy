@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
+import { normaliseHtml } from '@/lib/normaliseHtml';
 
 interface Section {
   text?: string;
@@ -14,14 +15,6 @@ interface InnerPageProps {
   sections: Section[];
   pageTitle?: string;
   pageSlug?: string;
-}
-
-function normalizeHTML(html: string): string {
-  return (html || '')
-    .replace(/https:\/\/www\.voiceoverguy\.co\.uk\/assets\/audio\//g, '/assets/audio/')
-    .replace(/https:\/\/www\.voiceoverguy\.co\.uk\/assets\/images\//g, '/assets/images/')
-    .replace(/class="isred"/g, 'class="isred"')
-    .replace(/class="ident"/g, 'class="ident"');
 }
 
 function isYouTubeId(str: string): boolean {
@@ -87,7 +80,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
             return (
               <div key={idx} className="inner-full">
                 {left.text && (
-                  <div dangerouslySetInnerHTML={{ __html: normalizeHTML(left.text) }} />
+                  <div dangerouslySetInnerHTML={{ __html: normaliseHtml(left.text) }} />
                 )}
                 {left.youtubeId && isYouTubeId(left.youtubeId) && (
                   <YouTubeEmbed id={left.youtubeId} />
@@ -107,7 +100,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
             <div key={idx} className={`inner-row${!isEven ? ' reverse' : ''}`}>
               <div className="inner-col">
                 {left.text && (
-                  <div dangerouslySetInnerHTML={{ __html: normalizeHTML(left.text) }} />
+                  <div dangerouslySetInnerHTML={{ __html: normaliseHtml(left.text) }} />
                 )}
                 {left.youtubeId && isYouTubeId(left.youtubeId) && (
                   <YouTubeEmbed id={left.youtubeId} />
@@ -121,7 +114,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
               </div>
               <div className="inner-col">
                 {right.text && (
-                  <div dangerouslySetInnerHTML={{ __html: normalizeHTML(right.text) }} />
+                  <div dangerouslySetInnerHTML={{ __html: normaliseHtml(right.text) }} />
                 )}
                 {right.youtubeId && isYouTubeId(right.youtubeId) && (
                   <YouTubeEmbed id={right.youtubeId} />

@@ -1,6 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import Link from 'next/link';
 import pages from '@/data/pages.json';
+import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
 import { SchemaScripts, profilePage, breadcrumb, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
 
@@ -32,7 +33,7 @@ export default function Page() {
     <main className="inner-page">
       {data.s3 && (
         <section className="inner-hero">
-          <div className="inner-container" dangerouslySetInnerHTML={{ __html: data.s3 }} />
+          <div className="inner-container" dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s3) }} />
         </section>
       )}
       <div className="inner-bar" />

@@ -16,50 +16,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/david-attenborough-voice/page": [
+    "/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/david-attenborough-voice/page.js"
+      "static/chunks/app/[slug]/page.js"
+    ],
+    "/voiceover-studio/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voiceover-studio/page.js"
+    ],
+    "/voice-of-god/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voice-of-god/page.js"
     ],
     "/santa-voice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/santa-voice/page.js"
     ],
-    "/football-commentator-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/football-commentator-voice/page.js"
-    ],
-    "/contact-guy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact-guy/page.js"
-    ],
-    "/santa-script-generator/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/santa-script-generator/page.js"
-    ],
-    "/santa-script-generator/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/santa-script-generator/layout.js"
-    ],
     "/commercial-voiceover/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/commercial-voiceover/page.js"
-    ],
-    "/voiceover-news/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voiceover-news/page.js"
-    ],
-    "/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[slug]/page.js"
     ]
   }
 }

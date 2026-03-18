@@ -1,4 +1,5 @@
 import pages from '@/data/pages.json';
+import { normaliseHtml } from '@/lib/normaliseHtml';
   import type { Metadata } from 'next';
 
   const data = (pages as Record<string, Record<string, string>>)['seo21'];
@@ -39,12 +40,12 @@ import pages from '@/data/pages.json';
     return (
       <main className="inner-page">
         <section className="inner-hero">
-          <div className="inner-container" dangerouslySetInnerHTML={{ __html: data.s3 || '' }} />
+          <div className="inner-container" dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s3 || '') }} />
         </section>
         <div className="inner-bar" />
         <div className="inner-parallax">
           <div className="inner-container">
-            {data.s4 && <div dangerouslySetInnerHTML={{ __html: data.s4 }} />}
+            {data.s4 && <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s4) }} />}
             <div className="video-grid">
               {items.map(({ img, caption }) => (
                 <div key={img} className="video-item">
@@ -53,10 +54,10 @@ import pages from '@/data/pages.json';
                 </div>
               ))}
             </div>
-            {data.s5 && <div dangerouslySetInnerHTML={{ __html: data.s5 }} />}
-            {data.s6 && <div dangerouslySetInnerHTML={{ __html: data.s6 }} />}
-            {data.s7 && <div dangerouslySetInnerHTML={{ __html: data.s7 }} />}
-            {data.s8 && <div dangerouslySetInnerHTML={{ __html: data.s8 }} />}
+            {data.s5 && <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s5) }} />}
+            {data.s6 && <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s6) }} />}
+            {data.s7 && <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s7) }} />}
+            {data.s8 && <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s8) }} />}
           </div>
         </div>
       </main>
