@@ -278,8 +278,10 @@ button.nav-link {
   margin: 0;
 }
 
-.nav-item:hover .dropdown-menu {
-  display: block;
+@media (min-width: 769px) {
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
 }
 
 .dropdown-menu li a {
@@ -334,8 +336,10 @@ button.nav-link {
   padding: 16px;
 }
 
-.nav-item:hover .mega-menu {
-  display: block;
+@media (min-width: 769px) {
+  .nav-item:hover .mega-menu {
+    display: block;
+  }
 }
 
 .mega-menu-header {
@@ -411,9 +415,11 @@ button.nav-link {
   padding: 20px;
 }
 
-.nav-item:hover .contact-dropdown {
-  display: flex;
-  gap: 16px;
+@media (min-width: 769px) {
+  .nav-item:hover .contact-dropdown {
+    display: flex;
+    gap: 16px;
+  }
 }
 
 .contact-dropdown-left {
