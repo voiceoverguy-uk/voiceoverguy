@@ -114,8 +114,7 @@ export default function SantaGenerator() {
     setHasResult(false);
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_URL || '';
-      const response = await fetch(`${apiBase}/api/generate1`, {
+      const response = await fetch('/api/generate1', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: trimmed }),

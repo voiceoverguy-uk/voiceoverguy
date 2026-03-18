@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "openai": "^6.31.0",
     "resend": "^6.0.0"
   },
   "devDependencies": {

@@ -25,8 +25,7 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
 - `emitDeclarationOnly` is used for `.d.ts` files; actual JS bundling is handled by esbuild/tsx/vite.
 
 **API Server (`artifacts/api-server`):**
-- Express 5 server handling API requests.
-- Routes use Zod for request/response validation and Drizzle ORM for persistence.
+- Express 5 server handling API requests (used for local Replit dev).
 - Features AI script generators (`/api/generate` for Attenborough, `/api/generate1` for Santa) using OpenAI via Replit AI integrations.
 - Built using esbuild into a CJS bundle.
 
@@ -44,11 +43,6 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
     - Integration of Google Reviews (live rating + count via `/api/reviews`).
 - **Design Patterns:** Uses a shared `InnerPage` component for consistent layout of content sections.
 
-**Database Layer (`lib/db`):**
-- Drizzle ORM with PostgreSQL.
-- Manages Drizzle client instance and schema models.
-- Drizzle Kit for migrations.
-
 **API Codegen (`lib/api-spec`):**
 - Defines the OpenAPI 3.1 specification.
 - Uses Orval to generate:
@@ -57,13 +51,12 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
 
 ## Vercel Deployment Notes
 
-The web frontend is deployed as a Next.js static export to Vercel (voiceoverguy.co.uk). The API server runs on Replit.
+The web frontend is deployed as a Next.js static export to Vercel (voiceoverguy.co.uk). The API server runs on Replit for local dev.
 
-The script generators (Attenborough & Santa) call the API server for AI generation. On Vercel, the `NEXT_PUBLIC_API_URL` environment variable must be set to the Replit deployment URL (e.g. `https://<replit-deployment-domain>`) so the generators can reach the API. In dev, this variable is empty and relative paths are used.
+The script generators (Attenborough & Santa) use Vercel serverless functions (`api/generate.ts`, `api/generate1.ts`) for AI generation on production. The contact form uses `api/enquiry.ts`. All use relative `/api/` paths which resolve to Vercel serverless functions in production.
 
 ## External Dependencies
 
-- **Database:** PostgreSQL (managed via Drizzle ORM)
 - **AI Integrations:** OpenAI (via Replit AI integrations)
 - **Google Services:** Google Places API (for Google Reviews)
 - **Content Embeds:** YouTube, Vimeo, SoundCloud
