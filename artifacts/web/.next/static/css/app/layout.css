@@ -1947,7 +1947,7 @@ textarea.form-control--compact {
     z-index: 10001;
     overflow-x: hidden;
     overflow-y: scroll;
-    max-height: calc(100vh - 60px);
+    max-height: 60vh;
     -webkit-overflow-scrolling: touch;
     text-align: left;
   }
