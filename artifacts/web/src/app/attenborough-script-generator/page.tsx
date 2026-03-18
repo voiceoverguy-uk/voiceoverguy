@@ -243,7 +243,7 @@ export default function AttenboroughGenerator() {
             description: 'A short David Attenborough-style demo voiced by Guy Harris.',
             author: { '@type': 'Person', name: 'Guy Harris', url: 'https://www.voiceoverguy.co.uk' },
             thumbnailUrl: 'https://www.voiceoverguy.co.uk/assets/images/attenborough-script-generator.jpg',
-            contentUrl: 'https://www.voiceoverguy.co.uk/attenborough-voice/assets/audio/david-attenborough-demo-25-guy-harris.mp3',
+            contentUrl: 'https://www.voiceoverguy.co.uk/assets/audio/david-attenborough-demo-25-guy-harris.mp3',
             encodingFormat: 'audio/mpeg',
             duration: 'PT1M26S',
             uploadDate: '2025-10-04',

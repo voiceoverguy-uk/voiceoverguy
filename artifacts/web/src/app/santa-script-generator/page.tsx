@@ -246,7 +246,7 @@ export default function SantaGenerator() {
             description: 'A short Santa-style demo voiced by Guy Harris.',
             author: { '@type': 'Person', name: 'Guy Harris', url: 'https://www.voiceoverguy.co.uk' },
             thumbnailUrl: 'https://www.voiceoverguy.co.uk/assets/images/santa-script-generator.jpg',
-            contentUrl: 'https://www.voiceoverguy.co.uk/attenborough-voice/assets/audio/voice-demo-guy-harris-santa.mp3',
+            contentUrl: 'https://www.voiceoverguy.co.uk/assets/audio/voice-demo-guy-harris-santa.mp3',
             encodingFormat: 'audio/mpeg',
             duration: 'PT1M26S',
             uploadDate: '2025-10-04',

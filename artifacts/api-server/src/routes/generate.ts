@@ -67,7 +67,7 @@ router.post("/generate", rateLimit, async (req, res) => {
       return res.status(400).json({ error: "Please provide a prompt" });
     }
 
-    if (prompt.trim().split(/\s+/).length > 30) {
+    if (prompt.trim().split(/\s+/).length > 25) {
       return res.status(400).json({ error: "Prompt too long (25 words max)" });
     }
 
@@ -98,7 +98,7 @@ router.post("/generate1", rateLimit, async (req, res) => {
       return res.status(400).json({ error: "Please provide details" });
     }
 
-    if (prompt.trim().split(/\s+/).length > 80) {
+    if (prompt.trim().split(/\s+/).length > 75) {
       return res.status(400).json({ error: "Prompt too long (75 words max)" });
     }
 
