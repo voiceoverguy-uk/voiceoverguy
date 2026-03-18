@@ -1941,21 +1941,53 @@ textarea.form-control--compact {
     display: flex;
   }
 
-  .nav-link {
+  .nav-item {
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link,
+  a.nav-link,
+  button.nav-link,
+  span.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 48px;
     height: auto;
     padding: 12px 16px;
-    border-bottom: 1px solid #eee;
+    border: none;
+    border-bottom: none;
     width: 100%;
     box-sizing: border-box;
     justify-content: flex-start;
     font-size: 14px;
+    font-family: 'Century Gothic', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text);
+    background: none;
+    margin: 0;
+    cursor: pointer;
+    white-space: normal;
+    text-decoration: none;
   }
 
-  button.nav-link {
-    border-bottom: 1px solid #eee;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+  .nav-link .chevron {
+    margin-left: auto;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  .nav-link .chevron-btn,
+  .chevron-btn {
+    margin-left: auto;
+    font-size: 11px;
+    flex-shrink: 0;
+    padding: 4px 0;
   }
 
   .dropdown-menu,
