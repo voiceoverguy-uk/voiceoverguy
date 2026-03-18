@@ -1921,8 +1921,8 @@ textarea.form-control--compact {
     position: absolute;
     top: 44px;
     left: 8px;
-    width: auto;
-    min-width: 180px;
+    width: 260px;
+    min-width: unset;
     background: rgba(255,255,255,0.70);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1931,6 +1931,7 @@ textarea.form-control--compact {
     border-radius: 8px;
     padding: 6px 0;
     z-index: 10001;
+    overflow-x: hidden;
     overflow-y: auto;
     max-height: calc(100vh - 60px);
     -webkit-overflow-scrolling: touch;
@@ -2019,10 +2020,13 @@ textarea.form-control--compact {
     position: static;
     display: none;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     box-shadow: none;
     border-top: none;
     border-left: 4px solid var(--red);
-    margin-left: 16px;
+    margin-left: 0;
+    overflow-x: hidden;
   }
 
   .nav-item.mobile-open .dropdown-menu,
