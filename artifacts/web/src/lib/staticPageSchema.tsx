@@ -1,5 +1,11 @@
 const SITE = 'https://www.voiceoverguy.co.uk';
 
+function toIsoDateTime(dateStr: string): string {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  return d.toISOString().replace(/\.\d{3}Z$/, '+00:00');
+}
+
 export const GUY_PERSON_REF = { '@id': `${SITE}/#guyharris` };
 
 export function profilePage(slug: string, description: string, extra?: Record<string, unknown>) {
@@ -118,7 +124,7 @@ export function videoObject(slug: string, name: string, description: string, you
     thumbnailUrl: `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`,
     embedUrl: `https://www.youtube.com/embed/${youtubeId}`,
     url: `https://www.youtube.com/watch?v=${youtubeId}`,
-    uploadDate,
+    uploadDate: toIsoDateTime(uploadDate),
   };
 }
 
