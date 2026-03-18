@@ -131,6 +131,7 @@ ul, ol {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10002;
 }
 
 .navbar.navbar--fixed .search-bar {

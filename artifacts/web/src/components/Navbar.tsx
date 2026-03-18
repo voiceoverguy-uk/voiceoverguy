@@ -44,7 +44,6 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!mobileOpen) return;
-    document.body.style.overflow = 'hidden';
     const handleTapOutside = (e: MouseEvent | TouchEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         closeMobile();
@@ -53,7 +52,6 @@ export default function Navbar() {
     document.addEventListener('mousedown', handleTapOutside);
     document.addEventListener('touchstart', handleTapOutside, { passive: true });
     return () => {
-      document.body.style.overflow = '';
       document.removeEventListener('mousedown', handleTapOutside);
       document.removeEventListener('touchstart', handleTapOutside);
     };
