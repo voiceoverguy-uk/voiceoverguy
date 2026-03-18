@@ -3389,3 +3389,245 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   }
 }
 
+/* ── Generator Pages ── */
+.generator-page {
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 60px 20px 80px;
+  min-height: 100vh;
+}
+
+.generator-page h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.generator-page h2 {
+  color: #ccc;
+}
+
+.generator-subtitle {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 15px auto 25px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.red-link {
+  color: #d42027;
+  text-decoration: underline;
+}
+
+.generator-textarea-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 15px;
+}
+
+.generator-textarea-wrapper textarea {
+  width: 100%;
+  min-height: 100px;
+  background: #16213e;
+  color: #e0e0e0;
+  border: 2px solid #0f3460;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.generator-textarea-wrapper textarea:focus {
+  outline: none;
+  border-color: #d42027;
+  box-shadow: 0 0 8px rgba(212, 32, 39, 0.3);
+}
+
+.generator-textarea-wrapper textarea::placeholder {
+  color: #666;
+}
+
+.generator-word-count {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.generator-word-limit {
+  color: #d42027;
+  font-weight: bold;
+}
+
+.generator-popup {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d42027;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.generator-popup--show {
+  opacity: 1;
+}
+
+.generator-btn {
+  background: #d42027;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-family: 'Century Gothic', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.generator-btn:hover {
+  background: #b71c1c;
+}
+
+.generator-btn:active {
+  transform: scale(0.97);
+}
+
+.generator-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.generator-btn--secondary {
+  background: #16213e;
+  border: 1px solid #0f3460;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+}
+
+.generator-btn--secondary:hover {
+  background: #0f3460;
+}
+
+.generator-output {
+  max-width: 600px;
+  margin: 20px auto 10px;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 100px;
+}
+
+.generator-output-content {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.generator-text-error {
+  color: #d42027;
+  font-style: italic;
+}
+
+.generator-text-muted {
+  color: #555;
+  font-style: italic;
+}
+
+.generator-info-box {
+  max-width: 600px;
+  margin: 40px auto 0;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 12px;
+  padding: 25px 30px;
+  text-align: left;
+}
+
+.generator-info-box > p:first-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.generator-info-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.generator-info-box li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.generator-star {
+  margin-right: 6px;
+}
+
+.generator-info-link {
+  color: #d42027;
+}
+
+.generator-demo-wrapper {
+  text-align: center;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.generator-demo-glow {
+  box-shadow: 0 0 20px rgba(212, 32, 39, 0.4);
+}
+
+.generator-audio-player {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.generator-book-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 24px;
+  background: #d42027;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.generator-book-link:hover {
+  background: #b71c1c;
+}
+
+@media (max-width: 600px) {
+  .generator-page {
+    padding: 40px 15px 60px;
+  }
+
+  .generator-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .generator-info-box {
+    padding: 20px 15px;
+  }
+}
+

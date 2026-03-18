@@ -1,0 +1,99 @@
+I need you to properly restore two legacy tool pages from the old VoiceoverGuy site that were not migrated correctly into the new build:
+
+- /attenborough-script-generator
+- /santa-script-generator
+
+Right now they appear visually, but the real functionality/assets were not pulled over properly. I do NOT want guesswork. I want you to trace the old PHP pages and identify exactly what files, folders, scripts, styles, audio, and backend logic they depended on, then restore them properly in the new build.
+
+IMPORTANT
+- Do not just style the pages to “look right”.
+- I want the actual old functionality and asset dependencies identified and restored.
+- Investigate first, then implement properly.
+- Preserve the current public URLs:
+  - /attenborough-script-generator
+  - /santa-script-generator
+
+OLD SOURCE FILES
+Use these old PHP files as the starting point:
+- attenborough-script-generator.php
+- santa-script-generator.php
+
+TASKS
+
+1. TRACE ALL FRONTEND DEPENDENCIES
+For each of the two PHP pages, identify every dependency they require, including:
+- CSS files
+- JavaScript files
+- audio files
+- images
+- shared includes
+- any old menu/social/header includes
+- any referenced assets under /assets/ or /attenborough-voice/
+
+Specifically inspect and locate files referenced in the PHP such as:
+- assets/css/all.css
+- assets/fancybox/lib/jquery-1.10.1.min.js
+- assets/inc/socials.php
+- assets/inc/menu.php
+- assets/images/guy-harris-voiceover.png
+- /attenborough-voice/style-3.css
+- /attenborough-voice/script-1.js
+- /attenborough-voice/script-2.js
+- /attenborough-voice/assets/audio/david-attenborough-demo-25-guy-harris.mp3
+- /attenborough-voice/assets/audio/voice-demo-guy-harris-santa.mp3
+
+2. FIND THE REAL GENERATOR LOGIC
+The PHP pages themselves are mostly wrappers. I need you to find where the actual generator logic lived:
+- in script-1.js
+- in script-2.js
+- in an API endpoint
+- in a PHP backend file
+- in OpenAI request code
+- or elsewhere
+
+Trace what happens when the Generate button is clicked on each page.
+
+Answer clearly:
+- what file actually powers the Attenborough generator
+- what file actually powers the Santa generator
+- whether they relied on local PHP/API routes
+- whether those routes/files were migrated or missed
+- whether the current Replit build is missing those routes/files
+
+3. RESTORE THEM PROPERLY
+Once you identify the full dependency chain, restore both tools properly in the new build:
+- working textarea input
+- working Generate button
+- working output area
+- working word count logic
+- working copy/new scenario buttons
+- working audio player/demo
+- correct styling
+- correct schema already present or retained if appropriate
+
+Do not keep broken legacy PHP includes if the new build already has proper shared navigation/header components. Adapt the old page content into the new architecture cleanly, but preserve the functionality.
+
+4. ASSET MIGRATION
+If files from the old public_html are needed, identify exactly which folders/files must be copied into the new build.
+At minimum, check whether these old folders are required:
+- public_html/assets/
+- public_html/attenborough-voice/
+- public_html/api/
+- public_html/images/
+
+If additional hidden dependencies are found, list them clearly.
+
+5. OUTPUT
+Please provide:
+A. What was missing
+B. Which old files/folders the generators depended on
+C. Where the actual generator logic lived
+D. What you restored
+E. Any old files no longer needed because the new site replaces them cleanly
+F. Any follow-up needed
+
+IMPORTANT
+- Preserve the existing public URLs
+- Do not invent new generator behaviour
+- Recover the original working setup first
+- If you find the old JS or API logic is unusable, explain exactly why before replacing it

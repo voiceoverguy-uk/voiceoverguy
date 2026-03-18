@@ -56,8 +56,8 @@ Express 5 API server. Routes live in `src/routes/` and use `@workspace/api-zod` 
 
 - Entry: `src/index.ts` — reads `PORT`, starts Express
 - App setup: `src/app.ts` — mounts CORS, JSON/urlencoded parsing, routes at `/api`
-- Routes: `src/routes/index.ts` mounts sub-routers; `src/routes/health.ts` exposes `GET /health` (full path: `/api/health`)
-- Depends on: `@workspace/db`, `@workspace/api-zod`
+- Routes: `src/routes/index.ts` mounts sub-routers; `src/routes/health.ts` exposes `GET /health` (full path: `/api/health`); `src/routes/generate.ts` exposes `POST /generate` (Attenborough) and `POST /generate1` (Santa) — AI script generators using OpenAI via Replit AI integrations
+- Depends on: `@workspace/db`, `@workspace/api-zod`, `openai`
 - `pnpm --filter @workspace/api-server run dev` — run the dev server
 - `pnpm --filter @workspace/api-server run build` — production esbuild bundle (`dist/index.cjs`)
 - Build bundles an allowlist of deps (express, cors, pg, drizzle-orm, zod, etc.) and externalizes the rest
@@ -120,6 +120,8 @@ Utility scripts package. Each script is a `.ts` file in `src/` with a correspond
 - `src/components/InnerPage.tsx` — Shared inner page layout: alternating two-column rows with text, YouTube embeds, Vimeo embeds, images; fullWidth support
 - `src/components/ContactForm.tsx` — Contact form with live pricing calculator (client component)
 - `src/components/NewsSection.tsx` — Latest news with show-more toggle (client component)
+- `src/app/attenborough-script-generator/` — AI-powered Attenborough script generator (client component, dark theme, calls `/api/generate`)
+- `src/app/santa-script-generator/` — AI-powered Santa message generator (client component, dark theme, calls `/api/generate1`)
 - `src/data/pages.json` — All SQL content (1,067 rows) decoded from HTML entities, with real CR+LF characters
 - `src/data/news.ts` — News item data
 
