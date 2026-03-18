@@ -1,0 +1,73 @@
+Please add a new elegant rotating quote section to the homepage to help communicate the value of human voiceover versus AI-generated reads.
+
+GOAL
+Create a premium, minimal, cinematic-looking quote strip that feels classy and restrained, not like a chunky testimonial slider. It should look polished on desktop and mobile, and fit the existing VoiceoverGuy brand style.
+
+SECTION PLACEMENT
+Place this section as a full-width horizontal band on the homepage between two existing content sections as a visual breathing space. Keep the quote content centred with a constrained max width so it feels intentional and editorial.
+
+STYLE
+- Use the existing site font family
+- Font weight should be thin/light, not bold
+- Text should be centred
+- No card box, no heavy border, no carousel dots, no arrows
+- Generous vertical padding so the section can breathe
+- Add very subtle oversized opening and closing quotation marks as decorative background elements on the left and right of the quote content
+- The quote marks should be low opacity and elegant, not distracting
+- The overall feel should be premium, understated, and confident
+
+COLOURS
+- Match the existing site design and brand palette
+- If this section sits on a dark background, use soft off-white or very light grey text
+- If it sits on a light background, use dark grey text and pale grey quote marks
+- Avoid anything too stark or harsh
+- Keep the red brand colour very subtle if used at all
+
+ANIMATION
+- Rotate through 10 quotes automatically
+- Use a smooth fade transition only
+- No slide animation
+- No typewriter effect
+- Timing suggestion:
+  - fade in: around 1 second
+  - stay visible: around 4.5 to 5 seconds
+  - fade out: around 1 second
+- Total around 6.5 to 7 seconds per quote
+- Animation should pause or reduce motion if the user has prefers-reduced-motion enabled
+
+TEXT CONTENT
+Use these 10 rotating quotes exactly as written:
+
+1. Just because AI can read the script doesn’t mean it can feel the moment.
+2. You might save money with AI. But will your audience believe a word of it?
+3. Reading words is easy. Delivering meaning is the bit that matters.
+4. AI can say the line. A real voice knows why it matters.
+5. Your audience can hear the difference between sound and sincerity.
+6. Just because it sounds human doesn’t mean it connects like one.
+7. Words on a page are not a performance. They’re just the starting point.
+8. If your message matters, the delivery matters too.
+9. The line may be identical. The impact rarely is.
+10. If you want people to feel something, you still need a human who can.
+
+OPTIONAL SMALL HEADING
+Add a very subtle small heading above the rotating quote:
+The difference a real voice makes
+
+This heading should be understated and fit the site style. Not bold and not oversized.
+
+LAYOUT DETAILS
+- Keep the quote line on a comfortable max width so it does not stretch too far on large screens
+- Ensure line breaks are balanced nicely
+- On mobile, reduce font size slightly but keep the elegance
+- Make sure the decorative quote marks do not collide with the text on smaller screens
+- Keep spacing consistent with the rest of the homepage
+
+IMPLEMENTATION
+- Build this as a reusable homepage section/component
+- Keep the quotes in a simple array for easy editing later
+- Use clean, maintainable code
+- Make sure the section does not cause layout shift or horizontal overflow on mobile
+- Follow the existing code style and project structure
+- Do not use em dashes anywhere in copy or code comments
+
+Please implement it cleanly and make it feel like a subtle premium statement section, not a gimmicky slider.

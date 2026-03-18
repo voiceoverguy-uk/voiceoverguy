@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import NewsSection from '@/components/NewsSection';
 import ReviewBlock from '@/components/ReviewBlock';
+import RotatingQuotes from '@/components/RotatingQuotes';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 
 export const metadata: Metadata = {
@@ -374,6 +375,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ROTATING QUOTES */}
+      <RotatingQuotes />
 
       {/* NEWS */}
       <NewsSection />
