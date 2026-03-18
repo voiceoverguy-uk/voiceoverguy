@@ -1898,6 +1898,11 @@ textarea.form-control--compact {
 }
 
 @media (max-width: 768px) {
+  .navbar-inner {
+    position: relative;
+    justify-content: flex-start;
+  }
+
   .navbar-nav {
     display: none;
     flex-direction: column;
@@ -1929,6 +1934,8 @@ textarea.form-control--compact {
     border-bottom: 1px solid #eee;
     width: 100%;
     box-sizing: border-box;
+    justify-content: flex-start;
+    font-size: 14px;
   }
 
   button.nav-link {
@@ -1972,12 +1979,45 @@ textarea.form-control--compact {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding: 30px 16px 30px;
+  }
+
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .hero h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .hero-bio {
+    font-size: 14px;
+    padding: 0 8px;
+  }
+
+  .home-section {
+    padding: 28px 16px;
+  }
+
+  .inner-hero {
+    padding: 24px 16px 20px;
+  }
+
+  .inner-parallax {
+    padding: 0 8px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .navbar-logo-row {
+    padding: 12px 0 8px;
+  }
+
+  .search-bar {
+    padding: 6px 12px;
   }
 }
 

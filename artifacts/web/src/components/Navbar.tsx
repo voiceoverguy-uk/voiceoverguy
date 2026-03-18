@@ -44,13 +44,17 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!mobileOpen) return;
-    const handleTapOutside = (e: MouseEvent) => {
+    const handleTapOutside = (e: MouseEvent | TouchEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         closeMobile();
       }
     };
     document.addEventListener('mousedown', handleTapOutside);
-    return () => document.removeEventListener('mousedown', handleTapOutside);
+    document.addEventListener('touchstart', handleTapOutside, { passive: true });
+    return () => {
+      document.removeEventListener('mousedown', handleTapOutside);
+      document.removeEventListener('touchstart', handleTapOutside);
+    };
   }, [mobileOpen, closeMobile]);
 
   useEffect(() => {
