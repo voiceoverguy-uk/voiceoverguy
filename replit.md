@@ -9,7 +9,6 @@ This project is a pnpm monorepo using TypeScript, designed to rebuild the voiceo
 I prefer detailed explanations.
 Do not make changes to the folder `lib/api-spec`.
 Do not make changes to the folder `lib/api-zod`.
-Do not make changes to the folder `lib/api-client-react`.
 Do not make changes to the files `src/data/pages.json` and `src/data/news.ts` in the `artifacts/web` package.
 Do not downgrade React, it is pinned at 19.1.0 for the Expo mobile artifact.
 I want iterative development.
@@ -46,7 +45,6 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
 **API Codegen (`lib/api-spec`):**
 - Defines the OpenAPI 3.1 specification.
 - Uses Orval to generate:
-    - React Query hooks and a fetch client (`lib/api-client-react`).
     - Zod schemas for API validation (`lib/api-zod`).
 
 ## Vercel Deployment Notes
