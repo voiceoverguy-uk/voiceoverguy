@@ -108,7 +108,7 @@ export function audioObject(slug: string, name: string, description: string, pat
   return obj;
 }
 
-export function videoObject(slug: string, name: string, description: string, youtubeId: string, suffix = '') {
+export function videoObject(slug: string, name: string, description: string, youtubeId: string, uploadDate: string, suffix = '') {
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
@@ -118,6 +118,7 @@ export function videoObject(slug: string, name: string, description: string, you
     thumbnailUrl: `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`,
     embedUrl: `https://www.youtube.com/embed/${youtubeId}`,
     url: `https://www.youtube.com/watch?v=${youtubeId}`,
+    uploadDate,
   };
 }
 

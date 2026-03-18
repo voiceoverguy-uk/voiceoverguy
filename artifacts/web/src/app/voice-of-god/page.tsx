@@ -19,7 +19,7 @@ const schemas = [
   profilePage('voice-of-god', 'Guy Harris is a professional Voice of God announcer trusted by ITV, Butlins, The Masked Singer, Poundland, the Natural History Museum and national award ceremonies.'),
   breadcrumb('voice-of-god', 'Voice of God'),
   serviceSchema('voice-of-god', 'Voice of God Announcer', 'Live and pre-recorded Voice of God announcer services for events, awards ceremonies, exhibitions and stage shows across the UK.'),
-  videoObject('voice-of-god', 'Voice of God Show Announcer \u2013 Guy Harris', 'Guy Harris performing as Voice of God show announcer for live events and award ceremonies.', 'zrO_VsOF0Ww'),
+  videoObject('voice-of-god', 'Voice of God Show Announcer \u2013 Guy Harris', 'Guy Harris performing as Voice of God show announcer for live events and award ceremonies.', 'e0vZ9cxdilo', '2024-02-27'),
   audioObject('voice-of-god', 'Voice of God Demo \u2013 Guy Harris', 'A compilation of live Voice of God announcements for events, awards, and stage shows.', '/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3'),
 ];
 

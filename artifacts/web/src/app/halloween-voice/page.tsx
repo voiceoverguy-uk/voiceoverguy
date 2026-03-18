@@ -18,8 +18,8 @@ const schemas = [
   breadcrumb('halloween-voice', 'Halloween Voice'),
   localBusiness('halloween-voice', 'British male voiceover artist specialising in character voices, commercials, promos and Halloween voiceovers.'),
   audioObject('halloween-voice', 'Halloween Voiceover Showreel \u2013 Guy Harris', 'Spooky and fun Halloween voice styles including Dracula, Vincent Price and Joker tones.', '/assets/audio/guy-harris-voiceoverguy-halloween-showreel.mp3', 'PT1M2S'),
-  videoObject('halloween-voice', 'Halloween Voices \u2013 Spooky Voiceovers \u2013 Dracula & Vincent Price', 'A showcase of spooky Halloween voiceovers including Vincent Price and Dracula styles.', 'bmMpk16zuSs', '1'),
-  videoObject('halloween-voice', 'Joker Impression \u2013 The Dark Knight', 'A Joker voice impression inspired by Heath Ledger, ideal for spooky promos and villain trailers.', 'OMlBk5QBnyM', '2'),
+  videoObject('halloween-voice', 'Halloween Voices \u2013 Spooky Voiceovers \u2013 Dracula & Vincent Price', 'A showcase of spooky Halloween voiceovers including Vincent Price and Dracula styles.', 'bmMpk16zuSs', '2015-10-22', '1'),
+  videoObject('halloween-voice', 'Joker Impression \u2013 The Dark Knight', 'A Joker voice impression inspired by Heath Ledger, ideal for spooky promos and villain trailers.', 'OMlBk5QBnyM', '2014-09-17', '2'),
   faqPage('halloween-voice', [
     { q: 'Can you provide spooky Halloween character voices?', a: 'Yes. Guy Harris performs Dracula, Ghost Face, Joker impressions, Vincent Price-style narration and more for Halloween ads, promos and events.' },
     { q: 'Do you offer fast turnaround for Halloween voiceovers?', a: 'Most Halloween scripts are voiced the same day, recorded in a broadcast-quality studio with Zoom, Cleanfeed or Source Connect-style remote direction.' },

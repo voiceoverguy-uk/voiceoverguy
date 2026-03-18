@@ -30,7 +30,7 @@ const schemas = [
     worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
   },
   audioObject('pirate-voice', 'Authentic Pirate Character Voice \u2013 Guy Harris', "Professional pirate character voiceover demo by Guy Harris. Authentic, energetic, and perfect for games, animation, commercials, and children\u2019s content.", '/assets/audio/pirate-showreel-guy-harris.mp3', 'PT54S'),
-  videoObject('pirate-voice', 'Pirate Voice Over \u2013 Guy Harris', 'Authentic pirate character voiceover by Guy Harris, heard on CBBC, LEGO, and global brands.', 'JgMjQ2Lo9oo'),
+  videoObject('pirate-voice', 'Pirate Voice Over \u2013 Guy Harris', 'Authentic pirate character voiceover by Guy Harris, heard on CBBC, LEGO, and global brands.', 'Egnp8ZWrojI', '2012-12-05'),
   breadcrumb('pirate-voice', 'Pirate Voice'),
 ];
 

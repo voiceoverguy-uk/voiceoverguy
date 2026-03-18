@@ -23,7 +23,7 @@ const schemas = [
   ]),
   breadcrumb('football-commentator-voice', 'Football Commentator Voice'),
   audioObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'Professional football commentator-style voiceover demo by Guy Harris.', '/assets/audio/football-commentator-showreel-guy-harris.mp3', 'PT72S'),
-  videoObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'High-energy football commentator-style voiceover demo.', 'T9opwMc46Ms'),
+  videoObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'High-energy football commentator-style voiceover demo.', 'T9opwMc46Ms', '2021-06-07'),
 ];
 
 export default function Page() {

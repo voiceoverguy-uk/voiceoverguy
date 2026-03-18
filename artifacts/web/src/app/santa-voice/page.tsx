@@ -20,8 +20,8 @@ const schemas = [
   breadcrumb('santa-voice', 'Santa Voice'),
   serviceSchema('santa-voice', 'Santa Voiceover', "Professional Santa Claus / Father Christmas voiceover by Guy Harris \u2013 the UK's most-booked Voice of Santa for radio, TV, events and campaigns."),
   audioObject('santa-voice', 'Santa Voice Demo \u2013 Guy Harris', 'A compilation of Santa Claus voiceover performances by Guy Harris for radio, TV and commercial campaigns.', '/assets/audio/guy-harris-voiceoverguy-santa-demo.mp3'),
-  videoObject('santa-voice', "The UK\u2019s Official No.1 Voice of Santa \u2013 Guy Harris", "Guy Harris is the UK\u2019s busiest Santa voice for BBC Radio 2, ITV, Heart, Santa Radio, Capital and more. A fun, warm and iconic Father Christmas voice.", 'P44bGiUI0vE', '1'),
-  videoObject('santa-voice', 'CBeebies Go Jetters \u2013 Santa Voice by Guy Harris', 'Guy Harris voices Santa Claus in the Go Jetters North Pole Christmas Special on CBeebies.', 'yi-4Fm40nmE', '2'),
+  videoObject('santa-voice', "The UK\u2019s Official No.1 Voice of Santa \u2013 Guy Harris", "Guy Harris is the UK\u2019s busiest Santa voice for BBC Radio 2, ITV, Heart, Santa Radio, Capital and more. A fun, warm and iconic Father Christmas voice.", 'P44bGiUI0vE', '2022-11-18', '1'),
+  videoObject('santa-voice', 'CBeebies Go Jetters \u2013 Santa Voice by Guy Harris', 'Guy Harris voices Santa Claus in the Go Jetters North Pole Christmas Special on CBeebies.', 'yi-4Fm40nmE', '2016-12-07', '2'),
   faqPage('santa-voice', [
     { q: 'Who is the best Santa voiceover artist in the UK?', a: "Guy Harris is widely considered the UK's No.1 Voice of Santa, with credits for BBC Radio 1, BBC Radio 2, Heart, Capital, ITV, Asda, Tesco and Butlins." },
     { q: 'Can I hire a Santa voice for my Christmas campaign?', a: 'Yes. Guy Harris provides professional Santa Claus voiceovers for TV, radio, digital campaigns, corporate events, personalised messages and more.' },
