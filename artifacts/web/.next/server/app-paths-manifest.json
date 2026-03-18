@@ -1,3 +1,7 @@
 {
-  "/page": "app/page.js"
+  "/football-commentator-voice/page": "app/football-commentator-voice/page.js",
+  "/contact-guy/page": "app/contact-guy/page.js",
+  "/voiceover-news/page": "app/voiceover-news/page.js",
+  "/[slug]/page": "app/[slug]/page.js",
+  "/santa-script-generator/page": "app/santa-script-generator/page.js"
 }
