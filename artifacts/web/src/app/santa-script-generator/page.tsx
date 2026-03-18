@@ -129,8 +129,9 @@ export default function SantaGenerator() {
       setOutput(data.script);
       setIsError(false);
       setHasResult(true);
-    } catch (err: any) {
-      setOutput(`An error occurred: ${err.message}. Please try again.`);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      setOutput(`An error occurred: ${message}. Please try again.`);
       setIsError(true);
       setHasResult(true);
     } finally {

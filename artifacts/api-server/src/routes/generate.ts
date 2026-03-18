@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, Request, Response, NextFunction } from "express";
 import OpenAI from "openai";
 
 const router = Router();
@@ -7,6 +7,30 @@ const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
 });
+
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function rateLimit(req: Request, res: Response, next: NextFunction): void {
+  const ip = req.ip || req.socket.remoteAddress || 'unknown';
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    next();
+    return;
+  }
+
+  if (entry.count >= RATE_LIMIT_MAX) {
+    res.status(429).json({ error: "Too many requests. Please wait a moment and try again." });
+    return;
+  }
+
+  entry.count++;
+  next();
+}
 
 const ATTENBOROUGH_SYSTEM_PROMPT = `You are a script generator that writes in the style of Sir David Attenborough narrating a nature documentary. The user will give you a short scenario or scene description. You must transform it into a beautifully written, poetic, nature-documentary-style narration as if Attenborough were observing the scene unfold.
 
@@ -35,7 +59,7 @@ Rules:
 - Use British English spelling
 - Sign off as Santa, Father Christmas, or similar`;
 
-router.post("/generate", async (req, res) => {
+router.post("/generate", rateLimit, async (req, res) => {
   try {
     const { prompt } = req.body;
 
@@ -59,13 +83,14 @@ router.post("/generate", async (req, res) => {
 
     const script = completion.choices[0]?.message?.content || "";
     res.json({ script });
-  } catch (error: any) {
-    console.error("Attenborough generate error:", error?.message || error);
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Attenborough generate error:", message);
     res.status(500).json({ error: "Generation failed. Please try again." });
   }
 });
 
-router.post("/generate1", async (req, res) => {
+router.post("/generate1", rateLimit, async (req, res) => {
   try {
     const { prompt } = req.body;
 
@@ -89,8 +114,9 @@ router.post("/generate1", async (req, res) => {
 
     const script = completion.choices[0]?.message?.content || "";
     res.json({ script });
-  } catch (error: any) {
-    console.error("Santa generate error:", error?.message || error);
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("Santa generate error:", message);
     res.status(500).json({ error: "Generation failed. Please try again." });
   }
 });
