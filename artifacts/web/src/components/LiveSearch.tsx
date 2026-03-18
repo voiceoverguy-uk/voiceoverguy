@@ -6,12 +6,34 @@ import blogPosts from '@/data/blog-posts';
 import { voiceDemos, characterDemos } from '@/data/demos';
 
 interface SearchResult {
-  type: 'blog' | 'voice-demo' | 'character-demo';
+  type: 'blog' | 'voice-demo' | 'character-demo' | 'tool';
   label: string;
   href: string;
   thumbnail?: string;
   relevance: number;
 }
+
+interface ToolPage {
+  label: string;
+  href: string;
+  keywords: string;
+  thumbnail?: string;
+}
+
+const toolPages: ToolPage[] = [
+  {
+    label: 'Santa Script Generator',
+    href: '/santa-script-generator',
+    keywords: 'santa script generator christmas festive father christmas xmas holiday north pole',
+    thumbnail: '/assets/images/santa-script-generator.jpg',
+  },
+  {
+    label: 'David Attenborough Script Generator',
+    href: '/attenborough-script-generator',
+    keywords: 'attenborough script generator david attenborough nature wildlife narration documentary',
+    thumbnail: '/assets/images/attenborough-script-generator.jpg',
+  },
+];
 
 const PHRASES_REGULAR = [
   'What voice do you need? Start typing...',
@@ -154,6 +176,20 @@ function searchItems(query: string): SearchResult[] {
     }
   }
 
+  for (const tool of toolPages) {
+    const labelMatch = tool.label.toLowerCase().includes(q);
+    const keywordMatch = tool.keywords.toLowerCase().includes(q);
+    if (labelMatch || keywordMatch) {
+      results.push({
+        type: 'tool',
+        label: tool.label,
+        href: tool.href,
+        thumbnail: tool.thumbnail,
+        relevance: labelMatch ? 3 : 2,
+      });
+    }
+  }
+
   results.sort((a, b) => b.relevance - a.relevance);
   return results.slice(0, 12);
 }
@@ -174,6 +210,12 @@ const PersonIcon = () => (
 const BlogIcon = () => (
   <svg className="live-search-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/>
+  </svg>
+);
+
+const ToolIcon = () => (
+  <svg className="live-search-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+    <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
   </svg>
 );
 
@@ -201,6 +243,14 @@ function renderThumb(result: SearchResult) {
     return (
       <div className="live-search-icon-wrap live-search-icon-character-demo">
         <PersonIcon />
+      </div>
+    );
+  }
+
+  if (result.type === 'tool') {
+    return (
+      <div className="live-search-icon-wrap live-search-icon-tool">
+        <ToolIcon />
       </div>
     );
   }

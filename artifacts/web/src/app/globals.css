@@ -619,6 +619,11 @@ button.nav-link {
   color: #fff;
 }
 
+.live-search-icon-tool {
+  background: #b8860b;
+  color: #fff;
+}
+
 .live-search-item-active .live-search-link,
 .live-search-item-active > .live-search-link {
   background: #f0f0f0;
