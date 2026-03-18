@@ -64,11 +64,13 @@ router.post("/generate", rateLimit, async (req, res) => {
     const { prompt } = req.body;
 
     if (!prompt || typeof prompt !== "string") {
-      return res.status(400).json({ error: "Please provide a prompt" });
+      res.status(400).json({ error: "Please provide a prompt" });
+      return;
     }
 
     if (prompt.trim().split(/\s+/).length > 25) {
-      return res.status(400).json({ error: "Prompt too long (25 words max)" });
+      res.status(400).json({ error: "Prompt too long (25 words max)" });
+      return;
     }
 
     const completion = await openai.chat.completions.create({
@@ -95,11 +97,13 @@ router.post("/generate1", rateLimit, async (req, res) => {
     const { prompt } = req.body;
 
     if (!prompt || typeof prompt !== "string") {
-      return res.status(400).json({ error: "Please provide details" });
+      res.status(400).json({ error: "Please provide details" });
+      return;
     }
 
     if (prompt.trim().split(/\s+/).length > 75) {
-      return res.status(400).json({ error: "Prompt too long (75 words max)" });
+      res.status(400).json({ error: "Prompt too long (75 words max)" });
+      return;
     }
 
     const completion = await openai.chat.completions.create({
