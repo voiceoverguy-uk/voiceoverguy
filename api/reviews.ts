@@ -71,14 +71,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const now = Date.now();
     if (cached && now - cached.fetchedAt < CACHE_TTL_MS) {
-      res.json({ rating: cached.rating, reviewCount: cached.reviewCount });
+      res.json({ rating: cached.rating, reviewCount: cached.reviewCount, totalReviews: cached.reviewCount });
       return;
     }
 
     const result = await fetchFromGoogle();
     cached = { ...result, fetchedAt: now };
-    res.json(result);
-  } catch {
-    res.json({ rating: DEFAULT_RATING, reviewCount: DEFAULT_COUNT });
+    res.json({ ...result, totalReviews: result.reviewCount });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('Reviews fetch error:', message);
+    res.status(502).json({ rating: DEFAULT_RATING, reviewCount: DEFAULT_COUNT, totalReviews: DEFAULT_COUNT });
   }
 }
