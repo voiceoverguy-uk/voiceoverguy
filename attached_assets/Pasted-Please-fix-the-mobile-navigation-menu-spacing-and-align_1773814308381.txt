@@ -1,0 +1,82 @@
+Please fix the mobile navigation menu spacing and alignment on the homepage/header. On mobile, the menu items that contain dropdown chevrons are sitting closer together than the standard menu links. I want every mobile nav row to have the same visual height, spacing, and alignment.
+
+PROBLEM
+In the open mobile menu:
+- standard links like “Home”, “Who”, “News & Blog”, and “FAQ’s” have one spacing rhythm
+- dropdown items like “Voice Demos”, “Character Demos”, “Video”, “Links”, and “Contact & How Much” look tighter and less evenly spaced
+- the result is that the mobile menu feels inconsistent and slightly cramped
+
+GOAL
+Make every mobile menu item use the same vertical spacing and alignment, whether it is:
+- a normal link
+- a dropdown toggle
+- a parent item with a chevron
+- an item with an icon
+
+REQUIREMENTS
+1. Every top-level mobile nav item must have the same:
+- min-height or row height
+- vertical padding
+- top/bottom margin
+- line-height
+- border spacing
+- icon/text alignment
+
+2. Make each top-level mobile menu row behave like a consistent flex row:
+- icon on the left
+- text centred nicely vertically
+- chevron on the right for dropdown items
+- all items aligned to the same baseline/centre line
+
+3. The spacing between rows must be controlled by the outer menu item wrapper, not by random margin differences on links, spans, or chevrons.
+
+4. Dropdown toggle rows must visually match non-dropdown rows.
+This means:
+- same row height
+- same padding
+- same gap between icon and text
+- same bottom border spacing
+- same vertical breathing room above and below
+
+5. Make sure the chevron does not compress the row or pull the text too close to nearby items.
+
+6. If the mobile nav uses different elements for links vs dropdown buttons, normalise their styling so they render consistently.
+
+7. Keep the current clean style and branding. Do not redesign the menu. Just fix the spacing and alignment properly.
+
+IMPLEMENTATION GUIDANCE
+Please inspect the mobile nav structure and do the following:
+
+- Identify the shared wrapper for each top-level mobile nav item
+- Apply one consistent class/rule for all top-level rows
+- Use flex with align-items: center
+- Use a consistent gap between icon and label
+- Give all top-level rows a consistent min-height and vertical padding
+- Remove inconsistent margins on nested anchors, buttons, spans, icons, or chevrons
+- If needed, make dropdown trigger buttons inherit the same typography, padding, and line-height as regular nav links
+- Make borders/separators consistent across all rows
+
+CHECK SPECIFICALLY
+Please verify that these rows all match visually in the open mobile menu:
+- Home
+- Who
+- Voice Demos
+- Character Demos
+- Video
+- News & Blog
+- FAQ’s
+- Links
+- Contact & How Much
+
+The rows with dropdown arrows should no longer appear tighter than the others.
+
+DO NOT
+- do not redesign the menu
+- do not change desktop nav styling
+- do not alter menu wording
+- do not change icons
+- do not introduce em dashes
+- do not add extra decoration or effects
+
+SUCCESS RESULT
+When the mobile menu is open, every top-level item should have identical spacing rhythm and alignment, and the dropdown items should no longer look bunched up compared with standard links.
