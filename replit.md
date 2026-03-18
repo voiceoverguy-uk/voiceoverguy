@@ -55,6 +55,12 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
     - React Query hooks and a fetch client (`lib/api-client-react`).
     - Zod schemas for API validation (`lib/api-zod`).
 
+## Vercel Deployment Notes
+
+The web frontend is deployed as a Next.js static export to Vercel (voiceoverguy.co.uk). The API server runs on Replit.
+
+The script generators (Attenborough & Santa) call the API server for AI generation. On Vercel, the `NEXT_PUBLIC_API_URL` environment variable must be set to the Replit deployment URL (e.g. `https://<replit-deployment-domain>`) so the generators can reach the API. In dev, this variable is empty and relative paths are used.
+
 ## External Dependencies
 
 - **Database:** PostgreSQL (managed via Drizzle ORM)

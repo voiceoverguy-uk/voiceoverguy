@@ -114,7 +114,8 @@ export default function AttenboroughGenerator() {
     setHasResult(false);
 
     try {
-      const response = await fetch('/api/generate', {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL || '';
+      const response = await fetch(`${apiBase}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: trimmed }),
