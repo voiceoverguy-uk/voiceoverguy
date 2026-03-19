@@ -1,7 +1,7 @@
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, localBusiness, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, localBusiness, faqPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo25'];
 
@@ -15,10 +15,23 @@ export const metadata: Metadata = {
   },
   title: data.s1,
   description: data.s2,
+  openGraph: {
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    url: 'https://www.voiceoverguy.co.uk/voiceover-studio',
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Voiceover Studio – Guy Harris' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+  },
 };
 
 const schemas = [
   profilePage('voiceover-studio', 'Professional voiceover studio in Wakefield, West Yorkshire. Take a 360\u00B0 virtual tour and see the broadcast-quality recording setup used by Guy Harris.'),
+  breadcrumb('voiceover-studio', 'Voiceover Studio'),
   localBusiness('voiceover-studio', 'Professional voiceover recording studio in Wakefield, West Yorkshire offering broadcast-quality audio, same-day delivery and remote session capability.'),
   faqPage('voiceover-studio', [
     { q: 'Where is the voiceover studio located?', a: 'The studio is in Wakefield, West Yorkshire, within easy reach of Leeds and the wider Yorkshire region, with free on-site parking.' },
