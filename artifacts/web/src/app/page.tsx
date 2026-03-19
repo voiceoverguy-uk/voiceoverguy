@@ -382,152 +382,124 @@ export default function Home() {
       {/* NEWS */}
       <NewsSection />
 
-      {/* SCHEMA: Organization */}
+      {/* STRUCTURED DATA: single @graph block */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Organization',
-            '@id': 'https://www.voiceoverguy.co.uk/#organization',
-            name: 'VoiceoverGuy',
-            url: 'https://www.voiceoverguy.co.uk',
-            logo: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
-            image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
-            email: 'guy@voiceoverguy.co.uk',
-            description: 'Professional British male voiceover services for agencies, brands and broadcasters worldwide. Broadcast-quality remote recording with fast turnaround.',
-            founder: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
-            sameAs: [
-              'https://www.linkedin.com/in/voiceoverguy/',
-              'https://www.youtube.com/user/voiceoverguyharris',
-              'https://soundcloud.com/voiceoverguy',
-            ],
-            location: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Wakefield',
-              addressRegion: 'West Yorkshire',
-              addressCountry: 'GB',
-            },
-          }),
-        }}
-      />
-
-      {/* SCHEMA: Person */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            '@id': 'https://www.voiceoverguy.co.uk/#guyharris',
-            name: 'Guy Harris',
-            alternateName: 'VoiceoverGuy',
-            url: 'https://www.voiceoverguy.co.uk',
-            image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
-            jobTitle: 'British Male Voiceover Artist',
-            description: 'Guy Harris is an award-winning British male voiceover artist with over 25 years of experience and more than 200,000 voiceovers. Known for his commercial reads, character voices, explainer narration, David Attenborough impression and as the UK\u2019s No.1 Voice of Santa.',
-            gender: 'Male',
-            nationality: 'British',
-            email: 'guy@voiceoverguy.co.uk',
-            worksFor: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
-            sameAs: [
-              'https://www.linkedin.com/in/voiceoverguy/',
-              'https://www.youtube.com/user/voiceoverguyharris',
-              'https://soundcloud.com/voiceoverguy',
-            ],
-            award: [
-              'VOX Award \u2013 Best Male Voiceover (Winner)',
-              'SOVAS \u2013 Outstanding Commercial Voiceover (Finalist)',
-              'SOVAS \u2013 Outstanding Animation Character (Finalist)',
-              'SOVAS \u2013 Outstanding Promo Voice (Finalist)',
-            ],
-            hasOccupation: {
-              '@type': 'Occupation',
-              name: 'British Male Voiceover Artist',
-              occupationLocation: { '@type': 'Country', name: 'United Kingdom' },
-              skills: [
-                'Commercial Voiceovers',
-                'Character Voices',
-                'David Attenborough Voice Style',
-                'Santa Voice',
-                'Explainer Video Narration',
-                'Game Voices',
-                'E-Learning Narration',
-                'Broadcast-quality Audio Production',
-              ],
-            },
-            knowsAbout: [
-              'British Male Voiceover',
-              'Commercial Voiceover',
-              'TV & Radio Ad Voiceovers',
-              'Explainer Videos',
-              'Narration',
-              'Character Voice Acting',
-              'Game Trailer Voice',
-              'David Attenborough Impression',
-              'Santa Voiceover',
-              'Voice of God',
-              'Event Voiceovers',
-              'Awards Voiceover',
-            ],
-          }),
-        }}
-      />
-
-      {/* SCHEMA: WebSite */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            '@id': 'https://www.voiceoverguy.co.uk/#website',
-            name: 'VoiceoverGuy',
-            url: 'https://www.voiceoverguy.co.uk',
-            publisher: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: {
-                '@type': 'EntryPoint',
-                urlTemplate: 'https://www.voiceoverguy.co.uk/?s={search_term_string}',
+            '@graph': [
+              {
+                '@type': 'Organization',
+                '@id': 'https://www.voiceoverguy.co.uk/#organization',
+                name: 'VoiceoverGuy',
+                url: 'https://www.voiceoverguy.co.uk',
+                logo: 'https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.png',
+                image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
+                email: 'guy@voiceoverguy.co.uk',
+                description: 'Professional British male voiceover services for agencies, brands and broadcasters worldwide. Broadcast-quality remote recording with fast turnaround.',
+                founder: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+                sameAs: [
+                  'https://www.linkedin.com/in/voiceoverguy/',
+                  'https://www.youtube.com/user/voiceoverguyharris',
+                  'https://soundcloud.com/voiceoverguy',
+                ],
+                location: {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Wakefield',
+                  addressRegion: 'West Yorkshire',
+                  addressCountry: 'GB',
+                },
               },
-              'query-input': 'required name=search_term_string',
-            },
-          }),
-        }}
-      />
-
-      {/* SCHEMA: WebPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            '@id': 'https://www.voiceoverguy.co.uk/#webpage',
-            name: 'British Male Voiceover | Guy Harris \u2013 UK Voice Artist',
-            description: 'Guy Harris is an award-winning British male voiceover artist with 25+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.',
-            url: 'https://www.voiceoverguy.co.uk',
-            isPartOf: { '@id': 'https://www.voiceoverguy.co.uk/#website' },
-            about: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
-            publisher: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
-          }),
-        }}
-      />
-
-      {/* SCHEMA: VideoObject */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'VideoObject',
-            name: 'VoiceoverGuy Commercial Showreel',
-            description: 'Guy Harris commercial voiceover showreel. British male voiceover artist heard on TV, radio and online worldwide.',
-            thumbnailUrl: 'https://img.youtube.com/vi/TqkdBK8mBW8/hqdefault.jpg',
-            contentUrl: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
-            embedUrl: 'https://www.youtube.com/embed/TqkdBK8mBW8',
-            uploadDate: '2024-01-15',
+              {
+                '@type': 'Person',
+                '@id': 'https://www.voiceoverguy.co.uk/#guyharris',
+                name: 'Guy Harris',
+                alternateName: 'VoiceoverGuy',
+                url: 'https://www.voiceoverguy.co.uk',
+                image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
+                jobTitle: 'British Male Voiceover Artist',
+                description: 'Guy Harris is an award-winning British male voiceover artist with over 25 years of experience and more than 200,000 voiceovers. Known for his commercial reads, character voices, explainer narration, David Attenborough impression and as the UK\u2019s No.1 Voice of Santa.',
+                gender: 'Male',
+                nationality: 'British',
+                email: 'guy@voiceoverguy.co.uk',
+                worksFor: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
+                sameAs: [
+                  'https://www.linkedin.com/in/voiceoverguy/',
+                  'https://www.youtube.com/user/voiceoverguyharris',
+                  'https://soundcloud.com/voiceoverguy',
+                ],
+                award: [
+                  'VOX Award \u2013 Best Male Voiceover (Winner)',
+                  'SOVAS \u2013 Outstanding Commercial Voiceover (Finalist)',
+                  'SOVAS \u2013 Outstanding Animation Character (Finalist)',
+                  'SOVAS \u2013 Outstanding Promo Voice (Finalist)',
+                ],
+                hasOccupation: {
+                  '@type': 'Occupation',
+                  name: 'British Male Voiceover Artist',
+                  occupationLocation: { '@type': 'Country', name: 'United Kingdom' },
+                  skills: [
+                    'Commercial Voiceovers',
+                    'Character Voices',
+                    'David Attenborough Voice Style',
+                    'Santa Voice',
+                    'Explainer Video Narration',
+                    'Game Voices',
+                    'E-Learning Narration',
+                    'Broadcast-quality Audio Production',
+                  ],
+                },
+                knowsAbout: [
+                  'British Male Voiceover',
+                  'Commercial Voiceover',
+                  'TV & Radio Ad Voiceovers',
+                  'Explainer Videos',
+                  'Narration',
+                  'Character Voice Acting',
+                  'Game Trailer Voice',
+                  'David Attenborough Impression',
+                  'Santa Voiceover',
+                  'Voice of God',
+                  'Event Voiceovers',
+                  'Awards Voiceover',
+                ],
+              },
+              {
+                '@type': 'WebSite',
+                '@id': 'https://www.voiceoverguy.co.uk/#website',
+                name: 'VoiceoverGuy',
+                url: 'https://www.voiceoverguy.co.uk',
+                publisher: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: 'https://www.voiceoverguy.co.uk/?s={search_term_string}',
+                  },
+                  'query-input': 'required name=search_term_string',
+                },
+              },
+              {
+                '@type': 'WebPage',
+                '@id': 'https://www.voiceoverguy.co.uk/#webpage',
+                name: 'British Male Voiceover | Guy Harris \u2013 UK Voice Artist',
+                description: 'Guy Harris is an award-winning British male voiceover artist with 25+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.',
+                url: 'https://www.voiceoverguy.co.uk',
+                isPartOf: { '@id': 'https://www.voiceoverguy.co.uk/#website' },
+                about: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+                publisher: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
+              },
+              {
+                '@type': 'VideoObject',
+                name: 'VoiceoverGuy Commercial Showreel',
+                description: 'Guy Harris commercial voiceover showreel. British male voiceover artist heard on TV, radio and online worldwide.',
+                thumbnailUrl: 'https://img.youtube.com/vi/TqkdBK8mBW8/hqdefault.jpg',
+                contentUrl: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
+                embedUrl: 'https://www.youtube.com/embed/TqkdBK8mBW8',
+                uploadDate: '2024-01-15',
+              },
+            ],
           }),
         }}
       />
