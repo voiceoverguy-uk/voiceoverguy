@@ -188,6 +188,10 @@ ul, ol {
   padding: 0;
 }
 
+.mobile-backdrop {
+  display: none;
+}
+
 .nav-item {
   position: relative;
 }
