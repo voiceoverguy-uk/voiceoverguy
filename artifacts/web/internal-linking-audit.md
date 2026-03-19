@@ -9,7 +9,7 @@
 
 Of the 18 core service pages, **12 have zero outbound internal links** to other service pages, and **1 has only one**. Only 5 pages (commercial-voiceover, apple-voice-style, football-commentator-voice, halloween-voice, voiceoverguy) have 2+ outbound service-page links. Several money pages -- including `/santa-voice`, `/movie-trailer-voice`, `/character-voiceover`, and `/game-trailer-voice` -- are completely isolated with no outbound links at all.
 
-The inbound picture is equally thin: 5 pages receive zero inbound links from any other service page, and 7 pages receive only one inbound link (mostly from football-commentator-voice, which is the site's strongest internal linker with 6 outbound service links).
+The inbound picture is equally thin: 6 pages receive zero inbound links from any other service page, and 6 pages receive only one inbound link (mostly from football-commentator-voice, which is the site's strongest internal linker with 6 outbound service links).
 
 **Immediate wins:** Adding 2-4 targeted reciprocal links to each isolated page would dramatically improve topical authority flow and user navigation between thematically related services.
 
@@ -43,7 +43,7 @@ The inbound picture is equally thin: 5 pages receive zero inbound links from any
 - **NONE (0 outbound):** 12 pages
 - **WEAK (1 outbound):** 1 page
 - **STRONG (2+ outbound):** 5 pages
-- **Zero inbound:** 5 pages (narration-voice, on-hold-voice, voiceover-imaging, pirate-voice, football-commentator-voice, halloween-voice)
+- **Zero inbound:** 6 pages (narration-voice, on-hold-voice, voiceover-imaging, pirate-voice, football-commentator-voice, halloween-voice)
 
 ---
 
