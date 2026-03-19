@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo26'];
 
@@ -20,7 +20,6 @@ const schemas = [
     { q: 'Do you offer quick turnaround on game trailer voiceovers?', a: "Absolutely. Guy\u2019s broadcast-quality studio is available daily for rapid delivery\u2014perfect for gaming trailers with tight deadlines or last-minute requests." },
   ]),
   videoObject('game-trailer-voice', data.s1, 'Game trailer voiceover demo by Guy Harris, cinematic delivery for gaming trailers and launch campaigns.', 'voj2P_iRvUM', '2016-08-10'),
-  audioObject('game-trailer-voice', 'Guy Harris Game Trailer Voiceover Demo', 'Listen to Guy Harris deliver a powerful and cinematic voiceover, perfect for gaming trailers and launch campaigns.', '/assets/audio/guy-harris-voiceoverguy-game-trailer-showreel.mp3', 'PT1M14S'),
 ];
 
 export default function Page() {

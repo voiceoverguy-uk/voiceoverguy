@@ -3,7 +3,7 @@ import Link from 'next/link';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, webPage, breadcrumb, serviceSchema, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, webPage, breadcrumb, serviceSchema, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo12'];
 
@@ -19,7 +19,6 @@ const schemas = [
   webPage('santa-voice', 'Santa Voice \u2013 Guy Harris', "Guy Harris is the UK's No.1 Voice of Santa, trusted by BBC Radio 1, BBC Radio 2, Heart, Capital, ITV, Asda, Tesco, Butlins and more for Father Christmas voiceovers."),
   breadcrumb('santa-voice', 'Santa Voice'),
   serviceSchema('santa-voice', 'Santa Voiceover', "Professional Santa Claus / Father Christmas voiceover by Guy Harris \u2013 the UK's most-booked Voice of Santa for radio, TV, events and campaigns."),
-  audioObject('santa-voice', 'Santa Voice Demo \u2013 Guy Harris', 'A compilation of Santa Claus voiceover performances by Guy Harris for radio, TV and commercial campaigns.', '/assets/audio/guy-harris-voiceoverguy-santa-demo.mp3'),
   videoObject('santa-voice', "The UK\u2019s Official No.1 Voice of Santa \u2013 Guy Harris", "Guy Harris is the UK\u2019s busiest Santa voice for BBC Radio 2, ITV, Heart, Santa Radio, Capital and more. A fun, warm and iconic Father Christmas voice.", 'P44bGiUI0vE', '2022-11-18', '1'),
   videoObject('santa-voice', 'CBeebies Go Jetters \u2013 Santa Voice by Guy Harris', 'Guy Harris voices Santa Claus in the Go Jetters North Pole Christmas Special on CBeebies.', 'yi-4Fm40nmE', '2016-12-07', '2'),
   faqPage('santa-voice', [

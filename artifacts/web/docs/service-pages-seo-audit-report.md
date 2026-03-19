@@ -167,12 +167,12 @@ Internal links come from two sources: (a) HTML content in `pages.json` fields (s
 
 ### BROKEN (Technical fix needed)
 
-1. **3 AudioObject schemas reference missing audio files** - The following `contentUrl` values point to files that do not exist in `public/assets/audio/`:
-   - `gameshow-host/page.tsx`: `/assets/audio/guy-harris-voiceoverguy-gameshow-host.mp3`
-   - `game-trailer-voice/page.tsx`: `/assets/audio/guy-harris-voiceoverguy-game-trailer-showreel.mp3`
-   - `santa-voice/page.tsx`: `/assets/audio/guy-harris-voiceoverguy-santa-demo.mp3`
+1. **3 AudioObject schemas referenced missing audio files** - FIXED. The following entries pointed to non-existent files and have been removed:
+   - `gameshow-host/page.tsx`: `/assets/audio/guy-harris-voiceoverguy-gameshow-host.mp3` - removed
+   - `game-trailer-voice/page.tsx`: `/assets/audio/guy-harris-voiceoverguy-game-trailer-showreel.mp3` - removed
+   - `santa-voice/page.tsx`: `/assets/audio/guy-harris-voiceoverguy-santa-demo.mp3` - removed
 
-   These produce 404 errors for structured data validators. Either upload the correct audio files or remove/update the AudioObject entries until valid assets are available.
+   These AudioObject entries can be re-added once valid audio assets are uploaded to `public/assets/audio/`.
 
 ### MISSING (Not present but expected)
 
@@ -200,7 +200,7 @@ Internal links come from two sources: (a) HTML content in `pages.json` fields (s
 
 ## 6. Recommended Priority Order
 
-1. Fix 3 broken AudioObject contentUrl references (BROKEN - immediate)
+1. ~~Fix 3 broken AudioObject contentUrl references~~ (DONE - removed broken entries)
 2. Add BreadcrumbList to 7 pages (MISSING - quick wins)
 3. Add primary entity schema to 4 bare pages (MISSING)
 4. Add FAQPage to 5 pages (MISSING - requires writing Q&A content)

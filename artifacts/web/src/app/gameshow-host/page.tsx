@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo15'];
 
@@ -20,7 +20,6 @@ const schemas = [
     { q: 'What does a gameshow voiceover include?', a: 'A gameshow voiceover includes bold, exciting delivery to build suspense and engagement. Great for prize reveals, countdowns, and high-stakes intros.' },
   ]),
   videoObject('gameshow-host', data.s1, 'Gameshow host voiceover demo by Guy Harris, high-energy delivery for TV, radio and live events.', 'lMgRXetDlKU', '2020-01-27'),
-  audioObject('gameshow-host', 'Gameshow Host Voice Demo \u2013 Guy Harris', 'Listen to Guy Harris perform his lively, engaging gameshow host voice. Perfect for game formats, quizzes, and entertainment intros.', '/assets/audio/guy-harris-voiceoverguy-gameshow-host.mp3', 'PT1M5S'),
 ];
 
 export default function Page() {
