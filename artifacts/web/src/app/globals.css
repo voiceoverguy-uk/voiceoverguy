@@ -646,6 +646,25 @@ button.nav-link {
   line-height: 1.3;
 }
 
+/* ===== MOBILE MINI LOGO (sticky navbar) ===== */
+.navbar-mini-logo {
+  display: none;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-right: 8px;
+}
+
+.navbar-mini-logo:hover {
+  text-decoration: none;
+}
+
+.navbar-mini-logo-img {
+  height: 38px;
+  width: auto;
+}
+
 /* ===== MOBILE HAMBURGER ===== */
 .navbar-toggle {
   display: none;
@@ -2050,6 +2069,11 @@ textarea.form-control--compact {
 
   .navbar-toggle {
     display: flex;
+  }
+
+  .navbar.navbar--fixed .navbar-mini-logo {
+    display: flex;
+    opacity: 1;
   }
 
   .nav-item {

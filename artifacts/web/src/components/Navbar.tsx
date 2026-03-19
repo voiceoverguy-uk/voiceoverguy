@@ -96,6 +96,14 @@ export default function Navbar() {
       <nav className="navbar" role="navigation" aria-label="Main navigation" ref={navRef}>
 
         <div className="navbar-inner">
+          {/* Mobile mini logo (visible only when navbar is fixed on mobile) */}
+          <Link href="/" className="navbar-mini-logo">
+            <img
+              src="/assets/images/guy-harris-voiceover.png"
+              alt="Guy Harris VoiceoverGuy"
+              className="navbar-mini-logo-img"
+            />
+          </Link>
           {/* Mobile toggle */}
           <button
             className="navbar-toggle"
