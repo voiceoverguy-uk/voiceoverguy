@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo9'];
 
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const schemas = [
   profilePage('voiceover-imaging', 'Guy Harris is a professional imaging voiceover artist for radio stations, podcasts and brands \u2013 trusted by Heart, Capital, Smooth, Bauer, Wireless Group and more.'),
+  videoObject('voiceover-imaging', 'Voiceover Imaging', 'Radio station imaging and branding voiceover demo by Guy Harris.', '6zOVX7VeH2Y', '2018-10-22'),
 ];
 
 export default function Page() {

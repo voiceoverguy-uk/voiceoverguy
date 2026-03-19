@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts } from '@/lib/staticPageSchema';
+import { SchemaScripts, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo16'];
 
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
+  videoObject('pathe-news-voice', 'Pathe News Voice', 'Classic British Pathe News style voiceover by Guy Harris with 1940s flair and mid-Atlantic precision.', 'Hp8-la1KL6E', '2015-07-02'),
   {
     '@context': 'https://schema.org',
     '@type': 'Person',

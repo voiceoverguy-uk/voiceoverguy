@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo10'];
 
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
+  videoObject('movie-trailer-voice', 'Movie Trailer Voice', 'Movie trailer voiceover demo by Guy Harris, delivering dramatic UK and US-style trailer narration.', 'Cncd3VgDQ9s', '2019-06-11'),
   faqPage('movie-trailer-voice', [
     { q: 'Can I hire Guy Harris for a movie trailer voiceover?', a: 'Yes. Guy Harris provides movie trailer-style voiceovers for TV, radio, film, events, and online use. His voice has been featured in campaigns for BBC, ITV, and major games and promos.' },
     { q: 'What styles of movie trailer voice can Guy deliver?', a: 'Guy can deliver both UK and US-style movie trailer voices, ranging from deep dramatic tones to parody-style trailers with impact.' },

@@ -46,7 +46,7 @@ const AUTHOR = {
   '@type': 'Person' as const,
   name: 'Guy Harris',
   url: `${SITE_URL}/voiceoverguy`,
-  image: `${SITE_URL}/assets/images/guy-harris-profile.jpg`,
+  image: `${SITE_URL}/images/guy-harris-profile.jpg`,
 };
 
 const PUBLISHER = {

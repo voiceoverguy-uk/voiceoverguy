@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, localBusiness, faqPage } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, localBusiness, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo4'];
 
@@ -19,6 +19,7 @@ const schemas = [
     jobTitle: 'British Commercial Voiceover Artist',
   }),
   localBusiness('commercial-voiceover', 'Professional British male voiceover for TV, radio, and digital commercial campaigns with fast turnaround and broadcast-quality audio.'),
+  videoObject('commercial-voiceover', 'Commercial Voiceovers', 'British commercial voiceover demo by Guy Harris, trusted by brands like Disney, Apple, Hotels.com and more.', 'ch6LhC-vqEA', '2016-06-21'),
   faqPage('commercial-voiceover', [
     { q: 'Can I hire Guy Harris for TV and radio commercial voiceovers?', a: 'Yes. Guy Harris is a highly experienced UK commercial male voiceover artist trusted by brands like Disney, Apple, Hotels.com, and major radio networks.' },
     { q: "Where is Voiceoverguy's Guy Harris's studio located?", a: 'The studio is based in Wakefield, West Yorkshire, and is available for remote sessions and commercial bookings.' },

@@ -19,7 +19,7 @@ export function profilePage(slug: string, description: string, extra?: Record<st
       '@id': `${SITE}/#guyharris`,
       name: 'Guy Harris',
       url: SITE,
-      image: `${SITE}/assets/images/guy-harris-voiceover.png`,
+      image: `${SITE}/images/guy-harris-profile.jpg`,
       jobTitle: 'British Male Voiceover Artist',
       sameAs: [
         'https://www.linkedin.com/in/voiceoverguy/',
