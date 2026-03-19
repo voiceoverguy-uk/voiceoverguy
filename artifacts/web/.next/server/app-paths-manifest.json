@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
-  "/narration-voice/page": "app/narration-voice/page.js",
-  "/explainer-video-voice/page": "app/explainer-video-voice/page.js",
-  "/santa-voice/page": "app/santa-voice/page.js",
-  "/football-commentator-voice/page": "app/football-commentator-voice/page.js"
+  "/football-commentator-voice/page": "app/football-commentator-voice/page.js",
+  "/santa-voice/page": "app/santa-voice/page.js"
 }
