@@ -1,0 +1,91 @@
+I need a full SEO enhancement pass on the main landing/service pages of the new VoiceoverGuy site.
+
+Problem:
+On the old site, key pages like santa-voice, david-attenborough-voice and other main service pages had much richer structured data and Search Console enhancements. On the new site, some pages such as football-commentator-voice are showing almost no enhancements, and pages that previously had richer schema now appear thinner. Every one of these main service pages has a YouTube video and should be outputting strong structured data consistently.
+
+Goal:
+Create a shared, reliable page-level SEO/schema system for the top service/landing pages so Google sees these pages as rich, content-heavy, well-structured pages again.
+
+Please do the following:
+
+1) Audit the current implementation
+- Find how the main landing pages are rendered
+- Find where page-level SEO metadata is generated
+- Find whether JSON-LD schema is currently being output for these pages
+- Find how YouTube/video data is stored for each page
+- Identify why some pages have no enhancements in Search Console
+
+2) Build a shared schema generator for main landing pages
+Create a reusable utility for all core service pages that outputs structured data based on the page content/data. Use only schema that is genuinely relevant to the page.
+
+For each main landing/service page, output:
+- WebPage
+- BreadcrumbList
+- VideoObject (required whenever a YouTube/video is present)
+- FAQPage (only if that page has real FAQ content on the page)
+- Person or ProfilePage relevance for Guy Harris where appropriate
+- Service schema where appropriate for pages selling a voiceover service
+
+Important:
+- Do NOT invent fake reviews or ratings
+- Do NOT use aggregateRating inside Offer items
+- Use full absolute URLs
+- Use full ISO 8601 timestamps where dates are required
+- Use the correct official profile image:
+  https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg
+- Use @voiceoverman for Twitter/social references where relevant
+- Validate schema carefully so it is clean and useful, not bloated nonsense
+
+3) Ensure VideoObject is present on every main page with a YouTube video
+For each of the key landing pages, if a YouTube video exists in the page data, output a proper VideoObject block with:
+- name
+- description
+- thumbnailUrl
+- uploadDate if available, otherwise use a sensible fallback only if appropriate
+- embedUrl
+- contentUrl or watch URL where appropriate
+- publisher/author linkage
+- main page URL as the landing page
+
+Also make sure the video is discoverable in crawlable HTML and not hidden behind client-only rendering if that is stopping Google from understanding it.
+
+4) Strengthen the on-page content structure of the top service pages
+For the main landing pages, improve content depth and consistency so they are richer for SEO and AI search. Without changing the brand tone, make sure each page has meaningful, unique sections such as:
+- strong intro section
+- what this voice/style is good for
+- examples of usage / project types
+- why hire Guy Harris for this style
+- related internal links to relevant pages
+- FAQ section where suitable
+
+Do not add fluff. Make the copy genuinely useful, page-specific and human.
+
+5) Internal linking
+For each of the top landing pages, add sensible internal links to related relevant pages already on the site. Use natural anchor text and avoid overstuffing.
+
+6) Metadata and page consistency
+Check each main landing page for:
+- unique title
+- strong meta description
+- canonical
+- Open Graph / Twitter metadata where applicable
+- heading structure
+- breadcrumb consistency
+
+7) Focus pages first
+Prioritise the core landing pages such as:
+- /santa-voice
+- /david-attenborough-voice
+- /football-commentator-voice
+and then apply the same system across the other main voice/service pages.
+
+8) Deliverables
+Please:
+- implement the fix
+- show me which files were changed
+- summarise what schema each of the three priority pages now outputs
+- confirm whether VideoObject is now present on every main landing page with a YouTube video
+- flag any pages that still lack enough source content to justify FAQ or Service schema
+
+Important:
+This needs to be done as a proper reusable system, not page-by-page hardcoded hacks. I want the main VoiceoverGuy landing pages to become rich, structured, content-heavy pages that Google can properly understand again.
