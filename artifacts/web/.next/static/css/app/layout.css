@@ -2034,22 +2034,23 @@ textarea.form-control--compact {
     display: none;
     flex-direction: column;
     align-items: stretch;
-    position: absolute;
+    position: fixed;
     top: 44px;
-    left: 8px;
-    width: 260px;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
     min-width: unset;
-    background: rgba(255,255,255,0.70);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    border: 4px solid var(--red);
-    border-radius: 8px;
+    box-shadow: -4px 0 16px rgba(0,0,0,0.15);
+    border-left: 3px solid var(--red);
+    border-radius: 0;
     padding: 6px 0;
     z-index: 10001;
     overflow-x: hidden;
-    overflow-y: scroll;
-    max-height: 60vh;
+    overflow-y: auto;
+    max-height: calc(100vh - 44px);
     -webkit-overflow-scrolling: touch;
     text-align: left;
   }
@@ -2076,6 +2077,7 @@ textarea.form-control--compact {
 
   .mobile-backdrop.open {
     display: block;
+    pointer-events: auto;
   }
 
   .navbar-toggle {
