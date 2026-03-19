@@ -245,6 +245,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ROTATING QUOTES */}
+      <RotatingQuotes />
+
       {/* CLUSTER B: SPECIALIST SERVICES */}
       <section className="home-cluster home-cluster--left">
         <div className="container">
@@ -375,9 +378,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ROTATING QUOTES */}
-      <RotatingQuotes />
 
       {/* NEWS */}
       <NewsSection />

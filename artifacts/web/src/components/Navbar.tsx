@@ -29,6 +29,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openItem, setOpenItem] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLUListElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
   const isFixedRef = useRef(false);
@@ -45,9 +46,13 @@ export default function Navbar() {
   useEffect(() => {
     if (!mobileOpen) return;
     const handleTapOutside = (e: MouseEvent | TouchEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        closeMobile();
+      if (navRef.current && navRef.current.contains(e.target as Node)) return;
+      if (menuRef.current) {
+        const menuRect = menuRef.current.getBoundingClientRect();
+        const clientY = 'touches' in e ? e.touches[0]?.clientY ?? 0 : (e as MouseEvent).clientY;
+        if (clientY <= menuRect.bottom) return;
       }
+      closeMobile();
     };
     document.addEventListener('mousedown', handleTapOutside);
     document.addEventListener('touchstart', handleTapOutside, { passive: true });
@@ -87,12 +92,6 @@ export default function Navbar() {
           />
         </Link>
       </div>
-      {/* Mobile backdrop */}
-      <div
-        className={`mobile-backdrop${mobileOpen ? ' open' : ''}`}
-        onClick={closeMobile}
-        aria-hidden="true"
-      />
       {/* Main Navbar */}
       <nav className="navbar" role="navigation" aria-label="Main navigation" ref={navRef}>
 
@@ -110,7 +109,7 @@ export default function Navbar() {
           </button>
 
           {/* Nav items */}
-          <ul className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar" onClick={(e) => {
+          <ul ref={menuRef} className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar" onClick={(e) => {
             const target = e.target as HTMLElement;
             if (target.closest('a')) closeMobile();
           }}>

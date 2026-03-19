@@ -191,10 +191,6 @@ ul, ol {
   padding: 0;
 }
 
-.mobile-backdrop {
-  display: none;
-}
-
 .nav-item {
   position: relative;
 }
@@ -2067,22 +2063,6 @@ textarea.form-control--compact {
     display: flex;
   }
 
-  .mobile-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 10000;
-    pointer-events: none;
-  }
-
-  .mobile-backdrop.open {
-    display: block;
-    pointer-events: auto;
-  }
 
   .navbar-toggle {
     display: flex;
