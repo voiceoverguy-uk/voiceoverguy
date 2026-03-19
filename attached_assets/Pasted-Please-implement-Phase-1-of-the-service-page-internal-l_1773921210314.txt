@@ -1,0 +1,84 @@
+Please implement Phase 1 of the service-page internal linking improvements only.
+
+Goal:
+Strengthen internal linking between the core service/about pages without changing page intent, tone, layout, metadata, or overall copy structure.
+
+Important:
+This is about improving service-to-service internal links only.
+Do not count or replace existing blog links, nav links, footer links, contact links, or external links.
+Those can stay as they are.
+We are only adding a small number of relevant links between the main service/about pages.
+
+Pages to update in Phase 1 only:
+- /santa-voice
+- /character-voiceover
+- /voiceoverguy
+- /narration-voice
+- /movie-trailer-voice
+- /david-attenborough-voice
+
+Instructions:
+1. Add only 2 to 3 new internal links per page.
+2. Link only to closely relevant core service/about pages.
+3. Insert links naturally into existing body copy wherever possible.
+4. Make only minimal wording edits needed to fit the links in naturally.
+5. Do not rewrite whole paragraphs.
+6. Do not change headings, metadata, schema, layout, or media.
+7. Do not add “related links” blocks or obvious SEO-looking lists unless absolutely necessary.
+8. Keep anchor text natural and varied — do not overuse exact-match keyword anchors in a spammy way.
+9. Preserve readability and sales strength first.
+10. After editing, give me a page-by-page summary of exactly which new links were added.
+
+Preferred linking targets for this phase:
+
+1) /santa-voice
+Add natural links where appropriate to:
+- /character-voiceover
+- /halloween-voice
+- /commercial-voiceover
+- /david-attenborough-voice (only if it fits naturally)
+
+2) /character-voiceover
+Add natural links where appropriate to:
+- /pirate-voice
+- /santa-voice
+- /david-attenborough-voice
+- /game-trailer-voice
+
+3) /voiceoverguy
+Add natural links where appropriate to:
+- /character-voiceover
+- /voice-of-god
+- /football-commentator-voice
+- /narration-voice
+
+4) /narration-voice
+Add natural links where appropriate to:
+- /explainer-video-voice
+- /david-attenborough-voice
+- /commercial-voiceover
+- /apple-voice-style
+
+5) /movie-trailer-voice
+Add natural links where appropriate to:
+- /game-trailer-voice
+- /football-commentator-voice
+- /character-voiceover
+- /voice-of-god
+
+6) /david-attenborough-voice
+Add natural links where appropriate to:
+- /narration-voice
+- /explainer-video-voice
+- /pathe-news-voice
+- /commercial-voiceover
+
+Guardrails:
+- Do not touch any pages outside this Phase 1 list
+- Do not remove existing links unless they are clearly broken
+- Do not force all suggested links in if some do not fit naturally
+- Quality over quantity
+- If a page can only support 1 or 2 strong additions naturally, do that instead of forcing 3
+
+Before making changes, quickly inspect the existing body copy on each Phase 1 page and place the links where they make the most editorial sense.
+Then implement the edits and return a concise summary of the changes.
