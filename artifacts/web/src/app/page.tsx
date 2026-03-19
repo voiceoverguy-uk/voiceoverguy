@@ -382,7 +382,37 @@ export default function Home() {
       {/* NEWS */}
       <NewsSection />
 
-      {/* SCHEMA */}
+      {/* SCHEMA: Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            '@id': 'https://www.voiceoverguy.co.uk/#organization',
+            name: 'VoiceoverGuy',
+            url: 'https://www.voiceoverguy.co.uk',
+            logo: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
+            image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
+            email: 'guy@voiceoverguy.co.uk',
+            description: 'Professional British male voiceover services for agencies, brands and broadcasters worldwide. Broadcast-quality remote recording with fast turnaround.',
+            founder: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+            sameAs: [
+              'https://www.linkedin.com/in/voiceoverguy/',
+              'https://www.youtube.com/user/voiceoverguyharris',
+              'https://soundcloud.com/voiceoverguy',
+            ],
+            location: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Wakefield',
+              addressRegion: 'West Yorkshire',
+              addressCountry: 'GB',
+            },
+          }),
+        }}
+      />
+
+      {/* SCHEMA: Person */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -390,20 +420,16 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'Person',
             '@id': 'https://www.voiceoverguy.co.uk/#guyharris',
-            name: 'Guy Harris \u2013 VoiceoverGuy',
+            name: 'Guy Harris',
             alternateName: 'VoiceoverGuy',
             url: 'https://www.voiceoverguy.co.uk',
-            image: 'https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.png',
+            image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
             jobTitle: 'British Male Voiceover Artist',
             description: 'Guy Harris is an award-winning British male voiceover artist with over 25 years of experience and more than 200,000 voiceovers. Known for his commercial reads, character voices, explainer narration, David Attenborough impression and as the UK\u2019s No.1 Voice of Santa.',
             gender: 'Male',
             nationality: 'British',
             email: 'guy@voiceoverguy.co.uk',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'VoiceoverGuy',
-              url: 'https://www.voiceoverguy.co.uk',
-            },
+            worksFor: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
             sameAs: [
               'https://www.linkedin.com/in/voiceoverguy/',
               'https://www.youtube.com/user/voiceoverguyharris',
@@ -444,23 +470,64 @@ export default function Home() {
               'Event Voiceovers',
               'Awards Voiceover',
             ],
-            subjectOf: {
-              '@type': 'LocalBusiness',
-              '@id': 'https://www.voiceoverguy.co.uk/#business',
-              name: 'Guy Harris \u2013 VoiceoverGuy',
-              url: 'https://www.voiceoverguy.co.uk',
-              image: 'https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.png',
-              priceRange: '\u00A3100 - \u00A35000',
-              email: 'guy@voiceoverguy.co.uk',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Wakefield',
-                addressRegion: 'West Yorkshire',
-                addressCountry: 'GB',
+          }),
+        }}
+      />
+
+      {/* SCHEMA: WebSite */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            '@id': 'https://www.voiceoverguy.co.uk/#website',
+            name: 'VoiceoverGuy',
+            url: 'https://www.voiceoverguy.co.uk',
+            publisher: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: {
+                '@type': 'EntryPoint',
+                urlTemplate: 'https://www.voiceoverguy.co.uk/?s={search_term_string}',
               },
-              openingHours: 'Mo-Sa 07:00-21:00',
-              description: 'Professional British male voiceover studio providing broadcast-quality audio with fast turnaround, reliable delivery and a full range of character voices including Santa and Attenborough.',
+              'query-input': 'required name=search_term_string',
             },
+          }),
+        }}
+      />
+
+      {/* SCHEMA: WebPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            '@id': 'https://www.voiceoverguy.co.uk/#webpage',
+            name: 'British Male Voiceover | Guy Harris \u2013 UK Voice Artist',
+            description: 'Guy Harris is an award-winning British male voiceover artist with 25+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.',
+            url: 'https://www.voiceoverguy.co.uk',
+            isPartOf: { '@id': 'https://www.voiceoverguy.co.uk/#website' },
+            about: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+            publisher: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
+          }),
+        }}
+      />
+
+      {/* SCHEMA: VideoObject */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            name: 'VoiceoverGuy Commercial Showreel',
+            description: 'Guy Harris commercial voiceover showreel. British male voiceover artist heard on TV, radio and online worldwide.',
+            thumbnailUrl: 'https://img.youtube.com/vi/TqkdBK8mBW8/hqdefault.jpg',
+            contentUrl: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
+            embedUrl: 'https://www.youtube.com/embed/TqkdBK8mBW8',
+            uploadDate: '2024-01-15',
           }),
         }}
       />
