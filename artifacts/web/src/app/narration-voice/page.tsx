@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, faqPage, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo6'];
 
@@ -12,9 +12,23 @@ export const metadata: Metadata = {
   },
   title: data.s1,
   description: data.s2,
+  openGraph: {
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    url: 'https://www.voiceoverguy.co.uk/narration-voice',
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Narration Voice – Guy Harris' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+  },
 };
 
 const schemas = [
+  profilePage('narration-voice', 'Guy Harris is a professional British narration voiceover artist for corporate videos, e-learning and documentary content.'),
+  breadcrumb('narration-voice', 'Narration Voice'),
   videoObject('narration-voice', data.s1, 'Narration voiceover demo by Guy Harris, a natural English voice for corporate and e-learning projects.', 'n5aOJKGhcB0', '2016-02-17'),
   faqPage('narration-voice', [
     { q: 'What types of narration does Guy Harris offer?', a: "Guy Harris provides narration voiceovers for corporate videos, health & safety training, documentaries, and e-learning content. His delivery is clear, warm, and authoritative\u2014perfect for professional projects." },

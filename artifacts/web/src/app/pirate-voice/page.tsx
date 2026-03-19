@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, breadcrumb, audioObject, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, audioObject, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo14'];
 
@@ -12,26 +12,27 @@ export const metadata: Metadata = {
   },
   title: data.s1,
   description: data.s2,
+  openGraph: {
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    url: 'https://www.voiceoverguy.co.uk/pirate-voice',
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Pirate Voice – Guy Harris' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+  },
 };
 
 const schemas = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Guy Harris',
+  profilePage('pirate-voice', "Guy Harris provides energetic, characterful pirate voiceovers for commercials, games, children\u2019s content, and campaigns. Known for Pop-Up Pirate and Salty in Thomas & Friends, his character work brings scripts to life.", {
     jobTitle: 'Pirate Voiceover Artist',
-    description: "Guy Harris provides energetic, characterful pirate voiceovers for commercials, games, children\u2019s content, and campaigns. Known for Pop-Up Pirate and Salty in Thomas & Friends, his character work brings scripts to life.",
-    url: 'https://www.voiceoverguy.co.uk/pirate-voice',
-    image: 'https://www.voiceoverguy.co.uk/assets/images/pirate-voice-guy-harris.png',
-    sameAs: [
-      'https://www.linkedin.com/in/voiceoverguy/',
-      'https://www.youtube.com/user/voiceoverguyharris',
-    ],
-    worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
-  },
+  }),
+  breadcrumb('pirate-voice', 'Pirate Voice'),
   audioObject('pirate-voice', 'Authentic Pirate Character Voice \u2013 Guy Harris', "Professional pirate character voiceover demo by Guy Harris. Authentic, energetic, and perfect for games, animation, commercials, and children\u2019s content.", '/assets/audio/pirate-showreel-guy-harris.mp3', 'PT54S'),
   videoObject('pirate-voice', 'Pirate Voice Over \u2013 Guy Harris', 'Authentic pirate character voiceover by Guy Harris, heard on CBBC, LEGO, and global brands.', 'Egnp8ZWrojI', '2012-12-05'),
-  breadcrumb('pirate-voice', 'Pirate Voice'),
 ];
 
 export default function Page() {

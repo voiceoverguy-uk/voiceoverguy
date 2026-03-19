@@ -13,6 +13,18 @@ export const metadata: Metadata = {
   },
   title: data.s1,
   description: data.s2,
+  openGraph: {
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    url: 'https://www.voiceoverguy.co.uk/santa-voice',
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Santa Voice – Guy Harris' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+  },
 };
 
 const schemas = [

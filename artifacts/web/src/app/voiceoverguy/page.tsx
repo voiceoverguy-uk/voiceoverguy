@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo2'];
 
@@ -12,6 +12,18 @@ export const metadata: Metadata = {
   },
   title: data.s7,
   description: data.s8,
+  openGraph: {
+    title: `${data.s7} | VoiceoverGuy`,
+    description: data.s8,
+    url: 'https://www.voiceoverguy.co.uk/voiceoverguy',
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Guy Harris – British Male Voiceover Artist' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${data.s7} | VoiceoverGuy`,
+    description: data.s8,
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+  },
 };
 
 const schemas = [
@@ -19,6 +31,7 @@ const schemas = [
     alternateName: 'VoiceoverGuy',
     worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
   }),
+  breadcrumb('voiceoverguy', 'About Guy Harris'),
 ];
 
 export default function Page() {

@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, webPage, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, webPage, breadcrumb, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo5'];
 
@@ -12,10 +12,23 @@ export const metadata: Metadata = {
   },
   title: data.s1,
   description: data.s2,
+  openGraph: {
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    url: 'https://www.voiceoverguy.co.uk/apple-voice-style',
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Apple Voice Style – Guy Harris' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${data.s1} | VoiceoverGuy`,
+    description: data.s2,
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+  },
 };
 
 const schemas = [
-  webPage('apple-voice-style', 'Apple Voice Style | Guy Harris \u2013 British Voiceover Artist', 'Guy Harris delivers premium Apple-style voiceovers \u2013 sleek, minimal, and trusted by the world\u2019s top brands.'),
+  webPage('apple-voice-style', 'Apple Voice Style | Guy Harris', 'Guy Harris delivers premium Apple-style voiceovers with calm, sincere British male delivery.'),
+  breadcrumb('apple-voice-style', 'Apple Voice Style'),
   videoObject('apple-voice-style', data.s1, 'Guy Harris delivers premium Apple-style voiceovers with calm, sincere British male delivery.', 'V6HuBB4WqxQ', '2013-12-09'),
   {
     '@context': 'https://schema.org',

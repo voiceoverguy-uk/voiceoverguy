@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/voiceover-studio/page": [
+    "/commercial-voiceover/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/voiceover-studio/page.js"
+      "static/chunks/app/commercial-voiceover/page.js"
     ]
   }
 }
