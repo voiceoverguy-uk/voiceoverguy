@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  videoObject('pathe-news-voice', 'Pathe News Voice', 'Classic British Pathe News style voiceover by Guy Harris with 1940s flair and mid-Atlantic precision.', 'Hp8-la1KL6E', '2015-07-02'),
+  videoObject('pathe-news-voice', data.s1, 'Classic British Pathe News style voiceover by Guy Harris with 1940s flair and mid-Atlantic precision.', 'Hp8-la1KL6E', '2015-07-02'),
   {
     '@context': 'https://schema.org',
     '@type': 'Person',

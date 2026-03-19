@@ -19,7 +19,7 @@ const schemas = [
     { q: 'Can you voice a dramatic game trailer?', a: 'Yes, Guy Harris specialises in voicing game trailers with high-impact, cinematic delivery. His voice brings drama, tension, and emotion to every campaign.' },
     { q: 'Do you offer quick turnaround on game trailer voiceovers?', a: "Absolutely. Guy\u2019s broadcast-quality studio is available daily for rapid delivery\u2014perfect for gaming trailers with tight deadlines or last-minute requests." },
   ]),
-  videoObject('game-trailer-voice', 'Game Trailer Voice', 'Game trailer voiceover demo by Guy Harris, cinematic delivery for gaming trailers and launch campaigns.', 'voj2P_iRvUM', '2016-08-10'),
+  videoObject('game-trailer-voice', data.s1, 'Game trailer voiceover demo by Guy Harris, cinematic delivery for gaming trailers and launch campaigns.', 'voj2P_iRvUM', '2016-08-10'),
   audioObject('game-trailer-voice', 'Guy Harris Game Trailer Voiceover Demo', 'Listen to Guy Harris deliver a powerful and cinematic voiceover, perfect for gaming trailers and launch campaigns.', '/assets/audio/guy-harris-voiceoverguy-game-trailer-showreel.mp3', 'PT1M14S'),
 ];
 

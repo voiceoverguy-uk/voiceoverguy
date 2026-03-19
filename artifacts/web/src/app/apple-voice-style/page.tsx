@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const schemas = [
   webPage('apple-voice-style', 'Apple Voice Style | Guy Harris \u2013 British Voiceover Artist', 'Guy Harris delivers premium Apple-style voiceovers \u2013 sleek, minimal, and trusted by the world\u2019s top brands.'),
-  videoObject('apple-voice-style', 'Apple Voice Style', 'Guy Harris delivers premium Apple-style voiceovers with calm, sincere British male delivery.', 'V6HuBB4WqxQ', '2013-12-09'),
+  videoObject('apple-voice-style', data.s1, 'Guy Harris delivers premium Apple-style voiceovers with calm, sincere British male delivery.', 'V6HuBB4WqxQ', '2013-12-09'),
   {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',

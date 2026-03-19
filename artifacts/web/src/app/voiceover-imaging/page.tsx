@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const schemas = [
   profilePage('voiceover-imaging', 'Guy Harris is a professional imaging voiceover artist for radio stations, podcasts and brands \u2013 trusted by Heart, Capital, Smooth, Bauer, Wireless Group and more.'),
-  videoObject('voiceover-imaging', 'Voiceover Imaging', 'Radio station imaging and branding voiceover demo by Guy Harris.', '6zOVX7VeH2Y', '2018-10-22'),
+  videoObject('voiceover-imaging', data.s1, 'Radio station imaging and branding voiceover demo by Guy Harris.', '6zOVX7VeH2Y', '2018-10-22'),
 ];
 
 export default function Page() {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  videoObject('on-hold-voice', 'On Hold Voice', 'On hold voice and IVR phone prompt demo by British voiceover artist Guy Harris.', 'TKdzDAb9MIA', '2014-07-29'),
+  videoObject('on-hold-voice', data.s1, 'On hold voice and IVR phone prompt demo by British voiceover artist Guy Harris.', 'TKdzDAb9MIA', '2014-07-29'),
   faqPage('on-hold-voice', [
     { q: 'Can you provide on-hold voiceover recordings for businesses?', a: 'Yes. Guy Harris is a professional voiceover artist with extensive experience recording on-hold messages for clients such as Baxi, Bupa, NS&I and more.' },
     { q: "What\u2019s included in your on-hold voiceover service?", a: 'Typically, clients receive professionally recorded messages with multiple tone options and delivered as WAV or MP3 files, ready to be uploaded to any phone system.' },
