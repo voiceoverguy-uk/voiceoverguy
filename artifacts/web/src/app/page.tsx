@@ -497,7 +497,7 @@ export default function Home() {
                 thumbnailUrl: 'https://img.youtube.com/vi/TqkdBK8mBW8/hqdefault.jpg',
                 contentUrl: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
                 embedUrl: 'https://www.youtube.com/embed/TqkdBK8mBW8',
-                uploadDate: '2024-01-15',
+                uploadDate: '2024-01-15T00:00:00+00:00',
               },
             ],
           }),
