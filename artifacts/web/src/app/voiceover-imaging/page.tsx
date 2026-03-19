@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo9'];
 
@@ -29,6 +29,10 @@ export const metadata: Metadata = {
 const schemas = [
   profilePage('voiceover-imaging', 'Guy Harris is a professional imaging voiceover artist for radio stations, podcasts and brands \u2013 trusted by Heart, Capital, Smooth, Bauer, Wireless Group and more.'),
   breadcrumb('voiceover-imaging', 'Voiceover Imaging'),
+  faqPage('voiceover-imaging', [
+    { q: 'What is voiceover imaging?', a: 'Voiceover imaging is the branded voice used for radio station jingles, sweepers, promos, and idents. It gives a station its sonic identity and keeps listeners engaged between songs and segments.' },
+    { q: 'Which radio stations has Guy Harris voiced imaging for?', a: 'Guy Harris has provided imaging voices for Heart, Capital, Smooth, Bauer, Wireless Group and many other UK stations.' },
+  ]),
   videoObject('voiceover-imaging', data.s1, 'Radio station imaging and branding voiceover demo by Guy Harris.', '6zOVX7VeH2Y', '2018-10-22'),
 ];
 

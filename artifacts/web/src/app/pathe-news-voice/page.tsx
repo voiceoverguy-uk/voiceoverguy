@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo16'];
 
@@ -31,6 +31,10 @@ const schemas = [
     jobTitle: 'Pathe News Style Voiceover Artist',
   }),
   breadcrumb('pathe-news-voice', 'Pathe News Voice'),
+  faqPage('pathe-news-voice', [
+    { q: 'What is a Pathe News voice?', a: 'A Pathe News voice recreates the distinctive mid-Atlantic, clipped British narration style heard in 1940s and 1950s cinema newsreels. Guy Harris delivers this retro style for documentaries, adverts, and nostalgic content.' },
+    { q: 'Can Guy Harris voice my project in the Pathe News style?', a: 'Yes. Guy specialises in authentic Pathe News and Danvers-Walker style voiceovers for radio ads, TV productions, and vintage-themed campaigns.' },
+  ]),
   videoObject('pathe-news-voice', data.s1, 'Classic British Pathe News style voiceover by Guy Harris with 1940s flair and mid-Atlantic precision.', 'Hp8-la1KL6E', '2015-07-02'),
 ];
 

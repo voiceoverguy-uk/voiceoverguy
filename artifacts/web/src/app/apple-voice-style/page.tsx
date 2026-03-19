@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, webPage, breadcrumb, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, webPage, breadcrumb, faqPage, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo5'];
 
@@ -30,6 +30,10 @@ const schemas = [
   webPage('apple-voice-style', 'Apple Voice Style | Guy Harris', 'Guy Harris delivers premium Apple-style voiceovers with calm, sincere British male delivery.'),
   breadcrumb('apple-voice-style', 'Apple Voice Style'),
   videoObject('apple-voice-style', data.s1, 'Guy Harris delivers premium Apple-style voiceovers with calm, sincere British male delivery.', 'V6HuBB4WqxQ', '2013-12-09'),
+  faqPage('apple-voice-style', [
+    { q: 'What is the Apple voice style?', a: 'The Apple voice style is a calm, sincere, and minimalist narration approach used in Apple commercials. Guy Harris delivers this trusted, natural British tone for brands seeking understated authority.' },
+    { q: 'Can Guy Harris voice my commercial in the Apple style?', a: 'Yes. Guy has voiced Apple campaigns and delivers the same clean, warm delivery for brands wanting that premium feel.' },
+  ]),
   {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',

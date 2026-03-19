@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, audioObject, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, faqPage, audioObject, videoObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo14'];
 
@@ -31,6 +31,10 @@ const schemas = [
     jobTitle: 'Pirate Voiceover Artist',
   }),
   breadcrumb('pirate-voice', 'Pirate Voice'),
+  faqPage('pirate-voice', [
+    { q: 'Can I hire Guy Harris for a pirate voiceover?', a: "Yes. Guy Harris is an experienced pirate voiceover artist known for Pop-Up Pirate and Salty in Thomas & Friends. He delivers authentic, energetic pirate voices for games, animation, commercials, and children's content." },
+    { q: 'What pirate voice characters has Guy Harris voiced?', a: 'Guy has voiced Pop-Up Pirate for Tomy, Salty the Dockside Diesel in Thomas & Friends, and pirate characters for CBBC, LEGO, and other global brands.' },
+  ]),
   audioObject('pirate-voice', 'Authentic Pirate Character Voice \u2013 Guy Harris', "Professional pirate character voiceover demo by Guy Harris. Authentic, energetic, and perfect for games, animation, commercials, and children\u2019s content.", '/assets/audio/pirate-showreel-guy-harris.mp3', 'PT54S'),
   videoObject('pirate-voice', 'Pirate Voice Over \u2013 Guy Harris', 'Authentic pirate character voiceover by Guy Harris, heard on CBBC, LEGO, and global brands.', 'Egnp8ZWrojI', '2012-12-05'),
 ];

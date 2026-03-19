@@ -2,7 +2,7 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo2'];
 
@@ -32,6 +32,10 @@ const schemas = [
     worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
   }),
   breadcrumb('voiceoverguy', 'About Guy Harris'),
+  faqPage('voiceoverguy', [
+    { q: 'Who is VoiceoverGuy?', a: 'VoiceoverGuy is Guy Harris, an award-winning British male voiceover artist with over 25 years of experience. He is known for his versatility across commercial, character, and narration voices.' },
+    { q: 'What voiceover services does Guy Harris offer?', a: 'Guy offers commercial voiceovers, character voices, radio imaging, Voice of God announcing, narration, on-hold messages, and more from his professional studio in Wakefield, West Yorkshire.' },
+  ]),
 ];
 
 export default function Page() {
