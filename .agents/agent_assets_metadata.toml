@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "e9yrHbayIOUB_jHVd_uDO"
+uri = "file://artifacts/web/internal-linking-audit.md"
+type = "text"
+title = "Internal Linking Audit Report"
