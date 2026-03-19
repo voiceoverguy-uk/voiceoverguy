@@ -9,7 +9,7 @@
 
 Of the 18 core service pages, **12 have zero outbound internal links** to other service pages, and **1 has only one**. Only 5 pages (commercial-voiceover, apple-voice-style, football-commentator-voice, halloween-voice, voiceoverguy) have 2+ outbound service-page links. Several money pages -- including `/santa-voice`, `/movie-trailer-voice`, `/character-voiceover`, and `/game-trailer-voice` -- are completely isolated with no outbound links at all.
 
-The inbound picture is equally thin: 6 pages receive zero inbound links from any other service page, and 7 pages receive only one inbound link (mostly from football-commentator-voice, which is the site's strongest internal linker).
+The inbound picture is equally thin: 5 pages receive zero inbound links from any other service page, and 7 pages receive only one inbound link (mostly from football-commentator-voice, which is the site's strongest internal linker with 6 outbound service links).
 
 **Immediate wins:** Adding 2-4 targeted reciprocal links to each isolated page would dramatically improve topical authority flow and user navigation between thematically related services.
 
@@ -17,33 +17,33 @@ The inbound picture is equally thin: 6 pages receive zero inbound links from any
 
 ## Full Audit Table
 
-| Page | Slug | Outbound | Inbound | Status | Outbound Destinations |
-|------|------|----------|---------|--------|----------------------|
-| Commercial Voiceover | `/commercial-voiceover` | 2 | 3 | STRONG | apple-voice-style, explainer-video-voice |
-| Apple Voice Style | `/apple-voice-style` | 2 | 1 | STRONG | explainer-video-voice, commercial-voiceover |
-| Narration Voice | `/narration-voice` | 0 | 0 | NONE | -- |
-| Voice of God | `/voice-of-god` | 0 | 1 | NONE | -- |
-| On Hold Voice | `/on-hold-voice` | 0 | 0 | NONE | -- |
-| Voiceover Imaging | `/voiceover-imaging` | 0 | 0 | NONE | -- |
-| Movie Trailer Voice | `/movie-trailer-voice` | 0 | 1 | NONE | -- |
-| Character Voiceover | `/character-voiceover` | 0 | 1 | NONE | -- |
-| Santa Voice | `/santa-voice` | 0 | 1 | NONE | -- |
-| Football Commentator | `/football-commentator-voice` | 6 | 0 | STRONG | movie-trailer-voice, gameshow-host, voice-of-god, santa-voice, david-attenborough-voice, pathe-news-voice |
-| Pirate Voice | `/pirate-voice` | 0 | 0 | NONE | -- |
-| Gameshow Host | `/gameshow-host` | 0 | 1 | NONE | -- |
-| Pathe News Voice | `/pathe-news-voice` | 0 | 1 | NONE | -- |
-| Halloween Voice | `/halloween-voice` | 3 | 0 | STRONG | voiceoverguy, commercial-voiceover, game-trailer-voice |
-| David Attenborough | `/david-attenborough-voice` | 1 | 2 | WEAK | character-voiceover |
-| Explainer Video | `/explainer-video-voice` | 0 | 2 | NONE | -- |
-| Game Trailer Voice | `/game-trailer-voice` | 0 | 1 | NONE | -- |
-| VoiceoverGuy (About) | `/voiceoverguy` | 3 | 1 | STRONG | commercial-voiceover, santa-voice, david-attenborough-voice |
+| Page | Slug | Outbound | Inbound | Status | Outbound Destinations | Inbound Sources |
+|------|------|----------|---------|--------|-----------------------|----------------|
+| Commercial Voiceover | `/commercial-voiceover` | 2 | 3 | STRONG | apple-voice-style, explainer-video-voice | apple-voice-style, halloween-voice, voiceoverguy |
+| Apple Voice Style | `/apple-voice-style` | 2 | 2 | STRONG | explainer-video-voice, commercial-voiceover | commercial-voiceover, voiceoverguy |
+| Narration Voice | `/narration-voice` | 0 | 0 | NONE | -- | -- |
+| Voice of God | `/voice-of-god` | 0 | 1 | NONE | -- | football-commentator-voice |
+| On Hold Voice | `/on-hold-voice` | 0 | 0 | NONE | -- | -- |
+| Voiceover Imaging | `/voiceover-imaging` | 0 | 0 | NONE | -- | -- |
+| Movie Trailer Voice | `/movie-trailer-voice` | 0 | 1 | NONE | -- | football-commentator-voice |
+| Character Voiceover | `/character-voiceover` | 0 | 1 | NONE | -- | david-attenborough-voice |
+| Santa Voice | `/santa-voice` | 0 | 2 | NONE | -- | football-commentator-voice, voiceoverguy |
+| Football Commentator | `/football-commentator-voice` | 6 | 0 | STRONG | movie-trailer-voice, gameshow-host, voice-of-god, santa-voice, david-attenborough-voice, pathe-news-voice | -- |
+| Pirate Voice | `/pirate-voice` | 0 | 0 | NONE | -- | -- |
+| Gameshow Host | `/gameshow-host` | 0 | 1 | NONE | -- | football-commentator-voice |
+| Pathe News Voice | `/pathe-news-voice` | 0 | 1 | NONE | -- | football-commentator-voice |
+| Halloween Voice | `/halloween-voice` | 3 | 0 | STRONG | voiceoverguy, commercial-voiceover, game-trailer-voice | -- |
+| David Attenborough | `/david-attenborough-voice` | 1 | 2 | WEAK | character-voiceover | football-commentator-voice, voiceoverguy |
+| Explainer Video | `/explainer-video-voice` | 0 | 2 | NONE | -- | commercial-voiceover, apple-voice-style |
+| Game Trailer Voice | `/game-trailer-voice` | 0 | 1 | NONE | -- | halloween-voice |
+| VoiceoverGuy (About) | `/voiceoverguy` | 4 | 1 | STRONG | apple-voice-style, commercial-voiceover, santa-voice, david-attenborough-voice | halloween-voice |
 
 ### Summary counts
 
 - **NONE (0 outbound):** 12 pages
 - **WEAK (1 outbound):** 1 page
 - **STRONG (2+ outbound):** 5 pages
-- **Zero inbound:** 6 pages (narration-voice, on-hold-voice, voiceover-imaging, pirate-voice, halloween-voice, football-commentator-voice)
+- **Zero inbound:** 5 pages (narration-voice, on-hold-voice, voiceover-imaging, pirate-voice, football-commentator-voice, halloween-voice)
 
 ---
 
@@ -53,9 +53,9 @@ The inbound picture is equally thin: 6 pages receive zero inbound links from any
 
 ---
 
-#### `/santa-voice` -- Status: NONE (0 out, 1 in)
+#### `/santa-voice` -- Status: NONE (0 out, 2 in)
 
-Currently linked from: voiceoverguy
+Currently linked from: football-commentator-voice, voiceoverguy
 
 | # | Link To | Suggested Anchor Text | Rationale |
 |---|---------|----------------------|-----------|
@@ -80,7 +80,7 @@ Currently linked from: football-commentator-voice, voiceoverguy
 
 ---
 
-#### `/football-commentator-voice` -- Status: STRONG (6 out, 0 in)
+#### `/football-commentator-voice` -- Status: STRONG outbound, NONE inbound (6 out, 0 in)
 
 Currently links to: movie-trailer-voice, gameshow-host, voice-of-god, santa-voice, david-attenborough-voice, pathe-news-voice
 Currently linked from: (none)
@@ -90,14 +90,14 @@ Currently linked from: (none)
 | 1 | `/commercial-voiceover` | commercial voiceover | Commentary style is used in brand ad campaigns |
 | 2 | `/character-voiceover` | character voiceover | Commentator is a character-driven performance |
 
-**Note:** This page's primary gap is inbound links. Pages linking here should be prioritised -- see recommendations for movie-trailer-voice, gameshow-host, voice-of-god, and character-voiceover below.
+**Note:** This page's critical gap is inbound links. Pages that should link here: movie-trailer-voice (reciprocal), gameshow-host (reciprocal), voice-of-god (reciprocal), character-voiceover, voiceoverguy.
 
 ---
 
-#### `/apple-voice-style` -- Status: STRONG (2 out, 1 in)
+#### `/apple-voice-style` -- Status: STRONG (2 out, 2 in)
 
 Currently links to: explainer-video-voice, commercial-voiceover
-Currently linked from: commercial-voiceover
+Currently linked from: commercial-voiceover, voiceoverguy
 
 | # | Link To | Suggested Anchor Text | Rationale |
 |---|---------|----------------------|-----------|
@@ -132,9 +132,9 @@ Currently linked from: david-attenborough-voice
 
 ---
 
-#### `/voiceoverguy` (About) -- Status: STRONG (3 out, 1 in)
+#### `/voiceoverguy` (About) -- Status: STRONG (4 out, 1 in)
 
-Currently links to: commercial-voiceover, santa-voice, david-attenborough-voice
+Currently links to: apple-voice-style, commercial-voiceover, santa-voice, david-attenborough-voice
 Currently linked from: halloween-voice
 
 | # | Link To | Suggested Anchor Text | Rationale |
@@ -254,7 +254,7 @@ Currently linked from: football-commentator-voice
 
 ---
 
-#### `/halloween-voice` -- Status: STRONG (3 out, 0 in)
+#### `/halloween-voice` -- Status: STRONG outbound, NONE inbound (3 out, 0 in)
 
 Currently links to: voiceoverguy, commercial-voiceover, game-trailer-voice
 Currently linked from: (none)
@@ -333,5 +333,13 @@ These natural clusters should inform the linking strategy:
 Cross-cluster links (e.g., character-voiceover linking to game-trailer-voice, or commercial-voiceover linking to on-hold-voice) create the strongest topical bridges and should be prioritised.
 
 ---
+
+## Methodology
+
+- **Data source:** `artifacts/web/src/data/pages.json`, with body fields determined per page from the actual Next.js page component rendering logic
+- **Included fields:** Only fields rendered as visible body content (s3-s6 for most pages; s10, s11 additionally for voiceoverguy; s10, s12, s14, s16 additionally for explainer-video-voice; s11, s12 additionally for game-trailer-voice)
+- **Excluded:** s1 (title), s2 (meta description), s7/s8 (metadata), s20/s21 (flags), YouTube/Vimeo IDs, nav/footer links, blog post links, contact page links, external links
+- **URL normalisation:** Both absolute (`https://www.voiceoverguy.co.uk/slug`) and relative (`slug`, `/slug`) hrefs normalised to bare slug for matching
+- **Inbound counts:** Computed programmatically from outbound graph to ensure consistency
 
 *This report is audit + recommendations only. No links or page copy have been modified.*
