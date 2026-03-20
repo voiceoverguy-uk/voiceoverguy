@@ -14,10 +14,29 @@
     },
     {
       "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "w.voiceoverguy.co.uk" }],
+      "destination": "https://www.voiceoverguy.co.uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "ww.voiceoverguy.co.uk" }],
+      "destination": "https://www.voiceoverguy.co.uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "wwww.voiceoverguy.co.uk" }],
+      "destination": "https://www.voiceoverguy.co.uk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "(?!www\\.)(.*)\\.voiceoverguy\\.co\\.uk" }],
       "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
     },
+    { "source": "/voiceover-videos", "destination": "/", "statusCode": 301 },
     { "source": "/arabella-harris-voiceover-kid", "destination": "/arabella-harris-girl-child-voiceover-kid", "statusCode": 301 },
     { "source": "/studiotour/index.html", "destination": "/voiceover-studio", "statusCode": 301 },
     { "source": "/studiotour", "destination": "/voiceover-studio", "statusCode": 301 },
