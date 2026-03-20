@@ -1,0 +1,31 @@
+kind = "video"
+previewPath = "/quote-video/"
+title = "LinkedIn Quote Video"
+version = "1.0.0"
+id = "artifacts/quote-video"
+router = "path"
+
+[[integratedSkills]]
+name = "video-js"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/quote-video/" ]
+localPort = 18345
+
+[services.development]
+run = "pnpm --filter @workspace/quote-video run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/quote-video", "run", "build" ]
+publicDir = "artifacts/quote-video/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18345"
+BASE_PATH = "/quote-video/"
