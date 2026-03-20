@@ -40,7 +40,7 @@ export function Scene9() {
           >
             &ldquo;
           </motion.span>
-          The line may be identical. The impact rarely is.
+          If you want people to feel something, you still need a human who can.
           <motion.span
             className="text-[6vw] leading-none inline-block ml-[0.5vw]"
             style={{ color: '#9C060B' }}

@@ -12,20 +12,20 @@ import { Scene9 } from './video_scenes/Scene9';
 import { Scene10 } from './video_scenes/Scene10';
 
 const SCENE_DURATIONS = {
-  quote1: 5500,
-  quote2: 5000,
-  quote3: 5000,
-  quote4: 4500,
-  quote5: 5000,
-  quote6: 5000,
-  quote7: 5000,
-  quote8: 4500,
-  quote9: 4500,
-  quote10: 6000,
+  quote1: 4000,
+  quote2: 3500,
+  quote3: 3500,
+  quote4: 3500,
+  quote5: 3500,
+  quote6: 3500,
+  quote7: 3500,
+  quote8: 3500,
+  quote9: 3500,
+  endcard: 4500,
 };
 
 const scenes = [Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7, Scene8, Scene9, Scene10];
-const sceneKeys = ['quote1', 'quote2', 'quote3', 'quote4', 'quote5', 'quote6', 'quote7', 'quote8', 'quote9', 'quote10'];
+const sceneKeys = ['quote1', 'quote2', 'quote3', 'quote4', 'quote5', 'quote6', 'quote7', 'quote8', 'quote9', 'endcard'];
 
 export default function VideoTemplate() {
   const { currentScene } = useVideoPlayer({ durations: SCENE_DURATIONS });
