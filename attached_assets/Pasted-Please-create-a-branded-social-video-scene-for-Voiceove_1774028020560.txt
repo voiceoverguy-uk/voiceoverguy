@@ -1,0 +1,80 @@
+Please create a branded social video scene for VoiceoverGuy that turns the rotating homepage quote concept into a polished exportable video for LinkedIn.
+
+GOAL
+Build a clean, elegant, premium animated quote video that rotates through 9 human-vs-AI voiceover quotes with slow fades. This should feel cinematic and understated, matching the homepage style, but designed specifically for social media video rather than webpage use.
+
+FORMAT
+Create this as a standalone branded social asset component/page that can be captured or exported cleanly.
+
+Please build:
+1. A square version at 1080 x 1080 for LinkedIn
+2. A portrait-friendly version at 1080 x 1350 if easy to support with the same component logic
+
+Use responsive scaling so both formats look balanced.
+
+STYLE
+- Minimal, premium, elegant
+- Use the existing site font family
+- Thin/light font weight, not bold
+- No gimmicky motion
+- No bouncing, sliding, typing, or flashy effects
+- Smooth fade transitions only
+- Soft neutral background matching the site aesthetic
+- Very subtle oversized quotation marks on left and right as decorative faded background elements
+- Keep the design clean and spacious with strong visual breathing room
+- Use the VoiceoverGuy red only very subtly
+- Include a small tasteful VoiceoverGuy logo lockup or site name on the final frame only
+
+QUOTE ROTATION
+Use these 9 quotes exactly:
+
+1. Just because AI can read the script doesn’t mean it can feel the moment.
+2. You might save money with AI. But will your audience believe a word of it?
+3. Reading words is easy. Delivering meaning is the bit that matters.
+4. AI can say the line. A real voice knows why it matters.
+5. Your audience can hear the difference between sound and sincerity.
+6. Just because it sounds human doesn’t mean it connects like one.
+7. Words on a page are not a performance. They’re just the starting point.
+8. If your message matters, the delivery matters too.
+9. The line may be identical. The impact rarely is.
+
+ANIMATION TIMING
+For each quote:
+- fade in: 0.8 to 1 second
+- hold: about 2.8 to 3.5 seconds
+- fade out: 0.8 to 1 second
+
+Keep the whole video around 35 to 45 seconds total including an ending frame.
+
+FINAL FRAME
+After the last quote, show a final branded frame for around 3 seconds with:
+
+A real voice makes people feel something.
+VoiceoverGuy.co.uk
+
+Optional very small sub-line:
+British Male Voiceover Artist | Guy Harris
+
+Keep this final frame elegant and restrained.
+
+LAYOUT
+- Centre all quote text
+- Keep max width controlled for good line breaks
+- Make sure typography is large enough for mobile feed viewing
+- Decorative quote marks must never collide with the text
+- Keep vertical alignment visually balanced across all quotes
+
+TECHNICAL
+- Build this in a way that can be previewed easily in-browser
+- Keep quotes in a simple array
+- Use clean reusable animation logic
+- Make timing easy to tweak later
+- Add an optional control to pause on a frame for testing
+- Do not include audio for now
+- Do not add captions, buttons, arrows, or UI clutter
+- Do not use em dashes anywhere in copy or comments
+
+BONUS
+If possible, also add a simple “record-ready” mode or export-friendly clean route with no nav, no browser clutter, and perfect centred framing so I can screen capture it or turn it into a rendered video cleanly.
+
+This should feel like a high-end brand statement for LinkedIn, not a slideshow template.
