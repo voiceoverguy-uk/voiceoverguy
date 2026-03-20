@@ -1,10 +1,23 @@
 {
   "framework": null,
   "cleanUrls": true,
+  "trailingSlash": false,
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/web run build",
   "outputDirectory": "artifacts/web/out",
   "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "voiceoverguy.co.uk" }],
+      "destination": "https://www.voiceoverguy.co.uk/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "(?!www\\.)(.*)\\.voiceoverguy\\.co\\.uk" }],
+      "destination": "https://www.voiceoverguy.co.uk/:path",
+      "statusCode": 301
+    },
     { "source": "/arabella-harris-voiceover-kid", "destination": "/arabella-harris-girl-child-voiceover-kid", "statusCode": 301 },
     { "source": "/studiotour/index.html", "destination": "/voiceover-studio", "statusCode": 301 },
     { "source": "/studiotour", "destination": "/voiceover-studio", "statusCode": 301 },
