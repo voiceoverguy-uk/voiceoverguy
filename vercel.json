@@ -36,7 +36,8 @@
       "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
     },
-    { "source": "/voiceover-videos", "destination": "/", "statusCode": 301 },
+    { "source": "/voiceover-videos", "destination": "/voiceover-news", "statusCode": 301 },
+    { "source": "/blog-wall", "destination": "/voiceover-news", "statusCode": 301 },
     { "source": "/arabella-harris-voiceover-kid", "destination": "/arabella-harris-girl-child-voiceover-kid", "statusCode": 301 },
     { "source": "/studiotour/index.html", "destination": "/voiceover-studio", "statusCode": 301 },
     { "source": "/studiotour", "destination": "/voiceover-studio", "statusCode": 301 },
@@ -49,7 +50,14 @@
     { "source": "/event-voice-of-god", "destination": "/voice-of-god", "statusCode": 301 },
     { "source": "/play-to-the-whistle-football-commentator", "destination": "/football-commentator-voice", "statusCode": 301 },
     { "source": "/guy-harris-voiceover", "destination": "/voiceoverguy", "statusCode": 301 },
-    { "source": "/studio-hire", "destination": "/voiceover-studio", "statusCode": 301 }
+    { "source": "/studio-hire", "destination": "/voiceover-studio", "statusCode": 301 },
+    { "source": "/nightmare-horror-adventures-spooky-voice", "destination": "/", "statusCode": 301 },
+    { "source": "/who", "destination": "/", "statusCode": 301 },
+    { "source": "/experian-explainer-video", "destination": "/", "statusCode": 301 },
+    { "source": "/voiceover-baby", "destination": "/", "statusCode": 301 },
+    { "source": "/poundland-dracula-voice", "destination": "/", "statusCode": 301 },
+    { "source": "/voiceover-newslatest-voiceover-news/:path(.*)", "destination": "/voiceover-news", "statusCode": 301 },
+    { "source": "/404", "destination": "/", "statusCode": 301 }
   ],
   "headers": [
     {
