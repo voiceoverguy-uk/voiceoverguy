@@ -10,8 +10,6 @@
     { "source": "/blog-wall", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
     { "source": "/voiceover-newslatest-voiceover-news/:path(.*)", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
     { "source": "/arabella-harris-voiceover-kid", "destination": "https://www.voiceoverguy.co.uk/arabella-harris-girl-child-voiceover-kid", "statusCode": 301 },
-    { "source": "/studiotour/index.html", "destination": "https://www.voiceoverguy.co.uk/voiceover-studio", "statusCode": 301 },
-    { "source": "/studiotour", "destination": "https://www.voiceoverguy.co.uk/voiceover-studio", "statusCode": 301 },
     { "source": "/maskedsinger-voiceover", "destination": "https://www.voiceoverguy.co.uk/masked-singer-voice-of-god-butlins", "statusCode": 301 },
     { "source": "/british-voiceover", "destination": "https://www.voiceoverguy.co.uk/voiceoverguy", "statusCode": 301 },
     { "source": "/news-blog", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
