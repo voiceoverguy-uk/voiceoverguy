@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import VideoTemplate from './video/VideoTemplate';
 import { toPng } from 'html-to-image';
+import { Muxer, ArrayBufferTarget } from 'mp4-muxer';
 
 type AspectRatio = 'square' | 'portrait';
 
@@ -10,6 +11,8 @@ const ASPECT_CONFIGS = {
 } as const;
 
 const TOTAL_DURATION_MS = 36500;
+const FPS = 10;
+const FRAME_INTERVAL = 1000 / FPS;
 
 export default function VideoControls() {
   const [aspect, setAspect] = useState<AspectRatio>('square');
@@ -19,6 +22,7 @@ export default function VideoControls() {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoContentRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.5);
+  const pausedRef = useRef(false);
   const config = ASPECT_CONFIGS[aspect];
 
   const recordUrl = `${window.location.pathname}?record&aspect=${aspect}`;
@@ -38,14 +42,18 @@ export default function VideoControls() {
   }, [config.width]);
 
   const handlePause = useCallback(() => {
-    setPaused(p => !p);
+    setPaused(p => {
+      const next = !p;
+      pausedRef.current = next;
+      return next;
+    });
   }, []);
 
   const handleDownload = useCallback(async () => {
     if (!videoContentRef.current || isRecording) return;
 
     setIsRecording(true);
-    setProgress('Preparing...');
+    setProgress('Preparing MP4...');
 
     try {
       const canvas = document.createElement('canvas');
@@ -53,31 +61,56 @@ export default function VideoControls() {
       canvas.height = config.height;
       const ctx = canvas.getContext('2d')!;
 
-      ctx.fillStyle = '#000000';
-      ctx.fillRect(0, 0, config.width, config.height);
-
-      const stream = canvas.captureStream(15);
-      const mediaRecorder = new MediaRecorder(stream, {
-        mimeType: MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
-          ? 'video/webm;codecs=vp9'
-          : 'video/webm',
-        videoBitsPerSecond: 5000000,
+      const muxer = new Muxer({
+        target: new ArrayBufferTarget(),
+        video: {
+          codec: 'avc',
+          width: config.width,
+          height: config.height,
+        },
+        fastStart: 'in-memory',
       });
 
-      const chunks: Blob[] = [];
-      mediaRecorder.ondataavailable = (e) => {
-        if (e.data.size > 0) chunks.push(e.data);
-      };
+      const encoder = new VideoEncoder({
+        output: (chunk, meta) => {
+          muxer.addVideoChunk(chunk, meta);
+        },
+        error: (e) => console.error('Encode error:', e),
+      });
 
+      encoder.configure({
+        codec: 'avc1.42001f',
+        width: config.width,
+        height: config.height,
+        bitrate: 4000000,
+        framerate: FPS,
+      });
+
+      const totalFrames = Math.ceil(TOTAL_DURATION_MS / FRAME_INTERVAL);
+      let frameCount = 0;
       const startTime = Date.now();
-      let animFrameId: number;
-      let stopped = false;
 
-      const captureFrame = async () => {
-        if (stopped || !videoContentRef.current) return;
+      const captureNextFrame = async (): Promise<void> => {
+        if (frameCount >= totalFrames || !videoContentRef.current) {
+          encoder.flush().then(() => {
+            muxer.finalize();
+            const target = muxer.target as ArrayBufferTarget;
+            const blob = new Blob([target.buffer], { type: 'video/mp4' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `voiceoverguy-quotes-${aspect}.mp4`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(() => URL.revokeObjectURL(url), 5000);
+            setIsRecording(false);
+            setProgress('');
+          });
+          return;
+        }
 
-        const elapsed = Date.now() - startTime;
-        const pct = Math.min(100, Math.round((elapsed / TOTAL_DURATION_MS) * 100));
+        const pct = Math.round((frameCount / totalFrames) * 100);
         setProgress(`Recording: ${pct}%`);
 
         try {
@@ -90,53 +123,45 @@ export default function VideoControls() {
             cacheBust: true,
           });
 
-          const img = new Image();
-          img.onload = () => {
-            ctx.drawImage(img, 0, 0, config.width, config.height);
-          };
-          img.src = dataUrl;
+          await new Promise<void>((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              ctx.drawImage(img, 0, 0, config.width, config.height);
+
+              const frame = new VideoFrame(canvas, {
+                timestamp: frameCount * FRAME_INTERVAL * 1000,
+                duration: FRAME_INTERVAL * 1000,
+              });
+              encoder.encode(frame, { keyFrame: frameCount % (FPS * 2) === 0 });
+              frame.close();
+
+              frameCount++;
+              resolve();
+            };
+            img.onerror = () => {
+              frameCount++;
+              resolve();
+            };
+            img.src = dataUrl;
+          });
         } catch {
-          ctx.fillStyle = '#000000';
-          ctx.fillRect(0, 0, config.width, config.height);
+          frameCount++;
         }
 
-        if (!stopped) {
-          animFrameId = requestAnimationFrame(captureFrame);
-        }
+        const elapsed = Date.now() - startTime;
+        const expectedElapsed = frameCount * FRAME_INTERVAL;
+        const delay = Math.max(0, expectedElapsed - elapsed);
+
+        await new Promise(r => setTimeout(r, delay));
+        return captureNextFrame();
       };
 
-      mediaRecorder.onstop = () => {
-        stopped = true;
-        cancelAnimationFrame(animFrameId);
-        const blob = new Blob(chunks, { type: 'video/webm' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `voiceoverguy-quotes-${aspect}.webm`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        setTimeout(() => URL.revokeObjectURL(url), 5000);
-        setIsRecording(false);
-        setProgress('');
-      };
-
-      mediaRecorder.start(200);
-      captureFrame();
-
-      setTimeout(() => {
-        stopped = true;
-        cancelAnimationFrame(animFrameId);
-        if (mediaRecorder.state === 'recording') {
-          mediaRecorder.stop();
-        }
-        stream.getTracks().forEach(t => t.stop());
-      }, TOTAL_DURATION_MS + 2000);
+      await captureNextFrame();
 
     } catch (err) {
       console.error('Recording failed:', err);
       setIsRecording(false);
-      setProgress('Recording failed. Try the clean view instead.');
+      setProgress('MP4 recording failed. Try the clean view instead.');
     }
   }, [aspect, config, isRecording]);
 
@@ -189,14 +214,9 @@ export default function VideoControls() {
             left: 0,
           }}
         >
-          {!paused && <VideoTemplate />}
-          {paused && (
-            <div className="w-full h-full bg-black flex items-center justify-center">
-              <span className="text-white/30 text-[2vw]" style={{ fontFamily: 'var(--font-display)' }}>
-                Paused
-              </span>
-            </div>
-          )}
+          <div style={{ animationPlayState: paused ? 'paused' : 'running' }}>
+            <VideoTemplate />
+          </div>
         </div>
       </div>
 
@@ -220,7 +240,7 @@ export default function VideoControls() {
           }`}
           style={{ fontFamily: 'var(--font-display)' }}
         >
-          {progress || 'Download Video'}
+          {progress || 'Download MP4'}
         </button>
       </div>
 
