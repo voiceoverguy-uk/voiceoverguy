@@ -80,6 +80,12 @@ export default function VideoControls() {
   const handleDownload = useCallback(async () => {
     if (!videoContentRef.current || isRecording) return;
 
+    if (typeof VideoEncoder === 'undefined') {
+      setProgress('Your browser does not support MP4 export. Use Chrome 94+ or Edge.');
+      setTimeout(() => setProgress(''), 5000);
+      return;
+    }
+
     setIsRecording(true);
     setProgress('Preparing MP4...');
 
