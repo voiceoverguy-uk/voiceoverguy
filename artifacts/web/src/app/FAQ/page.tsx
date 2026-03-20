@@ -39,34 +39,6 @@ export default function FAQ() {
 
             <div>
               <div className="sidebar-box">
-                <h3>Quick Contact</h3>
-                <p style={{ fontSize: '13px' }}><strong>Email:</strong> <a href="mailto:guy@voiceoverguy.co.uk">guy@voiceoverguy.co.uk</a></p>
-                <p style={{ fontSize: '13px' }}><strong>Source Connect:</strong> VoiceoverGuy</p>
-                <p style={{ fontSize: '13px' }}><strong>Cleanfeed:</strong> VoiceoverGuy</p>
-                <Link href="/contact-guy" className="cta-btn" style={{ display: 'block', textAlign: 'center', marginTop: '12px' }}>
-                  Get a Quote
-                </Link>
-              </div>
-
-              <div className="sidebar-box">
-                <h3>Pricing Guide</h3>
-                <p style={{ fontSize: '13px' }}>Web use pricing:</p>
-                <ul style={{ fontSize: '13px' }}>
-                  <li>Up to 100 words — <strong>£49.99</strong></li>
-                  <li>101–200 words — <strong>£74.99</strong></li>
-                  <li>201–400 words — <strong>£99.99</strong></li>
-                  <li>401–700 words — <strong>£139.99</strong></li>
-                  <li>700+ words / TV / Radio / Events — <strong>Quote</strong></li>
-                </ul>
-                <p style={{ fontSize: '12px', color: '#888', marginTop: '8px' }}>
-                  Use the pricing calculator on the Contact page for an instant estimate.
-                </p>
-                <Link href="/contact-guy" className="cta-btn" style={{ display: 'block', textAlign: 'center', marginTop: '12px' }}>
-                  Open Calculator
-                </Link>
-              </div>
-
-              <div className="sidebar-box">
                 <h3>Popular Pages</h3>
                 <ul>
                   <li><Link href="/commercial-voiceover">Commercial Voiceover</Link></li>
