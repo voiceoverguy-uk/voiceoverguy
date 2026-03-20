@@ -10,7 +10,14 @@
     { "source": "/studiotour", "destination": "/voiceover-studio", "statusCode": 301 },
     { "source": "/maskedsinger-voiceover", "destination": "/masked-singer-voice-of-god-butlins", "statusCode": 301 },
     { "source": "/british-voiceover", "destination": "/voiceoverguy", "statusCode": 301 },
-    { "source": "/news-blog", "destination": "/voiceover-news", "statusCode": 301 }
+    { "source": "/news-blog", "destination": "/voiceover-news", "statusCode": 301 },
+    { "source": "/pathe-voice", "destination": "/pathe-news-voice", "statusCode": 301 },
+    { "source": "/gameshow-host-voice", "destination": "/gameshow-host", "statusCode": 301 },
+    { "source": "/contact", "destination": "/contact-guy", "statusCode": 301 },
+    { "source": "/event-voice-of-god", "destination": "/voice-of-god", "statusCode": 301 },
+    { "source": "/play-to-the-whistle-football-commentator", "destination": "/football-commentator-voice", "statusCode": 301 },
+    { "source": "/guy-harris-voiceover", "destination": "/voiceoverguy", "statusCode": 301 },
+    { "source": "/studio-hire", "destination": "/voiceover-studio", "statusCode": 301 }
   ],
   "headers": [
     {
