@@ -48,7 +48,7 @@ export default function Page() {
           <div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s3 || '') }} />
           <div className="studio-tour-wrap">
             <iframe
-              src="https://www.voiceoverguy.co.uk/studiotour/index.html"
+              src="/studiotour/index.html"
               title="360\u00B0 VoiceoverGuy Studio Tour"
               allowFullScreen
             />
