@@ -31,7 +31,7 @@ export default function VideoTemplate() {
   const { currentScene } = useVideoPlayer({ durations: SCENE_DURATIONS });
 
   return (
-    <div className="w-full h-[100vh] overflow-hidden relative" style={{ backgroundColor: '#000000' }}>
+    <div className="w-full h-full overflow-hidden relative" style={{ backgroundColor: '#000000', minHeight: '100%' }}>
       <div className="absolute inset-0">
         <motion.div
           className="absolute w-[60vw] h-[60vw] rounded-full blur-[120px]"
