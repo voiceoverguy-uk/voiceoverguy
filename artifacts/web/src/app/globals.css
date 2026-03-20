@@ -2394,9 +2394,35 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .inner-col img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 6px;
   display: block;
   margin-top: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.inner-col img:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.reveal-row.reveal-ready {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-row.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-row.reveal-ready {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* YouTube / Vimeo responsive embed */
