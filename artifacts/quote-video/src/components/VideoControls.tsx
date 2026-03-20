@@ -17,12 +17,12 @@ const FRAME_INTERVAL = 1000 / FPS;
 export default function VideoControls() {
   const [aspect, setAspect] = useState<AspectRatio>('square');
   const [paused, setPaused] = useState(false);
+  const [pausedFrame, setPausedFrame] = useState<string | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [progress, setProgress] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
   const videoContentRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.5);
-  const pausedRef = useRef(false);
   const config = ASPECT_CONFIGS[aspect];
 
   const recordUrl = `${window.location.pathname}?record&aspect=${aspect}`;
@@ -41,13 +41,41 @@ export default function VideoControls() {
     return () => window.removeEventListener('resize', updateScale);
   }, [config.width]);
 
-  const handlePause = useCallback(() => {
-    setPaused(p => {
-      const next = !p;
-      pausedRef.current = next;
-      return next;
-    });
-  }, []);
+  const captureFullResFrame = useCallback(async (): Promise<string | null> => {
+    if (!videoContentRef.current) return null;
+    const el = videoContentRef.current;
+    const origTransform = el.style.transform;
+    const origPos = el.style.position;
+    el.style.transform = 'none';
+    el.style.position = 'absolute';
+    try {
+      const dataUrl = await toPng(el, {
+        width: config.width,
+        height: config.height,
+        pixelRatio: 1,
+        backgroundColor: '#000000',
+        skipAutoScale: true,
+        cacheBust: true,
+      });
+      return dataUrl;
+    } catch {
+      return null;
+    } finally {
+      el.style.transform = origTransform;
+      el.style.position = origPos;
+    }
+  }, [config.width, config.height]);
+
+  const handlePause = useCallback(async () => {
+    if (paused) {
+      setPaused(false);
+      setPausedFrame(null);
+    } else {
+      const frame = await captureFullResFrame();
+      setPausedFrame(frame);
+      setPaused(true);
+    }
+  }, [paused, captureFullResFrame]);
 
   const handleDownload = useCallback(async () => {
     if (!videoContentRef.current || isRecording) return;
@@ -92,21 +120,20 @@ export default function VideoControls() {
 
       const captureNextFrame = async (): Promise<void> => {
         if (frameCount >= totalFrames || !videoContentRef.current) {
-          encoder.flush().then(() => {
-            muxer.finalize();
-            const target = muxer.target as ArrayBufferTarget;
-            const blob = new Blob([target.buffer], { type: 'video/mp4' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `voiceoverguy-quotes-${aspect}.mp4`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            setTimeout(() => URL.revokeObjectURL(url), 5000);
-            setIsRecording(false);
-            setProgress('');
-          });
+          await encoder.flush();
+          muxer.finalize();
+          const target = muxer.target as ArrayBufferTarget;
+          const blob = new Blob([target.buffer], { type: 'video/mp4' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `voiceoverguy-quotes-${aspect}.mp4`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(() => URL.revokeObjectURL(url), 5000);
+          setIsRecording(false);
+          setProgress('');
           return;
         }
 
@@ -114,36 +141,39 @@ export default function VideoControls() {
         setProgress(`Recording: ${pct}%`);
 
         try {
-          const dataUrl = await toPng(videoContentRef.current, {
-            width: config.width,
-            height: config.height,
-            pixelRatio: 1,
-            backgroundColor: '#000000',
-            skipAutoScale: true,
-            cacheBust: true,
-          });
+          const dataUrl = await captureFullResFrame();
 
-          await new Promise<void>((resolve) => {
-            const img = new Image();
-            img.onload = () => {
-              ctx.drawImage(img, 0, 0, config.width, config.height);
-
-              const frame = new VideoFrame(canvas, {
-                timestamp: frameCount * FRAME_INTERVAL * 1000,
-                duration: FRAME_INTERVAL * 1000,
-              });
-              encoder.encode(frame, { keyFrame: frameCount % (FPS * 2) === 0 });
-              frame.close();
-
-              frameCount++;
-              resolve();
-            };
-            img.onerror = () => {
-              frameCount++;
-              resolve();
-            };
-            img.src = dataUrl;
-          });
+          if (dataUrl) {
+            await new Promise<void>((resolve) => {
+              const img = new Image();
+              img.onload = () => {
+                ctx.drawImage(img, 0, 0, config.width, config.height);
+                const frame = new VideoFrame(canvas, {
+                  timestamp: frameCount * FRAME_INTERVAL * 1000,
+                  duration: FRAME_INTERVAL * 1000,
+                });
+                encoder.encode(frame, { keyFrame: frameCount % (FPS * 2) === 0 });
+                frame.close();
+                frameCount++;
+                resolve();
+              };
+              img.onerror = () => {
+                frameCount++;
+                resolve();
+              };
+              img.src = dataUrl;
+            });
+          } else {
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, config.width, config.height);
+            const frame = new VideoFrame(canvas, {
+              timestamp: frameCount * FRAME_INTERVAL * 1000,
+              duration: FRAME_INTERVAL * 1000,
+            });
+            encoder.encode(frame, { keyFrame: true });
+            frame.close();
+            frameCount++;
+          }
         } catch {
           frameCount++;
         }
@@ -163,7 +193,7 @@ export default function VideoControls() {
       setIsRecording(false);
       setProgress('MP4 recording failed. Try the clean view instead.');
     }
-  }, [aspect, config, isRecording]);
+  }, [aspect, config, isRecording, captureFullResFrame]);
 
   return (
     <div className="min-h-screen bg-[#111] flex flex-col items-center justify-center p-8 gap-5">
@@ -202,22 +232,32 @@ export default function VideoControls() {
           height: config.height * scale,
         }}
       >
-        <div
-          ref={videoContentRef}
-          style={{
-            width: config.width,
-            height: config.height,
-            transform: `scale(${scale})`,
-            transformOrigin: 'top left',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-          }}
-        >
-          <div style={{ animationPlayState: paused ? 'paused' : 'running' }}>
+        {paused && pausedFrame ? (
+          <img
+            src={pausedFrame}
+            alt="Paused frame"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+            }}
+          />
+        ) : (
+          <div
+            ref={videoContentRef}
+            style={{
+              width: config.width,
+              height: config.height,
+              transform: `scale(${scale})`,
+              transformOrigin: 'top left',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+            }}
+          >
             <VideoTemplate />
           </div>
-        </div>
+        )}
       </div>
 
       <div className="flex items-center gap-4">
