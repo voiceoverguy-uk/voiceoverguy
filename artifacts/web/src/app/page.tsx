@@ -292,13 +292,6 @@ export default function Home() {
               to learn more.
             </p>
           </div>
-          <div className="home-block home-block--cta">
-            <p>
-              Ready to book a professional voice that&apos;s fast, reliable and broadcast-quality?{' '}
-              <Link href="/contact-guy" className="red-link">Get in touch today</Link>{' '}
-              — I&apos;m in the studio and ready to help.
-            </p>
-          </div>
         </div>
       </section>
 
