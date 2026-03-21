@@ -17,7 +17,7 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
   const startOffsetRef = useRef(0);
   const speedRef = useRef(0.6);
   const halfWidthRef = useRef(0);
-  const resumeTimerRef = useRef<ReturnType<typeof setTimeout>>();
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const measure = useCallback(() => {
     if (!trackRef.current) return;
