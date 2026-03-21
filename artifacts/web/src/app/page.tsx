@@ -216,31 +216,31 @@ export default function Home() {
       {/* CLUSTER A: CREDENTIALS & TRUST */}
       <section className="home-cluster">
         <div className="container">
-          <div className="home-block">
-            <div className="hero-bio">
+          <div className="home-callout-box home-callout-box--awards">
+            <div className="home-callout-box-text home-callout-box-text--wide">
+              <div className="hero-bio">
+                <p>
+                  Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
+                  Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
+                  including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
+                </p>
+              </div>
               <p>
-                Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
-                Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
-                including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
+                <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
+              </p>
+              <p>
+                If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
+                Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
+                Choose from{' '}
+                <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
+                <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
+                <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
+                <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,{' '}
+                and his highly requested{' '}
+                <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
+                — just ask Google.
               </p>
             </div>
-          </div>
-          <div className="home-block">
-            <p>
-              <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
-            </p>
-            <p>
-              If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
-              Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
-              Choose from{' '}
-              <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
-              <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
-              <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
-              <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,{' '}
-              and his highly requested{' '}
-              <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
-              — just ask Google.
-            </p>
           </div>
         </div>
       </section>
