@@ -940,18 +940,25 @@ button.nav-link {
 }
 
 .home-callout-box--awards::before {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  background: url('/assets/images/vox-awards-strip.webp') center center / contain no-repeat;
-  opacity: 0.12;
-  mask-image: none;
-  -webkit-mask-image: none;
+  display: none;
 }
 
 .home-callout-box-text--wide {
   max-width: 100%;
+}
+
+.awards-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  opacity: 0.85;
+}
+
+.awards-badges img {
+  display: block;
 }
 
 .home-callout-box--stage::before {

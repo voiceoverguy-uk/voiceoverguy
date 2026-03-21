@@ -228,6 +228,15 @@ export default function Home() {
               <p>
                 <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
               </p>
+              <div className="awards-badges">
+                <img src="/assets/images/vox-2011.webp" alt="VOX Award 2011 Best Male Performance Winner" width="90" height="90" />
+                <img src="/assets/images/vox-2014.webp" alt="VOX Award 2014 Best Male Performance Winner" width="90" height="90" />
+                <img src="/assets/images/vox-2018.webp" alt="VOX Award 2018 Winner" width="90" height="90" />
+                <img src="/assets/images/vox-2019.webp" alt="VOX Award 2019 Best In Store Voice Winner" width="90" height="90" />
+                <img src="/assets/images/vox-2021.webp" alt="VOX Award 2021 Finalist" width="90" height="90" />
+                <img src="/assets/images/vox-2022.webp" alt="VOX Award 2022 Nominee" width="90" height="90" />
+                <img src="/assets/images/sovas-2015.webp" alt="SOVAS Voice Arts Award 2015 Nominated" width="160" height="80" />
+              </div>
               <p>
                 If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
                 Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
