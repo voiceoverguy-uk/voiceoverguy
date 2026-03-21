@@ -943,7 +943,16 @@ button.nav-link {
   display: none;
 }
 
+.home-callout-box--awards {
+  max-width: 860px;
+}
+
 .home-callout-box-text--wide {
+  max-width: 100%;
+}
+
+.home-callout-box-text--wide p,
+.home-callout-box-text--wide .hero-bio p {
   max-width: 100%;
 }
 
