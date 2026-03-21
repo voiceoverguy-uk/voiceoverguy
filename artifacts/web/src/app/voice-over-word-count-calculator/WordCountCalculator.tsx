@@ -184,7 +184,7 @@ export default function WordCountCalculator() {
                 max="400"
                 step="1"
                 className="calc-slider"
-                value={customWpm || (useCustom ? '150' : '150')}
+                value={customWpm || String(selectedWpm)}
                 onChange={e => handleCustomChange(e.target.value)}
                 aria-label="Custom words per minute slider"
               />

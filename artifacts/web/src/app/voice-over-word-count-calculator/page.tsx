@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import WordCountCalculator from './WordCountCalculator';
-import CalcFaqAccordion from './CalcFaqAccordion';
+import FaqAccordion from '@/components/FaqAccordion';
 import { SchemaScripts, faqPage, webPage, breadcrumb } from '@/lib/staticPageSchema';
 
 export const metadata: Metadata = {
@@ -91,7 +91,7 @@ export default function VoiceOverWordCountCalculatorPage() {
 
           <div className="calc-faq-section">
             <h2>Frequently Asked Questions</h2>
-            <CalcFaqAccordion faqs={FAQ_DATA} />
+            <FaqAccordion faqs={FAQ_DATA} />
           </div>
         </div>
       </section>

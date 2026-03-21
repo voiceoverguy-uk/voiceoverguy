@@ -61,7 +61,13 @@ const faqs = [
   },
 ];
 
-export default function FaqAccordion() {
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
+export default function FaqAccordion({ faqs: customFaqs }: { faqs?: FaqItem[] } = {}) {
+  const items = customFaqs || faqs;
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (i: number) => {
@@ -70,7 +76,7 @@ export default function FaqAccordion() {
 
   return (
     <div className="faq-list">
-      {faqs.map((faq, i) => (
+      {items.map((faq, i) => (
         <div className="faq-item" key={i}>
           <button
             className="faq-question-btn"
