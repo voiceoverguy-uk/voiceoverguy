@@ -216,40 +216,36 @@ export default function Home() {
       {/* CLUSTER A: CREDENTIALS & TRUST */}
       <section className="home-cluster">
         <div className="container">
-          <div className="home-callout-box home-callout-box--awards">
-            <div className="home-callout-box-text home-callout-box-text--wide">
-              <div className="hero-bio">
-                <p>
-                  Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
-                  Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
-                  including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
-                </p>
-              </div>
-              <p>
-                <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
-              </p>
-              <div className="awards-badges">
-                <img src="/assets/images/vox-2011.webp" alt="VOX Award 2011 Best Male Performance Winner" width="90" height="90" />
-                <img src="/assets/images/vox-2014.webp" alt="VOX Award 2014 Best Male Performance Winner" width="90" height="90" />
-                <img src="/assets/images/vox-2018.webp" alt="VOX Award 2018 Winner" width="90" height="90" />
-                <img src="/assets/images/vox-2019.webp" alt="VOX Award 2019 Best In Store Voice Winner" width="90" height="90" />
-                <img src="/assets/images/vox-2021.webp" alt="VOX Award 2021 Finalist" width="90" height="90" />
-                <img src="/assets/images/vox-2022.webp" alt="VOX Award 2022 Nominee" width="90" height="90" />
-                <img src="/assets/images/sovas-2015.webp" alt="SOVAS Voice Arts Award Nominee" width="90" height="90" />
-              </div>
-              <p>
-                If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
-                Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
-                Choose from{' '}
-                <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
-                <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
-                <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
-                <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,{' '}
-                and his highly requested{' '}
-                <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
-                — just ask Google.
-              </p>
+          <div className="credentials-box">
+            <p>
+              Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
+              Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
+              including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
+            </p>
+            <p>
+              <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
+            </p>
+            <div className="awards-badges">
+              <img src="/assets/images/vox-2011.webp" alt="VOX Award 2011 Best Male Performance Winner" width="90" height="90" />
+              <img src="/assets/images/vox-2014.webp" alt="VOX Award 2014 Best Male Performance Winner" width="90" height="90" />
+              <img src="/assets/images/vox-2018.webp" alt="VOX Award 2018 Winner" width="90" height="90" />
+              <img src="/assets/images/vox-2019.webp" alt="VOX Award 2019 Best In Store Voice Winner" width="90" height="90" />
+              <img src="/assets/images/vox-2021.webp" alt="VOX Award 2021 Finalist" width="90" height="90" />
+              <img src="/assets/images/vox-2022.webp" alt="VOX Award 2022 Nominee" width="90" height="90" />
+              <img src="/assets/images/sovas-2015.webp" alt="SOVAS Voice Arts Award Nominee" width="90" height="90" />
             </div>
+            <p>
+              If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
+              Guy delivers <strong>broadcast-quality audio</strong> from his professional studio.{' '}
+              Choose from{' '}
+              <Link href="/commercial-voiceover" className="red-link">TV &amp; Radio ads</Link>,{' '}
+              <Link href="/explainer-video-voice" className="red-link">Explainer voiceovers</Link>,{' '}
+              <a href="https://www.pathevoice.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Pathé News Voiceover</a>,{' '}
+              <Link href="/character-voiceover" className="red-link">Character Voiceovers</Link>,{' '}
+              and his highly requested{' '}
+              <Link href="/david-attenborough-voice" className="red-link">David Attenborough impression</Link>{' '}
+              — just ask Google.
+            </p>
           </div>
         </div>
       </section>

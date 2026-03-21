@@ -939,27 +939,38 @@ button.nav-link {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
-.home-callout-box--awards::before {
-  display: none;
-}
-
-.home-callout-box--awards {
+.credentials-box {
+  background: white;
+  border-radius: 10px;
+  padding: 36px 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--red);
   max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.home-callout-box-text--wide {
+.credentials-box p {
   max-width: 100%;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 0 14px;
 }
 
-.home-callout-box-text--wide p,
-.home-callout-box-text--wide .hero-bio,
-.home-callout-box-text--wide .hero-bio p,
-.home-cluster .home-callout-box-text--wide p,
-.home-cluster .home-callout-box-text--wide .hero-bio,
-.home-cluster .home-callout-box-text--wide .hero-bio p {
-  max-width: 100% !important;
-  margin-left: 0;
-  margin-right: 0;
+.credentials-box a.red-link {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.credentials-box a.red-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .credentials-box {
+    padding: 24px 20px;
+  }
 }
 
 .awards-badges {
