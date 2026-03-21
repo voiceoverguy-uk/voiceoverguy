@@ -962,8 +962,16 @@ button.nav-link {
   max-width: 60%;
 }
 
-.home-callout-box + .home-callout-box {
-  margin-top: 32px;
+.home-cluster-divider {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.home-cluster-divider hr {
+  border: none;
+  border-top: 1px solid #d5d5d5;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .home-callout-box h2 {
