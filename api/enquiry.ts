@@ -43,16 +43,9 @@ function buildEnquiryEmail(data: {
 
       <!-- Header -->
       <tr>
-        <td style="background:#9C060B;padding:24px 32px;">
-          <table cellpadding="0" cellspacing="0" border="0"><tr>
-            <td style="vertical-align:middle;padding-right:14px;">
-              <img src="https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.png" alt="VoiceoverGuy" width="48" height="48" style="display:block;border-radius:4px;" />
-            </td>
-            <td style="vertical-align:middle;">
-              <span style="font-family:Arial,sans-serif;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:1px;">VOICEOVERGUY</span>
-              <p style="margin:4px 0 0;font-size:13px;color:rgba(255,255,255,0.8);">New enquiry via <a href="https://www.voiceoverguy.co.uk" style="color:#ffffff;text-decoration:underline;">voiceoverguy.co.uk</a></p>
-            </td>
-          </tr></table>
+        <td style="background:#9C060B;padding:28px 32px;text-align:center;">
+          <img src="https://www.voiceoverguy.co.uk/assets/images/voiceoverguy-email-banner.jpg" alt="VoiceoverGuy - Guy Harris Male Voiceover" width="400" style="display:block;margin:0 auto 12px;max-width:100%;height:auto;" />
+          <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.85);">New enquiry via <a href="https://www.voiceoverguy.co.uk" style="color:#ffffff;text-decoration:underline;">voiceoverguy.co.uk</a></p>
         </td>
       </tr>
 
