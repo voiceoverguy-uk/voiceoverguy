@@ -186,7 +186,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <p className="video-intro-text">
-            Not sure where to start? Here are my most requested styles, from commercial reads to character voices. Each video gives you a quick taste of how I can bring your project to life.
+            Not sure where to start? Here are my most requested voiceover styles.
           </p>
           <div className="video-grid">
             {videoTiles.map(v => (
