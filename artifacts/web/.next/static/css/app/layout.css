@@ -2293,7 +2293,11 @@ textarea.form-control--compact {
 
   .navbar:not(.navbar--fixed) .navbar-inner {
     height: 0;
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  .navbar:not(.navbar--fixed) .navbar-nav {
+    top: 0;
   }
 
   .navbar.navbar--fixed .navbar-toggle {
