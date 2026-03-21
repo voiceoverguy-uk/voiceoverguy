@@ -121,12 +121,15 @@ export default function Navbar() {
             <span />
             <span />
           </button>
-          {/* Mobile mini logo (visible only when navbar is fixed on mobile) */}
-          <Link href="/" className="navbar-mini-logo">
+          {/* Fixed mobile: inline search + G icon */}
+          <div className="navbar-fixed-search">
+            <LiveSearch />
+          </div>
+          <Link href="/" className="navbar-fixed-icon">
             <img
-              src="/assets/images/guy-harris-voiceover.png"
-              alt="Guy Harris VoiceoverGuy"
-              className="navbar-mini-logo-img"
+              src="/assets/images/voiceover-guy-icon.png"
+              alt="VoiceoverGuy"
+              className="navbar-fixed-icon-img"
             />
           </Link>
 
