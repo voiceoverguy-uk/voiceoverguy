@@ -162,7 +162,7 @@ export default function ContactForm({
           value={message}
           onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
           required
-          placeholder="Paste your script here… or just describe what you need."
+          placeholder="Tell me a little about your project and usage..."
         />
         {message.length > 0 && (
           <span className={`blog-enquiry-wordcount${messageReady ? ' blog-enquiry-wordcount--ok' : ''}`}>
