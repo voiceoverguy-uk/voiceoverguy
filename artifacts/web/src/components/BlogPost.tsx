@@ -71,6 +71,18 @@ function NImage({ filename, alt }: { filename: string; alt?: string }) {
   );
 }
 
+function getAdjacentPosts(currentId: number): { prev: BlogPostType | null; next: BlogPostType | null } {
+  const publishable = blogPosts.filter(
+    p => !p.conflictsWithCorePage && p.blogRating !== 'not-a-blog'
+  );
+  const idx = publishable.findIndex(p => p.id === currentId);
+  if (idx === -1) return { prev: null, next: null };
+  return {
+    prev: idx > 0 ? publishable[idx - 1] : publishable[publishable.length - 1],
+    next: idx < publishable.length - 1 ? publishable[idx + 1] : publishable[0],
+  };
+}
+
 function getRelatedPosts(currentId: number, count: number): BlogPostType[] {
   const publishable = blogPosts.filter(
     p => !p.conflictsWithCorePage && p.id !== currentId && isValidImageFilename(p.image)
@@ -121,6 +133,7 @@ export default function BlogPost({ post }: Props) {
   ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image));
 
   const relatedPosts = getRelatedPosts(post.id, 3);
+  const { prev, next } = getAdjacentPosts(post.id);
 
   const schemas = buildAllBlogSchemas(post);
 
@@ -134,14 +147,28 @@ export default function BlogPost({ post }: Props) {
         />
       ))}
       <div className="page-header">
-        <div className="container">
-          <h1>{post.pageTitle}</h1>
-          {post.info && (
-            <div
-              className="page-header-sub"
-              dangerouslySetInnerHTML={{ __html: normaliseHtml(post.info) }}
-            />
-          )}
+        <div className="container page-header-nav-wrap">
+          <div className="page-header-content">
+            <h1>{post.pageTitle}</h1>
+            {post.info && (
+              <div
+                className="page-header-sub"
+                dangerouslySetInnerHTML={{ __html: normaliseHtml(post.info) }}
+              />
+            )}
+          </div>
+          <div className="page-header-arrows">
+            {prev && (
+              <Link href={`/${prev.url}`} className="page-header-arrow" title={prev.pageTitle} aria-label={`Previous: ${prev.pageTitle}`}>
+                ‹
+              </Link>
+            )}
+            {next && (
+              <Link href={`/${next.url}`} className="page-header-arrow" title={next.pageTitle} aria-label={`Next: ${next.pageTitle}`}>
+                ›
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 
