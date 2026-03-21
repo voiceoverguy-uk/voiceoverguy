@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/FAQ/page": "app/FAQ/page.js",
   "/voice-over-word-count-calculator/page": "app/voice-over-word-count-calculator/page.js"
 }

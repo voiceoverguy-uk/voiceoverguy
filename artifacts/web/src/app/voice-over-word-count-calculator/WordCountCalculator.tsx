@@ -94,16 +94,37 @@ export default function WordCountCalculator() {
     setCustomWpm('');
     setUseCustom(false);
     setCopied(false);
-  }, []);
+    const defaultWpm = mode === 'voiceover' ? 150 : 238;
+    setSelectedWpm(defaultWpm);
+  }, [mode]);
 
   const handleCopyResult = useCallback(() => {
     if (!hasResult) return;
     const text = `${wordCount} words at ${activeWpm} WPM = ${formatTime(mainResult)}`;
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }).catch(() => {
+        fallbackCopy(text);
+      });
+    } else {
+      fallbackCopy(text);
+    }
   }, [hasResult, wordCount, activeWpm, mainResult]);
+
+  const fallbackCopy = (text: string) => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="calc-wrapper">
