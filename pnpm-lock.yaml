@@ -74,10 +74,13 @@ importers:
     dependencies:
       openai:
         specifier: ^6.31.0
-        version: 6.31.0(zod@4.3.6)
+        version: 6.31.0(zod@3.25.76)
       resend:
         specifier: ^6.0.0
         version: 6.9.3
+      zod:
+        specifier: ^3.25.76
+        version: 3.25.76
     devDependencies:
       '@types/node':
         specifier: ^20.0.0
@@ -6441,6 +6444,10 @@ snapshots:
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
+
+  openai@6.31.0(zod@3.25.76):
+    optionalDependencies:
+      zod: 3.25.76
 
   openai@6.31.0(zod@4.3.6):
     optionalDependencies:
