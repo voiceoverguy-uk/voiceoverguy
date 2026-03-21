@@ -670,6 +670,10 @@ button.nav-link {
   width: auto;
 }
 
+.navbar-toggle-top {
+  display: none;
+}
+
 /* ===== MOBILE HAMBURGER ===== */
 .navbar-toggle {
   display: none;
@@ -2248,6 +2252,43 @@ textarea.form-control--compact {
     justify-content: flex-start;
   }
 
+  .navbar-logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .navbar-logo-row .navbar-toggle-top {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .navbar-logo-row .navbar-toggle-top span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--text);
+    transition: 0.3s;
+  }
+
+  .navbar:not(.navbar--fixed) .navbar-toggle {
+    display: none;
+  }
+
+  .navbar.navbar--fixed .navbar-toggle {
+    display: flex;
+  }
+
   .navbar-nav {
     display: none;
     flex-direction: column;
@@ -2285,9 +2326,8 @@ textarea.form-control--compact {
     display: flex;
   }
 
-  .navbar.navbar--fixed .navbar-mini-logo {
-    display: flex;
-    opacity: 1;
+  .navbar-mini-logo {
+    display: none !important;
   }
 
   .nav-item {

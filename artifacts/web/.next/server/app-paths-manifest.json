@@ -1,6 +1,4 @@
 {
   "/page": "app/page.js",
-  "/[slug]/page": "app/[slug]/page.js",
-  "/explainer-video-voice/page": "app/explainer-video-voice/page.js",
-  "/contact-guy/page": "app/contact-guy/page.js"
+  "/voiceover-news/page": "app/voiceover-news/page.js"
 }

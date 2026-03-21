@@ -28,6 +28,7 @@ const links = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openItem, setOpenItem] = useState<string | null>(null);
+  const [isFixed, setIsFixed] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
@@ -69,6 +70,7 @@ export default function Navbar() {
       const shouldFix = logoBottom <= 0;
       if (shouldFix !== isFixedRef.current) {
         isFixedRef.current = shouldFix;
+        setIsFixed(shouldFix);
         navRef.current.classList.toggle('navbar--fixed', shouldFix);
         if (spacerRef.current) {
           spacerRef.current.style.display = shouldFix ? 'block' : 'none';
@@ -84,6 +86,18 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar-logo-row" ref={logoRef}>
+        {!isFixed && (
+          <button
+            className="navbar-toggle-top"
+            aria-label="Toggle navigation"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen(o => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        )}
         <Link href="/" className="navbar-logo">
           <img
             src="/assets/images/guy-harris-voiceover.png"
