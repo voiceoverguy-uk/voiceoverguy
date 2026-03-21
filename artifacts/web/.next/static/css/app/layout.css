@@ -920,26 +920,33 @@ button.nav-link {
 .home-callout-box {
   background: white;
   border-radius: 10px;
+  padding: 36px 40px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   border-left: 4px solid var(--red);
   max-width: 780px;
   margin: 0 auto;
-  display: flex;
-  align-items: stretch;
+  position: relative;
   overflow: hidden;
 }
 
-.home-callout-box-text {
-  flex: 1 1;
-  padding: 36px 32px 36px 40px;
-  min-width: 0;
-}
-
-.home-callout-box-image {
-  width: 220px;
-  flex-shrink: 0;
+.home-callout-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 45%;
   background: url('/assets/images/arabella-harris-voiceover-kid.jpg') center center / cover no-repeat;
   opacity: 0.4;
+  pointer-events: none;
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+}
+
+.home-callout-box-text {
+  position: relative;
+  z-index: 1;
+  max-width: 60%;
 }
 
 .home-callout-box h2 {
@@ -952,15 +959,13 @@ button.nav-link {
 
 @media (max-width: 600px) {
   .home-callout-box {
-    flex-direction: column;
-  }
-  .home-callout-box-text {
     padding: 24px 20px;
   }
-  .home-callout-box-image {
-    width: 100%;
-    height: 140px;
-    opacity: 0.3;
+  .home-callout-box::before {
+    display: none;
+  }
+  .home-callout-box-text {
+    max-width: 100%;
   }
 }
 
