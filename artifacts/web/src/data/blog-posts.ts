@@ -7406,7 +7406,7 @@ const blogPosts: BlogPost[] = [
     "nimage2": "",
     "nimage3": "",
     "nimage4": "",
-    "conflictsWithCorePage": false
+    "conflictsWithCorePage": true
   },
   {
     "id": 954,
