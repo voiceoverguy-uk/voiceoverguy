@@ -2239,15 +2239,10 @@ textarea.form-control--compact {
   .navbar-logo-row {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    text-align: right;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    padding: 8px 15px 2px;
-  }
-
-  .navbar-logo-row .navbar-logo {
-    margin-left: auto;
-    margin-right: 0;
+    padding: 8px 15px 4px;
   }
 
   .navbar-logo-row .navbar-toggle-top {
@@ -2322,7 +2317,7 @@ textarea.form-control--compact {
   }
 
   .search-bar {
-    padding: 0 12px 6px;
+    padding: 4px 12px 6px;
   }
 
   .nav-item {
@@ -2444,11 +2439,11 @@ textarea.form-control--compact {
   }
 
   .navbar-logo-row {
-    padding: 8px 15px 2px;
+    padding: 8px 15px 4px;
   }
 
   .search-bar {
-    padding: 0 12px 4px;
+    padding: 4px 12px 6px;
   }
 }
 
