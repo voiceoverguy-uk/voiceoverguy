@@ -116,34 +116,36 @@ export default function ContactForm({
         style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
       />
 
-      <div className="form-group" style={groupStyle}>
-        <label htmlFor="contact-name" style={labelStyle}>Your name *</label>
-        <input
-          id="contact-name"
-          type="text"
-          className={`form-control${errors.name ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
-          value={name}
-          onChange={e => { setName(e.target.value); setErrors(p => ({ ...p, name: undefined })); }}
-          required
-          placeholder="Your full name"
-          autoComplete="name"
-        />
-        {errors.name && <span className="blog-enquiry-error">{errors.name}</span>}
-      </div>
+      <div className="form-inline-row">
+        <div className="form-group" style={groupStyle}>
+          <label htmlFor="contact-name" style={labelStyle}>Your name *</label>
+          <input
+            id="contact-name"
+            type="text"
+            className={`form-control${errors.name ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
+            value={name}
+            onChange={e => { setName(e.target.value); setErrors(p => ({ ...p, name: undefined })); }}
+            required
+            placeholder="Your full name"
+            autoComplete="name"
+          />
+          {errors.name && <span className="blog-enquiry-error">{errors.name}</span>}
+        </div>
 
-      <div className="form-group" style={groupStyle}>
-        <label htmlFor="contact-email" style={labelStyle}>Email address *</label>
-        <input
-          id="contact-email"
-          type="email"
-          className={`form-control${errors.email ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
-          value={email}
-          onChange={e => { setEmail(e.target.value); setErrors(p => ({ ...p, email: undefined })); }}
-          required
-          placeholder="your@email.com"
-          autoComplete="email"
-        />
-        {errors.email && <span className="blog-enquiry-error">{errors.email}</span>}
+        <div className="form-group" style={groupStyle}>
+          <label htmlFor="contact-email" style={labelStyle}>Email address *</label>
+          <input
+            id="contact-email"
+            type="email"
+            className={`form-control${errors.email ? ' form-control--error' : ''}${compact ? ' form-control--compact' : ''}`}
+            value={email}
+            onChange={e => { setEmail(e.target.value); setErrors(p => ({ ...p, email: undefined })); }}
+            required
+            placeholder="your@email.com"
+            autoComplete="email"
+          />
+          {errors.email && <span className="blog-enquiry-error">{errors.email}</span>}
+        </div>
       </div>
 
       <div className="form-group" style={groupStyle}>

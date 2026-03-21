@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/contact-guy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/contact-guy/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -20,26 +20,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
-    ],
-    "/voice-over-word-count-calculator/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voice-over-word-count-calculator/page.js"
-    ],
-    "/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[slug]/page.js"
-    ],
-    "/FAQ/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/FAQ/page.js"
-    ],
-    "/contact-guy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact-guy/page.js"
     ]
   }
 }

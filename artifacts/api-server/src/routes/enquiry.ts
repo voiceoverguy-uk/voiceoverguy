@@ -98,58 +98,64 @@ function buildEnquiryEmail(data: {
 }
 
 router.post('/enquiry', async (req: Request, res: Response) => {
-  const parsed = EnquiryInput.safeParse(req.body);
+  try {
+    const parsed = EnquiryInput.safeParse(req.body);
 
-  if (!parsed.success) {
-    const messages = parsed.error.issues.map((i: { message: string }) => i.message);
-    res.status(400).json({ error: messages[0] ?? 'Invalid submission' });
-    return;
-  }
+    if (!parsed.success) {
+      const messages = parsed.error.issues.map((i: { message: string }) => i.message);
+      res.status(400).json({ error: messages[0] ?? 'Invalid submission' });
+      return;
+    }
 
-  const { name, email, message, pageTitle, pageUrl, website } = parsed.data;
+    const { name, email, message, pageTitle, pageUrl, website } = parsed.data;
 
-  if (website && website.length > 0) {
+    if (website && website.length > 0) {
+      res.status(200).json({ ok: true });
+      return;
+    }
+
+    const apiKey = process.env['RESEND_API_KEY'];
+    const toEmail = process.env['CONTACT_TO_EMAIL'] ?? 'enquiries@voiceoverguy.co.uk';
+    const fromEmail = process.env['CONTACT_FROM_EMAIL'] ?? 'noreply@voiceoverguy.co.uk';
+
+    if (!apiKey) {
+      console.error('[enquiry] RESEND_API_KEY not set');
+      res.status(500).json({ error: 'Email service not configured.' });
+      return;
+    }
+
+    const resend = new Resend(apiKey);
+
+    const ip = (
+      (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
+      req.ip ||
+      ''
+    );
+
+    const timestamp = new Date().toUTCString();
+
+    const html = buildEnquiryEmail({ name, email, message, pageTitle, pageUrl, ip, timestamp });
+
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
+      replyTo: email,
+      subject: `VoiceoverGuy — Enquiry from ${pageTitle}`,
+      html,
+    });
+
+    if (error) {
+      console.error('[enquiry] Resend error:', JSON.stringify(error));
+      res.status(500).json({ error: 'Failed to send your message. Please try again.' });
+      return;
+    }
+
     res.status(200).json({ ok: true });
-    return;
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    console.error('[enquiry] Unhandled error:', errMsg);
+    res.status(500).json({ error: 'An unexpected error occurred. Please try again.' });
   }
-
-  const apiKey = process.env['RESEND_API_KEY'];
-  const toEmail = process.env['CONTACT_TO_EMAIL'] ?? 'enquiries@voiceoverguy.co.uk';
-  const fromEmail = process.env['CONTACT_FROM_EMAIL'] ?? 'noreply@voiceoverguy.co.uk';
-
-  if (!apiKey) {
-    console.error('[enquiry] RESEND_API_KEY not set');
-    res.status(500).json({ error: 'Email service not configured.' });
-    return;
-  }
-
-  const resend = new Resend(apiKey);
-
-  const ip = (
-    (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
-    req.ip ||
-    ''
-  );
-
-  const timestamp = new Date().toUTCString();
-
-  const html = buildEnquiryEmail({ name, email, message, pageTitle, pageUrl, ip, timestamp });
-
-  const { error } = await resend.emails.send({
-    from: fromEmail,
-    to: toEmail,
-    replyTo: email,
-    subject: `VoiceoverGuy — Enquiry from ${pageTitle}`,
-    html,
-  });
-
-  if (error) {
-    console.error('[enquiry] Resend error:', error);
-    res.status(500).json({ error: 'Failed to send your message. Please try again.' });
-    return;
-  }
-
-  res.status(200).json({ ok: true });
 });
 
 export default router;

@@ -1,6 +1,24 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
-import { EnquiryInput } from '../lib/api-zod/src/enquiry';
+import { z } from 'zod';
+
+function countWords(s: string): number {
+  return s.trim().replace(/\s+/g, ' ').split(' ').filter(Boolean).length;
+}
+
+const EnquiryInput = z.object({
+  name: z.string().min(1, 'Name is required'),
+  email: z.string().email('Please enter a valid email address'),
+  message: z
+    .string()
+    .min(1, 'Message is required')
+    .refine((s) => countWords(s) >= 8, {
+      message: 'Please write at least 8 words in your message',
+    }),
+  pageTitle: z.string(),
+  pageUrl: z.string(),
+  website: z.string().optional().default(''),
+});
 
 function buildEnquiryEmail(data: {
   name: string;
@@ -96,58 +114,65 @@ function buildEnquiryEmail(data: {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
+  try {
+    if (req.method !== 'POST') {
+      res.status(405).json({ error: 'Method not allowed' });
+      return;
+    }
 
-  const parsed = EnquiryInput.safeParse(req.body);
+    const parsed = EnquiryInput.safeParse(req.body);
 
-  if (!parsed.success) {
-    const messages = parsed.error.issues.map(i => i.message);
-    res.status(400).json({ error: messages[0] ?? 'Invalid submission' });
-    return;
-  }
+    if (!parsed.success) {
+      const messages = parsed.error.issues.map(i => i.message);
+      res.status(400).json({ error: messages[0] ?? 'Invalid submission' });
+      return;
+    }
 
-  const { name, email, message, pageTitle, pageUrl, website } = parsed.data;
+    const { name, email, message, pageTitle, pageUrl, website } = parsed.data;
 
-  if (website && website.length > 0) {
+    if (website && website.length > 0) {
+      res.status(200).json({ ok: true });
+      return;
+    }
+
+    const apiKey = process.env['RESEND_API_KEY'];
+    const toEmail = process.env['CONTACT_TO_EMAIL'] ?? 'enquiries@voiceoverguy.co.uk';
+    const fromEmail = process.env['CONTACT_FROM_EMAIL'] ?? 'noreply@voiceoverguy.co.uk';
+
+    if (!apiKey) {
+      res.status(500).json({ error: 'Email service not configured.' });
+      return;
+    }
+
+    const resend = new Resend(apiKey);
+
+    const ip = (
+      (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
+      ''
+    );
+
+    const timestamp = new Date().toUTCString();
+
+    const html = buildEnquiryEmail({ name, email, message, pageTitle, pageUrl, ip, timestamp });
+
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
+      replyTo: email,
+      subject: `VoiceoverGuy — Enquiry from ${pageTitle}`,
+      html,
+    });
+
+    if (error) {
+      console.error('[enquiry] Resend error:', JSON.stringify(error));
+      res.status(500).json({ error: 'Failed to send your message. Please try again.' });
+      return;
+    }
+
     res.status(200).json({ ok: true });
-    return;
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error('[enquiry] Unhandled error:', message);
+    res.status(500).json({ error: 'An unexpected error occurred. Please try again.' });
   }
-
-  const apiKey = process.env['RESEND_API_KEY'];
-  const toEmail = process.env['CONTACT_TO_EMAIL'] ?? 'enquiries@voiceoverguy.co.uk';
-  const fromEmail = process.env['CONTACT_FROM_EMAIL'] ?? 'noreply@voiceoverguy.co.uk';
-
-  if (!apiKey) {
-    res.status(500).json({ error: 'Email service not configured.' });
-    return;
-  }
-
-  const resend = new Resend(apiKey);
-
-  const ip = (
-    (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
-    ''
-  );
-
-  const timestamp = new Date().toUTCString();
-
-  const html = buildEnquiryEmail({ name, email, message, pageTitle, pageUrl, ip, timestamp });
-
-  const { error } = await resend.emails.send({
-    from: fromEmail,
-    to: toEmail,
-    replyTo: email,
-    subject: `VoiceoverGuy — Enquiry from ${pageTitle}`,
-    html,
-  });
-
-  if (error) {
-    res.status(500).json({ error: 'Failed to send your message. Please try again.' });
-    return;
-  }
-
-  res.status(200).json({ ok: true });
 }

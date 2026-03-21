@@ -1710,6 +1710,19 @@ audio {
   object-fit: cover;
 }
 
+.form-inline-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-inline-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .form-group {
   margin-bottom: 16px;
 }
