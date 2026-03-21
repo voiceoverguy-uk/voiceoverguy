@@ -1,3 +1,4 @@
 {
-  "/contact-guy/page": "app/contact-guy/page.js"
+  "/contact-guy/page": "app/contact-guy/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

@@ -153,7 +153,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
             rows={4}
             value={message}
             onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
-            placeholder="Tell me a little about your project…"
+            placeholder="Tell me a little about your project and usage..."
           />
           {message.length > 0 && (
             <span className={`blog-enquiry-wordcount${messageReady ? ' blog-enquiry-wordcount--ok' : ''}`}>
