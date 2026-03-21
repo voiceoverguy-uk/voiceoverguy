@@ -1689,6 +1689,28 @@ audio {
   position: relative;
 }
 
+.news-box-content--expanded {
+  max-height: 340px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) #f0f0f0;
+}
+
+.news-box-content--expanded::-webkit-scrollbar {
+  width: 5px;
+}
+
+.news-box-content--expanded::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.news-box-content--expanded::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 3px;
+}
+
 .news-box-fade {
   position: absolute;
   bottom: 0;

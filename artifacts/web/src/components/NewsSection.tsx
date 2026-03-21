@@ -27,7 +27,6 @@ function renderSegment(segment: Segment, index: number) {
 
 export default function NewsSection() {
   const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? newsItems : newsItems.slice(0, INITIAL_COUNT);
   const remaining = newsItems.length - INITIAL_COUNT;
 
   return (
@@ -37,14 +36,14 @@ export default function NewsSection() {
           <h2>Latest Voiceover News</h2>
           <div className={`news-box-content${expanded ? ' news-box-content--expanded' : ''}`}>
             <ul className="news-list">
-              {visible.map((item, i) => (
+              {(expanded ? newsItems : newsItems.slice(0, INITIAL_COUNT)).map((item, i) => (
                 <li key={i}>
                   {item.segments.map((seg, j) => renderSegment(seg, j))}
                 </li>
               ))}
             </ul>
+            {!expanded && <div className="news-box-fade" />}
           </div>
-          {!expanded && remaining > 0 && <div className="news-box-fade" />}
           <div className="news-box-actions">
             {remaining > 0 && (
               <button
