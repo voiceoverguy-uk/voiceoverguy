@@ -5,6 +5,7 @@ import ReviewBlock from '@/components/ReviewBlock';
 import RotatingQuotes from '@/components/RotatingQuotes';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
+import ClientLogosMarquee from '@/components/ClientLogosMarquee';
 
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
@@ -127,28 +128,7 @@ export default function Home() {
       <section className="client-logos-section">
         <div className="container">
           <div className="client-logos-border client-logos-border--top" />
-          <div className="client-logos-marquee-wrapper">
-            <div className="client-logos-marquee">
-              {clientLogos.map(logo => (
-                <img
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  loading="lazy"
-                />
-              ))}
-              <div aria-hidden="true" style={{ display: 'contents' }}>
-                {clientLogos.map(logo => (
-                  <img
-                    key={`${logo.alt}-dup`}
-                    src={logo.src}
-                    alt=""
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          <ClientLogosMarquee logos={clientLogos} />
           <div className="client-logos-border client-logos-border--bottom" />
         </div>
       </section>

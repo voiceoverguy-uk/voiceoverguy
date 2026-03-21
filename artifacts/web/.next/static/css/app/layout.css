@@ -1120,6 +1120,14 @@ button.nav-link {
   animation: marquee-scroll 55s linear infinite;
 }
 
+.client-logos-marquee--draggable {
+  animation: none !important;
+  will-change: transform;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
 .client-logos-marquee-wrapper:hover .client-logos-marquee {
   animation-play-state: paused;
 }
