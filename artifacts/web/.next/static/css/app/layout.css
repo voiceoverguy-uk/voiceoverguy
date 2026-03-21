@@ -1169,6 +1169,14 @@ button.nav-link {
   line-height: 1.7;
 }
 
+.video-intro-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0 auto 24px;
+}
+
 .showreel-player-item {
   text-align: center;
 }

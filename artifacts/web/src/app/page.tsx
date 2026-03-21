@@ -185,8 +185,8 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section">
         <div className="container">
-          <p className="video-intro-text">
-            Not sure where to start? Here are my most requested voiceover styles.
+          <p className="video-intro-heading">
+            Not sure where to start?
           </p>
           <div className="video-grid">
             {videoTiles.map(v => (
