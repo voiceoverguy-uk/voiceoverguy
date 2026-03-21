@@ -282,7 +282,7 @@ export default function Home() {
           <div className="home-callout-box">
             <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
             <p>
-              Meet my daughter <strong>Arabella Harris</strong>, a {arabellaAge}-year-old professional child voiceover artist with national credits including Tesco, Sainsbury&apos;s, Zara, Kinda, Currys, Geely and Nickelodeon.
+              Meet my daughter <strong>Arabella Harris</strong>, a {arabellaAge}-year-old professional child voiceover artist with national credits including Tesco, Sainsbury&apos;s, Zara, Kinda, Currys, Geely and Heinz.
             </p>
             <p>
               Her clear, natural young girl voice is perfect for animation, radio, and commercials. Have a listen to her{' '}
