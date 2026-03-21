@@ -259,19 +259,21 @@ export default function Home() {
               delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere, you&apos;ve found the right Guy.
             </p>
           </div>
-          <div className="home-block">
-            <h2>Why Clients Choose Me</h2>
-            <p>
-              Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned{' '}
-              that clients want the same three things: reliability, speed, and audio that sounds brilliant first time.
-            </p>
-            <p>
-              I&apos;m in the studio every day, I take direction well, and I keep your project moving without fuss or drama. If you{' '}
-              want a voice who just gets it right, you&apos;ve found the right Guy.
-            </p>
-            <p>
-              <Link href="/why-use-voiceoverguy" className="red-link">Read the full story →</Link>
-            </p>
+          <div className="home-callout-box home-callout-box--left">
+            <div className="home-callout-box-text">
+              <h2>Why Clients Choose Me</h2>
+              <p>
+                Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned{' '}
+                that clients want the same three things: reliability, speed, and audio that sounds brilliant first time.
+              </p>
+              <p>
+                I&apos;m in the studio every day, I take direction well, and I keep your project moving without fuss or drama. If you{' '}
+                want a voice who just gets it right, you&apos;ve found the right Guy.
+              </p>
+              <p>
+                <Link href="/why-use-voiceoverguy" className="red-link">Read the full story →</Link>
+              </p>
+            </div>
           </div>
         </div>
       </section>

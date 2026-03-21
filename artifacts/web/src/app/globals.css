@@ -939,6 +939,18 @@ button.nav-link {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
+.home-callout-box--left::before {
+  right: auto;
+  left: 0;
+  background-image: url('/images/guy-harris-profile.jpg');
+  mask-image: linear-gradient(to left, transparent 0%, black 40%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 40%);
+}
+
+.home-callout-box--left .home-callout-box-text {
+  margin-left: auto;
+}
+
 .home-callout-box-text {
   position: relative;
   z-index: 1;
