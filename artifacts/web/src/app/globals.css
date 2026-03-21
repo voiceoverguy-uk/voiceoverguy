@@ -2239,17 +2239,12 @@ textarea.form-control--compact {
   .navbar-logo-row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: space-between;
     position: relative;
-    padding: 8px 15px 4px 30px;
+    padding: 8px 27px 4px;
   }
 
   .navbar-logo-row .navbar-toggle-top {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -2257,6 +2252,7 @@ textarea.form-control--compact {
     border: none;
     cursor: pointer;
     padding: 8px;
+    flex-shrink: 0;
   }
 
   .navbar-logo-row .navbar-toggle-top span {
