@@ -279,15 +279,14 @@ export default function Home() {
       {/* CLUSTER C: CHILD VOICEOVER */}
       <section className="home-cluster home-cluster--left">
         <div className="container">
-          <div className="home-block">
+          <div className="home-callout-box">
             <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
             <p>
-              Meet <strong>Arabella Harris</strong>, a {arabellaAge}-year-old professional child voiceover artist with national credits including Tesco,{' '}
-              Sainsbury&apos;s, and Nickelodeon.
+              Meet my daughter <strong>Arabella Harris</strong>, a {arabellaAge}-year-old professional child voiceover artist with national credits including Tesco, Sainsbury&apos;s, Zara, Kinda, Currys, Geely and Nickelodeon.
             </p>
             <p>
-              Her clear, natural young girl voice is ideal for animation, radio, and commercials.{' '}
-              <Link href="/arabella-harris-girl-child-voiceover-kid" className="red-link">Listen to her child voiceover demos</Link> or visit{' '}
+              Her clear, natural young girl voice is perfect for animation, radio, and commercials. Have a listen to her{' '}
+              <Link href="/arabella-harris-girl-child-voiceover-kid" className="red-link">child voiceover demos</Link> or visit{' '}
               <a href="https://www.arabellaharris.com" target="_blank" rel="noopener noreferrer" className="red-link">ArabellaHarris.com</a>{' '}
               to learn more.
             </p>

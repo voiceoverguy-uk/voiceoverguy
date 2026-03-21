@@ -917,6 +917,30 @@ button.nav-link {
   color: var(--red);
 }
 
+.home-callout-box {
+  background: white;
+  border-radius: 10px;
+  padding: 36px 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--red);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.home-callout-box h2 {
+  margin-bottom: 16px;
+}
+
+.home-callout-box p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .home-callout-box {
+    padding: 24px 20px;
+  }
+}
+
 /* ===== HERO CTA ===== */
 .hero-cta-wrapper {
   text-align: center;
