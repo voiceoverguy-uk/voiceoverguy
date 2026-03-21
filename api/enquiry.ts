@@ -44,8 +44,15 @@ function buildEnquiryEmail(data: {
       <!-- Header -->
       <tr>
         <td style="background:#9C060B;padding:24px 32px;">
-          <span style="font-family:Arial,sans-serif;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:1px;">VOICEOVERGUY</span>
-          <p style="margin:4px 0 0;font-size:13px;color:rgba(255,255,255,0.8);">New enquiry via voiceoverguy.co.uk</p>
+          <table cellpadding="0" cellspacing="0" border="0"><tr>
+            <td style="vertical-align:middle;padding-right:14px;">
+              <img src="https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.png" alt="VoiceoverGuy" width="48" height="48" style="display:block;border-radius:4px;" />
+            </td>
+            <td style="vertical-align:middle;">
+              <span style="font-family:Arial,sans-serif;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:1px;">VOICEOVERGUY</span>
+              <p style="margin:4px 0 0;font-size:13px;color:rgba(255,255,255,0.8);">New enquiry via <a href="https://www.voiceoverguy.co.uk" style="color:#ffffff;text-decoration:underline;">voiceoverguy.co.uk</a></p>
+            </td>
+          </tr></table>
         </td>
       </tr>
 
@@ -87,7 +94,7 @@ function buildEnquiryEmail(data: {
           <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:8px;">
             <tr>
               <td style="background:#f0f0f0;border-radius:4px;padding:12px 16px;">
-                <p style="margin:0 0 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#999999;">Page</p>
+                <p style="margin:0 0 4px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#999999;">Referring Page</p>
                 <p style="margin:0;font-size:13px;color:#333333;">${escaped(pageTitle)}</p>
                 <p style="margin:4px 0 0;font-size:12px;color:#666666;">${escaped(pageUrl)}</p>
               </td>
