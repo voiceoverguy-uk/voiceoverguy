@@ -2255,8 +2255,9 @@ textarea.form-control--compact {
   .navbar-logo-row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
+    padding: 10px 15px 4px;
   }
 
   .navbar-logo-row .navbar-toggle-top {
@@ -2449,11 +2450,11 @@ textarea.form-control--compact {
   }
 
   .navbar-logo-row {
-    padding: 12px 0 8px;
+    padding: 10px 15px 4px;
   }
 
   .search-bar {
-    padding: 6px 12px;
+    padding: 2px 12px 6px;
   }
 }
 
