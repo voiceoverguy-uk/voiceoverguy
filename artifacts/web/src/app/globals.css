@@ -939,6 +939,11 @@ button.nav-link {
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
 }
 
+.home-callout-box--stage::before {
+  background-image: url('/assets/images/guy-harris-voice-of-god-on-stage.jpg');
+  opacity: 0.5;
+}
+
 .home-callout-box--left::before {
   right: auto;
   left: 0;
