@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { newsItems } from '@/data/news';
 import type { Segment } from '@/data/news';
+
+const INITIAL_COUNT = 6;
 
 function renderSegment(segment: Segment, index: number) {
   if (segment.type === 'text') {
@@ -25,39 +27,33 @@ function renderSegment(segment: Segment, index: number) {
 
 export default function NewsSection() {
   const [expanded, setExpanded] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!expanded && scrollRef.current) {
-      scrollRef.current.scrollTop = 0;
-    }
-  }, [expanded]);
+  const visible = expanded ? newsItems : newsItems.slice(0, INITIAL_COUNT);
+  const remaining = newsItems.length - INITIAL_COUNT;
 
   return (
     <section className="news-section">
       <div className="container">
         <div className="news-box">
           <h2>Latest Voiceover News</h2>
-          <div
-            ref={scrollRef}
-            className={`news-box-scroll${expanded ? ' news-box-scroll--expanded' : ''}`}
-          >
+          <div className={`news-box-content${expanded ? ' news-box-content--expanded' : ''}`}>
             <ul className="news-list">
-              {newsItems.map((item, i) => (
+              {visible.map((item, i) => (
                 <li key={i}>
                   {item.segments.map((seg, j) => renderSegment(seg, j))}
                 </li>
               ))}
             </ul>
           </div>
-          {!expanded && <div className="news-box-fade" />}
+          {!expanded && remaining > 0 && <div className="news-box-fade" />}
           <div className="news-box-actions">
-            <button
-              className="show-more-btn"
-              onClick={() => setExpanded(e => !e)}
-            >
-              {expanded ? 'Show less' : `Browse all news (${newsItems.length} updates)`}
-            </button>
+            {remaining > 0 && (
+              <button
+                className="show-more-btn"
+                onClick={() => setExpanded(e => !e)}
+              >
+                {expanded ? 'Show less' : `Show ${remaining} more updates`}
+              </button>
+            )}
             <Link href="/voiceover-news" className="news-box-link">
               View full blog &rarr;
             </Link>
