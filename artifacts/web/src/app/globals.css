@@ -962,6 +962,10 @@ button.nav-link {
   max-width: 60%;
 }
 
+.home-callout-box + .home-callout-box {
+  margin-top: 32px;
+}
+
 .home-callout-box h2 {
   margin-bottom: 16px;
 }

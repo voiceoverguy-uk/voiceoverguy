@@ -251,16 +251,6 @@ export default function Home() {
       {/* CLUSTER B: SPECIALIST SERVICES */}
       <section className="home-cluster home-cluster--left">
         <div className="container">
-          <div className="home-callout-box home-callout-box--stage">
-            <div className="home-callout-box-text">
-              <h2>Event or Awards Night Voiceover?</h2>
-              <p>
-                Running an event, awards show or big stage production? My{' '}
-                <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
-                delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere, you&apos;ve found the right Guy.
-              </p>
-            </div>
-          </div>
           <div className="home-callout-box home-callout-box--left">
             <div className="home-callout-box-text">
               <h2>Why Clients Choose Me</h2>
@@ -274,6 +264,16 @@ export default function Home() {
               </p>
               <p>
                 <Link href="/why-use-voiceoverguy" className="red-link">Read the full story →</Link>
+              </p>
+            </div>
+          </div>
+          <div className="home-callout-box home-callout-box--stage">
+            <div className="home-callout-box-text">
+              <h2>Event or Awards Night Voiceover?</h2>
+              <p>
+                Running an event, awards show or big stage production? My{' '}
+                <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
+                delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere, you&apos;ve found the right Guy.
               </p>
             </div>
           </div>
