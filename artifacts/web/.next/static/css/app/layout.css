@@ -2935,6 +2935,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   display: flex;
   flex-direction: column;
   flex: 1 1;
+  border-top: 3px solid var(--red);
 }
 
 .blog-card-date {
@@ -3090,13 +3091,19 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .blog-related-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: var(--text);
-  transition: transform 0.15s;
+  background: var(--white);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .blog-related-card:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,.15);
   transform: translateY(-2px);
   text-decoration: none;
 }
@@ -3105,15 +3112,15 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  background: #eee;
 }
 
 .blog-related-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.2s;
+  display: block;
+  transition: transform 0.3s;
 }
 
 .blog-related-card:hover .blog-related-img {
@@ -3122,9 +3129,10 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 .blog-related-title {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
-  text-align: center;
+  padding: 12px 16px 16px;
+  border-top: 3px solid var(--red);
 }
 
 /* ===== PAGE HEADER SUB ===== */
