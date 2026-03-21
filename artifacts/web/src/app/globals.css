@@ -952,8 +952,10 @@ button.nav-link {
 }
 
 .home-callout-box-text--wide p,
+.home-callout-box-text--wide .hero-bio,
 .home-callout-box-text--wide .hero-bio p,
 .home-cluster .home-callout-box-text--wide p,
+.home-cluster .home-callout-box-text--wide .hero-bio,
 .home-cluster .home-callout-box-text--wide .hero-bio p {
   max-width: 100% !important;
   margin-left: 0;
