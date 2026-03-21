@@ -1,0 +1,87 @@
+Please rebuild the page /voice-over-word-count-calculator into a modern, fully working calculator page with clean UX, strong SEO, and mobile-first layout.
+
+GOAL
+Fix the broken calculator and turn this into a genuinely useful resource for both voiceover clients and general users.
+
+PAGE TITLE / PURPOSE
+This page should primarily be a VOICEOVER / READING ALOUD calculator, with an optional SILENT READING mode as a secondary tab.
+
+MAIN FEATURES
+1. Add a two-tab mode toggle:
+   - Voiceover / Reading Aloud
+   - Silent Reading
+
+2. Add two input methods:
+   - Word count number input
+   - Large textarea where users can paste text
+   If text is pasted, auto-count the words and use that total instead of the manual number input.
+
+3. Add clickable speed preset buttons.
+
+VOICEOVER / READING ALOUD PRESETS
+- Very Slow = 110 WPM
+- Slow = 130 WPM
+- Average = 150 WPM
+- Fast = 170 WPM
+- Very Fast = 190 WPM
+
+SILENT READING PRESETS
+- Study = 120 WPM
+- Careful Comprehension = 180 WPM
+- Average Non-Fiction = 238 WPM
+- Average Fiction = 260 WPM
+- Skim / Gist = 350 WPM
+
+4. Add an optional custom WPM slider or numeric field so the user can choose any custom WPM.
+
+5. Display result instantly without page reload:
+   - Main result in minutes and seconds
+   - Word count used
+   - Selected WPM
+   - A comparison row showing times for all speed presets in the active tab
+
+6. Add a helpful “common script lengths” box for voiceover mode:
+   - 30 seconds = around 65–75 words
+   - 60 seconds = around 130–160 words
+   - 90 seconds = around 195–225 words
+   - 2 minutes = around 260–320 words
+
+7. Add a small disclaimer note:
+   “Final recording length can vary depending on pauses, emphasis, script difficulty, character delivery, and legal copy.”
+
+SEO / CONTENT
+8. Rewrite the page copy so it clearly explains the difference between:
+   - silent reading speed
+   - reading aloud / voiceover speed
+
+9. Keep the page focused first on voiceover timing, since that matches the page URL and search intent.
+
+10. Add an FAQ section with these questions:
+   - How many words are in a 30-second voiceover?
+   - How many words are in a 60-second voiceover?
+   - What is a normal voiceover reading speed?
+   - Why is silent reading faster than reading aloud?
+   - Why does my finished recording run longer than the estimate?
+
+11. Add suitable on-page copy that is useful, human, and not stuffed with keywords.
+
+DESIGN
+12. Make the page look modern and polished, with:
+   - large clear heading
+   - clean card layout
+   - strong mobile spacing
+   - clear active button states
+   - accessible contrast
+   - attractive result display
+   - tidy typography consistent with the site
+
+13. Make the calculator feel premium and trustworthy, not like an old broken widget.
+
+TECHNICAL
+14. Ensure the calculator works properly in production.
+15. Make sure pasted text word counting handles punctuation and multiple spaces properly.
+16. Do not use em dashes in copy.
+17. Preserve the site’s existing branding and styling language.
+
+OPTIONAL NICE EXTRA
+18. If straightforward, add a “copy result” button and a “clear all” button.
