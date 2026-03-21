@@ -126,7 +126,7 @@ export default function VideoControls() {
 
       const captureNextFrame = async (): Promise<void> => {
         if (frameCount >= totalFrames || !videoContentRef.current) {
-          await encoder.flush();
+          if (encoder.state !== 'closed') await encoder.flush();
           muxer.finalize();
           const target = muxer.target as ArrayBufferTarget;
           const blob = new Blob([target.buffer], { type: 'video/mp4' });
@@ -153,6 +153,7 @@ export default function VideoControls() {
             await new Promise<void>((resolve) => {
               const img = new Image();
               img.onload = () => {
+                if (encoder.state === 'closed') { resolve(); return; }
                 ctx.drawImage(img, 0, 0, config.width, config.height);
                 const frame = new VideoFrame(canvas, {
                   timestamp: frameCount * FRAME_INTERVAL * 1000,
@@ -169,7 +170,7 @@ export default function VideoControls() {
               };
               img.src = dataUrl;
             });
-          } else {
+          } else if (encoder.state !== 'closed') {
             ctx.fillStyle = '#000000';
             ctx.fillRect(0, 0, config.width, config.height);
             const frame = new VideoFrame(canvas, {
