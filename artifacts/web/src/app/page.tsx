@@ -235,7 +235,7 @@ export default function Home() {
                 <img src="/assets/images/vox-2019.webp" alt="VOX Award 2019 Best In Store Voice Winner" width="90" height="90" />
                 <img src="/assets/images/vox-2021.webp" alt="VOX Award 2021 Finalist" width="90" height="90" />
                 <img src="/assets/images/vox-2022.webp" alt="VOX Award 2022 Nominee" width="90" height="90" />
-                <img src="/assets/images/sovas-2015.webp" alt="SOVAS Voice Arts Award 2015 Nominated" width="160" height="80" />
+                <img src="/assets/images/sovas-2015.webp" alt="SOVAS Voice Arts Award Nominee" width="90" height="90" />
               </div>
               <p>
                 If you&apos;re looking for a confident, reliable and fast-turnaround male voiceover,{' '}
