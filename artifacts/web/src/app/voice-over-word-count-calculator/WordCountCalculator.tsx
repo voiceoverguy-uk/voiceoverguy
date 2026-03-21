@@ -176,16 +176,29 @@ export default function WordCountCalculator() {
 
           <div className="calc-custom-row">
             <label className="calc-label" htmlFor="custom-wpm">Custom WPM</label>
-            <input
-              id="custom-wpm"
-              type="number"
-              min="1"
-              max="1000"
-              className="calc-custom-input"
-              placeholder="e.g. 145"
-              value={customWpm}
-              onChange={e => handleCustomChange(e.target.value)}
-            />
+            <div className="calc-custom-controls">
+              <input
+                id="custom-wpm-slider"
+                type="range"
+                min="50"
+                max="400"
+                step="1"
+                className="calc-slider"
+                value={customWpm || (useCustom ? '150' : '150')}
+                onChange={e => handleCustomChange(e.target.value)}
+                aria-label="Custom words per minute slider"
+              />
+              <input
+                id="custom-wpm"
+                type="number"
+                min="1"
+                max="1000"
+                className="calc-custom-input"
+                placeholder="e.g. 145"
+                value={customWpm}
+                onChange={e => handleCustomChange(e.target.value)}
+              />
+            </div>
           </div>
         </div>
 
