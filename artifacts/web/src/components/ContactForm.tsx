@@ -93,10 +93,13 @@ export default function ContactForm({
   }
 
   if (status === 'success') {
+    const hour = new Date().getHours();
+    const greeting = hour < 12 ? 'Have a good morning!' : hour < 17 ? 'Have a good afternoon!' : 'Have a good evening!';
     return (
       <div style={{ padding: '24px 0', textAlign: 'center' }}>
         <p style={{ fontSize: '18px', fontWeight: 700, color: '#9C060B', marginBottom: '8px' }}>Message sent — thank you!</p>
         <p style={{ color: '#555', fontSize: '14px' }}>Guy will get back to you as soon as he can.</p>
+        <p style={{ color: '#9C060B', fontSize: '15px', marginTop: '12px', fontStyle: 'italic' }}>{greeting}</p>
       </div>
     );
   }

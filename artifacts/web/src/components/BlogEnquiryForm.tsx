@@ -88,11 +88,14 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
   }
 
   if (status === 'success') {
+    const hour = new Date().getHours();
+    const greeting = hour < 12 ? 'Have a good morning!' : hour < 17 ? 'Have a good afternoon!' : 'Have a good evening!';
     return (
       <div className="blog-enquiry-section">
         <div className="blog-enquiry-success">
           <strong>Message sent — thank you!</strong>
           <p>I'll get back to you as soon as I can.</p>
+          <p style={{ color: '#9C060B', fontSize: '14px', marginTop: '8px', fontStyle: 'italic' }}>{greeting}</p>
         </div>
       </div>
     );
