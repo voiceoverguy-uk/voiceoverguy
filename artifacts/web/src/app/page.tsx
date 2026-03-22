@@ -170,7 +170,7 @@ export default function Home() {
           </p>
           <div className="video-grid">
             {videoTiles.map(v => (
-              <div key={v.img}>
+              <div key={v.img} className="video-tile-card">
                 <a
                   href={v.href}
                   target="_blank"
