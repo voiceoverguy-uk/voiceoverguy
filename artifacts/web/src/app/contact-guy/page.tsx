@@ -106,7 +106,7 @@ export default function ContactGuy() {
 
           {/* PayPal payment card */}
           <div className="contact-paypal-card">
-            <h3>Ready to pay?</h3>
+            <h3>Payment by Credit Card or Pay Pal?</h3>
             <p>Already received a quote? Pay securely via PayPal, Apple Pay or card.</p>
             <PayPalButton />
           </div>
