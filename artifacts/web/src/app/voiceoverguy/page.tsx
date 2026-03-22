@@ -3,7 +3,9 @@ import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
 import { SchemaScripts, profilePage, breadcrumb, faqPage } from '@/lib/staticPageSchema';
+import { getYearsExperience } from '@/lib/experience';
 
+const yrs = getYearsExperience();
 const data = (pages as Record<string, Record<string, string>>)['seo2'];
 
 export const metadata: Metadata = {
@@ -27,13 +29,13 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('voiceoverguy', 'Guy Harris is an award-winning British voiceover artist with over 25 years of experience, known for his versatility in character voices such as Santa, Attenborough, Pirate, and Gameshow Host.', {
+  profilePage('voiceoverguy', `Guy Harris is an award-winning British voiceover artist with over ${yrs} years of experience, known for his versatility in character voices such as Santa, Attenborough, Pirate, and Gameshow Host.`, {
     alternateName: 'VoiceoverGuy',
     worksFor: { '@type': 'Organization', name: 'VoiceoverGuy' },
   }),
   breadcrumb('voiceoverguy', 'About Guy Harris'),
   faqPage('voiceoverguy', [
-    { q: 'Who is VoiceoverGuy?', a: 'VoiceoverGuy is Guy Harris, an award-winning British male voiceover artist with over 25 years of experience. He is known for his versatility across commercial, character, and narration voices.' },
+    { q: 'Who is VoiceoverGuy?', a: `VoiceoverGuy is Guy Harris, an award-winning British male voiceover artist with over ${yrs} years of experience. He is known for his versatility across commercial, character, and narration voices.` },
     { q: 'What voiceover services does Guy Harris offer?', a: 'Guy offers commercial voiceovers, character voices, radio imaging, Voice of God announcing, narration, on-hold messages, and more from his professional studio in Wakefield, West Yorkshire.' },
   ]),
 ];

@@ -6,10 +6,13 @@ import RotatingQuotes from '@/components/RotatingQuotes';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
 import ClientLogosMarquee from '@/components/ClientLogosMarquee';
+import { getYearsExperience } from '@/lib/experience';
+
+const yrs = getYearsExperience();
 
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
-  description: 'Guy Harris is an award-winning British male voiceover artist with 25+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.',
+  description: `Guy Harris is an award-winning British male voiceover artist with ${yrs}+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.`,
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/' },
 };
 
@@ -200,11 +203,11 @@ export default function Home() {
           <div className="credentials-box">
             <p>
               Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover artist.{' '}
-              Over 25 years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
-              including Apple, Disney, ITV, Hotels.com, BBC and Thomas the Tank Engine.
+              Over {yrs} years&apos; experience and more than 200,000 scripts voiced, Guy works with global brands{' '}
+              including Apple, Disney, BBC, ITV, Hotels.com, Bauer, Global, The Mr Men and Thomas the Tank Engine.
             </p>
             <p>
-              <strong>Multi-award-winning British voiceover</strong> – VOX Best Male Voiceover Award winner and 3-time SOVAS (USA) finalist.
+              <strong>Award-winning British voiceover</strong> – VOX Best Male Voiceover Winner and 3-time SOVAS (USA) finalist.
             </p>
             <AwardsBadges />
             <p>
@@ -232,7 +235,7 @@ export default function Home() {
             <div className="home-callout-box-text">
               <h2>Why Clients Choose Me</h2>
               <p>
-                Finding the right voice shouldn&apos;t feel like a gamble. After 25 years and more than 200,000 projects, I&apos;ve learned{' '}
+                Finding the right voice shouldn&apos;t feel like a gamble. After {yrs} years and more than 200,000 projects, I&apos;ve learned{' '}
                 that clients want the same three things: reliability, speed, and audio that sounds brilliant first time.
               </p>
               <p>
@@ -398,7 +401,7 @@ export default function Home() {
                 url: 'https://www.voiceoverguy.co.uk',
                 image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
                 jobTitle: 'British Male Voiceover Artist',
-                description: 'Guy Harris is an award-winning British male voiceover artist with over 25 years of experience and more than 200,000 voiceovers. Known for his commercial reads, character voices, explainer narration, David Attenborough impression and as the UK\u2019s No.1 Voice of Santa.',
+                description: `Guy Harris is an award-winning British male voiceover artist with over ${yrs} years of experience and more than 200,000 voiceovers. Known for his commercial reads, character voices, explainer narration, David Attenborough impression and as the UK\u2019s No.1 Voice of Santa.`,
                 gender: 'Male',
                 nationality: 'British',
                 email: 'guy@voiceoverguy.co.uk',
@@ -463,7 +466,7 @@ export default function Home() {
                 '@type': 'WebPage',
                 '@id': 'https://www.voiceoverguy.co.uk/#webpage',
                 name: 'British Male Voiceover | Guy Harris \u2013 UK Voice Artist',
-                description: 'Guy Harris is an award-winning British male voiceover artist with 25+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.',
+                description: `Guy Harris is an award-winning British male voiceover artist with ${yrs}+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.`,
                 url: 'https://www.voiceoverguy.co.uk',
                 isPartOf: { '@id': 'https://www.voiceoverguy.co.uk/#website' },
                 about: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },

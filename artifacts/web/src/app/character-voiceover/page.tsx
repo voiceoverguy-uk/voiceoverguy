@@ -3,7 +3,9 @@ import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
 import { SchemaScripts, webPage, breadcrumb, faqPage, serviceSchema, audioObject, videoObject } from '@/lib/staticPageSchema';
+import { getYearsExperience } from '@/lib/experience';
 
+const yrs = getYearsExperience();
 const data = (pages as Record<string, Record<string, string>>)['seo11'];
 
 export const metadata: Metadata = {
@@ -35,7 +37,7 @@ const schemas = [
   faqPage('character-voiceover', [
     { q: 'What character voices has Guy Harris performed?', a: 'Guy Harris has voiced over 100 characters for games, apps, animation, radio and online media including Boom Beach, Minecraft, Clash of Clans, Thomas & Friends, Joker-style voices and more.' },
     { q: 'Can I book Guy Harris for a character voiceover?', a: 'Yes. Guy Harris is available for bespoke character voiceovers via Zoom, Cleanfeed or Teams, and can work with reference clips or custom direction.' },
-    { q: 'Where can I find a character voiceover?', a: "Guy Harris is one of the UK's most in-demand character voiceover artists. With over 25 years' experience in radio, TV, films and social media content, his voice has been heard in more places than you can imagine." },
+    { q: 'Where can I find a character voiceover?', a: `Guy Harris is one of the UK's most in-demand character voiceover artists. With over ${yrs} years' experience in radio, TV, films and social media content, his voice has been heard in more places than you can imagine.` },
     { q: 'Who is the voice of the trains in Thomas the Tank Engine?', a: 'Guy Harris is the voice of Winston, Salty and Troublesome Tanker 2 in Thomas & Friends: All Engines Go, and also voices other characters such as Mr Messy and Mr Funny in the Mr Men series.' },
     { q: 'Who is a great voice for Santa or Father Christmas?', a: "Guy Harris is widely considered the Voice of Santa thanks to his work for BBC Radio 1, BBC Radio 2, the Heart Network, Asda, Tesco, ITV, Butlins, Capital Radio and more, delivering a traditional, jovial British Father Christmas performance." },
   ]),

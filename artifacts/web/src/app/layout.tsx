@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { getYearsExperience } from '@/lib/experience';
+
+const yrs = getYearsExperience();
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -14,11 +17,11 @@ export const metadata: Metadata = {
     default: 'British Male Voiceover | Guy Harris – UK Voice Artist',
     template: '%s | VoiceoverGuy',
   },
-  description: 'Guy Harris is a professional British male voiceover artist with over 25 years experience. Award-winning voice for TV, radio, games, explainers and events.',
+  description: `Guy Harris is a professional British male voiceover artist with over ${yrs} years experience. Award-winning voice for TV, radio, games, explainers and events.`,
   metadataBase: new URL('https://www.voiceoverguy.co.uk'),
   openGraph: {
     title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
-    description: 'Guy Harris is a professional British male voiceover artist with over 25 years experience. Award-winning voice for TV, radio, games, explainers and events.',
+    description: `Guy Harris is a professional British male voiceover artist with over ${yrs} years experience. Award-winning voice for TV, radio, games, explainers and events.`,
     url: 'https://www.voiceoverguy.co.uk',
     siteName: 'VoiceoverGuy',
     images: [
