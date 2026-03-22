@@ -249,9 +249,10 @@ export default function Home() {
             <div className="home-callout-box-text">
               <h2>Event or Awards Night Voiceover?</h2>
               <p>
-                Running an event, awards show or big stage production? My{' '}
+                Running an event, awards show or stage production? My{' '}
                 <Link href="/voice-of-god" className="red-link">Voice of God</Link>{' '}
-                delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong> and the <strong>National History Museum</strong>. If you need a bold, authoritative announcer voice that fills the room and lifts the atmosphere, you&apos;ve found the right Guy.
+                delivery is trusted by <strong>ITV</strong>, <strong>Butlins</strong>, <strong>The Masked Singer</strong>, <strong>Bestway</strong>, <strong>Poundland</strong>, <strong>GoLocal</strong> and <strong>TV Choice Awards</strong>. If you need a big, authoritative announcer voice that fills the room and lifts the atmosphere, lets talk. Need more? Check out the dedicated{' '}
+                <a href="https://www.voiceofgod.co.uk" target="_blank" rel="noopener noreferrer" className="red-link">Voice of God</a> site.
               </p>
             </div>
           </div>
