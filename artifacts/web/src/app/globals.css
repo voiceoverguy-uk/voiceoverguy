@@ -1765,17 +1765,6 @@ audio {
   color: var(--white);
 }
 
-.news-box-link {
-  font-size: 13px;
-  color: var(--red);
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-}
-
-.news-box-link:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 480px) {
   .news-box {

@@ -44,19 +44,16 @@ export default function NewsSection() {
             </ul>
             {!expanded && <div className="news-box-fade" />}
           </div>
-          <div className="news-box-actions">
-            {remaining > 0 && (
+          {remaining > 0 && (
+            <div className="news-box-actions">
               <button
                 className="show-more-btn"
                 onClick={() => setExpanded(e => !e)}
               >
                 {expanded ? 'Show less' : `Show ${remaining} more updates`}
               </button>
-            )}
-            <Link href="/voiceover-news" className="news-box-link">
-              View full blog &rarr;
-            </Link>
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
