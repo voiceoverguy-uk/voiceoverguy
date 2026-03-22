@@ -16,15 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/voiceoverguy/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/voiceoverguy/page.js"
-    ],
-    "/david-attenborough-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/david-attenborough-voice/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

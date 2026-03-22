@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/voiceoverguy/page": "app/voiceoverguy/page.js",
-  "/david-attenborough-voice/page": "app/david-attenborough-voice/page.js"
+  "/_not-found/page": "app/_not-found/page.js"
 }
