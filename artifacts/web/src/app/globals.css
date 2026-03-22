@@ -1833,6 +1833,16 @@ audio {
   color: var(--grey-dark);
 }
 
+.faq-answer a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
 /* ===== CONTACT FORM ===== */
 .contact-section {
   padding: 48px 0;

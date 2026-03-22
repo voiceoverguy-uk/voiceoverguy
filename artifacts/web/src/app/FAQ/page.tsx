@@ -54,11 +54,18 @@ export default function FAQ() {
       </section>
       <SchemaScripts schemas={[
         faqPage('FAQ', [
-          { q: 'What is your turnaround time?', a: "Same day in most cases, with standard projects delivered within 24 hours. I\u2019m in the studio every day, so if you have an urgent job or last-minute change, I can usually accommodate it quickly." },
-          { q: 'What audio formats do you deliver?', a: 'Most clients request WAV or MP3, but I can also provide AIFF or other formats on request. All audio is recorded in my broadcast-quality studio so it drops straight into your edit.' },
-          { q: 'Can I direct a voiceover session live?', a: 'Yes. You can direct the session live via Cleanfeed, Source-Connect, Zoom, or a simple phone patch. This way you can give feedback in real time and sign off the read before we wrap.' },
-          { q: 'What rights do I get with the voiceover?', a: "Usage and broadcast rights are agreed in advance so everything is clear. We\u2019ll confirm where and how long the audio will be used \u2013 for example, local radio, national TV, online, internal, or paid media \u2013 and licence it appropriately." },
-          { q: 'Do you provide revisions?', a: 'Yes. If I make a mistake, or the read needs a small tweak, I\u2019m happy to fix it. Larger script changes or new scripts may incur an additional session fee, but I always keep things fair and transparent.' },
+          { q: 'How much does a voiceover cost?', a: 'Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around £49-£99. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout.' },
+          { q: 'What is a voiceover artist?', a: 'A voiceover artist is a professional performer who records spoken audio for adverts, TV promos, radio, explainers, e-learning, video games, documentaries and more. A good voiceover artist does more than just read a script - they bring it to life with the right tone, pacing and personality.' },
+          { q: 'How many words are in a 30 second voiceover?', a: 'A 30 second voiceover is usually around 65 to 75 words at a natural pace. That can vary depending on the style.' },
+          { q: 'How many words are in a 60 second voiceover?', a: 'A 60 second voiceover is usually around 130 to 150 words. The exact number depends on how fast the script needs to move, how many pauses are required, and whether the read is conversational, dramatic or packed with legal copy.' },
+          { q: 'How quickly can you turnaround a voiceover?', a: 'Most voiceovers are delivered within 4-8 hours if received before 4pm. For urgent projects I offer a 2-hour turnaround.' },
+          { q: 'What is the difference between narration and voiceover?', a: 'Narration is one type of voiceover. It usually helps tell a story or explain what is happening on screen, often in documentaries, brand films or factual content. Voiceover is the wider term, covering everything from adverts and radio imaging to e-learning, character work and TV promos.' },
+          { q: 'Why hire a human voiceover instead of AI?', a: 'A human voiceover artist can properly interpret a script, respond to direction, understand humour and deliver genuine personality. AI can be useful for some basic jobs, but it still lacks the instinct, nuance and natural performance that real commercial voice work needs.' },
+          { q: 'Is that you on GB News competition promos?', a: 'It very well might be. I voice a wide range of TV and radio promos, commercial campaigns and continuity-style work, so there is a fair chance you may have heard me somewhere without knowing it.' },
+          { q: 'Why does your voice sound familiar?', a: 'Probably because you have heard me on major TV and radio campaigns, national commercials, station imaging, character work and promo voiceovers over many years.' },
+          { q: 'Can you sound like the polished Apple-style voice?', a: 'Yes - that calm, clean, premium British delivery is one of the styles I am known for. It works particularly well for technology brands, high-end explainers, product films and modern commercial campaigns that need clarity without sounding stiff.' },
+          { q: 'Do you only do straight reads, or can you do character voices too?', a: 'I do both. Alongside natural British commercial and narration reads, I am also known for character voice work including Santa, pirate, gameshow host, spooky voices, comedy reads and impressions.' },
+          { q: 'Can you make a script sound less boring?', a: 'Yes - and sometimes that is half the job. A good voiceover can lift a flat script with better pacing, emphasis, intention and energy.' },
         ]),
       ]} />
     </>

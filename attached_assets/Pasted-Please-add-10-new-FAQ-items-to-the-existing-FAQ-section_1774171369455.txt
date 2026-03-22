@@ -1,0 +1,74 @@
+Please add 10 new FAQ items to the existing FAQ section on the page.
+
+Important:
+- Keep the same existing FAQ styling, spacing, accordion behaviour and plus/minus toggle design
+- Add these as additional questions and answers, not replacements
+- Keep the tone natural, human and conversational - not robotic or over-polished
+- Do not use em dashes
+- Make sure line lengths and spacing look clean on mobile
+- Keep the answers readable and not too long
+- Preserve SEO value by keeping the opening sentence of each answer clear and direct
+
+Add these exact FAQ entries:
+
+1) Question:
+What is a voiceover artist?
+
+Answer:
+A voiceover artist is a professional performer who records spoken audio for adverts, TV promos, radio, explainers, e-learning, video games, documentaries and more. A good voiceover artist does more than just read a script - they bring it to life with the right tone, pacing and personality.
+
+2) Question:
+How many words are in a 30 second voiceover?
+
+Answer:
+A 30 second voiceover is usually around 65 to 75 words at a natural pace. That can vary depending on the style. A calm, premium read may need fewer words, while a faster retail or promo read can often fit in a little more.
+
+3) Question:
+How many words are in a 60 second voiceover?
+
+Answer:
+A 60 second voiceover is usually around 130 to 150 words. The exact number depends on how fast the script needs to move, how many pauses are required, and whether the read is conversational, dramatic or packed with legal copy.
+
+4) Question:
+What is the difference between narration and voiceover?
+
+Answer:
+Narration is one type of voiceover. It usually helps tell a story or explain what is happening on screen, often in documentaries, brand films or factual content. Voiceover is the wider term, covering everything from adverts and radio imaging to e-learning, character work and TV promos.
+
+5) Question:
+Why hire a human voiceover instead of AI?
+
+Answer:
+A human voiceover artist can properly interpret a script, respond to direction, understand humour and deliver genuine personality. AI can be useful for some basic jobs, but it still lacks the instinct, nuance and natural performance that real commercial voice work needs.
+
+6) Question:
+Is that you on GB News competition promos?
+
+Answer:
+It very well might be. I voice a wide range of TV and radio promos, commercial campaigns and continuity-style work, so there is a fair chance you may have heard me somewhere without knowing it. That tends to be how voiceover works - heard often, seen rarely.
+
+7) Question:
+Why does your voice sound familiar?
+
+Answer:
+Probably because you have heard me on major TV and radio campaigns, national commercials, station imaging, character work and promo voiceovers over many years. Voiceover artists often become familiar long before people know their name.
+
+8) Question:
+Can you sound like the polished Apple-style voice?
+
+Answer:
+Yes - that calm, clean, premium British delivery is one of the styles I am known for. It works particularly well for technology brands, high-end explainers, product films and modern commercial campaigns that need clarity without sounding stiff.
+
+9) Question:
+Do you only do straight reads, or can you do character voices too?
+
+Answer:
+I do both. Alongside natural British commercial and narration reads, I am also known for character voice work including Santa, pirate, gameshow host, spooky voices, comedy reads and impressions. So whether you need polished and trusted or bold and full of personality, I can usually cover it.
+
+10) Question:
+Can you make a script sound less boring?
+
+Answer:
+Yes - and sometimes that is half the job. A good voiceover can lift a flat script with better pacing, emphasis, intention and energy. I can also often spot where a script is too wordy, clunky or trying too hard, which is more common than it should be.
+
+Please place these in a sensible position within the existing FAQ list so the section still feels well balanced, with the more general search-friendly questions grouped naturally and the more personal brand-led questions sitting comfortably alongside the existing ones.
