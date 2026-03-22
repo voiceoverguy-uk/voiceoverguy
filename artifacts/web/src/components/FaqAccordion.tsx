@@ -11,7 +11,7 @@ interface FaqItem {
 const faqs: FaqItem[] = [
   {
     q: 'How much does a voiceover cost?',
-    a: 'Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around £49-£99. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout. Use the pricing calculator on my Contact page for an instant estimate, or just get in touch and I\'ll quote you properly.',
+    a: (<>Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around £49-£99. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout. Use the <Link href="/voice-over-word-count-calculator">pricing calculator</Link> for an instant estimate, or just <Link href="/contact-guy">get in touch</Link> and I'll quote you properly.</>),
   },
   {
     q: 'What is a voiceover artist?',
@@ -47,7 +47,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Do you offer a free demo or audition?',
-    a: 'Yes. I\'m happy to record a short sample section of your script (up to around 100 words) so you can hear exactly how it sounds before committing. Just send me your script and a brief description of the tone you\'re looking for.',
+    a: (<>Yes. I'm happy to record a short sample section of your script (up to around 100 words) so you can hear exactly how it sounds before committing. Just <Link href="/contact-guy">send me your script</Link> and a brief description of the tone you're looking for.</>),
   },
   {
     q: 'Is that you on GB News competition promos?',
@@ -63,7 +63,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Do you record in your own studio?',
-    a: 'Yes. I have a professional, acoustically treated home recording studio in Yorkshire. It\'s kitted out with high-end microphones, preamps, and monitoring equipment. The studio is also available to hire for other voice artists or actors looking for a professional recording space in Yorkshire.',
+    a: (<>Yes. I have a professional, acoustically treated <Link href="/voiceover-studio">home recording studio</Link> in Yorkshire. It's kitted out with high-end microphones, preamps, and monitoring equipment. The studio is also available to hire for other voice artists or actors looking for a professional recording space in Yorkshire.</>),
   },
   {
     q: 'What is Source Connect?',
@@ -71,19 +71,19 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Can you voice in accents other than Standard British?',
-    a: 'Yes. As well as standard Received Pronunciation (RP) / neutral British, I can perform Yorkshire, Northern, Scots, Welsh, Irish, and a range of international accents including American, Australian, and others. I\'m also experienced in character voices and impressions.',
+    a: (<>Yes. As well as standard Received Pronunciation (RP) / neutral British, I can perform Yorkshire, Northern, Scots, Welsh, Irish, and a range of international accents including American, Australian, and others. I'm also experienced in <Link href="/character-voiceover">character voices</Link> and impressions.</>),
   },
   {
     q: 'Do you do TV voiceovers?',
-    a: 'Yes, I\'ve voiced campaigns for major brands on ITV, Channel 4, Channel 5, Sky, and online platforms. TV voiceovers are quoted based on territory, duration of licence, and airtime. Get in touch for a quote.',
+    a: (<>Yes, I've voiced campaigns for major brands on ITV, Channel 4, Channel 5, Sky, and online platforms. TV voiceovers are quoted based on territory, duration of licence, and airtime. <Link href="/contact-guy">Get in touch</Link> for a quote.</>),
   },
   {
     q: 'Do you only do straight reads, or can you do character voices too?',
-    a: 'I do both. Alongside natural British commercial and narration reads, I am also known for character voice work including Santa, pirate, gameshow host, spooky voices, comedy reads and impressions. So whether you need polished and trusted or bold and full of personality, I can usually cover it.',
+    a: (<>I do both. Alongside natural British <Link href="/commercial-voiceover">commercial</Link> and narration reads, I am also known for <Link href="/character-voiceover">character voice work</Link> including Santa, pirate, gameshow host, spooky voices, comedy reads and impressions. So whether you need polished and trusted or bold and full of personality, I can usually cover it.</>),
   },
   {
     q: 'What is a Voice of God (VOG)?',
-    a: 'Voice of God refers to the powerful announcing voice heard at live events - awards ceremonies, corporate conferences, sports events, concerts, and TV show recordings. It\'s the voice that says "Ladies and gentlemen, please welcome..." and builds anticipation. I\'ve been the VOG for numerous high-profile events.',
+    a: (<><Link href="/voice-of-god">Voice of God</Link> refers to the powerful announcing voice heard at live events - awards ceremonies, corporate conferences, sports events, concerts, and TV show recordings. It's the voice that says "Ladies and gentlemen, please welcome..." and builds anticipation. I've been the VOG for numerous high-profile events.</>),
   },
   {
     q: 'Can you make a script sound less boring?',
@@ -91,7 +91,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Are you on Voices.com or Voice123?',
-    a: 'I prefer to work directly with clients to keep costs lower for you and so I can give you the best personal service. You won\'t find me on pay-to-play casting sites - I\'d rather you just drop me an email or give me a call.',
+    a: (<>I prefer to work directly with clients to keep costs lower for you and so I can give you the best personal service. You won't find me on pay-to-play casting sites - I'd rather you just <Link href="/contact-guy">drop me an email</Link> or give me a call.</>),
   },
   {
     q: 'Do you work with advertising agencies?',
