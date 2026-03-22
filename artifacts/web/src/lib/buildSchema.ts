@@ -135,6 +135,7 @@ export function buildVideoSchema(post: BlogPost): Record<string, unknown> | null
   const canonical = getCanonical(post.url);
   const description = getDescription(post);
   const isoDate = toIsoDate(post.date);
+  const uploadDate = isoDate || '2023-01-01T00:00:00+00:00';
 
   if (wv === '1') {
     const ytId = video.replace(/\/.*$/, '').trim();
@@ -149,9 +150,9 @@ export function buildVideoSchema(post: BlogPost): Record<string, unknown> | null
       author: AUTHOR,
       publisher: PUBLISHER,
       inLanguage: 'en-GB',
+      uploadDate,
     };
     if (description) schema.description = description;
-    if (isoDate) schema.uploadDate = isoDate;
     return schema;
   }
 
@@ -166,9 +167,9 @@ export function buildVideoSchema(post: BlogPost): Record<string, unknown> | null
       author: AUTHOR,
       publisher: PUBLISHER,
       inLanguage: 'en-GB',
+      uploadDate,
     };
     if (description) schema.description = description;
-    if (isoDate) schema.uploadDate = isoDate;
     return schema;
   }
 
@@ -182,6 +183,7 @@ export function buildAudioSchema(post: BlogPost): Record<string, unknown> | null
   const description = getDescription(post);
   const isoDate = toIsoDate(post.date);
 
+  const uploadDate = isoDate || '2023-01-01T00:00:00+00:00';
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'AudioObject',
@@ -191,9 +193,9 @@ export function buildAudioSchema(post: BlogPost): Record<string, unknown> | null
     author: AUTHOR,
     publisher: PUBLISHER,
     inLanguage: 'en-GB',
+    uploadDate,
   };
   if (description) schema.description = description;
-  if (isoDate) schema.uploadDate = isoDate;
   return schema;
 }
 
