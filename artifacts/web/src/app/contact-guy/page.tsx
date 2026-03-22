@@ -55,7 +55,7 @@ export default function ContactGuy() {
             </div>
           </div>
 
-          {/* ROW 2: Cost + PayPal left, What you get + connect links right */}
+          {/* ROW 2: Cost left, What you get + connect links right */}
           <div className="contact-mid-grid">
             <div className="contact-cost">
               <h2>So, <span className="ident">whats it gonna </span>cost then?</h2>
@@ -66,9 +66,6 @@ export default function ContactGuy() {
                 <li>Indicate the intended usage. ie. web, radio, tv etc</li>
                 <li>We will then send you an accurate quote for your project</li>
               </ul>
-
-              <h2 style={{ marginTop: '28px' }}>You&#39;d like to Pay? We&#39;d love you to…</h2>
-              <PayPalButton />
             </div>
 
             <div className="contact-get">
@@ -105,6 +102,13 @@ export default function ContactGuy() {
                 </a>
               </p>
             </div>
+          </div>
+
+          {/* PayPal payment card */}
+          <div className="contact-paypal-card">
+            <h3>Ready to pay?</h3>
+            <p>Already received a quote? Pay securely via PayPal, Apple Pay or card.</p>
+            <PayPalButton />
           </div>
 
         </div>

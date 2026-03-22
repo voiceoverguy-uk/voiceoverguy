@@ -1920,6 +1920,29 @@ audio {
   color: var(--red);
 }
 
+.contact-paypal-card {
+  max-width: 420px;
+  margin: 0 auto 48px;
+  padding: 28px 32px;
+  background: #f9f9f9;
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-paypal-card h3 {
+  color: var(--red);
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.contact-paypal-card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
 .contact-bullets {
   list-style: none;
   padding: 0;
