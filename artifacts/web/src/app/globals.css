@@ -1565,10 +1565,14 @@ audio {
 
 /* ===== ROTATING QUOTES SECTION ===== */
 .rotating-quotes-section {
-  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
   background: #fafafa;
   padding: 72px 20px;
   overflow: hidden;
+  border-radius: 10px;
+  mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
 }
 
 .rotating-quotes-inner {
