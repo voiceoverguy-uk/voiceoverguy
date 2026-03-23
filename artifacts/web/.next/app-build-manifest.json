@@ -16,10 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/on-hold-voice/page": [
+    "/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/on-hold-voice/page.js"
+      "static/chunks/app/[slug]/page.js"
+    ],
+    "/commercial-voiceover/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/commercial-voiceover/page.js"
     ]
   }
 }
