@@ -46,17 +46,17 @@ export default function Page() {
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="explainer-video-voice" sections={[
         { text: data.s4 },
-        { vimeoId: data.s7 },
+        { youtubeId: 'NfoJJpELeQc' },
         { text: data.s5 },
-        { vimeoId: data.s8 },
+        { youtubeId: 'LRvWnpX_c9g' },
         { text: data.s6 },
-        { vimeoId: data.s9 },
+        { youtubeId: 'eNfJBWtsHc4' },
         { text: data.s10 },
-        { vimeoId: data.s11 },
+        { youtubeId: 'Pmc1xV_EOPE' },
         { text: data.s12 },
-        { vimeoId: data.s13 },
+        { youtubeId: 'K1tyvXu2kqo' },
         { text: data.s14 },
-        { vimeoId: data.s15 },
+        { youtubeId: '22hxKsJPEpI' },
         ...(data.s16 ? [{ text: data.s16, fullWidth: true }] : []),
       ]} />
       <SchemaScripts schemas={schemas} />
