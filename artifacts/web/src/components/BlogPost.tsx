@@ -199,11 +199,13 @@ export default function BlogPost({ post }: Props) {
           {hasImage && hasText2 ? (
             <div className="blog-post-section two-col">
               <div className="blog-media-col">
-                <img
-                  src={`/assets/img/blog/${post.image}`}
-                  alt={post.alt || post.pageTitle}
-                  className="blog-post-img"
-                />
+                <div className="blog-post-img-card">
+                  <img
+                    src={`/assets/img/blog/${post.image}`}
+                    alt={post.alt || post.pageTitle}
+                    className="blog-post-img"
+                  />
+                </div>
               </div>
               <div
                 className="blog-text-col"
@@ -212,11 +214,13 @@ export default function BlogPost({ post }: Props) {
             </div>
           ) : hasImage && !hasText2 ? (
             <div className="blog-post-section">
-              <img
-                src={`/assets/img/blog/${post.image}`}
-                alt={post.alt || post.pageTitle}
-                className="blog-post-img"
-              />
+              <div className="blog-post-img-card">
+                <img
+                  src={`/assets/img/blog/${post.image}`}
+                  alt={post.alt || post.pageTitle}
+                  className="blog-post-img"
+                />
+              </div>
             </div>
           ) : hasText2 ? (
             <div className="blog-post-section">

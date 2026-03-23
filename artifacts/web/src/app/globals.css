@@ -3366,11 +3366,18 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin-bottom: 32px;
 }
 
+.blog-post-img-card {
+  background: #f9f9f9;
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
 .blog-post-img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
 }
 
 .blog-text-col {
