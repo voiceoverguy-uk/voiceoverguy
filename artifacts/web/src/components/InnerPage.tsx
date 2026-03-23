@@ -89,7 +89,10 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
                   <VimeoEmbed id={left.vimeoId} />
                 )}
                 {left.imageSrc && (
-                  <img src={left.imageSrc} alt={left.imageAlt || ''} className="inner-img" />
+                  <div className="blog-post-img-card">
+                    <img src={left.imageSrc} alt={left.imageAlt || ''} className="blog-post-img" />
+                    {left.imageAlt && <p className="blog-post-img-caption">{left.imageAlt}</p>}
+                  </div>
                 )}
               </div>
             );
@@ -109,7 +112,10 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
                   <VimeoEmbed id={left.vimeoId} />
                 )}
                 {left.imageSrc && (
-                  <img src={left.imageSrc} alt={left.imageAlt || ''} style={{ width: '100%', borderRadius: 4, marginTop: 8 }} />
+                  <div className="blog-post-img-card">
+                    <img src={left.imageSrc} alt={left.imageAlt || ''} className="blog-post-img" />
+                    {left.imageAlt && <p className="blog-post-img-caption">{left.imageAlt}</p>}
+                  </div>
                 )}
               </div>
               <div className="inner-col">
@@ -123,7 +129,10 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
                   <VimeoEmbed id={right.vimeoId} />
                 )}
                 {right.imageSrc && (
-                  <img src={right.imageSrc} alt={right.imageAlt || ''} style={{ width: '100%', borderRadius: 4, marginTop: 8 }} />
+                  <div className="blog-post-img-card">
+                    <img src={right.imageSrc} alt={right.imageAlt || ''} className="blog-post-img" />
+                    {right.imageAlt && <p className="blog-post-img-caption">{right.imageAlt}</p>}
+                  </div>
                 )}
               </div>
             </div>

@@ -1,3 +1,5 @@
 {
+  "/voiceoverguy/page": "app/voiceoverguy/page.js",
+  "/on-hold-voice/page": "app/on-hold-voice/page.js",
   "/[slug]/page": "app/[slug]/page.js"
 }
