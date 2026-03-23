@@ -1,0 +1,37 @@
+Please refine the homepage layout so the middle content sections follow the same container width and alignment as the rest of the site, creating one consistent visual grid.
+
+Goals:
+- The following homepage sections should use the same max-width/container alignment as the main homepage content:
+  1. “Guy Harris – VoiceoverGuy. A professional and award-winning British male voiceover…”
+  2. “Why Clients Choose Me”
+  3. “Event or Awards Night Voiceover?”
+  4. “Need a British Child Voiceover?”
+- These sections currently feel too narrow compared with the showreels, logo row, feature cards, and latest news. Widen them so they sit within the same overall content width as the rest of the homepage.
+- Keep generous internal padding so the content still breathes and does not feel stretched.
+- Do not make them edge-to-edge full width. They should match the site’s main centred container, not the full browser width.
+
+Design requirements:
+- Keep the existing clean premium look.
+- Keep the red border/accent styling.
+- Keep the soft image fade treatment where already used.
+- Preserve mobile responsiveness.
+- Make the three feature/info cards (“Why Clients Choose Me”, “Event or Awards Night Voiceover?”, and “Need a British Child Voiceover?”) feel like one intentional content series.
+- Ensure these three cards use a consistent width, spacing, image/text balance, and visual rhythm.
+- If needed, slightly improve vertical spacing above and below these sections so the page flows more naturally.
+- The award/bio box should also widen to match the same layout system and feel less cramped.
+
+Implementation preference:
+- Reuse the same shared container class or max-width value already used successfully elsewhere on the homepage, rather than inventing a different width.
+- If these sections are using custom narrower wrappers, replace them with the same main container pattern used by the stronger-looking sections.
+- Keep the internal content aligned neatly and avoid sudden left/right jumps between sections.
+
+Important:
+- Do not rewrite the copy.
+- Do not introduce em dashes.
+- Do not alter the overall brand style.
+- Focus only on layout consistency, width, spacing, and polish.
+
+When finished, briefly explain:
+1. what container/layout changes were made,
+2. which sections were updated,
+3. whether any old custom width wrappers were removed or replaced.
