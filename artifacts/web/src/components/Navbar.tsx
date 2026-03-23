@@ -147,7 +147,7 @@ export default function Navbar() {
             const target = e.target as HTMLElement;
             if (target.closest('a')) closeMobile();
           }}>
-            <li className="nav-item" role="none">
+            <li className="nav-item" role="none" data-sticky-hide="true">
               <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.png" alt="" className="nav-home-icon" /> Home</Link>
             </li>
 
@@ -201,6 +201,13 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
+            </li>
+
+            {/* Desktop sticky search — between Characters and News in sticky mode */}
+            <li className="sticky-search-item" role="none" aria-hidden="true">
+              <div className="sticky-search-desktop">
+                <LiveSearch />
+              </div>
             </li>
 
             {/* Video — hidden in desktop sticky mode */}
@@ -292,11 +299,6 @@ export default function Navbar() {
               <Link href="/contact-guy" className="nav-link" role="menuitem"><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
             </li>
           </ul>
-
-          {/* Desktop sticky inline search — shown only in sticky desktop mode */}
-          <div className="sticky-search-desktop">
-            <LiveSearch />
-          </div>
         </div>
 
         {/* Search Bar */}
