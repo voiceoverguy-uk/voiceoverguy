@@ -885,7 +885,7 @@ button.nav-link {
 }
 
 .home-cluster p {
-  max-width: 680px;
+  max-width: 760px;
   margin: 0 auto 14px;
   font-size: 15px;
   line-height: 1.8;
@@ -928,10 +928,10 @@ button.nav-link {
 .home-callout-box {
   background: white;
   border-radius: 10px;
-  padding: 36px 40px;
+  padding: 40px 48px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   border-left: 4px solid var(--red);
-  max-width: 780px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -954,19 +954,19 @@ button.nav-link {
 .credentials-box {
   background: white;
   border-radius: 10px;
-  padding: 36px 40px;
+  padding: 40px 48px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   border-left: 4px solid var(--red);
-  max-width: 860px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .credentials-box p {
-  max-width: 100%;
+  max-width: 760px;
   font-size: 15px;
   line-height: 1.8;
-  margin: 0 0 14px;
+  margin: 0 auto 14px;
 }
 
 .credentials-box a.red-link {
