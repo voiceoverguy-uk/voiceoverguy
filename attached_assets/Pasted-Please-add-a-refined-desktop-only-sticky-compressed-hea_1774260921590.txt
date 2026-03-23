@@ -1,0 +1,55 @@
+Please add a refined desktop-only sticky compressed header for the homepage (and shared site header if it is global), triggered when the user scrolls down past the top hero/header area.
+
+Goal:
+Create a smooth, premium sticky header state that appears on desktop after scrolling, while keeping the existing full header unchanged at the top of the page. Mobile should remain exactly as it is now.
+
+Sticky header behaviour:
+- When the page is at the top, keep the current full header/layout exactly as it is.
+- After the user scrolls down a sensible amount, transition into a compact sticky header.
+- The transition should feel smooth and polished, not abrupt or jumpy.
+- On scrolling back to the top, the header should return cleanly to its original full layout.
+
+Desktop sticky header requirements:
+- Add a small compact VoiceoverGuy logo on the far left of the sticky bar using the supplied logo asset.
+- Keep the sticky header to a single clean horizontal row.
+- Include a compact search box within the sticky header.
+- Tighten spacing slightly so the bar feels efficient but not cramped.
+- Add a subtle shadow or separation so it feels anchored when sticky.
+
+Navigation changes in sticky desktop mode only:
+- Keep: Home, Who, Voice Demos, Character Demos, News & Blog, Links, Contact
+- Remove from sticky mode only: Video, FAQs
+- Shorten labels in sticky mode to save space:
+  - Voice Demos → Demos
+  - Character Demos → Characters
+  - News & Blog → News
+- Keep dropdown functionality working properly for any remaining menu items that currently use dropdowns.
+- Do not change the full top-of-page navigation labels unless needed outside the sticky state. These shortened labels are for the sticky state only.
+
+Design and animation requirements:
+- Smoothly animate height, spacing, opacity, and any logo/search appearance.
+- Avoid layout shift or content jumping.
+- Make sure the sticky header does not overlap awkwardly with page content.
+- Ensure the sticky bar remains visually balanced and not overcrowded.
+- Preserve the site’s existing branding, colours, and style.
+- Use the small logo tastefully so it supports the layout rather than dominating it.
+
+Technical requirements:
+- Desktop only. Leave mobile and tablet behaviour unchanged unless absolutely necessary for breakpoint consistency.
+- Reuse the existing header/navigation structure as much as possible rather than building a completely separate duplicated menu.
+- If practical, use CSS class changes on scroll rather than a fragile second header implementation.
+- Make sure the search box is usable and aligned nicely in the sticky state.
+- Ensure hover states, dropdowns, and links continue to work correctly.
+
+Important:
+- Do not introduce em dashes.
+- Do not break the current mobile menu.
+- Do not change page copy.
+- Do not remove Video or FAQs from the normal full header at the top of the page. Only remove them in the sticky compressed desktop state.
+- Keep this feeling elegant and minimal, not busy.
+
+When finished, briefly explain:
+1. how the sticky state is triggered,
+2. how the nav changes in sticky mode,
+3. how the search box and small logo were added,
+4. whether the implementation reuses the existing header or introduces a separate sticky layer.
