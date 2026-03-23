@@ -3372,6 +3372,18 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post-img-caption {
+  padding: 10px 14px 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .blog-post-img {

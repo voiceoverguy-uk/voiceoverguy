@@ -205,6 +205,7 @@ export default function BlogPost({ post }: Props) {
                     alt={post.alt || post.pageTitle}
                     className="blog-post-img"
                   />
+                  <p className="blog-post-img-caption">{post.pageTitle}</p>
                 </div>
               </div>
               <div
@@ -220,6 +221,7 @@ export default function BlogPost({ post }: Props) {
                   alt={post.alt || post.pageTitle}
                   className="blog-post-img"
                 />
+                <p className="blog-post-img-caption">{post.pageTitle}</p>
               </div>
             </div>
           ) : hasText2 ? (
