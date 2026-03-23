@@ -133,6 +133,15 @@ export default function Navbar() {
             />
           </Link>
 
+          {/* Desktop sticky logo — shown only in sticky desktop mode */}
+          <Link href="/" className="sticky-logo-desktop" aria-label="VoiceoverGuy home">
+            <img
+              src="/assets/images/voiceover-logo-sticky.png"
+              alt="VoiceoverGuy"
+              className="sticky-logo-desktop-img"
+            />
+          </Link>
+
           {/* Nav items */}
           <ul ref={menuRef} className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar" onClick={(e) => {
             const target = e.target as HTMLElement;
@@ -159,7 +168,7 @@ export default function Navbar() {
                 onClick={() => toggleMobile('voice')}
 
               >
-                <span className="nav-icon">🎙</span>&nbsp;Voice Demos&nbsp;<span className="chevron">▾</span>
+                <span className="nav-icon">🎙</span>&nbsp;<span className="label-full">Voice Demos</span><span className="label-short">Demos</span>&nbsp;<span className="chevron">▾</span>
               </button>
               <ul className="dropdown-menu" role="menu">
                 {voiceDemos.map(item => (
@@ -183,7 +192,7 @@ export default function Navbar() {
                 onClick={() => toggleMobile('char')}
 
               >
-                <span className="nav-icon">👤</span>&nbsp;Character Demos&nbsp;<span className="chevron">▾</span>
+                <span className="nav-icon">👤</span>&nbsp;<span className="label-full">Character Demos</span><span className="label-short">Characters</span>&nbsp;<span className="chevron">▾</span>
               </button>
               <ul className="dropdown-menu" role="menu">
                 {characterDemos.map(item => (
@@ -194,10 +203,11 @@ export default function Navbar() {
               </ul>
             </li>
 
-            {/* Video */}
+            {/* Video — hidden in desktop sticky mode */}
             <li
               className={`nav-item${openItem === 'video' ? ' mobile-open' : ''}`}
               role="none"
+              data-sticky-hide="true"
             >
               <button
                 className="nav-link"
@@ -228,10 +238,11 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item" role="none">
-              <Link href="/voiceover-news" className="nav-link" role="menuitem"><span className="nav-icon">📰</span>&nbsp;News &amp; Blog&nbsp;</Link>
+              <Link href="/voiceover-news" className="nav-link" role="menuitem"><span className="nav-icon">📰</span>&nbsp;<span className="label-full">News &amp; Blog</span><span className="label-short">News</span>&nbsp;</Link>
             </li>
 
-            <li className="nav-item" role="none">
+            {/* FAQ's — hidden in desktop sticky mode */}
+            <li className="nav-item" role="none" data-sticky-hide="true">
               <Link href="/FAQ" className="nav-link" role="menuitem"><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
             </li>
 
@@ -281,6 +292,11 @@ export default function Navbar() {
               <Link href="/contact-guy" className="nav-link" role="menuitem"><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
             </li>
           </ul>
+
+          {/* Desktop sticky inline search — shown only in sticky desktop mode */}
+          <div className="sticky-search-desktop">
+            <LiveSearch />
+          </div>
         </div>
 
         {/* Search Bar */}
