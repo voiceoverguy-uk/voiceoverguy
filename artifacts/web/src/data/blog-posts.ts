@@ -8338,6 +8338,38 @@ const blogPosts: BlogPost[] = [
     "nimage3": "",
     "nimage4": "",
     "conflictsWithCorePage": false
+  },
+  {
+    "id": 993,
+    "url": "motor-sport-racing-commentator-voice",
+    "pageTitle": "Vrroom Racing Commentator Voiceover - POV",
+    "info": "<p>A behind-the-scenes look at a high-energy motor racing commentator voiceover, from the booth and lip mic through to the finished advert.</p>",
+    "searchTerms": "motor sport racing commentator voice,motor racing voiceover,racing commentator voiceover,murray walker style voice,sports commentator voiceover,vrroom brighton marina,high energy voiceover",
+    "pageDesc": "Go behind the scenes with Guy Harris recording a motor racing commentator voiceover for Vrroom Virtual Race-Room in Brighton Marina.",
+    "text1": "<p>It is always nice to show a little of what happens behind the scenes in the voiceover world, especially on a job like this. This project started in the booth using a legendary lip mic, the kind traditionally associated with live commentary, before going into the mix with Gavin and then coming back out as a fully produced advert.</p><p>This one was for <strong>Vrroom Virtual Race-Room</strong> in Brighton Marina, and thanks to Gavin the finished piece came together brilliantly. I filmed myself in the studio while recording the voice, then combined that footage with the final advert so people could see a bit of the process from raw performance to polished result.</p><p>It is a great example of how the right voice, the right energy and the right production all come together to create something that feels fast, exciting and full of impact.</p>",
+    "text2": "<p>I do a lot of motor racing commentary-style voiceovers, channelling that classic over-the-top enthusiastic sound that instantly gives a script a sense of speed and drama. There is something brilliant about leaning into that style properly and really giving it some beans, especially when you have the lip mic in your hand and can fully commit to the performance.</p><p>That same high-energy approach also works well alongside my <a href=\"/football-commentator-voice\" title=\"Football Commentator Voice\">football commentator voice</a>, which is another style that clients regularly ask for. Both are in demand because they bring pace, excitement and a strong sense of live-event energy to adverts, promos and branded content.</p><p>And when that performance is recorded in a professional broadcast-quality booth, the whole thing becomes much easier for clients. If you need fast delivery and clean, studio-quality audio, my <a href=\"/voiceover-studio\" title=\"Voiceover Studio\">voiceover studio</a> means you are in safe hands and voice.</p>",
+    "image": "motor-sport-racing-commentator-voice.webp",
+    "video": "I-m7Iwrwv0Y",
+    "metaTitle": "Vrroom Racing Commentator Voiceover - POV",
+    "bottomText": "<p>If you are looking for a high-energy motor racing style commentary voice for an advert, promo, activation or branded project, do get in touch. Whether you want full-throttle excitement, classic race-day drama or something with a tongue-in-cheek commentary edge, it will be go, go, go to the <a href=\"/voiceover-studio\" title=\"Voiceover Studio\">booth</a> to get it voiced.</p>",
+    "rawDate": "July 2025",
+    "date": "2025-07-22",
+    "whatVideo": "1",
+    "alt": "Motor Sport Racing Commentator Voice - Guy Harris with lip mic in the studio",
+    "rating": "3",
+    "blogRating": fromLegacyRating("3"),
+    "twitter": "",
+    "homeText": "Behind the scenes of a high-energy racing commentator voiceover for Vrroom Virtual Race-Room, from lip mic performance to finished advert.",
+    "santa": "",
+    "ntext1": "",
+    "ntext2": "",
+    "ntext3": "",
+    "ntext4": "",
+    "nimage1": "",
+    "nimage2": "",
+    "nimage3": "",
+    "nimage4": "",
+    "conflictsWithCorePage": false
   }
 ];
 
