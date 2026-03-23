@@ -208,6 +208,15 @@ ul, ol {
     display: flex;
     align-items: center;
     padding: 0 6px;
+    flex: 1 1;
+  }
+
+  .navbar--fixed .sticky-search-desktop {
+    width: 100%;
+  }
+
+  .navbar--fixed .sticky-search-desktop .search-input-wrapper {
+    width: 100%;
   }
 
   .navbar--fixed [data-sticky-hide] {
