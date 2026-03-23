@@ -1,0 +1,55 @@
+Please refine the desktop sticky header only. The current version is close, but I want a cleaner layout and the logo proportions fixed.
+
+Changes required for sticky desktop mode only:
+- Remove the "Home" nav item completely from the sticky header
+- The VoiceoverGuy logo on the left should act as the Home link instead
+- Move the sticky search box so it appears in the middle of the nav, immediately after "Characters"
+- Keep "News", "Links", and "Contact" to the right of the search box
+- Keep Video and FAQs removed in sticky mode only
+- Keep the normal full top header unchanged when the page is at the top
+- Leave mobile and tablet behaviour unchanged
+
+Required sticky desktop nav order:
+Logo (links to home)
+Who
+Demos
+Characters
+Search box
+News
+Links
+Contact
+
+Logo fix:
+- The sticky logo currently looks stretched/distorted
+- Fix it so the original aspect ratio is preserved exactly
+- Do not stretch it vertically or horizontally
+- If needed, reduce its size, but keep proportions correct
+- Use CSS that respects the intrinsic ratio, with width:auto or height:auto as appropriate
+- Make sure the logo sits neatly and does not feel oversized
+
+Search box requirements:
+- Keep it clearly visible and usable in sticky desktop mode
+- Place it immediately after "Characters"
+- Give it a sensible width so the placeholder text is readable
+- Ensure it aligns nicely with the nav items on the same row
+- Prevent clipping, overflow, flex squeeze, or awkward wrapping
+
+Layout and behaviour:
+- Desktop sticky mode only
+- Keep the transition smooth on scroll
+- Avoid layout jumps or overlap
+- Keep the sticky header looking balanced and premium
+- Reuse the existing sticky header implementation where practical rather than rebuilding everything from scratch
+
+Important:
+- Do not introduce em dashes
+- Do not change the mobile menu
+- Do not remove Home from the normal full header at the top of the page. Remove it from sticky mode only
+- Make the logo clickable to the homepage in sticky mode
+
+When finished, please confirm:
+1. the final sticky nav order,
+2. how the search box was repositioned,
+3. how the logo ratio was fixed,
+4. that the logo links to the homepage in sticky mode,
+5. that this was visually checked on the live sticky desktop header.
