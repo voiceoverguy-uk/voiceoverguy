@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/[slug]/page": [
+    "/contact-guy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[slug]/page.js"
+      "static/chunks/app/contact-guy/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,20 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/contact-guy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact-guy/page.js"
-    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
+    ],
+    "/voiceoverguy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voiceoverguy/page.js"
     ]
   }
 }
