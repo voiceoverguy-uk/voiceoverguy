@@ -17,7 +17,7 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
-  const [shuffled, setShuffled] = useState<Logo[]>(logos);
+  const [shuffled] = useState<Logo[]>(() => shuffleArray(logos));
   const wrapperRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const offsetRef = useRef(0);
@@ -28,10 +28,6 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
   const speedRef = useRef(0.6);
   const halfWidthRef = useRef(0);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    setShuffled(shuffleArray(logos));
-  }, [logos]);
 
   const measure = useCallback(() => {
     if (!trackRef.current) return;
@@ -109,11 +105,11 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
         className="client-logos-marquee client-logos-marquee--draggable"
       >
         {shuffled.map(logo => (
-          <img key={logo.alt} src={logo.src} alt={logo.alt} onLoad={measure} />
+          <img key={logo.alt} src={logo.src} alt={logo.alt} onLoad={measure} suppressHydrationWarning />
         ))}
         <div aria-hidden="true" style={{ display: 'contents' }}>
           {shuffled.map(logo => (
-            <img key={`${logo.alt}-dup`} src={logo.src} alt="" onLoad={measure} />
+            <img key={`${logo.alt}-dup`} src={logo.src} alt="" onLoad={measure} suppressHydrationWarning />
           ))}
         </div>
       </div>
