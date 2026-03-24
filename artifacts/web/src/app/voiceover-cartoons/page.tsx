@@ -11,13 +11,13 @@ export const metadata: Metadata = {
     title: 'Voiceover Cartoons | VoiceoverGuy',
     description: 'Original voiceover cartoons by Guy Harris, illustrated by George Raggett. Funny, relatable humour from real-life British recording studio sessions, character voiceovers, Santa jobs, and audio editing.',
     url: 'https://www.voiceoverguy.co.uk/voiceover-cartoons',
-    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Voiceover Cartoons – Guy Harris' }],
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp', width: 1200, height: 630, alt: 'Voiceover Cartoons – Guy Harris' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Voiceover Cartoons | VoiceoverGuy',
     description: 'Original voiceover cartoons by Guy Harris, illustrated by George Raggett. Funny, relatable humour from real-life British recording studio sessions, character voiceovers, Santa jobs, and audio editing.',
-    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp'],
   },
 };
 

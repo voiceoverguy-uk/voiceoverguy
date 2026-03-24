@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     title: `${data.s1} | VoiceoverGuy`,
     description: data.s2,
     url: 'https://www.voiceoverguy.co.uk/contact-guy',
-    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Contact Guy Harris – British Voiceover Artist' }],
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp', width: 1200, height: 630, alt: 'Contact Guy Harris – British Voiceover Artist' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${data.s1} | VoiceoverGuy`,
     description: data.s2,
-    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp'],
   },
 };
 

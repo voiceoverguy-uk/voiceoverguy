@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     title: `${data.s7} | VoiceoverGuy`,
     description: data.s8,
     url: 'https://www.voiceoverguy.co.uk/voiceoverguy',
-    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg', width: 1200, height: 630, alt: 'Guy Harris – British Male Voiceover Artist' }],
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp', width: 1200, height: 630, alt: 'Guy Harris – British Male Voiceover Artist' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${data.s7} | VoiceoverGuy`,
     description: data.s8,
-    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.jpg'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp'],
   },
 };
 

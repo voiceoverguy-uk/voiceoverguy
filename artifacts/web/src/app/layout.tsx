@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'VoiceoverGuy',
     images: [
       {
-        url: '/assets/images/og-image-guy-harris.jpg',
+        url: '/assets/images/og-image-guy-harris.webp',
         width: 1200,
         height: 630,
         alt: 'Guy Harris – British Male Voiceover Artist – VoiceoverGuy',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
     description: 'Professional British male voiceover artist. Award-winning voice for TV, radio, games, explainers and events.',
-    images: ['/assets/images/og-image-guy-harris.jpg'],
+    images: ['/assets/images/og-image-guy-harris.webp'],
   },
 };
 
