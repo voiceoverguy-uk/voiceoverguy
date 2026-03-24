@@ -264,7 +264,7 @@ export const newsItems: NewsItem[] = [
   {
     segments: [
       t("If you hear the national radio commercial for "),
-      link("Mustard Car or Van Insurance", "https://soundcloud.com/voiceoverguy/mustard-pit-stop-radio-ad", true),
+      link("Mustard Car or Van Insurance", "/mustard-car-van-insurance-radio-advert-voiceover"),
       t(", you may find a familiar British male voice."),
     ],
   },

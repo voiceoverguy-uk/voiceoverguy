@@ -1,0 +1,64 @@
+Create a new blog post for the new VoiceoverGuy site using the standard blog format. Keep the tone polished, conversational, confident and professional. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+Mustard Car and Van Insurance Voiceover
+
+URL slug:
+mustard-car-van-insurance-radio-advert-voiceover
+
+Date:
+2025-07-14
+
+Rating:
+highest
+
+Intro line:
+Guy Harris voices the relaxed, conversational radio adverts for Mustard Car and Van Insurance, heard across Bauer radio stations.
+
+Main text (block 1):
+<p>I voice the radio adverts for <a href="https://www.mustard.co.uk/" target="_blank" rel="noopener noreferrer">Mustard Car and Van Insurance</a>, and it is one of those campaigns that really gets heard. The ads run right across Bauer radio stations and, because the campaign is used as play-if-gap airtime filler, they are on constantly. That means the read has to feel natural, easy to listen to and never overdone.</p>
+<p>This is a very conversational style of voiceover. It is casual, relaxed and direct, which suits the brand really well. There is a skill to making that kind of read sound effortless. It still needs timing, warmth and clarity, but without ever sounding like you are trying too hard. When it is done properly, it feels like a real person talking rather than a voiceover trying to sell at you.</p>
+
+Text block 2:
+<p>I really enjoy voicing the more casual end of the spectrum. A natural, down-to-earth delivery can be incredibly effective in radio advertising, especially when a brand wants to sound approachable and confident rather than over-polished or shouty. That style also links nicely with my work on <a href="/hotels-dot-com-what-else-could-go-wrong-voiceover">Hotels.com</a>, where the performance needed that same sense of ease and personality.</p>
+<p>At the same time, range is a big part of what I do. Alongside conversational commercial reads like this, I am also very much at home with character and performance-led work including <a href="/david-attenborough-voice">David Attenborough-style voiceovers</a>, <a href="/football-commentator-voice">football commentator voiceovers</a>, <a href="/halloween-voice">Halloween voices</a> and of course <a href="/santa-voice">Santa voiceovers</a>. That mix of natural commercial reads and larger character styles is what keeps the work varied and fun.</p>
+
+Bottom text:
+<p>If you are looking for a conversational British voice for a radio advert, audio campaign or brand promo, do get in touch. Whether you need something casual and chatty, warm and trustworthy, or a little more characterful, I can record it quickly from my professional <a href="/voiceover-studio">voiceover studio</a> and deliver broadcast-quality audio fast.</p>
+
+Home excerpt:
+Guy Harris voices the conversational radio adverts for Mustard Car and Van Insurance, heard across Bauer radio stations.
+
+Main image filename:
+mustard-car-van-insurance-radio-advert-voiceover.jpg
+
+Media type:
+YouTube
+
+YouTube video ID:
+OciJUvjfMTs
+
+Meta description:
+Guy Harris voices the conversational radio adverts for Mustard Car and Van Insurance, heard across Bauer radio stations in a relaxed commercial style.
+
+Search terms:
+mustard car and van insurance voiceover","radio advert voiceover","conversational radio voice","bauer radio advert voice","british commercial voiceover","casual voiceover style","mustard insurance advert
+
+Please also do the following:
+1. Render the blog in the same layout and style as the other blog posts on the new site.
+2. Make sure the YouTube embed displays correctly and responsively.
+3. Use the uploaded image mustard-car-van-insurance-radio-advert-voiceover.jpg from the standard blog image folder.
+4. Add tasteful internal links within the copy to:
+   - /hotels-dot-com-what-else-could-go-wrong-voiceover
+   - /david-attenborough-voice
+   - /football-commentator-voice
+   - /halloween-voice
+   - /santa-voice
+   - /voiceover-studio
+   - homepage
+5. Make sure the blog listing card uses the Home excerpt and main image correctly.
+6. Preserve clean spacing and a premium layout.
+7. Ensure the metadata and page structure are SEO-friendly.
+8. Apply the rating as highest so this post is prioritised correctly in blog listings if the rating system is active.
