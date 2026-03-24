@@ -1238,7 +1238,7 @@ button.nav-link {
 }
 
 .client-logos-marquee img {
-  height: 128px;
+  height: 96px;
   width: auto;
   flex-shrink: 0;
 }
