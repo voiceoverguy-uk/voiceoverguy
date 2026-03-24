@@ -78,7 +78,6 @@ const clientLogos = [
   { src: '/assets/images/clients/voiceoverguy-disney-brand.png', alt: 'Disney' },
   { src: '/assets/images/clients/voiceoverguy-clients-bbc-1.png', alt: 'BBC One' },
   { src: '/assets/images/clients/voiceoverguy-clients-bbc-2.png', alt: 'BBC Two' },
-  { src: '/assets/images/clients/voiceoverguy-microsoft-brand.png', alt: 'Microsoft' },
   { src: '/assets/images/clients/voiceoverguy-clients-tesco.png', alt: 'Tesco' },
   { src: '/assets/images/clients/voiceoverguy-lego-brand.png', alt: 'LEGO' },
   { src: '/assets/images/clients/voiceoverguy-clients-team-17.png', alt: 'Team17' },
