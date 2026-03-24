@@ -16,6 +16,7 @@ interface InnerPageProps {
   sections: Section[];
   pageTitle?: string;
   pageSlug?: string;
+  formIntro?: string;
 }
 
 function isYouTubeId(str: string): boolean {
@@ -54,7 +55,7 @@ function VimeoEmbed({ id }: { id: string }) {
   );
 }
 
-export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPageProps) {
+export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: InnerPageProps) {
   const pairs: Array<[Section, Section | null]> = [];
   let i = 0;
 
@@ -146,6 +147,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
           <BlogEnquiryForm
             pageTitle={pageTitle}
             pageUrl={`https://www.voiceoverguy.co.uk/${pageSlug}`}
+            intro={formIntro}
           />
         )}
       </div>

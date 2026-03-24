@@ -44,7 +44,7 @@ export default function Page() {
         </section>
       )}
       <div className="inner-bar" />
-      <InnerPage pageTitle={data.s1} pageSlug="explainer-video-voice" sections={[
+      <InnerPage pageTitle={data.s1} pageSlug="explainer-video-voice" formIntro="Need a clear, friendly explainer voice? Send me a quick message and I'll get back to you." sections={[
         { text: data.s4 },
         { youtubeId: 'NfoJJpELeQc' },
         { text: data.s5 },

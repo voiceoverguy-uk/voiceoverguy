@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 interface Props {
   pageTitle: string;
   pageUrl: string;
+  intro?: string;
 }
 
 const MIN_WORDS = 8;
@@ -19,7 +20,7 @@ interface FieldErrors {
   message?: string;
 }
 
-export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
+export default function BlogEnquiryForm({ pageTitle, pageUrl, intro }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -104,7 +105,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl }: Props) {
   return (
     <div className="blog-enquiry-section">
       <p className="blog-enquiry-intro">
-        Need a voice for something similar? Send me a quick message and I'll get back to you.
+        {intro ?? "Need a voice for something similar? Send me a quick message and I'll get back to you."}
       </p>
 
       <form onSubmit={handleSubmit} noValidate className="blog-enquiry-form">

@@ -1,0 +1,90 @@
+Please update the contact-form intro copy across the service pages so the opening line above each contact form feels relevant to that specific page, instead of every page using the same generic sentence.
+
+Goal:
+Make each service page contact intro feel tailored, natural, and on-topic, while keeping the same form design and functionality site-wide.
+
+What to change:
+- Only change the short intro sentence above the contact form on service pages
+- Do not change the form layout, fields, placeholders, button styling, validation, spacing, submit behaviour, or component structure unless needed to support the text swap cleanly
+- Keep the overall style consistent across the site
+- Use short, natural, human-sounding copy
+- No em dashes
+- Avoid cheesy marketing language
+- Avoid making every line start exactly the same way
+- Keep the second half broadly consistent, such as:
+  "Send me a quick message and I’ll get back to you."
+  or
+  "Drop me a quick message and I’ll get back to you."
+- The first phrase should be page-specific and relevant to the service
+
+Implementation preference:
+- Use the existing reusable contact form component if there is one
+- Pass in page-specific intro text via props, page data, or a clean mapping per service page
+- Do not duplicate the whole contact form component just to change one sentence
+- Keep this easy to manage later
+
+Please apply this to the main service pages first.
+
+Examples of the style wanted:
+- Looking for a British male voiceover? Send me a quick message and I’ll get back to you.
+- Need a polished Apple-style voice? Send me a quick message and I’ll get back to you.
+- Looking for a spooky Halloween voice? Send me a quick message and I’ll get back to you.
+- Need an epic Voice of God read? Send me a quick message and I’ll get back to you.
+- Want a believable football commentator voice? Send me a quick message and I’ll get back to you.
+
+Suggested page-specific intros to use or refine:
+- /voiceoverguy:
+  Looking for a British male voiceover? Send me a quick message and I’ll get back to you.
+
+- /apple-voice-style:
+  Need a polished Apple-style voice? Send me a quick message and I’ll get back to you.
+
+- /santa-voice:
+  Looking for a believable Santa voice? Send me a quick message and I’ll get back to you.
+
+- /voice-of-god:
+  Need an epic Voice of God read? Send me a quick message and I’ll get back to you.
+
+- /david-attenborough-voice:
+  Looking for a David Attenborough-style voice? Send me a quick message and I’ll get back to you.
+
+- /football-commentator-voice:
+  Need a football commentator voice? Send me a quick message and I’ll get back to you.
+
+- /commercial-voiceover:
+  Want a punchy commercial voiceover? Send me a quick message and I’ll get back to you.
+
+- /explainer-video-voice:
+  Need a clear, friendly explainer voice? Send me a quick message and I’ll get back to you.
+
+- /narration-voice:
+  Looking for warm, natural narration? Send me a quick message and I’ll get back to you.
+
+- /character-voiceover:
+  Need a character voice with real personality? Send me a quick message and I’ll get back to you.
+
+- /game-trailer-voice:
+  Want a bold game trailer voice? Send me a quick message and I’ll get back to you.
+
+- /pirate-voice:
+  Looking for a convincing pirate voice? Send me a quick message and I’ll get back to you.
+
+- /gameshow-host:
+  Need a gameshow host voice with energy? Send me a quick message and I’ll get back to you.
+
+- /on-hold-voice:
+  Looking for a professional on-hold voiceover? Send me a quick message and I’ll get back to you.
+
+- /voiceover-imaging:
+  Need strong voiceover imaging for your station or brand? Send me a quick message and I’ll get back to you.
+
+- /pathe-news-voice:
+  Looking for that classic Pathé-style delivery? Send me a quick message and I’ll get back to you.
+
+- /halloween-voice:
+  Looking for a spooky Halloween voice? Send me a quick message and I’ll get back to you.
+
+Please complete the changes carefully, then provide:
+1. A list of all service pages updated
+2. The final intro line used for each one
+3. Confirmation that no form functionality or styling was changed

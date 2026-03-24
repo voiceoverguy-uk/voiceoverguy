@@ -50,7 +50,7 @@ export default function Page() {
         </section>
       )}
       <div className="inner-bar" />
-      <InnerPage sections={[
+      <InnerPage pageTitle={data.s7} pageSlug="voiceoverguy" formIntro="Looking for a British male voiceover? Send me a quick message and I'll get back to you." sections={[
         { text: data.s2 },
         { imageSrc: '/assets/images/professional-voice-over-voiceover.webp', imageAlt: 'Guy Harris \u2013 Professional Voiceover Artist' },
         { text: data.s3 },
