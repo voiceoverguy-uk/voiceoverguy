@@ -25,7 +25,7 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
   const draggingRef = useRef(false);
   const startXRef = useRef(0);
   const startOffsetRef = useRef(0);
-  const speedRef = useRef(4.0);
+  const speedRef = useRef(3.4);
   const halfWidthRef = useRef(0);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
