@@ -35,6 +35,26 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/_not-found/page.js"
+    ],
+    "/apple-voice-style/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/apple-voice-style/page.js"
+    ],
+    "/commercial-voiceover/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/commercial-voiceover/page.js"
+    ],
+    "/david-attenborough-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/david-attenborough-voice/page.js"
+    ],
+    "/gameshow-host/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/gameshow-host/page.js"
     ]
   }
 }
