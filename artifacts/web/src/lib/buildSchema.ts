@@ -2,7 +2,7 @@ import type { BlogPost } from '@/data/blog-posts';
 
 const SITE_URL = 'https://www.voiceoverguy.co.uk';
 const SITE_NAME = 'VoiceoverGuy';
-const SITE_LOGO = `${SITE_URL}/assets/images/guy-harris-voiceover.png`;
+const SITE_LOGO = `${SITE_URL}/assets/images/guy-harris-voiceover.webp`;
 
 function stripHtml(html: string): string {
   return html.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&apos;/g, "'").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim();

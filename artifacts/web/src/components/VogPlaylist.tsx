@@ -122,7 +122,7 @@ export default function VogPlaylist() {
       {/* Top: photo + now-playing bar */}
       <div className="vog-player-top">
         <img
-          src="/assets/images/voice-of-god-voice-og.jpg"
+          src="/assets/images/voice-of-god-voice-og.webp"
           alt="Guy Harris – Voice of God"
           className="vog-player-photo"
         />
@@ -195,7 +195,7 @@ export default function VogPlaylist() {
               )}
             </span>
             <img
-              src="/assets/images/voice-of-god-voice-og.jpg"
+              src="/assets/images/voice-of-god-voice-og.webp"
               alt=""
               className="vog-track-thumb"
             />
@@ -207,7 +207,7 @@ export default function VogPlaylist() {
       {/* Footer branding */}
       <div className="vog-player-footer">
         <img
-          src="/assets/images/voice-of-god-voice-og.jpg"
+          src="/assets/images/voice-of-god-voice-og.webp"
           alt=""
           className="vog-footer-thumb"
         />

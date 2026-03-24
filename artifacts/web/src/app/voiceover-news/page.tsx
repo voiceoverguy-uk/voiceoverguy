@@ -83,7 +83,7 @@ export default function VoiceoverNewsPage() {
           name: 'Voiceover News & Blog \u2013 Guy Harris',
           description: 'Explore voiceover news and blog posts from British voiceover artist Guy Harris. Discover seasonal campaigns, client work, and voice acting insights.',
           url: 'https://www.voiceoverguy.co.uk/voiceover-news',
-          image: 'https://www.voiceoverguy.co.uk/assets/images/og-image.jpg',
+          image: 'https://www.voiceoverguy.co.uk/assets/images/og-image.webp',
         },
       ]} />
     </>

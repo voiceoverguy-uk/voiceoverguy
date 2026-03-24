@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     title: 'David Attenborough Script Generator | VoiceoverGuy',
     description: "Type a quirky scenario and watch it turn into a nature-style narration. Then get the real VoiceoverGuy to voice it like Attenborough!",
     url: 'https://www.voiceoverguy.co.uk/attenborough-script-generator',
-    images: ['https://www.voiceoverguy.co.uk/assets/images/attenborough-script-generator.jpg'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/attenborough-script-generator.webp'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'David Attenborough Script Generator | VoiceoverGuy',
     description: "Enter a fun wildlife scene and hear it narrated in Attenborough's style. Then book Guy Harris - the UK's leading Attenborough voice.",
-    images: ['https://www.voiceoverguy.co.uk/assets/images/attenborough-script-generator.jpg'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/attenborough-script-generator.webp'],
   },
 };
 

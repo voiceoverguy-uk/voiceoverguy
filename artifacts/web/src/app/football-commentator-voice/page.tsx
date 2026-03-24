@@ -53,7 +53,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/football-commentator-voice-og.jpg', imageAlt: 'Football Commentator Voice \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/football-commentator-voice-og.webp', imageAlt: 'Football Commentator Voice \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

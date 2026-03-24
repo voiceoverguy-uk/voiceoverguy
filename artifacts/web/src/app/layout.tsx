@@ -48,8 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-GB">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/assets/images/voiceover-guy-icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/assets/images/voiceover-guy-icon.png" />
+        <link rel="icon" href="/assets/images/voiceover-guy-icon.webp" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/images/voiceover-guy-icon.webp" />
       </head>
       <body>
         <div className="top-bar" />

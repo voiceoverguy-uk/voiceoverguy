@@ -55,7 +55,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/attenborough-script-generator.jpg', imageAlt: 'David Attenborough Impression \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/attenborough-script-generator.webp', imageAlt: 'David Attenborough Impression \u2013 Guy Harris' },
       ]} />
       <section className="generator-promo">
         <div className="container">

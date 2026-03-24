@@ -1,10 +1,4 @@
 {
-  "app/gameshow-host/GameshowPlayer.tsx -> @/components/WaveSurferPlayer": {
-    "id": "app/gameshow-host/GameshowPlayer.tsx -> @/components/WaveSurferPlayer",
-    "files": [
-      "static/chunks/_app-pages-browser_src_components_WaveSurferPlayer_tsx.js"
-    ]
-  },
   "components/WaveSurferPlayer.tsx -> wavesurfer.js": {
     "id": "components/WaveSurferPlayer.tsx -> wavesurfer.js",
     "files": [

@@ -58,7 +58,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/character-voiceover.jpg', imageAlt: 'Character Voiceover \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/character-voiceover.webp', imageAlt: 'Character Voiceover \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

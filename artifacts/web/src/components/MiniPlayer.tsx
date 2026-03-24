@@ -71,7 +71,7 @@ export default function MiniPlayer({ src, title, artwork }: MiniPlayerProps) {
         {artwork ? (
           <img src={artwork} alt={title} className="mini-player-artwork-img" />
         ) : (
-          <img src="/assets/images/mini-player-logo.png" alt="VoiceoverGuy" className="mini-player-artwork-img" />
+          <img src="/assets/images/mini-player-logo.webp" alt="VoiceoverGuy" className="mini-player-artwork-img" />
         )}
       </div>
 

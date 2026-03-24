@@ -1,5 +1,4 @@
 {
   "/voiceoverguy/page": "app/voiceoverguy/page.js",
-  "/privacy-policy/page": "app/privacy-policy/page.js",
-  "/contact-guy/page": "app/contact-guy/page.js"
+  "/page": "app/page.js"
 }

@@ -54,7 +54,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/pirate-voice-guy-harris.png', imageAlt: 'Pirate Voice \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/pirate-voice-guy-harris.webp', imageAlt: 'Pirate Voice \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

@@ -57,7 +57,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/santa-voice-guy-harris.jpg', imageAlt: 'Santa Voice \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/santa-voice-guy-harris.webp', imageAlt: 'Santa Voice \u2013 Guy Harris' },
       ]} />
       <section className="generator-promo">
         <div className="container">

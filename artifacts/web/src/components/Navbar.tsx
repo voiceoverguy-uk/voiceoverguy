@@ -100,7 +100,7 @@ export default function Navbar() {
         )}
         <Link href="/" className="navbar-logo">
           <img
-            src="/assets/images/guy-harris-voiceover.png"
+            src="/assets/images/guy-harris-voiceover.webp"
             alt="Guy Harris VoiceoverGuy"
             className="navbar-logo-img"
           />
@@ -127,7 +127,7 @@ export default function Navbar() {
           </div>
           <Link href="/" className="navbar-fixed-icon">
             <img
-              src="/assets/images/voiceover-guy-icon.png"
+              src="/assets/images/voiceover-guy-icon.webp"
               alt="VoiceoverGuy"
               className="navbar-fixed-icon-img"
             />
@@ -136,7 +136,7 @@ export default function Navbar() {
           {/* Desktop sticky logo — shown only in sticky desktop mode */}
           <Link href="/" className="sticky-logo-desktop" aria-label="VoiceoverGuy home">
             <img
-              src="/assets/images/voiceover-logo-sticky.png"
+              src="/assets/images/voiceover-logo-sticky.webp"
               alt="VoiceoverGuy"
               className="sticky-logo-desktop-img"
             />
@@ -148,7 +148,7 @@ export default function Navbar() {
             if (target.closest('a')) closeMobile();
           }}>
             <li className="nav-item" role="none" data-sticky-hide="true">
-              <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.png" alt="" className="nav-home-icon" /> Home</Link>
+              <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.webp" alt="" className="nav-home-icon" /> Home</Link>
             </li>
 
             <li className="nav-item" role="none">

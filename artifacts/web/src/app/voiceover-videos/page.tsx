@@ -25,27 +25,27 @@ import { normaliseHtml } from '@/lib/normaliseHtml';
   };
 
   const items = [
-    { img: '/assets/images/voiceoverguy-videos-Universal-Studio.png', caption: data.v1 },
-        { img: '/assets/images/voiceoverguy-videos-apple.png', caption: data.v2 },
-        { img: '/assets/images/voiceoverguy-videos-walkers-crisps.png', caption: data.v3 },
-        { img: '/assets/images/voiceoverguy-videos-disney-store.png', caption: data.v4 },
-        { img: '/assets/images/voiceoverguy-videos-radio-one-big-weekend.png', caption: data.v5 },
-        { img: '/assets/images/voiceoverguy-videos-nesquik-bunny.png', caption: data.v6 },
-        { img: '/assets/images/voiceoverguy-videos-penarium-game-trailer.png', caption: data.v7 },
-        { img: '/assets/images/voiceoverguy-videos-disney-world.png', caption: data.v8 },
-        { img: '/assets/images/voiceoverguy-videos-minecraft.png', caption: data.v9 },
-        { img: '/assets/images/voiceoverguy-videos-tesco-bank.png', caption: data.v10 },
-        { img: '/assets/images/voiceoverguy-videos-lego.png', caption: data.v11 },
-        { img: '/assets/images/voiceoverguy-videos-kelloggs.png', caption: data.v12 },
-        { img: '/assets/images/voiceoverguy-videos-horlicks.png', caption: data.v13 },
-        { img: '/assets/images/voiceoverguy-videos-pig-goes-pop.png', caption: data.v14 },
-        { img: '/assets/images/voiceoverguy-videos-ant-dec-takeaway-tour.png', caption: data.v15 },
-        { img: '/assets/images/voiceoverguy-videos-wren-kitchens-viral.png', caption: data.v16 },
-        { img: '/assets/images/voiceoverguy-videos-kings-road-game-trailer.png', caption: data.v17 },
-        { img: '/assets/images/voiceoverguy-videos-world-of-warships.png', caption: data.v18 },
-        { img: '/assets/images/voiceoverguy-videos-silly-moo.png', caption: data.v19 },
-        { img: '/assets/images/voiceoverguy-videos-the-car-people.png', caption: data.v20 },
-        { img: '/assets/images/voiceoverguy-videos-playmobil.png', caption: data.v21 }
+    { img: '/assets/images/voiceoverguy-videos-Universal-Studio.webp', caption: data.v1 },
+        { img: '/assets/images/voiceoverguy-videos-apple.webp', caption: data.v2 },
+        { img: '/assets/images/voiceoverguy-videos-walkers-crisps.webp', caption: data.v3 },
+        { img: '/assets/images/voiceoverguy-videos-disney-store.webp', caption: data.v4 },
+        { img: '/assets/images/voiceoverguy-videos-radio-one-big-weekend.webp', caption: data.v5 },
+        { img: '/assets/images/voiceoverguy-videos-nesquik-bunny.webp', caption: data.v6 },
+        { img: '/assets/images/voiceoverguy-videos-penarium-game-trailer.webp', caption: data.v7 },
+        { img: '/assets/images/voiceoverguy-videos-disney-world.webp', caption: data.v8 },
+        { img: '/assets/images/voiceoverguy-videos-minecraft.webp', caption: data.v9 },
+        { img: '/assets/images/voiceoverguy-videos-tesco-bank.webp', caption: data.v10 },
+        { img: '/assets/images/voiceoverguy-videos-lego.webp', caption: data.v11 },
+        { img: '/assets/images/voiceoverguy-videos-kelloggs.webp', caption: data.v12 },
+        { img: '/assets/images/voiceoverguy-videos-horlicks.webp', caption: data.v13 },
+        { img: '/assets/images/voiceoverguy-videos-pig-goes-pop.webp', caption: data.v14 },
+        { img: '/assets/images/voiceoverguy-videos-ant-dec-takeaway-tour.webp', caption: data.v15 },
+        { img: '/assets/images/voiceoverguy-videos-wren-kitchens-viral.webp', caption: data.v16 },
+        { img: '/assets/images/voiceoverguy-videos-kings-road-game-trailer.webp', caption: data.v17 },
+        { img: '/assets/images/voiceoverguy-videos-world-of-warships.webp', caption: data.v18 },
+        { img: '/assets/images/voiceoverguy-videos-silly-moo.webp', caption: data.v19 },
+        { img: '/assets/images/voiceoverguy-videos-the-car-people.webp', caption: data.v20 },
+        { img: '/assets/images/voiceoverguy-videos-playmobil.webp', caption: data.v21 }
   ];
 
   export default function Page() {

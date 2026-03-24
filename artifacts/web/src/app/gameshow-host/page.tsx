@@ -53,7 +53,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/gameshow-host-voice-og.jpg', imageAlt: 'Gameshow Host Voice \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/gameshow-host-voice-og.webp', imageAlt: 'Gameshow Host Voice \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

@@ -49,7 +49,7 @@ export default function ContactGuy() {
 
             <div className="contact-photo">
               <img
-                src="/assets/images/voiceover-contact.jpg"
+                src="/assets/images/voiceover-contact.webp"
                 alt="Guy Harris voiceover recording studio — Get in touch"
               />
             </div>

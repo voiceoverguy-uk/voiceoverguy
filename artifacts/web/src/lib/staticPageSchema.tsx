@@ -85,7 +85,7 @@ export function localBusiness(slug: string, description: string) {
     '@type': 'LocalBusiness',
     '@id': `${SITE}/#business`,
     name: 'Guy Harris Voiceover',
-    image: `${SITE}/assets/images/guy-harris-voiceover.png`,
+    image: `${SITE}/assets/images/guy-harris-voiceover.webp`,
     url: `${SITE}/${slug}`,
     priceRange: '\u00A3100\u2013\u00A35000',
     address: {

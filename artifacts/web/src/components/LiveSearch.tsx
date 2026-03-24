@@ -25,13 +25,13 @@ const toolPages: ToolPage[] = [
     label: 'Santa Script Generator',
     href: '/santa-script-generator',
     keywords: 'santa script generator christmas festive father christmas xmas holiday north pole',
-    thumbnail: '/assets/images/santa-script-generator.jpg',
+    thumbnail: '/assets/images/santa-script-generator.webp',
   },
   {
     label: 'David Attenborough Script Generator',
     href: '/attenborough-script-generator',
     keywords: 'attenborough script generator david attenborough nature wildlife narration documentary',
-    thumbnail: '/assets/images/attenborough-script-generator.jpg',
+    thumbnail: '/assets/images/attenborough-script-generator.webp',
   },
 ];
 

@@ -40,7 +40,7 @@ const schemas = [
     name: 'Apple Voice Style',
     description: "Looking for that clean, minimalist Apple commercial narration style? Guy Harris delivers just that \u2013 a trusted British voiceover artist who\u2019s worked with Apple and many more.",
     url: 'https://www.voiceoverguy.co.uk/apple-voice-style',
-    image: 'https://www.voiceoverguy.co.uk/assets/images/apple-voice-style-og.jpg',
+    image: 'https://www.voiceoverguy.co.uk/assets/images/apple-voice-style-og.webp',
     author: { '@type': 'Person', name: 'Guy Harris' },
   },
 ];
@@ -60,7 +60,7 @@ export default function Page() {
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/apple-voice-style-og.jpg', imageAlt: 'Apple Voice Style \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/apple-voice-style-og.webp', imageAlt: 'Apple Voice Style \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

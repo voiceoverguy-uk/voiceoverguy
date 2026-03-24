@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const videoTiles = [
   {
-    img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
+    img: '/assets/images/voiceoverguy-home-commercial-voice.webp',
     titleOverlay: 'Commercial Voice',
     captionLine1: 'Male',
     captionHighlight: 'Voiceover',
@@ -26,7 +26,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=9bs4CJ4RixI',
   },
   {
-    img: '/assets/images/voiceoverguy-home-character-voices.jpg',
+    img: '/assets/images/voiceoverguy-home-character-voices.webp',
     titleOverlay: 'Character Voices',
     captionLine1: '',
     captionHighlight: 'Character',
@@ -34,7 +34,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=Ad85PPvSfbc',
   },
   {
-    img: '/assets/images/voiceoverguy-home-apple-voice.jpg',
+    img: '/assets/images/voiceoverguy-home-apple-voice.webp',
     titleOverlay: 'The Apple Voice',
     captionLine1: 'Apple',
     captionHighlight: 'iPhone',
@@ -42,7 +42,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=uYDQObLc1vw',
   },
   {
-    img: '/assets/images/voiceoverguy-home-explainer-voices.jpg',
+    img: '/assets/images/voiceoverguy-home-explainer-voices.webp',
     titleOverlay: 'Explainer Voices',
     captionLine1: '',
     captionHighlight: 'Explainer',
@@ -50,7 +50,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=TGD6Btk4twk',
   },
   {
-    img: '/assets/images/voiceoverguy-home-what-i-do.jpg',
+    img: '/assets/images/voiceoverguy-home-what-i-do.webp',
     titleOverlay: 'This is what I do...',
     captionLine1: 'Well? This is what',
     captionHighlight: 'i do',
@@ -58,7 +58,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
   },
   {
-    img: '/assets/images/voiceoverguy-home-voice-of-santa.jpg',
+    img: '/assets/images/voiceoverguy-home-voice-of-santa.webp',
     titleOverlay: 'Voice of Santa',
     captionLine1: 'Ho Ho Ho! The Voice of',
     captionHighlight: 'Santa',
@@ -376,7 +376,7 @@ export default function Home() {
                 '@id': 'https://www.voiceoverguy.co.uk/#organization',
                 name: 'VoiceoverGuy',
                 url: 'https://www.voiceoverguy.co.uk',
-                logo: 'https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.png',
+                logo: 'https://www.voiceoverguy.co.uk/assets/images/guy-harris-voiceover.webp',
                 image: 'https://www.voiceoverguy.co.uk/images/guy-harris-profile.jpg',
                 email: 'guy@voiceoverguy.co.uk',
                 description: 'Professional British male voiceover services for agencies, brands and broadcasters worldwide. Broadcast-quality remote recording with fast turnaround.',
