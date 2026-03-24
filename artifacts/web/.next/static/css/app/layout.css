@@ -68,7 +68,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  background-attachment: scroll;
+  background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
 }
