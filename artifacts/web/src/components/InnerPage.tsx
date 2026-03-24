@@ -119,6 +119,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
                     {left.imageAlt && <p className="blog-post-img-caption">{left.imageAlt}</p>}
                   </div>
                 )}
+                {left.node && <>{left.node}</>}
               </div>
               <div className="inner-col">
                 {right.text && (
