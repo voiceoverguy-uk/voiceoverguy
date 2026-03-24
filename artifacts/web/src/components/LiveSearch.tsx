@@ -65,9 +65,9 @@ function getSeasonalPhrases(): string[] {
 
 function getGreeting(): string {
   const hour = new Date().getHours();
-  if (hour < 12) return 'Good morning!';
-  if (hour < 18) return 'Good afternoon!';
-  return 'Good evening!';
+  if (hour < 12) return 'Good morning, welcome to VoiceoverGuy.co.uk!';
+  if (hour < 18) return 'Good afternoon, welcome to VoiceoverGuy.co.uk!';
+  return 'Good evening, welcome to VoiceoverGuy.co.uk!';
 }
 
 function useReducedMotion(): boolean {
@@ -284,7 +284,7 @@ export default function LiveSearch() {
   const [greeting] = useState(() => getGreeting());
 
   useEffect(() => {
-    const timer = setTimeout(() => setGreetingActive(false), 4000);
+    const timer = setTimeout(() => setGreetingActive(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
