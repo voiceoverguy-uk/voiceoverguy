@@ -60,7 +60,9 @@ function getSeasonalPhrases(): string[] {
 
   if (month === 10) return PHRASES_HALLOWEEN;
   if (month === 11 || (month === 12 && day <= 25)) return PHRASES_SANTA;
-  return PHRASES_REGULAR;
+
+  const monthName = now.toLocaleString('en-GB', { month: 'long' });
+  return [...PHRASES_REGULAR, `Need the voice of Santa in ${monthName}?`];
 }
 
 function getGreeting(): string {
