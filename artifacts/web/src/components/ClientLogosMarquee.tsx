@@ -1,13 +1,23 @@
 'use client';
 
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback, useState } from 'react';
 
 interface Logo {
   src: string;
   alt: string;
 }
 
+function shuffleArray<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
+  const [shuffled, setShuffled] = useState<Logo[]>(logos);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const offsetRef = useRef(0);
@@ -19,6 +29,10 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
   const halfWidthRef = useRef(0);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  useEffect(() => {
+    setShuffled(shuffleArray(logos));
+  }, [logos]);
+
   const measure = useCallback(() => {
     if (!trackRef.current) return;
     const imgs = trackRef.current.querySelectorAll('img');
@@ -27,7 +41,7 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
     for (let i = 0; i < half; i++) {
       w += imgs[i].offsetWidth + 70;
     }
-    halfWidthRef.current = w;
+    if (w > 0) halfWidthRef.current = w;
   }, []);
 
   useEffect(() => {
@@ -94,12 +108,12 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
         ref={trackRef}
         className="client-logos-marquee client-logos-marquee--draggable"
       >
-        {logos.map(logo => (
-          <img key={logo.alt} src={logo.src} alt={logo.alt} loading="lazy" />
+        {shuffled.map(logo => (
+          <img key={logo.alt} src={logo.src} alt={logo.alt} onLoad={measure} />
         ))}
         <div aria-hidden="true" style={{ display: 'contents' }}>
-          {logos.map(logo => (
-            <img key={`${logo.alt}-dup`} src={logo.src} alt="" loading="lazy" />
+          {shuffled.map(logo => (
+            <img key={`${logo.alt}-dup`} src={logo.src} alt="" onLoad={measure} />
           ))}
         </div>
       </div>
