@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/contact-guy/page": [
+    "/voiceoverguy/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact-guy/page.js"
+      "static/chunks/app/voiceoverguy/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -20,36 +20,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
-    ],
-    "/halloween-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/halloween-voice/page.js"
-    ],
-    "/voiceoverguy/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/voiceoverguy/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
-    ],
-    "/apple-voice-style/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/apple-voice-style/page.js"
-    ],
-    "/commercial-voiceover/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/commercial-voiceover/page.js"
-    ],
-    "/david-attenborough-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/david-attenborough-voice/page.js"
     ],
     "/gameshow-host/page": [
       "static/chunks/webpack.js",

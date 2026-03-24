@@ -2,7 +2,8 @@ import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, faqPage, videoObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, breadcrumb, faqPage, videoObject, audioObject } from '@/lib/staticPageSchema';
+import GameshowPlayer from './GameshowPlayer';
 
 const data = (pages as Record<string, Record<string, string>>)['seo15'];
 
@@ -34,6 +35,7 @@ const schemas = [
     { q: 'What does a gameshow voiceover include?', a: 'A gameshow voiceover includes bold, exciting delivery to build suspense and engagement. Great for prize reveals, countdowns, and high-stakes intros.' },
   ]),
   videoObject('gameshow-host', data.s1, 'Gameshow host voiceover demo by Guy Harris, high-energy delivery for TV, radio and live events.', 'lMgRXetDlKU', '2020-01-27'),
+  audioObject('gameshow-host', 'BBC Radio 1 Headcam Day – Gameshow Voice Promo', 'High-energy American gameshow-style voice promo for BBC Radio 1 Headcam Day, voiced by Guy Harris.', '/assets/audio/bbc-radio-1-headcam-day-gameshow-voice.mp3', 'PT39S'),
 ];
 
 export default function Page() {
@@ -46,7 +48,7 @@ export default function Page() {
       )}
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="gameshow-host" formIntro="Need a gameshow host voice with energy? Send me a quick message and I'll get back to you." sections={[
-        ...(data.s4 ? [{ text: data.s4 }] : []),
+        ...(data.s4 ? [{ text: data.s4, node: <GameshowPlayer /> }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
