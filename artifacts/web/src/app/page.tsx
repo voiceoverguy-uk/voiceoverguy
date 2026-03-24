@@ -92,6 +92,10 @@ const clientLogos = [
   { src: '/assets/images/clients/voiceoverguy-clients-butlins.png', alt: 'Butlins' },
   { src: '/assets/images/clients/voiceoverguy-clients-dreamworks.png', alt: 'DreamWorks' },
   { src: '/assets/images/clients/voiceoverguy-clients-poundland.png', alt: 'Poundland' },
+  { src: '/assets/images/clients/voiceoverguy-clients-mini.png', alt: 'MINI' },
+  { src: '/assets/images/clients/voiceoverguy-clients-mr-men.png', alt: 'Mr. Men' },
+  { src: '/assets/images/clients/voiceoverguy-clients-legoland-windsor-resort.png', alt: 'Legoland Windsor Resort' },
+  { src: '/assets/images/clients/voiceoverguy-clients-tv-choice.png', alt: 'TV Choice' },
 ];
 
 export default function Home() {
