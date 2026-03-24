@@ -96,6 +96,7 @@ const clientLogos = [
   { src: '/assets/images/clients/voiceoverguy-clients-mr-men.png', alt: 'Mr. Men' },
   { src: '/assets/images/clients/voiceoverguy-clients-legoland-windsor-resort.png', alt: 'Legoland Windsor Resort' },
   { src: '/assets/images/clients/voiceoverguy-clients-tv-choice.png', alt: 'TV Choice' },
+  { src: '/assets/images/clients/voiceoverguy-clients-alton-towers.png', alt: 'Alton Towers' },
 ];
 
 export default function Home() {
