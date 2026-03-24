@@ -1233,7 +1233,7 @@ button.nav-link {
 }
 
 .client-logos-marquee img {
-  height: auto;
+  height: 128px;
   width: auto;
   flex-shrink: 0;
 }
