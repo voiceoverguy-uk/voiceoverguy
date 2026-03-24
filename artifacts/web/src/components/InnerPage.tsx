@@ -9,6 +9,7 @@ interface Section {
   imageSrc?: string;
   imageAlt?: string;
   fullWidth?: boolean;
+  node?: React.ReactNode;
 }
 
 interface InnerPageProps {
@@ -94,6 +95,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug }: InnerPagePr
                     {left.imageAlt && <p className="blog-post-img-caption">{left.imageAlt}</p>}
                   </div>
                 )}
+                {left.node && <>{left.node}</>}
               </div>
             );
           }

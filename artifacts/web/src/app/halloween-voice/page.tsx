@@ -3,6 +3,7 @@ import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
 import { SchemaScripts, breadcrumb, localBusiness, audioObject, videoObject, faqPage } from '@/lib/staticPageSchema';
+import HalloweenPlayer from './HalloweenPlayer';
 
 const data = (pages as Record<string, Record<string, string>>)['seo17'];
 
@@ -50,6 +51,10 @@ export default function Page() {
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="halloween-voice" sections={[
         ...(data.s4 ? [{ text: data.s4 }] : []),
+        {
+          node: <HalloweenPlayer />,
+          fullWidth: true,
+        },
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
