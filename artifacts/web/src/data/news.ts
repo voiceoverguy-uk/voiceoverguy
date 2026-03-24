@@ -28,7 +28,9 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("My daughter continues to do well with her Voice work. Still only 9 she's had some nice jobs already in 2026. And it's only Feb!."),
+      t("My daughter continues to do well with her "),
+      link("Voice work", "/arabella-harris-girl-child-voiceover-kid"),
+      t(". Still only 9 she's had some nice jobs already in 2026. And it's only Feb!."),
     ],
   },
   {
