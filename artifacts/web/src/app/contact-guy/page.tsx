@@ -66,6 +66,12 @@ export default function ContactGuy() {
                 <li>Indicate the intended usage. ie. web, radio, tv etc</li>
                 <li>We will then send you an accurate quote for your project</li>
               </ul>
+
+              <h2 style={{ marginTop: '28px' }}>Audio <span className="ident">File Formats</span></h2>
+              <ul className="contact-bullets">
+                <li><strong>MP3:</strong> Quick and easy</li>
+                <li><strong>WAV:</strong> Broadcast quality.</li>
+              </ul>
             </div>
 
             <div className="contact-get">
