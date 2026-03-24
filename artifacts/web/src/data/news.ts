@@ -210,7 +210,7 @@ export const newsItems: NewsItem[] = [
   {
     segments: [
       t("National Radio advert for "),
-      link("Samsung OLed TV", "https://soundcloud.com/voiceoverguy/samsung-neo-qled-tv-national-radio-ad", true),
+      link("Samsung OLed TV", "/samsung-national-radio-commercial"),
     ],
   },
   {
@@ -223,7 +223,7 @@ export const newsItems: NewsItem[] = [
   {
     segments: [
       t("As heard on "),
-      link("Vernon Kays Ultra Ultra Marathon", "https://soundcloud.com/voiceoverguy/vernon-kay-ultra-ultra-marathon-challenge-promo", true),
+      link("Vernon Kays Ultra Ultra Marathon", "/vernon-kay-ultra-ultra-marathon-challenge-uk-trailer-voice"),
       t(" on BBC Radio 2 for Children in Need 2023."),
     ],
   },
@@ -235,14 +235,14 @@ export const newsItems: NewsItem[] = [
   {
     segments: [
       t("Samsung ran a national campaign for their OLED TV's and "),
-      link("the voice of the Samsung ads", "https://soundcloud.com/voiceoverguy/samsung-neo-qled-tv-national-radio-ad", true),
+      link("the voice of the Samsung ads", "/samsung-national-radio-commercial"),
       t("?... well. Yes."),
     ],
   },
   {
     segments: [
       t("You know Butlins have the "),
-      link("Masked Singer", "https://soundcloud.com/voiceoverguy/the-masked-singer-voice-of-god-guy-harris", true),
+      link("Masked Singer", "/masked-singer-voice-of-god-butlins"),
       t("? Well, you'll never guess who voiced the promo and the Voice of God??"),
     ],
   },
@@ -407,9 +407,9 @@ export const newsItems: NewsItem[] = [
   {
     segments: [
       t("New "),
-      link("Narration Voiceover", "https://soundcloud.com/voiceoverguy/explainer-narration-demo-2021-guy-harris", true),
+      link("Narration Voiceover", "/narration-voice"),
       t(" demos and "),
-      link("Natural Emotive Voiceover", "https://soundcloud.com/voiceoverguy/hotelscom-what-else-could-possibly-go-wrong", true),
+      link("Natural Emotive Voiceover", "/hotels-dot-com-what-else-could-go-wrong-voiceover"),
       t(" reads added to the site."),
     ],
   },
