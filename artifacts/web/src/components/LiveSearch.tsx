@@ -63,6 +63,13 @@ function getSeasonalPhrases(): string[] {
   return PHRASES_REGULAR;
 }
 
+function getGreeting(): string {
+  const hour = new Date().getHours();
+  if (hour < 12) return 'Good morning!';
+  if (hour < 18) return 'Good afternoon!';
+  return 'Good evening!';
+}
+
 function useReducedMotion(): boolean {
   const [reduced, setReduced] = useState(false);
   useEffect(() => {
@@ -273,8 +280,16 @@ export default function LiveSearch() {
 
   const phrases = useMemo(() => getSeasonalPhrases(), []);
   const reducedMotion = useReducedMotion();
+  const [greetingActive, setGreetingActive] = useState(true);
+  const [greeting] = useState(() => getGreeting());
+
+  useEffect(() => {
+    const timer = setTimeout(() => setGreetingActive(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const showFakePlaceholder = !isFocused && query.length === 0;
-  const typedText = useTypewriter(phrases, showFakePlaceholder, reducedMotion);
+  const typedText = useTypewriter(phrases, showFakePlaceholder && !greetingActive, reducedMotion);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -355,8 +370,8 @@ export default function LiveSearch() {
         />
         {showFakePlaceholder && (
           <span className="search-fake-placeholder" aria-hidden="true">
-            {typedText}
-            <span className="search-cursor" />
+            {greetingActive ? greeting : typedText}
+            {!greetingActive && <span className="search-cursor" />}
           </span>
         )}
       </div>
