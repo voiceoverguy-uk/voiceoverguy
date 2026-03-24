@@ -25,6 +25,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/voiceoverguy/page.js"
+    ],
+    "/halloween-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/halloween-voice/page.js"
     ]
   }
 }
