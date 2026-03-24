@@ -52,14 +52,15 @@ export default function Page() {
       <div className="inner-bar" />
       <InnerPage sections={[
         { text: data.s2 },
-        { imageSrc: '/assets/images/voiceoverguy-who1.png', imageAlt: 'Guy Harris \u2013 British Male Voiceover Artist' },
+        { imageSrc: '/assets/images/professional-voice-over-voiceover.webp', imageAlt: 'Guy Harris \u2013 Professional Voiceover Artist' },
         { text: data.s3 },
         { imageSrc: '/assets/images/voiceoverguy-skateboarder.jpg', imageAlt: 'Versatile Voiceover \u2013 Guy Harris' },
         { text: data.s6 },
         { imageSrc: '/assets/images/voiceover-studio-yorkshire.jpg', imageAlt: 'Professional Voiceover Studio \u2013 Guy Harris' },
-        { text: data.s4, fullWidth: true },
-        { imageSrc: '/assets/images/voiceoverguy-character-voices.jpg', imageAlt: 'Character Voices \u2013 Guy Harris' },
+        { text: data.s4 },
+        { imageSrc: '/assets/images/guy-harris-voiceoverguy-stage.webp', imageAlt: 'The Voice Behind Big Brands \u2013 Guy Harris on Stage' },
         { text: data.s5 },
+        { imageSrc: '/assets/images/voiceoverguy-character-voices.jpg', imageAlt: 'Character Voices \u2013 Guy Harris' },
         { imageSrc: '/assets/images/guy-harris-uk-voice-of-santa.jpg', imageAlt: 'Guy Harris \u2013 UK Voice of Santa' },
         { text: data.s10 },
         ...(ytId ? [{ youtubeId: ytId }] : []),
