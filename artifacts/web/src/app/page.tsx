@@ -97,6 +97,23 @@ const clientLogos = [
   { src: '/assets/images/clients/voiceoverguy-clients-legoland-windsor-resort.png', alt: 'Legoland Windsor Resort' },
   { src: '/assets/images/clients/voiceoverguy-clients-tv-choice.png', alt: 'TV Choice' },
   { src: '/assets/images/clients/voiceoverguy-clients-alton-towers.png', alt: 'Alton Towers' },
+  { src: '/assets/images/clients/voiceoverguy-clients-biffa.png', alt: 'Biffa' },
+  { src: '/assets/images/clients/voiceoverguy-clients-seabrooks.png', alt: 'Seabrooks' },
+  { src: '/assets/images/clients/voiceoverguy-clients-nsandi.png', alt: 'NS&I' },
+  { src: '/assets/images/clients/voiceoverguy-clients-emirates.png', alt: 'Emirates' },
+  { src: '/assets/images/clients/voiceoverguy-clients-centre-parcs.png', alt: 'Centre Parcs' },
+  { src: '/assets/images/clients/voiceoverguy-clients-rakbank.png', alt: 'RAKbank' },
+  { src: '/assets/images/clients/voiceoverguy-clients-morrisons.png', alt: 'Morrisons' },
+  { src: '/assets/images/clients/voiceoverguy-clients-minecraft.png', alt: 'Minecraft' },
+  { src: '/assets/images/clients/voiceoverguy-clients-heart.png', alt: 'Heart' },
+  { src: '/assets/images/clients/voiceoverguy-clients-harpic.png', alt: 'Harpic' },
+  { src: '/assets/images/clients/voiceoverguy-clients-capital.png', alt: 'Capital' },
+  { src: '/assets/images/clients/voiceoverguy-clients-boom-beach.png', alt: 'Boom Beach' },
+  { src: '/assets/images/clients/voiceoverguy-clients-baxi.png', alt: 'Baxi' },
+  { src: '/assets/images/clients/voiceoverguy-clients-booking-dot-com.png', alt: 'Booking.com' },
+  { src: '/assets/images/clients/voiceoverguy-clients-the-range.png', alt: 'The Range' },
+  { src: '/assets/images/clients/voiceoverguy-clients-cbeebies.png', alt: 'CBeebies' },
+  { src: '/assets/images/clients/voiceoverguy-clients-p-and-o.png', alt: 'P&O' },
 ];
 
 export default function Home() {
