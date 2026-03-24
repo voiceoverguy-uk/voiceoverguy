@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import blogPosts from '@/data/blog-posts';
+import { getYearsExperience } from '@/lib/experience';
 import { voiceDemos, characterDemos } from '@/data/demos';
 
 interface SearchResult {
@@ -39,6 +40,12 @@ const PHRASES_REGULAR = [
   'What voice do you need? Start typing...',
   'Search British, narration, explainer...',
   'Looking for a voiceover? Start here...',
+  'Needing that Apple style delivery?',
+  'Searching for a Football commentator style?',
+  'Traditional 1940s Pathe News Voice?',
+  'Looking for a David Attenborough voice style?',
+  `${getYearsExperience()} years of professional voiceover experience.`,
+  'Human 1st to connect with your audience.',
 ];
 
 const PHRASES_HALLOWEEN = [
@@ -51,6 +58,8 @@ const PHRASES_SANTA = [
   'Looking for the voice of Santa? Start typing...',
   'Search Santa, festive, Christmas...',
   'Need a festive voice? Start here...',
+  'Looking for the voice of Santa?',
+  'Need the help of a Father Christmas Voice?',
 ];
 
 function getSeasonalPhrases(): string[] {
