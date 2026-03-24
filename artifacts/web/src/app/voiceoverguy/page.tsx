@@ -61,10 +61,10 @@ export default function Page() {
         { imageSrc: '/assets/images/guy-harris-voiceoverguy-stage.webp', imageAlt: 'The Voice Behind Big Brands \u2013 Guy Harris on Stage' },
         { text: data.s5 },
         { imageSrc: '/assets/images/voiceoverguy-character-voices.jpg', imageAlt: 'Character Voices \u2013 Guy Harris' },
-        { imageSrc: '/assets/images/guy-harris-uk-voice-of-santa.jpg', imageAlt: 'Guy Harris \u2013 UK Voice of Santa' },
         { text: data.s10 },
-        ...(ytId ? [{ youtubeId: ytId }] : []),
+        { imageSrc: '/assets/images/guy-harris-uk-voice-of-santa.jpg', imageAlt: 'Guy Harris \u2013 UK Voice of Santa' },
         { text: data.s11 },
+        ...(ytId ? [{ youtubeId: ytId }] : []),
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>
