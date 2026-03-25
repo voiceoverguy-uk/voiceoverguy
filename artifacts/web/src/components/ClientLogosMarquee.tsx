@@ -109,7 +109,7 @@ export default function ClientLogosMarquee({ logos }: { logos: Logo[] }) {
         ))}
         <div aria-hidden="true" style={{ display: 'contents' }}>
           {shuffled.map(logo => (
-            <img key={`${logo.alt}-dup`} src={logo.src} alt="" onLoad={measure} suppressHydrationWarning />
+            <img key={`${logo.alt}-dup`} src={logo.src} alt={logo.alt} onLoad={measure} suppressHydrationWarning />
           ))}
         </div>
       </div>

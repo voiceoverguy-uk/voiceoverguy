@@ -148,7 +148,7 @@ export default function Navbar() {
             if (target.closest('a')) closeMobile();
           }}>
             <li className="nav-item" role="none" data-sticky-hide="true">
-              <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.webp" alt="" className="nav-home-icon" /> Home</Link>
+              <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.webp" alt="VoiceoverGuy" className="nav-home-icon" /> Home</Link>
             </li>
 
             <li className="nav-item" role="none">

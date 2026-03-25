@@ -4632,7 +4632,7 @@ const blogPosts: BlogPost[] = [
     "rawDate": "",
     "date": null,
     "whatVideo": "3",
-    "alt": "",
+    "alt": "Regional English Accents – Voiceover Guide by Guy Harris",
     "rating": "0",
     "blogRating": fromLegacyRating("0"),
     "twitter": "",

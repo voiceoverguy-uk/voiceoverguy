@@ -244,7 +244,7 @@ export default function BlogPost({ post }: Props) {
             ) : null;
             const imgEl = hasImg ? (
               <div className="blog-media-col">
-                <NImage filename={sec.image} alt={post.alt} />
+                <NImage filename={sec.image} alt={post.alt || post.pageTitle} />
               </div>
             ) : null;
 

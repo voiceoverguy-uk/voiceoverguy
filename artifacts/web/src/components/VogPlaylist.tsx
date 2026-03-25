@@ -196,7 +196,7 @@ export default function VogPlaylist() {
             </span>
             <img
               src="/assets/images/voice-of-god-voice-og.webp"
-              alt=""
+              alt={`${t.label} – Guy Harris Voice of God`}
               className="vog-track-thumb"
             />
             <span className="vog-track-name">{t.label}</span>
@@ -208,7 +208,7 @@ export default function VogPlaylist() {
       <div className="vog-player-footer">
         <img
           src="/assets/images/voice-of-god-voice-og.webp"
-          alt=""
+          alt="Guy Harris – Voice of God voiceover artist"
           className="vog-footer-thumb"
         />
         <span>VoiceoverGuy · Voice of God</span>
