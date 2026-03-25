@@ -3487,6 +3487,11 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin-bottom: 32px;
 }
 
+.blog-post-main.two-col,
+.blog-post-section.two-col {
+  align-items: center;
+}
+
 .blog-post-main.one-col > * {
   max-width: 860px;
 }
