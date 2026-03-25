@@ -43,7 +43,7 @@ export default function Footer() {
           {' · '}
           <Link href="/contact-guy">Contact Guy</Link>
           {' · '}
-          <Link href="/FAQ">FAQ</Link>
+          <Link href="/faq">FAQ</Link>
         </p>
 
         <div className="footer-sister-sites" aria-label="Related specialist sites from Guy Harris">

@@ -250,7 +250,7 @@ export default function Navbar() {
 
             {/* FAQ's — hidden in desktop sticky mode */}
             <li className="nav-item" role="none" data-sticky-hide="true">
-              <Link href="/FAQ" className="nav-link" role="menuitem"><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
+              <Link href="/faq" className="nav-link" role="menuitem"><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
             </li>
 
             {/* Links */}
