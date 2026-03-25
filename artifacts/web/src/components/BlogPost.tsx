@@ -160,12 +160,18 @@ export default function BlogPost({ post }: Props) {
           <div className="page-header-arrows">
             {prev && (
               <Link href={`/${prev.url}`} className="page-header-arrow" title={prev.pageTitle} aria-label={`Previous: ${prev.pageTitle}`}>
-                ‹
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" stroke="black" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M15 6l-6 6 6 6" stroke="#9C060B" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </Link>
             )}
             {next && (
               <Link href={`/${next.url}`} className="page-header-arrow" title={next.pageTitle} aria-label={`Next: ${next.pageTitle}`}>
-                ›
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="black" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 6l6 6-6 6" stroke="#9C060B" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </Link>
             )}
           </div>
