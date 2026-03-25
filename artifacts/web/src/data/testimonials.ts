@@ -30,4 +30,10 @@ export const testimonials: Testimonial[] = [
     role: "Producer",
     company: "The Property Podcast",
   },
+  {
+    quote: "Working with Guy is always seamless. His voice work is polished, expressive, and delivered with great attention to detail, highly recommended.",
+    name: "Joanne Flores",
+    role: "Senior Audio Producer",
+    company: "MORE Communications",
+  },
 ];
