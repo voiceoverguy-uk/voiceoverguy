@@ -3647,6 +3647,11 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin: 0;
 }
 
+.page-header-sub a {
+  color: white;
+  text-decoration: underline;
+}
+
 /* ===== BLOG ENQUIRY FORM ===== */
 .blog-enquiry-section {
   margin-top: 40px;
