@@ -67,7 +67,7 @@ export const testimonials: Testimonial[] = [
     company: "Clearwave Creative",
   },
   {
-    quote: "Guy does a great \"Noodle Inn\" with a Chinese accent.",
+    quote: "I can always rely on Guy to do a great job on radio commercial or instore advertising scripts. He's a professional who has invested in his recording setup, so I know the audio will be to the industry standards I require.",
     name: "Rik Watson",
     role: "Audio Producer",
     company: "",
