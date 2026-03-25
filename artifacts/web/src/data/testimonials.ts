@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
   {
     quote: "We've worked with Guy for many years on anything from playing a Dog in a radio commercial to being the voiceover for educating about Stop Smoking for a council. He's always great to work with, friendly and delivers every time!",
     name: "Simon Prentice",
-    role: "",
+    role: "MD",
     company: "S2 Blue",
   },
 ];
