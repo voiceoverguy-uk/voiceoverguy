@@ -11,7 +11,6 @@ const videos = [
   { title: 'WORMS WMD', subtitle: 'Army Sergeant', href: 'https://www.youtube.com/watch?v=AnXBP5Klgv0' },
   { title: 'DNCE - Lifestyle of..', subtitle: 'the Rich and Famous', href: 'https://www.youtube.com/watch?v=pzsUS6koEAU' },
   { title: 'Star Wars', subtitle: 'Character voices', href: 'https://www.youtube.com/watch?v=Fm0qSBLhA6A' },
-  { title: 'Craig Cash', subtitle: 'Character voice', href: 'https://www.youtube.com/watch?v=OmVuCVXsWM4' },
 ];
 
 const links = [
