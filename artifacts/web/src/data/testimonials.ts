@@ -84,4 +84,10 @@ export const testimonials: Testimonial[] = [
     role: "",
     company: "Word of Mouth Creative",
   },
+  {
+    quote: "Guy is one of the true greats, and an absolute pleasure to work with every time! He consistently delivers polished, professional work, and his character voices are both creative, and incredibly flexible. I get more than I'll ever need in a voice session, which means I can over deliver with my clients. Beyond his vocal ability, Guy is incredibly easy to work with. He communicates clearly, takes direction well, and is always open to feedback to get things bang on! His reliability and quick turnaround make him someone you can confidently depend on, even with tight deadlines. Just the nicest of Guys to work with ;)",
+    name: "Graham Hellis",
+    role: "Director",
+    company: "ClearWave Productions Ltd",
+  },
 ];
