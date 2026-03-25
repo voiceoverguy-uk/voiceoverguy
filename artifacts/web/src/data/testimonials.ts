@@ -66,4 +66,10 @@ export const testimonials: Testimonial[] = [
     role: "",
     company: "Clearwave Creative",
   },
+  {
+    quote: "Guy does a great \"Noodle Inn\" with a Chinese accent.",
+    name: "Rik Watson",
+    role: "Audio Producer",
+    company: "",
+  },
 ];

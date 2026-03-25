@@ -52,7 +52,7 @@ export default function Testimonials() {
             </blockquote>
             <div className="testimonials-attribution">
               <strong className="testimonials-name">{t.name}</strong>
-              <span className="testimonials-role">{t.role ? `${t.role}, ${t.company}` : t.company}</span>
+              <span className="testimonials-role">{[t.role, t.company].filter(Boolean).join(', ')}</span>
             </div>
           </div>
         </div>
