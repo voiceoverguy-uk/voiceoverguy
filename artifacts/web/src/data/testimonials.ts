@@ -54,4 +54,10 @@ export const testimonials: Testimonial[] = [
     role: "Commercial Producer",
     company: "Bauer",
   },
+  {
+    quote: "Have worked with Guy for over 25 years in one way or another and can only say that he is probably the most friendly, helpful and consummate professional I've had the pleasure to work with. When I say nothing is too much trouble for him, he actually goes the extra mile just to make sure!",
+    name: "Andy Stone",
+    role: "",
+    company: "Production Bod",
+  },
 ];
