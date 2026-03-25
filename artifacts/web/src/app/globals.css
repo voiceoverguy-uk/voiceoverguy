@@ -1801,6 +1801,11 @@ audio {
   margin: 0 auto;
 }
 
+@keyframes testimonials-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .testimonials-card {
   background: var(--white);
   border-radius: 10px;
@@ -1808,6 +1813,7 @@ audio {
   padding: 44px 52px 36px;
   min-height: 200px;
   position: relative;
+  animation: testimonials-fade 0.8s ease;
 }
 
 .testimonials-quote-mark {

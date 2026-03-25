@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { testimonials } from '@/data/testimonials';
 
-const INTERVAL_MS = 4000;
+const INTERVAL_MS = 6000;
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
@@ -45,7 +45,7 @@ export default function Testimonials() {
         </div>
 
         <div className="testimonials-card-wrap">
-          <div className="testimonials-card">
+          <div key={index} className="testimonials-card">
             <span className="testimonials-quote-mark" aria-hidden="true">&ldquo;</span>
             <blockquote className="testimonials-quote">
               {t.quote}
