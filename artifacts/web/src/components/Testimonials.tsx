@@ -1,18 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { testimonials } from '@/data/testimonials';
+
+const INTERVAL_MS = 4000;
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const total = testimonials.length;
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  function prev() {
-    setIndex(i => (i - 1 + total) % total);
+  function startTimer() {
+    timerRef.current = setInterval(() => {
+      setIndex(i => (i + 1) % total);
+    }, INTERVAL_MS);
   }
 
-  function next() {
-    setIndex(i => (i + 1) % total);
+  function resetTimer() {
+    if (timerRef.current) clearInterval(timerRef.current);
+    startTimer();
+  }
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
+
+  function goTo(i: number) {
+    setIndex(i);
+    resetTimer();
   }
 
   const t = testimonials[index];
@@ -34,29 +52,8 @@ export default function Testimonials() {
             </blockquote>
             <div className="testimonials-attribution">
               <strong className="testimonials-name">{t.name}</strong>
-              <span className="testimonials-role">{t.role}, {t.company}</span>
+              <span className="testimonials-role">{t.role ? `${t.role}, ${t.company}` : t.company}</span>
             </div>
-          </div>
-
-          <div className="testimonials-nav">
-            <button
-              className="testimonials-arrow"
-              onClick={prev}
-              aria-label="Previous testimonial"
-            >
-              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true">
-                <path d="M8.5 1.5L1.5 8L8.5 14.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <button
-              className="testimonials-arrow"
-              onClick={next}
-              aria-label="Next testimonial"
-            >
-              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" aria-hidden="true">
-                <path d="M1.5 1.5L8.5 8L1.5 14.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
           </div>
         </div>
 
@@ -68,7 +65,7 @@ export default function Testimonials() {
               aria-selected={i === index}
               aria-label={`Testimonial ${i + 1}`}
               className={`testimonials-dot${i === index ? ' testimonials-dot--active' : ''}`}
-              onClick={() => setIndex(i)}
+              onClick={() => goTo(i)}
             />
           ))}
         </div>
