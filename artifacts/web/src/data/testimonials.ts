@@ -72,4 +72,10 @@ export const testimonials: Testimonial[] = [
     role: "Audio Producer",
     company: "",
   },
+  {
+    quote: "Super fast, super versatile, Guy is a one stop voice over shop.",
+    name: "Colin McGuinness",
+    role: "Music for TV/Film Composer",
+    company: "",
+  },
 ];
