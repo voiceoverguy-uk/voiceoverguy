@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { testimonials } from '@/data/testimonials';
 
-const INTERVAL_MS = 6000;
+const INTERVAL_MS = 7000;
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
