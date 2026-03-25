@@ -144,7 +144,7 @@ export default function AttenboroughGenerator() {
         <div className="container" style={{ textAlign: 'center' }}>
           <h1>David Attenborough Script Generator</h1>
           <h2 style={{ marginTop: '10px', fontSize: '1.2rem', fontWeight: 300 }}>
-            A Fun, Free Attenborough-Style Script Generator by UK Voiceover Artist Guy Harris
+            Free Attenborough-Style Script Generator
           </h2>
           <p className="generator-subtitle">
             Type a short scenario. Watch it transform into an Attenborough-style script.<br />
