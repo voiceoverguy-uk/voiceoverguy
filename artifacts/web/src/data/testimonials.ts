@@ -78,4 +78,10 @@ export const testimonials: Testimonial[] = [
     role: "Music for TV/Film Composer",
     company: "",
   },
+  {
+    quote: "Quick, efficient; friendly; ALWAYS delivers\u2026Guy is a top voice talent we love using!",
+    name: "Andrew Upton",
+    role: "",
+    company: "Word of Mouth Creative",
+  },
 ];
