@@ -60,4 +60,10 @@ export const testimonials: Testimonial[] = [
     role: "",
     company: "Production Bod",
   },
+  {
+    quote: "He's a nice Guy.",
+    name: "Graham",
+    role: "",
+    company: "Clearwave Creative",
+  },
 ];
