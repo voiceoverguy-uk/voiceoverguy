@@ -1814,7 +1814,7 @@ audio {
   display: block;
   font-size: 3rem;
   line-height: 1;
-  color: #e8b4b6;
+  color: var(--red);
   font-family: Georgia, serif;
   margin-bottom: 4px;
   letter-spacing: -4px;

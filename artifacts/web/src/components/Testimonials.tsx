@@ -28,9 +28,9 @@ export default function Testimonials() {
 
         <div className="testimonials-card-wrap">
           <div className="testimonials-card">
-            <span className="testimonials-quote-mark" aria-hidden="true">&ldquo;&rdquo;</span>
+            <span className="testimonials-quote-mark" aria-hidden="true">&ldquo;</span>
             <blockquote className="testimonials-quote">
-              &ldquo;{t.quote}&rdquo;
+              {t.quote}
             </blockquote>
             <div className="testimonials-attribution">
               <strong className="testimonials-name">{t.name}</strong>
