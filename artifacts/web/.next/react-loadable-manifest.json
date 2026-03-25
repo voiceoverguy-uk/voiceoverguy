@@ -1,20 +1,8 @@
 {
-  "app/gameshow-host/GameshowPlayer.tsx -> @/components/WaveSurferPlayer": {
-    "id": 2634,
-    "files": [
-      "static/chunks/634.ecd8d3b22db60a0f.js"
-    ]
-  },
-  "app/halloween-voice/HalloweenPlayer.tsx -> @/components/WaveSurferPlayer": {
-    "id": 2634,
-    "files": [
-      "static/chunks/634.ecd8d3b22db60a0f.js"
-    ]
-  },
   "components/WaveSurferPlayer.tsx -> wavesurfer.js": {
-    "id": 9410,
+    "id": "components/WaveSurferPlayer.tsx -> wavesurfer.js",
     "files": [
-      "static/chunks/410.653da3f2f6ab7cd1.js"
+      "static/chunks/_app-pages-browser_node_modules_pnpm_wavesurfer_js_7_12_2_node_modules_wavesurfer_js_dist_wav-8651e8.js"
     ]
   }
 }
