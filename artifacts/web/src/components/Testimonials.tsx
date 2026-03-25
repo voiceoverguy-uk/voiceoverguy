@@ -5,9 +5,19 @@ import { testimonials } from '@/data/testimonials';
 
 const INTERVAL_MS = 7000;
 
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 export default function Testimonials() {
+  const [slides] = useState(() => shuffle(testimonials));
   const [index, setIndex] = useState(0);
-  const total = testimonials.length;
+  const total = slides.length;
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   function startTimer() {
@@ -33,7 +43,7 @@ export default function Testimonials() {
     resetTimer();
   }
 
-  const t = testimonials[index];
+  const t = slides[index];
 
   return (
     <section className="testimonials-section" aria-label="Client testimonials">
@@ -58,7 +68,7 @@ export default function Testimonials() {
         </div>
 
         <div className="testimonials-dots" role="tablist" aria-label="Testimonial navigation">
-          {testimonials.map((_, i) => (
+          {slides.map((_, i) => (
             <button
               key={i}
               role="tab"
