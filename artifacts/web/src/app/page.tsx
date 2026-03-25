@@ -3,6 +3,7 @@ import Link from 'next/link';
 import NewsSection from '@/components/NewsSection';
 import ReviewBlock from '@/components/ReviewBlock';
 import RotatingQuotes from '@/components/RotatingQuotes';
+import Testimonials from '@/components/Testimonials';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
 import ClientLogosMarquee from '@/components/ClientLogosMarquee';
@@ -381,6 +382,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* NEWS */}
       <NewsSection />
