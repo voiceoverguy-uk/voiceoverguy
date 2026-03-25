@@ -42,4 +42,16 @@ export const testimonials: Testimonial[] = [
     role: "MD",
     company: "S2 Blue",
   },
+  {
+    quote: "Guy is quite simply the best of the best. Incredible voice, versatile and nothing is ever too much trouble for him. You know your script is in very safe hands, when it's being voiced by the formidable Guy Harris.",
+    name: "Ryan Ogilvie",
+    role: "",
+    company: "Mind the Gap Creative",
+  },
+  {
+    quote: "Always a pleasure to \"work\" with Guy. You can't really call it work when it's often so much fun. It's easy to get distracted by his huge repertoire of voices and forget that he's also a super choice for a straight read too. A versatile voice actor who's happy to give you re-reads if the client requires. I'd love to say he discovered penicillin as well but that would be overstating his impact on humanity.",
+    name: "Keith Law",
+    role: "Commercial Producer",
+    company: "Bauer",
+  },
 ];
