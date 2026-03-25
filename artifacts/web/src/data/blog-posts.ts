@@ -2890,7 +2890,7 @@ const blogPosts: BlogPost[] = [
   {
     "id": 689,
     "url": "david-attenborough-impression",
-    "pageTitle": "David Attenborough Impression",
+    "pageTitle": "David Attenborough Impression for Biffa",
     "info": "<p>Here is my David Attenborough Impression for Biffa. I really love this video. First, I had an awesome voice session with the client listening in and directing it. Second, the script was written really well. Third, it turned out amazing.</p>",
     "searchTerms": "explorer, Biffa, impersonation",
     "pageDesc": "David Attenborough Impression - Biffa wanted to promote Wasteaters. They wanted a fun voice to accompany this beautiful shot video. I think we nailed it.",
@@ -6317,7 +6317,7 @@ const blogPosts: BlogPost[] = [
   {
     "id": 913,
     "url": "cracking-ice-david-attenborough-impression",
-    "pageTitle": "David Attenborough Impression",
+    "pageTitle": "Cracking Ice Attenborough Impression",
     "info": "<p>Searching this site, you'll notice my David Attenborough impression is requested a lot. It's a style I like to work with you to get it just right.</p>",
     "searchTerms": "planet earth cracking ice",
     "pageDesc": "Cracking Ice - This is my David Attenborough Impression. If you are looking for the best David Attenborough impersonator on Planet Earth, drop in and listen.",
