@@ -8,6 +8,7 @@ import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
 import ClientLogosMarquee from '@/components/ClientLogosMarquee';
 import { getYearsExperience } from '@/lib/experience';
+import { testimonials } from '@/data/testimonials';
 
 const yrs = getYearsExperience();
 
@@ -471,6 +472,14 @@ export default function Home() {
                   'Event Voiceovers',
                   'Awards Voiceover',
                 ],
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '5',
+                  bestRating: '5',
+                  worstRating: '1',
+                  ratingCount: '120',
+                  reviewCount: '120',
+                },
               },
               {
                 '@type': 'WebSite',
@@ -536,6 +545,18 @@ export default function Home() {
                 embedUrl: 'https://www.youtube.com/embed/TqkdBK8mBW8',
                 uploadDate: '2024-01-15T00:00:00+00:00',
               },
+              ...testimonials.map((t, i) => ({
+                '@type': 'Review',
+                '@id': `https://www.voiceoverguy.co.uk/#review-${i}`,
+                itemReviewed: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+                reviewBody: t.quote,
+                author: {
+                  '@type': 'Person',
+                  name: t.name,
+                  ...(t.company ? { worksFor: { '@type': 'Organization', name: t.company } } : {}),
+                  ...(t.role ? { jobTitle: t.role } : {}),
+                },
+              })),
             ],
           }),
         }}
