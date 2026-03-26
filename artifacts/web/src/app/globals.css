@@ -5106,6 +5106,26 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   }
 }
 
+/* ===== HOMEPAGE CONTACT EYEBROW ===== */
+.homepage-contact-eyebrow {
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+.homepage-contact-eyebrow-heading {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+.homepage-contact-eyebrow-divider {
+  width: 56px;
+  height: 3px;
+  background: var(--red);
+  margin: 0 auto;
+}
+
 /* ===== HOMEPAGE CONTACT SECTION ===== */
 .homepage-contact {
   padding: 52px 0 60px;

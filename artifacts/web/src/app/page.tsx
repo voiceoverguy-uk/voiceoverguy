@@ -392,6 +392,11 @@ export default function Home() {
       {/* NEWS */}
       <NewsSection />
 
+      <div className="homepage-contact-eyebrow">
+        <p className="homepage-contact-eyebrow-heading">Get in touch</p>
+        <div className="homepage-contact-eyebrow-divider" />
+      </div>
+
       <HomepageContact />
 
       {/* STRUCTURED DATA: single @graph block */}
