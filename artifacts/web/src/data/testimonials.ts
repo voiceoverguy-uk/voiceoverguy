@@ -96,4 +96,10 @@ export const testimonials: Testimonial[] = [
     role: "MD",
     company: "Syrup",
   },
+  {
+    quote: "I've had the pleasure of working with Guy Harris for more than 20 years, and I can honestly say he is one of the best in the business. His talent is matched by his work ethic, professionalism, humour, and care for every detail. No request is too much. He will do multiple takes, clean audio beautifully, and keep working until the performance is exactly right. His studio quality is exceptional, easily among the best we've ever worked with, and over the years we've worked with hundreds of voice artists. Guy is also refreshingly up to date with AI and the latest developments in the industry, always embracing new technology rather than resisting it. And a big shout out to Arabella too, who he is clearly passing the craft on to brilliantly. She's a fantastic voice artist, and together they would be a superb option for any dad-and-daughter brief.",
+    name: "Chris Atkinson",
+    role: "",
+    company: "With Feeling, Dubai",
+  },
 ];
