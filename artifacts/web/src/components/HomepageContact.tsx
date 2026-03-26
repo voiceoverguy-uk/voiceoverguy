@@ -181,6 +181,9 @@ export default function HomepageContact() {
                 </div>
 
                 <div className="homepage-contact-footer">
+                  {status === 'error' && (
+                    <span className="homepage-contact-error-msg homepage-contact-server-error">{serverError}</span>
+                  )}
                   <button
                     type="submit"
                     className="homepage-contact-btn"
@@ -189,10 +192,6 @@ export default function HomepageContact() {
                   >
                     {status === 'sending' ? 'Sending…' : 'Send Message'}
                   </button>
-                  {status === 'error' && (
-                    <span className="homepage-contact-error-msg homepage-contact-server-error">{serverError}</span>
-                  )}
-                  {greeting && <p className="homepage-contact-greeting">{greeting}</p>}
                 </div>
               </form>
             )}
