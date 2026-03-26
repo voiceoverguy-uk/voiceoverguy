@@ -183,8 +183,8 @@ export default function Home() {
             </div>
             <div className="showreel-player-item">
               <WaveSurferPlayer
-                src="/assets/audio/guy-harris-voiceoverguy-explainer-video-showreel.mp3"
-                label={`<span class="text-red">Explainer Video</span> Showreel ${yr}`}
+                src="/assets/audio/spooky-showreel-26-guy-harris.mp3"
+                label={`<span class="text-red">Spooky Halloween</span> Voice ${yr}`}
                 compact
               />
             </div>
