@@ -163,51 +163,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SIX SHOWREEL AUDIO PLAYERS */}
+      {/* HEAR THE RANGE — SIX SHOWREEL AUDIO PLAYERS */}
       <section className="home-section showreel-section">
         <div className="container">
-          <div className="showreel-players">
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/explainer-narration-demo-guy-harris.mp3"
-                label={`<span class="text-red">Explainer and Narration</span> ${yr}`}
-                compact
-              />
+          <div className="showreel-module">
+            <div className="showreel-header">
+              <h2 className="showreel-heading">Hear the Range</h2>
+              <p className="showreel-subheading">Six quick clips — sample the breadth of Guy&apos;s voice work</p>
+              <div className="showreel-divider" />
             </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
-                label={`<span class="text-red">Character Voices</span> Showreel ${yr}`}
-                compact
-              />
-            </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/spooky-showreel-26-guy-harris.mp3"
-                label={`<span class="text-red">Spooky Halloween</span> Voice ${yr}`}
-                compact
-              />
-            </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/voice-of-god-showreel-voiceover-guy-harris.mp3"
-                label={`<span class="text-red">Voice of God</span> Showreel ${yr}`}
-                compact
-              />
-            </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/football-commentator-demo-2026-guy-harris.mp3"
-                label={`<span class="text-red">Football Commentator</span> Voice ${yr}`}
-                compact
-              />
-            </div>
-            <div className="showreel-player-item">
-              <WaveSurferPlayer
-                src="/assets/audio/david-attenborough-demo-guy-harris.mp3"
-                label={`<span class="text-red">David Attenborough</span> Voice ${yr}`}
-                compact
-              />
+            <div className="showreel-players">
+              <div className="showreel-player-item">
+                <WaveSurferPlayer
+                  src="/assets/audio/explainer-narration-demo-guy-harris.mp3"
+                  label={`<span class="text-red">Explainer and Narration</span> ${yr}`}
+                  compact
+                />
+              </div>
+              <div className="showreel-player-item">
+                <WaveSurferPlayer
+                  src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
+                  label={`<span class="text-red">Character Voices</span> Showreel ${yr}`}
+                  compact
+                />
+              </div>
+              <div className="showreel-player-item">
+                <WaveSurferPlayer
+                  src="/assets/audio/spooky-showreel-26-guy-harris.mp3"
+                  label={`<span class="text-red">Spooky Halloween</span> Voice ${yr}`}
+                  compact
+                />
+              </div>
+              <div className="showreel-player-item">
+                <WaveSurferPlayer
+                  src="/assets/audio/voice-of-god-showreel-voiceover-guy-harris.mp3"
+                  label={`<span class="text-red">Voice of God</span> Showreel ${yr}`}
+                  compact
+                />
+              </div>
+              <div className="showreel-player-item">
+                <WaveSurferPlayer
+                  src="/assets/audio/football-commentator-demo-2026-guy-harris.mp3"
+                  label={`<span class="text-red">Football Commentator</span> Voice ${yr}`}
+                  compact
+                />
+              </div>
+              <div className="showreel-player-item">
+                <WaveSurferPlayer
+                  src="/assets/audio/david-attenborough-demo-guy-harris.mp3"
+                  label={`<span class="text-red">David Attenborough</span> Voice ${yr}`}
+                  compact
+                />
+              </div>
             </div>
           </div>
         </div>
