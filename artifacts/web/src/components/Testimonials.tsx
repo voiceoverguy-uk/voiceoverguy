@@ -122,12 +122,6 @@ export default function Testimonials() {
     <section className="testimonials-section" aria-label="Client testimonials">
       <div className="container">
         <div className="testimonials-module">
-          <div className="testimonials-header">
-            <h2 className="testimonials-title">What Clients Say</h2>
-            <p className="testimonials-subtitle">Trusted by agencies, broadcasters, and brands across the UK</p>
-            <div className="testimonials-divider" />
-          </div>
-
           <div
             key={index}
             className="testimonials-card testimonials-card--clickable"
