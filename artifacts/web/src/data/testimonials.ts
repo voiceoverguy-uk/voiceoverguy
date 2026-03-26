@@ -102,4 +102,10 @@ export const testimonials: Testimonial[] = [
     role: "",
     company: "With Feeling, Dubai",
   },
+  {
+    quote: "I've worked with Guy for over 10 years, and he's still my go-to whenever I need a voiceover done properly. He's always quick to respond, fast to deliver, and just really easy to work with. What stands out most is how often he nails it first time. There's rarely any need for feedback — he just understands the brief, the tone, and what the piece needs straight away, which makes the whole process smooth and efficient. He's also incredibly versatile. From upbeat explainers to more emotive, story-led work, he adapts effortlessly. He even delivered a brilliant (and very tasteful) Attenborough-style read for a recent project, which was spot on. The fact we've worked together for this long says it all. Consistently high quality, no fuss, and someone I trust completely to deliver every time.",
+    name: "Ben Howe",
+    role: "Head of Production",
+    company: "Dreaming Fish Productions",
+  },
 ];
