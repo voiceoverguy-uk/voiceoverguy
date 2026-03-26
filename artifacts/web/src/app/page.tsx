@@ -132,21 +132,23 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="container">
-          <h1>
-            British Male Voiceover Artist – <span className="text-red">Guy Harris</span>
-          </h1>
-          <h2>Voice heard Worldwide</h2>
+          <div className="hero-panel">
+            <h1>
+              British Male Voiceover Artist – <span className="text-red">Guy Harris</span>
+            </h1>
+            <h2>Voice heard Worldwide</h2>
 
-          <WaveSurferPlayer
-            src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
-          />
+            <WaveSurferPlayer
+              src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
+            />
 
-          <ReviewBlock />
+            <ReviewBlock />
 
-          <div className="hero-cta-wrapper">
-            <Link href="/contact-guy" className="hero-cta-button">
-              Get in Touch Today
-            </Link>
+            <div className="hero-cta-wrapper">
+              <Link href="/contact-guy" className="hero-cta-button">
+                Get in Touch Today
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -192,10 +194,6 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section">
         <div className="container">
-          <p className="video-intro-heading">
-            Not sure where to start?
-          </p>
-          <div className="video-intro-divider" />
           <div className="video-grid">
             {videoTiles.map(v => (
               <div key={v.img} className="video-tile-card">
@@ -254,7 +252,7 @@ export default function Home() {
       <RotatingQuotes />
 
       {/* CLUSTER B: WHY CLIENTS */}
-      <section className="home-cluster home-cluster--left">
+      <section className="home-cluster home-cluster--left home-cluster--no-before">
         <div className="container">
           <div className="home-callout-box home-callout-box--left">
             <div className="home-callout-box-text">
@@ -296,7 +294,7 @@ export default function Home() {
       {/* CLUSTER C: CHILD VOICEOVER */}
       <section className="home-cluster home-cluster--left">
         <div className="container">
-          <div className="home-callout-box">
+          <div className="home-callout-box home-callout-box--arabella">
             <div className="home-callout-box-text">
               <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
               <p>
