@@ -1303,6 +1303,7 @@ button.nav-link {
   background: var(--white);
   border-radius: 10px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--red);
   padding: 40px 48px 36px;
 }
 
