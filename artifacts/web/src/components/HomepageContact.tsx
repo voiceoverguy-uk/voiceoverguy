@@ -138,7 +138,7 @@ export default function HomepageContact() {
                       className={`homepage-contact-input${errors.name ? ' homepage-contact-input--error' : ''}`}
                       value={name}
                       onChange={e => { setName(e.target.value); setErrors(p => ({ ...p, name: undefined })); }}
-                      placeholder="Your full name"
+                      placeholder="Your name"
                       autoComplete="name"
                       required
                     />
@@ -166,7 +166,7 @@ export default function HomepageContact() {
                   <textarea
                     id="hc-message"
                     className={`homepage-contact-textarea${errors.message ? ' homepage-contact-input--error' : ''}`}
-                    rows={6}
+                    rows={4}
                     value={message}
                     onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
                     placeholder="Give me some details, including usage and format"
