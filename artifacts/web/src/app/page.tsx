@@ -170,14 +170,14 @@ export default function Home() {
             <div className="showreel-player-item">
               <WaveSurferPlayer
                 src="/assets/audio/explainer-narration-demo-guy-harris.mp3"
-                label={`<span class="text-red">Explainer</span> and Narration ${yr}`}
+                label={`<span class="text-red">Explainer and Narration</span> ${yr}`}
                 compact
               />
             </div>
             <div className="showreel-player-item">
               <WaveSurferPlayer
                 src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
-                label={`<span class="text-red">Character</span> Voices Showreel ${yr}`}
+                label={`<span class="text-red">Character Voices</span> Showreel ${yr}`}
                 compact
               />
             </div>
@@ -198,14 +198,14 @@ export default function Home() {
             <div className="showreel-player-item">
               <WaveSurferPlayer
                 src="/assets/audio/football-commentator-demo-2026-guy-harris.mp3"
-                label={`<span class="text-red">Football Commentator</span> Demo ${yr}`}
+                label={`<span class="text-red">Football Commentator</span> Voice ${yr}`}
                 compact
               />
             </div>
             <div className="showreel-player-item">
               <WaveSurferPlayer
                 src="/assets/audio/david-attenborough-demo-guy-harris.mp3"
-                label={`<span class="text-red">David Attenborough</span> Demo ${yr}`}
+                label={`<span class="text-red">David Attenborough</span> Voice ${yr}`}
                 compact
               />
             </div>
