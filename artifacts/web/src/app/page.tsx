@@ -12,6 +12,7 @@ import { getYearsExperience } from '@/lib/experience';
 import { testimonials } from '@/data/testimonials';
 
 const yrs = getYearsExperience();
+const yr = new Date().getFullYear();
 
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
@@ -162,28 +163,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THREE SHOWREEL AUDIO PLAYERS */}
+      {/* SIX SHOWREEL AUDIO PLAYERS */}
       <section className="home-section showreel-section">
         <div className="container">
           <div className="showreel-players">
             <div className="showreel-player-item">
               <WaveSurferPlayer
-                src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
-                label='<span class="text-red">Commercial</span> Showreel 2025'
+                src="/assets/audio/explainer-narration-demo-guy-harris.mp3"
+                label={`<span class="text-red">Explainer</span> and Narration ${yr}`}
                 compact
               />
             </div>
             <div className="showreel-player-item">
               <WaveSurferPlayer
                 src="/assets/audio/guy-harris-voiceoverguy-character-showreel.mp3"
-                label='<span class="text-red">Character</span> Voices Showreel 2025'
+                label={`<span class="text-red">Character</span> Voices Showreel ${yr}`}
                 compact
               />
             </div>
             <div className="showreel-player-item">
               <WaveSurferPlayer
                 src="/assets/audio/guy-harris-voiceoverguy-explainer-video-showreel.mp3"
-                label='<span class="text-red">Explainer Video</span> Showreel 2025'
+                label={`<span class="text-red">Explainer Video</span> Showreel ${yr}`}
+                compact
+              />
+            </div>
+            <div className="showreel-player-item">
+              <WaveSurferPlayer
+                src="/assets/audio/voice-of-god-showreel-voiceover-guy-harris.mp3"
+                label={`<span class="text-red">Voice of God</span> Showreel ${yr}`}
+                compact
+              />
+            </div>
+            <div className="showreel-player-item">
+              <WaveSurferPlayer
+                src="/assets/audio/football-commentator-demo-2026-guy-harris.mp3"
+                label={`<span class="text-red">Football Commentator</span> Demo ${yr}`}
+                compact
+              />
+            </div>
+            <div className="showreel-player-item">
+              <WaveSurferPlayer
+                src="/assets/audio/david-attenborough-demo-guy-harris.mp3"
+                label={`<span class="text-red">David Attenborough</span> Demo ${yr}`}
                 compact
               />
             </div>
