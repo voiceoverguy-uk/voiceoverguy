@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import NewsSection from '@/components/NewsSection';
+import HomepageContact from '@/components/HomepageContact';
 import ReviewBlock from '@/components/ReviewBlock';
 import RotatingQuotes from '@/components/RotatingQuotes';
 import Testimonials from '@/components/Testimonials';
@@ -389,6 +390,8 @@ export default function Home() {
 
       {/* NEWS */}
       <NewsSection />
+
+      <HomepageContact />
 
       {/* STRUCTURED DATA: single @graph block */}
       <script

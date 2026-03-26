@@ -295,7 +295,7 @@ export default function Navbar() {
 
             {/* Contact */}
             <li className="nav-item" role="none">
-              <Link href="/contact-guy" className="nav-link" role="menuitem"><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
+              <Link href="/contact-guy" className="nav-link nav-link--contact" role="menuitem"><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
             </li>
           </ul>
         </div>
