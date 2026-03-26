@@ -1,0 +1,70 @@
+Add a homepage contact section to the existing site design, keeping it fully on-brand and matching the current premium look and spacing of the homepage.
+
+GOAL
+The homepage currently has no contact form, even though all service pages do. Add a clean, elegant contact section near the bottom of the homepage, just above the footer. It should feel like a natural final CTA for visitors who have browsed the page and now want to enquire.
+
+DESIGN DIRECTION
+- Match the exact visual style of the existing homepage
+- Keep it clean, premium, and uncluttered
+- Do NOT add anything gimmicky or salesy
+- Do NOT add a sticky contact bar for now
+- Do NOT place the form high up the page
+- The section should sit above the footer and feel like the final conversion point on the homepage
+- Reuse the existing contact form styling and Resend/server action setup already used on other pages, so behaviour stays consistent
+- Ensure the section looks excellent on desktop and mobile
+
+SECTION CONTENT
+Headline:
+Like what you’ve heard? Let’s talk.
+
+Intro copy:
+From commercials and explainer videos to character voices, promos and narration, send me a quick message and I’ll get back to you.
+
+FORM FIELDS
+Use a slim, simple form with:
+- Name
+- Email
+- Message
+
+MESSAGE FIELD PLACEHOLDER
+Use exactly:
+Give me some details, including usage and format
+
+BUTTON
+Use a strong on-brand submit button, consistent with the rest of the site:
+Send Message
+
+DYNAMIC SIGN-OFF
+Add a small friendly line beneath the form or beneath the button area that changes based on the user’s local time. Keep it subtle and polished, not oversized.
+
+Use this logic:
+- Monday to Friday, before 12:00 -> Have a good morning.
+- Monday to Friday, 12:00 to 16:59 -> Have a good afternoon.
+- Monday to Thursday, 17:00 onwards -> Have a good evening.
+- Friday from 17:00 until Saturday 11:59 -> Enjoy the weekend.
+- Saturday from 12:00 onwards and all day Sunday -> Enjoy the weekend.
+
+Use the visitor’s browser/local time for this.
+
+IMPORTANT UX NOTES
+- Keep the form visually compact, not huge and boxy
+- Make sure spacing, border radius, shadows, font sizes, button styling, and colours match the existing homepage cards/CTA styling
+- The section should feel like it belongs to the page, not like a bolted-on plugin
+- Use the same success/error handling pattern as existing site contact forms
+- Keep accessibility good: labels, placeholders, focus states, keyboard usability
+- On mobile, stack cleanly and keep the form easy to use
+- Make sure this does not break layout, performance, or any existing homepage sections
+
+NAV TWEAK
+While you are there, make the existing “Contact” nav item slightly more visually prominent, but keep it tasteful. No pulsing, no flashing, no animation that feels tacky. Just a subtle improvement in emphasis so it is easier to spot.
+
+OUT OF SCOPE
+- No sticky bottom CTA bar
+- No popup
+- No phone number block
+- No WhatsApp
+- No extra fields beyond Name, Email, Message
+- No change to homepage copy outside this new section and the subtle nav Contact emphasis
+
+DELIVERABLE
+Implement the homepage contact section and wire it up using the existing contact form system already used elsewhere on the site.
