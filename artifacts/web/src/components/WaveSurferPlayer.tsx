@@ -3,6 +3,8 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import type WaveSurfer from "wavesurfer.js";
 
+const PLAY_EVENT = "vog:play";
+
 interface WaveSurferPlayerProps {
   src: string;
   label?: string;
@@ -53,16 +55,31 @@ export default function WaveSurferPlayer({ src, label, compact = false }: WaveSu
         setCurrentTime(ws.getCurrentTime());
       });
 
-      ws.on("play", () => setIsPlaying(true));
+      ws.on("play", () => {
+        setIsPlaying(true);
+        window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: { src } }));
+      });
+
       ws.on("pause", () => setIsPlaying(false));
+
       ws.on("finish", () => {
         setIsPlaying(false);
         setCurrentTime(0);
       });
     });
 
+    const handleOtherPlay = (e: Event) => {
+      const detail = (e as CustomEvent<{ src: string }>).detail;
+      if (detail.src !== src && wavesurferRef.current) {
+        wavesurferRef.current.pause();
+      }
+    };
+
+    window.addEventListener(PLAY_EVENT, handleOtherPlay);
+
     return () => {
       cancelled = true;
+      window.removeEventListener(PLAY_EVENT, handleOtherPlay);
       if (wavesurferRef.current) {
         wavesurferRef.current.destroy();
         wavesurferRef.current = null;
