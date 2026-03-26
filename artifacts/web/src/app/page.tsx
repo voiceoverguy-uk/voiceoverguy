@@ -253,7 +253,7 @@ export default function Home() {
       {/* ROTATING QUOTES */}
       <RotatingQuotes />
 
-      {/* CLUSTER B: SPECIALIST SERVICES */}
+      {/* CLUSTER B: WHY CLIENTS */}
       <section className="home-cluster home-cluster--left">
         <div className="container">
           <div className="home-callout-box home-callout-box--left">
@@ -272,7 +272,12 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="home-cluster-divider"><hr /></div>
+        </div>
+      </section>
+
+      {/* CLUSTER B2: AWARDS */}
+      <section className="home-cluster home-cluster--left">
+        <div className="container">
           <div className="home-callout-box home-callout-box--stage">
             <div className="home-callout-box-text">
               <h2>Event or Awards Night Voiceover?</h2>

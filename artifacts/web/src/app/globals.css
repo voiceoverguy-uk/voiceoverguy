@@ -952,7 +952,7 @@ button.nav-link {
 /* ===== HOME CLUSTERS (grouped middle content) ===== */
 .home-cluster {
   position: relative;
-  padding: 40px 0;
+  padding: 28px 0;
   text-align: center;
 }
 
@@ -962,9 +962,9 @@ button.nav-link {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 240px;
-  height: 1px;
-  background: #ccc;
+  width: 56px;
+  height: 3px;
+  background: var(--red);
 }
 
 .home-cluster--left {
