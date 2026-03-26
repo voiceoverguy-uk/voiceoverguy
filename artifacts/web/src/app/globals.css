@@ -640,8 +640,6 @@ button.nav-link {
 .live-search-container {
   position: relative;
   width: 100%;
-  max-width: 660px;
-  margin: 0 auto;
 }
 
 .live-search-dropdown {
