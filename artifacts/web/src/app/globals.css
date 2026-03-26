@@ -5128,37 +5128,37 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 /* ===== HOMEPAGE CONTACT SECTION ===== */
 .homepage-contact {
-  padding: 52px 0 60px;
+  padding: 36px 0 64px;
 }
 
 .homepage-contact-inner {
   display: grid;
   grid-template-columns: 1fr 1.6fr;
-  gap: 44px;
+  gap: 48px;
   align-items: start;
   background: #fff;
   border-radius: 10px;
   border-left: 4px solid var(--red);
   box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-  padding: 38px 44px 34px;
+  padding: 44px 48px 40px;
 }
 
 .homepage-contact-left {
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
 .homepage-contact-heading {
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--text);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1.2;
 }
 
 .homepage-contact-intro {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--grey-dark);
-  line-height: 1.7;
+  line-height: 1.75;
   margin: 0 0 10px;
 }
 
@@ -5174,30 +5174,30 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .homepage-contact-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .homepage-contact-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .homepage-contact-field label {
   font-size: 12px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .homepage-contact-input,
 .homepage-contact-textarea {
   width: 100%;
-  padding: 8px 11px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Century Gothic', Arial, sans-serif;
   color: var(--text);
   background: #fff;
@@ -5218,7 +5218,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 .homepage-contact-textarea {
   resize: vertical;
-  min-height: 96px;
+  min-height: 112px;
 }
 
 .homepage-contact-wordcount {
@@ -5240,7 +5240,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .homepage-contact-footer {
-  margin-top: 4px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -5251,17 +5251,19 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   background: var(--red);
   color: #fff;
   border: none;
-  padding: 10px 26px;
+  padding: 12px 32px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: 'Century Gothic', Arial, sans-serif;
   font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: opacity 0.2s;
 }
 
 .homepage-contact-btn:hover {
-  background: var(--red-dark, #7a0408);
+  opacity: 0.88;
 }
 
 .homepage-contact-btn:disabled {
