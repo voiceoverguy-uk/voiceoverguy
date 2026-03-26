@@ -814,6 +814,13 @@ button.nav-link {
   position: relative;
 }
 
+.hero-panel {
+  background: rgba(250, 250, 250, 0.92);
+  padding: 52px 20px 44px;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
 .hero h1 {
   font-size: 2.2rem;
   font-weight: 400;
