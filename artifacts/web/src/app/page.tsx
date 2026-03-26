@@ -24,9 +24,9 @@ const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
     titleOverlay: 'Commercial Voice',
-    captionLine1: 'Male',
-    captionHighlight: 'Voiceover',
-    captionLine1End: 'Showreel',
+    captionLine1: '',
+    captionHighlight: 'Commercial',
+    captionLine1End: 'Voice Showreel',
     href: 'https://www.youtube.com/watch?v=9bs4CJ4RixI',
   },
   {
