@@ -1289,7 +1289,7 @@ button.nav-link {
 
 /* ===== SHOWREEL PLAYERS ===== */
 .showreel-section {
-  padding: 0;
+  padding: 40px 0;
 }
 
 .showreel-section::before {
@@ -1528,6 +1528,10 @@ audio {
 /* ===== CONTENT SECTIONS ===== */
 .section {
   padding: 48px 0;
+}
+
+.section--no-top {
+  padding-top: 0;
 }
 
 .section-alt {

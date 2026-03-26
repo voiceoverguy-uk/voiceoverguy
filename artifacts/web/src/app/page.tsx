@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* VIDEO TILES */}
-      <section className="section">
+      <section className="section section--no-top">
         <div className="container">
           <div className="video-grid">
             {videoTiles.map(v => (
