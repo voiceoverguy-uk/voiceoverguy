@@ -126,6 +126,13 @@ export const testimonials: Testimonial[] = [
     companyUrl: "https://www.radiojingles.com",
   },
   {
+    quote: "We've been working with Guy for over 20 years and he's a real nice guy who delivers brilliant character voices and soundalike voices too, ideal to make those commercials stand out, always a pleasure to work with him, and always a super quick turnaround for the radio industry, highly recommend Guy and look forward to working the years ahead.",
+    name: "Mike Henry and Roy Hall",
+    role: "Commercial Production",
+    company: "Q Radio",
+    quoteLinks: [{ text: "character voices", url: "/character-voiceover" }],
+  },
+  {
     quote: "I've worked with Guy for over 10 years, and he's a top professional and a great person. He's equally comfortable self recording or taking direction, and consistently delivers the highest quality recordings and performances. Beyond his fantastic voice, he's always just a phone call away to offer advice on anything VoiceOver related. And his character voices? Don't even get me started on how good they are!",
     name: "Philip Rollett",
     role: "Head of Production",
