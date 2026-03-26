@@ -1256,7 +1256,7 @@ button.nav-link {
   align-items: center;
   gap: 70px;
   width: max-content;
-  animation: marquee-scroll 55s linear infinite;
+  animation: marquee-scroll 63s linear infinite;
 }
 
 .client-logos-marquee--draggable {
