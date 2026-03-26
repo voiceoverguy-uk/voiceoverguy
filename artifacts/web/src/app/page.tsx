@@ -192,6 +192,10 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section">
         <div className="container">
+          <p className="video-intro-heading">
+            Not sure where to start?
+          </p>
+          <div className="video-intro-divider" />
           <div className="video-grid">
             {videoTiles.map(v => (
               <div key={v.img} className="video-tile-card">
