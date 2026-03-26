@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { testimonials, type QuoteLink } from '@/data/testimonials';
 
 const INTERVAL_MS = 7000;
+const SWIPE_THRESHOLD = 40;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -62,6 +63,7 @@ export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const total = slides.length;
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   function startTimer() {
     timerRef.current = setInterval(() => {
@@ -87,6 +89,33 @@ export default function Testimonials() {
     resetTimer();
   }
 
+  function next() {
+    goTo((index + 1) % total);
+  }
+
+  function prev() {
+    goTo((index - 1 + total) % total);
+  }
+
+  function handleCardClick(e: React.MouseEvent) {
+    const target = e.target as HTMLElement;
+    if (target.closest('a')) return;
+    next();
+  }
+
+  function handleTouchStart(e: React.TouchEvent) {
+    touchStartX.current = e.touches[0].clientX;
+  }
+
+  function handleTouchEnd(e: React.TouchEvent) {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) >= SWIPE_THRESHOLD) {
+      delta > 0 ? next() : prev();
+    }
+    touchStartX.current = null;
+  }
+
   const t = slides[index];
 
   return (
@@ -99,7 +128,17 @@ export default function Testimonials() {
         </div>
 
         <div className="testimonials-card-wrap">
-          <div key={index} className="testimonials-card">
+          <div
+            key={index}
+            className="testimonials-card testimonials-card--clickable"
+            onClick={handleCardClick}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            role="button"
+            tabIndex={0}
+            aria-label="Next testimonial"
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') next(); }}
+          >
             <span className="testimonials-quote-mark" aria-hidden="true">&ldquo;</span>
             <blockquote className="testimonials-quote">
               {renderQuote(t.quote, t.quoteLinks)}

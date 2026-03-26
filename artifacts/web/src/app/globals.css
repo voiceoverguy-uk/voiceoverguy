@@ -1862,6 +1862,11 @@ audio {
   color: var(--red);
 }
 
+.testimonials-card--clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
 .testimonials-quote-link {
   color: inherit;
   text-decoration: underline;

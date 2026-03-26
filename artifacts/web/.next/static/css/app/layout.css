@@ -1875,6 +1875,13 @@ audio {
   color: var(--red);
 }
 
+.testimonials-card--clickable {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .testimonials-quote-link {
   color: inherit;
   text-decoration: underline;
