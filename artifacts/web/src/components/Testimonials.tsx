@@ -63,7 +63,12 @@ export default function Testimonials() {
             </blockquote>
             <div className="testimonials-attribution">
               <strong className="testimonials-name">{t.name}</strong>
-              <span className="testimonials-role">{[t.role, t.company].filter(Boolean).join(', ')}</span>
+              <span className="testimonials-role">
+                {t.role && <>{t.role}, </>}
+                {t.companyUrl
+                  ? <a href={t.companyUrl} target="_blank" rel="noopener noreferrer" className="testimonials-company-link">{t.company}</a>
+                  : t.company}
+              </span>
             </div>
           </div>
         </div>

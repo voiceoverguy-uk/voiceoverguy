@@ -1865,6 +1865,15 @@ audio {
   color: var(--grey-dark);
 }
 
+.testimonials-company-link {
+  color: var(--grey-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.testimonials-company-link:hover {
+  color: var(--red);
+}
 
 .testimonials-dots {
   display: flex;

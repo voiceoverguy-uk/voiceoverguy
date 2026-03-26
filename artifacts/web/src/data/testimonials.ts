@@ -3,6 +3,7 @@ export interface Testimonial {
   name: string;
   role: string;
   company: string;
+  companyUrl?: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -107,5 +108,12 @@ export const testimonials: Testimonial[] = [
     name: "Ben Howe",
     role: "Head of Production",
     company: "Dreaming Fish Productions",
+  },
+  {
+    quote: "I have worked with Guy for many years and he is a model of a voice artist, he takes great direction, understands the creative feel and delivers the perfect voice every time and he's a very friendly, likeable person too, what more could you ask?",
+    name: "Julian (Doc) Sharp",
+    role: "",
+    company: "Radio Jingles (The Original)",
+    companyUrl: "https://www.radiojingles.com",
   },
 ];
