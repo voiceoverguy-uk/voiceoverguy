@@ -256,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* CLUSTER A: CREDENTIALS & TRUST */}
-      <section className="home-cluster">
+      <section className="home-cluster home-cluster--no-before">
         <div className="container">
           <div className="credentials-box">
             <p>
