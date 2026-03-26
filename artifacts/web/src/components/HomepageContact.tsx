@@ -108,7 +108,6 @@ export default function HomepageContact() {
           <div className="homepage-contact-left">
             <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
             <p className="homepage-contact-intro">From commercials and explainer videos to character voices, promos and narration, send me a quick message and I&rsquo;ll get back to you.</p>
-            {greeting && <p className="homepage-contact-greeting-aside">{greeting}</p>}
           </div>
 
           {/* Right column: form */}
@@ -193,6 +192,7 @@ export default function HomepageContact() {
                   {status === 'error' && (
                     <span className="homepage-contact-error-msg homepage-contact-server-error">{serverError}</span>
                   )}
+                  {greeting && <p className="homepage-contact-greeting">{greeting}</p>}
                 </div>
               </form>
             )}

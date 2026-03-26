@@ -5167,13 +5167,6 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin: 0 0 20px;
 }
 
-.homepage-contact-greeting-aside {
-  font-size: 13px;
-  color: #aaa;
-  font-style: italic;
-  margin: 0;
-}
-
 .homepage-contact-right {
   /* form column */
 }
