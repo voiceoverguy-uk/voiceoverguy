@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const videoTiles = [
   {
-    img: '/assets/images/voiceoverguy-home-commercial-voice.webp',
+    img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
     titleOverlay: 'Commercial Voice',
     captionLine1: 'Male',
     captionHighlight: 'Voiceover',
@@ -30,7 +30,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=9bs4CJ4RixI',
   },
   {
-    img: '/assets/images/voiceoverguy-home-character-voices.webp',
+    img: '/assets/images/voiceoverguy-home-character-voices.jpg',
     titleOverlay: 'Character Voices',
     captionLine1: '',
     captionHighlight: 'Character',
@@ -38,7 +38,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=Ad85PPvSfbc',
   },
   {
-    img: '/assets/images/voiceoverguy-home-apple-voice.webp',
+    img: '/assets/images/voiceoverguy-home-apple-voice.jpg',
     titleOverlay: 'The Apple Voice',
     captionLine1: 'Apple',
     captionHighlight: 'iPhone',
@@ -46,7 +46,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=uYDQObLc1vw',
   },
   {
-    img: '/assets/images/voiceoverguy-home-explainer-voices.webp',
+    img: '/assets/images/voiceoverguy-home-explainer-voices.jpg',
     titleOverlay: 'Explainer Voices',
     captionLine1: '',
     captionHighlight: 'Explainer',
@@ -54,7 +54,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=TGD6Btk4twk',
   },
   {
-    img: '/assets/images/voiceoverguy-home-what-i-do.webp',
+    img: '/assets/images/voiceoverguy-home-what-i-do.jpg',
     titleOverlay: 'This is what I do...',
     captionLine1: 'Well? This is what',
     captionHighlight: 'i do',
@@ -62,7 +62,7 @@ const videoTiles = [
     href: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
   },
   {
-    img: '/assets/images/voiceoverguy-home-voice-of-santa.webp',
+    img: '/assets/images/voiceoverguy-home-voice-of-santa.jpg',
     titleOverlay: 'Voice of Santa',
     captionLine1: 'Ho Ho Ho! The Voice of',
     captionHighlight: 'Santa',
@@ -239,6 +239,12 @@ export default function Home() {
                     height={225}
                     loading="lazy"
                   />
+                  <div className="yt-play-btn" aria-hidden="true">
+                    <svg viewBox="0 0 68 48" width="68" height="48">
+                      <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00" fillOpacity="0.9"/>
+                      <path d="M 45,24 27,14 27,34" fill="#fff"/>
+                    </svg>
+                  </div>
                 </a>
                 <div className="video-caption">
                   <p>{v.captionLine1} <span className="text-red">{v.captionHighlight}</span> {v.captionLine1End}</p>
