@@ -1142,8 +1142,9 @@ button.nav-link {
 
 .home-cluster-divider hr {
   border: none;
-  border-top: 1px solid #ccc;
-  width: 240px;
+  width: 56px;
+  height: 3px;
+  background: var(--red);
   margin: 0 auto;
 }
 
@@ -1294,7 +1295,14 @@ button.nav-link {
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--text);
-  margin: 0 auto 24px;
+  margin: 0 auto 14px;
+}
+
+.video-intro-divider {
+  width: 56px;
+  height: 3px;
+  background: var(--red);
+  margin: 0 auto 28px;
 }
 
 .showreel-player-item {
