@@ -90,4 +90,10 @@ export const testimonials: Testimonial[] = [
     role: "Director",
     company: "ClearWave Productions Ltd",
   },
+  {
+    quote: "Guy is an exceptional VO artist with an incredible breadth of capability. We absolutely trust him to deliver every single time; his agility and pace of working is super impressive. He is genuinely a supplier we always look forward to working with and know we can completely rely on.",
+    name: "Oliver Dean",
+    role: "MD",
+    company: "Syrup",
+  },
 ];
