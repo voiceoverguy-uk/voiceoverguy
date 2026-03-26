@@ -807,7 +807,7 @@ button.nav-link {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: transparent;
+  background: #fff;
   color: var(--text);
   padding: 50px 0 40px;
   text-align: center;
