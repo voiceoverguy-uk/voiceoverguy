@@ -407,6 +407,14 @@ export default function Home() {
                 email: 'guy@voiceoverguy.co.uk',
                 description: 'Professional British male voiceover services for agencies, brands and broadcasters worldwide. Broadcast-quality remote recording with fast turnaround.',
                 founder: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '5',
+                  bestRating: '5',
+                  worstRating: '1',
+                  ratingCount: '120',
+                  reviewCount: '120',
+                },
                 sameAs: [
                   'https://www.linkedin.com/in/voiceoverguy/',
                   'https://www.youtube.com/user/voiceoverguyharris',
@@ -472,14 +480,6 @@ export default function Home() {
                   'Event Voiceovers',
                   'Awards Voiceover',
                 ],
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '5',
-                  bestRating: '5',
-                  worstRating: '1',
-                  ratingCount: '120',
-                  reviewCount: '120',
-                },
               },
               {
                 '@type': 'WebSite',
@@ -548,8 +548,14 @@ export default function Home() {
               ...testimonials.map((t, i) => ({
                 '@type': 'Review',
                 '@id': `https://www.voiceoverguy.co.uk/#review-${i}`,
-                itemReviewed: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
+                itemReviewed: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
                 reviewBody: t.quote,
+                reviewRating: {
+                  '@type': 'Rating',
+                  ratingValue: '5',
+                  bestRating: '5',
+                  worstRating: '1',
+                },
                 author: {
                   '@type': 'Person',
                   name: t.name,
