@@ -5140,7 +5140,11 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   grid-gap: 44px;
   gap: 44px;
   align-items: start;
-  padding: 0;
+  background: #fff;
+  border-radius: 10px;
+  border-left: 4px solid var(--red);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  padding: 38px 44px 34px;
 }
 
 .homepage-contact-left {
