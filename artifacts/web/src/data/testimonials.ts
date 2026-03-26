@@ -18,12 +18,14 @@ export const testimonials: Testimonial[] = [
     name: "Jay Espindola",
     role: "Producer",
     company: "ITV / GB News",
+    quoteLinks: [{ text: "Santa", url: "/santa-voice" }],
   },
   {
     quote: "The most convincing Santa voice we have ever had on our promos and liners. If you're looking for the real Santa, I'm pretty sure he's outsourced the job to Guy Harris.",
     name: "Matt Lomax",
     role: "Head of Sound Design",
     company: "Heart",
+    quoteLinks: [{ text: "Santa", url: "/santa-voice" }],
   },
   {
     quote: "A Father Christmas who delivers every single year, even those last minute panic buys are no bother! Whether your list to him requires something spoken, sung or simply a bit of improvised flair, this Guy will oblige! All in return for a mince pie and some sherry — not bad!",
@@ -36,6 +38,7 @@ export const testimonials: Testimonial[] = [
     name: "Dan Riedo",
     role: "Producer",
     company: "The Property Podcast",
+    quoteLinks: [{ text: "Santa", url: "/santa-voice" }],
   },
   {
     quote: "Working with Guy is always seamless. His voice work is polished, expressive, and delivered with great attention to detail, highly recommended.",
