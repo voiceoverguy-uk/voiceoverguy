@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { testimonials, type QuoteLink } from '@/data/testimonials';
 
-const INTERVAL_MS = 7000;
+const INTERVAL_MS = 8000;
 const SWIPE_THRESHOLD = 40;
 
 function shuffle<T>(arr: T[]): T[] {
@@ -134,6 +134,8 @@ export default function Testimonials() {
             onClick={handleCardClick}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+            onMouseEnter={() => { if (timerRef.current) clearInterval(timerRef.current); }}
+            onMouseLeave={() => resetTimer()}
             role="button"
             tabIndex={0}
             aria-label="Next testimonial"
