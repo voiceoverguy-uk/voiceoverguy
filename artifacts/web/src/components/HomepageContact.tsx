@@ -114,7 +114,8 @@ export default function HomepageContact() {
           <div className="homepage-contact-right">
             {status === 'success' ? (
               <div className="homepage-contact-success">
-                <p className="homepage-contact-success-msg">Thanks &mdash; your message is on its way. I&rsquo;ll get back to you as soon as I can.</p>
+                <p className="homepage-contact-success-line1">Thank you. Your message is on its way.</p>
+                <p className="homepage-contact-success-line2">I&rsquo;ll get back to you shortly.</p>
                 {greeting && <p className="homepage-contact-greeting">{greeting}</p>}
               </div>
             ) : (

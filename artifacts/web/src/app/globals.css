@@ -5102,7 +5102,6 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 /* ===== HOMEPAGE CONTACT SECTION ===== */
 .homepage-contact {
   padding: 52px 0 60px;
-  background: #f9f9f9;
 }
 
 .homepage-contact-inner {
@@ -5110,11 +5109,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   grid-template-columns: 1fr 1.6fr;
   gap: 44px;
   align-items: start;
-  background: #fff;
-  border-radius: 10px;
-  border-left: 4px solid var(--red);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-  padding: 38px 44px 34px;
+  padding: 0;
 }
 
 .homepage-contact-left {
@@ -5259,12 +5254,20 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding: 20px 0;
 }
 
-.homepage-contact-success-msg {
+.homepage-contact-success-line1 {
   font-size: 16px;
   font-weight: 600;
   color: var(--red);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.homepage-contact-success-line2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
   margin-bottom: 10px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 @media (max-width: 900px) {
