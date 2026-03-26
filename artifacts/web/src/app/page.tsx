@@ -132,23 +132,21 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="container">
-          <div className="hero-panel">
-            <h1>
-              British Male Voiceover Artist – <span className="text-red">Guy Harris</span>
-            </h1>
-            <h2>Voice heard Worldwide</h2>
+          <h1>
+            British Male Voiceover Artist – <span className="text-red">Guy Harris</span>
+          </h1>
+          <h2>Voice heard Worldwide</h2>
 
-            <WaveSurferPlayer
-              src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
-            />
+          <WaveSurferPlayer
+            src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
+          />
 
-            <ReviewBlock />
+          <ReviewBlock />
 
-            <div className="hero-cta-wrapper">
-              <Link href="/contact-guy" className="hero-cta-button">
-                Get in Touch Today
-              </Link>
-            </div>
+          <div className="hero-cta-wrapper">
+            <Link href="/contact-guy" className="hero-cta-button">
+              Get in Touch Today
+            </Link>
           </div>
         </div>
       </section>
