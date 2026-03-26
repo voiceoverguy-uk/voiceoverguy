@@ -40,9 +40,9 @@ const videoTiles = [
   {
     img: '/assets/images/voiceoverguy-home-apple-voice.jpg',
     titleOverlay: 'The Apple Voice',
-    captionLine1: 'Apple',
-    captionHighlight: 'iPhone',
-    captionLine1End: 'TV Ads',
+    captionLine1: 'That',
+    captionHighlight: 'Apple',
+    captionLine1End: 'Advert Voice',
     href: 'https://www.youtube.com/watch?v=uYDQObLc1vw',
   },
   {
