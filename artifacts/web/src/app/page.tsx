@@ -169,7 +169,7 @@ export default function Home() {
           <div className="showreel-module">
             <div className="showreel-header">
               <h2 className="showreel-heading">Hear the Range</h2>
-              <p className="showreel-subheading">Six quick clips — sample the breadth of Guy&apos;s voice work</p>
+
               <div className="showreel-divider" />
             </div>
             <div className="showreel-players">
