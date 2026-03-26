@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { testimonials } from '@/data/testimonials';
+import Link from 'next/link';
+import { testimonials, type QuoteLink } from '@/data/testimonials';
 
 const INTERVAL_MS = 7000;
 
@@ -12,6 +13,48 @@ function shuffle<T>(arr: T[]): T[] {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+function renderQuote(quote: string, links?: QuoteLink[]) {
+  if (!links || links.length === 0) return quote;
+
+  const parts: React.ReactNode[] = [];
+  let remaining = quote;
+  let key = 0;
+
+  while (remaining.length > 0) {
+    let earliestIdx = -1;
+    let earliestLink: QuoteLink | null = null;
+
+    for (const link of links) {
+      const idx = remaining.toLowerCase().indexOf(link.text.toLowerCase());
+      if (idx !== -1 && (earliestIdx === -1 || idx < earliestIdx)) {
+        earliestIdx = idx;
+        earliestLink = link;
+      }
+    }
+
+    if (earliestIdx === -1 || !earliestLink) {
+      parts.push(remaining);
+      break;
+    }
+
+    if (earliestIdx > 0) parts.push(remaining.slice(0, earliestIdx));
+
+    const matched = remaining.slice(earliestIdx, earliestIdx + earliestLink.text.length);
+    const href = earliestLink.url;
+    const isExternal = href.startsWith('http');
+
+    parts.push(
+      isExternal
+        ? <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="testimonials-quote-link">{matched}</a>
+        : <Link key={key++} href={href} className="testimonials-quote-link">{matched}</Link>
+    );
+
+    remaining = remaining.slice(earliestIdx + earliestLink.text.length);
+  }
+
+  return parts;
 }
 
 export default function Testimonials() {
@@ -59,7 +102,7 @@ export default function Testimonials() {
           <div key={index} className="testimonials-card">
             <span className="testimonials-quote-mark" aria-hidden="true">&ldquo;</span>
             <blockquote className="testimonials-quote">
-              {t.quote}
+              {renderQuote(t.quote, t.quoteLinks)}
             </blockquote>
             <div className="testimonials-attribution">
               <strong className="testimonials-name">{t.name}</strong>

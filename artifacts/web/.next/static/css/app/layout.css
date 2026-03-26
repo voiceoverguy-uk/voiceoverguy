@@ -1875,6 +1875,17 @@ audio {
   color: var(--red);
 }
 
+.testimonials-quote-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-style: inherit;
+}
+
+.testimonials-quote-link:hover {
+  color: var(--red);
+}
+
 .testimonials-dots {
   display: flex;
   justify-content: center;

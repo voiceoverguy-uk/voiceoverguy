@@ -1,9 +1,15 @@
+export interface QuoteLink {
+  text: string;
+  url: string;
+}
+
 export interface Testimonial {
   quote: string;
   name: string;
   role: string;
   company: string;
   companyUrl?: string;
+  quoteLinks?: QuoteLink[];
 }
 
 export const testimonials: Testimonial[] = [
@@ -121,5 +127,6 @@ export const testimonials: Testimonial[] = [
     name: "Philip Rollett",
     role: "Head of Production",
     company: "Imagesound",
+    quoteLinks: [{ text: "character voices", url: "/character-voiceover" }],
   },
 ];
