@@ -116,4 +116,10 @@ export const testimonials: Testimonial[] = [
     company: "Radio Jingles (The Original)",
     companyUrl: "https://www.radiojingles.com",
   },
+  {
+    quote: "I've worked with Guy for over 10 years, and he's a top professional and a great person. He's equally comfortable self recording or taking direction, and consistently delivers the highest quality recordings and performances. Beyond his fantastic voice, he's always just a phone call away to offer advice on anything VoiceOver related. And his character voices? Don't even get me started on how good they are!",
+    name: "Philip Rollett",
+    role: "Head of Production",
+    company: "Imagesound",
+  },
 ];
