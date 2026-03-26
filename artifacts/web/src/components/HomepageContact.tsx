@@ -104,18 +104,21 @@ export default function HomepageContact() {
       <div className="container">
         <div className="homepage-contact-inner">
 
-          {status === 'success' ? (
-            <div className="homepage-contact-success">
-              <p className="homepage-contact-success-msg">Thanks — your message is on its way. I&rsquo;ll get back to you as soon as I can.</p>
-              {greeting && <p className="homepage-contact-greeting">{greeting}</p>}
-            </div>
-          ) : (
-            <>
-              <div className="homepage-contact-header">
-                <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard? Let&rsquo;s talk.</h2>
-                <p className="homepage-contact-intro">From commercials and explainer videos to character voices, promos and narration, send me a quick message and I&rsquo;ll get back to you.</p>
-              </div>
+          {/* Left column: heading + intro */}
+          <div className="homepage-contact-left">
+            <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
+            <p className="homepage-contact-intro">From commercials and explainer videos to character voices, promos and narration, send me a quick message and I&rsquo;ll get back to you.</p>
+            {greeting && <p className="homepage-contact-greeting-aside">{greeting}</p>}
+          </div>
 
+          {/* Right column: form */}
+          <div className="homepage-contact-right">
+            {status === 'success' ? (
+              <div className="homepage-contact-success">
+                <p className="homepage-contact-success-msg">Thanks &mdash; your message is on its way. I&rsquo;ll get back to you as soon as I can.</p>
+                {greeting && <p className="homepage-contact-greeting">{greeting}</p>}
+              </div>
+            ) : (
               <form className="homepage-contact-form" onSubmit={handleSubmit} noValidate>
                 <input
                   ref={honeypotRef}
@@ -190,11 +193,10 @@ export default function HomepageContact() {
                   {status === 'error' && (
                     <span className="homepage-contact-error-msg homepage-contact-server-error">{serverError}</span>
                   )}
-                  {greeting && <p className="homepage-contact-greeting">{greeting}</p>}
                 </div>
               </form>
-            </>
-          )}
+            )}
+          </div>
 
         </div>
       </div>
