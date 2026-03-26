@@ -15,7 +15,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function Testimonials() {
-  const [slides] = useState(() => shuffle(testimonials));
+  const [slides, setSlides] = useState(testimonials);
   const [index, setIndex] = useState(0);
   const total = slides.length;
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -32,6 +32,7 @@ export default function Testimonials() {
   }
 
   useEffect(() => {
+    setSlides(shuffle(testimonials));
     startTimer();
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
