@@ -121,13 +121,13 @@ export default function Testimonials() {
   return (
     <section className="testimonials-section" aria-label="Client testimonials">
       <div className="container">
-        <div className="testimonials-header">
-          <h2 className="testimonials-title">What Clients Say</h2>
-          <p className="testimonials-subtitle">Trusted by agencies, broadcasters, and brands across the UK</p>
-          <div className="testimonials-divider" />
-        </div>
+        <div className="testimonials-module">
+          <div className="testimonials-header">
+            <h2 className="testimonials-title">What Clients Say</h2>
+            <p className="testimonials-subtitle">Trusted by agencies, broadcasters, and brands across the UK</p>
+            <div className="testimonials-divider" />
+          </div>
 
-        <div className="testimonials-card-wrap">
           <div
             key={index}
             className="testimonials-card testimonials-card--clickable"
@@ -155,19 +155,19 @@ export default function Testimonials() {
               </span>
             </div>
           </div>
-        </div>
 
-        <div className="testimonials-dots" role="tablist" aria-label="Testimonial navigation">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Testimonial ${i + 1}`}
-              className={`testimonials-dot${i === index ? ' testimonials-dot--active' : ''}`}
-              onClick={() => goTo(i)}
-            />
-          ))}
+          <div className="testimonials-dots" role="tablist" aria-label="Testimonial navigation">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Testimonial ${i + 1}`}
+                className={`testimonials-dot${i === index ? ' testimonials-dot--active' : ''}`}
+                onClick={() => goTo(i)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
