@@ -9,7 +9,6 @@ interface Props {
 export default function CalculatorQuoteForm({ wordCount }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
   const [formWords, setFormWords] = useState(wordCount > 0 ? String(wordCount) : '');
   const [userEditedWords, setUserEditedWords] = useState(false);
   const [usage, setUsage] = useState('');
@@ -52,7 +51,6 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
       'Enquiry Source: Voiceover Word Count Calculator',
       `Name: ${name.trim()}`,
       `Email: ${email.trim()}`,
-      company.trim() ? `Company / Brand: ${company.trim()}` : '',
       formWords ? `Number of words: ${formWords}` : '',
       usage ? `Usage: ${usage}` : '',
       `Project details: ${details.trim()}`,
@@ -146,33 +144,6 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
           </div>
 
           <div className="calc-quote-field">
-            <label className="calc-label" htmlFor="q-company">Company / Brand</label>
-            <input
-              id="q-company"
-              type="text"
-              className="calc-quote-input"
-              value={company}
-              onChange={e => setCompany(e.target.value)}
-              autoComplete="organization"
-            />
-          </div>
-
-          <div className="calc-quote-field">
-            <label className="calc-label" htmlFor="q-words">Number of words</label>
-            <input
-              id="q-words"
-              type="number"
-              min="0"
-              className="calc-quote-input"
-              value={formWords}
-              onChange={e => {
-                setFormWords(e.target.value);
-                setUserEditedWords(true);
-              }}
-            />
-          </div>
-
-          <div className="calc-quote-field calc-quote-field--full">
             <label className="calc-label" htmlFor="q-usage">Usage</label>
             <select
               id="q-usage"
@@ -191,6 +162,21 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
               <option>On-hold / IVR</option>
               <option>Not sure yet</option>
             </select>
+          </div>
+
+          <div className="calc-quote-field">
+            <label className="calc-label" htmlFor="q-words">Number of words</label>
+            <input
+              id="q-words"
+              type="number"
+              min="0"
+              className="calc-quote-input"
+              value={formWords}
+              onChange={e => {
+                setFormWords(e.target.value);
+                setUserEditedWords(true);
+              }}
+            />
           </div>
 
           <div className="calc-quote-field calc-quote-field--full">
