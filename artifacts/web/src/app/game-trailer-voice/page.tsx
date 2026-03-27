@@ -46,7 +46,7 @@ export default function Page() {
       )}
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="game-trailer-voice" formIntro="Want a bold game trailer voice? Send me a quick message and I'll get back to you." sections={[
-        { text: data.s4 },
+        { text: data.s4, audioSrc: '/assets/audio/game-trailer-voices-guy-harris.mp3' },
         { youtubeId: data.s7 },
         { text: data.s5 },
         { youtubeId: data.s8 },
