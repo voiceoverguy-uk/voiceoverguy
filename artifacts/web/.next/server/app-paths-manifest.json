@@ -1,5 +1,7 @@
 {
+  "/football-commentator-voice/page": "app/football-commentator-voice/page.js",
+  "/gameshow-host/page": "app/gameshow-host/page.js",
   "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
   "/character-voiceover/page": "app/character-voiceover/page.js",
-  "/gameshow-host/page": "app/gameshow-host/page.js"
+  "/explainer-video-voice/page": "app/explainer-video-voice/page.js"
 }

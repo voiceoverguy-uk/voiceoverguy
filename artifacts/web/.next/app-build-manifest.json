@@ -30,6 +30,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/gameshow-host/page.js"
+    ],
+    "/football-commentator-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/football-commentator-voice/page.js"
+    ],
+    "/explainer-video-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/explainer-video-voice/page.js"
     ]
   }
 }
