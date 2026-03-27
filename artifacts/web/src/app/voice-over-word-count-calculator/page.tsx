@@ -50,7 +50,7 @@ export default function VoiceOverWordCountCalculatorPage() {
         <div className="container">
           <div className="calc-intro">
             <p>
-              Whether you are writing a script for a voiceover, preparing a speech, or
+              If you are writing a script for a voiceover, preparing a speech, or
               just curious how long a piece of text takes to read, this calculator gives you
               an instant answer. Enter your word count or paste your full script below and
               choose a reading speed to see the estimated time.
