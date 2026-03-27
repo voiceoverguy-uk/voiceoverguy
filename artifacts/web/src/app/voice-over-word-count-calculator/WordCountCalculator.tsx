@@ -385,7 +385,7 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
 
       {mode === 'voiceover' && (
         <div className="calc-card calc-ref-card">
-          <h3>Common Voiceover Script Lengths</h3>
+          <h2>Common Voiceover Script Lengths</h2>
           <div className="calc-ref-grid">
             <div className="calc-ref-item">
               <span className="calc-ref-duration">30 seconds</span>
