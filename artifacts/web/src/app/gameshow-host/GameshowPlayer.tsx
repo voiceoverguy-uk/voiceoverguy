@@ -8,6 +8,7 @@ export default function GameshowPlayer() {
     <WaveSurferPlayer
       src="/assets/audio/bbc-radio-1-headcam-day-gameshow-voice.mp3"
       label="BBC Radio 1 Headcam Day &ndash; Gameshow Voice Promo"
+      downloadable
     />
   );
 }
