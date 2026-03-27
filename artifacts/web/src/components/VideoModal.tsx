@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 
 interface VideoModalProps {
   ytId: string;
@@ -8,17 +8,23 @@ interface VideoModalProps {
 }
 
 export default function VideoModal({ ytId, onClose }: VideoModalProps) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const triggerRef = useRef<Element | null>(null);
+
   const handleKey = useCallback(
     (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); },
     [onClose],
   );
 
   useEffect(() => {
+    triggerRef.current = document.activeElement;
+    closeRef.current?.focus();
     document.addEventListener('keydown', handleKey);
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', handleKey);
       document.body.style.overflow = '';
+      (triggerRef.current as HTMLElement | null)?.focus();
     };
   }, [handleKey]);
 
@@ -32,6 +38,7 @@ export default function VideoModal({ ytId, onClose }: VideoModalProps) {
     >
       <div className="yt-modal-inner" onClick={e => e.stopPropagation()}>
         <button
+          ref={closeRef}
           type="button"
           className="yt-modal-close"
           aria-label="Close video"

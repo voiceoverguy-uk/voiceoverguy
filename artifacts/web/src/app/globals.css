@@ -1779,6 +1779,17 @@ audio {
   opacity: 1;
 }
 
+@media (max-height: 500px) {
+  .yt-modal-close {
+    top: 4px;
+    right: 4px;
+    font-size: 28px;
+  }
+  .yt-modal-inner {
+    width: 95vw;
+  }
+}
+
 /* ── video-thumb as button reset ───────────────────── */
 button.video-thumb {
   background: none;
