@@ -20,6 +20,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/narration-voice/page.js"
+    ],
+    "/apple-voice-style/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/apple-voice-style/page.js"
     ]
   }
 }

@@ -5789,3 +5789,35 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
     gap: 0;
   }
 }
+
+/* ── Demo audio player ─────────────────────────────── */
+.demo-player {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.demo-player audio {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.demo-download-btn {
+  display: inline-block;
+  padding: 9px 20px;
+  background: var(--red);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
+}
+
+.demo-download-btn:hover {
+  opacity: 0.88;
+}

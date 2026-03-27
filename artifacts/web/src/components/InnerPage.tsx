@@ -10,6 +10,8 @@ interface Section {
   imageAlt?: string;
   fullWidth?: boolean;
   node?: React.ReactNode;
+  audioSrc?: string;
+  downloadLabel?: string;
 }
 
 interface InnerPageProps {
@@ -55,6 +57,19 @@ function VimeoEmbed({ id }: { id: string }) {
   );
 }
 
+function AudioPlayer({ src, label }: { src: string; label?: string }) {
+  return (
+    <div className="demo-player">
+      <audio controls>
+        <source src={src} type="audio/mpeg" />
+      </audio>
+      <a href={src} download className="demo-download-btn">
+        {label || 'Download Sample MP3'}
+      </a>
+    </div>
+  );
+}
+
 export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: InnerPageProps) {
   const pairs: Array<[Section, Section | null]> = [];
   let i = 0;
@@ -84,6 +99,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: 
                 {left.text && (
                   <div dangerouslySetInnerHTML={{ __html: normaliseHtml(left.text) }} />
                 )}
+                {left.audioSrc && <AudioPlayer src={left.audioSrc} label={left.downloadLabel} />}
                 {left.youtubeId && isYouTubeId(left.youtubeId) && (
                   <YouTubeEmbed id={left.youtubeId} />
                 )}
@@ -108,6 +124,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: 
                 {left.text && (
                   <div dangerouslySetInnerHTML={{ __html: normaliseHtml(left.text) }} />
                 )}
+                {left.audioSrc && <AudioPlayer src={left.audioSrc} label={left.downloadLabel} />}
                 {left.youtubeId && isYouTubeId(left.youtubeId) && (
                   <YouTubeEmbed id={left.youtubeId} />
                 )}
