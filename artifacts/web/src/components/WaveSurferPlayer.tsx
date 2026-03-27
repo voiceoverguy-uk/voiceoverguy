@@ -156,7 +156,7 @@ export default function WaveSurferPlayer({ src, label, compact = false, download
             aria-label="Download audio"
             title="Download"
           >
-            <svg width={compact ? "14" : "16"} height={compact ? "14" : "16"} viewBox="0 0 24 24" fill="currentColor">
+            <svg width={compact ? "16" : "32"} height={compact ? "16" : "32"} viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" />
               <path d="M5 20h14v-2H5v2z" />
             </svg>

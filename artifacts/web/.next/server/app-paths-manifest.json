@@ -1,4 +1,5 @@
 {
   "/page": "app/page.js",
-  "/apple-voice-style/page": "app/apple-voice-style/page.js"
+  "/apple-voice-style/page": "app/apple-voice-style/page.js",
+  "/commercial-voiceover/page": "app/commercial-voiceover/page.js"
 }

@@ -5809,10 +5809,6 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 /* ── Demo audio player ─────────────────────────────── */
 .demo-player {
   margin-top: 16px;
-  padding: 16px;
-  background: #f7f7f7;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
 }
 
 .demo-player audio {

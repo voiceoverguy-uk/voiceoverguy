@@ -25,6 +25,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/apple-voice-style/page.js"
+    ],
+    "/commercial-voiceover/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/commercial-voiceover/page.js"
     ]
   }
 }
