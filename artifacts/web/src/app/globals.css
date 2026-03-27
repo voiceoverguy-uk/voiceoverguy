@@ -2095,6 +2095,14 @@ button.video-thumb {
   font-weight: 400;
 }
 
+.news-date {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #999;
+  white-space: nowrap;
+  margin-left: 6px;
+}
+
 .news-box-content {
   position: relative;
 }
