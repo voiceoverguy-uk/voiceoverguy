@@ -7,6 +7,7 @@ import ReviewBlock from '@/components/ReviewBlock';
 import RotatingQuotes from '@/components/RotatingQuotes';
 import Testimonials from '@/components/Testimonials';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
+import SeasonalHalloweenPlayer from '@/components/SeasonalHalloweenPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
 import ClientLogosMarquee from '@/components/ClientLogosMarquee';
 import { getYearsExperience } from '@/lib/experience';
@@ -140,8 +141,8 @@ export default function Home() {
               </div>
               <div className="showreel-player-item">
                 <WaveSurferPlayer
-                  src="/assets/audio/spooky-showreel-26-guy-harris.mp3"
-                  label={`<span class="text-red">Spooky Halloween</span> Voice ${yr}`}
+                  src="/assets/audio/commercial-voiceover-showreel-guy-harris.mp3"
+                  label={`<span class="text-red">Commercial</span> Showreel ${yr}`}
                   compact
                 />
               </div>
@@ -167,6 +168,7 @@ export default function Home() {
                 />
               </div>
             </div>
+            <SeasonalHalloweenPlayer yr={yr} />
           </div>
         </div>
       </section>
