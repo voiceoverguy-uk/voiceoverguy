@@ -1,6 +1,7 @@
 import InnerPage from '@/components/InnerPage';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { SchemaScripts, localBusiness, breadcrumb, faqPage } from '@/lib/staticPageSchema';
 
@@ -59,6 +60,12 @@ export default function Page() {
         { youtubeId: '22hxKsJPEpI' },
         ...(data.s16 ? [{ text: data.s16, fullWidth: true }] : []),
       ]} />
+      <div className="inner-container" style={{ padding: '32px 20px', textAlign: 'center', borderTop: '3px solid var(--red)' }}>
+        <p style={{ marginBottom: '12px', fontSize: '16px' }}>Not sure how many words are in your script – or what your explainer voiceover might cost?</p>
+        <Link href="/voice-over-word-count-calculator" className="btn btn-red" style={{ display: 'inline-block', padding: '12px 28px', background: 'var(--red)', color: '#fff', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '0.05em' }}>
+          Try the Voiceover Word Count Calculator
+        </Link>
+      </div>
       <SchemaScripts schemas={schemas} />
     </main>
   );
