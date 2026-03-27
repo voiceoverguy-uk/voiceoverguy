@@ -46,7 +46,7 @@ export default function Page() {
       )}
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="voiceover-imaging" formIntro="Need strong voiceover imaging for your station or brand? Send me a quick message and I'll get back to you." sections={[
-        ...(data.s4 ? [{ text: data.s4 }] : []),
+        ...(data.s4 ? [{ text: data.s4, audioSrc: '/assets/audio/imaging-voiceover-showreel-guy-harris.mp3' }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
