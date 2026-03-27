@@ -1,0 +1,123 @@
+Please improve the page /voice-over-word-count-calculator by adding a simple, polished pricing estimator section to the existing calculator.
+
+IMPORTANT
+- Keep the current page design, colours, typography, spacing and calculator behaviour intact.
+- This is an enhancement, not a redesign.
+- Make the new feature feel native to the existing page.
+- Maintain mobile responsiveness.
+- Do not break the current word count, text paste, reading speed, or duration logic.
+
+GOAL
+Add a pricing estimator that helps users get a rough voiceover cost guide, but only when the word count is 1000 words or more.
+
+NEW BEHAVIOUR
+1. Add two new boxes alongside the existing Word Count box on desktop:
+   - Box 1: Price per Word
+   - Box 2: Estimated Cost
+
+2. These new boxes must NOT be shown at all unless the Word Count is 1000 or more.
+   - If word count is under 1000, only show the existing Word Count field.
+   - If word count is 1000+, reveal the two new pricing boxes.
+   - This applies whether the word count is typed manually or generated from pasted text.
+
+3. Price per Word box:
+   - Editable input
+   - Accept GBP decimal values
+   - Default value: 0.12
+   - Display label: Price per Word
+   - Add a small inline info icon or helper trigger
+   - Helper text:
+     "Typical guide rate: 8p–15p per word depending on script length, usage and project type."
+
+4. Estimated Cost box:
+   - Read-only
+   - Auto-calculates as:
+     word count × price per word
+   - Format as GBP, for example:
+     £120.00
+   - Display label: Estimated Cost
+   - Add a small inline info icon or helper trigger
+   - Helper text:
+     "Guide only. Final pricing may vary depending on usage, licensing and project details."
+
+5. Validation:
+   - If word count is 1000+ but price per word is empty or invalid, Estimated Cost should remain blank or show £0.00 safely without errors.
+   - Prevent negative values.
+   - Keep all calculations smooth and instant.
+
+COPY / MICROTEXT
+Add a short note directly beneath the pricing row, only when the pricing boxes are visible:
+
+"Short scripts are usually priced with a minimum booking fee, so this estimator is shown for scripts of 1000 words or more."
+
+Below that, add a second subtle line:
+
+"Need an accurate quote? Usage, licensing and turnaround can affect the final price."
+
+CONTACT FORM ADDITION
+Add a compact quote enquiry form beneath the calculator results area, styled to match the site.
+
+Heading:
+Need an accurate voiceover quote?
+
+Intro text:
+Send over the details below and I’ll come back to you with a proper quote based on word count, usage and turnaround.
+
+Form fields:
+- Name
+- Email
+- Company / Brand
+- Number of words
+- Usage
+- Project details
+
+Usage field options:
+- Internal / corporate use
+- Website / social media
+- Online advertising
+- Radio advertising
+- TV advertising
+- Explainer video
+- E-learning / training
+- On-hold / IVR
+- Not sure yet
+
+Project details field:
+- textarea
+- placeholder:
+  "Tell me about the project, where the audio will be used, and any deadline."
+
+SMART FORM BEHAVIOUR
+- If the user already entered a word count in the calculator, prefill the "Number of words" field automatically.
+- Keep that field editable.
+- If the user changes the calculator word count, update the form field too unless the user has manually edited it.
+- Do not make the form feel overly complicated.
+
+SUBMISSION
+- Wire this form into the site’s existing contact/enquiry handling if one already exists.
+- If no existing endpoint is available, create a clean placeholder implementation ready to connect.
+- Include success and error states styled consistently with the site.
+
+UX / DESIGN NOTES
+- On desktop, the top row should feel balanced:
+  Word Count | Price per Word | Estimated Cost
+- On mobile, stack neatly with good spacing.
+- Match current border radius, border colour, font sizing and spacing.
+- Pricing fields should feel professional and understated, not salesy.
+- Use the existing red accent styling where appropriate.
+- Keep the page looking premium and simple.
+
+TECHNICAL NOTES
+- Ensure the pricing visibility logic works from both manual word count input and pasted text auto-count.
+- Keep the existing reading speed calculator untouched.
+- Make sure there are no console errors.
+- Keep the code tidy and componentised if appropriate.
+
+FINAL CHECK
+Please test these scenarios:
+1. 500 words -> pricing boxes hidden
+2. 999 words -> pricing boxes hidden
+3. 1000 words -> pricing boxes appear, default 12p per word, estimated cost updates correctly
+4. 2530 words at 12p -> estimated cost shows £303.60
+5. Pasting text updates word count and pricing visibility correctly
+6. Mobile layout still looks clean and usable
