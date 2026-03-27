@@ -139,4 +139,10 @@ export const testimonials: Testimonial[] = [
     company: "Imagesound",
     quoteLinks: [{ text: "character voices", url: "/character-voiceover" }],
   },
+  {
+    quote: "Pure greatness!",
+    name: "Dan R Hagen",
+    role: "Producer and Voice Norwegian artist",
+    company: "",
+  },
 ];
