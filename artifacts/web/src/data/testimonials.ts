@@ -142,7 +142,7 @@ export const testimonials: Testimonial[] = [
   {
     quote: "Pure greatness!",
     name: "Dan R Hagen",
-    role: "Producer and Voice Norwegian artist",
+    role: "Producer and English speaking Norwegian Voice artist",
     company: "",
   },
 ];
