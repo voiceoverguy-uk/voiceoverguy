@@ -1,4 +1,4 @@
 {
   "/page": "app/page.js",
-  "/voiceover-news/page": "app/voiceover-news/page.js"
+  "/_not-found/page": "app/_not-found/page.js"
 }
