@@ -1686,6 +1686,7 @@ audio {
 }
 
 .video-thumb {
+  display: block;
   position: relative;
   cursor: pointer;
   overflow: hidden;
