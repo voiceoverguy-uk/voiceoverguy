@@ -95,7 +95,7 @@ export default function Page() {
             <p>
               Have an idea for a cartoon that captures something from the voiceover world? Guy is always open to suggestions, so get in touch via the{' '}
               <a href="/contact-guy">contact page</a> or browse the{' '}
-              <a href="/news-blog">News &amp; Blog</a> for more voiceover humour and industry insights.
+              <a href="/voiceover-news">News &amp; Blog</a> for more voiceover humour and industry insights.
             </p>
             <p className="cartoons-raggett-credit">
               All cartoons illustrated by{' '}
