@@ -1,3 +1,4 @@
 {
-  "/commercial-voiceover/page": "app/commercial-voiceover/page.js"
+  "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
+  "/voice-over-word-count-calculator/page": "app/voice-over-word-count-calculator/page.js"
 }
