@@ -2812,9 +2812,10 @@ textarea.form-control--compact {
   }
 
   .navbar.navbar--fixed .navbar-fixed-search .search-input {
-    padding: 6px 12px;
+    padding: 9px 12px;
     font-size: 13px;
     border-radius: 6px;
+    border-width: 1.5px;
   }
 
   .navbar.navbar--fixed .navbar-fixed-icon {
