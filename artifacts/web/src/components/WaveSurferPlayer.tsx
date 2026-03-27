@@ -9,9 +9,10 @@ interface WaveSurferPlayerProps {
   src: string;
   label?: string;
   compact?: boolean;
+  downloadable?: boolean;
 }
 
-export default function WaveSurferPlayer({ src, label, compact = false }: WaveSurferPlayerProps) {
+export default function WaveSurferPlayer({ src, label, compact = false, downloadable = false }: WaveSurferPlayerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const wavesurferRef = useRef<WaveSurfer | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -147,6 +148,20 @@ export default function WaveSurferPlayer({ src, label, compact = false }: WaveSu
             aria-label="Volume"
           />
         </div>
+        {downloadable && (
+          <a
+            href={src}
+            download
+            className="wavesurfer-download-btn"
+            aria-label="Download audio"
+            title="Download"
+          >
+            <svg width={compact ? "14" : "16"} height={compact ? "14" : "16"} viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" />
+              <path d="M5 20h14v-2H5v2z" />
+            </svg>
+          </a>
+        )}
       </div>
       {compact && label && <p className="wavesurfer-label" dangerouslySetInnerHTML={{ __html: label }} />}
     </div>

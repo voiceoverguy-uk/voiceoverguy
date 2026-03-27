@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import { normaliseHtml } from '@/lib/normaliseHtml';
+import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 
 interface Section {
   text?: string;
@@ -60,9 +61,7 @@ function VimeoEmbed({ id }: { id: string }) {
 function AudioPlayer({ src }: { src: string; label?: string }) {
   return (
     <div className="demo-player">
-      <audio controls>
-        <source src={src} type="audio/mpeg" />
-      </audio>
+      <WaveSurferPlayer src={src} downloadable />
     </div>
   );
 }
