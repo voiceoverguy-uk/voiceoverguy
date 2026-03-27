@@ -40,6 +40,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/explainer-video-voice/page.js"
+    ],
+    "/voice-of-god/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voice-of-god/page.js"
+    ],
+    "/voiceover-imaging/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/voiceover-imaging/page.js"
+    ],
+    "/movie-trailer-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/movie-trailer-voice/page.js"
     ]
   }
 }
