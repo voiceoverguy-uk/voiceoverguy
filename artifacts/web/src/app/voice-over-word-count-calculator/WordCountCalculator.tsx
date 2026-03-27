@@ -1,12 +1,16 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 
 type Mode = 'voiceover' | 'silent';
 
 interface Preset {
   label: string;
   wpm: number;
+}
+
+interface Props {
+  onWordCountChange?: (count: number) => void;
 }
 
 const VOICEOVER_PRESETS: Preset[] = [
@@ -44,7 +48,16 @@ function calcSeconds(words: number, wpm: number): number {
   return (words / wpm) * 60;
 }
 
-export default function WordCountCalculator() {
+function InfoTooltip({ text }: { text: string }) {
+  return (
+    <span className="calc-tooltip-wrap">
+      <button type="button" className="calc-tooltip-btn" aria-label="More information">?</button>
+      <span className="calc-tooltip-text" role="tooltip">{text}</span>
+    </span>
+  );
+}
+
+export default function WordCountCalculator({ onWordCountChange }: Props) {
   const [mode, setMode] = useState<Mode>('voiceover');
   const [wordCountInput, setWordCountInput] = useState('');
   const [textInput, setTextInput] = useState('');
@@ -52,6 +65,7 @@ export default function WordCountCalculator() {
   const [customWpm, setCustomWpm] = useState('');
   const [useCustom, setUseCustom] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [pricePerWord, setPricePerWord] = useState('0.12');
 
   const presets = mode === 'voiceover' ? VOICEOVER_PRESETS : SILENT_PRESETS;
 
@@ -61,12 +75,24 @@ export default function WordCountCalculator() {
     ? textWordCount
     : parseInt(wordCountInput, 10) || 0;
 
+  const showPricing = wordCount >= 1000;
+
+  const priceNum = parseFloat(pricePerWord);
+  const estimatedCost =
+    showPricing && !isNaN(priceNum) && priceNum >= 0
+      ? new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(wordCount * priceNum)
+      : '';
+
   const activeWpm = useCustom && customWpm
     ? Math.max(1, parseInt(customWpm, 10) || 0)
     : selectedWpm;
 
   const mainResult = calcSeconds(wordCount, activeWpm);
   const hasResult = wordCount > 0 && activeWpm > 0;
+
+  useEffect(() => {
+    onWordCountChange?.(wordCount);
+  }, [wordCount, onWordCountChange]);
 
   const handlePresetClick = useCallback((wpm: number) => {
     setSelectedWpm(wpm);
@@ -94,6 +120,7 @@ export default function WordCountCalculator() {
     setCustomWpm('');
     setUseCustom(false);
     setCopied(false);
+    setPricePerWord('0.12');
     const defaultWpm = mode === 'voiceover' ? 150 : 238;
     setSelectedWpm(defaultWpm);
   }, [mode]);
@@ -126,6 +153,15 @@ export default function WordCountCalculator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handlePriceChange = useCallback((val: string) => {
+    if (val === '' || /^\d*\.?\d{0,4}$/.test(val)) {
+      const num = parseFloat(val);
+      if (val === '' || (!isNaN(num) && num >= 0)) {
+        setPricePerWord(val);
+      }
+    }
+  }, []);
+
   return (
     <div className="calc-wrapper">
       <div className="calc-tabs">
@@ -145,22 +181,74 @@ export default function WordCountCalculator() {
 
       <div className="calc-card">
         <div className="calc-input-section">
-          <label className="calc-label" htmlFor="word-count-input">
-            Word count
-          </label>
-          <input
-            id="word-count-input"
-            type="number"
-            min="0"
-            className="calc-number-input"
-            placeholder="e.g. 250"
-            value={textInput.trim() ? textWordCount : wordCountInput}
-            onChange={e => {
-              setWordCountInput(e.target.value);
-              setTextInput('');
-            }}
-            disabled={!!textInput.trim()}
-          />
+
+          {/* Pricing row: word count always visible; price + cost appear at 1000+ */}
+          <div className={`calc-pricing-row${showPricing ? ' calc-pricing-row--expanded' : ''}`}>
+            <div className="calc-pricing-box">
+              <label className="calc-label" htmlFor="word-count-input">
+                Word count
+              </label>
+              <input
+                id="word-count-input"
+                type="number"
+                min="0"
+                className="calc-number-input"
+                placeholder="e.g. 250"
+                value={textInput.trim() ? textWordCount : wordCountInput}
+                onChange={e => {
+                  setWordCountInput(e.target.value);
+                  setTextInput('');
+                }}
+                disabled={!!textInput.trim()}
+              />
+            </div>
+
+            {showPricing && (
+              <>
+                <div className="calc-pricing-box">
+                  <label className="calc-label" htmlFor="price-per-word">
+                    Price per Word{' '}
+                    <InfoTooltip text="Typical guide rate: 8p–15p per word depending on script length, usage and project type." />
+                  </label>
+                  <div className="calc-price-input-wrap">
+                    <span className="calc-price-prefix">£</span>
+                    <input
+                      id="price-per-word"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      className="calc-number-input calc-price-input"
+                      value={pricePerWord}
+                      onChange={e => handlePriceChange(e.target.value)}
+                      placeholder="0.12"
+                    />
+                  </div>
+                </div>
+
+                <div className="calc-pricing-box">
+                  <label className="calc-label" htmlFor="estimated-cost">
+                    Estimated Cost{' '}
+                    <InfoTooltip text="Guide only. Final pricing may vary depending on usage, licensing and project details." />
+                  </label>
+                  <input
+                    id="estimated-cost"
+                    type="text"
+                    className="calc-number-input calc-cost-display"
+                    value={estimatedCost}
+                    readOnly
+                    placeholder="£0.00"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+
+          {showPricing && (
+            <div className="calc-pricing-note">
+              <p>Short scripts are usually priced with a minimum booking fee, so this estimator is shown for scripts of 1000 words or more.</p>
+              <p className="calc-pricing-note--subtle">Need an accurate quote? Usage, licensing and turnaround can affect the final price.</p>
+            </div>
+          )}
 
           <label className="calc-label" htmlFor="text-paste" style={{ marginTop: '16px' }}>
             Or paste your text below

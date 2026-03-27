@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import WordCountCalculator from './WordCountCalculator';
+import CalculatorPage from './CalculatorPage';
 import FaqAccordion from '@/components/FaqAccordion';
 import { SchemaScripts, faqPage, webPage, breadcrumb } from '@/lib/staticPageSchema';
 
@@ -63,7 +63,7 @@ export default function VoiceOverWordCountCalculatorPage() {
             </p>
           </div>
 
-          <WordCountCalculator />
+          <CalculatorPage />
 
           <div className="calc-content-section">
             <h2>Understanding Voiceover vs Silent Reading Speed</h2>
