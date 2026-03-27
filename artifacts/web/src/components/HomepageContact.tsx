@@ -107,7 +107,7 @@ export default function HomepageContact() {
           {/* Left column: heading + intro */}
           <div className="homepage-contact-left">
             <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
-            <p className="homepage-contact-intro">From commercials and explainer videos to character voices, promos and narration, send me a quick message and I&rsquo;ll get back to you.</p>
+            <p className="homepage-contact-intro">From commercials and explainer videos to character voices including Santa, Football Commentary, David Attenborough, promos and narration, send me a quick message and I&rsquo;ll get back to you impressively quick.</p>
           </div>
 
           {/* Right column: form */}
