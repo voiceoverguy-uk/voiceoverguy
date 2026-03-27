@@ -52,8 +52,9 @@ export default function Page() {
         { youtubeId: data.s8 },
         { text: data.s6 },
         { youtubeId: data.s9 },
-        { youtubeId: data.s11 },
         { imageSrc: '/assets/images/movie-trailer-voice-og.webp', imageAlt: 'Movie Trailer Voice \u2013 Guy Harris' },
+        { text: data.s12 },
+        { youtubeId: data.s11 },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

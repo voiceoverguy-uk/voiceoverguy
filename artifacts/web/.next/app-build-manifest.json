@@ -65,6 +65,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/game-trailer-voice/page.js"
+    ],
+    "/david-attenborough-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/david-attenborough-voice/page.js"
+    ],
+    "/santa-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/santa-voice/page.js"
+    ],
+    "/football-commentator-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/football-commentator-voice/page.js"
     ]
   }
 }

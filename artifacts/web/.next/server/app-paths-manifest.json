@@ -1,7 +1,7 @@
 {
-  "/explainer-video-voice/page": "app/explainer-video-voice/page.js",
-  "/voice-of-god/page": "app/voice-of-god/page.js",
-  "/voiceover-imaging/page": "app/voiceover-imaging/page.js",
-  "/movie-trailer-voice/page": "app/movie-trailer-voice/page.js",
-  "/game-trailer-voice/page": "app/game-trailer-voice/page.js"
+  "/game-trailer-voice/page": "app/game-trailer-voice/page.js",
+  "/david-attenborough-voice/page": "app/david-attenborough-voice/page.js",
+  "/santa-voice/page": "app/santa-voice/page.js",
+  "/football-commentator-voice/page": "app/football-commentator-voice/page.js",
+  "/movie-trailer-voice/page": "app/movie-trailer-voice/page.js"
 }
