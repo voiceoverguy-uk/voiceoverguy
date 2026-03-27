@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
+import VideoModal from '@/components/VideoModal';
 
 const videoTiles = [
   {
@@ -56,19 +57,6 @@ const videoTiles = [
 export default function VideoTilesGrid() {
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  const close = useCallback(() => setActiveId(null), []);
-
-  useEffect(() => {
-    if (!activeId) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') close(); };
-    document.addEventListener('keydown', onKey);
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = '';
-    };
-  }, [activeId, close]);
-
   return (
     <>
       <div className="video-grid">
@@ -102,32 +90,7 @@ export default function VideoTilesGrid() {
       </div>
 
       {activeId && (
-        <div
-          className="yt-modal-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Video player"
-          onClick={close}
-        >
-          <div className="yt-modal-inner" onClick={e => e.stopPropagation()}>
-            <button
-              type="button"
-              className="yt-modal-close"
-              aria-label="Close video"
-              onClick={close}
-            >
-              &times;
-            </button>
-            <div className="yt-modal-frame">
-              <iframe
-                src={`https://www.youtube.com/embed/${activeId}?autoplay=1&rel=0`}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
+        <VideoModal ytId={activeId} onClose={() => setActiveId(null)} />
       )}
     </>
   );
