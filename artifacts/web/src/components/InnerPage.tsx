@@ -57,15 +57,12 @@ function VimeoEmbed({ id }: { id: string }) {
   );
 }
 
-function AudioPlayer({ src, label }: { src: string; label?: string }) {
+function AudioPlayer({ src }: { src: string; label?: string }) {
   return (
     <div className="demo-player">
       <audio controls>
         <source src={src} type="audio/mpeg" />
       </audio>
-      <a href={src} download className="demo-download-btn">
-        {label || 'Download Sample MP3'}
-      </a>
     </div>
   );
 }
