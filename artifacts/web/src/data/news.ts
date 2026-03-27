@@ -19,6 +19,11 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("At The Farm Studio in London I became the voice of the National Mini Cooper Campaign. (audio soon)"),
+    ],
+  },
+  {
+    segments: [
       t("How is your breath? Need a freshen? You need the Breath CO Mouthwash! Oh, I voiced the ad! "),
       link("Check it out!", "https://www.youtube.com/watch?v=0zD403Bp3sc", true),
     ],
