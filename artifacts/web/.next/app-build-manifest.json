@@ -21,10 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/commercial-voiceover/page.js"
     ],
-    "/david-attenborough-voice/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/david-attenborough-voice/page.js"
+      "static/chunks/app/page.js"
     ]
   }
 }

@@ -5,7 +5,7 @@ import VideoModal from '@/components/VideoModal';
 
 const videoTiles = [
   {
-    img: '/assets/images/voiceoverguy-home-commercial-voice.jpg',
+    img: '/assets/images/voiceoverguy-home-commercial-voice.webp',
     titleOverlay: 'Commercial Voice',
     captionLine1: '',
     captionHighlight: 'Commercial',
@@ -13,7 +13,7 @@ const videoTiles = [
     ytId: '9bs4CJ4RixI',
   },
   {
-    img: '/assets/images/voiceoverguy-home-character-voices.jpg',
+    img: '/assets/images/voiceoverguy-home-character-voices.webp',
     titleOverlay: 'Character Voices',
     captionLine1: '',
     captionHighlight: 'Character',
@@ -21,7 +21,7 @@ const videoTiles = [
     ytId: 'Ad85PPvSfbc',
   },
   {
-    img: '/assets/images/voiceoverguy-home-apple-voice.jpg',
+    img: '/assets/images/voiceoverguy-home-apple-voice.webp',
     titleOverlay: 'The Apple Voice',
     captionLine1: 'That',
     captionHighlight: 'Apple',
@@ -29,7 +29,7 @@ const videoTiles = [
     ytId: 'uYDQObLc1vw',
   },
   {
-    img: '/assets/images/voiceoverguy-home-explainer-voices.jpg',
+    img: '/assets/images/voiceoverguy-home-explainer-voices.webp',
     titleOverlay: 'Explainer Voices',
     captionLine1: '',
     captionHighlight: 'Explainer',
@@ -37,7 +37,7 @@ const videoTiles = [
     ytId: 'TGD6Btk4twk',
   },
   {
-    img: '/assets/images/voiceoverguy-home-what-i-do.jpg',
+    img: '/assets/images/voiceoverguy-home-what-i-do.webp',
     titleOverlay: 'This is what I do...',
     captionLine1: 'Well? This is what',
     captionHighlight: 'i do',
@@ -45,7 +45,7 @@ const videoTiles = [
     ytId: 'TqkdBK8mBW8',
   },
   {
-    img: '/assets/images/voiceoverguy-home-voice-of-santa.jpg',
+    img: '/assets/images/voiceoverguy-home-voice-of-santa.webp',
     titleOverlay: 'Voice of Santa',
     captionLine1: 'Ho Ho Ho! The Voice of',
     captionHighlight: 'Santa',

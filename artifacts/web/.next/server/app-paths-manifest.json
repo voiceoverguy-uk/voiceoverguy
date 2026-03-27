@@ -1,4 +1,4 @@
 {
   "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
-  "/david-attenborough-voice/page": "app/david-attenborough-voice/page.js"
+  "/page": "app/page.js"
 }
