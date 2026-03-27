@@ -3,7 +3,45 @@
     { "source": "/FAQ", "destination": "/faq", "permanent": true },
     { "source": "/studiotour", "destination": "/voiceover-studio", "permanent": true },
     { "source": "/studiotour/", "destination": "/voiceover-studio", "permanent": true },
-    { "source": "/gameshow-host.php", "destination": "/gameshow-host", "permanent": true }
+    { "source": "/gameshow-host.php", "destination": "/gameshow-host", "permanent": true },
+
+    { "source": "/contact", "destination": "/contact-guy", "permanent": true },
+    { "source": "/contact/", "destination": "/contact-guy", "permanent": true },
+    { "source": "/who", "destination": "/voiceoverguy", "permanent": true },
+    { "source": "/who/", "destination": "/voiceoverguy", "permanent": true },
+    { "source": "/guy-harris-voiceover", "destination": "/voiceoverguy", "permanent": true },
+    { "source": "/guy-harris-voiceover/", "destination": "/voiceoverguy", "permanent": true },
+
+    { "source": "/studio-hire", "destination": "/voiceover-studio", "permanent": true },
+    { "source": "/studio-hire/", "destination": "/voiceover-studio", "permanent": true },
+
+    { "source": "/blog-wall", "destination": "/voiceover-news", "permanent": true },
+    { "source": "/blog-wall/", "destination": "/voiceover-news", "permanent": true },
+    { "source": "/voiceover-newslatest-voiceover-news/:path*", "destination": "/voiceover-news", "permanent": true },
+
+    { "source": "/play-to-the-whistle-football-commentator", "destination": "/football-commentator-voice", "permanent": true },
+    { "source": "/play-to-the-whistle-football-commentator/", "destination": "/football-commentator-voice", "permanent": true },
+
+    { "source": "/maskedsinger-voiceover", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/maskedsinger-voiceover/", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/arabella-harris-voiceover-kid", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/arabella-harris-voiceover-kid/", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/voiceover-baby", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/voiceover-baby/", "destination": "/character-voiceover", "permanent": true },
+
+    { "source": "/event-voice-of-god", "destination": "/voice-of-god", "permanent": true },
+    { "source": "/event-voice-of-god/", "destination": "/voice-of-god", "permanent": true },
+
+    { "source": "/nightmare-horror-adventures-spooky-voice", "destination": "/halloween-voice", "permanent": true },
+    { "source": "/nightmare-horror-adventures-spooky-voice/", "destination": "/halloween-voice", "permanent": true },
+    { "source": "/poundland-dracula-voice", "destination": "/halloween-voice", "permanent": true },
+    { "source": "/poundland-dracula-voice/", "destination": "/halloween-voice", "permanent": true },
+
+    { "source": "/experian-explainer-video", "destination": "/explainer-video-voice", "permanent": true },
+    { "source": "/experian-explainer-video/", "destination": "/explainer-video-voice", "permanent": true },
+
+    { "source": "/smoke-signal-voice", "destination": "/", "permanent": true },
+    { "source": "/smoke-signal-voice/", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
