@@ -2,7 +2,6 @@
   "/narration-voice/page": "app/narration-voice/page.js",
   "/explainer-video-voice/page": "app/explainer-video-voice/page.js",
   "/voice-of-god/page": "app/voice-of-god/page.js",
-  "/apple-voice-style/page": "app/apple-voice-style/page.js",
   "/movie-trailer-voice/page": "app/movie-trailer-voice/page.js",
   "/voiceover-imaging/page": "app/voiceover-imaging/page.js"
 }
