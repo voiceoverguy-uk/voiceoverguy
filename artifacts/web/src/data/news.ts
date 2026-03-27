@@ -19,6 +19,11 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("Listen out online for the Easter campaign for Peters Yard, Award winning sour dough crackers!"),
+    ],
+  },
+  {
+    segments: [
       t("At The Farm Studio in London I became the voice of the National Mini Cooper Campaign. (audio soon)"),
     ],
   },
