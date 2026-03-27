@@ -50,6 +50,8 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
 
     const messageParts = [
       'Enquiry Source: Voiceover Word Count Calculator',
+      `Name: ${name.trim()}`,
+      `Email: ${email.trim()}`,
       company.trim() ? `Company / Brand: ${company.trim()}` : '',
       formWords ? `Number of words: ${formWords}` : '',
       usage ? `Usage: ${usage}` : '',
