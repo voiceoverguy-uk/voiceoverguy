@@ -80,6 +80,31 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/football-commentator-voice/page.js"
+    ],
+    "/gameshow-host/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/gameshow-host/page.js"
+    ],
+    "/halloween-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/halloween-voice/page.js"
+    ],
+    "/character-voiceover/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/character-voiceover/page.js"
+    ],
+    "/pirate-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pirate-voice/page.js"
+    ],
+    "/pathe-news-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pathe-news-voice/page.js"
     ]
   }
 }

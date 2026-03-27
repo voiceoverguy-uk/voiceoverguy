@@ -1,4 +1,8 @@
 {
+  "app/gameshow-host/GameshowPlayer.tsx -> @/components/WaveSurferPlayer": {
+    "id": "app/gameshow-host/GameshowPlayer.tsx -> @/components/WaveSurferPlayer",
+    "files": []
+  },
   "components/WaveSurferPlayer.tsx -> wavesurfer.js": {
     "id": "components/WaveSurferPlayer.tsx -> wavesurfer.js",
     "files": [

@@ -3,7 +3,6 @@ import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
 import { SchemaScripts, breadcrumb, localBusiness, audioObject, videoObject, faqPage } from '@/lib/staticPageSchema';
-import HalloweenPlayer from './HalloweenPlayer';
 
 const data = (pages as Record<string, Record<string, string>>)['seo17'];
 
@@ -50,7 +49,7 @@ export default function Page() {
       )}
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="halloween-voice" formIntro="Looking for a spooky Halloween voice? Send me a quick message and I'll get back to you." sections={[
-        ...(data.s4 ? [{ text: data.s4, node: <HalloweenPlayer /> }] : []),
+        ...(data.s4 ? [{ text: data.s4, audioSrc: '/assets/audio/guy-harris-voiceoverguy-halloween-showreel.mp3' }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
