@@ -25,6 +25,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/voice-over-word-count-calculator/page.js"
+    ],
+    "/narration-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/narration-voice/page.js"
+    ],
+    "/contact-guy/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contact-guy/page.js"
+    ],
+    "/explainer-video-voice/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/explainer-video-voice/page.js"
     ]
   }
 }
