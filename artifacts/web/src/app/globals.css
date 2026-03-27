@@ -3182,7 +3182,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  align-items: start;
+  align-items: center;
   padding: 32px 0;
   border-bottom: 1px solid #e0e0e0;
 }
