@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/commercial-voiceover/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/commercial-voiceover/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,20 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/narration-voice/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/narration-voice/page.js"
+      "static/chunks/app/page.js"
     ],
-    "/apple-voice-style/page": [
+    "/character-voiceover/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/apple-voice-style/page.js"
+      "static/chunks/app/character-voiceover/page.js"
     ],
-    "/commercial-voiceover/page": [
+    "/gameshow-host/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/commercial-voiceover/page.js"
+      "static/chunks/app/gameshow-host/page.js"
     ]
   }
 }
