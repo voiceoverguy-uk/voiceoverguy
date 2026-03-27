@@ -16,8 +16,8 @@ function isHalloweenSeason(): boolean {
 export default function SeasonalHalloweenPlayer({ yr }: { yr: number }) {
   if (!isHalloweenSeason()) return null;
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16, maxWidth: 900, marginLeft: 'auto', marginRight: 'auto' }}>
-      <div className="showreel-player-item" style={{ width: 'calc((900px - 40px) / 3)' }}>
+    <div className="showreel-seasonal-wrap">
+      <div className="showreel-player-item">
         <WaveSurferPlayer
           src="/assets/audio/spooky-showreel-26-guy-harris.mp3"
           label={`<span class="text-red">Spooky Halloween</span> Voice ${yr}`}

@@ -1,5 +1,4 @@
 {
   "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
-  "/page": "app/page.js",
   "/voiceover-studio/page": "app/voiceover-studio/page.js"
 }

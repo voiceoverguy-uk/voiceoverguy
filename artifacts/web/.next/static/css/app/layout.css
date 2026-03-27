@@ -1392,6 +1392,19 @@ button.nav-link {
   font-weight: 600;
 }
 
+.showreel-seasonal-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.showreel-seasonal-wrap .showreel-player-item {
+  width: calc((900px - 40px) / 3);
+}
+
 /* ===== AUDIO PLAYER ===== */
 .audio-player-wrap {
   margin: 10px auto 20px;
