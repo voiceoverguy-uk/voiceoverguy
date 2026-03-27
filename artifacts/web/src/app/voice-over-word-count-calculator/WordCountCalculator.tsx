@@ -48,6 +48,9 @@ function calcSeconds(words: number, wpm: number): number {
   return (words / wpm) * 60;
 }
 
+const MIN_FEE = 150;
+const MAX_PRICE = 0.15;
+
 function InfoTooltip({ text }: { text: string }) {
   return (
     <span className="calc-tooltip-wrap">
@@ -77,11 +80,16 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
 
   const showPricing = wordCount >= 1000;
 
+  const effectiveMinPrice = wordCount >= 3500 ? 0.08 : 0.12;
+
   const priceNum = parseFloat(pricePerWord);
-  const estimatedCost =
-    showPricing && !isNaN(priceNum) && priceNum >= 0
-      ? new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(wordCount * priceNum)
-      : '';
+  const clampedPrice = isNaN(priceNum)
+    ? effectiveMinPrice
+    : Math.max(effectiveMinPrice, Math.min(MAX_PRICE, priceNum));
+  const rawCost = wordCount * clampedPrice;
+  const estimatedCost = showPricing
+    ? new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(Math.max(MIN_FEE, rawCost))
+    : '';
 
   const activeWpm = useCustom && customWpm
     ? Math.max(1, parseInt(customWpm, 10) || 0)
@@ -93,6 +101,23 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
   useEffect(() => {
     onWordCountChange?.(wordCount);
   }, [wordCount, onWordCountChange]);
+
+  // Auto-snap price up when word count drops below 3500 and price is below 12p
+  useEffect(() => {
+    const num = parseFloat(pricePerWord);
+    if (!isNaN(num) && num < effectiveMinPrice) {
+      setPricePerWord(effectiveMinPrice.toFixed(2));
+    }
+  }, [effectiveMinPrice]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const handlePriceBlur = useCallback(() => {
+    const num = parseFloat(pricePerWord);
+    if (isNaN(num) || num < effectiveMinPrice) {
+      setPricePerWord(effectiveMinPrice.toFixed(2));
+    } else if (num > MAX_PRICE) {
+      setPricePerWord(MAX_PRICE.toFixed(2));
+    }
+  }, [pricePerWord, effectiveMinPrice]);
 
   const handlePresetClick = useCallback((wpm: number) => {
     setSelectedWpm(wpm);
@@ -206,18 +231,20 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
             <div className={`calc-pricing-box${!showPricing ? ' calc-pricing-box--inactive' : ''}`}>
               <label className="calc-label" htmlFor="price-per-word">
                 Price per Word{' '}
-                <InfoTooltip text="Typical guide rate: 8p–15p per word depending on script length, usage and project type." />
+                <InfoTooltip text={`Guide rate: ${effectiveMinPrice * 100}p–15p per word. Rates below 12p apply for scripts over 3,500 words.`} />
               </label>
               <div className="calc-price-input-wrap">
                 <span className="calc-price-prefix">£</span>
                 <input
                   id="price-per-word"
                   type="number"
-                  min="0"
+                  min={effectiveMinPrice.toFixed(2)}
+                  max={MAX_PRICE.toFixed(2)}
                   step="0.01"
                   className="calc-number-input calc-price-input"
                   value={pricePerWord}
                   onChange={e => handlePriceChange(e.target.value)}
+                  onBlur={handlePriceBlur}
                   placeholder="0.12"
                   disabled={!showPricing}
                 />
@@ -227,7 +254,7 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
             <div className={`calc-pricing-box${!showPricing ? ' calc-pricing-box--inactive' : ''}`}>
               <label className="calc-label" htmlFor="estimated-cost">
                 Estimated Cost{' '}
-                <InfoTooltip text="Guide only. Final pricing may vary depending on usage, licensing and project details." />
+                <InfoTooltip text="Minimum fee £150. Guide only — final pricing may vary depending on usage, licensing and turnaround." />
               </label>
               <input
                 id="estimated-cost"
@@ -243,7 +270,7 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
 
           {showPricing && (
             <div className="calc-pricing-note">
-              <p>Short scripts are usually priced with a minimum booking fee, so this estimator is shown for scripts of 1000 words or more.</p>
+              <p>A minimum booking fee of £150 applies. The guide rate is 12p per word, reducing to 8p–12p for scripts over 3,500 words.</p>
               <p className="calc-pricing-note--subtle">Need an accurate quote? Usage, licensing and turnaround can affect the final price.</p>
             </div>
           )}
