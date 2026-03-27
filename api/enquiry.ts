@@ -44,8 +44,7 @@ function buildEnquiryEmail(data: {
       <!-- Header -->
       <tr>
         <td style="background:#9C060B;padding:28px 32px;text-align:center;">
-          <img src="https://www.voiceoverguy.co.uk/assets/images/voiceoverguy-email-banner.jpg" alt="VoiceoverGuy - Guy Harris Male Voiceover" width="200" style="display:block;margin:0 auto 12px;max-width:100%;height:auto;" />
-          <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.85);">New enquiry via <a href="https://www.voiceoverguy.co.uk" style="color:#ffffff;text-decoration:underline;">voiceoverguy.co.uk</a></p>
+          <img src="https://www.voiceoverguy.co.uk/assets/images/voiceoverguy-email-banner.jpg" alt="VoiceoverGuy - Guy Harris Male Voiceover" width="400" style="display:block;margin:0 auto;max-width:100%;height:auto;" />
         </td>
       </tr>
 
