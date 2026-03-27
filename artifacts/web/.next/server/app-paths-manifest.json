@@ -1,7 +1,7 @@
 {
-  "/gameshow-host/page": "app/gameshow-host/page.js",
+  "/halloween-voice/page": "app/halloween-voice/page.js",
   "/character-voiceover/page": "app/character-voiceover/page.js",
-  "/pirate-voice/page": "app/pirate-voice/page.js",
   "/pathe-news-voice/page": "app/pathe-news-voice/page.js",
-  "/halloween-voice/page": "app/halloween-voice/page.js"
+  "/football-commentator-voice/page": "app/football-commentator-voice/page.js",
+  "/pirate-voice/page": "app/pirate-voice/page.js"
 }
