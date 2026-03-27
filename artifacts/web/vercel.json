@@ -2,7 +2,8 @@
   "redirects": [
     { "source": "/FAQ", "destination": "/faq", "permanent": true },
     { "source": "/studiotour", "destination": "/voiceover-studio", "permanent": true },
-    { "source": "/studiotour/", "destination": "/voiceover-studio", "permanent": true }
+    { "source": "/studiotour/", "destination": "/voiceover-studio", "permanent": true },
+    { "source": "/gameshow-host.php", "destination": "/gameshow-host", "permanent": true }
   ],
   "headers": [
     {
