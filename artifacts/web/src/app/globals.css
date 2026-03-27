@@ -5293,6 +5293,15 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding-left: 26px !important;
 }
 
+.calc-pricing-box--inactive {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.calc-pricing-box--inactive .calc-label {
+  color: #999;
+}
+
 .calc-cost-display {
   background: #f7f7f7;
   color: #333;

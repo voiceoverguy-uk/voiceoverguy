@@ -182,8 +182,8 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
       <div className="calc-card">
         <div className="calc-input-section">
 
-          {/* Pricing row: word count always visible; price + cost appear at 1000+ */}
-          <div className={`calc-pricing-row${showPricing ? ' calc-pricing-row--expanded' : ''}`}>
+          {/* Pricing row: always visible; price + cost are greyed/disabled below 1000 words */}
+          <div className="calc-pricing-row calc-pricing-row--expanded">
             <div className="calc-pricing-box">
               <label className="calc-label" htmlFor="word-count-input">
                 Word count
@@ -203,44 +203,42 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
               />
             </div>
 
-            {showPricing && (
-              <>
-                <div className="calc-pricing-box">
-                  <label className="calc-label" htmlFor="price-per-word">
-                    Price per Word{' '}
-                    <InfoTooltip text="Typical guide rate: 8p–15p per word depending on script length, usage and project type." />
-                  </label>
-                  <div className="calc-price-input-wrap">
-                    <span className="calc-price-prefix">£</span>
-                    <input
-                      id="price-per-word"
-                      type="number"
-                      min="0"
-                      step="0.01"
-                      className="calc-number-input calc-price-input"
-                      value={pricePerWord}
-                      onChange={e => handlePriceChange(e.target.value)}
-                      placeholder="0.12"
-                    />
-                  </div>
-                </div>
+            <div className={`calc-pricing-box${!showPricing ? ' calc-pricing-box--inactive' : ''}`}>
+              <label className="calc-label" htmlFor="price-per-word">
+                Price per Word{' '}
+                <InfoTooltip text="Typical guide rate: 8p–15p per word depending on script length, usage and project type." />
+              </label>
+              <div className="calc-price-input-wrap">
+                <span className="calc-price-prefix">£</span>
+                <input
+                  id="price-per-word"
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  className="calc-number-input calc-price-input"
+                  value={pricePerWord}
+                  onChange={e => handlePriceChange(e.target.value)}
+                  placeholder="0.12"
+                  disabled={!showPricing}
+                />
+              </div>
+            </div>
 
-                <div className="calc-pricing-box">
-                  <label className="calc-label" htmlFor="estimated-cost">
-                    Estimated Cost{' '}
-                    <InfoTooltip text="Guide only. Final pricing may vary depending on usage, licensing and project details." />
-                  </label>
-                  <input
-                    id="estimated-cost"
-                    type="text"
-                    className="calc-number-input calc-cost-display"
-                    value={estimatedCost}
-                    readOnly
-                    placeholder="£0.00"
-                  />
-                </div>
-              </>
-            )}
+            <div className={`calc-pricing-box${!showPricing ? ' calc-pricing-box--inactive' : ''}`}>
+              <label className="calc-label" htmlFor="estimated-cost">
+                Estimated Cost{' '}
+                <InfoTooltip text="Guide only. Final pricing may vary depending on usage, licensing and project details." />
+              </label>
+              <input
+                id="estimated-cost"
+                type="text"
+                className="calc-number-input calc-cost-display"
+                value={estimatedCost}
+                readOnly
+                placeholder="—"
+                disabled={!showPricing}
+              />
+            </div>
           </div>
 
           {showPricing && (
