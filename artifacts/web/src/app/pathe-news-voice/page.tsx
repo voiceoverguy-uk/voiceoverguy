@@ -48,7 +48,7 @@ export default function Page() {
       )}
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="pathe-news-voice" formIntro="Looking for that classic Pathé-style delivery? Send me a quick message and I'll get back to you." sections={[
-        ...(data.s4 ? [{ text: data.s4 }] : []),
+        ...(data.s4 ? [{ text: data.s4, audioSrc: '/assets/audio/pathe-news-voice-guy-harris.mp3' }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
