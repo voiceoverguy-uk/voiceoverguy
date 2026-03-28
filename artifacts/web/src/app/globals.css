@@ -3873,7 +3873,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .form-side-img {
   flex: 0 0 280px;
   width: 280px;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .form-side-img img {
