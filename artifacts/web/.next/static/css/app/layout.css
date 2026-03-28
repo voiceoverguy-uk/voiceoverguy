@@ -3899,7 +3899,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .form-side-img {
   flex: 0 0 240px;
   width: 240px;
-  margin-top: 155px;
+  margin-top: 190px;
 }
 
 .form-side-img img {
