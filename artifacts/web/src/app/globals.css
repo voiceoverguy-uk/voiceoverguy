@@ -3882,7 +3882,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   height: auto;
   border-radius: 8px;
   border-left: 4px solid var(--red);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.75);
 }
 
 @media (max-width: 768px) {
