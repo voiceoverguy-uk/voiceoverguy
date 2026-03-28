@@ -3886,7 +3886,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 .form-side-wrap {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 40px;
 }
 
@@ -3898,7 +3898,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .form-side-img {
   flex: 0 0 280px;
   width: 280px;
-  margin-bottom: 62px;
+  margin-top: 50px;
 }
 
 .form-side-img img {
