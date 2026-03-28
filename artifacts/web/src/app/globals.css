@@ -5041,7 +5041,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Century Gothic', Arial, sans-serif;
   outline: none;
   transition: border-color 0.2s;
