@@ -3834,6 +3834,11 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding: 8px 8px 0;
 }
 
+.blog-post-img-card.img-half {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
 .blog-post-img-caption {
   padding: 10px 14px 12px;
   text-align: center;

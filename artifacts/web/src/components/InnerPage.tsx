@@ -9,6 +9,7 @@ interface Section {
   vimeoId?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imageClass?: string;
   fullWidth?: boolean;
   node?: React.ReactNode;
   audioSrc?: string;
@@ -103,7 +104,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: 
                   <VimeoEmbed id={left.vimeoId} />
                 )}
                 {left.imageSrc && (
-                  <div className="blog-post-img-card">
+                  <div className={`blog-post-img-card${left.imageClass ? ' ' + left.imageClass : ''}`}>
                     <img src={left.imageSrc} alt={left.imageAlt || ''} className="blog-post-img" />
                     {left.imageAlt && <p className="blog-post-img-caption">{left.imageAlt}</p>}
                   </div>
