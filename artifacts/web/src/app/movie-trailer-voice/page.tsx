@@ -55,8 +55,10 @@ export default function Page() {
         { youtubeId: data.s9 },
         { text: data.s12 },
         { youtubeId: data.s11 },
-        { imageSrc: '/assets/images/movie-trailer-voice-og-card.webp', imageAlt: 'Movie Trailer Voice \u2013 VoiceoverGuy', imageClass: 'img-half' },
-      ]} />
+      ]}
+      formSideImage="/assets/images/movie-trailer-voice-og-card.webp"
+      formSideImageAlt="Movie Trailer Voice – VoiceoverGuy"
+      />
       <SchemaScripts schemas={schemas} />
     </main>
   );

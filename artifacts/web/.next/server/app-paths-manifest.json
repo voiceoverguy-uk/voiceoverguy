@@ -1,4 +1,5 @@
 {
   "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
+  "/santa-voice/page": "app/santa-voice/page.js",
   "/movie-trailer-voice/page": "app/movie-trailer-voice/page.js"
 }

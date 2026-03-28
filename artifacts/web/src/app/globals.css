@@ -3839,6 +3839,44 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin: 0 auto;
 }
 
+.form-side-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.form-side-form {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.form-side-img {
+  flex: 0 0 280px;
+  width: 280px;
+  padding-top: 24px;
+}
+
+.form-side-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border-left: 4px solid var(--red);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .form-side-wrap {
+    flex-direction: column;
+  }
+  .form-side-img {
+    flex: unset;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+}
+
 .blog-post-img-caption {
   padding: 10px 14px 12px;
   text-align: center;

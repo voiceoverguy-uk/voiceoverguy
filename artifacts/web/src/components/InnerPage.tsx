@@ -21,6 +21,8 @@ interface InnerPageProps {
   pageTitle?: string;
   pageSlug?: string;
   formIntro?: string;
+  formSideImage?: string;
+  formSideImageAlt?: string;
 }
 
 function isYouTubeId(str: string): boolean {
@@ -67,7 +69,7 @@ function AudioPlayer({ src }: { src: string; label?: string }) {
   );
 }
 
-export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: InnerPageProps) {
+export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, formSideImage, formSideImageAlt }: InnerPageProps) {
   const pairs: Array<[Section, Section | null]> = [];
   let i = 0;
 
@@ -158,11 +160,20 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro }: 
         })}
 
         {pageTitle && pageSlug && (
-          <BlogEnquiryForm
-            pageTitle={pageTitle}
-            pageUrl={`https://www.voiceoverguy.co.uk/${pageSlug}`}
-            intro={formIntro}
-          />
+          <div className={formSideImage ? 'form-side-wrap' : undefined}>
+            <div className={formSideImage ? 'form-side-form' : undefined}>
+              <BlogEnquiryForm
+                pageTitle={pageTitle}
+                pageUrl={`https://www.voiceoverguy.co.uk/${pageSlug}`}
+                intro={formIntro}
+              />
+            </div>
+            {formSideImage && (
+              <div className="form-side-img">
+                <img src={formSideImage} alt={formSideImageAlt || ''} />
+              </div>
+            )}
+          </div>
         )}
       </div>
     </div>
