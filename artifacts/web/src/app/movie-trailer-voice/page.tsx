@@ -49,12 +49,13 @@ export default function Page() {
       <InnerPage pageTitle={data.s1} pageSlug="movie-trailer-voice" formIntro="Looking for that deep movie trailer voice? Send me a quick message and I'll get back to you." sections={[
         { text: data.s4, audioSrc: '/assets/audio/the-movie-trailer-voice-guy-harris.mp3' },
         { youtubeId: data.s7 },
-        { youtubeId: data.s8 },
         { text: data.s6 },
+        { youtubeId: data.s8 },
         { youtubeId: data.s9 },
-        { imageSrc: '/assets/images/movie-trailer-voice-og.webp', imageAlt: 'Movie Trailer Voice \u2013 Guy Harris' },
+        { text: data.s13 },
         { text: data.s12 },
         { youtubeId: data.s11 },
+        { imageSrc: '/assets/images/movie-trailer-voice-og.webp', imageAlt: 'Movie Trailer Voice \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
     </main>

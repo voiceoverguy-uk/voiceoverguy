@@ -1,5 +1,4 @@
 {
   "/commercial-voiceover/page": "app/commercial-voiceover/page.js",
-  "/football-commentator-voice/page": "app/football-commentator-voice/page.js",
-  "/david-attenborough-voice/page": "app/david-attenborough-voice/page.js"
+  "/movie-trailer-voice/page": "app/movie-trailer-voice/page.js"
 }

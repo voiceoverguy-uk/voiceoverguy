@@ -21,15 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/commercial-voiceover/page.js"
     ],
-    "/football-commentator-voice/page": [
+    "/movie-trailer-voice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/football-commentator-voice/page.js"
-    ],
-    "/david-attenborough-voice/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/david-attenborough-voice/page.js"
+      "static/chunks/app/movie-trailer-voice/page.js"
     ]
   }
 }
