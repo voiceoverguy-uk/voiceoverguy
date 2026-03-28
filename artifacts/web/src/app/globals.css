@@ -3868,12 +3868,13 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 .form-side-form {
   flex: 1 1 0;
   min-width: 0;
+  max-width: 560px;
 }
 
 .form-side-img {
-  flex: 0 0 280px;
-  width: 280px;
-  margin-top: 120px;
+  flex: 0 0 240px;
+  width: 240px;
+  margin-top: 155px;
 }
 
 .form-side-img img {
