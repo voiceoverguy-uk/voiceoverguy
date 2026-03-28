@@ -3886,7 +3886,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 .form-side-wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 40px;
 }
 
