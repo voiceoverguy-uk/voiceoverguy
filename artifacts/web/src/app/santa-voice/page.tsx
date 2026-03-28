@@ -53,11 +53,11 @@ export default function Page() {
       <div className="inner-bar" />
       <InnerPage pageTitle={data.s1} pageSlug="santa-voice" formIntro="Looking for a believable Santa voice? Send me a quick message and I'll get back to you." sections={[
         ...(data.s4 ? [{ text: data.s4, audioSrc: '/assets/audio/santa-voice-showreel-2025-guy-harris.mp3' }] : []),
-        ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
+        ...(data.s7 ? [{ youtubeId: data.s7, youtubePoster: '/assets/images/santa-voice-youtube-thumb.jpg' }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
-        ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
+        ...(data.s8 ? [{ youtubeId: data.s8, youtubePoster: '/assets/images/cbeebies-santa-youtube-thumb.jpg' }] : []),
         ...(data.s6 ? [{ text: data.s6 }] : []),
-        { imageSrc: '/assets/images/santa-voice-guy-harris.webp', imageAlt: 'Santa Voice \u2013 Guy Harris' },
+        { imageSrc: '/assets/images/santa-voice-brands.jpg', imageAlt: 'Santa Voice \u2013 Guy Harris' },
       ]} />
       <section className="generator-promo">
         <div className="container">

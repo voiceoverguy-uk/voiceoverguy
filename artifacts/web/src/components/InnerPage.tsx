@@ -2,10 +2,12 @@ import React from 'react';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 interface Section {
   text?: string;
   youtubeId?: string;
+  youtubePoster?: string;
   vimeoId?: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -34,19 +36,6 @@ function isVimeoId(str: string): boolean {
   return /^\d{7,10}$/.test((str || '').trim());
 }
 
-function YouTubeEmbed({ id }: { id: string }) {
-  const cleanId = id.replace(/\/.*$/, '').trim();
-  return (
-    <div className="embed-wrap">
-      <iframe
-        src={`https://www.youtube.com/embed/${cleanId}`}
-        title="YouTube video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </div>
-  );
-}
 
 function VimeoEmbed({ id }: { id: string }) {
   return (
@@ -100,7 +89,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, fo
                 )}
                 {left.audioSrc && <AudioPlayer src={left.audioSrc} label={left.downloadLabel} />}
                 {left.youtubeId && isYouTubeId(left.youtubeId) && (
-                  <YouTubeEmbed id={left.youtubeId} />
+                  <YouTubeEmbed id={left.youtubeId} poster={left.youtubePoster} />
                 )}
                 {left.vimeoId && isVimeoId(left.vimeoId) && (
                   <VimeoEmbed id={left.vimeoId} />
@@ -125,7 +114,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, fo
                 )}
                 {left.audioSrc && <AudioPlayer src={left.audioSrc} label={left.downloadLabel} />}
                 {left.youtubeId && isYouTubeId(left.youtubeId) && (
-                  <YouTubeEmbed id={left.youtubeId} />
+                  <YouTubeEmbed id={left.youtubeId} poster={left.youtubePoster} />
                 )}
                 {left.vimeoId && isVimeoId(left.vimeoId) && (
                   <VimeoEmbed id={left.vimeoId} />
@@ -143,7 +132,7 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, fo
                   <div dangerouslySetInnerHTML={{ __html: normaliseHtml(right.text) }} />
                 )}
                 {right.youtubeId && isYouTubeId(right.youtubeId) && (
-                  <YouTubeEmbed id={right.youtubeId} />
+                  <YouTubeEmbed id={right.youtubeId} poster={right.youtubePoster} />
                 )}
                 {right.vimeoId && isVimeoId(right.vimeoId) && (
                   <VimeoEmbed id={right.vimeoId} />

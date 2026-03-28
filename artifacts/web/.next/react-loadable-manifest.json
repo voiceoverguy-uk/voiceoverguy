@@ -1,4 +1,8 @@
 {
+  "components/SeasonalHalloweenPlayer.tsx -> @/components/WaveSurferPlayer": {
+    "id": "components/SeasonalHalloweenPlayer.tsx -> @/components/WaveSurferPlayer",
+    "files": []
+  },
   "components/WaveSurferPlayer.tsx -> wavesurfer.js": {
     "id": "components/WaveSurferPlayer.tsx -> wavesurfer.js",
     "files": [
