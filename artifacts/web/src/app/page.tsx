@@ -69,6 +69,7 @@ const clientLogos = [
   { src: '/assets/images/clients/voiceoverguy-clients-the-range.png', alt: 'The Range' },
   { src: '/assets/images/clients/voiceoverguy-clients-cbeebies.png', alt: 'CBeebies' },
   { src: '/assets/images/clients/voiceoverguy-clients-p-and-o.png', alt: 'P&O' },
+  { src: '/assets/images/clients/voiceoverguy-clients-snowdome.png', alt: 'SnowDome' },
 ];
 
 export default function Home() {
