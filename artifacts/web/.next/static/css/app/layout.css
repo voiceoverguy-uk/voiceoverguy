@@ -1758,6 +1758,25 @@ audio {
   opacity: 1;
 }
 
+/* ── Inline video swap (replaces thumbnail in-card) ── */
+.video-inline-frame {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-inline-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ── YouTube Lightbox Modal ─────────────────────────── */
 .yt-modal-overlay {
   position: fixed;

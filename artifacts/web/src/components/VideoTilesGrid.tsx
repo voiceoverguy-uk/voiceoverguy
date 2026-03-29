@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import VideoModal from '@/components/VideoModal';
 
 const videoTiles = [
   {
@@ -55,18 +54,27 @@ const videoTiles = [
 ];
 
 export default function VideoTilesGrid() {
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [playingId, setPlayingId] = useState<string | null>(null);
 
   return (
-    <>
-      <div className="video-grid">
-        {videoTiles.map(v => (
-          <div key={v.ytId} className="video-tile-card">
+    <div className="video-grid">
+      {videoTiles.map(v => (
+        <div key={v.ytId} className="video-tile-card">
+          {playingId === v.ytId ? (
+            <div className="video-inline-frame">
+              <iframe
+                src={`https://www.youtube.com/embed/${v.ytId}?autoplay=1&rel=0`}
+                title={v.titleOverlay}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          ) : (
             <button
               type="button"
               className="video-thumb"
               aria-label={`Play ${v.titleOverlay}`}
-              onClick={() => setActiveId(v.ytId)}
+              onClick={() => setPlayingId(v.ytId)}
             >
               <img
                 src={v.img}
@@ -82,16 +90,12 @@ export default function VideoTilesGrid() {
                 </svg>
               </div>
             </button>
-            <div className="video-caption">
-              <p>{v.captionLine1} <span className="text-red">{v.captionHighlight}</span> {v.captionLine1End}</p>
-            </div>
+          )}
+          <div className="video-caption">
+            <p>{v.captionLine1} <span className="text-red">{v.captionHighlight}</span> {v.captionLine1End}</p>
           </div>
-        ))}
-      </div>
-
-      {activeId && (
-        <VideoModal ytId={activeId} onClose={() => setActiveId(null)} />
-      )}
-    </>
+        </div>
+      ))}
+    </div>
   );
 }
