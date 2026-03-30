@@ -145,4 +145,10 @@ export const testimonials: Testimonial[] = [
     role: "Producer and English speaking Norwegian Voice artist",
     company: "",
   },
+  {
+    quote: "Guy has been a voiceover artist and Mansfield 103.2's station voice for around 20 years and is a sheer delight to work with - always reliable, with quick delivery, spot on with his reads, we wouldn't hesitate in recommending him.",
+    name: "Jason Harrison",
+    role: "Producer/Presenter",
+    company: "Mansfield 103.2",
+  },
 ];
