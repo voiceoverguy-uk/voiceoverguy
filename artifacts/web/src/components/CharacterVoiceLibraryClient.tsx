@@ -83,7 +83,7 @@ export default function CharacterVoiceLibraryClient() {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="cvl-no-results">No voices found for &ldquo;{query}&rdquo; -- try a different search term.</p>
+        <p className="cvl-no-results">No matching demo found for &ldquo;{query}&rdquo; -- try a different search term.</p>
       ) : (
         <div className="cvl-grid">
           {filtered.map(entry => {

@@ -43,7 +43,7 @@ export default function Page() {
       <section className="inner-hero">
         <div className="inner-container">
           <h1>Character Voice Library</h1>
-          <p>Listen to individual character voices from Guy Harris. Use the search below to find the style you need.</p>
+          <p>Browse a growing library of character voice demos, impressions, comedy styles and larger-than-life reads from British voice artist Guy Harris.</p>
         </div>
       </section>
       <div className="inner-bar" />
