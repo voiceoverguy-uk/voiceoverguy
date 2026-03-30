@@ -71,6 +71,13 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
   },
   {
+    id: 'pantomime-dame',
+    title: 'Pantomime Dame',
+    description: 'A classic camp male pantomime dame voice with big festive energy and plenty of character. Perfect for Christmas shows, theatre promos, seasonal events and larger-than-life comedy reads.',
+    mp3: '/assets/audio/pantomime-dame-guy-harris.mp3',
+    aliases: ['panto dame', 'festive camp voice', 'pantomime', 'panto', 'dame', 'christmas', 'festive', 'theatre'],
+  },
+  {
     id: 'cockney-voice-morrisons',
     title: 'Cockney Voice',
     description: 'Cheeky, fun Cockney-style voice used for the Morrisons Wonky Range. Full of character and ideal for playful commercials, comedy reads and down-to-earth British promo work.',
