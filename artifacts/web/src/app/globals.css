@@ -389,6 +389,9 @@ button.nav-link {
   .nav-item:hover .dropdown-menu {
     display: block;
   }
+  .dropdown-menu--wide {
+    min-width: 300px;
+  }
 }
 
 .dropdown-menu li a {

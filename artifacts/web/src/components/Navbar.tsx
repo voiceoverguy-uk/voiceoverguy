@@ -193,7 +193,7 @@ export default function Navbar() {
               >
                 <span className="nav-icon">👤</span>&nbsp;<span className="label-full">Character Demos</span><span className="label-short">Characters</span>&nbsp;<span className="chevron">▾</span>
               </button>
-              <ul className="dropdown-menu" role="menu">
+              <ul className="dropdown-menu dropdown-menu--wide" role="menu">
                 {characterDemos.map(item => (
                   <li key={item.href} role="none">
                     <Link href={item.href} role="menuitem">{item.label}</Link>
