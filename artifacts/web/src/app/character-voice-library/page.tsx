@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     title: 'Character Voice Library | Guy Harris – VoiceoverGuy',
     description: 'Browse Guy Harris\'s character voice library. Listen to individual voice demos including serious male, animated family film promo, and comedic character styles.',
     url: 'https://www.voiceoverguy.co.uk/character-voice-library',
-    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp', width: 1200, height: 630, alt: 'Character Voice Library – Guy Harris' }],
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-character-voice-library.webp', width: 1200, height: 630, alt: 'Character Voice Library – Guy Harris' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Character Voice Library | Guy Harris – VoiceoverGuy',
     description: 'Browse Guy Harris\'s character voice library. Listen to individual voice demos including serious male, animated family film promo, and comedic character styles.',
-    images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-character-voice-library.webp'],
   },
 };
 
