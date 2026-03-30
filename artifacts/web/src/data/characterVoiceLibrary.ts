@@ -42,4 +42,11 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     mp3: '/assets/audio/tom-baker-voice.mp3',
     aliases: ['doctor who style', 'retro sci fi', 'tom baker', 'doctor who', 'british sci-fi', 'retro', 'dramatic'],
   },
+  {
+    id: 'cheesy-american-tv-announcer',
+    title: 'Cheesy American TV Announcer',
+    description: 'Big, bold American TV announcer style with that classic over-the-top game show energy. Ideal for parody, spoof promos, retro TV and comedy commercials.',
+    mp3: '/assets/audio/cheesey-american-tv-announcer.mp3',
+    aliases: ['game show announcer', 'american promo voice', 'american', 'game show', 'tv announcer', 'retro tv', 'comedy'],
+  },
 ];
