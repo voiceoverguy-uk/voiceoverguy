@@ -60,11 +60,14 @@ export default function CharacterVoiceLibraryClient() {
     }
   }, [urlSearch]);
 
+  const sorted = [...characterVoiceLibrary].sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div className="cvl-wrapper">
       <div className="cvl-grid">
-        {characterVoiceLibrary.map((entry, idx) => {
-          const isBestMatch = urlSearch.length > 0 && idx === bestMatchIdx;
+        {sorted.map((entry) => {
+          const origIdx = characterVoiceLibrary.indexOf(entry);
+          const isBestMatch = urlSearch.length > 0 && origIdx === bestMatchIdx;
           return (
             <div
               key={entry.id}
