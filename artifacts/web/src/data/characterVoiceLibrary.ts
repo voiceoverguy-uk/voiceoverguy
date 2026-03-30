@@ -82,14 +82,14 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     title: 'Mad Scientist Voice',
     description: 'A fast-talking, eccentric mad scientist voice with manic energy and retro sci-fi charm, ideal for parody, homage and theatrical promo work.',
     mp3: '/assets/audio/doc-brown-back-to-the-future.mp3',
-    aliases: ['doc brown', 'back to the future', 'christopher lloyd', 'eccentric', 'sci-fi', 'mad scientist'],
+    aliases: ['doc brown voice', 'back to the future style', 'doc brown', 'back to the future', 'christopher lloyd', 'eccentric', 'sci-fi', 'mad scientist'],
   },
   {
     id: 'renton-trainspotting',
     title: 'Gritty Scottish Character Voice',
     description: 'A sharp, edgy Scottish character voice with attitude and grit, ideal for parody, homage and darker comedy reads.',
     mp3: '/assets/audio/renton-trainspotting-guy-harris.mp3',
-    aliases: ['renton', 'trainspotting', 'scottish', 'ewan mcgregor', 'parody', 'gritty'],
+    aliases: ['renton voice', 'trainspotting style', 'renton', 'trainspotting', 'scottish', 'ewan mcgregor', 'parody', 'gritty'],
   },
   {
     id: 'super-hero-voice-comic-con',
@@ -124,6 +124,6 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     title: 'Wacky Comedy Male Voice',
     description: 'A bright, playful male character voice with energetic comedy appeal, ideal for games, toy brands, promos and fun commercial reads.',
     mp3: '/assets/audio/linkee-wacky-male-voice.mp3',
-    aliases: ['linkee', 'wacky game voice', 'wacky', 'game voice', 'toy brand', 'playful', 'comedy'],
+    aliases: ['linkee voice', 'wacky game voice', 'linkee', 'wacky', 'game voice', 'toy brand', 'playful', 'comedy'],
   },
 ];
