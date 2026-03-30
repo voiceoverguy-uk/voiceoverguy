@@ -71,6 +71,20 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
   },
   {
+    id: 'knight-rider-intro',
+    title: 'Knight Rider Intro',
+    description: 'Inspired by the iconic Knight Rider intro from the 1980s, this dramatic American-style narration pays tribute to the famous opening made memorable by Richard Basehart. Ideal for parody, retro promos and classic TV-style voice work.',
+    mp3: '/assets/audio/knight-rider-voice.mp3',
+    aliases: ['knight rider voice', 'retro tv intro', 'knight rider', 'richard basehart', 'retro', '1980s', 'american narration'],
+  },
+  {
+    id: 'doc-brown-back-to-the-future',
+    title: 'Doc Brown Back to the Future',
+    description: 'Inspired by the eccentric scientist from Back to the Future (1985), originally portrayed by Christopher Lloyd, this is that wild-eyed, fast-talking voice full of manic energy and retro sci-fi charm. Ideal for parody, homage and theatre promo work.',
+    mp3: '/assets/audio/doc-brown-back-to-the-future.mp3',
+    aliases: ['doc brown voice', 'back to the future style', 'doc brown', 'back to the future', 'christopher lloyd', 'eccentric', 'sci-fi'],
+  },
+  {
     id: 'renton-trainspotting',
     title: 'Renton from Trainspotting',
     description: 'Inspired by the iconic 1996 film, this is a take on the lead character Renton, originally played by Ewan McGregor. Sharp, edgy and full of attitude, ideal for parody, homage and gritty Scottish character work.',
