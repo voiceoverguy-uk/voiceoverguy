@@ -1,0 +1,154 @@
+Please refine the /character-voice-library page with a first-pass content and UX cleanup.
+
+Main goals
+- Remove the on-page search/filter input and related banner/no-results logic
+- Keep the main site-wide search as the only search tool
+- Make all card titles and descriptions cleaner, more consistent and more searchable
+- Use searchable style titles rather than project-specific or copyright-heavy titles
+- Keep the page looking polished, simple and browseable
+
+What to change
+
+1) Remove the on-page filter UI
+Please remove:
+- the page-specific search/filter input
+- any “Showing result for…” banner on the page
+- any no-results message tied to the page-level filter
+- any filtering logic that hides cards on the page itself
+
+Keep:
+- the full library grid of cards visible on the page
+- global site search integration already added in the header/main search
+- if someone lands on /character-voice-library?search=term from the global search, it is fine to optionally auto-scroll and subtly highlight the best matching card, but do not show a second search box on the page
+
+2) Keep global search integration
+Do not remove the existing global search integration.
+The main site search should still be able to match character library entries and send users to:
+- /character-voice-library?search=<encoded term>
+
+If a search parameter is present, it is acceptable to:
+- auto-scroll to the first best match
+- subtly highlight that matching card
+
+But do not show extra page-level search UI.
+
+3) Standardise the page intro area
+Keep the main heading:
+- Character Voice Library
+
+Refine the intro copy to:
+- Browse a growing library of character voice demos, comedy styles, impressions and larger-than-life reads from British voice artist Guy Harris.
+
+Replace the secondary grey info box text with:
+- Use the main search bar above to jump to a specific voice style, or simply browse the library below and press play to hear each demo.
+
+4) Refine titles and descriptions across the cards
+Important rule:
+- use a clean, searchable style title for each card
+- keep the description concise, natural and useful
+- avoid clunky project-specific headings
+- if a real project or recognisable reference is useful, mention it in the description, not the title
+- avoid overly direct copyrighted character naming in titles where possible
+- keep tone consistent across the library
+
+Please update the existing entries to use this cleaner first-pass naming approach.
+
+Use this style:
+- title = broad searchable style
+- description = 1–2 tidy sentences max, natural, helpful, no waffle
+
+Please update these examples specifically:
+
+Serious Male Voice
+Description:
+A deep, authoritative male voice in a punchy radio imaging style, ideal for promos, station branding and bold commercial reads.
+
+Animated Family Film Promo Voice
+Description:
+A warm, playful promo voice with bright, family-friendly energy, ideal for animated film campaigns, trailers and upbeat commercial work.
+
+Camp Male Caesar Voice
+Description:
+A flamboyant Roman comedy voice with a theatrical, camp feel, ideal for parody, character reads and larger-than-life performances.
+
+Super Hero Voice
+Description:
+A bold, dramatic superhero-style voice with blockbuster energy, ideal for comic events, trailers, promos and action-led character reads.
+
+Pantomime Dame Voice
+Description:
+A classic camp pantomime dame voice full of festive energy and character, ideal for theatre promos, seasonal events and comedy reads.
+
+Cockney Character Voice
+Description:
+A cheeky Cockney-style character voice with playful British charm, ideal for commercials, comedy scripts and down-to-earth promo work.
+
+Evil Villain Voice
+Description:
+A twisted, theatrical villain voice with a sinister comedic edge, ideal for Halloween promos, spooky events and over-the-top character work.
+
+Wacky Comedy Male Voice
+Description:
+A bright, playful male character voice with energetic comedy appeal, ideal for games, toy brands, promos and fun commercial reads.
+
+American Hillbilly Voice
+Description:
+A funny Southern American hillbilly-style voice with a Texas flavour, ideal for parody, cartoon roles, novelty ads and comedy characters.
+
+Retro Sci-Fi Narrator Voice
+Description:
+A rich, dramatic retro sci-fi voice with classic British energy, ideal for parody, homage and vintage-style character work.
+
+Cheesy American TV Announcer
+Description:
+A big, bold American announcer voice with over-the-top game show energy, ideal for spoof promos, retro TV and comedy commercials.
+
+Dracula Comedy Voice
+Description:
+A playful Dracula-style voice with a theatrical spooky edge, ideal for Halloween promos, parody scripts and comic villain reads.
+
+Camp Australian Character Voice
+Description:
+A bold, lively Australian-style character voice with flamboyant comedy energy, ideal for theatre-style promos and larger-than-life reads.
+
+Character Voice Montage
+Description:
+A mixed montage of short character snippets showcasing versatility, vocal range and a variety of distinct performance styles.
+
+Knight Rider Style Intro Voice
+Description:
+A dramatic 1980s-style American narration voice inspired by classic TV intros, ideal for parody, retro promos and cinematic voiceover.
+
+Mad Scientist Voice
+Description:
+A fast-talking, eccentric mad scientist voice with manic energy and retro sci-fi charm, ideal for parody, homage and theatrical promo work.
+
+Gritty Scottish Character Voice
+Description:
+A sharp, edgy Scottish character voice with attitude and grit, ideal for parody, homage and darker comedy reads.
+
+5) Data cleanup rules for all remaining/future entries
+Please apply these rules to the character voice library data structure and content:
+- titles should be concise, readable and searchable
+- descriptions should usually be 1 sentence, occasionally 2 short sentences max
+- avoid titles beginning with “Voice for [client/project]”
+- avoid unnecessary brand/client names in titles
+- keep brand or project references in descriptions or aliases only when genuinely useful
+- preserve aliases/search terms in the data so global search still works well
+
+6) Styling/layout
+Do not redesign the page.
+Keep:
+- the current card layout
+- the current audio players
+- the overall visual style
+
+Only make small tidy improvements if needed for spacing after the page-level search box is removed.
+
+7) Important implementation note
+Please keep the data-driven structure intact so future entries can still be added easily via the character voice library data file.
+
+After making the changes, confirm:
+- the on-page search/filter UI has been removed
+- the global search still links into the page correctly
+- the updated titles/descriptions now follow the new naming style
