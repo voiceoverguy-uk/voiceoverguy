@@ -203,7 +203,7 @@ function searchItems(query: string): SearchResult[] {
       results.push({
         type: 'character-library',
         label: entry.title,
-        href: `/character-voice-library?search=${encodeURIComponent(entry.title)}`,
+        href: `/character-voice-library?search=${encodeURIComponent(q)}`,
         relevance: titleMatch ? 3 : aliasMatch ? 2 : 1,
       });
     }

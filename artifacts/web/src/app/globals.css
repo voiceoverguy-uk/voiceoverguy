@@ -5910,6 +5910,16 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin-top: 8px;
 }
 
+.cvl-url-banner {
+  font-size: 14px;
+  color: var(--grey-dark);
+  margin-bottom: 16px;
+}
+
+.cvl-url-banner strong {
+  color: var(--red);
+}
+
 .cvl-loading {
   font-size: 14px;
   color: var(--grey-dark);
