@@ -254,6 +254,23 @@ const ToolIcon = () => (
   </svg>
 );
 
+const CharacterLibraryIcon = () => (
+  <svg viewBox="0 0 48 32" width="48" height="32" xmlns="http://www.w3.org/2000/svg" className="live-search-cvl-icon">
+    <rect width="48" height="32" fill="#ffffff" rx="3" />
+    <rect width="48" height="32" fill="none" stroke="#9C060B" strokeWidth="1.5" rx="3" />
+    <text
+      x="24"
+      y="22"
+      textAnchor="middle"
+      fontFamily="'Century Gothic', Arial, sans-serif"
+      fontWeight="700"
+      fontSize="15"
+      fill="#9C060B"
+      letterSpacing="1"
+    >VL</text>
+  </svg>
+);
+
 function renderThumb(result: SearchResult) {
   if (result.thumbnail) {
     return (
@@ -274,7 +291,15 @@ function renderThumb(result: SearchResult) {
     );
   }
 
-  if (result.type === 'character-demo' || result.type === 'character-library') {
+  if (result.type === 'character-library') {
+    return (
+      <div className="live-search-icon-wrap live-search-icon-character-library">
+        <CharacterLibraryIcon />
+      </div>
+    );
+  }
+
+  if (result.type === 'character-demo') {
     return (
       <div className="live-search-icon-wrap live-search-icon-character-demo">
         <PersonIcon />

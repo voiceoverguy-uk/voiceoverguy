@@ -735,6 +735,14 @@ button.nav-link {
   color: #fff;
 }
 
+.live-search-icon-character-library {
+  background: transparent;
+}
+
+.live-search-cvl-icon {
+  display: block;
+}
+
 .live-search-item-active .live-search-link,
 .live-search-item-active > .live-search-link {
   background: #f0f0f0;
