@@ -70,4 +70,11 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     mp3: '/assets/audio/random-character-montage.mp3',
     aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
   },
+  {
+    id: 'wacky-male-voice-linkee',
+    title: 'Wacky Male Voice for Linkee',
+    description: 'Fun, wacky male voice created for the game Linkee. Bright, playful and full of character, ideal for games, toy brands, comedy reads and energetic promos.',
+    mp3: '/assets/audio/linkee-wacky-male-voice.mp3',
+    aliases: ['linkee voice', 'wacky game voice', 'linkee', 'wacky', 'game voice', 'toy brand', 'playful'],
+  },
 ];
