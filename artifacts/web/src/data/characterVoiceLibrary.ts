@@ -49,4 +49,25 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     mp3: '/assets/audio/cheesey-american-tv-announcer.mp3',
     aliases: ['game show announcer', 'american promo voice', 'american', 'game show', 'tv announcer', 'retro tv', 'comedy'],
   },
+  {
+    id: 'dracula-voice-dairyland',
+    title: 'Dracula Voice for Dairyland',
+    description: 'Count Dracula-style voice with a playful, theatrical edge. Great for spooky comedy, Halloween promos, parody scripts and larger-than-life character reads.',
+    mp3: '/assets/audio/dairyland-dracula-voice.mp3',
+    aliases: ['count dracula', 'spooky vampire', 'dracula', 'vampire', 'halloween', 'spooky', 'horror comedy'],
+  },
+  {
+    id: 'camp-australian-male',
+    title: 'Camp Australian Male',
+    description: 'Camp Australian male voice created for Priscilla Queen of the Desert. Bold, lively and full of personality, ideal for theatre-style promos, comedy and flamboyant character work.',
+    mp3: '/assets/audio/priscilla-camp-aussie.mp3',
+    aliases: ['priscilla style', 'camp australian', 'priscilla', 'australian', 'aussie', 'camp', 'theatrical'],
+  },
+  {
+    id: 'random-character-montage',
+    title: 'Random Character Montage',
+    description: 'A mixed montage of short story snippets performed in a range of different character voices. Slightly odd in the best way, but a strong showcase of versatility and vocal range.',
+    mp3: '/assets/audio/random-character-montage.mp3',
+    aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
+  },
 ];
