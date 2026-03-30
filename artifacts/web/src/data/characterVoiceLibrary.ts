@@ -28,4 +28,18 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     mp3: '/assets/audio/monty-python-camp-caesar-voice.mp3',
     aliases: ['monty python', 'roman', 'centurion', 'comedy', 'theatrical', 'camp', 'funny', 'silly'],
   },
+  {
+    id: 'american-hillbilly-voice',
+    title: 'American Hillbilly Voice',
+    description: 'Funny Southern American hillbilly-style voice with a Texas flavour. Great for comedy characters, parody, cartoon roles and novelty ads.',
+    mp3: '/assets/audio/southern-american-hillbilly-voice.mp3',
+    aliases: ['texas hillbilly', 'southern character', 'southern american', 'hillbilly', 'texas', 'comedy', 'parody', 'cartoon'],
+  },
+  {
+    id: 'tom-baker-style-voice',
+    title: 'Tom Baker Style Voice',
+    description: 'Retro Tom Baker-inspired voice style with rich, dramatic, classic British sci-fi energy. Ideal for parody, homage and vintage character work.',
+    mp3: '/assets/audio/tom-baker-voice.mp3',
+    aliases: ['doctor who style', 'retro sci fi', 'tom baker', 'doctor who', 'british sci-fi', 'retro', 'dramatic'],
+  },
 ];
