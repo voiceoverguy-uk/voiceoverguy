@@ -42,6 +42,46 @@ export function webPage(slug: string, name: string, description: string) {
   };
 }
 
+export function collectionPage(slug: string, name: string, description: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE}/${slug}#webpage`,
+    url: `${SITE}/${slug}`,
+    name,
+    description,
+    author: GUY_PERSON_REF,
+  };
+}
+
+export function itemListAudio(
+  slug: string,
+  name: string,
+  items: { title: string; description: string; mp3: string }[],
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${SITE}/${slug}#itemlist`,
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((v, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'AudioObject',
+        '@id': `${SITE}${v.mp3}`,
+        name: v.title,
+        description: v.description,
+        contentUrl: `${SITE}${v.mp3}`,
+        encodingFormat: 'audio/mpeg',
+        inLanguage: 'en-GB',
+        creator: GUY_PERSON_REF,
+      },
+    })),
+  };
+}
+
 export function breadcrumb(slug: string, pageName: string) {
   return {
     '@context': 'https://schema.org',

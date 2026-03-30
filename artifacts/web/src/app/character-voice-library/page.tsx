@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
-import { SchemaScripts, webPage, breadcrumb, serviceSchema } from '@/lib/staticPageSchema';
+import { SchemaScripts, collectionPage, breadcrumb, serviceSchema, itemListAudio } from '@/lib/staticPageSchema';
 import CharacterVoiceLibraryClient from '@/components/CharacterVoiceLibraryClient';
+import { characterVoiceLibrary } from '@/data/characterVoiceLibrary';
 
 export const metadata: Metadata = {
   title: 'Character Voice Library | Guy Harris – VoiceoverGuy',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  webPage(
+  collectionPage(
     'character-voice-library',
     'Character Voice Library – Guy Harris',
     'Browse and listen to individual character voice demos by Guy Harris, including serious male, animated family film promo, and comedic character styles.',
@@ -34,6 +35,11 @@ const schemas = [
     'character-voice-library',
     'Character Voice Library',
     'A library of individual character voice demos by UK voiceover artist Guy Harris, covering serious, animated and comedic styles.',
+  ),
+  itemListAudio(
+    'character-voice-library',
+    'Character Voice Library – Guy Harris',
+    characterVoiceLibrary,
   ),
 ];
 
