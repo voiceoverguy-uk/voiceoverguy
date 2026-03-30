@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import { characterVoiceLibrary, type CharacterVoiceEntry } from '@/data/characterVoiceLibrary';
@@ -51,10 +51,7 @@ function findBestMatchIndex(entries: CharacterVoiceEntry[], q: string): number {
 export default function CharacterVoiceLibraryClient() {
   const searchParams = useSearchParams();
   const urlSearch = (searchParams.get('search') ?? '').trim();
-  const [query, setQuery] = useState(urlSearch);
   const bestMatchRef = useRef<HTMLDivElement | null>(null);
-
-  const filtered = characterVoiceLibrary.filter(e => matchesQuery(e, query));
   const bestMatchIdx = urlSearch ? findBestMatchIndex(characterVoiceLibrary, urlSearch) : -1;
 
   useEffect(() => {
@@ -65,45 +62,23 @@ export default function CharacterVoiceLibraryClient() {
 
   return (
     <div className="cvl-wrapper">
-      {urlSearch && (
-        <p className="cvl-url-banner">
-          Showing result for: <strong>{urlSearch}</strong>
-        </p>
-      )}
-
-      <div className="cvl-search-row">
-        <input
-          type="search"
-          className="cvl-search-input"
-          placeholder="Filter by voice type, style or character..."
-          value={query}
-          onChange={e => setQuery(e.target.value)}
-          aria-label="Filter character voice library"
-        />
+      <div className="cvl-grid">
+        {characterVoiceLibrary.map((entry, idx) => {
+          const isBestMatch = urlSearch.length > 0 && idx === bestMatchIdx;
+          return (
+            <div
+              key={entry.id}
+              id={entry.id}
+              className={`cvl-card${isBestMatch ? ' cvl-card--highlight' : ''}`}
+              ref={isBestMatch ? (el => { bestMatchRef.current = el; }) : undefined}
+            >
+              <h3 className="cvl-card-title">{highlightText(entry.title, urlSearch)}</h3>
+              <p className="cvl-card-desc">{highlightText(entry.description, urlSearch)}</p>
+              <WaveSurferPlayer src={entry.mp3} compact />
+            </div>
+          );
+        })}
       </div>
-
-      {filtered.length === 0 ? (
-        <p className="cvl-no-results">No matching demo found for &ldquo;{query}&rdquo; -- try a different search term.</p>
-      ) : (
-        <div className="cvl-grid">
-          {filtered.map(entry => {
-            const origIdx = characterVoiceLibrary.indexOf(entry);
-            const isBestMatch = urlSearch.length > 0 && origIdx === bestMatchIdx;
-            return (
-              <div
-                key={entry.id}
-                id={entry.id}
-                className={`cvl-card${isBestMatch ? ' cvl-card--highlight' : ''}`}
-                ref={isBestMatch ? (el => { bestMatchRef.current = el; }) : undefined}
-              >
-                <h3 className="cvl-card-title">{highlightText(entry.title, query)}</h3>
-                <p className="cvl-card-desc">{highlightText(entry.description, query)}</p>
-                <WaveSurferPlayer src={entry.mp3} compact />
-              </div>
-            );
-          })}
-        </div>
-      )}
     </div>
   );
 }

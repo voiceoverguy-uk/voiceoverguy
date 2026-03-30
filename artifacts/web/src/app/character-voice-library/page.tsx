@@ -55,7 +55,7 @@ export default function Page() {
       <div className="inner-bar" />
       <section className="inner-container cvl-section">
         <div className="cvl-banner">
-          <p>Each demo below showcases a distinct character voice style. Press play on any track to hear it, or use the search to filter by style, type or character name.</p>
+          <p>Use the main search bar above to jump to a specific voice style, or simply browse the library below and press play to hear each demo.</p>
         </div>
         <Suspense fallback={<div className="cvl-loading">Loading voice library...</div>}>
           <CharacterVoiceLibraryClient />

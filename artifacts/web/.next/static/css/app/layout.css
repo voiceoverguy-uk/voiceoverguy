@@ -5883,33 +5883,12 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin: 0;
 }
 
-.cvl-search-row {
-  margin-bottom: 28px;
-}
-
-.cvl-search-input {
-  width: 100%;
-  max-width: 520px;
-  padding: 10px 14px;
-  font-size: 15px;
-  font-family: 'Century Gothic', Arial, sans-serif;
-  border: 2px solid var(--grey-mid);
-  border-radius: 4px;
-  outline: none;
-  transition: border-color 0.2s;
-  background: var(--white);
-  color: var(--text);
-}
-
-.cvl-search-input:focus {
-  border-color: var(--red);
-}
-
 .cvl-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 28px;
   gap: 28px;
+  margin-top: 8px;
 }
 
 .cvl-card {
@@ -5952,22 +5931,6 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding: 0 1px;
 }
 
-.cvl-no-results {
-  font-size: 14px;
-  color: var(--grey-dark);
-  margin-top: 8px;
-}
-
-.cvl-url-banner {
-  font-size: 14px;
-  color: var(--grey-dark);
-  margin-bottom: 16px;
-}
-
-.cvl-url-banner strong {
-  color: var(--red);
-}
-
 .cvl-loading {
   font-size: 14px;
   color: var(--grey-dark);
@@ -5981,10 +5944,6 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 @media (max-width: 600px) {
   .cvl-grid {
     grid-template-columns: 1fr;
-  }
-
-  .cvl-search-input {
-    max-width: 100%;
   }
 }
 
