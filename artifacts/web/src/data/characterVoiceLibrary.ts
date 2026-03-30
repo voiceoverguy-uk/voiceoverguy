@@ -71,6 +71,13 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
   },
   {
+    id: 'evil-voice-mr-intoxico',
+    title: 'Evil Voice for Mr Intoxico',
+    description: 'High-pitched evil character voice with a twisted, theatrical feel. Ideal for Halloween promos, spooky events, sinister comedy and over-the-top villain work.',
+    mp3: '/assets/audio/mr-intoxico-evil-voiceover-guy-harris.mp3',
+    aliases: ['evil halloween voice', 'villain voice', 'evil', 'halloween', 'villain', 'sinister', 'twisted', 'spooky'],
+  },
+  {
     id: 'wacky-male-voice-linkee',
     title: 'Wacky Male Voice for Linkee',
     description: 'Fun, wacky male voice created for the game Linkee. Bright, playful and full of character, ideal for games, toy brands, comedy reads and energetic promos.',
