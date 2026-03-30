@@ -3,6 +3,7 @@ import type { BlogPost as BlogPostType } from '@/data/blog-posts';
 import blogPosts from '@/data/blog-posts';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import MiniPlayer from '@/components/MiniPlayer';
+import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import { buildAllBlogSchemas } from '@/lib/buildSchema';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 
@@ -200,6 +201,13 @@ export default function BlogPost({ post }: Props) {
               </div>
             )}
           </div>
+
+          {/* Audio player: full-width, below text1, with download */}
+          {post.audioSrc && (
+            <div className="blog-audio-row">
+              <WaveSurferPlayer src={post.audioSrc} downloadable />
+            </div>
+          )}
 
           {/* Row 2: image (left) + text2 (right) — image always goes here */}
           {hasImage && hasText2 ? (

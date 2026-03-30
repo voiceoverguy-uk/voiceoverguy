@@ -36,6 +36,7 @@ export interface BlogPost {
  nimage4: string; // image paired with ntext4
  conflictsWithCorePage: boolean; // true = slug already handled by a core Next.js page
  localAudio?: string; // optional local MP3 path, replaces SoundCloud embed
+ audioSrc?: string; // optional full-width audio player with download, shown below text1
 }
 
 const blogPosts: BlogPost[] = [
@@ -7662,6 +7663,7 @@ const blogPosts: BlogPost[] = [
  "nimage2": "",
  "nimage3": "",
  "nimage4": "",
+ "audioSrc": "/assets/audio/bgt-competition-spot-2025-guy-harris.mp3",
  "conflictsWithCorePage": false
  },
  {
