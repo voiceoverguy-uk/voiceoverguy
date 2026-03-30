@@ -5851,3 +5851,117 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   opacity: 0.88;
 }
 
+/* ===== CHARACTER VOICE LIBRARY ===== */
+.cvl-section {
+  padding: 32px 15px 48px;
+}
+
+.cvl-banner {
+  background: var(--grey-light);
+  border-left: 4px solid var(--red);
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  color: var(--text);
+  border-radius: 0 4px 4px 0;
+}
+
+.cvl-banner p {
+  margin: 0;
+}
+
+.cvl-search-row {
+  margin-bottom: 28px;
+}
+
+.cvl-search-input {
+  width: 100%;
+  max-width: 520px;
+  padding: 10px 14px;
+  font-size: 15px;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  border: 2px solid var(--grey-mid);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: var(--white);
+  color: var(--text);
+}
+
+.cvl-search-input:focus {
+  border-color: var(--red);
+}
+
+.cvl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 28px;
+  gap: 28px;
+}
+
+.cvl-card {
+  background: var(--white);
+  border: 1px solid var(--grey-mid);
+  border-radius: 6px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s;
+}
+
+.cvl-card:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.11);
+}
+
+.cvl-card--highlight {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(156,6,11,0.15), 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.cvl-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.cvl-card-desc {
+  font-size: 13px;
+  color: var(--grey-dark);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.cvl-highlight {
+  background: rgba(156,6,11,0.12);
+  color: var(--red);
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.cvl-no-results {
+  font-size: 14px;
+  color: var(--grey-dark);
+  margin-top: 8px;
+}
+
+.cvl-loading {
+  font-size: 14px;
+  color: var(--grey-dark);
+  padding: 24px 0;
+}
+
+.cvl-wrapper {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .cvl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cvl-search-input {
+    max-width: 100%;
+  }
+}
+

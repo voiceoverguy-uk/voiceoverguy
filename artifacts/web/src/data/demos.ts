@@ -19,4 +19,5 @@ export const characterDemos = [
   { label: 'My Character Voiceovers', href: '/character-voiceover' },
   { label: 'Pirate Voice – Ah ha!', href: '/pirate-voice' },
   { label: 'Pathe News Voice', href: '/pathe-news-voice' },
+  { label: 'Character Voice Library', href: '/character-voice-library' },
 ];

@@ -1,4 +1,4 @@
 {
-  "/movie-trailer-voice/page": "app/movie-trailer-voice/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/page": "app/page.js",
+  "/character-voice-library/page": "app/character-voice-library/page.js"
 }

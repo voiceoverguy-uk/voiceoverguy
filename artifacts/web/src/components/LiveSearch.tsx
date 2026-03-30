@@ -5,9 +5,10 @@ import Link from 'next/link';
 import blogPosts from '@/data/blog-posts';
 import { getYearsExperience } from '@/lib/experience';
 import { voiceDemos, characterDemos } from '@/data/demos';
+import { characterVoiceLibrary } from '@/data/characterVoiceLibrary';
 
 interface SearchResult {
-  type: 'blog' | 'voice-demo' | 'character-demo' | 'tool';
+  type: 'blog' | 'voice-demo' | 'character-demo' | 'character-library' | 'tool';
   label: string;
   href: string;
   thumbnail?: string;
@@ -194,6 +195,20 @@ function searchItems(query: string): SearchResult[] {
     }
   }
 
+  for (const entry of characterVoiceLibrary) {
+    const titleMatch = entry.title.toLowerCase().includes(q);
+    const descMatch = entry.description.toLowerCase().includes(q);
+    const aliasMatch = (entry.aliases ?? []).some(a => a.toLowerCase().includes(q));
+    if (titleMatch || descMatch || aliasMatch) {
+      results.push({
+        type: 'character-library',
+        label: entry.title,
+        href: `/character-voice-library?search=${encodeURIComponent(entry.title)}`,
+        relevance: titleMatch ? 3 : aliasMatch ? 2 : 1,
+      });
+    }
+  }
+
   for (const tool of toolPages) {
     const labelMatch = tool.label.toLowerCase().includes(q);
     const keywordMatch = tool.keywords.toLowerCase().includes(q);
@@ -257,7 +272,7 @@ function renderThumb(result: SearchResult) {
     );
   }
 
-  if (result.type === 'character-demo') {
+  if (result.type === 'character-demo' || result.type === 'character-library') {
     return (
       <div className="live-search-icon-wrap live-search-icon-character-demo">
         <PersonIcon />
