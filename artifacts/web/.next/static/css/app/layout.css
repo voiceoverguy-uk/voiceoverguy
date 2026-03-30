@@ -5876,6 +5876,7 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   font-size: 14px;
   color: var(--text);
   border-radius: 0 4px 4px 0;
+  max-width: 680px;
 }
 
 .cvl-banner p {
