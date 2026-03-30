@@ -1,0 +1,109 @@
+Please add a brand new page at /character-voice-library called Character Voice Library.
+
+This page should be a searchable, reusable library of character and style demos, built from a simple data file so I can keep adding more entries later without changing the page structure.
+
+Important goals:
+- This page must be indexed and linked into the site properly
+- It should feel like a useful searchable demo library, not just a random mp3 dump
+- It must support homepage/global search behaviour so if someone searches a matching term like “deep male voice” or “Pixar promo”, they can be sent to this page and the relevant card is highlighted
+- Build this in a scalable way from day one
+
+Page details:
+URL:
+- /character-voice-library
+
+Page title / heading:
+- Character Voice Library
+
+Intro text:
+- Browse a growing library of character voice demos, impressions, comedy styles and larger-than-life reads from British voice artist Guy Harris.
+
+Page behaviour:
+1. Display demo cards generated from a dedicated data file
+2. Each card should include:
+   - title
+   - short description
+   - audio player using the supplied mp3
+3. Add a search input at the top of the page that filters cards live by:
+   - title
+   - description
+   - alias terms
+4. Support URL parameter search:
+   - /character-voice-library?search=term
+5. If a search parameter is present and a matching card is found:
+   - auto-scroll that card into view
+   - apply a subtle highlighted state to the card
+   - show a small line above results saying: Showing result for: [search term]
+6. If multiple cards match, highlight/filter the matching results cleanly
+7. If no result matches, show a polite “No matching demo found” message
+8. Keep styling consistent with the rest of the site
+
+Important implementation note:
+- Build this from a simple reusable data source such as characterVoiceLibrary.ts or similar
+- I want to be able to add future demos just by adding a new object with title, aliases, description, and mp3 filename
+- Do not hardcode the cards directly into the page component
+
+Initial demo entries to include:
+
+1)
+Title:
+Serious Male Voice
+
+Aliases:
+male voice used on Jack FM, jack fm voice, deep male voice, serious male voice, male promo voice
+
+Description:
+A deep, serious male voice style used on Jack FM.
+
+MP3 filename:
+serious-male-jack-fm-voice.mp3
+
+2)
+Title:
+Camp Male Caesar Voice
+
+Aliases:
+monty python style caesar, camp roman voice, silly caesar voice, funny roman character, comedy caesar voice
+
+Description:
+A funny, silly Roman-style character voice with a camp Monty Python feel.
+
+MP3 filename:
+monty-python-camp-caesar-voice.mp3
+
+3)
+Title:
+Animated Family Film Promo Voice
+
+Aliases:
+disney pixar promo voice, pixar inside out promo, friendly promo voice, emotional promo voice, family film trailer voice
+
+Description:
+A warm, friendly promo style with emotional lift, inspired by animated family film campaigns.
+
+MP3 filename:
+disney-pixar-inside-out-promo.mp3
+
+Search integration:
+- Please wire this page into the site’s main search logic as well, if the search system already supports internal page matching
+- If the global search finds a match in this character library data, it should send the user to /character-voice-library?search=[matched term]
+- Do not replace existing search behaviour for normal pages; just extend it
+
+Navigation:
+- Add Character Voice Library into the Character Demos dropdown menu
+- Use the label: Character Voice Library
+
+SEO:
+- Add sensible metadata for this new page
+- Include a useful meta title and meta description in keeping with the rest of the site
+- Make sure the page can be crawled normally
+- Add internal links only where appropriate, no overstuffing
+
+Out of scope for now:
+- categories
+- images on the cards
+- separate pages per character
+- download buttons
+- any major redesign of the site header or search system beyond what is needed to support this page cleanly
+
+Please implement this cleanly and in a way that makes future additions very easy.

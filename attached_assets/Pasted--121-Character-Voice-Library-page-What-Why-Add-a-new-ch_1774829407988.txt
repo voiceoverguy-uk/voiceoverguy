@@ -1,0 +1,185 @@
+#121 - Character Voice Library page
+
+What & Why
+Add a new /character-voice-library page — a searchable, filterable audio demo library. Cards must be driven by a simple typed data file so new demos can be added later without touching the page code. The page must integrate cleanly with the site’s global search and the Character Demos nav dropdown.
+
+Done looks like
+- /character-voice-library loads with the intro text and 3 demo cards.
+- Each card shows title, short description, and a WaveSurfer audio player.
+- A search input at the top of the page live-filters cards by title, description, or aliases.
+- Visiting /character-voice-library?search=jack%20fm%20voice auto-scrolls to the first best matching card, highlights it, and shows “Showing result for: jack fm voice” above the grid.
+- If multiple cards match, show all matching cards, but auto-scroll/highlight the first best match.
+- If no card matches, show a polite “No matching demo found” message.
+- “Character Voice Library” appears in the Character Demos nav dropdown.
+- Typing a character library alias or phrase such as “pixar promo” or “camp roman voice” in the global search bar returns a matching result linking to /character-voice-library?search=<encoded term>.
+- Page has correct meta title, description, canonical URL, and OG tags.
+
+Out of scope
+- Categories
+- Images on cards
+- Per-character sub-pages
+- Download buttons
+- Any redesign of the existing search dropdown UI
+
+Tasks
+
+1) Copy audio files
+Copy the 3 supplied MP3s from attached_assets/ into artifacts/web/public/assets/audio/ using these clean filenames:
+- serious-male-jack-fm-voice.mp3
+- monty-python-camp-caesar-voice.mp3
+- disney-pixar-inside-out-promo.mp3
+
+2) Create characterVoiceLibrary.ts data file
+Create a typed data file, e.g.:
+artifacts/web/src/data/characterVoiceLibrary.ts
+
+Define and export:
+- interface CharacterVoiceEntry { id: string; title: string; description: string; aliases: string[]; mp3: string; }
+- export const characterVoiceLibrary: CharacterVoiceEntry[]
+
+Use stable slug-like ids:
+- serious-male-voice
+- camp-male-caesar-voice
+- animated-family-film-promo-voice
+
+Initial entries:
+
+{
+  id: 'serious-male-voice',
+  title: 'Serious Male Voice',
+  description: 'A deep, serious male voice style used on Jack FM.',
+  aliases: [
+    'male voice used on jack fm',
+    'jack fm voice',
+    'deep male voice',
+    'serious male voice',
+    'male promo voice'
+  ],
+  mp3: '/assets/audio/serious-male-jack-fm-voice.mp3'
+}
+
+{
+  id: 'camp-male-caesar-voice',
+  title: 'Camp Male Caesar Voice',
+  description: 'A funny, silly Roman-style character voice with a camp Monty Python feel.',
+  aliases: [
+    'monty python style caesar',
+    'camp roman voice',
+    'silly caesar voice',
+    'funny roman character',
+    'comedy caesar voice'
+  ],
+  mp3: '/assets/audio/monty-python-camp-caesar-voice.mp3'
+}
+
+{
+  id: 'animated-family-film-promo-voice',
+  title: 'Animated Family Film Promo Voice',
+  description: 'A warm, friendly promo style with emotional lift, inspired by animated family film campaigns.',
+  aliases: [
+    'disney pixar promo voice',
+    'pixar inside out promo',
+    'friendly promo voice',
+    'emotional promo voice',
+    'family film trailer voice'
+  ],
+  mp3: '/assets/audio/disney-pixar-inside-out-promo.mp3'
+}
+
+3) Create CharacterVoiceLibraryClient.tsx
+Create a client component, e.g.:
+artifacts/web/src/components/CharacterVoiceLibraryClient.tsx
+
+Requirements:
+- Use useSearchParams() to read ?search=
+- Pre-fill the search input from the URL parameter on first load
+- Render a text input that live-filters the cards
+- Filtering must be:
+  - case-insensitive
+  - trimmed
+  - partial-match friendly
+- Match against:
+  - title
+  - description
+  - aliases
+- Show “Showing result for: [term]” banner when a URL search param is active
+- Render a card grid
+- Each card should include:
+  - h3 title
+  - p description
+  - <WaveSurferPlayer src={...} compact />
+- Highlight matching cards with a subtle CSS class
+- Auto-scroll the first best match into view using useEffect + refs
+- If multiple cards match, still show all matching cards
+- If no cards match, show “No matching demo found”
+
+4) Create /character-voice-library/page.tsx
+Create:
+artifacts/web/src/app/character-voice-library/page.tsx
+
+Requirements:
+- Server component
+- Export Metadata with:
+  - title: Character Voice Library | Guy Harris – VoiceoverGuy
+  - sensible meta description
+  - canonical URL
+  - OG tags
+- Wrap the client component in <Suspense> because useSearchParams() is used
+- Add structured data for WebPage schema
+- Intro text on page:
+  Browse a growing library of character voice demos, impressions, comedy styles and larger-than-life reads from British voice artist Guy Harris.
+
+5) Add to nav dropdown
+In artifacts/web/src/data/demos.ts add:
+{ label: 'Character Voice Library', href: '/character-voice-library' }
+
+This should make it appear in the Character Demos dropdown.
+
+6) Extend global search
+In artifacts/web/src/components/LiveSearch.tsx:
+- import characterVoiceLibrary
+- extend the SearchResult type union to include 'character-library'
+- add a search pass that checks each entry’s:
+  - title
+  - description
+  - aliases
+- matching should be case-insensitive, trimmed, and partial-match friendly
+- on match, push a result with:
+  - type: 'character-library'
+  - href: /character-voice-library?search=${encodeURIComponent(matchedTermOrQuery)}
+- use safe encoded query strings
+- do not replace existing search behaviour for normal pages; only extend it
+- render this result using the existing PersonIcon or another sensible existing icon
+
+7) Add CSS
+In artifacts/web/src/app/globals.css add styles for:
+- .cvl-grid
+- .cvl-card
+- .cvl-card--highlight
+- .cvl-search-input
+- .cvl-banner
+- .cvl-no-results
+
+Style direction:
+- keep consistent with existing site cards
+- white background
+- subtle shadow
+- red-accented border/highlight
+- highlighted card can have a subtle red/gold left border glow, but keep it tasteful
+
+Relevant files
+- artifacts/web/src/data/demos.ts
+- artifacts/web/src/components/LiveSearch.tsx
+- artifacts/web/src/components/WaveSurferPlayer.tsx
+- artifacts/web/src/app/globals.css
+- artifacts/web/src/app/character-voiceover/page.tsx
+- artifacts/web/src/lib/staticPageSchema.tsx
+- attached_assets/serious-male-jack-fm-voice_1774828291058.mp3
+- attached_assets/disney-pixar-inside-out-promo_1774828577747.mp3
+- attached_assets/monty-python-camp-caesar-voice_1774828860907.mp3
+
+Important implementation notes
+- Do not hardcode the cards directly into the page component
+- Build this so future additions only require adding a new object to characterVoiceLibrary.ts and dropping an mp3 into the audio folder
+- Keep the implementation clean and reusable
+- Do not redesign the existing site header or search UI beyond what is needed for this feature
