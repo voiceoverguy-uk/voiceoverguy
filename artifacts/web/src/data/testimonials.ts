@@ -151,4 +151,10 @@ export const testimonials: Testimonial[] = [
     role: "Producer/Presenter",
     company: "Mansfield 103.2",
   },
+  {
+    quote: "Working with Guy Harris is a total win. He's a true professional who consistently delivers top-tier audio with a rapid turnaround. His ability to nail the tone on the first take makes him an absolute joy to collaborate with. Highly recommended!",
+    name: "Danny Rhodes",
+    role: "Head of Commercial Production",
+    company: "KMFM",
+  },
 ];
