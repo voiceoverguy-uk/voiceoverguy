@@ -71,6 +71,20 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
   },
   {
+    id: 'renton-trainspotting',
+    title: 'Renton from Trainspotting',
+    description: 'Inspired by the iconic 1996 film, this is a take on the lead character Renton, originally played by Ewan McGregor. Sharp, edgy and full of attitude, ideal for parody, homage and gritty Scottish character work.',
+    mp3: '/assets/audio/renton-trainspotting-guy-harris.mp3',
+    aliases: ['renton voice', 'trainspotting style', 'trainspotting', 'renton', 'scottish', 'ewan mcgregor', 'parody'],
+  },
+  {
+    id: 'super-hero-voice-comic-con',
+    title: 'Super Hero Voice',
+    description: 'Big American superhero-style voice created for York Comic Con. Bold, dramatic and full of blockbuster energy, ideal for comic events, trailers, promos and larger-than-life character reads.',
+    mp3: '/assets/audio/york-comic-con-american-super-hero-voice.mp3',
+    aliases: ['superhero voice', 'comic con voice', 'superhero', 'comic con', 'american', 'blockbuster', 'trailer'],
+  },
+  {
     id: 'pantomime-dame',
     title: 'Pantomime Dame',
     description: 'A classic camp male pantomime dame voice with big festive energy and plenty of character. Perfect for Christmas shows, theatre promos, seasonal events and larger-than-life comedy reads.',
