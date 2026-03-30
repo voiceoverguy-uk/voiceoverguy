@@ -71,6 +71,13 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     aliases: ['character montage', 'voice range', 'montage', 'versatility', 'mixed characters', 'showcase'],
   },
   {
+    id: 'cockney-voice-morrisons',
+    title: 'Cockney Voice',
+    description: 'Cheeky, fun Cockney-style voice used for the Morrisons Wonky Range. Full of character and ideal for playful commercials, comedy reads and down-to-earth British promo work.',
+    mp3: '/assets/audio/morrisons-cockney-wonky-voice.mp3',
+    aliases: ['wonky range voice', 'cheeky cockney', 'cockney', 'morrisons', 'wonky', 'british', 'cheeky'],
+  },
+  {
     id: 'evil-voice-mr-intoxico',
     title: 'Evil Voice for Mr Intoxico',
     description: 'High-pitched evil character voice with a twisted, theatrical feel. Ideal for Halloween promos, spooky events, sinister comedy and over-the-top villain work.',
