@@ -195,11 +195,13 @@ function searchItems(query: string): SearchResult[] {
     }
   }
 
+  const cvlTokens = q.split(/\s+/).filter(Boolean);
   for (const entry of characterVoiceLibrary) {
-    const titleMatch = entry.title.toLowerCase().includes(q);
-    const descMatch = entry.description.toLowerCase().includes(q);
-    const aliasMatch = (entry.aliases ?? []).some(a => a.toLowerCase().includes(q));
-    if (titleMatch || descMatch || aliasMatch) {
+    const haystack = [entry.title, entry.description, ...entry.aliases].join(' ').toLowerCase();
+    const tokenMatch = cvlTokens.every(t => haystack.includes(t));
+    if (tokenMatch) {
+      const titleMatch = cvlTokens.every(t => entry.title.toLowerCase().includes(t));
+      const aliasMatch = cvlTokens.every(t => entry.aliases.join(' ').toLowerCase().includes(t));
       results.push({
         type: 'character-library',
         label: entry.title,

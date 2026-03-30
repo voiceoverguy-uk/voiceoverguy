@@ -7,38 +7,43 @@ import { characterVoiceLibrary, type CharacterVoiceEntry } from '@/data/characte
 
 function highlightText(text: string, query: string): React.ReactNode {
   if (!query) return text;
-  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  const q = query.trim();
+  if (!q) return text;
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
   if (idx === -1) return text;
   return (
     <>
       {text.slice(0, idx)}
-      <mark className="cvl-highlight">{text.slice(idx, idx + query.length)}</mark>
-      {text.slice(idx + query.length)}
+      <mark className="cvl-highlight">{text.slice(idx, idx + q.length)}</mark>
+      {text.slice(idx + q.length)}
     </>
   );
 }
 
+function getHaystack(entry: CharacterVoiceEntry): string {
+  return [entry.title, entry.description, ...entry.aliases].join(' ').toLowerCase();
+}
+
 function matchesQuery(entry: CharacterVoiceEntry, q: string): boolean {
-  if (!q) return true;
-  const lower = q.trim().toLowerCase();
-  return (
-    entry.title.toLowerCase().includes(lower) ||
-    entry.description.toLowerCase().includes(lower) ||
-    entry.aliases.some(a => a.toLowerCase().includes(lower))
-  );
+  if (!q.trim()) return true;
+  const tokens = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const haystack = getHaystack(entry);
+  return tokens.every(token => haystack.includes(token));
 }
 
 function findBestMatchIndex(entries: CharacterVoiceEntry[], q: string): number {
-  if (!q) return -1;
-  const lower = q.trim().toLowerCase();
+  const tokens = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (!tokens.length) return -1;
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i].title.toLowerCase().includes(lower)) return i;
+    const titleHaystack = entries[i].title.toLowerCase();
+    if (tokens.every(t => titleHaystack.includes(t))) return i;
   }
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i].aliases.some(a => a.toLowerCase().includes(lower))) return i;
+    const aliasHaystack = entries[i].aliases.join(' ').toLowerCase();
+    if (tokens.every(t => aliasHaystack.includes(t))) return i;
   }
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i].description.toLowerCase().includes(lower)) return i;
+    if (matchesQuery(entries[i], q)) return i;
   }
   return -1;
 }
@@ -62,7 +67,7 @@ export default function CharacterVoiceLibraryClient() {
     <div className="cvl-wrapper">
       {urlSearch && (
         <p className="cvl-url-banner">
-          Showing results for: <strong>{urlSearch}</strong>
+          Showing result for: <strong>{urlSearch}</strong>
         </p>
       )}
 
@@ -83,7 +88,7 @@ export default function CharacterVoiceLibraryClient() {
         <div className="cvl-grid">
           {filtered.map(entry => {
             const origIdx = characterVoiceLibrary.indexOf(entry);
-            const isBestMatch = urlSearch && origIdx === bestMatchIdx;
+            const isBestMatch = urlSearch.length > 0 && origIdx === bestMatchIdx;
             return (
               <div
                 key={entry.id}
