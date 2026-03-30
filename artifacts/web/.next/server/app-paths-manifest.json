@@ -1,3 +1,4 @@
 {
-  "/character-voice-library/page": "app/character-voice-library/page.js"
+  "/character-voice-library/page": "app/character-voice-library/page.js",
+  "/page": "app/page.js"
 }

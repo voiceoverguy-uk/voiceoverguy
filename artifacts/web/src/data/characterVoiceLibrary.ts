@@ -126,4 +126,25 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     mp3: '/assets/audio/linkee-wacky-male-voice.mp3',
     aliases: ['linkee voice', 'wacky game voice', 'linkee', 'wacky', 'game voice', 'toy brand', 'playful', 'comedy'],
   },
+  {
+    id: 'rock-n-roll-legend-voice',
+    title: "Rock 'n' Roll Legend Voice",
+    description: 'A playful Elvis-style voice full of swagger, charm and cheeky musical attitude, ideal for comedy radio ads, parody campaigns and larger-than-life reads.',
+    mp3: '/assets/audio/elvis-style-voice-guy-harris.mp3',
+    aliases: ['elvis style voice', 'voice of elvis', 'elvis impression', 'king of rock and roll voice', 'funny elvis voice'],
+  },
+  {
+    id: 'cockney-film-legend-voice',
+    title: 'Cockney Film Legend Voice',
+    description: 'A Michael Caine-style voice with unmistakable London character, warmth and gravitas, ideal for parody, character reads and authority-led comedy scripts.',
+    mp3: '/assets/audio/michael-caine-style-voice-guy-harris.mp3',
+    aliases: ['michael caine style', 'michael caine voice', 'london accent with gravitas', 'british film legend voice', 'cockney authority voice'],
+  },
+  {
+    id: 'action-hero-voice',
+    title: 'Action Hero Voice',
+    description: 'A bold Arnold Schwarzenegger-style voice with big-screen power and tongue-in-cheek action energy, ideal for parody, trailers, promos and comedy campaigns.',
+    mp3: '/assets/audio/arnie-style-voice-guy-harris.mp3',
+    aliases: ['arnold schwarzenegger voice', 'arnie voice', 'terminator style voice', 'action hero voice', "i'll be back voice"],
+  },
 ];
