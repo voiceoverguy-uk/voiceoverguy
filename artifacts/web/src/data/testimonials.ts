@@ -157,4 +157,10 @@ export const testimonials: Testimonial[] = [
     role: "Head of Commercial Production",
     company: "KMFM",
   },
+  {
+    quote: "I don't know how else to say it, Guy is the best in the business. I've worked with him for nearly two decades and that truth has never wavered. His talent and world-class creativity are matched with total professionalism and attention to detail. A top, top guy (pun intended)",
+    name: "Rick Loynes",
+    role: "Multi Award Winning Producer",
+    company: "Bauer Radio",
+  },
 ];
