@@ -921,6 +921,15 @@ button.nav-link {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .review-inline {
+    justify-content: center;
+  }
+  .review-text {
+    text-align: center;
+  }
+}
+
 /* ===== HOMEPAGE SECTIONS ===== */
 .home-section {
   position: relative;
