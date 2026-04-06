@@ -1,0 +1,71 @@
+Create a new blog post for the new VoiceoverGuy site using the standard blog format. Keep the tone polished, fun, behind-the-scenes, professional and easy to read. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+Mini Cooper Radio Advert Character Voiceover
+
+URL slug:
+mini-cooper-radio-advert-character-voiceover
+
+Date:
+2026-04-02
+
+Rating:
+highest
+
+Intro line:
+I went to The Farm in Soho, London to voice the new Mini Cooper radio campaign, playing not one but three roles in a fun, energetic session.
+
+Main text (block 1):
+<p>I headed down to <strong>The Farm</strong> in Soho, London to voice the new <strong>Mini Cooper</strong> radio commercial, and it was a cracking session from start to finish. There is always something special about being in a top London studio with a good team around you, hearing a script evolve and then come alive properly through performance, direction and production.</p>
+<p>This campaign was particularly fun because I was asked to perform multiple roles in the same advert. I played the <strong>Astronaut</strong>, <strong>Mission Control</strong> and the <strong>Announcer</strong>, which meant switching styles, pace and attitude within one script while keeping the whole thing feeling slick and joined up. It is exactly the kind of session I enjoy, where character, timing and versatility all get a proper workout.</p>
+<p>The finished radio ad is airing across most major national radio stations in the UK throughout April 2026, so there is a fair chance you may hear it out and about. It is always a good feeling when a session you enjoyed so much ends up sounding every bit as fun and polished on air.</p>
+
+Text block 2:
+<p>The session itself took place at The Farm in Soho, one of those studios where you know you are in good hands the moment you walk in. Great people, a great atmosphere and a script with enough personality to really get your teeth into. Hearing the various characters come together in the final mix was a reminder of how much fun radio can be when everything clicks.</p>
+<p>I have always enjoyed projects that call for more than a straight read. On this one, being able to move between Mission Control, the Astronaut and the Announcer added a nice performance element to the job and gave the advert a strong sense of energy and play. If you enjoy the more characterful side of my work, you may also want to explore my <a href="/character-voice-library">character voice library</a> and pages such as <a href="/football-commentator-voice">football commentator voice</a>, <a href="/david-attenborough-voice">David Attenborough-style voiceover</a>, <a href="/halloween-voice">Halloween voices</a> and <a href="/santa-voice">Santa voice</a>.</p>
+<p>And of course, while this one was recorded in London, clients also regularly book me direct through my <a href="/voiceover-studio">broadcast-quality voiceover studio</a> for fast, clean, professional delivery on commercial and character scripts alike.</p>
+
+Bottom text:
+<p>If you are looking for a versatile British voiceover who can handle straight commercial reads, character roles or multiple voices within the same script, do get in touch. Whether it is a national radio advert, an in-store campaign, a promo or something more character-led, I can help bring it to life with broadcast-quality audio and quick turnaround.</p>
+
+Home excerpt:
+At The Farm in Soho, Guy Harris voiced three roles for the new Mini Cooper radio advert now airing across UK national radio.
+
+Main image filename:
+mini-cooper-london-session.jpg
+
+Media type:
+MP3
+
+MP3 filename:
+mini-cooper-radio-character-voiceover.mp3
+
+Meta description:
+Guy Harris voiced three roles for the Mini Cooper radio advert at The Farm in Soho, with the campaign airing across UK national radio in April 2026.
+
+Search terms:
+mini cooper radio advert voiceover","mini cooper character voiceover","radio advert voice actor","the farm soho voiceover","uk national radio advert voice","commercial character voiceover","guy harris mini cooper
+
+Please also do the following:
+1. Render the blog in the same layout and style as the other blog posts on the new site.
+2. Display the MP3 player to the right of the first text block in the standard two-column blog layout.
+3. Use the uploaded image mini-cooper-london-session.jpg from the standard blog image folder.
+4. Add tasteful internal links within the copy to:
+   - /character-voice-library
+   - /football-commentator-voice
+   - /david-attenborough-voice
+   - /halloween-voice
+   - /santa-voice
+   - /voiceover-studio
+   - homepage
+5. Create appropriate SEO-friendly metadata and structured data for the page, including the blog/article schema and audio metadata if the site already supports that pattern for MP3-based blog posts.
+6. Make sure the blog listing card uses the Home excerpt and main image correctly.
+7. Preserve clean spacing and a premium layout.
+8. Apply the rating as highest so this post is prioritised correctly in blog listings if the rating system is active.
+9. Add a hyperlink from the homepage Latest Voiceover News item that mentions the Mini Cooper session so it links through to this new blog post.
+10. Keep the slug exactly as:
+   /mini-cooper-radio-advert-character-voiceover
+
+For internal reference only, this was a London session at The Farm in Soho for the Mini Cooper campaign, airing from 2nd April 2026, with Guy voicing the Astronaut, Mission Control and the Announcer.

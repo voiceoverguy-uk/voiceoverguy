@@ -24,7 +24,9 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("At The Farm Studio in London I became the voice of the National Mini Cooper Campaign. (audio soon)"),
+      t("At The Farm Studio in London I became the voice of the National Mini Cooper Campaign. "),
+      link("Hear it here", "/mini-cooper-radio-advert-character-voiceover"),
+      t("!"),
     ],
   },
   {
