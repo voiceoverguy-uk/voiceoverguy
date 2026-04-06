@@ -8435,7 +8435,7 @@ const blogPosts: BlogPost[] = [
  "nimage2": "",
  "nimage3": "",
  "nimage4": "",
- "audioSrc": "/assets/audio/mini-cooper-radio-character-voiceover.mp3",
+ "localAudio": "/assets/audio/mini-cooper-radio-character-voiceover.mp3",
  "conflictsWithCorePage": false
  }
 ];
