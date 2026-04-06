@@ -31,6 +31,13 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
+      t("Did you know Lionel Richie is in Sandringham in 2026? Maybe you heard me on the TV advertising it? "),
+      link("Watch the ad", "https://www.youtube.com/watch?v=UpqJ8KgdF8s", true),
+      t("!"),
+    ],
+  },
+  {
+    segments: [
       t("How is your breath? Need a freshen? You need the Breath CO Mouthwash! Oh, I voiced the ad! "),
       link("Check it out!", "https://www.youtube.com/watch?v=0zD403Bp3sc", true),
     ],
