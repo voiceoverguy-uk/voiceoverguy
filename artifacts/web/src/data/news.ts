@@ -1,5 +1,7 @@
 import { getArabellaAge } from '@/lib/experience';
 
+const currentMonth = new Date().toLocaleString('en-GB', { month: 'long' });
+
 export type TextSegment = { type: 'text'; text: string };
 export type LinkSegment = { type: 'link'; text: string; href: string; external: boolean };
 export type Segment = TextSegment | LinkSegment;
@@ -58,7 +60,7 @@ export const newsItems: NewsItem[] = [
     segments: [
       t("My daughter continues to do well with her "),
       link("Voice work", "/arabella-harris-girl-child-voiceover-kid"),
-      t(`. Still only ${getArabellaAge()} she's had some nice jobs already in 2026. And it's only Feb!.`),
+      t(`. Still only ${getArabellaAge()} she's had some nice jobs already in 2026. And it's only ${currentMonth}!`),
     ],
   },
   {
