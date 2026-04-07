@@ -163,4 +163,10 @@ export const testimonials: Testimonial[] = [
     role: "Multi Award Winning Producer",
     company: "Bauer Radio",
   },
+  {
+    quote: "I've worked with Guy for many, many years and honestly, he's one of those people I just know is going to deliver whatever script I throw at him. Whether it's a character voice, commercial, corporate, or jumping in for a demo at the drop of a hat, he's always up for it and always nails it. An absolute pleasure to work with, a top bloke and I genuinely can't recommend him enough.",
+    name: "Damian Grady",
+    role: "Creative Director",
+    company: "Redolution Ltd",
+  },
 ];
