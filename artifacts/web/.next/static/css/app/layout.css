@@ -1502,6 +1502,25 @@ button.nav-link {
   color: var(--text);
 }
 
+.wavesurfer-mute-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  color: var(--text);
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.wavesurfer-mute-btn:hover {
+  opacity: 1;
+}
+
 .wavesurfer-volume-slider {
   width: 60px;
   height: 4px;

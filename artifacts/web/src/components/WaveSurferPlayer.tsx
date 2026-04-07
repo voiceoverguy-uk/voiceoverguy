@@ -19,6 +19,13 @@ export default function WaveSurferPlayer({ src, label, compact = false, download
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(0.8);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
+
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    setIsIOS(/iPad|iPhone|iPod/.test(ua) && !(window as unknown as Record<string, unknown>).MSStream);
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -95,8 +102,20 @@ export default function WaveSurferPlayer({ src, label, compact = false, download
   const handleVolumeChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
+    if (isMuted && newVolume > 0) {
+      setIsMuted(false);
+      wavesurferRef.current?.setMuted(false);
+    }
     wavesurferRef.current?.setVolume(newVolume);
-  }, []);
+  }, [isMuted]);
+
+  const toggleMute = useCallback(() => {
+    const ws = wavesurferRef.current;
+    if (!ws) return;
+    const next = !isMuted;
+    setIsMuted(next);
+    ws.setMuted(next);
+  }, [isMuted]);
 
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
@@ -105,6 +124,8 @@ export default function WaveSurferPlayer({ src, label, compact = false, download
   };
 
   const rootClass = compact ? "wavesurfer-player wavesurfer-compact" : "wavesurfer-player";
+
+  const mutedOrSilent = isMuted || volume === 0;
 
   return (
     <div className={rootClass}>
@@ -132,21 +153,37 @@ export default function WaveSurferPlayer({ src, label, compact = false, download
           {formatTime(currentTime)} / {formatTime(duration)}
         </span>
         <div className="wavesurfer-volume">
-          <svg width={compact ? "14" : "16"} height={compact ? "14" : "16"} viewBox="0 0 24 24" fill="currentColor" className="wavesurfer-volume-icon">
-            <path d="M3 9v6h4l5 5V4L7 9H3z" />
-            {volume > 0 && <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />}
-            {volume > 0.5 && <path d="M19 12c0 3.53-2.04 6.58-5 8.05v-2.17c1.81-1.28 3-3.39 3-5.88s-1.19-4.6-3-5.88V4c2.96 1.46 5 4.52 5 8.05z" />}
-          </svg>
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={handleVolumeChange}
-            className="wavesurfer-volume-slider"
-            aria-label="Volume"
-          />
+          <button
+            type="button"
+            onClick={toggleMute}
+            className="wavesurfer-mute-btn"
+            aria-label={mutedOrSilent ? "Unmute" : "Mute"}
+            title={mutedOrSilent ? "Unmute" : "Mute"}
+          >
+            <svg width={compact ? "14" : "16"} height={compact ? "14" : "16"} viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 9v6h4l5 5V4L7 9H3z" />
+              {mutedOrSilent ? (
+                <path d="M16.5 12l2.5-2.5-1.4-1.4L15 10.6l-2.1-2.1-1.4 1.4L13.6 12l-2.1 2.1 1.4 1.4 2.1-2.1 2.1 2.1 1.4-1.4L16.5 12z" />
+              ) : (
+                <>
+                  <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                  {volume > 0.5 && <path d="M19 12c0 3.53-2.04 6.58-5 8.05v-2.17c1.81-1.28 3-3.39 3-5.88s-1.19-4.6-3-5.88V4c2.96 1.46 5 4.52 5 8.05z" />}
+                </>
+              )}
+            </svg>
+          </button>
+          {!isIOS && (
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={handleVolumeChange}
+              className="wavesurfer-volume-slider"
+              aria-label="Volume"
+            />
+          )}
         </div>
         {downloadable && (
           <a
