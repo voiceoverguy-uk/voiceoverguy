@@ -31,6 +31,13 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
+      t("You may have heard the viral ads for "),
+      link("Radiator Warehouse", "https://www.youtube.com/watch?v=QPnCtyLkPrQ", true),
+      t(" - well, along with Mr Darren Altman, it's me as the big shouty voice at the end!"),
+    ],
+  },
+  {
+    segments: [
       t("Did you know Lionel Richie is in Sandringham in 2026? Maybe you heard me on the TV advertising it? "),
       link("Watch the ad", "https://www.youtube.com/watch?v=UpqJ8KgdF8s", true),
       t("!"),
