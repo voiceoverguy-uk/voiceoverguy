@@ -58,6 +58,8 @@ export default function Footer() {
             <a href="https://halloweenvoice.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Halloween Voice – spooky voiceover specialist">Halloween Voice</a>
             <span className="footer-sister-sep" aria-hidden="true">·</span>
             <a href="https://www.arabellaharris.com/" target="_blank" rel="noopener noreferrer" aria-label="Arabella Harris Voiceover">Arabella Harris Voiceover</a>
+            <span className="footer-sister-sep" aria-hidden="true">·</span>
+            <a href="https://www.movietrailervoice.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Movie Trailer Voice – specialist trailer voiceover site">Movie Trailer Voice</a>
           </p>
         </div>
       </div>
