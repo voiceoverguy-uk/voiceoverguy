@@ -593,7 +593,7 @@ button.nav-link {
   display: block;
   margin: 0 auto;
   padding: 10px 16px;
-  border: 3px solid var(--red);
+  border: 2px solid var(--red);
   border-radius: 4px;
   font-size: 16px;
   font-family: 'Century Gothic', Arial, sans-serif;
