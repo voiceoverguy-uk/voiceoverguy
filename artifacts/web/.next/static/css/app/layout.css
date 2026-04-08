@@ -230,8 +230,8 @@ ul, ol {
   }
 
   .navbar--fixed .search-input {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .navbar--fixed [data-sticky-hide] {
