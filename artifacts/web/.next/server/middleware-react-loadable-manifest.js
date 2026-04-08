@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components/SeasonalHalloweenPlayer.tsx -> @/components/WaveSurferPlayer\":{\"id\":\"components/SeasonalHalloweenPlayer.tsx -> @/components/WaveSurferPlayer\",\"files\":[]},\"components/WaveSurferPlayer.tsx -> wavesurfer.js\":{\"id\":\"components/WaveSurferPlayer.tsx -> wavesurfer.js\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_pnpm_wavesurfer_js_7_12_2_node_modules_wavesurfer_js_dist_wav-8651e8.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"
