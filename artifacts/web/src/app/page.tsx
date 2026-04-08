@@ -93,7 +93,7 @@ export default function Home() {
             <h2>Voice heard Worldwide</h2>
 
             <WaveSurferPlayer
-              src="/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3"
+              src="/assets/audio/commercial-voiceover-showreel-guy-harris.mp3"
             />
 
             <ReviewBlock />
@@ -142,8 +142,8 @@ export default function Home() {
               </div>
               <div className="showreel-player-item">
                 <WaveSurferPlayer
-                  src="/assets/audio/commercial-voiceover-showreel-guy-harris.mp3"
-                  label={`<span class="text-red">Commercial</span> Showreel ${yr}`}
+                  src="/assets/audio/spooky-showreel-guy-harris.mp3"
+                  label={`<span class="text-red">Halloween</span> Voices ${yr}`}
                   compact
                 />
               </div>
