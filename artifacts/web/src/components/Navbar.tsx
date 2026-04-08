@@ -205,7 +205,7 @@ export default function Navbar() {
             {/* Desktop sticky search — between Characters and News in sticky mode */}
             <li className="sticky-search-item" role="none" aria-hidden="true">
               <div className="sticky-search-desktop">
-                <LiveSearch />
+                <LiveSearch compact />
               </div>
             </li>
 

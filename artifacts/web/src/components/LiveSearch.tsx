@@ -49,6 +49,14 @@ const PHRASES_REGULAR = [
   'Human 1st to connect with your audience.',
 ];
 
+const PHRASES_COMPACT = [
+  'What voice do you need?',
+  'Start typing to search...',
+  'Character, narrator, Santa...',
+  'Commercial, explainer, promo...',
+  'Search all voices and demos...',
+];
+
 const PHRASES_HALLOWEEN = [
   'Need something spooky? Start typing...',
   'Search spooky, sinister, Halloween...',
@@ -322,7 +330,7 @@ function renderThumb(result: SearchResult) {
   );
 }
 
-export default function LiveSearch() {
+export default function LiveSearch({ compact = false }: { compact?: boolean }) {
   const [query, setQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -331,7 +339,7 @@ export default function LiveSearch() {
   const containerRef = useRef<HTMLDivElement>(null);
   const listboxId = 'live-search-listbox';
 
-  const phrases = useMemo(() => getSeasonalPhrases(), []);
+  const phrases = useMemo(() => compact ? PHRASES_COMPACT : getSeasonalPhrases(), [compact]);
   const reducedMotion = useReducedMotion();
   const [greetingActive, setGreetingActive] = useState(true);
   const [greeting] = useState(() => getGreeting());
