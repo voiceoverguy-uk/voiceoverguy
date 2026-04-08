@@ -226,6 +226,11 @@ ul, ol {
     width: 100%;
   }
 
+  .navbar--fixed .search-input {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
   .navbar--fixed [data-sticky-hide] {
     display: none;
   }
@@ -588,7 +593,7 @@ button.nav-link {
   display: block;
   margin: 0 auto;
   padding: 10px 16px;
-  border: 1px solid var(--red);
+  border: 3px solid var(--red);
   border-radius: 4px;
   font-size: 16px;
   font-family: 'Century Gothic', Arial, sans-serif;
