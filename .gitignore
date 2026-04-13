@@ -46,6 +46,7 @@ Thumbs.db
 
 # Build output
 artifacts/web/out/
+artifacts/web/.next/
 
 # Replit
 .cache/
