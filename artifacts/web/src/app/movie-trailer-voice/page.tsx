@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: `${data.s1} | VoiceoverGuy`,
     description: data.s2,
     url: 'https://www.voiceoverguy.co.uk/movie-trailer-voice',
-    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/movie-trailer-voice-og-card.jpg', width: 1271, height: 847, alt: 'Movie Trailer Voice – VoiceoverGuy' }],
+    images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-movie-trailer-voice-square.webp', width: 1200, height: 1200, alt: 'Movie Trailer Voice – VoiceoverGuy' }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: `${data.s1} | VoiceoverGuy`,
     description: data.s2,
-    images: ['https://www.voiceoverguy.co.uk/assets/images/movie-trailer-voice-og-card.jpg'],
+    images: ['https://www.voiceoverguy.co.uk/assets/images/og-movie-trailer-voice-square.webp'],
   },
 };
 
