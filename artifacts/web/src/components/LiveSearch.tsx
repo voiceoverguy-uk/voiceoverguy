@@ -24,6 +24,12 @@ interface ToolPage {
 
 const toolPages: ToolPage[] = [
   {
+    label: 'Voiceover Studio',
+    href: '/voiceover-studio',
+    keywords: 'studio recording home studio professional setup gear microphone booth broadcast',
+    thumbnail: '/assets/images/og-image-guy-harris.webp',
+  },
+  {
     label: 'Santa Script Generator',
     href: '/santa-script-generator',
     keywords: 'santa script generator christmas festive father christmas xmas holiday north pole',
