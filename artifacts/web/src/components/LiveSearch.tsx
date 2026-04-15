@@ -24,7 +24,7 @@ interface ToolPage {
 
 const toolPages: ToolPage[] = [
   {
-    label: 'Voiceover Studio',
+    label: 'My Voiceover Studio',
     href: '/voiceover-studio',
     keywords: 'studio recording home studio professional setup gear microphone booth broadcast',
     thumbnail: '/assets/images/og-image-guy-harris.webp',
