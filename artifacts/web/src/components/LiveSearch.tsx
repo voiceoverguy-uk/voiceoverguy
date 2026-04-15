@@ -20,9 +20,17 @@ interface ToolPage {
   href: string;
   keywords: string;
   thumbnail?: string;
+  pinRelevance?: number;
 }
 
 const toolPages: ToolPage[] = [
+  {
+    label: 'David Attenborough Voice',
+    href: '/david-attenborough-voice',
+    keywords: 'david attenborough voice attenborough style nature narration wildlife documentary impression',
+    thumbnail: '/assets/images/attenborough-script-generator.webp',
+    pinRelevance: 10,
+  },
   {
     label: 'My Voiceover Studio',
     href: '/voiceover-studio',
@@ -234,13 +242,21 @@ function searchItems(query: string): SearchResult[] {
         label: tool.label,
         href: tool.href,
         thumbnail: tool.thumbnail,
-        relevance: labelMatch ? 3 : 2,
+        relevance: labelMatch ? (tool.pinRelevance ?? 3) : 2,
       });
     }
   }
 
   results.sort((a, b) => b.relevance - a.relevance);
-  return results.slice(0, 12);
+
+  const seen = new Set<string>();
+  const deduped = results.filter(r => {
+    if (seen.has(r.href)) return false;
+    seen.add(r.href);
+    return true;
+  });
+
+  return deduped.slice(0, 12);
 }
 
 const MicIcon = () => (
