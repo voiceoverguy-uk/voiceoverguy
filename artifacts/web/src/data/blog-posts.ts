@@ -8437,6 +8437,38 @@ const blogPosts: BlogPost[] = [
  "nimage4": "",
  "localAudio": "/assets/audio/mini-cooper-radio-character-voiceover.mp3",
  "conflictsWithCorePage": false
+ },
+ {
+ "id": 1001,
+ "url": "lifestyle-of-the-rich-and-famous-robin-leach-style",
+ "pageTitle": "Robin Leach Style Voiceover - Lifestyles of the Rich and Famous",
+ "info": "<p>Guy Harris delivers a Robin Leach style voiceover for a fun DNCE promo inspired by Lifestyles of the Rich and Famous.</p>",
+ "searchTerms": "robin leach style voiceover,lifestyles of the rich and famous voice,robin leach voice impression,luxury promo voiceover,movie trailer style voiceover,british character voiceover,dnce promo voice",
+ "pageDesc": "Guy Harris performs a Robin Leach style voiceover for a DNCE promo inspired by Lifestyles of the Rich and Famous and its luxury 1980s TV swagger.",
+ "text1": "<p>I voiced this promo for the band <strong>DNCE</strong> in the style of those wonderfully excessive <strong>Lifestyles of the Rich and Famous</strong> television intros from the 1980s. The video leans fully into the joke, showing off a spoof version of outrageous celebrity luxury, and the voice had to match that world perfectly.</p>\n<p>This kind of read is not subtle. It needs swagger, raised eyebrows, a certain knowing arrogance, and that slightly shouty, larger-than-life British delivery that instantly says money, glamour and absurd excess. It is a really fun style to perform because it gives you permission to be bolder, brasher and more theatrical than a straight commercial read ever would.</p>\n<p>The finished promo is a cracking little piece of fun, and a great example of how a characterful voice can help sell the joke while still keeping the whole thing sounding slick and broadcast-ready.</p>",
+ "text2": "<p>The original <strong>Lifestyles of the Rich and Famous</strong> was famous for its celebration of celebrity excess, luxury homes, expensive cars and pure 1980s indulgence, and that is exactly the flavour this piece plays with. The voice style sits somewhere between old-school showbiz confidence, rich-list narration and slightly tongue-in-cheek luxury promo, which makes it a brilliant one to perform.</p>\n<p>There is a quirky rhythm to this type of read. It is not quite straight announcer, not quite movie trailer, and not quite parody either. It sits in that sweet spot where the voice feels familiar enough to instantly trigger the reference, while still sounding fresh, entertaining and strong on its own terms.</p>\n<p>If you enjoy this sort of voice, it also links nicely with some of the more heightened styles on my site, including <a href=\"/movie-trailer-voice\">movie trailer voice</a>, <a href=\"/pathe-news-voice\">Pathe-style voice</a>, <a href=\"/voice-of-god\">Voice of God</a> and other character-led reads from my <a href=\"/character-voice-library\">character voice library</a>.</p>",
+ "image": "lifestyle-of-the-rich-and-famous-robin-leach-style.webp",
+ "video": "bEuSoDpzvak",
+ "metaTitle": "Robin Leach Style Voiceover - Lifestyles of the Rich and Famous",
+ "bottomText": "<p>If you are looking for a voiceover with luxury swagger, old-school TV attitude and a big, playful British delivery, do get in touch. Whether it is a spoof campaign, a stylised promo, a comedy commercial or something with pure champagne-and-caviar energy, I can help bring it to life from my <a href=\"/voiceover-studio\">broadcast-quality voiceover studio</a>.</p>",
+ "rawDate": "April 2026",
+ "date": "2026-04-15",
+ "whatVideo": "1",
+ "alt": "Robin Leach Style Voiceover - Lifestyles of the Rich and Famous - Guy Harris VoiceoverGuy",
+ "rating": "3",
+ "blogRating": fromLegacyRating("3"),
+ "twitter": "",
+ "homeText": "Guy Harris delivers a Robin Leach style voiceover for a fun DNCE promo inspired by Lifestyles of the Rich and Famous.",
+ "santa": "",
+ "ntext1": "",
+ "ntext2": "",
+ "ntext3": "",
+ "ntext4": "",
+ "nimage1": "",
+ "nimage2": "",
+ "nimage3": "",
+ "nimage4": "",
+ "conflictsWithCorePage": false
  }
 ];
 

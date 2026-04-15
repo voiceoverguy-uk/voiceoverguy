@@ -1,0 +1,69 @@
+Create a new blog post for the new VoiceoverGuy site using the standard blog format. Keep the tone polished, fun, knowing, slightly flamboyant and professional. The copy should capture the over-the-top luxury spoof feel of the original TV style without sounding cheesy. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+Robin Leach Style Voiceover - Lifestyles of the Rich and Famous
+
+URL slug:
+lifestyle-of-the-rich-and-famous-robin-leach-style
+
+Date:
+2026-04-15
+
+Rating:
+middle
+
+Intro line:
+For a fun DNCE promo spoofing the extravagant world of Lifestyles of the Rich and Famous, I delivered a gloriously over-the-top Robin Leach style voiceover.
+
+Main text (block 1):
+<p>I voiced this promo for the band <strong>DNCE</strong> in the style of those wonderfully excessive <strong>Lifestyles of the Rich and Famous</strong> television intros from the 1980s. The video leans fully into the joke, showing off a spoof version of outrageous celebrity luxury, and the voice had to match that world perfectly.</p>
+<p>This kind of read is not subtle. It needs swagger, raised eyebrows, a certain knowing arrogance, and that slightly shouty, larger-than-life British delivery that instantly says money, glamour and absurd excess. It is a really fun style to perform because it gives you permission to be bolder, brasher and more theatrical than a straight commercial read ever would.</p>
+<p>The finished promo is a cracking little piece of fun, and a great example of how a characterful voice can help sell the joke while still keeping the whole thing sounding slick and broadcast-ready.</p>
+
+Text block 2:
+<p>The original <strong>Lifestyles of the Rich and Famous</strong> was famous for its celebration of celebrity excess, luxury homes, expensive cars and pure 1980s indulgence, and that is exactly the flavour this piece plays with. The voice style sits somewhere between old-school showbiz confidence, rich-list narration and slightly tongue-in-cheek luxury promo, which makes it a brilliant one to perform.</p>
+<p>There is a quirky rhythm to this type of read. It is not quite straight announcer, not quite movie trailer, and not quite parody either. It sits in that sweet spot where the voice feels familiar enough to instantly trigger the reference, while still sounding fresh, entertaining and strong on its own terms.</p>
+<p>If you enjoy this sort of voice, it also links nicely with some of the more heightened styles on my site, including <a href="/movie-trailer-voice">movie trailer voice</a>, <a href="/pathe-news-voice">Pathé-style voice</a>, <a href="/voice-of-god">Voice of God</a> and other character-led reads from my <a href="/character-voice-library">character voice library</a>.</p>
+
+Bottom text:
+<p>If you are looking for a voiceover with luxury swagger, old-school TV attitude and a big, playful British delivery, do get in touch. Whether it is a spoof campaign, a stylised promo, a comedy commercial or something with pure champagne-and-caviar energy, I can help bring it to life from my <a href="/voiceover-studio">broadcast-quality voiceover studio</a>.</p>
+
+Home excerpt:
+Guy Harris delivers a Robin Leach style voiceover for a fun DNCE promo inspired by Lifestyles of the Rich and Famous.
+
+Main image filename:
+lifestyle-of-the-rich-and-famous-robin-leach-style.jpg
+
+Media type:
+YouTube
+
+YouTube video ID:
+bEuSoDpzvak
+
+Meta description:
+Guy Harris performs a Robin Leach style voiceover for a DNCE promo inspired by Lifestyles of the Rich and Famous and its luxury 1980s TV swagger.
+
+Search terms:
+robin leach style voiceover","lifestyles of the rich and famous voice","robin leach voice impression","luxury promo voiceover","movie trailer style voiceover","british character voiceover","dnce promo voice
+
+Please also do the following:
+1. Render the blog in the same layout and style as the other blog posts on the new site.
+2. Make sure the YouTube embed displays correctly and responsively.
+3. Use the uploaded image lifestyle-of-the-rich-and-famous-robin-leach-style.jpg from the standard blog image folder.
+4. Resize and convert the uploaded image to WEBP for performance, while preserving the original visual as closely as possible.
+5. Use the optimised WEBP version on the blog page if that matches the current image pipeline for the new site.
+6. Add tasteful internal links within the copy to:
+   - /movie-trailer-voice
+   - /pathe-news-voice
+   - /voice-of-god
+   - /character-voice-library
+   - /voiceover-studio
+   - homepage
+7. Make sure the blog listing card uses the Home excerpt and main image correctly.
+8. Preserve clean spacing and a premium layout.
+9. Ensure the metadata and page structure are SEO-friendly.
+10. Add appropriate structured data for the blog post and video embed if the site already supports that pattern.
+11. Keep the page framed as a Robin Leach style / Lifestyles of the Rich and Famous style voiceover, not as a claim to literally be Robin Leach.
+12. Apply the rating as middle so this post sits in the middle-priority blog group if the rating system is active.
