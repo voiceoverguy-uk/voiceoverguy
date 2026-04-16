@@ -169,4 +169,10 @@ export const testimonials: Testimonial[] = [
     role: "Creative Director",
     company: "Redolution Ltd",
   },
+  {
+    quote: "Guy is a reliable and professional voice! As easy to work with as he is to listen to 😊",
+    name: "Dan MacKenzie",
+    role: "Producer",
+    company: "Bay Radio Network, Malta",
+  },
 ];
