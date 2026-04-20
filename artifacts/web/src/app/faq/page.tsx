@@ -49,16 +49,6 @@ export default function FAQ() {
                   style={{ width: '100%', height: 'auto', display: 'block' }}
                 />
               </div>
-              <div className="sidebar-box">
-                <h3>Popular Pages</h3>
-                <ul>
-                  <li><Link href="/commercial-voiceover">Commercial Voiceover</Link></li>
-                  <li><Link href="/voice-of-god">Voice of God</Link></li>
-                  <li><Link href="/santa-voice">Voice of Santa</Link></li>
-                  <li><Link href="/david-attenborough-voice">David Attenborough Style</Link></li>
-                  <li><Link href="/voiceover-studio">The Studio</Link></li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
