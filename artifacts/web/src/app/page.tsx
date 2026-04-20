@@ -18,7 +18,7 @@ const yr = new Date().getFullYear();
 
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
-  description: `Guy Harris is an award-winning British male voiceover artist with ${yrs}+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.`,
+  description: `Guy Harris is an award-winning British male voiceover artist. ${yrs}+ years experience, 200,000+ voiceovers. TV, radio, games, explainers, characters & events.`,
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/' },
 };
 
@@ -257,7 +257,7 @@ export default function Home() {
         <div className="container">
           <div className="home-callout-box home-callout-box--arabella">
             <div className="home-callout-box-text">
-              <h2>Need a <span className="text-red">British Child Voiceover</span>?</h2>
+              <h2>Looking for a child voiceover? Meet my daughter <span className="text-red">Arabella</span></h2>
               <p>
                 Meet my daughter <strong>Arabella Harris</strong>, a {arabellaAge}-year-old professional child voiceover artist with national credits including Tesco, Sainsbury&apos;s, Zara, Kinda, Currys, Geely and Heinz.
               </p>
@@ -468,7 +468,7 @@ export default function Home() {
                 '@type': 'WebPage',
                 '@id': 'https://www.voiceoverguy.co.uk/#webpage',
                 name: 'British Male Voiceover | Guy Harris \u2013 UK Voice Artist',
-                description: `Guy Harris is an award-winning British male voiceover artist with ${yrs}+ years experience. TV, radio, games, explainers, characters & events. Contact for a fast quote.`,
+                description: `Guy Harris is an award-winning British male voiceover artist. ${yrs}+ years experience, 200,000+ voiceovers. TV, radio, games, explainers, characters & events.`,
                 url: 'https://www.voiceoverguy.co.uk',
                 isPartOf: { '@id': 'https://www.voiceoverguy.co.uk/#website' },
                 about: { '@id': 'https://www.voiceoverguy.co.uk/#guyharris' },
