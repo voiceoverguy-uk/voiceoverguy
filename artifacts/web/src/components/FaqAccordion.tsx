@@ -39,7 +39,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Can I direct the session remotely?',
-    a: 'Absolutely. I\'m set up for directed remote sessions via Source Connect NEXUS, Cleanfeed, Zoom, Microsoft Teams, Skype, or any platform you prefer. I can also record a selection of reads for you to choose from without a live session.',
+    a: (<>Absolutely. My <Link href="/voiceover-studio">Studio</Link> is set up for directed remote sessions via Source NEXUS, Cleanfeed, Zoom, Microsoft Teams, or any platform you prefer. I can also record a selection of reads for you to choose from without a live session.</>),
   },
   {
     q: 'Why hire a human voiceover instead of AI?',
