@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import FaqAccordion from '@/components/FaqAccordion';
 import Link from 'next/link';
 import { SchemaScripts, faqPage } from '@/lib/staticPageSchema';
@@ -39,13 +40,12 @@ export default function FAQ() {
 
             <div>
               <div style={{ marginBottom: '24px', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/assets/images/busker-guy-faq-1.webp"
                   alt="Guy Harris, British male voiceover artist"
                   width={1000}
                   height={1250}
-                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 540px"
                   style={{ width: '100%', height: 'auto', display: 'block' }}
                 />
               </div>
