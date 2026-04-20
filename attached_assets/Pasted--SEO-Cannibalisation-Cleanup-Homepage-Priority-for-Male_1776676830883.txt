@@ -1,0 +1,185 @@
+# SEO Cannibalisation Cleanup – Homepage Priority for "Male Voiceover"
+
+Objective:
+Refine a small group of existing pages so the homepage becomes the clearest and strongest ranking target for:
+- male voiceover
+- British male voiceover
+- male voiceover artist
+- UK male voiceover
+
+Do NOT delete pages immediately.
+Do NOT make reckless SEO changes.
+Do NOT change any URL slugs in this task.
+This is a controlled intent-cleanup and internal-linking task.
+
+Context:
+The homepage is the page we want Google to treat as the primary result for broad commercial queries such as:
+- male voiceover
+- British male voiceover
+- male voiceover artist
+- UK voice artist
+
+Google is currently showing some cannibalisation / mixed intent across these pages:
+- /voiceover-services-uk
+- /why-use-voiceoverguy
+- /english-voiceover
+
+The site has recently been rebuilt and improved technically, so we do not want to overreact or remove pages without checking internal links and purpose first.
+
+Important:
+- Preserve the homepage as the main SEO target for broad "male voiceover" intent
+- Reposition the other pages so they support the homepage instead of competing with it
+- Keep British spelling
+- Do not use em dashes
+- Keep the tone polished, professional, human and natural
+- No spammy keyword stuffing
+- No unnecessary rewrites of unrelated pages
+- Do not create redirect chains
+- Do not implement any 301 redirects in this task unless explicitly listed in the final recommendations and only if the page clearly has no strategic value
+
+Pages to audit and retarget:
+1. /voiceover-services-uk
+2. /why-use-voiceoverguy
+3. /english-voiceover
+
+What & Why:
+Search Console suggests Google is testing multiple pages from the site for "male voiceover" related intent. We want to reduce overlap and strengthen the homepage as the dominant answer, while preserving useful pages that serve a distinct purpose.
+
+Tasks:
+
+1) Audit the 3 pages for cannibalisation risk
+For each of the following pages:
+- /voiceover-services-uk
+- /why-use-voiceoverguy
+- /english-voiceover
+
+Review:
+- title tag
+- meta description
+- H1
+- opening paragraph
+- subheadings
+- repeated keyword phrases
+- internal links pointing in and out
+- whether the page is trying to target broad "male voiceover" intent
+- whether the page has a distinct search purpose or is overlapping the homepage
+
+2) Reposition each page to a clearer role
+
+A. /voiceover-services-uk
+This page currently risks competing directly with the homepage.
+Retarget it away from broad "male voiceover" language and toward a broader service overview role.
+
+Requirements:
+- Replace any overly homepage-competing title such as "Hire a Professional Male Voiceover Artist"
+- New title should focus on UK voiceover services / voiceover services in the UK / types of voiceover work
+- H1 and opening copy should describe the page as a broader services overview, not the main male voiceover landing page
+- Reduce use of exact phrases like:
+  - male voiceover
+  - British male voiceover
+  - male voiceover artist
+unless naturally necessary
+- Add one sensible internal link to the homepage using natural anchor text such as:
+  - British male voiceover artist
+  - professional male voiceover
+  - Guy Harris homepage
+- Keep the page useful if it has value, but remove any sense that it is the main page for the broad target term
+
+B. /why-use-voiceoverguy
+Turn this into a trust / conversion support page, not a ranking competitor.
+
+Requirements:
+- Reframe the title, H1 and opening section around:
+  - why clients choose Guy Harris
+  - experience
+  - reliability
+  - studio quality
+  - speed
+  - credits
+  - versatility
+  - broadcast-quality audio
+- This page should support conversion and trust, not target "male voiceover" as the primary phrase
+- Remove or soften any repeated broad-match homepage keyword targeting
+- Add a clear internal link back to the homepage with a natural anchor such as:
+  - British male voiceover artist
+  - Guy Harris
+  - homepage
+- Improve this page so it feels like a persuasive support page that helps both users and Google understand why Guy is trusted
+
+C. /english-voiceover
+This page should only exist if it has a clear purpose distinct from the homepage.
+It should not compete for broad "male voiceover" intent.
+
+Requirements:
+- Rewrite title, H1 and opening content to focus tightly on "English voiceover" only
+- Remove wording that makes it sound like an alternate homepage or broad male voiceover landing page
+- Make sure the page clearly serves users looking specifically for an English voiceover artist or English voice style
+- Add a natural supporting link to the homepage where appropriate
+- If, after review, the page appears redundant, weak, or strategically unnecessary, do NOT delete it yet. Instead flag it in the final report as a possible future 301 redirect candidate after internal link checks and further monitoring
+
+3) Internal link audit
+Before changing anything structural, scan the site for internal links pointing to these three pages.
+
+Check:
+- header navigation
+- footer navigation
+- service pages
+- blog posts
+- homepage sections
+- breadcrumbs
+- CTAs
+- sitemap references
+- schema references if applicable
+
+For each of the 3 pages, report:
+- how many internal links point to it
+- from which important pages
+- whether those links should stay, be updated, or be reduced
+
+4) Protect the homepage as the primary target
+Review the homepage only lightly in this task.
+Do NOT rewrite the homepage heavily.
+Just confirm that it remains the clearest target for:
+- male voiceover
+- British male voiceover
+- UK male voiceover artist
+
+Check:
+- title tag
+- H1
+- opening copy
+- internal links from the three support pages back to the homepage
+
+If a very small wording improvement is needed to reinforce intent, suggest it in the final report, but do not make major homepage changes in this task.
+
+5) Produce revised copy suggestions
+For each of the 3 pages, provide:
+- proposed new title tag
+- proposed new meta description
+- proposed H1
+- revised opening paragraph
+- notes on which phrases were softened to reduce cannibalisation
+- suggested internal link anchor text back to the homepage
+
+6) Final recommendation section
+At the end, provide a short report with:
+- Which page should clearly own "male voiceover" intent
+- Which of the 3 pages are worth keeping and why
+- Which page is the weakest strategic fit
+- Whether any page should become a future 301 redirect candidate
+- Any internal links that should be changed
+- Any risks or cautions before deleting / redirecting anything
+
+Done looks like:
+- Homepage remains the strongest broad target for "male voiceover"
+- /voiceover-services-uk no longer competes directly with the homepage
+- /why-use-voiceoverguy becomes a trust and conversion support page
+- /english-voiceover is either clearly retargeted to "English voiceover" only or flagged as a future redirect candidate
+- Competing keyword usage is softened across the 3 pages
+- Internal link relationships are checked before any future removals
+- Replit provides specific rewritten title/meta/H1/opening copy suggestions for each page
+- No redirects are implemented blindly
+- The site architecture remains stable and cleaner for Google
+
+Important final instruction:
+Please inspect the actual existing content of these pages in the codebase before suggesting rewrites. Do not invent page copy or assumptions. Base the recommendations on the live page content currently in the project.
