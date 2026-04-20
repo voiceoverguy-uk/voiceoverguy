@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 const PLACE_ID = 'ChIJL1W4QyVneUgRBV8j4XrOzaM';
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 const DEFAULT_RATING = 5.0;
-const DEFAULT_COUNT = 120;
+const DEFAULT_COUNT = 119;
 
 let cached: { rating: number; reviewCount: number; fetchedAt: number } | null = null;
 

@@ -380,8 +380,8 @@ export default function Home() {
                   ratingValue: '5',
                   bestRating: '5',
                   worstRating: '1',
-                  ratingCount: '120',
-                  reviewCount: '120',
+                  ratingCount: '119',
+                  reviewCount: '119',
                 },
                 sameAs: [
                   'https://www.linkedin.com/in/voiceoverguy/',

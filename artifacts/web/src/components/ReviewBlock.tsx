@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 const DEFAULT_RATING = 5.0;
-const DEFAULT_COUNT = 120;
+const DEFAULT_COUNT = 119;
 
 export default function ReviewBlock() {
   const [rating, setRating] = useState(DEFAULT_RATING);
