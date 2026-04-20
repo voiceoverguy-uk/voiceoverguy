@@ -6,3 +6,15 @@ id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
 type = "text"
 title = "Internal Linking Audit Report"
+
+[[outputs]]
+id = "7_6q1ioEX2GaU6gJV_VzL"
+uri = "file://artifacts/web/public/assets/images/busker-guy-faq-1.webp"
+type = "image"
+title = "Busker Guy (with gradient)"
+
+[[outputs]]
+id = "4TwpX53octbxxSbEoNLKK"
+uri = "file://artifacts/web/public/assets/images/performer-guy-faq-1.webp"
+type = "image"
+title = "Performer Guy (with gradient)"
