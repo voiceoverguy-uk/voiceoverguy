@@ -8001,7 +8001,7 @@ const blogPosts: BlogPost[] = [
  "image": "male-voiceover-in-booth.jpg",
  "video": "TqkdBK8mBW8",
  "metaTitle": "Why Use VoiceoverGuy? UK VO Artist Since 2000",
- "bottomText": "<p>\r\nIf you need a voice that’s fast, reliable, easy to direct, and delivers broadcast-quality audio every single time… you’ve found the right Guy.\r\n</p>\r\n<p>\r\nWhy not hear my <a href=\"/david-attenborough-voice\" title=\"David Attenborough Voice\">Attenborough style</a> or my <a href=\"/santa-voice\" title=\"Santa Voiceover\">Santa voice</a> to get a feel for what I can do? If you’d rather start at the beginning, my <a href=\"/\" title=\"British male voiceover artist\">British male voiceover artist</a> homepage has my latest demos and showreels.\r\n</p>",
+ "bottomText": "<p>\r\nIf you need a voice that’s fast, reliable, easy to direct, and delivers broadcast-quality audio every single time… you’ve found the right Guy.\r\n</p>\r\n<p>\r\nWhy not hear my <a href=\"/david-attenborough-voice\" title=\"David Attenborough Voice\">Attenborough style</a> or my <a href=\"/santa-voice\" title=\"Santa Voiceover\">Santa voice</a> to get a feel for what I can do? You can also browse my full range of <a href=\"/voiceover-services-uk\" title=\"UK voiceover services\">UK voiceover services</a> to find the right style for your project. If you’d rather start at the beginning, my <a href=\"/\" title=\"British male voiceover artist\">British male voiceover artist</a> homepage has my latest demos and showreels.\r\n</p>",
  "rawDate": "Nov 25",
  "date": "2025-11-01",
  "whatVideo": "1",
