@@ -1,0 +1,68 @@
+Create a new blog post for the new VoiceoverGuy site using the standard blog format. Keep the tone fun, polished, behind-the-scenes and professional. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+Aquarabia Promo Voice, Screams, Shouts and Ride Reactions
+
+URL slug:
+aquarabia-promo-voice-screams-shouts-reactions
+
+Date:
+2026-04-23
+
+Rating:
+middle
+
+Intro line:
+For the launch promo for Aquarabia at Qiddiya City, I provided screams, shouts, laughs and full-on ride reactions, with Arabella joining in for the child voice moments too.
+
+Main text (block 1):
+<p>This was one of those jobs that reminds you just how varied voice work can be. For the launch promo for <strong>Aquarabia</strong> at <strong>Qiddiya City</strong>, the team did not need a traditional voiceover read. They needed the sounds of people actually living the experience: screams, shouts, whoops, laughs, startled reactions and full-throttle ride noise.</p>
+<p>The promo itself showcases a huge new water park packed with rides, slides and themed zones, with filming from all over the park to capture the scale and energy of the launch. From the material supplied, it is clear this is being positioned as a major new attraction, with areas including <strong>Wave Wadi</strong>, <strong>Camel Rock</strong>, <strong>Herding Grounds</strong>, <strong>Arabian Peak</strong>, <strong>Surf Lagoon</strong>, <strong>Viper Canyon</strong>, <strong>Dhub Grotto</strong> and <strong>The Den</strong>.</p>
+<p>Rather than narrating it, my job was to help make those visuals feel real. So that meant throwing myself into the session and recording every kind of ride reaction you can imagine, from joyful laughter to proper panicked tunnel noises.</p>
+
+Text block 2:
+<p>The brilliant sound design and overall direction came together through Chris at <a href="https://withfeeling.com/" target="_blank" rel="noopener noreferrer">With Feeling</a> in Dubai. I have worked with Chris on other fun projects too, including a rather ridiculous session where my main task was shouting <a href="/the-most-challenging-voiceover-job">"Noooooo!" for an advert</a>. He always brings creativity and energy to projects, and this one was no different.</p>
+<p>One of the funniest moments in this session came when I ended up standing with a plastic box over my head to create a more enclosed, echoey sound, helping represent someone shooting through a tunnel slide. You can hear that sort of effect in the promo, including around the 0:51 mark. It looked absurd, but it did the job beautifully.</p>
+<p>And then came the child voice moments. That is where my daughter <a href="/arabella-harris-girl-child-voiceover-kid">Arabella Harris</a> got involved. Between the two of us, we whooped, cheered, screamed and laughed our way through the promo, helping give it the right mix of family fun, excitement and real reaction.</p>
+
+Bottom text:
+<p>If you need authentic screams, shouts, crowd reactions, tunnel effects, whoops or other characterful human sounds for a promo, theme park video, ride film, attraction launch or branded campaign, do get in touch. These sorts of sessions are enormous fun, but they also need proper control, performance and clean recording to work well in the final mix. And if you need bigger movie-style screams too, have a look at my <a href="/wilhelm-scream-shreek-shout-sfx-voiceover-film">Wilhelm scream, shrieks, shouts and scream effects page</a>.</p>
+
+Home excerpt:
+Guy Harris and Arabella provided screams, shouts, laughs and ride reactions for the Aquarabia launch promo at Qiddiya City.
+
+Main image filename:
+aquarabia-promo-voice-scream-woah-laughs.jpg
+
+Media type:
+YouTube
+
+YouTube video ID:
+jtHMlkcbN_w
+
+Meta description:
+Guy Harris and Arabella provided screams, shouts and ride reactions for the Aquarabia launch promo at Qiddiya City, produced with With Feeling.
+
+Search terms:
+aquarabia promo voice","water park promo voiceover","theme park screams and shouts","ride reaction sound effects","qiddiya city aquarabia promo","with feeling dubai voiceover","wilhelm scream style voice
+
+Please also do the following:
+1. Render the blog in the same layout and style as the other blog posts on the new site.
+2. Make sure the YouTube embed displays correctly and responsively.
+3. Use the uploaded image aquarabia-promo-voice-scream-woah-laughs.jpg from the standard blog image folder.
+4. Convert the uploaded image to WEBP for performance if that matches the current image pipeline, while preserving the original visual.
+5. Add tasteful internal links within the copy to:
+   - https://withfeeling.com/
+   - /the-most-challenging-voiceover-job
+   - /arabella-harris-girl-child-voiceover-kid
+   - /wilhelm-scream-shreek-shout-sfx-voiceover-film
+   - homepage
+6. Make sure the blog listing card uses the Home excerpt and main image correctly.
+7. Preserve clean spacing and a premium layout.
+8. Ensure the metadata and page structure are SEO-friendly.
+9. Add appropriate structured data for the blog post and YouTube embed if the site already supports that pattern.
+10. Apply the rating as middle so this post sits in the middle-priority blog group if the rating system is active.
+
+For context only, this post is about the launch promo video published on 23rd April 2026 for Aquarabia at Qiddiya City, where Guy provided screams, shouts, laughs and tunnel-style reactions, and Arabella contributed child voice reactions.
