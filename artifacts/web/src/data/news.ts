@@ -23,6 +23,12 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("It's not all voicing. The new Aquarabia Water Park needed some cheers and screams, myself and daughter stepped up. "),
+      link("Watch the Promo!", "https://www.youtube.com/watch?v=jtHMlkcbN_w", true),
+    ],
+  },
+  {
+    segments: [
       t("Listen out online for the Easter campaign for Peters Yard, Award winning sour dough crackers!"),
     ],
   },
