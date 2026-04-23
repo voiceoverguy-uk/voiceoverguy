@@ -23,6 +23,13 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("You may have heard the mini advert on the radio as it's everywhere! "),
+      link("All 3 voices are mine", "/mini-cooper-radio-advert-character-voiceover"),
+      t("."),
+    ],
+  },
+  {
+    segments: [
       t("It's not all voicing. The new Aquarabia Water Park needed some cheers and screams, myself and daughter stepped up. "),
       link("Watch the Promo!", "https://www.youtube.com/watch?v=jtHMlkcbN_w", true),
     ],
