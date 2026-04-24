@@ -1,0 +1,159 @@
+Objective:
+Audit and fix remaining legacy redirect issues reported in Google Search Console for voiceoverguy.co.uk, with special attention to any URLs currently returning 403 Forbidden or 404 Not Found instead of cleanly redirecting to the correct modern canonical page.
+
+Context:
+Google Search Console is reporting “Page with redirect”. Most tested URLs are redirecting correctly either to the homepage or to the correct modern page, which is fine. However, a small number of legacy URLs are still failing and need targeted redirect fixes.
+
+Do not refactor the site. Do not change page content, design, routes, metadata, schema, or sitemap behaviour unless directly required to fix these legacy redirect problems.
+
+Primary issue URLs to fix:
+
+1. This URL currently returns 403 Forbidden:
+https://www.voiceoverguy.co.uk/gameshow-host.php
+
+It must 301 redirect to:
+https://www.voiceoverguy.co.uk/gameshow-host
+
+2. These legacy blog/news URLs currently return the custom 404 page:
+http://www.voiceoverguy.co.uk/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+https://www.voiceoverguy.co.uk/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+
+They must 301 redirect to:
+https://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover
+
+3. This legacy query-parameter URL currently returns the custom 404 page:
+http://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover?url=voiceover-newslatest-voiceover-news/bank-sohar-explainer-voiceover/voiceover-news
+
+It must 301 redirect cleanly to:
+https://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover
+
+Tasks:
+
+1. Inspect the current redirect setup
+Check:
+- vercel.json
+- next.config.js
+- any middleware, redirects, rewrites, headers, or route handlers
+- legacy redirect mapping files if present
+- custom 404 handling
+- public/static handling for .php requests
+
+2. Fix the 403 on /gameshow-host.php
+Find why /gameshow-host.php is returning 403 Forbidden.
+Add or correct the redirect so that the request is caught before any forbidden/static handling.
+It should return a clean 301 redirect to /gameshow-host.
+
+Required result:
+https://www.voiceoverguy.co.uk/gameshow-host.php
+→ 301
+→ https://www.voiceoverguy.co.uk/gameshow-host
+→ 200
+
+3. Fix the old blog/news path redirects
+Add targeted 301 redirects for the old Bank Sohar blog/news paths:
+
+/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover
+/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+
+Both should redirect to:
+/bank-sohar-explainer-voiceover
+
+Required result:
+http://www.voiceoverguy.co.uk/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+→ 301
+→ https://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover
+→ 200
+
+https://www.voiceoverguy.co.uk/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+→ 301
+→ https://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover
+→ 200
+
+4. Fix legacy ?url= query variants where needed
+Check whether the site is currently mishandling legacy URLs like:
+
+/bank-sohar-explainer-voiceover?url=voiceover-newslatest-voiceover-news/bank-sohar-explainer-voiceover/voiceover-news
+
+This should not go to the 404 page.
+
+If a request is already on a valid modern slug but includes a legacy ?url= parameter, strip the query parameter and 301 redirect to the clean canonical URL.
+
+Required result:
+http://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover?url=voiceover-newslatest-voiceover-news/bank-sohar-explainer-voiceover/voiceover-news
+→ 301
+→ https://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover
+→ 200
+
+Important:
+Do not create broad query-parameter behaviour that accidentally breaks normal tracking parameters unless there is already a safe canonical-cleaning pattern in place. If implementing query cleanup, keep it targeted to legacy `url=` parameters only.
+
+5. Check for similar legacy blog/news patterns
+Search the codebase and existing redirect maps for old URL structures like:
+
+/voiceover-news/latest-voiceover-news/
+/voiceover-newslatest-voiceover-news/
+?url=voiceover-news
+?url=voiceover-newslatest
+
+If matching redirect patterns already exist, make sure Bank Sohar is included.
+If there are other obvious legacy blog/news entries with modern slug equivalents, report them before changing them unless they are clearly already part of an existing redirect map.
+
+6. Check current site output for bad internal references
+Search all current source/content for internal links pointing to:
+- http://www.voiceoverguy.co.uk
+- http://voiceoverguy.co.uk
+- https://voiceoverguy.co.uk
+- /index
+- .php
+- /voiceover-news/latest-voiceover-news/
+- /voiceover-newslatest-voiceover-news/
+- ?url=
+
+Do not mass-edit content blindly.
+Report any findings first unless they are clearly broken internal links that should point to an existing modern route.
+
+7. Confirm sitemap and canonical cleanliness
+Check generated sitemap and metadata output to ensure these failing legacy URLs are not present in:
+- sitemap.xml
+- canonical URLs
+- Open Graph URLs
+- Twitter card URLs
+- JSON-LD schema URLs
+- breadcrumbs
+
+All current public URLs should use:
+https://www.voiceoverguy.co.uk/[modern-slug]
+
+8. Test with curl or equivalent
+After making targeted fixes, provide test results for these exact URLs:
+
+https://www.voiceoverguy.co.uk/gameshow-host.php
+http://www.voiceoverguy.co.uk/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+https://www.voiceoverguy.co.uk/voiceover-news/latest-voiceover-news/bank-sohar-explainer-voiceover/
+http://www.voiceoverguy.co.uk/bank-sohar-explainer-voiceover?url=voiceover-newslatest-voiceover-news/bank-sohar-explainer-voiceover/voiceover-news
+
+For each one, show:
+- starting URL
+- redirect status
+- final URL
+- final status code
+- whether the final URL is indexable
+
+Acceptance criteria:
+- /gameshow-host.php no longer returns 403.
+- The Bank Sohar legacy blog/news URLs no longer return 404.
+- All listed problem URLs resolve by 301 redirect to the correct canonical HTTPS www URL.
+- Final destination pages return 200.
+- No redirect chain longer than necessary.
+- No current sitemap, canonical, schema, OG, or internal link output references the old failing URLs.
+- No broad redirect rule is added that could accidentally redirect unrelated valid pages.
+- No visual/design/content changes are made.
+
+Out of scope:
+- Do not redesign the 404 page.
+- Do not change page copy.
+- Do not alter SEO titles/descriptions unless a broken canonical URL is found.
+- Do not change unrelated redirects.
+- Do not remove working legacy redirects unless they are demonstrably wrong.
+
+Please complete this as a targeted redirect and legacy URL cleanup only.
