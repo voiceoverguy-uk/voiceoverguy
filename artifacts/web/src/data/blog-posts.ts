@@ -3,6 +3,7 @@
 // Generated: 2026-03-16T01:24:28.888Z
 
 import { fromLegacyRating, type BlogRating } from '@/lib/blogRating';
+import { getCleanSlug } from '@/lib/slug';
 
 export interface BlogPost {
  id: number;
@@ -8506,22 +8507,18 @@ const blogPosts: BlogPost[] = [
 
 export default blogPosts;
 
-function isCleanSlug(slug: string): boolean {
- return slug.length > 0 && !/[\s/?#%]/.test(slug);
-}
-
 export function getBlogPost(slug: string): BlogPost | undefined {
- const cleaned = (slug || '').trim();
+ const cleaned = getCleanSlug(slug);
  if (!cleaned) return undefined;
- return blogPosts.find(p => (p.url || '').trim() === cleaned);
+ return blogPosts.find(p => getCleanSlug(p.url) === cleaned);
 }
 
 export function getAllBlogSlugs(): string[] {
  const out: string[] = [];
  for (const p of blogPosts) {
   if (p.conflictsWithCorePage) continue;
-  const cleaned = (p.url || '').trim();
-  if (!isCleanSlug(cleaned)) {
+  const cleaned = getCleanSlug(p.url);
+  if (!cleaned) {
    if (typeof console !== 'undefined') {
     console.warn(`[blog-posts] Skipping post id=${p.id} with invalid slug ${JSON.stringify(p.url)}`);
    }

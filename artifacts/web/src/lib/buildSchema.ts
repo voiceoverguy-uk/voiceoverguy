@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/data/blog-posts';
+import { getCleanSlug } from '@/lib/slug';
 
 const SITE_URL = 'https://www.voiceoverguy.co.uk';
 const SITE_NAME = 'VoiceoverGuy';
@@ -16,7 +17,13 @@ function toIsoDate(dateStr: string | null): string {
 }
 
 function getCanonical(slug: string): string {
-  const cleaned = (slug || '').trim();
+  const cleaned = getCleanSlug(slug);
+  if (!cleaned) {
+    if (typeof console !== 'undefined') {
+      console.warn(`[buildSchema] getCanonical received invalid slug ${JSON.stringify(slug)}; falling back to site root`);
+    }
+    return SITE_URL;
+  }
   return `${SITE_URL}/${cleaned}`;
 }
 

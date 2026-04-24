@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getBlogPost, getAllBlogSlugs, type BlogPost as BlogPostType } from '@/data/blog-posts';
+import { getCleanSlug } from '@/lib/slug';
 import BlogPost from '@/components/BlogPost';
 
 interface Props {
@@ -59,12 +60,13 @@ function toIso(dateStr: string | null): string | undefined {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const cleanSlug = (params.slug || '').trim();
+  const cleanSlug = getCleanSlug(params.slug);
+  if (!cleanSlug) return { title: 'Page Not Found' };
   const post = getBlogPost(cleanSlug);
   if (post && !post.conflictsWithCorePage) {
     const title = post.metaTitle || post.pageTitle;
     const description = getOgDescription(post);
-    const slugForUrl = (post.url || cleanSlug).trim();
+    const slugForUrl = getCleanSlug(post.url) ?? cleanSlug;
     const canonical = `${SITE_URL}/${slugForUrl}`;
     const ogImage = getOgImage(post);
     const imageAlt = post.alt || post.pageTitle;
@@ -104,7 +106,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function SlugPage({ params }: Props) {
-  const post = getBlogPost((params.slug || '').trim());
+  const cleanSlug = getCleanSlug(params.slug);
+  if (!cleanSlug) notFound();
+  const post = getBlogPost(cleanSlug);
   if (post && !post.conflictsWithCorePage) {
     return <BlogPost post={post} />;
   }
