@@ -59,11 +59,13 @@ function toIso(dateStr: string | null): string | undefined {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getBlogPost(params.slug);
+  const cleanSlug = (params.slug || '').trim();
+  const post = getBlogPost(cleanSlug);
   if (post && !post.conflictsWithCorePage) {
     const title = post.metaTitle || post.pageTitle;
     const description = getOgDescription(post);
-    const canonical = `${SITE_URL}/${params.slug}`;
+    const slugForUrl = (post.url || cleanSlug).trim();
+    const canonical = `${SITE_URL}/${slugForUrl}`;
     const ogImage = getOgImage(post);
     const imageAlt = post.alt || post.pageTitle;
     const publishedTime = toIso(post.date);
@@ -102,7 +104,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function SlugPage({ params }: Props) {
-  const post = getBlogPost(params.slug);
+  const post = getBlogPost((params.slug || '').trim());
   if (post && !post.conflictsWithCorePage) {
     return <BlogPost post={post} />;
   }

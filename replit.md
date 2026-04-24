@@ -38,6 +38,7 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
     - AI-powered script generators (Attenborough and Santa) with dark themes.
     - Responsive components for various content types (YouTube/Vimeo embeds, images, text).
     - Comprehensive SEO infrastructure: `robots.txt`, `sitemap.xml`, canonical tags, title templating, JSON-LD for blog posts.
+    - Canonical URL hygiene: `getBlogPost`, `getAllBlogSlugs` (`src/data/blog-posts.ts`), `getCanonical` (`src/lib/buildSchema.ts`), and `[slug]/page.tsx` defensively trim slugs and skip any with internal whitespace or URL-reserved characters, preventing accidental `%20` in canonical / OG / Twitter / JSON-LD URLs.
     - Blog system with 262 posts, parsed from SQL, supporting various media types and structured data.
     - Integration of Google Reviews (live rating + count via `/api/reviews`).
 - **Design Patterns:** Uses a shared `InnerPage` component for consistent layout of content sections.

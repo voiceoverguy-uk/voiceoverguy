@@ -16,7 +16,8 @@ function toIsoDate(dateStr: string | null): string {
 }
 
 function getCanonical(slug: string): string {
-  return `${SITE_URL}/${slug}`;
+  const cleaned = (slug || '').trim();
+  return `${SITE_URL}/${cleaned}`;
 }
 
 function getDescription(post: BlogPost): string {
