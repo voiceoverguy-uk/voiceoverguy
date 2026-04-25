@@ -18,6 +18,14 @@
     { "source": "/blog-wall", "destination": "/voiceover-news", "permanent": true },
     { "source": "/blog-wall/", "destination": "/voiceover-news", "permanent": true },
     { "source": "/voiceover-newslatest-voiceover-news/:path*", "destination": "/voiceover-news", "permanent": true },
+    { "source": "/voiceover-news/latest-voiceover-news/:slug", "destination": "/:slug", "permanent": true },
+    { "source": "/voiceover-news/latest-voiceover-news/:slug/", "destination": "/:slug", "permanent": true },
+    {
+      "source": "/:slug",
+      "has": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "/:slug?url=",
+      "permanent": true
+    },
 
     { "source": "/play-to-the-whistle-football-commentator", "destination": "/football-commentator-voice", "permanent": true },
     { "source": "/play-to-the-whistle-football-commentator/", "destination": "/football-commentator-voice", "permanent": true },
