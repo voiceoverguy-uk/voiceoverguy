@@ -23,7 +23,13 @@
     {
       "source": "/:slug",
       "has": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
-      "destination": "/:slug?url=",
+      "destination": "/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/:slug/",
+      "has": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "/:slug",
       "permanent": true
     },
 
