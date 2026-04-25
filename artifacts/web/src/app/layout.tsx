@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
     description: `Guy Harris is a professional British male voiceover artist with over ${yrs} years experience. Award-winning voice for TV, radio, games, explainers and events.`,
-    url: 'https://www.voiceoverguy.co.uk',
+    url: 'https://www.voiceoverguy.co.uk/',
     siteName: 'VoiceoverGuy',
     images: [
       {

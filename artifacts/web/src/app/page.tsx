@@ -19,21 +19,7 @@ const yr = new Date().getFullYear();
 export const metadata: Metadata = {
   title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
   description: `Guy Harris is an award-winning British male voiceover artist. ${yrs}+ years experience, 200,000+ voiceovers. TV, radio, games, explainers, characters & events.`,
-  openGraph: {
-    title: 'British Male Voiceover | Guy Harris – UK Voice Artist',
-    description: `Guy Harris is a professional British male voiceover artist with over ${yrs} years experience. Award-winning voice for TV, radio, games, explainers and events.`,
-    siteName: 'VoiceoverGuy',
-    images: [
-      {
-        url: '/assets/images/og-image-guy-harris.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Guy Harris – British Male Voiceover Artist – VoiceoverGuy',
-      },
-    ],
-    locale: 'en_GB',
-    type: 'website',
-  },
+  alternates: { canonical: 'https://www.voiceoverguy.co.uk/' },
 };
 
 
@@ -97,15 +83,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Homepage canonical and og:url with explicit trailing slash to match
-          the live URL https://www.voiceoverguy.co.uk/ exactly. Rendered here
-          (not via the Next metadata API) because Next 14.2 hard-codes a
-          root-pathname strip in resolveAbsoluteUrlWithPathname which turns
-          'https://www.voiceoverguy.co.uk/' into 'https://www.voiceoverguy.co.uk'
-          (no slash). React 19 hoists these into <head>. */}
-      <link rel="canonical" href="https://www.voiceoverguy.co.uk/" />
-      <meta property="og:url" content="https://www.voiceoverguy.co.uk/" />
-
       {/* HERO */}
       <section className="hero">
         <div className="container">
