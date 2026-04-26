@@ -29,14 +29,16 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("Listen out online for the Easter campaign for Peters Yard, Award winning sour dough crackers!"),
+      t("At The Farm Studio in London I became the voice of the National Mini Cooper Campaign. "),
+      link("Hear it here", "/mini-cooper-radio-advert-character-voiceover"),
+      t("!"),
     ],
   },
   {
     segments: [
-      t("At The Farm Studio in London I became the voice of the National Mini Cooper Campaign. "),
-      link("Hear it here", "/mini-cooper-radio-advert-character-voiceover"),
-      t("!"),
+      t("So proud to be LEGO Minifigure CakeGuy for Legoland Resort Windsor. You'll hear him every day at the Daily Park Opening Ceremony in 2026. "),
+      link("Watch him in action", "https://youtu.be/ngZl5udQ83s?si=2GpOmCQEGHJVDUO4&t=102", true),
+      t("."),
     ],
   },
   {
@@ -55,13 +57,13 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("How is your breath? Need a freshen? You need the Breath CO Mouthwash! Oh, I voiced the ad! "),
-      link("Check it out!", "https://www.youtube.com/watch?v=0zD403Bp3sc", true),
+      t("Listen out online for the Easter campaign for Peters Yard, Award winning sour dough crackers!"),
     ],
   },
   {
     segments: [
-      t("So proud to be LEGO Minifigure CakeGuy for Legoland Resort Windsor. You'll hear him every day at the Daily Park Opening Ceremony in 2026."),
+      t("How is your breath? Need a freshen? You need the Breath CO Mouthwash! Oh, I voiced the ad! "),
+      link("Check it out!", "https://www.youtube.com/watch?v=0zD403Bp3sc", true),
     ],
   },
   {
