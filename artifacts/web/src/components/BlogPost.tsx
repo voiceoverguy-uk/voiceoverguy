@@ -23,10 +23,13 @@ function MediaBlock({ post }: { post: BlogPostType }) {
 
   if (wv === '1' && video && !video.startsWith('<iframe')) {
     const ytId = video.replace(/\/.*$/, '').trim();
+    const start = typeof post.videoStart === 'number' && post.videoStart > 0
+      ? `?start=${Math.floor(post.videoStart)}`
+      : '';
     return (
       <div className="embed-wrap">
         <iframe
-          src={`https://www.youtube.com/embed/${ytId}`}
+          src={`https://www.youtube.com/embed/${ytId}${start}`}
           title={post.pageTitle}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

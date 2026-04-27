@@ -37,7 +37,7 @@ export const newsItems: NewsItem[] = [
   {
     segments: [
       t("So proud to be LEGO Minifigure CakeGuy for Legoland Resort Windsor. You'll hear him every day at the Daily Park Opening Ceremony in 2026. "),
-      link("Watch him in action", "https://youtu.be/ngZl5udQ83s?si=2GpOmCQEGHJVDUO4&t=102", true),
+      link("Watch him in action", "/voice-of-cake-guy-legoland-windsor"),
       t("."),
     ],
   },

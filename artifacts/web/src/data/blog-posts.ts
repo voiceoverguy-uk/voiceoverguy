@@ -38,6 +38,7 @@ export interface BlogPost {
  conflictsWithCorePage: boolean; // true = slug already handled by a core Next.js page
  localAudio?: string; // optional local MP3 path, replaces SoundCloud embed
  audioSrc?: string; // optional full-width audio player with download, shown below text1
+ videoStart?: number; // optional YouTube start offset in seconds (whatVideo === '1')
 }
 
 const blogPosts: BlogPost[] = [
@@ -8492,6 +8493,39 @@ const blogPosts: BlogPost[] = [
  "blogRating": fromLegacyRating("3"),
  "twitter": "",
  "homeText": "Guy Harris and Arabella provided screams, shouts, laughs and ride reactions for the Aquarabia launch promo at Qiddiya City.",
+ "santa": "",
+ "ntext1": "",
+ "ntext2": "",
+ "ntext3": "",
+ "ntext4": "",
+ "nimage1": "",
+ "nimage2": "",
+ "nimage3": "",
+ "nimage4": "",
+ "conflictsWithCorePage": false
+ },
+ {
+ "id": 1003,
+ "url": "voice-of-cake-guy-legoland-windsor",
+ "pageTitle": "Voice of Cake Guy at LEGOLAND Windsor",
+ "info": "I am the voice of Cake Guy at LEGOLAND Windsor, helping kick off the park day with a high-energy birthday show for the Resort's 30th celebrations.",
+ "searchTerms": "voice of cake guy,legoland windsor cake guy,theme park character voiceover,legoland windsor 30th birthday,family attraction voiceover,character voice artist uk,guy harris cake guy",
+ "pageDesc": "Guy Harris is the voice of Cake Guy at LEGOLAND Windsor, bringing high-energy character fun to the Resort's 30th birthday opening show.",
+ "text1": "<p>I am the voice of <strong>Cake Guy</strong> at <strong>LEGOLAND Windsor Resort</strong>, where he appears in the opening celebration show at the front of the park as part of the Resort's 30th birthday festivities. It is a lively, feel-good start to the day designed to get families smiling, clapping and properly in the mood for everything ahead.</p>\n<p>The 30th birthday celebrations have been built around a big family day out, packed with fun touches including brand-new shows, LEGO characters and a giant 8-foot LEGO birthday cake. Cake Guy is right at the heart of that atmosphere, helping welcome guests into the park and encouraging the crowd to join in with the song-and-dance routine.</p>\n<p>It is a really catchy, upbeat show and exactly the sort of character voice that needs plenty of energy, warmth and personality. That is what makes Cake Guy such good fun to perform. He is bright, playful, full of celebration and there to set the tone for a brilliant day in the park.</p>\n<p>The clip shown here is courtesy of <a href=\"https://www.youtube.com/@suzievision\" target=\"_blank\" rel=\"noopener noreferrer\">@suzievision</a> on YouTube, captured at the park during the opening celebration.</p>",
+ "text2": "<p>Character work like this is always rewarding because it is not just about voicing a line or two. It is about helping create a full experience for the audience. In this case, the voice becomes part of the live atmosphere, helping children and families connect with the moment from the second they arrive.</p>\n<p>Cake Guy is another great character to have worked on this year, and a good example of the sort of high-energy performance I love doing. Whether it is a theme park role, a live attraction, an animated character or a larger-than-life promo, the aim is always the same: make it memorable, entertaining and full of life.</p>\n<p>If you enjoy this sort of work, it also sits nicely alongside the other character styles and performance-led voices featured across the site, including my <a href=\"/character-voice-library\">character voice library</a>, <a href=\"/santa-voice\">Santa voice</a> and other fun, family-friendly voiceover work.</p>",
+ "image": "cakeguy.webp",
+ "video": "ngZl5udQ83s",
+ "videoStart": 103,
+ "metaTitle": "Voice of Cake Guy at LEGOLAND Windsor | Guy Harris",
+ "bottomText": "<p>If you need a high-energy character voice for a theme park, attraction, family event, animation or branded live experience, do get in touch. Whether it is a full-on character role, a catchy musical routine or a voice to help bring an experience to life, I can record it with broadcast-quality audio and a lot of personality from my <a href=\"/voiceover-studio\">voiceover studio</a>, or head back to the <a href=\"/\">homepage</a> to explore more of my work.</p>",
+ "rawDate": "April 2026",
+ "date": "2026-04-01",
+ "whatVideo": "1",
+ "alt": "Voice of Cake Guy at LEGOLAND Windsor 30th Birthday Show - Guy Harris VoiceoverGuy",
+ "rating": "3",
+ "blogRating": fromLegacyRating("3"),
+ "twitter": "",
+ "homeText": "Guy Harris is the voice of Cake Guy at LEGOLAND Windsor, bringing energy and fun to the Resort's 30th birthday celebration show.",
  "santa": "",
  "ntext1": "",
  "ntext2": "",

@@ -148,13 +148,16 @@ export function buildVideoSchema(post: BlogPost): Record<string, unknown> | null
   if (wv === '1') {
     const ytId = video.replace(/\/.*$/, '').trim();
     if (!isValidVideoId(ytId)) return null;
+    const start = typeof post.videoStart === 'number' && post.videoStart > 0
+      ? `?start=${Math.floor(post.videoStart)}`
+      : '';
     const schema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
       '@id': `${canonical}#video`,
       name: post.pageTitle,
       thumbnailUrl: `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`,
-      embedUrl: `https://www.youtube.com/embed/${ytId}`,
+      embedUrl: `https://www.youtube.com/embed/${ytId}${start}`,
       author: AUTHOR,
       publisher: PUBLISHER,
       inLanguage: 'en-GB',
