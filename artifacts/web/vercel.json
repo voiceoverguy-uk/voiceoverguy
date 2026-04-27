@@ -55,7 +55,10 @@
     { "source": "/experian-explainer-video/", "destination": "/explainer-video-voice", "permanent": true },
 
     { "source": "/smoke-signal-voice", "destination": "/", "permanent": true },
-    { "source": "/smoke-signal-voice/", "destination": "/", "permanent": true }
+    { "source": "/smoke-signal-voice/", "destination": "/", "permanent": true },
+
+    { "source": "/cake-guy-lego-minifigure-voice", "destination": "/voice-of-cake-guy-legoland-windsor", "permanent": true },
+    { "source": "/cake-guy-lego-minifigure-voice/", "destination": "/voice-of-cake-guy-legoland-windsor", "permanent": true }
   ],
   "headers": [
     {
