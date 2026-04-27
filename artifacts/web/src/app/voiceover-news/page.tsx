@@ -11,6 +11,23 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.voiceoverguy.co.uk/voiceover-news',
   },
+  openGraph: {
+    title: 'Voiceover News & Blog - Guy Harris | VoiceoverGuy',
+    description:
+      'The latest voiceover news, stories, and samples from British male voiceover artist Guy Harris. TV ads, game trailers, character voices, and more.',
+    url: 'https://www.voiceoverguy.co.uk/voiceover-news',
+    siteName: 'VoiceoverGuy',
+    images: [
+      {
+        url: '/assets/images/og-image-guy-harris.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Guy Harris – British Male Voiceover Artist – VoiceoverGuy',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
 };
 
 function PostCard({ post }: { post: (typeof blogPosts)[0] }) {

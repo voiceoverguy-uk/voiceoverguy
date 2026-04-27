@@ -11,6 +11,23 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.voiceoverguy.co.uk/voice-over-word-count-calculator',
   },
+  openGraph: {
+    title: 'Voiceover Word Count Calculator | VoiceoverGuy',
+    description:
+      'Calculate how long your script will take to read aloud. Enter your word count or paste your text to get instant voiceover timing at different speeds.',
+    url: 'https://www.voiceoverguy.co.uk/voice-over-word-count-calculator',
+    siteName: 'VoiceoverGuy',
+    images: [
+      {
+        url: '/assets/images/og-image-guy-harris.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Guy Harris – British Male Voiceover Artist – VoiceoverGuy',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
 };
 
 const FAQ_DATA = [

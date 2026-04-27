@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   title: "FAQ – Voiceover Questions Answered",
   description: "Everything you need to know about booking Guy Harris for a voiceover — pricing, turnaround, formats, remote direction, studio, and more.",
   alternates: { canonical: 'https://www.voiceoverguy.co.uk/faq' },
+  openGraph: {
+    title: 'FAQ – Voiceover Questions Answered | VoiceoverGuy',
+    description: "Everything you need to know about booking Guy Harris for a voiceover — pricing, turnaround, formats, remote direction, studio, and more.",
+    url: 'https://www.voiceoverguy.co.uk/faq',
+    siteName: 'VoiceoverGuy',
+    images: [
+      {
+        url: '/assets/images/og-image-guy-harris.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Guy Harris – British Male Voiceover Artist – VoiceoverGuy',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
 };
 
 export default function FAQ() {

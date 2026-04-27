@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   },
   title: 'Privacy Policy',
   description: 'Privacy policy for VoiceoverGuy.co.uk – how we handle your data when you use this website or contact Guy Harris for voiceover services.',
+  openGraph: {
+    title: 'Privacy Policy | VoiceoverGuy',
+    description: 'Privacy policy for VoiceoverGuy.co.uk – how we handle your data when you use this website or contact Guy Harris for voiceover services.',
+    url: 'https://www.voiceoverguy.co.uk/privacy-policy',
+    siteName: 'VoiceoverGuy',
+    images: [
+      {
+        url: '/assets/images/og-image-guy-harris.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Guy Harris – British Male Voiceover Artist – VoiceoverGuy',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
 };
 
 export default function PrivacyPolicyPage() {
