@@ -6,7 +6,8 @@
     "dev": "next dev -H 0.0.0.0 -p 22333",
     "build": "next build && node scripts/fix-homepage-trailing-slash.mjs",
     "start": "next start -H 0.0.0.0 -p 22333",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "check:slugs": "node scripts/check-slugs.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit && node scripts/check-slugs.mjs"
   },
   "dependencies": {
     "next": "14.2.29",
