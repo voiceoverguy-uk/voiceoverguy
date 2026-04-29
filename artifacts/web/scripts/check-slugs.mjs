@@ -11,6 +11,9 @@
  *  3. Every public/sitemap*.xml file contains no %20 and no whitespace inside
  *     any <loc>, and every <loc> starts with the canonical origin
  *     https://www.voiceoverguy.co.uk/
+ *  4. Every <lastmod> in each public/sitemap*.xml file matches the W3C
+ *     datetime format (YYYY-MM-DD or full date+time with timezone) and
+ *     represents a real calendar date.
  *
  * Run via: pnpm --filter @workspace/web run check:slugs
  */
@@ -35,6 +38,20 @@ const ENCODED_SPACE_HREF_RE = /href="[^"]*%20/g;
 /** <loc>…</loc> extractor */
 const LOC_RE = /<loc>([^<]*)<\/loc>/g;
 
+/** <lastmod>…</lastmod> extractor */
+const LASTMOD_RE = /<lastmod>([^<]*)<\/lastmod>/g;
+
+/**
+ * W3C datetime formats accepted in <lastmod>:
+ *   YYYY-MM-DD
+ *   YYYY-MM-DDThh:mmTZD
+ *   YYYY-MM-DDThh:mm:ssTZD
+ *   YYYY-MM-DDThh:mm:ss.sTZD
+ * where TZD is "Z" or "+hh:mm" / "-hh:mm" with hh in 00–23 and mm in 00–59.
+ */
+const LASTMOD_RE_FORMAT =
+  /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(Z|[+-](?:[01]\d|2[0-3]):[0-5]\d))?$/;
+
 /** Canonical origin every <loc> URL must start with */
 const CANONICAL_ORIGIN = 'https://www.voiceoverguy.co.uk/';
 
@@ -43,6 +60,50 @@ let errors = 0;
 function fail(msg) {
   console.error(`  FAIL  ${msg}`);
   errors++;
+}
+
+/**
+ * Validate a <lastmod> string. Returns null on success, or an error reason.
+ * Accepts W3C datetime (date-only or full date+time with TZD) and verifies
+ * that the date components form a real calendar date.
+ */
+function validateLastmod(value) {
+  if (value !== value.trim()) {
+    return 'contains leading or trailing whitespace';
+  }
+  const m = LASTMOD_RE_FORMAT.exec(value);
+  if (!m) {
+    return 'does not match W3C datetime (YYYY-MM-DD or YYYY-MM-DDThh:mm[:ss[.s]]TZD)';
+  }
+  const year = Number(m[1]);
+  const month = Number(m[2]);
+  const day = Number(m[3]);
+  if (month < 1 || month > 12) return `month out of range: ${m[2]}`;
+  if (day < 1 || day > 31) return `day out of range: ${m[3]}`;
+
+  // Verify real calendar date (catches 2026-02-30, 2026-04-31, etc.)
+  const utc = Date.UTC(year, month - 1, day);
+  const d = new Date(utc);
+  if (
+    d.getUTCFullYear() !== year ||
+    d.getUTCMonth() !== month - 1 ||
+    d.getUTCDate() !== day
+  ) {
+    return 'is not a real calendar date';
+  }
+
+  if (m[4] !== undefined) {
+    const hh = Number(m[4]);
+    const mm = Number(m[5]);
+    if (hh > 23) return `hour out of range: ${m[4]}`;
+    if (mm > 59) return `minute out of range: ${m[5]}`;
+    if (m[6] !== undefined) {
+      const ss = Number(m[6]);
+      if (ss > 59) return `second out of range: ${m[6]}`;
+    }
+  }
+
+  return null;
 }
 
 // ─── 1 & 2. Parse blog-posts.ts as text ─────────────────────────────────────
@@ -205,6 +266,19 @@ for (const file of sitemapFiles) {
     }
   }
   console.log(`check-slugs: scanned ${locCount} <loc> entries in ${file}`);
+
+  let lastmodMatch;
+  let lastmodCount = 0;
+  LASTMOD_RE.lastIndex = 0;
+  while ((lastmodMatch = LASTMOD_RE.exec(sitemap)) !== null) {
+    lastmodCount++;
+    const value = lastmodMatch[1];
+    const reason = validateLastmod(value);
+    if (reason !== null) {
+      fail(`${file} <lastmod> "${value}" ${reason}`);
+    }
+  }
+  console.log(`check-slugs: scanned ${lastmodCount} <lastmod> entries in ${file}`);
 }
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
