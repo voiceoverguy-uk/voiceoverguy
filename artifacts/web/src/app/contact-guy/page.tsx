@@ -46,6 +46,10 @@ export default function ContactGuy() {
                 and let&#39;s make your project sound epic!
               </p>
               <ContactForm compact />
+              <p style={{ fontSize: '14px', marginTop: '20px', marginBottom: '0' }}>
+                Prefer to write directly?
+              </p>
+              <EmailReveal />
             </div>
 
             <div className="contact-photo">
@@ -109,10 +113,6 @@ export default function ContactGuy() {
                 </a>
               </p>
 
-              <p style={{ fontSize: '14px', marginTop: '20px', marginBottom: '0' }}>
-                Prefer to write directly?
-              </p>
-              <EmailReveal />
             </div>
           </div>
 

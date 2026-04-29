@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import CurrentYear from './CurrentYear';
+import EmailReveal from './EmailReveal';
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
+        <EmailReveal />
+
         <p className="footer-tagline">
           <strong>Guy Harris – British Male Voiceover</strong>
           {' – © 2000 – '}

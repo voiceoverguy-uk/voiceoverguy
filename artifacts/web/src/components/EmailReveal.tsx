@@ -14,7 +14,7 @@ export default function EmailReveal() {
       <p style={{ fontSize: '14px', marginTop: '12px' }}>
         <strong>Email:</strong>{' '}
         <a
-          href={`mailto:${addr}`}
+          href={`mailto:${addr}?subject=Enquiry%20from%20VoiceoverGuy.co.uk`}
           className="ident"
           style={{ fontWeight: 600 }}
         >
