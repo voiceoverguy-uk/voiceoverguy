@@ -8,12 +8,14 @@
  *  1. Every `url` field in blogPosts matches ^[a-z0-9-]+$
  *  2. No string field in any blog post contains href=" followed by whitespace
  *     (leading-space href) or href="…%20…" (encoded space inside href)
- *  3. public/sitemap.xml contains no %20 and no whitespace inside any <loc>
+ *  3. Every public/sitemap*.xml file contains no %20 and no whitespace inside
+ *     any <loc>, and every <loc> starts with the canonical origin
+ *     https://www.voiceoverguy.co.uk/
  *
  * Run via: pnpm --filter @workspace/web run check:slugs
  */
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -32,6 +34,9 @@ const ENCODED_SPACE_HREF_RE = /href="[^"]*%20/g;
 
 /** <loc>…</loc> extractor */
 const LOC_RE = /<loc>([^<]*)<\/loc>/g;
+
+/** Canonical origin every <loc> URL must start with */
+const CANONICAL_ORIGIN = 'https://www.voiceoverguy.co.uk/';
 
 let errors = 0;
 
@@ -152,33 +157,54 @@ for (const block of entries) {
   }
 }
 
-// ─── Check 3: sitemap.xml ────────────────────────────────────────────────────
+// ─── Check 3: sitemap*.xml ───────────────────────────────────────────────────
 
-console.log('check-slugs: [3] Validating sitemap.xml <loc> entries …');
+console.log('check-slugs: [3] Validating sitemap*.xml <loc> entries …');
 
-const sitemapPath = join(ROOT, 'public', 'sitemap.xml');
-let sitemap;
+const publicDir = join(ROOT, 'public');
+
+let sitemapFiles = [];
 try {
-  sitemap = readFileSync(sitemapPath, 'utf8');
+  sitemapFiles = readdirSync(publicDir)
+    .filter((name) => /^sitemap.*\.xml$/i.test(name))
+    .sort();
 } catch {
-  fail(`could not read ${sitemapPath}`);
-  sitemap = '';
+  fail(`could not read directory ${publicDir}`);
 }
 
-if (sitemap) {
+if (sitemapFiles.length === 0) {
+  fail(`no sitemap*.xml files found in ${publicDir}`);
+}
+
+for (const file of sitemapFiles) {
+  const sitemapPath = join(publicDir, file);
+  let sitemap;
+  try {
+    sitemap = readFileSync(sitemapPath, 'utf8');
+  } catch {
+    fail(`could not read ${sitemapPath}`);
+    continue;
+  }
+
   let locMatch;
   let locCount = 0;
+  LOC_RE.lastIndex = 0;
   while ((locMatch = LOC_RE.exec(sitemap)) !== null) {
     locCount++;
     const loc = locMatch[1];
     if (loc.includes('%20')) {
-      fail(`sitemap.xml <loc> contains %20: "${loc}"`);
+      fail(`${file} <loc> contains %20: "${loc}"`);
     }
     if (/\s/.test(loc)) {
-      fail(`sitemap.xml <loc> contains whitespace: "${loc}"`);
+      fail(`${file} <loc> contains whitespace: "${loc}"`);
+    }
+    if (!loc.startsWith(CANONICAL_ORIGIN)) {
+      fail(
+        `${file} <loc> does not start with ${CANONICAL_ORIGIN}: "${loc}"`,
+      );
     }
   }
-  console.log(`check-slugs: scanned ${locCount} <loc> entries in sitemap.xml`);
+  console.log(`check-slugs: scanned ${locCount} <loc> entries in ${file}`);
 }
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
