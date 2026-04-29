@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import PayPalButton from '@/components/PayPalButton';
+import EmailReveal from '@/components/EmailReveal';
 import pages from '@/data/pages.json';
 
 const data = (pages as Record<string, Record<string, string>>)['seo20'];
@@ -107,6 +108,9 @@ export default function ContactGuy() {
                   VoiceoverGuy
                 </a>
               </p>
+
+              <h2 style={{ marginTop: '28px' }}>Prefer to <span className="ident">write</span> directly?</h2>
+              <EmailReveal />
             </div>
           </div>
 
