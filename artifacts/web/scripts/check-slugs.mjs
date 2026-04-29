@@ -14,6 +14,8 @@
  *  4. Every <lastmod> in each public/sitemap*.xml file matches the W3C
  *     datetime format (YYYY-MM-DD or full date+time with timezone) and
  *     represents a real calendar date.
+ *  5. Every <priority> in each public/sitemap*.xml file is a decimal
+ *     number between 0.0 and 1.0 inclusive (per the sitemap spec).
  *
  * Run via: pnpm --filter @workspace/web run check:slugs
  */
@@ -40,6 +42,18 @@ const LOC_RE = /<loc>([^<]*)<\/loc>/g;
 
 /** <lastmod>…</lastmod> extractor */
 const LASTMOD_RE = /<lastmod>([^<]*)<\/lastmod>/g;
+
+/** <priority>…</priority> extractor */
+const PRIORITY_RE = /<priority>([^<]*)<\/priority>/g;
+
+/**
+ * Numeric pattern accepted in <priority>: an optional leading digit,
+ * an optional decimal point and fractional part. Examples that match:
+ *   0, 1, 0.0, 0.5, 0.64, 1.0, .5
+ * Examples that do NOT match:
+ *   "0,64" (comma), "1.50abc", "" (empty), " 0.5" (whitespace), "1." with no digits
+ */
+const PRIORITY_RE_FORMAT = /^(?:\d+(?:\.\d+)?|\.\d+)$/;
 
 /**
  * W3C datetime formats accepted in <lastmod>:
@@ -103,6 +117,31 @@ function validateLastmod(value) {
     }
   }
 
+  return null;
+}
+
+/**
+ * Validate a <priority> string. Returns null on success, or an error reason.
+ * Accepts a decimal number in [0.0, 1.0]. Rejects whitespace, commas,
+ * non-numeric characters, empty strings, and out-of-range values.
+ */
+function validatePriority(value) {
+  if (value !== value.trim()) {
+    return 'contains leading or trailing whitespace';
+  }
+  if (value === '') {
+    return 'is empty';
+  }
+  if (!PRIORITY_RE_FORMAT.test(value)) {
+    return 'is not a decimal number (e.g. 0.5, 0.64, 1.0)';
+  }
+  const n = Number(value);
+  if (!Number.isFinite(n)) {
+    return 'is not a finite number';
+  }
+  if (n < 0 || n > 1) {
+    return 'is out of range (must be between 0.0 and 1.0 inclusive)';
+  }
   return null;
 }
 
@@ -279,6 +318,19 @@ for (const file of sitemapFiles) {
     }
   }
   console.log(`check-slugs: scanned ${lastmodCount} <lastmod> entries in ${file}`);
+
+  let priorityMatch;
+  let priorityCount = 0;
+  PRIORITY_RE.lastIndex = 0;
+  while ((priorityMatch = PRIORITY_RE.exec(sitemap)) !== null) {
+    priorityCount++;
+    const value = priorityMatch[1];
+    const reason = validatePriority(value);
+    if (reason !== null) {
+      fail(`${file} <priority> "${value}" ${reason}`);
+    }
+  }
+  console.log(`check-slugs: scanned ${priorityCount} <priority> entries in ${file}`);
 }
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
