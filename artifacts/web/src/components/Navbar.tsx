@@ -236,7 +236,7 @@ export default function Navbar() {
                       role="menuitem"
                     >
                       <strong>{item.title}</strong>
-                      <span className="video-subtitle">{item.subtitle}</span>
+                      <span className="video-subtitle"> - {item.subtitle}</span>
                     </a>
                   </li>
                 ))}
