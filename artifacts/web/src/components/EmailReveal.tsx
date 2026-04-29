@@ -21,6 +21,10 @@ export default function EmailReveal() {
   const addr = `${u}\u0040${d}`;
 
   const handleCopy = () => {
+    if (timerRef.current !== null) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
     navigator.clipboard.writeText(addr).then(() => {
       setCopyState('copied');
       timerRef.current = setTimeout(() => setCopyState('idle'), 2000);
@@ -31,8 +35,9 @@ export default function EmailReveal() {
   };
 
   if (revealed) {
-    const label = copyState === 'copied' ? '✓ Copied!' : copyState === 'failed' ? '✗ Failed' : '⧉ Copy';
-    const color = copyState === 'copied' ? '#2a7a2a' : copyState === 'failed' ? '#b00020' : '#9C060B';
+    const tooltipText = copyState === 'copied' ? 'Copied to clipboard!' : 'Failed to copy';
+    const tooltipColor = copyState === 'copied' ? '#2a7a2a' : '#b00020';
+    const visible = copyState !== 'idle';
 
     return (
       <p style={{ fontSize: '14px', marginTop: '12px' }}>
@@ -44,25 +49,68 @@ export default function EmailReveal() {
         >
           {addr}
         </a>
-        <button
-          type="button"
-          onClick={handleCopy}
-          aria-label="Copy email address"
+        <span
           style={{
-            background: 'none',
-            border: 'none',
-            padding: '0 0 0 6px',
-            cursor: 'pointer',
-            color,
-            fontFamily: 'inherit',
-            fontSize: '13px',
-            fontWeight: 600,
+            position: 'relative',
+            display: 'inline-block',
+            marginLeft: '6px',
             verticalAlign: 'middle',
-            lineHeight: 1,
           }}
         >
-          {label}
-        </button>
+          <span
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              bottom: 'calc(100% + 6px)',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              background: tooltipColor,
+              color: '#fff',
+              fontSize: '12px',
+              fontWeight: 600,
+              whiteSpace: 'nowrap',
+              padding: '4px 8px',
+              borderRadius: '4px',
+              pointerEvents: 'none',
+              opacity: visible ? 1 : 0,
+              transition: visible ? 'opacity 0.15s ease-in' : 'opacity 0.4s ease-out',
+              zIndex: 100,
+            }}
+          >
+            {visible ? tooltipText : ''}
+            <span
+              style={{
+                position: 'absolute',
+                top: '100%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                border: '5px solid transparent',
+                borderTopColor: tooltipColor,
+              }}
+            />
+          </span>
+          <span role="status" aria-live="polite" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>
+            {visible ? tooltipText : ''}
+          </span>
+          <button
+            type="button"
+            onClick={handleCopy}
+            aria-label="Copy email address"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              color: '#9C060B',
+              fontFamily: 'inherit',
+              fontSize: '13px',
+              fontWeight: 600,
+              lineHeight: 1,
+            }}
+          >
+            ⧉ Copy
+          </button>
+        </span>
       </p>
     );
   }
