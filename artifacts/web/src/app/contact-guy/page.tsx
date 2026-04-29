@@ -109,7 +109,9 @@ export default function ContactGuy() {
                 </a>
               </p>
 
-              <h2 style={{ marginTop: '28px' }}>Prefer to <span className="ident">write</span> directly?</h2>
+              <p style={{ fontSize: '14px', marginTop: '20px', marginBottom: '0' }}>
+                Prefer to write directly?
+              </p>
               <EmailReveal />
             </div>
           </div>
