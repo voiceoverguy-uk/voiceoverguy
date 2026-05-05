@@ -4,6 +4,7 @@ import blogPosts from '@/data/blog-posts';
 import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import MiniPlayer from '@/components/MiniPlayer';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
+import YouTubePauseCoordinator from '@/components/YouTubePauseCoordinator';
 import { buildAllBlogSchemas } from '@/lib/buildSchema';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 
@@ -23,13 +24,14 @@ function MediaBlock({ post }: { post: BlogPostType }) {
 
   if (wv === '1' && video && !video.startsWith('<iframe')) {
     const ytId = video.replace(/\/.*$/, '').trim();
-    const start = typeof post.videoStart === 'number' && post.videoStart > 0
-      ? `?start=${Math.floor(post.videoStart)}`
-      : '';
+    const params = new URLSearchParams({ enablejsapi: '1' });
+    if (typeof post.videoStart === 'number' && post.videoStart > 0) {
+      params.set('start', String(Math.floor(post.videoStart)));
+    }
     return (
       <div className="embed-wrap">
         <iframe
-          src={`https://www.youtube.com/embed/${ytId}${start}`}
+          src={`https://www.youtube.com/embed/${ytId}?${params.toString()}`}
           title={post.pageTitle}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -143,6 +145,7 @@ export default function BlogPost({ post }: Props) {
 
   return (
     <>
+      <YouTubePauseCoordinator />
       {schemas.map((schema, i) => (
         <script
           key={`schema-${i}`}
@@ -265,7 +268,7 @@ export default function BlogPost({ post }: Props) {
               <div className="blog-media-col">
                 <div className="embed-wrap">
                   <iframe
-                    src={`https://www.youtube.com/embed/${ytId}`}
+                    src={`https://www.youtube.com/embed/${ytId}?enablejsapi=1`}
                     title={post.pageTitle}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
