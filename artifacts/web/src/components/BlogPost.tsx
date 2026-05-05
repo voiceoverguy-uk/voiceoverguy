@@ -130,11 +130,11 @@ export default function BlogPost({ post }: Props) {
   const hasText2 = !!(post.text2 && post.text2.trim());
 
   const ntextSections = [
-    { text: post.ntext1, image: post.nimage1 },
-    { text: post.ntext2, image: post.nimage2 },
-    { text: post.ntext3, image: post.nimage3 },
-    { text: post.ntext4, image: post.nimage4 },
-  ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image));
+    { text: post.ntext1, image: post.nimage1, video: post.nvideo1 },
+    { text: post.ntext2, image: post.nimage2, video: post.nvideo2 },
+    { text: post.ntext3, image: post.nimage3, video: post.nvideo3 },
+    { text: post.ntext4, image: post.nimage4, video: undefined as string | undefined },
+  ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image) || (s.video && s.video.trim()));
 
   const relatedPosts = getRelatedPosts(post.id, 3);
   const { prev, next } = getAdjacentPosts(post.id);
@@ -253,26 +253,39 @@ export default function BlogPost({ post }: Props) {
             const reverse = i % 2 === 0;
             const hasText = sec.text && sec.text.trim();
             const hasImg = isValidImageFilename(sec.image);
+            const ytId = sec.video && sec.video.trim();
+            const hasVid = !!ytId;
             const textEl = hasText ? (
               <div
                 className="blog-text-col"
                 dangerouslySetInnerHTML={{ __html: normaliseHtml(sec.text) }}
               />
             ) : null;
-            const imgEl = hasImg ? (
+            const mediaEl = hasVid ? (
+              <div className="blog-media-col">
+                <div className="embed-wrap">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${ytId}`}
+                    title={post.pageTitle}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ) : hasImg ? (
               <div className="blog-media-col">
                 <NImage filename={sec.image} alt={post.alt || post.pageTitle} />
               </div>
             ) : null;
 
-            if (!textEl && !imgEl) return null;
+            if (!textEl && !mediaEl) return null;
 
-            const isTwoCol = textEl && imgEl;
+            const isTwoCol = textEl && mediaEl;
             return (
               <div key={i} className={`blog-post-section ${isTwoCol ? 'two-col' : ''}`}>
                 {isTwoCol
-                  ? (reverse ? <>{textEl}{imgEl}</> : <>{imgEl}{textEl}</>)
-                  : <>{textEl}{imgEl}</>
+                  ? (reverse ? <>{textEl}{mediaEl}</> : <>{mediaEl}{textEl}</>)
+                  : <>{textEl}{mediaEl}</>
                 }
               </div>
             );

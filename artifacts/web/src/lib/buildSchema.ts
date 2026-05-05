@@ -210,6 +210,49 @@ export function buildAudioSchema(post: BlogPost): Record<string, unknown> | null
   return schema;
 }
 
+function extractFirstHeading(html: string | undefined): string | null {
+  if (!html) return null;
+  const m = html.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
+  if (!m) return null;
+  const text = m[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&[a-z]+;/gi, ' ').trim();
+  return text || null;
+}
+
+export function buildExtraVideoSchemas(post: BlogPost): Record<string, unknown>[] {
+  const canonical = getCanonical(post.url);
+  const isoDate = toIsoDate(post.date);
+  const uploadDate = isoDate || '2023-01-01T00:00:00+00:00';
+  const description = getDescription(post);
+
+  const sections: Array<{ id: string | undefined; text: string | undefined }> = [
+    { id: post.nvideo1, text: post.ntext1 },
+    { id: post.nvideo2, text: post.ntext2 },
+    { id: post.nvideo3, text: post.ntext3 },
+  ];
+
+  const out: Record<string, unknown>[] = [];
+  sections.forEach((sec, i) => {
+    const ytId = (sec.id || '').trim();
+    if (!isValidVideoId(ytId)) return;
+    const name = extractFirstHeading(sec.text) || `${post.pageTitle} - clip ${i + 2}`;
+    const schema: Record<string, unknown> = {
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      '@id': `${canonical}#video-${i + 2}`,
+      name,
+      thumbnailUrl: `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`,
+      embedUrl: `https://www.youtube.com/embed/${ytId}`,
+      author: AUTHOR,
+      publisher: PUBLISHER,
+      inLanguage: 'en-GB',
+      uploadDate,
+    };
+    if (description) schema.description = description;
+    out.push(schema);
+  });
+  return out;
+}
+
 export function buildAllBlogSchemas(post: BlogPost): Record<string, unknown>[] {
   if (!post.pageTitle || !post.pageTitle.trim()) return [];
 
@@ -220,6 +263,8 @@ export function buildAllBlogSchemas(post: BlogPost): Record<string, unknown>[] {
 
   const videoSchema = buildVideoSchema(post);
   if (videoSchema) schemas.push(videoSchema);
+
+  schemas.push(...buildExtraVideoSchemas(post));
 
   const audioSchema = buildAudioSchema(post);
   if (audioSchema) schemas.push(audioSchema);

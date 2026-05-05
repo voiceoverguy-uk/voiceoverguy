@@ -39,6 +39,9 @@ export interface BlogPost {
  localAudio?: string; // optional local MP3 path, replaces SoundCloud embed
  audioSrc?: string; // optional full-width audio player with download, shown below text1
  videoStart?: number; // optional YouTube start offset in seconds (whatVideo === '1')
+ nvideo1?: string; // optional YouTube ID embedded inside the ntext1 section
+ nvideo2?: string; // optional YouTube ID embedded inside the ntext2 section
+ nvideo3?: string; // optional YouTube ID embedded inside the ntext3 section
 }
 
 const blogPosts: BlogPost[] = [
@@ -8504,6 +8507,40 @@ const blogPosts: BlogPost[] = [
  "nimage3": "",
  "nimage4": "",
  "conflictsWithCorePage": false
+ },
+ {
+  "id": 1004,
+  "url": "b-movie-trailer-voiceover",
+  "pageTitle": "B-Movie Trailer Voice",
+  "info": "<p>Big thrills, cheesy chills and gloriously over-the-top energy. My B-movie trailer voice is perfect for retro sci-fi, horror spoofs, camp promos and anything that needs a bold, unforgettable cinematic style.</p>",
+  "searchTerms": "b movie trailer voice,b-movie trailer voiceover,retro trailer voice,camp horror voiceover,sci fi trailer voice,movie trailer voice artist,cheesy horror trailer voice",
+  "pageDesc": "Hear Guy Harris deliver a bold B-movie trailer voiceover for retro sci-fi, camp horror and spoof promos, with big drama and broadcast-quality style.",
+  "text1": "<p>The <strong>B-movie trailer voice</strong> is one of those styles that instantly paints a picture. You can hear it and suddenly you are in a world of giant monsters, flying saucers, low-budget chaos, dramatic taglines and total cinematic mayhem. It is bold, heightened, slightly tongue-in-cheek and enormous fun to perform.</p>\n<p>Traditionally, B-movies were lower-budget genre films, often in the worlds of science fiction, <a href=\"/halloween-voice\">horror</a>, creature features and pulp adventure. But what they lacked in budget, they made up for in atmosphere, energy and unforgettable style. That is exactly what makes the voice so enjoyable. It is not about sounding subtle or restrained. It is about selling the drama, the danger and the delicious ridiculousness of it all with absolute conviction.</p>\n<p>If you need a voice that says <em>something terrifying is heading towards Earth</em> with complete sincerity and maximum impact, this is the style for you. It works brilliantly for spoof campaigns, parody trailers, themed promos, YouTube content, events and genre-led creative projects, and sits naturally alongside my wider <a href=\"/movie-trailer-voice\">movie trailer voice</a> work.</p>\n<h2>Generic B-Movie Trailer Voice Demo</h2>\n<p>This short demo is a straightforward showcase of the B-movie trailer style itself. It leans into that classic retro trailer delivery with big emphasis, rich drama and the sort of overblown menace that suits vintage monster movies, science fiction spoofs and creature-feature promos perfectly.</p>\n<p>If you want the pure essence of the style, this is the place to start. It is short, punchy and does exactly what it says on the tin: big thrills, cheesy chills and a voice that knows precisely what sort of madness is heading your way.</p>",
+  "text2": "<p>One of the nice things about the B-movie trailer voice is that it can be pushed in slightly different directions depending on the project. It can go full retro horror narrator, comic sci-fi announcer, pulpy action trailer or even edge into superhero territory when the brief wants something larger than life and knowingly dramatic. If you enjoy this kind of performance work, you will find more of it across my <a href=\"/character-voice-library\">character voice library</a>.</p>\n<p>That flexibility is what makes it commercially useful as well as entertaining. Clients often want the feel of an old-school trailer without it sounding dusty or one-note. So the trick is to keep the theatricality, the pace and the genre flavour, while still making it sharp enough for a modern audience.</p>",
+  "image": "b-movie-voice.webp",
+  "video": "bTUlbDBdT6A",
+  "metaTitle": "B-Movie Trailer Voiceover | Retro Sci-Fi & Horror Voice | Guy Harris",
+  "bottomText": "<p>If you are looking for a retro-style trailer voice for a promo, television or radio advert, YouTube video, spoof campaign or themed creative project, do get in touch. Whether you want full-on B-movie horror, camp sci-fi drama, pulpy action or something knowingly over-the-top, I can bring the right energy, timing and broadcast-quality sound to it from my <a href=\"/voiceover-studio\">professional voiceover studio</a>, or head back to the <a href=\"/\">homepage</a> to explore more of my work.</p>",
+  "rawDate": "April 2026",
+  "date": "2026-04-24",
+  "whatVideo": "1",
+  "alt": "B-Movie Trailer Voice - Guy Harris VoiceoverGuy",
+  "rating": "5",
+  "blogRating": fromLegacyRating("5"),
+  "twitter": "",
+  "homeText": "Big thrills, cheesy chills and retro cinematic fun. Hear Guy Harris bring his B-movie trailer voice to life across three bold video examples.",
+  "santa": "",
+  "ntext1": "<h2>FESPA - Superhero B-Movie Energy</h2>\n<p>This piece for <strong>FESPA</strong>, the global print and signage event, shows how the style can shift into a more heroic, action-led direction. It still has that retro trailer DNA running through it, but with a bolder, more swaggering energy that gives it a comic-book, larger-than-life feel.</p>\n<p>It is a good example of how this sort of voice can work beyond horror or sci-fi parody. If a promo needs impact, spectacle and a heightened sense of occasion, this flavour of performance can really help lift it off the page.</p>",
+  "ntext2": "<h2>Rocket &amp; Groot - Stranded on Planet Shopping Mall</h2>\n<p>This is another fun example of the style being used in a very specific B-movie world. <strong>Stranded on Planet Shopping Mall</strong> leans into the retro sci-fi creature-feature tone beautifully, with all the camp, peril and pulp you would want from a knowingly ridiculous trailer concept.</p>\n<p>It is exactly the kind of project this voice was made for. Strange titles, outrageous stakes, a sense of looming disaster, and a narrator who sounds as though the fate of the universe depends on you buying a ticket immediately. Ridiculous in the best possible way.</p>",
+  "ntext3": "",
+  "ntext4": "",
+  "nimage1": "",
+  "nimage2": "",
+  "nimage3": "",
+  "nimage4": "",
+  "conflictsWithCorePage": false,
+  "nvideo1": "91_4NJA5U_Y",
+  "nvideo2": "lw3_DUx5jrk"
  }
 ];
 

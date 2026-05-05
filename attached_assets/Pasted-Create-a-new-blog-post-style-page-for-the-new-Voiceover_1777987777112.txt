@@ -1,0 +1,109 @@
+Create a new blog post / style page for the new VoiceoverGuy site using the standard blog layout as the base, but expand it to support three separate video sections on this page because this style is best demonstrated through multiple examples.
+
+Keep the tone polished, fun, cinematic, slightly camp, knowledgeable and professional. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+B-Movie Trailer Voice
+
+URL slug:
+b-movie-trailer-voiceover
+
+Date:
+2026-04-24
+
+Rating:
+highest
+
+Intro line:
+Big thrills, cheesy chills and gloriously over-the-top energy. My B-movie trailer voice is perfect for retro sci-fi, horror spoofs, camp promos and anything that needs a bold, unforgettable cinematic style.
+
+Main text (block 1):
+<p>The <strong>B-movie trailer voice</strong> is one of those styles that instantly paints a picture. You can hear it and suddenly you are in a world of giant monsters, flying saucers, low-budget chaos, dramatic taglines and total cinematic mayhem. It is bold, heightened, slightly tongue-in-cheek and enormous fun to perform.</p>
+<p>Traditionally, B-movies were lower-budget genre films, often in the worlds of science fiction, horror, creature features and pulp adventure. But what they lacked in budget, they made up for in atmosphere, energy and unforgettable style. That is exactly what makes the voice so enjoyable. It is not about sounding subtle or restrained. It is about selling the drama, the danger and the delicious ridiculousness of it all with absolute conviction.</p>
+<p>If you need a voice that says <em>something terrifying is heading towards Earth</em> with complete sincerity and maximum impact, this is the style for you. It works brilliantly for spoof campaigns, parody trailers, themed promos, YouTube content, events and genre-led creative projects.</p>
+
+Video section 1 heading:
+Generic B-Movie Trailer Voice Demo
+
+Video section 1 text:
+<p>This short demo is a straightforward showcase of the B-movie trailer style itself. It leans into that classic retro trailer delivery with big emphasis, rich drama and the sort of overblown menace that suits vintage monster movies, science fiction spoofs and creature-feature promos perfectly.</p>
+<p>If you want the pure essence of the style, this is the place to start. It is short, punchy and does exactly what it says on the tin: big thrills, cheesy chills and a voice that knows precisely what sort of madness is heading your way.</p>
+
+Video section 1 media type:
+YouTube
+
+Video section 1 YouTube ID:
+bTUlbDBdT6A
+
+Text block 2:
+<p>One of the nice things about the B-movie trailer voice is that it can be pushed in slightly different directions depending on the project. It can go full retro horror narrator, comic sci-fi announcer, pulpy action trailer or even edge into superhero territory when the brief wants something larger than life and knowingly dramatic.</p>
+<p>That flexibility is what makes it commercially useful as well as entertaining. Clients often want the feel of an old-school trailer without it sounding dusty or one-note. So the trick is to keep the theatricality, the pace and the genre flavour, while still making it sharp enough for a modern audience.</p>
+
+Video section 2 heading:
+FESPA - Superhero B-Movie Energy
+
+Video section 2 text:
+<p>This piece for <strong>FESPA</strong>, the global print and signage event, shows how the style can shift into a more heroic, action-led direction. It still has that retro trailer DNA running through it, but with a bolder, more swaggering energy that gives it a comic-book, larger-than-life feel.</p>
+<p>It is a good example of how this sort of voice can work beyond horror or sci-fi parody. If a promo needs impact, spectacle and a heightened sense of occasion, this flavour of performance can really help lift it off the page.</p>
+
+Video section 2 media type:
+YouTube
+
+Video section 2 YouTube ID:
+91_4NJA5U_Y
+
+Video section 3 heading:
+Rocket & Groot - Stranded on Planet Shopping Mall
+
+Video section 3 text:
+<p>This is another fun example of the style being used in a very specific B-movie world. <strong>Stranded on Planet Shopping Mall</strong> leans into the retro sci-fi creature-feature tone beautifully, with all the camp, peril and pulp you would want from a knowingly ridiculous trailer concept.</p>
+<p>It is exactly the kind of project this voice was made for. Strange titles, outrageous stakes, a sense of looming disaster, and a narrator who sounds as though the fate of the universe depends on you buying a ticket immediately. Ridiculous in the best possible way.</p>
+
+Video section 3 media type:
+YouTube
+
+Video section 3 YouTube ID:
+lw3_DUx5jrk
+
+Bottom text:
+<p>If you are looking for a retro-style trailer voice for a promo, television or radio advert, YouTube video, spoof campaign or themed creative project, do get in touch. Whether you want full-on B-movie horror, camp sci-fi drama, pulpy action or something knowingly over-the-top, I can bring the right energy, timing and broadcast-quality sound to it from my <a href="/voiceover-studio">professional voiceover studio</a>.</p>
+
+Home excerpt:
+Big thrills, cheesy chills and retro cinematic fun. Hear Guy Harris bring his B-movie trailer voice to life across three bold video examples.
+
+Main image filename:
+b-movie-voice.jpg
+
+Primary media type:
+YouTube
+
+Primary YouTube video ID:
+bTUlbDBdT6A
+
+Meta description:
+Hear Guy Harris perform a bold B-movie trailer voice across retro sci-fi, camp horror and high-energy cinematic promos with three video examples.
+
+Search terms:
+b movie trailer voice","b-movie trailer voiceover","retro trailer voice","camp horror voiceover","sci fi trailer voice","movie trailer voice artist","cheesy horror trailer voice
+
+Please also do the following:
+1. Build this page using the blog/style page system, but allow for three embedded YouTube video sections instead of the normal single-media layout.
+2. Keep the page visually balanced and premium, not cluttered. Each video section should have its own heading and supporting text.
+3. Use the uploaded image b-movie-voice.jpg from the standard blog image folder.
+4. Add tasteful internal links within the copy to relevant pages if they already exist, especially:
+   - /movie-trailer-voice
+   - /voiceover-studio
+   - /character-voice-library
+   - any relevant Halloween, horror, spooky or character voice pages
+   - homepage
+5. Make sure the page still works nicely as a searchable service/style page, not just a blog post.
+6. Ensure the metadata and page structure are SEO-friendly.
+7. Add appropriate structured data for the page and embedded videos if the site already supports that pattern.
+8. Make sure the blog or card listing uses the Home excerpt and main image correctly if this page appears in listings.
+9. Apply the rating as highest so this page is prioritised correctly if the rating system is active.
+10. Keep the slug exactly as:
+   /b-movie-trailer-voiceover
+
+If the current page template cannot yet support three video sections, implement the cleanest reusable way to support this page without breaking existing blog posts. The result should still feel consistent with the rest of the site.
