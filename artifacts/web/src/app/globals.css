@@ -3802,7 +3802,9 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 .blog-audio-row .wavesurfer-player {
   margin-left: 0;
-  margin-right: auto;
+  margin-right: 0;
+  max-width: none;
+  width: 100%;
 }
 
 .blog-post-img-card {
