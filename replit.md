@@ -42,6 +42,7 @@ The project is structured as a pnpm monorepo with several packages: `artifacts` 
     - Blog system with 262 posts, parsed from SQL, supporting various media types and structured data.
     - Integration of Google Reviews (live rating + count via `/api/reviews`).
 - **Design Patterns:** Uses a shared `InnerPage` component for consistent layout of content sections.
+- **Blog post audio player layout:** When a blog post has `audioSrc`, the WaveSurfer player renders inside `.blog-audio-row` (BlogPost.tsx). That row is a 2-col grid (1fr 1fr, 32px gap) so the player sits in the left column at the same width as the text above and the image below it (matching `/movie-trailer-voice`, `/apple-voice-style`, `/commercial-voiceover`). Collapses to single column under 768px. Do not re-centre or full-width it.
 
 **API Codegen (`lib/api-spec`):**
 - Defines the OpenAPI 3.1 specification.
