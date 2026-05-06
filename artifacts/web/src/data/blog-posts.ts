@@ -8519,6 +8519,7 @@ const blogPosts: BlogPost[] = [
   "text2": "<h2>Generic B-Movie Trailer Voice Demo</h2>\n<p>My demos showcase the B-movie trailer style itself. That classic retro trailer delivery with big emphasis, rich drama and the sort of overblown menace that suits vintage monster movies, science fiction spoofs and creature-feature promos perfectly. You can find more of it across my <a href=\"/character-voice-library\">character voice library</a>.</p>\n<p>Clients often want the feel of an old-school trailer without it sounding dusty or one-note. So the trick is to keep the theatricality, the pace and the genre flavour, while still making it sharp enough for a modern audience.</p>",
   "image": "b-movie-voice.webp",
   "video": "bTUlbDBdT6A",
+  "audioSrc": "/assets/audio/b-movie-trailer-voice-guy-harris.mp3",
   "metaTitle": "B-Movie Trailer Voiceover | Retro Sci-Fi & Horror Voice | Guy Harris",
   "bottomText": "<p>If you are looking for a retro-style trailer voice for a promo, television or radio advert, YouTube video, spoof campaign or themed creative project, do get in touch. Whether you want full-on B-movie horror, camp sci-fi drama, pulpy action or something knowingly over-the-top, I can bring the right energy, timing and broadcast-quality sound to it from my <a href=\"/voiceover-studio\">professional voiceover studio</a>, or head back to the <a href=\"/\">homepage</a> to explore more of my work.</p>",
   "rawDate": "April 2026",
