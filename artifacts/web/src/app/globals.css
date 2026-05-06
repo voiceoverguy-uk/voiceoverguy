@@ -3797,14 +3797,20 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .blog-audio-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   margin: 4px 0 28px;
 }
 
 .blog-audio-row .wavesurfer-player {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   max-width: none;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .blog-audio-row { grid-template-columns: 1fr; }
 }
 
 .blog-post-img-card {
