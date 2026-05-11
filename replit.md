@@ -55,6 +55,14 @@ The web frontend is deployed as a Next.js static export to Vercel (voiceoverguy.
 
 The script generators (Attenborough & Santa) use Vercel serverless functions (`api/generate.ts`, `api/generate1.ts`) for AI generation on production. The contact form uses `api/enquiry.ts`. All use relative `/api/` paths which resolve to Vercel serverless functions in production.
 
+**Canonical domain policy (Vercel → Domains):**
+- `www.voiceoverguy.co.uk` is the ONLY Production hostname — all pages, sitemap, canonicals, OG/Twitter URLs use this.
+- The bare apex `voiceoverguy.co.uk` and the typo subdomains `w.`, `ww.`, `wwww.` voiceoverguy.co.uk are all set to **Permanent Redirect (308)** → `www.voiceoverguy.co.uk`. Never set them to "Temporary (307)" — Google needs permanent for link equity.
+- `voiceoverguy-api-server.vercel.app` (Vercel default) stays as Production but is irrelevant for SEO (auto-noindexed by Vercel).
+- If a new typo/legacy hostname appears in Search Console "Page with redirect", add it as a permanent 308 redirect rather than a Production domain.
+
+**Vercel environment variables:** All API keys/secrets (`AI_INTEGRATIONS_OPENAI_API_KEY`, `RESEND_API_KEY`, `GOOGLE_PLACES_API_KEY`, etc.) must be saved with the **Sensitive** flag, not as plain env vars. Non-secret config like `AI_INTEGRATIONS_OPENAI_BASE_URL` and the `CONTACT_*` emails can stay as plain. After changing any var, trigger a redeploy — running deployments keep the old values.
+
 ## External Dependencies
 
 - **AI Integrations:** OpenAI (via Replit AI integrations)
