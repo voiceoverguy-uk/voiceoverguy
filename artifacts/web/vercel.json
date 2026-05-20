@@ -58,7 +58,12 @@
     { "source": "/smoke-signal-voice/", "destination": "/", "permanent": true },
 
     { "source": "/cake-guy-lego-minifigure-voice", "destination": "/voice-of-cake-guy-legoland-windsor", "permanent": true },
-    { "source": "/cake-guy-lego-minifigure-voice/", "destination": "/voice-of-cake-guy-legoland-windsor", "permanent": true }
+    { "source": "/cake-guy-lego-minifigure-voice/", "destination": "/voice-of-cake-guy-legoland-windsor", "permanent": true },
+
+    { "source": "/appletv", "destination": "/apple-voice-style", "permanent": true },
+    { "source": "/appletv/", "destination": "/apple-voice-style", "permanent": true },
+    { "source": "/lending-crowd-patrick-stewart-voiceover", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/lending-crowd-patrick-stewart-voiceover/", "destination": "/character-voiceover", "permanent": true }
   ],
   "headers": [
     {
