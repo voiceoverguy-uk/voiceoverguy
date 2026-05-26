@@ -1,0 +1,124 @@
+Update the existing page:
+
+https://www.voiceoverguy.co.uk/football-commentator-voice
+
+This is a content and internal-linking refinement task only. Do not redesign the page. Keep the existing layout, styling, videos, downloadable MP3, contact form, spacing, colours and general structure intact.
+
+Primary goal:
+Make /football-commentator-voice the clear main hub page for broad search intent such as:
+- football commentator voice
+- football commentator voiceover
+- football commentary voice
+- football announcer voice
+- football promo voiceover
+
+Secondary goal:
+Reposition the related football pages more as supporting case studies so they reinforce the main page rather than distract from it.
+
+IMPORTANT:
+- Do not change the slug
+- Do not remove the existing Just Eat video
+- Do not remove the existing Midea video
+- Do not remove the downloadable MP3 demo
+- Do not redesign the page
+- Do not use em dashes
+- Keep British spelling throughout
+
+CURRENT RELATED FOOTBALL PAGES TO TREAT AS SUPPORTING CASE STUDIES:
+- /betfred-football-commentator
+- /iboy-football-commentator
+- /etisalat-celebrating-victory-football-commentator-voice
+- /snickers-football-commentator-voice
+- /champion-eleven-football-commentator-voice
+- /turkish-airlines-football-commentator-voiceover
+- /pizza-hut-delivery-football-commentator-voiceover
+- /qatar-drone-race-psg-voiceover
+- /manchester-city-football-commentry-voice
+- /just-eat-uefa-football-commentator-voice
+
+Please do the following:
+
+1. Strengthen the main /football-commentator-voice page copy so it feels like the definitive hub page for football commentator voice searches.
+   The page should clearly communicate:
+   - authentic British football commentator energy
+   - big-match promos
+   - comedy football ads
+   - stadium-style reads
+   - tournament-style excitement
+   - fast remote sessions
+   - broadcast-quality audio
+
+2. Keep the existing embedded examples for Just Eat and Midea, but improve the surrounding copy so they feel like featured proof points rather than isolated examples.
+
+3. Add a stronger and more natural internal link to:
+   /snickers-football-commentator-voice
+   Position it as another strong example of football commentator work, even though it is a few years old.
+
+4. Add a new short “featured campaigns” or “selected football commentator work” section on the main page.
+   Keep it clean and readable, not cluttered.
+   This section should naturally reference a mix of the strongest relevant examples, such as:
+   - Just Eat UEFA
+   - Midea
+   - Snickers
+   - Pizza Hut
+   - Manchester City
+   - Betfred
+   - Etisalat
+   - PSG Qatar Drone Race
+   Only include links where relevant and natural.
+
+5. Make sure the broad keyword targeting stays focused on the main page.
+   The main page should clearly own the broad commercial intent phrases:
+   - football commentator voice
+   - football commentator voiceover
+   - football commentary voice
+   - football announcer voice
+   - football promo voiceover
+
+6. Reposition the supporting football pages so they behave more like case studies.
+   Do this carefully and lightly, without deleting useful content.
+   Where appropriate on those pages:
+   - reduce overuse of broad generic football commentator phrasing in titles/opening copy if it is too repetitive
+   - lean them more towards the specific campaign / brand / case study angle
+   - add a natural internal link back to /football-commentator-voice
+   - use anchor text such as:
+     football commentator voice
+     football commentator voiceover
+     football commentary style
+   The aim is to reinforce the main page, not weaken the supporting pages.
+
+7. Keep /qatar-drone-race-psg-voiceover as a supporting example, but do not present it as the most traditional football commentary example. Treat it as a related high-energy sports / football-adjacent campaign.
+
+8. Improve the main page intro and section copy so that somebody landing there from Google immediately understands:
+   - this is a specialist football commentator voice page
+   - major brands have booked it
+   - there are multiple styles within the football promo space
+   - the page contains real examples and a current demo
+
+9. If appropriate, lightly weave in natural tournament relevance without making it sound spammy.
+   For example:
+   - big tournament promos
+   - major football campaigns
+   - world-class football energy
+   Avoid awkward seasonal stuffing.
+
+10. On the homepage Voiceover News section, add a prominent new item near the top:
+   “My Football Commentator voice is being picked up a lot this year ahead of the World Cup. Click here for more.”
+   Link this directly to:
+   /football-commentator-voice
+   Make sure it matches the style of the existing Voiceover News list and does not look visually out of place.
+
+11. Preserve the current premium tone of the site.
+   This should feel like a smart SEO and conversion tidy-up, not a rewrite for the sake of it.
+
+12. If page-level metadata can be improved safely on /football-commentator-voice, refine it slightly so it better supports the broad football commentator search intent while keeping the current strong positioning.
+
+Acceptance criteria:
+- /football-commentator-voice remains the main broad football hub page
+- Just Eat and Midea stay featured
+- Snickers is linked more strongly from the main page
+- the related football pages support the main page as case studies
+- the homepage Voiceover News section includes the new World Cup-related link to the main football page
+- no redesign
+- no slug changes
+- no existing strong assets removed
