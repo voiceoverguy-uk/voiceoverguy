@@ -1,0 +1,67 @@
+Update the existing page:
+
+/pathe-news-voice
+
+Please do not redesign the page. Keep the current layout, styling, spacing, typography and overall structure intact. This is a content enhancement to strengthen the page with one additional example block and some SEO-friendly supporting copy.
+
+Goal:
+Add a third content/video block to the Pathe News Voice page featuring a recent Aston Villa example voiced in the Pathé-style voice. This should strengthen the page for search relevance around terms such as:
+- aston villa pathe voice
+- aston villa pathe news voice
+- pathe news style voiceover
+- british pathe style voice
+- vintage newsreel voiceover
+
+Please do the following:
+
+1. Add a new content block to the existing page beneath the current examples and before the final contact / CTA section.
+
+2. The new block should include:
+- a heading
+- 2 to 3 short paragraphs of polished copy
+- the embedded YouTube Short
+- tasteful internal linking where relevant
+- copy that fits the tone of the current page
+
+Use this content as the basis:
+
+Heading:
+Aston Villa Kit Launch in a Pathé News Style
+
+Body copy:
+Fresh off the back of Aston Villa's big win, I was asked to voice their new kit announcement video in my Pathé-style voice, and it has turned out brilliantly. It is one of my strongest examples of the style, with that classic clipped, authoritative British delivery that suits vintage newsreel narration so well.
+
+The team did a superb job with the final sound too. The EQ on the voice really helps sell the illusion, giving it that polished, archive-inspired tone that feels right at home with the Pathé flavour. It is always satisfying when the performance and production come together like that.
+
+This kind of voice works beautifully for football club launches, heritage-themed promos, cinematic brand films and any project that wants that old-fashioned British newsreel authority. If you enjoy this style, you may also want to explore my other retro and cinematic voice work across the site.
+
+3. Embed this YouTube Short in the new block:
+https://www.youtube.com/shorts/Lp4lZUcdQ_w
+
+4. Add natural internal links in the new copy where relevant, if these pages already exist:
+- homepage
+- movie trailer voice page
+- voiceover studio page
+- character voice library page
+
+5. Make sure the new block is fully responsive and visually consistent with the existing two example sections.
+
+6. If the current embed component does not gracefully support YouTube Shorts, update it in the cleanest possible way so Shorts display properly on this page without breaking the existing video embeds.
+
+7. Strengthen on-page SEO slightly without making the copy sound stuffed or awkward:
+- naturally mention Aston Villa
+- naturally mention Pathé-style / Pathé News style voice
+- retain readability and premium tone
+
+8. If the page has page-level metadata or schema that can be lightly improved without disrupting the rest of the site, update it carefully to reflect that the page now includes an Aston Villa Pathé-style example as well. Do not overstuff schema.
+
+9. Do not change the slug.
+10. Do not remove the existing videos or text.
+11. Do not add em dashes.
+
+Acceptance criteria:
+- /pathe-news-voice now includes a third example block for the Aston Villa video
+- the YouTube Short displays correctly
+- the copy reads naturally and professionally
+- the page is slightly stronger for Aston Villa + Pathé-style search relevance
+- the existing layout remains intact

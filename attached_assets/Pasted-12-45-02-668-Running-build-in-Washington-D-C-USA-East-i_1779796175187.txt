@@ -1,0 +1,42 @@
+12:45:02.668 Running build in Washington, D.C., USA (East) – iad1
+12:45:02.669 Build machine configuration: 2 cores, 8 GB
+12:45:02.795 Cloning github.com/voiceoverguy-uk/PatheVoice (Branch: main, Commit: 7a2da92)
+12:45:02.796 Previous build caches not available.
+12:45:03.548 Cloning completed: 753.000ms
+12:45:03.880 Running "vercel build"
+12:45:03.914 Vercel CLI 54.4.1
+12:45:04.809 Running "install" command: `npm install`...
+12:45:14.337 
+12:45:14.338 added 341 packages, and audited 342 packages in 9s
+12:45:14.339 
+12:45:14.339 50 packages are looking for funding
+12:45:14.339   run `npm fund` for details
+12:45:14.356 
+12:45:14.358 12 vulnerabilities (7 moderate, 5 high)
+12:45:14.358 
+12:45:14.358 To address all issues, run:
+12:45:14.359   npm audit fix
+12:45:14.359 
+12:45:14.359 Run `npm audit` for details.
+12:45:14.625 
+12:45:14.626 > rest-express@1.0.0 build
+12:45:14.626 > vite build
+12:45:14.626 
+12:45:14.836 vite v5.4.19 building for production...
+12:45:14.901 transforming...
+12:45:15.250 Browserslist: browsers data (caniuse-lite) is 19 months old. Please run:
+12:45:15.251   npx update-browserslist-db@latest
+12:45:15.252   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+12:45:18.768 ✓ 1686 modules transformed.
+12:45:19.057 rendering chunks...
+12:45:19.068 computing gzip size...
+12:45:19.089 ../dist/index.html                  12.54 kB │ gzip:   2.65 kB
+12:45:19.090 ../dist/assets/index-DoiRwRgQ.css   84.56 kB │ gzip:  13.80 kB
+12:45:19.090 ../dist/assets/index-msb2OdKX.js   414.71 kB │ gzip: 126.50 kB
+12:45:19.090 ✓ built in 4.23s
+12:45:20.414 BEWARE: your OS is not officially supported by Playwright; installing dependencies for ubuntu24.04-x64 as a fallback.
+12:45:20.414 Installing dependencies...
+12:45:20.422 sh: line 1: apt-get: command not found
+12:45:20.437 Failed to install browsers
+12:45:20.438 Error: Installation process exited with code: 127
+12:45:20.462 Error: Command "npm run build && npx playwright install chromium --with-deps && node prerender.mjs" exited with 1

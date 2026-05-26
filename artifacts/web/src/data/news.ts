@@ -23,6 +23,13 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("Following their big win, Aston Villa had me narrate their new kit launch in Pathé News style. "),
+      link("Watch Glory Days here", "/pathe-news-voice"),
+      t("."),
+    ],
+  },
+  {
+    segments: [
       t("It's not all voicing. The new Aquarabia Water Park needed some cheers and screams, myself and daughter stepped up. "),
       link("Watch the Promo!", "/aquarabia-promo-voice-screams-shouts-reactions"),
     ],

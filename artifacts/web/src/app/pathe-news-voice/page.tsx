@@ -6,22 +6,29 @@ import { SchemaScripts, profilePage, breadcrumb, faqPage, videoObject } from '@/
 
 const data = (pages as Record<string, Record<string, string>>)['seo16'];
 
+const metaDescription = "Pathe News Voice - 1940's and 1950's retro voiceover style heard on BBC Radio 1, Everton FC, Horlicks and Aston Villa's Glory Days kit launch.";
+
+const astonVillaBlock = `<br><h2>Aston Villa Kit Launch in a <span class="ident">Pathé News</span> Style</h2>
+<p>Fresh off the back of Aston Villa's big win, I was asked to voice their new kit announcement video in my Pathé-style voice, and it has turned out brilliantly. It is one of my strongest examples of the style, with that classic clipped, authoritative British delivery that suits vintage newsreel narration so well.</p>
+<p>The team did a superb job with the final sound too. The EQ on the voice really helps sell the illusion, giving it that polished, archive-inspired tone that feels right at home with the Pathé flavour. It is always satisfying when the performance and production come together like that.</p>
+<p>This kind of voice works beautifully for football club launches, heritage-themed promos, cinematic brand films and any project that wants that old-fashioned British newsreel authority. Recorded in my <a href="/voiceover-studio" title="Broadcast-quality voiceover studio">broadcast-quality voiceover studio</a>, it sits naturally alongside my <a href="/movie-trailer-voice" title="Movie Trailer Voice">movie trailer voice</a> work and the wider <a href="/character-voice-library" title="Character Voice Library">character voice library</a>.</p>`;
+
 export const metadata: Metadata = {
   alternates: {
     canonical: `https://www.voiceoverguy.co.uk/pathe-news-voice`,
   },
   title: data.s1,
-  description: data.s2,
+  description: metaDescription,
   openGraph: {
     title: `${data.s1} | VoiceoverGuy`,
-    description: data.s2,
+    description: metaDescription,
     url: 'https://www.voiceoverguy.co.uk/pathe-news-voice',
     images: [{ url: 'https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp', width: 1200, height: 630, alt: 'Pathe News Voice – Guy Harris' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${data.s1} | VoiceoverGuy`,
-    description: data.s2,
+    description: metaDescription,
     images: ['https://www.voiceoverguy.co.uk/assets/images/og-image-guy-harris.webp'],
   },
 };
@@ -36,6 +43,7 @@ const schemas = [
     { q: 'Can Guy Harris voice my project in the Pathe News style?', a: 'Yes. Guy specialises in authentic Pathe News and Danvers-Walker style voiceovers for radio ads, TV productions, and vintage-themed campaigns.' },
   ]),
   videoObject('pathe-news-voice', data.s1, 'Classic British Pathe News style voiceover by Guy Harris with 1940s flair and mid-Atlantic precision.', 'Hp8-la1KL6E', '2015-07-02'),
+  videoObject('pathe-news-voice', 'Aston Villa Kit Launch in a Pathé News Style', "Aston Villa's Glory Days kit launch voiced by Guy Harris in his vintage Pathé News style, with authoritative British newsreel delivery.", 'Lp4lZUcdQ_w', '2026-05-26', '-aston-villa'),
 ];
 
 export default function Page() {
@@ -52,6 +60,8 @@ export default function Page() {
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
+        { text: astonVillaBlock },
+        { youtubeId: 'Lp4lZUcdQ_w' },
         ...(data.s6 ? [{ text: data.s6 }] : []),
         { imageSrc: '/assets/images/pathe-voice-og.webp', imageAlt: 'Path\u00E9 News Voice \u2013 Guy Harris' },
       ]} />
