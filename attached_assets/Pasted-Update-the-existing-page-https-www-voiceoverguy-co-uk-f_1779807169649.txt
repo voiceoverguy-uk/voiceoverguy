@@ -1,0 +1,113 @@
+Update the existing page:
+
+https://www.voiceoverguy.co.uk/football-commentator-voice
+
+This is a second-pass refinement of the football commentator hub page. Do not redesign the page. Keep the same overall layout, styling, videos, MP3 player, form, spacing and page structure. This is a copy-focus and internal-linking cleanup only.
+
+Primary goal:
+Make this page feel even more tightly focused on football commentator voice search intent, so a visitor landing from Google immediately feels they are on the right specialist page.
+
+IMPORTANT:
+- Do not change the slug
+- Do not redesign the page
+- Do not remove the Just Eat video
+- Do not remove the Midea video
+- Do not remove the MP3 demo
+- Do not use em dashes
+- Keep British spelling throughout
+
+Please do the following:
+
+1. Remove or replace unnecessary off-topic cross-links on this page where they dilute football relevance.
+   Specifically remove football-page links out to:
+   - Movie Trailer
+   - Gameshow Host
+   - Voice of God
+   - Santa
+   - David Attenborough-style narration
+   - Pathé News
+   These may exist elsewhere on the site, but this page should stay tightly focused on football commentary intent.
+
+2. Rework the surrounding copy so the page reads less like a general voiceover portfolio and more like a specialist football commentator hub.
+   Keep the tone premium, confident and commercial.
+   Make sure the page clearly communicates:
+   - authentic British football commentator energy
+   - big-match promos
+   - comedy football ads
+   - stadium-style reads
+   - tournament-style excitement
+   - fast remote sessions
+   - broadcast-quality audio
+
+3. Tighten the hub-intro section that was added near the top.
+   Keep the idea, but make it more direct and less explanatory.
+   It should quickly confirm to the visitor:
+   - this is the right page for football commentator voiceover
+   - major brands have booked this style
+   - real examples and a current demo are on the page
+   - the page covers both comedic and cinematic football promo work
+
+4. Keep the Just Eat and Midea sections as the two main featured proof points, but improve the copy around them so they feel like two complementary examples of the style:
+   - Just Eat = comedy-led, contemporary, big-match energy
+   - Midea / Man City = cinematic, polished, broadcast-style football commentary
+   Make the contrast clearer and more useful for a prospective client.
+
+5. Strengthen the Snickers internal link again, but do it in a more commercially useful way.
+   Position it as:
+   - a strong football campaign example
+   - a still-relevant showcase of World Cup / tournament energy
+   - a good supporting case study for this style
+   Use natural anchor text and avoid awkward stuffing.
+
+6. Improve the “Selected Football Commentator Work” block so it feels cleaner and more authoritative.
+   Keep it concise.
+   It should read like a curated proof section, not a directory dump.
+   Reference:
+   - Just Eat UEFA
+   - Midea x Manchester City
+   - Snickers Arabia
+   - Pizza Hut Delivery
+   - Betfred
+   - Etisalat Celebrating Victory
+   - PSG Qatar Drone Race
+   If Manchester City already appears naturally inside Midea, do not force a second standalone mention unless it improves readability.
+
+7. Remove any wording that makes the page sound too generic or padded.
+   Prioritise clarity, authority and football-specific relevance over extra filler.
+
+8. Keep or improve the “Fast Remote Sessions, Broadcast-Quality Audio” section, but ensure it supports football intent directly.
+   It should feel relevant to football promos, sports ads, tournament campaigns and quick-turnaround broadcast work, not like a generic studio paragraph.
+
+9. Review the final “Trusted by Premier Brands” area.
+   Tighten the wording so it supports football relevance more strongly.
+   If the current copy drifts too broadly into general brand/showcase territory, bring it back toward:
+   - football campaigns
+   - broadcaster-style reads
+   - football promo energy
+   - major commercial bookings
+   Keep it premium and concise.
+
+10. Keep the contact form and CTA exactly where they are, but slightly improve the sentence immediately above the form if needed so it feels more conversion-focused for football commentary enquiries.
+
+11. Preserve all current visual structure and spacing.
+   This is not a redesign task.
+   It is a precision copy and focus improvement task only.
+
+12. If page-level metadata can be lightly improved again without overdoing it, make sure it still strongly supports:
+   - football commentator voice
+   - football commentator voiceover
+   - football commentary voice
+   - football announcer voice
+   - football promo voiceover
+   Keep the metadata premium and natural, not stuffed.
+
+Acceptance criteria:
+- the page is more tightly focused on football commentator intent than it is now
+- unnecessary links to non-football styles are removed from this page
+- Just Eat and Midea remain the two main featured examples
+- Snickers remains a stronger supporting internal link
+- the Selected Football Commentator Work block feels curated and authoritative
+- the page reads less like a general portfolio and more like the specialist football hub
+- no redesign
+- no slug change
+- no existing key media assets removed
