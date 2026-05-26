@@ -10,9 +10,9 @@ const metaTitle = 'Football Commentator Voice | British Football Commentator Voi
 const metaDescription = "British football commentator voice for big-match promos, comedy football ads, stadium reads, tournament campaigns and announcer-style commentary. Booked for Just Eat UEFA, Midea x Manchester City, Snickers Arabia, Pizza Hut Delivery, Betfred, Etisalat Celebrating Victory and PSG Qatar Drone Race. Fast remote sessions, broadcast-quality audio.";
 
 const introLeadIn = `<h2>The UK's Hub for <span class="ident">Football Commentator</span> Voiceover</h2>
-<p>You are on the right page. This is the home of my British football commentator voice, booked for Just Eat UEFA, Midea x Manchester City, Snickers Arabia, Pizza Hut Delivery, Betfred, Etisalat Celebrating Victory and PSG Qatar Drone Race. Two of the most current examples and the 2026 commentator demo are right below, covering both comedy football promo work and cinematic broadcast-style reads. Strong supporting case study: <a href="snickers-football-commentator-voice" title="Snickers Arabia Football Commentator">Snickers Arabia World Cup commentator</a>.</p>`;
+<p>If you are here looking for a British football commentator voice, you are in the right place. This page brings together my strongest football commentator work for major brands, alongside a current demo and two featured examples that show both sides of the style: comedy-led big-match energy and polished broadcast-style delivery. For a strong supporting tournament example, hear my <a href="snickers-football-commentator-voice" title="Snickers Arabia Football Commentator">Snickers Arabia World Cup football commentator work</a>.</p>`;
 
-const section4Override = `<h2><span class="ident">Seamless Technology Meets Authentic Commentary</span></h2>
+const section4Override = `<h2><span class="ident">Broadcast-Ready Football Commentary</span></h2>
 <p>Football commentator sessions are taken live via Source Connect, Cleanfeed or Zoom and delivered broadcast-ready from a fully treated studio. Brand bookings in this style include <a href="iboy-football-commentator" class="isred" title="Netflix iBoy football commentary">Netflix's iBoy</a>, <a href="pizza-hut-delivery-football-commentator-voiceover" class="isred" title="Pizza Hut football commentary">Pizza Hut Delivery</a> and <a href="manchester-city-football-commentry-voice" class="isred" title="Midea x Manchester City">Midea x Manchester City</a>, with the wider campaign list further down the page. The player above is the current 2026 football commentator showreel.</p>`;
 
 const bridgeBetweenVideos = `<h2><span class="ident">Featured</span> Football Commentator Examples</h2>
@@ -33,8 +33,14 @@ const selectedWork = `<h2>Selected <span class="ident">Football Commentator</spa
 <li><a href="qatar-drone-race-psg-voiceover" title="PSG Qatar Drone Race Voiceover">PSG Qatar Drone Race</a>: football-adjacent high-energy sports campaign that borrows the same commentator energy.</li>
 </ul>`;
 
+const section5Override = `<h2><span class="ident">20+ Years</span> of Football Promo Experience</h2>
+<p>For over 20 years, I have delivered football-style voiceovers worldwide. Major campaigns include <a href="etisalat-celebrating-victory-football-commentator-voice" title="Etisalat Celebrating Victory">Etisalat's Celebrating Victory</a> and <a href="betfred-football-commentator" title="Betfred football commentator">Betfred</a>, bringing big-match energy to both scripted and improvised reads.</p>
+<p>You get broadcast audio, fast delivery and reliable direction-friendly sessions. Intensity, comic timing or full commentator chaos, all are on the menu.</p>
+<p>From one-liners to full campaign coverage, the result is consistency, clarity and that instantly recognisable British football commentator sound.</p>`;
+
 const section6Override = `<h2>Trusted for Premier Football Campaigns</h2>
-<p>This football commentator voice has gone out across global ads, radio promos, sketches, digital campaigns and stadium content. From <strong>BBC Radio 1</strong> and <strong>Netflix</strong> to <a href="qatar-drone-race-psg-voiceover" title="PSG Qatar Drone Race">Paris Saint-Germain's Qatar Drone Race</a>, <a href="just-eat-uefa-football-commentator-voice" title="Just Eat UEFA football commentator">Just Eat UEFA promos</a> and a string of national football ad campaigns, the brief is the same: drama, urgency, broadcaster-style delivery and that instantly recognisable British football commentator sound.</p>
+<p>This football commentator voice has gone out across global ads, radio promos, sketches, digital campaigns and stadium content. From <strong>BBC Radio 1</strong> and <strong>Netflix</strong> to <a href="qatar-drone-race-psg-voiceover" title="PSG Qatar Drone Race">Paris Saint-Germain's Qatar Drone Race</a>, <a href="just-eat-uefa-football-commentator-voice" title="Just Eat UEFA football commentator">Just Eat UEFA promos</a> and a string of national football ad campaigns, the brief is often the same: drama, urgency, broadcaster-style delivery and that instantly recognisable British football commentator sound.</p>
+<p>And football is not the only place clubs and brands have used my more heritage-led styles either. Fresh off Aston Villa's big win, I was also asked to voice their new kit launch in my <a href="/pathe-news-voice" title="Pathé News style voiceover">Pathé News style</a>, which shows how these classic British delivery styles can sit naturally alongside modern football campaigns too.</p>
 <p><a href="contact-guy" class="isred" title="Book a football commentator voiceover">Get in touch</a> to book a session or request a quote for your next football promo.</p>`;
 
 export const metadata: Metadata = {
@@ -83,7 +89,7 @@ export default function Page() {
         { text: section4Override, audioSrc: '/assets/audio/football-commentator-demo-2026-guy-harris.mp3' },
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         { text: bridgeBetweenVideos, fullWidth: true },
-        ...(data.s5 ? [{ text: data.s5 }] : []),
+        { text: section5Override },
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         { text: closingEnergy, fullWidth: true },
         { text: selectedWork, fullWidth: true },
