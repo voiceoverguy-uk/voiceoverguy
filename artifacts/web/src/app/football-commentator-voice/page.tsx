@@ -72,7 +72,8 @@ const schemas = [
   ]),
   breadcrumb('football-commentator-voice', 'Football Commentator Voice'),
   audioObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'Professional football commentator-style voiceover demo by Guy Harris.', '/assets/audio/football-commentator-showreel-guy-harris.mp3', 'PT72S'),
-  videoObject('football-commentator-voice', 'Football Commentator Voice \u2013 Guy Harris', 'High-energy football commentator-style voiceover demo.', 'T9opwMc46Ms', '2021-06-07'),
+  videoObject('football-commentator-voice', 'Just Eat UEFA Football Commentator \u2013 Guy Harris', 'Comedy-led big-match football commentator voiceover for the Just Eat UEFA campaign, voiced by Guy Harris.', 'T9opwMc46Ms', '2021-06-07', '-just-eat-uefa'),
+  videoObject('football-commentator-voice', 'Midea x Manchester City Football Commentator \u2013 Guy Harris', 'Cinematic broadcast-style football commentator voiceover for the Midea x Manchester City campaign, voiced by Guy Harris.', '1wYjSxN9mJI', '2023-04-12', '-midea-manchester-city'),
 ];
 
 export default function Page() {
