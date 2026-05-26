@@ -1,0 +1,73 @@
+Update the existing page:
+
+https://www.voiceoverguy.co.uk/football-commentator-voice
+
+This is a very small final polish pass only. Do not redesign the page. Keep the layout, spacing, videos, MP3 player, contact form, selected work block and overall structure exactly as they are.
+
+Goal:
+Make three wording refinements only:
+1. tighten the top hub paragraph slightly so it feels less list-heavy
+2. replace two slightly generic section headings with more football-specific headings
+3. add a tasteful nod in the closing football trust section to the recent Aston Villa Pathé-style work, linking to /pathe-news-voice
+
+IMPORTANT:
+- Do not change the slug
+- Do not redesign anything
+- Do not move sections around
+- Do not remove the Just Eat video
+- Do not remove the Midea video
+- Do not remove the MP3 demo
+- Do not use em dashes
+- Keep British spelling throughout
+
+Please make the following exact wording changes:
+
+1. Replace the current hub-intro section text under:
+"The UK's Hub for Football Commentator Voiceover"
+
+Use this exact replacement copy:
+
+If you are here looking for a British football commentator voice, you are in the right place. This page brings together my strongest football commentator work for major brands, alongside a current demo and two featured examples that show both sides of the style: comedy-led big-match energy and polished broadcast-style delivery. For a strong supporting tournament example, hear my Snickers Arabia World Cup football commentator work.
+
+2. Replace the heading:
+"Seamless Technology Meets Authentic Commentary"
+
+with this exact heading:
+"Broadcast-Ready Football Commentary"
+
+Do not substantially rewrite the paragraph beneath unless needed for fit. Only make minor adjustments if necessary to keep the copy flowing naturally under the new heading.
+
+3. Replace the heading:
+"Two Decades of Voiceover Excellence"
+
+with this exact heading:
+"20+ Years of Football Promo Experience"
+
+Do not substantially rewrite the paragraph beneath unless needed for fit. Only make minor adjustments if necessary to keep the copy flowing naturally under the new heading.
+
+4. Update the closing section heading and body so it includes a tasteful football-relevant nod to the Aston Villa Pathé-style work.
+
+Keep the existing heading:
+"Trusted for Premier Football Campaigns"
+
+but replace the body copy beneath it with this exact text:
+
+This football commentator voice has gone out across global ads, radio promos, sketches, digital campaigns and stadium content. From BBC Radio 1 and Netflix to Paris Saint-Germain's Qatar Drone Race, Just Eat UEFA promos and a string of national football ad campaigns, the brief is often the same: drama, urgency, broadcaster-style delivery and that instantly recognisable British football commentator sound.
+
+And football is not the only place clubs and brands have used my more heritage-led styles either. Fresh off Aston Villa's big win, I was also asked to voice their new kit launch in my Pathé News style, which shows how these classic British delivery styles can sit naturally alongside modern football campaigns too. Link the words "Pathé News style" to:
+/pathe-news-voice
+
+Get in touch to book a session or request a quote for your next football promo.
+
+5. Keep all existing internal links that are already helping the football focus, including the stronger Snickers link. Do not reintroduce links to Movie Trailer, Gameshow Host, Voice of God, Santa, David Attenborough-style narration or Pathé News elsewhere on this page apart from the single Aston Villa / Pathé News link requested above.
+
+6. Do not alter the "Selected Football Commentator Work" block content unless needed for tiny line-length or spacing reasons only.
+
+Acceptance criteria:
+- page layout is unchanged
+- only the requested wording refinements are made
+- top hub paragraph is tighter and less list-heavy
+- the two headings are replaced exactly as requested
+- the closing trust section now includes the Aston Villa / Pathé News nod with a link to /pathe-news-voice
+- no em dashes
+- British spelling throughout
