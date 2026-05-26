@@ -3890,7 +3890,7 @@ const blogPosts: BlogPost[] = [
  "url": "pathe-news-voice",
  "pageTitle": "Pathe News Voice",
  "info": "",
- "searchTerms": "cholmondley warner chumley 1940 1950",
+ "searchTerms": "cholmondley warner chumley 1940 1950 aston villa villa kit launch glory days newsreel pathe",
  "pageDesc": "",
  "text1": "",
  "text2": "",
