@@ -6,29 +6,36 @@ import { SchemaScripts, localBusiness, faqPage, breadcrumb, audioObject, videoOb
 
 const data = (pages as Record<string, Record<string, string>>)['seo13'];
 
-const metaTitle = 'Football Commentator Voice | British Football Commentator Voiceover for Promos & Ads';
-const metaDescription = "British football commentator voice for big-match promos, comedy ads, stadium reads and tournament campaigns. As heard for Just Eat UEFA, Midea, Manchester City, Snickers, Pizza Hut and Betfred. Fast remote sessions, broadcast-quality audio.";
+const metaTitle = 'Football Commentator Voice | British Football Commentator Voiceover, Commentary & Announcer Reads';
+const metaDescription = "British football commentator voice for big-match promos, comedy football ads, stadium reads, tournament campaigns and announcer-style commentary. Booked for Just Eat UEFA, Midea x Manchester City, Snickers Arabia, Pizza Hut Delivery, Betfred, Etisalat Celebrating Victory and PSG Qatar Drone Race. Fast remote sessions, broadcast-quality audio.";
 
 const introLeadIn = `<h2>The UK's Hub for <span class="ident">Football Commentator</span> Voiceover</h2>
-<p>If you have landed here searching for a British football commentator voice, this is the right page. From big-match promos and World Cup ad campaigns to comedy football sketches, stadium-style trailer reads and high-energy tournament cutdowns, this is the home of my football commentator voiceover work. Sessions are fast, broadcast-quality and direction-friendly, with same-day delivery the norm. Featured below are two of the most current examples, with my <a href="snickers-football-commentator-voice" title="Snickers Football Commentator Voice">Snickers World Cup football commentator</a> work and the wider selected campaign list further down the page.</p>`;
+<p>You are on the right page. This is the home of my British football commentator voice, booked for Just Eat UEFA, Midea x Manchester City, Snickers Arabia, Pizza Hut Delivery, Betfred, Etisalat Celebrating Victory and PSG Qatar Drone Race. Two of the most current examples and the 2026 commentator demo are right below, covering both comedy football promo work and cinematic broadcast-style reads. Strong supporting case study: <a href="snickers-football-commentator-voice" title="Snickers Arabia Football Commentator">Snickers Arabia World Cup commentator</a>.</p>`;
+
+const section4Override = `<h2><span class="ident">Seamless Technology Meets Authentic Commentary</span></h2>
+<p>Football commentator sessions are taken live via Source Connect, Cleanfeed or Zoom and delivered broadcast-ready from a fully treated studio. Brand bookings in this style include <a href="iboy-football-commentator" class="isred" title="Netflix iBoy football commentary">Netflix's iBoy</a>, <a href="pizza-hut-delivery-football-commentator-voiceover" class="isred" title="Pizza Hut football commentary">Pizza Hut Delivery</a> and <a href="manchester-city-football-commentry-voice" class="isred" title="Midea x Manchester City">Midea x Manchester City</a>, with the wider campaign list further down the page. The player above is the current 2026 football commentator showreel.</p>`;
 
 const bridgeBetweenVideos = `<h2><span class="ident">Featured</span> Football Commentator Examples</h2>
-<p>The Just Eat UEFA spot above is a great example of comedy-led big-match energy. Below, the Midea piece with Manchester City sits at the more cinematic, broadcast end of the football commentator voiceover spectrum. Both were recorded remotely from my broadcast-quality studio, both went out on major campaigns, and both show the range of what a British football commentator voice can bring to a brand.</p>`;
+<p>Two complementary proof points. <strong>Just Eat UEFA</strong> above is comedy-led, contemporary, big-match energy: a national campaign built on irreverent commentator timing. <strong>Midea x Manchester City</strong> below sits at the cinematic, broadcast-style end of the football commentator voiceover spectrum, with the kind of polished match-day delivery you would expect on a global brand spot. Both were recorded remotely from my broadcast-quality studio, both went out on major campaigns, and both turned around the same day they were briefed.</p>`;
 
 const closingEnergy = `<h2>Fast Remote Sessions, <span class="ident">Broadcast-Quality</span> Audio</h2>
-<p>Whether the brief is a big-tournament promo, a stadium-style read, a comedy football ad or a fast turnaround social cutdown, sessions are directed live via Source Connect, Cleanfeed or Zoom and audio is delivered broadcast-ready. Most jobs go out same day. World-class football energy, authentic British commentary, no fuss.</p>`;
+<p>Football promos, sports ads, tournament cutdowns, stadium-style trailer reads and quick-turnaround broadcast work, all delivered from a fully treated studio. Live direction over Source Connect, Cleanfeed or Zoom, broadcast-ready masters, and most football jobs back the same day. Authentic British football commentator energy, no fuss.</p>`;
 
 const selectedWork = `<h2>Selected <span class="ident">Football Commentator</span> Work</h2>
-<p>A short selection of strong examples across the football commentator voiceover space, mixing big-brand campaigns and tournament-led promos:</p>
+<p>A curated set of football commentator voiceovers across big-brand campaigns and tournament-led promos:</p>
 <ul>
-<li><a href="just-eat-uefa-football-commentator-voice" title="Just Eat UEFA Football Commentator Voice">Just Eat UEFA</a>: comedy big-match energy for a national campaign.</li>
-<li><a href="manchester-city-football-commentry-voice" title="Manchester City Football Commentator Voice">Midea x Manchester City</a>: broadcast-style commentary for a global brand.</li>
-<li><a href="snickers-football-commentator-voice" title="Snickers Football Commentator Voice">Snickers Arabia</a>: high-energy World Cup commentator reads, still one of the strongest examples in this style.</li>
+<li><a href="just-eat-uefa-football-commentator-voice" title="Just Eat UEFA Football Commentator Voice">Just Eat UEFA</a>: comedy-led big-match energy for a national campaign.</li>
+<li><a href="manchester-city-football-commentry-voice" title="Manchester City Football Commentator Voice">Midea x Manchester City</a>: cinematic broadcast-style commentary for a global brand.</li>
+<li><a href="snickers-football-commentator-voice" title="Snickers Arabia Football Commentator Voice">Snickers Arabia</a>: high-energy World Cup commentator reads, still one of the strongest tournament showcases in this style.</li>
 <li><a href="pizza-hut-delivery-football-commentator-voiceover" title="Pizza Hut Football Commentator Voiceover">Pizza Hut Delivery</a>: fast-paced national commentator promo.</li>
-<li><a href="betfred-football-commentator" title="Betfred Football Commentator Voice">Betfred</a>: character-led EURO promo with full commentator chaos.</li>
+<li><a href="betfred-football-commentator" title="Betfred Football Commentator Voice">Betfred</a>: character-led EURO 2016 viral with full commentator chaos.</li>
 <li><a href="etisalat-celebrating-victory-football-commentator-voice" title="Etisalat Football Commentator Voice">Etisalat Celebrating Victory</a>: Premier League celebration spot.</li>
-<li><a href="qatar-drone-race-psg-voiceover" title="PSG Qatar Drone Race Voiceover">PSG Qatar Drone Race</a>: a related high-energy sports campaign that borrows the same commentator energy.</li>
+<li><a href="qatar-drone-race-psg-voiceover" title="PSG Qatar Drone Race Voiceover">PSG Qatar Drone Race</a>: football-adjacent high-energy sports campaign that borrows the same commentator energy.</li>
 </ul>`;
+
+const section6Override = `<h2>Trusted for Premier Football Campaigns</h2>
+<p>This football commentator voice has gone out across global ads, radio promos, sketches, digital campaigns and stadium content. From <strong>BBC Radio 1</strong> and <strong>Netflix</strong> to <a href="qatar-drone-race-psg-voiceover" title="PSG Qatar Drone Race">Paris Saint-Germain's Qatar Drone Race</a>, <a href="just-eat-uefa-football-commentator-voice" title="Just Eat UEFA football commentator">Just Eat UEFA promos</a> and a string of national football ad campaigns, the brief is the same: drama, urgency, broadcaster-style delivery and that instantly recognisable British football commentator sound.</p>
+<p><a href="contact-guy" class="isred" title="Book a football commentator voiceover">Get in touch</a> to book a session or request a quote for your next football promo.</p>`;
 
 export const metadata: Metadata = {
   alternates: {
@@ -71,16 +78,16 @@ export default function Page() {
         </section>
       )}
       <div className="inner-bar" />
-      <InnerPage pageTitle={data.s1} pageSlug="football-commentator-voice" formIntro="Need a football commentator voice? Send me a quick message and I'll get back to you." sections={[
+      <InnerPage pageTitle={data.s1} pageSlug="football-commentator-voice" formIntro="Need a football commentator voice for your next promo or campaign? Send me a quick brief and I'll come back the same day with a sample or quote." sections={[
         { text: introLeadIn, fullWidth: true },
-        ...(data.s4 ? [{ text: data.s4, audioSrc: '/assets/audio/football-commentator-demo-2026-guy-harris.mp3' }] : []),
+        { text: section4Override, audioSrc: '/assets/audio/football-commentator-demo-2026-guy-harris.mp3' },
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         { text: bridgeBetweenVideos, fullWidth: true },
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),
         { text: closingEnergy, fullWidth: true },
         { text: selectedWork, fullWidth: true },
-        ...(data.s6 ? [{ text: data.s6 }] : []),
+        { text: section6Override },
         { imageSrc: '/assets/images/football-commentator-voice-og.webp', imageAlt: 'Football Commentator Voice \u2013 Guy Harris' },
       ]} />
       <SchemaScripts schemas={schemas} />
