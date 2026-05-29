@@ -23,6 +23,16 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("Meta had me voice four new radio ads for Spotify to promote their latest Meta Ray-Ban sunglasses. Great campaign to be part of."),
+    ],
+  },
+  {
+    segments: [
+      t("The work with the NHS continues. I've been narrating parenting content for the Solihull Approach. If you've taken one of their courses, you may well have heard me."),
+    ],
+  },
+  {
+    segments: [
       t("My Football Commentator voice is being picked up a lot this year ahead of the World Cup. "),
       link("Click here for more", "/football-commentator-voice"),
       t("."),
