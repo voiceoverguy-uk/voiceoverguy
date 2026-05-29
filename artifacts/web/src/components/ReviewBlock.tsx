@@ -25,7 +25,7 @@ export default function ReviewBlock() {
         <span className="review-stars">★★★★★</span>
         <p className="review-text">
           Rated <span className="review-highlight">{rating}</span> on Google by{' '}
-          <span className="review-highlight">{count}</span> happy clients
+          <span className="review-highlight">{count}</span> happy clients who chose Human First!
         </p>
       </div>
       <a
