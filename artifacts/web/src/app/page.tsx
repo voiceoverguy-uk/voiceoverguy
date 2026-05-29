@@ -101,9 +101,9 @@ export default function Home() {
             <ReviewBlock />
 
             <div className="hero-cta-wrapper">
-              <Link href="/contact-guy" className="hero-cta-button">
+              <a href="#contact" className="hero-cta-button">
                 Get in Touch Today
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -333,7 +333,7 @@ export default function Home() {
                 Avoid generic showreels!— Let me ensure
                 I&apos;m the perfect fit for your brand or project
                 before booking your VoiceOver.{' '}
-                <Link href="/contact-guy" className="red-link">Get in touch today.</Link>
+                <a href="#contact" className="red-link">Get in touch today.</a>
               </p>
             </div>
             <div className="feature-block">
@@ -358,7 +358,9 @@ export default function Home() {
       {/* NEWS */}
       <NewsSection />
 
-      <HomepageContact />
+      <div id="contact">
+        <HomepageContact />
+      </div>
 
       {/* STRUCTURED DATA: single @graph block */}
       <script
