@@ -23,6 +23,13 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("If you've ever visited the Exotic Zoo and Natural History Museum in Telford, you may hear my "),
+      link("Attenborough voice", "/david-attenborough-voice"),
+      t(" narrating throughout."),
+    ],
+  },
+  {
+    segments: [
       t("Meta had me voice four new radio ads for Spotify to promote their latest Meta Ray-Ban sunglasses. Great campaign to be part of."),
     ],
   },
