@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import LiveSearch from './LiveSearch';
 import { voiceDemos, characterDemos } from '@/data/demos';
 
@@ -33,11 +34,25 @@ export default function Navbar() {
   const logoRef = useRef<HTMLDivElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
   const isFixedRef = useRef(false);
+  const pathname = usePathname();
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
     setOpenItem(null);
   }, []);
+
+  const handleContactClick = useCallback((e: React.MouseEvent) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      closeMobile();
+      const target = document.getElementById('contact');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      closeMobile();
+    }
+  }, [pathname, closeMobile]);
 
   const toggleMobile = (label: string) => {
     setOpenItem(prev => prev === label ? null : label);
@@ -295,7 +310,7 @@ export default function Navbar() {
 
             {/* Contact */}
             <li className="nav-item" role="none">
-              <Link href="/contact-guy" className="nav-link nav-link--contact" role="menuitem"><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
+              <Link href="/contact-guy" className="nav-link nav-link--contact" role="menuitem" onClick={handleContactClick}><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
             </li>
           </ul>
         </div>
