@@ -23,6 +23,12 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("Polestar had me voice some of their understated radio ads. "),
+      link("Hear my calm, premium commercial delivery here.", "/voice-of-polestar-car-radio-ads"),
+    ],
+  },
+  {
+    segments: [
       t("If you've ever visited the Exotic Zoo and Natural History Museum in Telford, you may hear my "),
       link("Attenborough voice", "/david-attenborough-voice"),
       t(" narrating throughout."),

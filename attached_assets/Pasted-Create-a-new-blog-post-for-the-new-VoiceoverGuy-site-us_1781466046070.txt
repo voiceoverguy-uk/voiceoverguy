@@ -1,0 +1,64 @@
+Create a new blog post for the new VoiceoverGuy site using the standard blog format. Keep the tone polished, understated, premium and professional. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+Voice of Polestar Radio Ads
+
+URL slug:
+voice-of-polestar-car-radio-ads
+
+Date:
+2026-06-15
+
+Rating:
+middle
+
+Intro line:
+Guy Harris provides the understated, flat commercial delivery heard in radio adverts for Polestar, bringing a calm premium tone to the brand.
+
+Main text (block 1):
+<p>I have voiced radio commercials for <strong>Polestar</strong>, using that deliberately flat, understated delivery which suits the brand’s tone so well. It is a style that does not shout for attention. Instead, it draws people in with confidence, control and a calm sense of authority.</p>
+<p>That kind of read can be deceptively difficult to get right. When a script asks for restraint, minimalism and subtle confidence, every word matters. There is nowhere to hide behind over-performance or unnecessary energy. The tone has to feel natural, modern and premium while still landing the message clearly.</p>
+<p>Polestar is a great fit for that approach. The radio work needed a measured, intelligent delivery that felt in step with the brand rather than sounding like a traditional hard-sell car advert. It is a good example of how less can often do much more.</p>
+
+Text block 2:
+<p>I really enjoy this kind of understated commercial voiceover. While I am known for plenty of larger character styles across the site, there is something very satisfying about a read that relies on control, subtlety and precision rather than volume or performance flourishes.</p>
+<p>This flatter, more minimal delivery works particularly well for automotive brands, premium technology, considered lifestyle campaigns and modern radio advertising. It gives the copy room to breathe and lets the brand feel self-assured rather than over-explained.</p>
+<p>If you are looking for a calm, intelligent commercial tone with a premium edge, this Polestar work gives a good sense of what that style can do.</p>
+
+Bottom text:
+<p>If you need a polished, understated voice for a radio advert, automotive campaign or premium commercial project, do get in touch. Whether the brief calls for quiet confidence, modern restraint or a more natural conversational read, I can record it quickly and cleanly from my <a href="/voiceover-studio">broadcast-quality voiceover studio</a>.</p>
+
+Home excerpt:
+Guy Harris voices Polestar radio adverts with a calm, understated delivery that suits the brand’s premium modern tone.
+
+Main image filename:
+voice-of-polestar-car-radio-ads.jpg
+
+Media type:
+MP3
+
+MP3 filename:
+polestar-voice-radio-ad.mp3
+
+Meta description:
+Guy Harris voices Polestar radio adverts with a calm, understated delivery, bringing a premium modern tone to automotive commercial voiceover.
+
+Search terms:
+voice of polestar radio ads","polestar radio advert voice","automotive radio voiceover","premium commercial voiceover","understated voiceover","car advert voice actor","guy harris polestar
+
+Please also do the following:
+1. Render the blog in the same layout and style as the other blog posts on the new site.
+2. Display the MP3 player in the standard two-column blog layout next to the first text block.
+3. Use the uploaded image voice-of-polestar-car-radio-ads.jpg from the standard blog image folder.
+4. Convert the image to WEBP for performance if that matches the current image pipeline.
+5. Add tasteful internal links within the copy if relevant pages already exist, especially:
+   - /voiceover-studio
+   - any premium commercial / automotive / straight reads related pages
+   - homepage
+6. Make sure the blog listing card uses the Home excerpt and main image correctly.
+7. Preserve clean spacing and a premium layout.
+8. Ensure the metadata and page structure are SEO-friendly.
+9. Add appropriate structured data for the blog post and audio embed if the site already supports that pattern.
+10. Apply the rating as middle so this post sits in the middle-priority blog group if the rating system is active.
