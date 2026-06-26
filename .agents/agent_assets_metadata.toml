@@ -144,6 +144,24 @@ uri = "file://attached_assets/gen/studio-setup-5.png"
 type = "image"
 title = "DAW recording software computer screen"
 
+[[generated]]
+id = "UFjFqXaZUK9_1gzWVdDh-"
+uri = "file://attached_assets/gen/english-voiceover-britain.png"
+type = "image"
+title = "English flag microphones St Georges Cross"
+
+[[generated]]
+id = "hYpwrkT_79BYv-SmveW5s"
+uri = "file://attached_assets/gen/english-voiceover-guy-harris.png"
+type = "image"
+title = "global English voiceover world connections"
+
+[[generated]]
+id = "b7qmb_xGkbrkpR6buqdkm"
+uri = "file://attached_assets/gen/english-voiceover.png"
+type = "image"
+title = "British skyline microphone English voiceover"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
