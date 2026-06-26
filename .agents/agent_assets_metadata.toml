@@ -1,5 +1,34 @@
 uploads = []
-generated = []
+
+[[generated]]
+id = "Qo0eIODiRPn-bHCgmwMMC"
+uri = "file://attached_assets/gen/cartoon-voiceover-guide.png"
+type = "image"
+title = "cartoon voiceover studio hero"
+
+[[generated]]
+id = "zvEKG0sVIqCTQGeSacW1d"
+uri = "file://attached_assets/gen/cartoon-voiceover-guide2.png"
+type = "image"
+title = "watching cartoons taking notes"
+
+[[generated]]
+id = "07Qc_-s3e9jujhdjKPi0H"
+uri = "file://attached_assets/gen/cartoon-voiceover-guide3.png"
+type = "image"
+title = "cartoon character performing microphone impression"
+
+[[generated]]
+id = "B6ze1ZAG1ONSw_zWf9WDc"
+uri = "file://attached_assets/gen/cartoon-voiceover-guide4.png"
+type = "image"
+title = "cartoon character concept sketchbook drawings"
+
+[[generated]]
+id = "zuLskaDkQmvk_pZZ9ccef"
+uri = "file://attached_assets/gen/cartoon-voiceover-guide5.png"
+type = "image"
+title = "cartoon character personality types"
 
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
