@@ -162,6 +162,24 @@ uri = "file://attached_assets/gen/english-voiceover.png"
 type = "image"
 title = "British skyline microphone English voiceover"
 
+[[generated]]
+id = "-JbuOrfAWtxmvTrD-kWTF"
+uri = "file://attached_assets/gen/explainer-what-is.png"
+type = "image"
+title = "What is an explainer video illustration"
+
+[[generated]]
+id = "ekFpnEaTx34HWzsiboOYB"
+uri = "file://attached_assets/gen/explainer-voiceover-importance.png"
+type = "image"
+title = "Voiceover importance in explainer videos illustration"
+
+[[generated]]
+id = "aP9km83byZou-Jn9dM_Kc"
+uri = "file://attached_assets/gen/explainer-infographic.png"
+type = "image"
+title = "Animated infographic video illustration"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
