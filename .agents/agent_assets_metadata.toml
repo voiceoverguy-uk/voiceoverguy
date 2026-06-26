@@ -180,6 +180,12 @@ uri = "file://attached_assets/gen/explainer-infographic.png"
 type = "image"
 title = "Animated infographic video illustration"
 
+[[generated]]
+id = "bOGFKKEC9IL4Ak6Hr8KBv"
+uri = "file://attached_assets/gen/dracula-voiceover-for-halloween.png"
+type = "image"
+title = "Count Dracula cinematic poster with title text"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
