@@ -114,6 +114,36 @@ uri = "file://attached_assets/gen/poundland-yoda-voice.png"
 type = "image"
 title = "Yoda character self service till microphone"
 
+[[generated]]
+id = "KmJU1BfmP95zSQed4W-bL"
+uri = "file://attached_assets/gen/studio-setup-1.png"
+type = "image"
+title = "professional recording studio room acoustics"
+
+[[generated]]
+id = "GGJ5u16OejWno2uIFTor1"
+uri = "file://attached_assets/gen/studio-setup-2.png"
+type = "image"
+title = "quiet garden studio location"
+
+[[generated]]
+id = "ftW8g3iELSHrVJPIS8XQ0"
+uri = "file://attached_assets/gen/studio-setup-3.png"
+type = "image"
+title = "studio security cameras motion lights"
+
+[[generated]]
+id = "F8RnIgf8uUTkgxpR2lT29"
+uri = "file://attached_assets/gen/studio-setup-4.png"
+type = "image"
+title = "microphone pop filter recording hardware desk"
+
+[[generated]]
+id = "Ealpog6Thrmy40FeSCHo1"
+uri = "file://attached_assets/gen/studio-setup-5.png"
+type = "image"
+title = "DAW recording software computer screen"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
