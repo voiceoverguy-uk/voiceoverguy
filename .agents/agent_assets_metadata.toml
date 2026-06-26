@@ -48,6 +48,36 @@ uri = "file://attached_assets/gen/how-to-cartoon-hero.png"
 type = "image"
 title = "cartoon characters watching TV hero"
 
+[[generated]]
+id = "4z_lWaULBv1R_6kYrRrRo"
+uri = "file://attached_assets/gen/films-goodfellas.png"
+type = "image"
+title = "Goodfellas cartoon gangster restaurant"
+
+[[generated]]
+id = "ayu_YfnhzmO1c4S5ah5Hi"
+uri = "file://attached_assets/gen/films-memento.png"
+type = "image"
+title = "Memento cartoon sticky notes memory"
+
+[[generated]]
+id = "p6G0OdW1thl49v_w60tJe"
+uri = "file://attached_assets/gen/films-american-psycho.png"
+type = "image"
+title = "American Psycho cartoon yuppie businessman"
+
+[[generated]]
+id = "YoILU1F2KPQD4pdPt7oPL"
+uri = "file://attached_assets/gen/films-fight-club.png"
+type = "image"
+title = "Fight Club cartoon underground basement"
+
+[[generated]]
+id = "ODYD588_ejXwfdOvmTzGH"
+uri = "file://attached_assets/gen/films-shawshank.png"
+type = "image"
+title = "Shawshank Redemption cartoon prisoner hope"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
