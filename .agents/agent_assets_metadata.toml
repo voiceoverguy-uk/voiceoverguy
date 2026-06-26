@@ -78,6 +78,12 @@ uri = "file://attached_assets/gen/films-shawshank.png"
 type = "image"
 title = "Shawshank Redemption cartoon prisoner hope"
 
+[[generated]]
+id = "BaZ9XMbnRKuQEfKjWWmDY"
+uri = "file://attached_assets/gen/poundland-self-service-till-santa-voice.png"
+type = "image"
+title = "self service till Santa microphone realistic"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
