@@ -108,6 +108,12 @@ uri = "file://attached_assets/gen/disney-voiceover.png"
 type = "image"
 title = "1950s animator cartoon caricature"
 
+[[generated]]
+id = "7j9Opw_QXfVYJHIX9WpFa"
+uri = "file://attached_assets/gen/poundland-yoda-voice.png"
+type = "image"
+title = "Yoda character self service till microphone"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
