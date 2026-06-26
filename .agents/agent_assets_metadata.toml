@@ -84,6 +84,30 @@ uri = "file://attached_assets/gen/poundland-self-service-till-santa-voice.png"
 type = "image"
 title = "self service till Santa microphone realistic"
 
+[[generated]]
+id = "OoraTVI-vBMQDY0NuZ8zJ"
+uri = "file://attached_assets/gen/hank-azaria-voiceover.png"
+type = "image"
+title = "Hank Azaria cartoon voice actor caricature"
+
+[[generated]]
+id = "0P8oJxue2YfjVOygUkhfD"
+uri = "file://attached_assets/gen/gary-oldman-voiceover.png"
+type = "image"
+title = "Gary Oldman cartoon caricature dramatic"
+
+[[generated]]
+id = "k6Sa-65H1iYzm64Bnfz38"
+uri = "file://attached_assets/gen/patrick-stewart-voiceover.png"
+type = "image"
+title = "Patrick Stewart cartoon caricature Star Trek"
+
+[[generated]]
+id = "_UQnP_7DJPE2Y-2qAkGWH"
+uri = "file://attached_assets/gen/disney-voiceover.png"
+type = "image"
+title = "1950s animator cartoon caricature"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
