@@ -30,6 +30,24 @@ uri = "file://attached_assets/gen/cartoon-voiceover-guide5.png"
 type = "image"
 title = "cartoon character personality types"
 
+[[generated]]
+id = "hpIMZg43-jFA3F5eQ649o"
+uri = "file://attached_assets/gen/how-to-cartoon-acting.png"
+type = "image"
+title = "cartoon voiceover acting performance"
+
+[[generated]]
+id = "uVmM0JprLTs44xPKCHsJ_"
+uri = "file://attached_assets/gen/how-to-cartoon-listen.png"
+type = "image"
+title = "cartoon characters listening carefully"
+
+[[generated]]
+id = "uIpci6O6t7jzLFCaug_kT"
+uri = "file://attached_assets/gen/how-to-cartoon-hero.png"
+type = "image"
+title = "cartoon characters watching TV hero"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
