@@ -1,0 +1,68 @@
+Create a new blog post for the new VoiceoverGuy site using the standard blog format. Keep the tone polished, playful, characterful and professional. Use British spelling throughout and do not use em dashes.
+
+Use the following content:
+
+Title:
+Mr Messy and Mr Funny Voice in Mr. Men Little Miss Mini Adventures
+
+URL slug:
+mr-messy-mr-funny-voice-mr-men-little-miss-mini-adventures
+
+Date:
+2026-07-07
+
+Rating:
+highest
+
+Intro line:
+Guy Harris voices both Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now out and the new series starting this year.
+
+Main text (block 1):
+<p>I voice both <strong>Mr Messy</strong> and <strong>Mr Funny</strong> in <strong>Mr. Men Little Miss Mini Adventures</strong>, and it is a real joy to be part of such a fun, character-led series. With the new <strong>Season 2 trailer</strong> now out, it feels like the perfect time to share a bit more about the voices behind the two characters.</p>
+<p><strong>Mr Messy</strong> has a slightly street, cockney flavour to his voice, while <strong>Mr Funny</strong> leans into a more northern delivery. Both are animated, lively and full of personality, which is exactly what makes them so enjoyable to perform. They each have their own rhythm and attitude, and that contrast helps them work brilliantly within the world of the show.</p>
+<p>The characters were chosen for me by the agency, and I think they are a very good fit. It is always satisfying when a casting choice lands properly and the voices feel as though they naturally belong to the characters from the start.</p>
+
+Text block 2:
+<p>Character voice work like this is all about finding something distinctive, memorable and truthful within the style of the show. Even in a heightened animated world, the performance still needs to feel right for the character, rather than just sounding like a random funny voice dropped on top.</p>
+<p>That is one of the things I enjoy most about projects like <strong>Mr. Men Little Miss Mini Adventures</strong>. The voices can be bold, exaggerated and full of life, but they still need control, comic timing and the right energy to make them land. Mr Messy and Mr Funny are very different in flavour, but both sit naturally in that playful universe.</p>
+<p>If you are searching for the <strong>voice of Mr Messy</strong> or the <strong>voice of Mr Funny</strong>, this is one of those lovely jobs where I get to say: both of them are me.</p>
+
+Bottom text:
+<p>If you need animated character voices with strong personality, comic timing and broadcast-quality delivery, do get in touch. Whether it is a children’s series, an animated promo, a game or a branded character campaign, I can create distinct voices quickly and cleanly from my <a href="/voiceover-studio">broadcast-quality voiceover studio</a>.</p>
+
+Home excerpt:
+Guy Harris voices both Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now out.
+
+Main image filename:
+mr-messy-mr-funny-voice.jpg
+
+Media type:
+YouTube
+
+YouTube video ID:
+fxlBv6OoU8M
+
+Meta description:
+Guy Harris voices Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now out ahead of the new series.
+
+Search terms:
+mr messy voice","mr funny voice","mr men little miss mini adventures voice","mr men voice actor","animated character voiceover","childrens animation voice actor","guy harris mr men
+
+Please also do the following:
+1. Render the blog in the same layout and style as the other blog posts on the new site.
+2. Make sure the YouTube embed displays correctly and responsively.
+3. Use the uploaded image mr-messy-mr-funny-voice.jpg from the standard blog image folder.
+4. Convert the uploaded image to WEBP for performance if that matches the current image pipeline.
+5. Add tasteful internal links within the copy where relevant, especially:
+   - /voiceover-studio
+   - /character-voice-library
+   - homepage
+   - any relevant children’s / animation / character voice pages if they already exist
+6. Make sure the blog listing card uses the Home excerpt and main image correctly.
+7. Preserve clean spacing and a premium layout.
+8. Ensure the metadata and page structure are SEO-friendly.
+9. Add strong, valid structured data for the page, including blog/article schema and video metadata for the YouTube embed if the site already supports that pattern.
+10. Make sure any schema uses unique @id values and valid ISO timestamps where required.
+11. Apply the rating as highest so this post is prioritised correctly in blog listings if the rating system is active.
+
+For context only, this post is about Guy Harris voicing both Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now released and the new series starting in 2026.
