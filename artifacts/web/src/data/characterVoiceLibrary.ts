@@ -127,6 +127,13 @@ export const characterVoiceLibrary: CharacterVoiceEntry[] = [
     aliases: ['linkee voice', 'wacky game voice', 'linkee', 'wacky', 'game voice', 'toy brand', 'playful', 'comedy'],
   },
   {
+    id: 'wacky-jaffa-cake-voice',
+    title: 'Wacky Jaffa Cake Voice',
+    description: 'A daft, high-energy character voice with big commercial fun, used to advertise Jaffa Cakes in Asda stores. The client loved it so much they came back for a second ad.',
+    mp3: '/assets/audio/asda-jaffa-cookie-cake-voice.mp3',
+    aliases: ['jaffa cake voice', 'asda ad voice', 'jaffa cake', 'asda', 'wacky commercial', 'funny character', 'biscuit ad', 'supermarket ad'],
+  },
+  {
     id: 'rock-n-roll-legend-voice',
     title: "Rock 'n' Roll Legend Voice",
     description: 'A playful Elvis-style voice full of swagger, charm and cheeky musical attitude, ideal for comedy radio ads, parody campaigns and larger-than-life reads.',
