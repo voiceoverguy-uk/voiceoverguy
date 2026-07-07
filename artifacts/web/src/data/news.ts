@@ -23,6 +23,12 @@ function link(text: string, href: string, external = false): LinkSegment {
 export const newsItems: NewsItem[] = [
   {
     segments: [
+      t("I voice both Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, and the new Season 2 trailer has just dropped. "),
+      link("Watch it here.", "/mr-messy-mr-funny-voice-mr-men-little-miss-mini-adventures"),
+    ],
+  },
+  {
+    segments: [
       t("I'm the voice on the radio ads for Bluey's Big Play as the theatre tour travels across the UK. "),
       link("Hear the ad here.", "/blueys-big-play-tour-radio-advert-voiceover"),
     ],
