@@ -8608,6 +8608,38 @@ const blogPosts: BlogPost[] = [
   "nimage4": "",
   "conflictsWithCorePage": false,
   "localAudio": "/assets/audio/blueys-big-play-tour.mp3"
+ },
+ {
+  "id": 1007,
+  "url": "mr-messy-mr-funny-voice-mr-men-little-miss-mini-adventures",
+  "pageTitle": "Mr Messy and Mr Funny Voice in Mr. Men Little Miss Mini Adventures",
+  "info": "<p>Guy Harris voices both Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now out and the new series starting this year.</p>",
+  "searchTerms": "mr messy voice,mr funny voice,mr men little miss mini adventures voice,mr men voice actor,animated character voiceover,childrens animation voice actor,guy harris mr men",
+  "pageDesc": "Guy Harris voices Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now out ahead of the new series.",
+  "text1": "<h2>Mr Messy and Mr Funny</h2>\r\n<p>I voice both <strong>Mr Messy</strong> and <strong>Mr Funny</strong> in <strong>Mr. Men Little Miss Mini Adventures</strong>, and it is a real joy to be part of such a fun, character-led series. With the new <strong>Season 2 trailer</strong> now out, it feels like the perfect time to share a bit more about the voices behind the two characters.</p>\r\n<p><strong>Mr Messy</strong> has a slightly street, cockney flavour to his voice, while <strong>Mr Funny</strong> leans into a more northern delivery. Both are animated, lively and full of personality, which is exactly what makes them so enjoyable to perform. They each have their own rhythm and attitude, and that contrast helps them work brilliantly within the world of the show.</p>\r\n<p>The characters were chosen for me by the agency, and I think they are a very good fit. It is always satisfying when a casting choice lands properly and the voices feel as though they naturally belong to the characters from the start. If you enjoy this kind of work, take a look at my <a href=\"/character-voiceover\" title=\"Character Voiceover\">character voiceover</a> and <a href=\"/animation-voiceovers\" title=\"Animation Voiceovers\">animation voiceovers</a> pages for more examples.</p>",
+  "text2": "<h2>Character Voice Work Done Properly</h2>\r\n<p>Character voice work like this is all about finding something distinctive, memorable and truthful within the style of the show. Even in a heightened animated world, the performance still needs to feel right for the character, rather than just sounding like a random funny voice dropped on top.</p>\r\n<p>That is one of the things I enjoy most about projects like <strong>Mr. Men Little Miss Mini Adventures</strong>. The voices can be bold, exaggerated and full of life, but they still need control, comic timing and the right energy to make them land. Mr Messy and Mr Funny are very different in flavour, but both sit naturally in that playful universe.</p>\r\n<p>If you are searching for the <strong>voice of Mr Messy</strong> or the <strong>voice of Mr Funny</strong>, this is one of those lovely jobs where I get to say: both of them are me. If you are curious about how cartoon voices are crafted, my <a href=\"/cartoon-voiceover-guide\" title=\"Cartoon Voiceover Guide\">cartoon voiceover guide</a> covers the process in detail.</p>",
+  "image": "mr-messy-mr-funny-voice.webp",
+  "video": "fxlBv6OoU8M",
+  "metaTitle": "Mr Messy & Mr Funny Voice – Mr. Men Little Miss Mini Adventures",
+  "bottomText": "<h2>Need Animated Character Voices?</h2>\r\n<p>If you need animated character voices with strong personality, comic timing and broadcast-quality delivery, do get in touch. Whether it is a children's series, an animated promo, a game or a branded character campaign, I can create distinct voices quickly and cleanly from my <a href=\"/voiceover-studio\" title=\"Voiceover Studio\">broadcast-quality voiceover studio</a>.</p>",
+  "rawDate": "July 2026",
+  "date": "2026-07-07",
+  "whatVideo": "1",
+  "alt": "Guy Harris voices Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures",
+  "rating": "5",
+  "blogRating": fromLegacyRating("5"),
+  "twitter": "",
+  "homeText": "Guy Harris voices both Mr Messy and Mr Funny in Mr. Men Little Miss Mini Adventures, with the Season 2 trailer now out.",
+  "santa": "",
+  "ntext1": "",
+  "ntext2": "",
+  "ntext3": "",
+  "ntext4": "",
+  "nimage1": "",
+  "nimage2": "",
+  "nimage3": "",
+  "nimage4": "",
+  "conflictsWithCorePage": false
  }
 ];
 

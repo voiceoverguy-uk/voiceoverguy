@@ -186,6 +186,12 @@ uri = "file://attached_assets/gen/dracula-voiceover-for-halloween.png"
 type = "image"
 title = "Count Dracula cinematic poster with title text"
 
+[[generated]]
+id = "zCBw2wBevECwRHH-AtE9J"
+uri = "file://attached_assets/gen/mr-messy-mr-funny-voice.png"
+type = "image"
+title = "Mr Messy and Mr Funny animated blog thumbnail"
+
 [[outputs]]
 id = "e9yrHbayIOUB_jHVd_uDO"
 uri = "file://artifacts/web/internal-linking-audit.md"
