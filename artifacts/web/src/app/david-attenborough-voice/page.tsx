@@ -50,9 +50,8 @@ export default function Page() {
         </section>
       )}
       <div className="inner-bar" />
-      <InnerPage pageTitle={data.s1} pageSlug="david-attenborough-voice" formIntro="Looking for a David Attenborough-style voice? Send me a quick message and I'll get back to you." sections={[
+      <InnerPage pageTitle={data.s1} pageSlug="david-attenborough-voice" formIntro="Looking for a David Attenborough-style voice? Send me a quick message and I'll get back to you." beforeFormNode={<PreferredSourceButton />} sections={[
         ...(data.s4 ? [{ text: data.s4 }] : []),
-        { node: <PreferredSourceButton />, fullWidth: true },
         ...(data.s4 ? [{ audioSrc: '/assets/audio/david-attenborough-demo-25-guy-harris.mp3' }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
