@@ -1,4 +1,5 @@
 import InnerPage from '@/components/InnerPage';
+import PreferredSourceButton from '@/components/PreferredSourceButton';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
@@ -47,7 +48,7 @@ export default function Page() {
         </section>
       )}
       <div className="inner-bar" />
-      <InnerPage pageTitle={data.s1} pageSlug="gameshow-host" formIntro="Need a gameshow host voice with energy? Send me a quick message and I'll get back to you." sections={[
+      <InnerPage pageTitle={data.s1} pageSlug="gameshow-host" formIntro="Need a gameshow host voice with energy? Send me a quick message and I'll get back to you." afterMessageNode={<PreferredSourceButton />} sections={[
         ...(data.s4 ? [{ text: data.s4, node: <GameshowPlayer /> }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
