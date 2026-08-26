@@ -16,7 +16,7 @@ export default function PreferredSourceButton() {
       }}
     >
       <p style={{ fontSize: '0.85rem', margin: 0 }}>
-        Like keeping up with my latest work? Add VoiceoverGuy as a preferred source on Google.
+        Add VoiceoverGuy as a preferred source on Google?
       </p>
       <Script
         src="https://news.google.com/swg/js/v1/publisher.js"
