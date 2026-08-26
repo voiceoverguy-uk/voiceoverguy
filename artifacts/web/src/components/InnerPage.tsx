@@ -25,7 +25,7 @@ interface InnerPageProps {
   formIntro?: string;
   formSideImage?: string;
   formSideImageAlt?: string;
-  beforeFormNode?: React.ReactNode;
+  afterFormNode?: React.ReactNode;
 }
 
 function isYouTubeId(str: string): boolean {
@@ -59,7 +59,7 @@ function AudioPlayer({ src }: { src: string; label?: string }) {
   );
 }
 
-export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, formSideImage, formSideImageAlt, beforeFormNode }: InnerPageProps) {
+export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, formSideImage, formSideImageAlt, afterFormNode }: InnerPageProps) {
   const pairs: Array<[Section, Section | null]> = [];
   let i = 0;
 
@@ -149,12 +149,6 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, fo
           );
         })}
 
-        {beforeFormNode && (
-          <div className="inner-full">
-            {beforeFormNode}
-          </div>
-        )}
-
         {pageTitle && pageSlug && (
           <div className={formSideImage ? 'form-side-wrap' : undefined}>
             <div className={formSideImage ? 'form-side-form' : undefined}>
@@ -169,6 +163,12 @@ export default function InnerPage({ sections, pageTitle, pageSlug, formIntro, fo
                 <img src={formSideImage} alt={formSideImageAlt || ''} />
               </div>
             )}
+          </div>
+        )}
+
+        {afterFormNode && (
+          <div className="inner-full">
+            {afterFormNode}
           </div>
         )}
       </div>
