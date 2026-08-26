@@ -4107,6 +4107,10 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin-top: 4px;
 }
 
+.blog-enquiry-preferred-source {
+  margin: -2px 0 14px;
+}
+
 .blog-enquiry-btn {
   display: inline-block;
   background: var(--red);

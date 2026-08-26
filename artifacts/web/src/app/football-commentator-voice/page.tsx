@@ -86,7 +86,7 @@ export default function Page() {
         </section>
       )}
       <div className="inner-bar" />
-      <InnerPage pageTitle={data.s1} pageSlug="football-commentator-voice" formIntro="Need a football commentator voice for your project? Send me a quick message and I'll get back to you." afterFormNode={<PreferredSourceButton />} sections={[
+      <InnerPage pageTitle={data.s1} pageSlug="football-commentator-voice" formIntro="Need a football commentator voice for your project? Send me a quick message and I'll get back to you." afterMessageNode={<PreferredSourceButton />} sections={[
         { text: introLeadIn, fullWidth: true },
         { text: section4Override, audioSrc: '/assets/audio/football-commentator-demo-2026-guy-harris.mp3' },
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),

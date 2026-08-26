@@ -6,6 +6,7 @@ interface Props {
   pageTitle: string;
   pageUrl: string;
   intro?: string;
+  afterMessageNode?: React.ReactNode;
 }
 
 const MIN_WORDS = 8;
@@ -20,7 +21,7 @@ interface FieldErrors {
   message?: string;
 }
 
-export default function BlogEnquiryForm({ pageTitle, pageUrl, intro }: Props) {
+export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessageNode }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -168,6 +169,12 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro }: Props) {
           )}
           {errors.message && <span className="blog-enquiry-error">{errors.message}</span>}
         </div>
+
+        {afterMessageNode && (
+          <div className="blog-enquiry-preferred-source">
+            {afterMessageNode}
+          </div>
+        )}
 
         <div className="blog-enquiry-footer">
           <button

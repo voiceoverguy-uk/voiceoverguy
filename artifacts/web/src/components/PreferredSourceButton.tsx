@@ -7,7 +7,7 @@ export default function PreferredSourceButton() {
     <div
       style={{
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
         margin: 0,
         width: '100%',
       }}
