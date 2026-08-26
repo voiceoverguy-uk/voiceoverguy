@@ -1,0 +1,25 @@
+Implement Google's "Preferred Sources" button on 3 specific pages only. Do not modify any existing content, copy, schema, metadata, styling of other elements, or any files outside what's listed below.
+
+CONTEXT:
+This is a Next.js 14 App Router site. Character/service pages like santa-voice, david-attenborough-voice, and football-commentator-voice render through a shared InnerPage component (src/components/InnerPage.tsx), which accepts a `sections` array. Each section can include a `node?: React.ReactNode` for custom injected content.
+
+STEP 1 — Create a new component at src/components/PreferredSourceButton.tsx:
+- It should render Google's official "Add to Preferred Sources" button using their standard JavaScript implementation.
+- Load the script `https://news.google.com/swg/js/v1/publisher.js` using Next.js's `next/script` component with `strategy="lazyOnload"` (so it never blocks page render or affects Core Web Vitals). Mark the component as a client component ('use client') since next/script with lazyOnload needs to run client-side.
+- Render `<div google-add-preferred-source-btn data-theme="light"></div>`.
+- Above the button div, include a short line of intro copy: "Like keeping up with my latest work? Add VoiceoverGuy as a preferred source on Google." Wrap it in a simple container div with a small top/bottom margin so it doesn't visually clash with surrounding sections — don't need to match existing typography classes exactly, just keep it visually unobtrusive and consistent with the site's general spacing.
+
+STEP 2 — Add this component to exactly these 3 files, and nowhere else:
+- src/app/santa-voice/page.tsx
+- src/app/david-attenborough-voice/page.tsx
+- src/app/football-commentator-voice/page.tsx
+
+In each file's `sections` array (passed to <InnerPage />), insert a new entry: `{ node: <PreferredSourceButton />, fullWidth: true }` positioned immediately after the first text/intro section and before the audio/video section that currently follows it. Import PreferredSourceButton at the top of each file.
+
+CONSTRAINTS — must follow exactly:
+- Do NOT edit src/app/layout.tsx, Footer.tsx, Navbar.tsx, or any blog/news template (src/app/[slug]/page.tsx, BlogPost.tsx).
+- Do NOT touch any existing text, copy, headings, schema.org JSON-LD blocks, metadata, canonical tags, or SEO-related code in any file.
+- Do NOT add the script or button to any page other than the 3 listed above.
+- Do NOT change any existing styling, class names, or layout of other sections on these pages.
+- Do NOT install any new npm packages — next/script is already part of Next.js.
+- After making the changes, show me a diff/summary of exactly what changed in each file before considering this done.
