@@ -170,21 +170,22 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
           {errors.message && <span className="blog-enquiry-error">{errors.message}</span>}
         </div>
 
-        {afterMessageNode && (
-          <div className="blog-enquiry-preferred-source">
-            {afterMessageNode}
-          </div>
-        )}
-
         <div className="blog-enquiry-footer">
-          <button
-            type="submit"
-            className="blog-enquiry-btn"
-            disabled={status === 'sending'}
-            style={{ opacity: messageReady ? 1 : 0.38, transition: 'opacity 0.2s' }}
-          >
-            {status === 'sending' ? 'Sending…' : 'Send Message'}
-          </button>
+          <div className="blog-enquiry-actions">
+            <button
+              type="submit"
+              className="blog-enquiry-btn"
+              disabled={status === 'sending'}
+              style={{ opacity: messageReady ? 1 : 0.38, transition: 'opacity 0.2s' }}
+            >
+              {status === 'sending' ? 'Sending…' : 'Send Message'}
+            </button>
+            {afterMessageNode && (
+              <div className="blog-enquiry-preferred-source">
+                {afterMessageNode}
+              </div>
+            )}
+          </div>
           {status === 'error' && (
             <span className="blog-enquiry-error blog-enquiry-error--server">{serverError}</span>
           )}
