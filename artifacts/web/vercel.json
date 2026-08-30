@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/attenborough-voice-generator.php", "destination": "/attenborough-script-generator", "permanent": true },
     { "source": "/FAQ", "destination": "/faq", "permanent": true },
     { "source": "/studiotour", "destination": "/voiceover-studio", "permanent": true },
     { "source": "/studiotour/", "destination": "/voiceover-studio", "permanent": true },

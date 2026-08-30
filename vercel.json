@@ -6,6 +6,7 @@
   "buildCommand": "pnpm --filter @workspace/web run build",
   "outputDirectory": "artifacts/web/out",
   "redirects": [
+    { "source": "/attenborough-voice-generator.php", "destination": "/attenborough-script-generator", "statusCode": 301 },
     { "source": "/voiceover-videos", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
     { "source": "/blog-wall", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
     { "source": "/voiceover-newslatest-voiceover-news/:path(.*)", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
