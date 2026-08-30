@@ -179,6 +179,10 @@ export default function Home() {
       {/* VIDEO TILES */}
       <section className="section section--no-top">
         <div className="container">
+          <div className="showreel-header video-range-header">
+            <h2 className="showreel-heading">Watch the Range</h2>
+            <div className="showreel-divider" />
+          </div>
           <VideoTilesGrid />
         </div>
       </section>

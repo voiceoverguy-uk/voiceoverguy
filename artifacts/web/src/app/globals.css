@@ -1359,6 +1359,17 @@ button.nav-link {
   margin: 0 auto;
 }
 
+.video-range-header {
+  margin-bottom: 0;
+}
+
+.section .video-range-header .showreel-heading {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
 .showreel-players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
