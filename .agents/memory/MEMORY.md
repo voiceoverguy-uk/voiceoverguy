@@ -1,2 +1,3 @@
 - [Google Preferred Sources iframe](google-preferred-sources-iframe.md) — align the generated iframe through an untouched outer host; Google overwrites marker sizing.
 - [Next development cache](next-dev-cache.md) — restart the web workflow after builds; shared Next output can invalidate dev chunks and HMR.
+- [Vercel query stripping](vercel-query-stripping.md) — configuration redirects forward incoming query strings; use a handler for a truly query-free Location.

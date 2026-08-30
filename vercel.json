@@ -30,32 +30,49 @@
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "voiceoverguy.co.uk" }],
+      "missing": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
       "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "w.voiceoverguy.co.uk" }],
-      "destination": "https://www.voiceoverguy.co.uk/",
+      "missing": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "ww.voiceoverguy.co.uk" }],
-      "destination": "https://www.voiceoverguy.co.uk/",
+      "missing": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "wwww.voiceoverguy.co.uk" }],
-      "destination": "https://www.voiceoverguy.co.uk/",
+      "missing": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
     },
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "(?!www\\.)(.*)\\.voiceoverguy\\.co\\.uk" }],
+      "missing": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
       "destination": "https://www.voiceoverguy.co.uk/:path",
       "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:slug",
+      "has": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "/api/legacy-news-redirect?slug=:slug"
+    },
+    {
+      "source": "/:slug/",
+      "has": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
+      "destination": "/api/legacy-news-redirect?slug=:slug"
     }
   ],
   "headers": [
