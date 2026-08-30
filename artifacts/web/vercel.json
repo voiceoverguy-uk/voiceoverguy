@@ -55,6 +55,9 @@
     { "source": "/experian-explainer-video", "destination": "/explainer-video-voice", "permanent": true },
     { "source": "/experian-explainer-video/", "destination": "/explainer-video-voice", "permanent": true },
 
+    { "source": "/source-connect-now", "destination": "/voiceover-studio", "permanent": true },
+    { "source": "/source-connect-now/", "destination": "/voiceover-studio", "permanent": true },
+
     { "source": "/smoke-signal-voice", "destination": "/", "permanent": true },
     { "source": "/smoke-signal-voice/", "destination": "/", "permanent": true },
 

@@ -27,6 +27,14 @@
     { "source": "/voiceover-baby", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
     { "source": "/poundland-dracula-voice", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
     { "source": "/404", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
+    { "source": "/source-connect-now", "destination": "https://www.voiceoverguy.co.uk/voiceover-studio", "statusCode": 301 },
+    { "source": "/source-connect-now/", "destination": "https://www.voiceoverguy.co.uk/voiceover-studio", "statusCode": 301 },
+    { "source": "/appletv", "destination": "https://www.voiceoverguy.co.uk/apple-voice-style", "statusCode": 301 },
+    { "source": "/appletv/", "destination": "https://www.voiceoverguy.co.uk/apple-voice-style", "statusCode": 301 },
+    { "source": "/lending-crowd-patrick-stewart-voiceover", "destination": "https://www.voiceoverguy.co.uk/character-voiceover", "statusCode": 301 },
+    { "source": "/lending-crowd-patrick-stewart-voiceover/", "destination": "https://www.voiceoverguy.co.uk/character-voiceover", "statusCode": 301 },
+    { "source": "/smoke-signal-voice", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
+    { "source": "/smoke-signal-voice/", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "voiceoverguy.co.uk" }],
@@ -64,6 +72,16 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/player",
+      "has": [{ "type": "query", "key": "id", "value": "39966568" }],
+      "destination": "/api/player-legacy-redirect"
+    },
+    {
+      "source": "/player/",
+      "has": [{ "type": "query", "key": "id", "value": "39966568" }],
+      "destination": "/api/player-legacy-redirect"
+    },
     {
       "source": "/:slug",
       "has": [{ "type": "query", "key": "url", "value": "voiceover-newslatest-voiceover-news.*" }],
