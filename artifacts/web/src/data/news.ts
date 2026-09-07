@@ -250,13 +250,6 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("The studio Yorkshire continues to be hired for actors at Emmerdale and Games producers for local Yorkshire talent. "),
-      link("Book Now", "/voiceover-studio"),
-      t("."),
-    ],
-  },
-  {
-    segments: [
       t("Take a behind-the-scenes look at my recording setup on the "),
       link("Studio Tour", "https://www.voiceoverguy.co.uk/studiotour/index.html", true),
       t(" \u2014 where the voices come to life."),
@@ -525,11 +518,6 @@ export const newsItems: NewsItem[] = [
       t("With Halloween coming, Paultons park has me as the "),
       link("Voice of Dracula", "/dracula-voiceover-for-halloween"),
       t(" this year for their radio ads."),
-    ],
-  },
-  {
-    segments: [
-      t("Need a Yorkshire Studio for recording? Kammy Chris Kamara has found mine his new home?."),
     ],
   },
   {
