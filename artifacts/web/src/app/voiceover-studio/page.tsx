@@ -36,7 +36,6 @@ const schemas = [
   localBusiness('voiceover-studio', 'Professional voiceover recording studio in Wakefield, West Yorkshire offering broadcast-quality audio, same-day delivery and remote session capability.'),
   faqPage('voiceover-studio', [
     { q: 'Where is the voiceover studio located?', a: 'The studio is in Wakefield, West Yorkshire, within easy reach of Leeds and the wider Yorkshire region, with free on-site parking.' },
-    { q: 'Can I hire the studio for my own voice work?', a: 'Yes, the studio is available to hire for voiceover and podcast sessions and has been used by actors from Emmerdale and other national broadcasters.' },
     { q: 'Can I connect remotely to direct a session?', a: 'Yes, remote direction is available via Source Connect, Cleanfeed, Nexus, Zoom or a simple phone patch so you can listen in and direct in real time from anywhere.' },
   ]),
 ];
@@ -74,18 +73,6 @@ export default function Page() {
           <div className="inner-row reverse reveal-row">
             <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s7 || '') }} /></div>
             <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio4.jpg" alt="Leeds Voiceover Studio" /></div>
-          </div>
-          <div className="inner-row reveal-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s8 || '') }} /></div>
-            <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio5.jpg" alt="Voiceover Studio for Hire in West Yorkshire" /></div>
-          </div>
-          <div className="inner-row reverse reveal-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s9 || '') }} /></div>
-            <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio6.jpg" alt="Professional Voiceover Booth in Yorkshire" /></div>
-          </div>
-          <div className="inner-row reveal-row">
-            <div className="inner-col"><div dangerouslySetInnerHTML={{ __html: normaliseHtml(data.s10 || '') }} /></div>
-            <div className="inner-col"><Img src="/assets/images/studio/voiceoverguy-voicover-studio2.jpg" alt="Wakefield Voiceover Studio" /></div>
           </div>
         </div>
       </div>

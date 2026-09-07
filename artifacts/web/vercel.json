@@ -67,7 +67,9 @@
     { "source": "/appletv", "destination": "/apple-voice-style", "permanent": true },
     { "source": "/appletv/", "destination": "/apple-voice-style", "permanent": true },
     { "source": "/lending-crowd-patrick-stewart-voiceover", "destination": "/character-voiceover", "permanent": true },
-    { "source": "/lending-crowd-patrick-stewart-voiceover/", "destination": "/character-voiceover", "permanent": true }
+    { "source": "/lending-crowd-patrick-stewart-voiceover/", "destination": "/character-voiceover", "permanent": true },
+    { "source": "/yorkshire-podcast-studio", "destination": "/voiceover-studio", "permanent": true },
+    { "source": "/yorkshire-podcast-studio/", "destination": "/voiceover-studio", "permanent": true }
   ],
   "headers": [
     {

@@ -63,7 +63,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: 'Do you record in your own studio?',
-    a: (<>Yes. I have a professional, acoustically treated <Link href="/voiceover-studio">home recording studio</Link> in Yorkshire. It's kitted out with high-end microphones, preamps, and monitoring equipment. The studio is also available to hire for other voice artists or actors looking for a professional recording space in Yorkshire.</>),
+    a: (<>Yes. I have a professional, acoustically treated <Link href="/voiceover-studio">home recording studio</Link> in Yorkshire. It's kitted out with high-end microphones, preamps, and monitoring equipment for broadcast-quality voiceover sessions.</>),
   },
   {
     q: 'What is Source Connect?',

@@ -35,6 +35,8 @@
     { "source": "/lending-crowd-patrick-stewart-voiceover/", "destination": "https://www.voiceoverguy.co.uk/character-voiceover", "statusCode": 301 },
     { "source": "/smoke-signal-voice", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
     { "source": "/smoke-signal-voice/", "destination": "https://www.voiceoverguy.co.uk/", "statusCode": 301 },
+    { "source": "/yorkshire-podcast-studio", "destination": "https://www.voiceoverguy.co.uk/voiceover-studio", "statusCode": 301 },
+    { "source": "/yorkshire-podcast-studio/", "destination": "https://www.voiceoverguy.co.uk/voiceover-studio", "statusCode": 301 },
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "voiceoverguy.co.uk" }],
