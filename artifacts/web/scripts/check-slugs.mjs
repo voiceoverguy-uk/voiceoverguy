@@ -16,6 +16,9 @@
  *     represents a real calendar date.
  *  5. Every <priority> in each public/sitemap*.xml file is a decimal
  *     number between 0.0 and 1.0 inclusive (per the sitemap spec).
+ *  6. The retired yorkshire-podcast-studio slug does not appear in generated
+ *     blog content or sitemap locations, while its permanent redirects remain
+ *     present and correctly configured in the root vercel.json.
  *
  * Run via: pnpm --filter @workspace/web run check:slugs
  */
@@ -68,6 +71,11 @@ const LASTMOD_RE_FORMAT =
 
 /** Canonical origin every <loc> URL must start with */
 const CANONICAL_ORIGIN = 'https://www.voiceoverguy.co.uk/';
+
+/** Retired page that must only survive as a permanent redirect source. */
+const RETIRED_SLUG = 'yorkshire-podcast-studio';
+const RETIRED_REDIRECT_DESTINATION =
+  'https://www.voiceoverguy.co.uk/voiceover-studio';
 
 let errors = 0;
 
@@ -235,6 +243,12 @@ for (const block of entries) {
 
 console.log('check-slugs: [2] Scanning all string fields for dirty hrefs …');
 
+if (blogPostsSrc.includes(RETIRED_SLUG)) {
+  fail(
+    `blog-posts.ts contains retired slug "${RETIRED_SLUG}" (generated post or internal link)`,
+  );
+}
+
 for (const block of entries) {
   const id = extractId(block);
   const fields = extractStringFields(block);
@@ -303,6 +317,9 @@ for (const file of sitemapFiles) {
         `${file} <loc> does not start with ${CANONICAL_ORIGIN}: "${loc}"`,
       );
     }
+    if (loc.includes(RETIRED_SLUG)) {
+      fail(`${file} <loc> contains retired slug "${RETIRED_SLUG}": "${loc}"`);
+    }
   }
   console.log(`check-slugs: scanned ${locCount} <loc> entries in ${file}`);
 
@@ -331,6 +348,51 @@ for (const file of sitemapFiles) {
     }
   }
   console.log(`check-slugs: scanned ${priorityCount} <priority> entries in ${file}`);
+}
+
+// ─── Check 6: retired slug redirects ─────────────────────────────────────────
+
+console.log('check-slugs: [6] Verifying retired slug redirects …');
+
+const vercelConfigPath = join(ROOT, '..', '..', 'vercel.json');
+let vercelConfig;
+try {
+  vercelConfig = JSON.parse(readFileSync(vercelConfigPath, 'utf8'));
+} catch (error) {
+  fail(
+    `could not read or parse ${vercelConfigPath}: ${
+      error instanceof Error ? error.message : String(error)
+    }`,
+  );
+}
+
+if (vercelConfig) {
+  const redirects = Array.isArray(vercelConfig.redirects)
+    ? vercelConfig.redirects
+    : [];
+
+  for (const source of [`/${RETIRED_SLUG}`, `/${RETIRED_SLUG}/`]) {
+    const matchingRedirects = redirects.filter(
+      (redirect) => redirect?.source === source,
+    );
+
+    if (matchingRedirects.length !== 1) {
+      fail(
+        `vercel.json must contain exactly one permanent redirect for "${source}"`,
+      );
+      continue;
+    }
+
+    const redirect = matchingRedirects[0];
+    if (redirect.statusCode !== 301) {
+      fail(`vercel.json redirect "${source}" must use statusCode 301`);
+    }
+    if (redirect.destination !== RETIRED_REDIRECT_DESTINATION) {
+      fail(
+        `vercel.json redirect "${source}" must point to "${RETIRED_REDIRECT_DESTINATION}"`,
+      );
+    }
+  }
 }
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
