@@ -49,6 +49,12 @@ const toolPages: ToolPage[] = [
     keywords: 'attenborough script generator david attenborough nature wildlife narration documentary',
     thumbnail: '/assets/images/attenborough-script-generator.webp',
   },
+  {
+    label: 'Voiceover Script Timer & Checker',
+    href: '/voice-over-word-count-calculator',
+    keywords: 'voiceover script timer checker duration calculator word count words per minute wpm 15 30 60 90 seconds',
+    thumbnail: '/assets/images/og-image-guy-harris.webp',
+  },
 ];
 
 const PHRASES_REGULAR = [

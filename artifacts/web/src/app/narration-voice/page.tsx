@@ -59,7 +59,7 @@ export default function Page() {
       <div className="inner-container" style={{ padding: '32px 20px', textAlign: 'center', borderTop: '3px solid var(--red)' }}>
         <p style={{ marginBottom: '12px', fontSize: '16px' }}>Not sure how long your narration script will take – or what it might cost?</p>
         <Link href="/voice-over-word-count-calculator" className="btn btn-red" style={{ display: 'inline-block', padding: '12px 28px', background: 'var(--red)', color: '#fff', textDecoration: 'none', fontWeight: 'bold', letterSpacing: '0.05em' }}>
-          Try the Voiceover Word Count Calculator
+          Try the Voiceover Script Timer &amp; Checker
         </Link>
       </div>
       <SchemaScripts schemas={schemas} />

@@ -11,7 +11,7 @@ interface FaqItem {
 const faqs: FaqItem[] = [
   {
     q: 'How much does a voiceover cost?',
-    a: (<>Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around £49-£99. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout. Use the <Link href="/voice-over-word-count-calculator">pricing calculator</Link> for an instant estimate, or just <Link href="/contact-guy">get in touch</Link> and I'll quote you properly.</>),
+    a: (<>Voiceover fees depend on the word count, usage, and medium. For a short 100-word web video you might be looking at around £49-£99. For broadcast TV or radio, fees are higher and typically calculated per usage or as a buyout. Use the <Link href="/voice-over-word-count-calculator">script timer and checker</Link> to plan the length, or just <Link href="/contact-guy">get in touch</Link> and I'll quote you properly.</>),
   },
   {
     q: 'What is a voiceover artist?',

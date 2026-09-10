@@ -48,7 +48,7 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
     setServerError('');
 
     const messageParts = [
-      'Enquiry Source: Voiceover Word Count Calculator',
+      'Enquiry Source: Voiceover Script Timer & Checker',
       `Name: ${name.trim()}`,
       `Email: ${email.trim()}`,
       formWords ? `Number of words: ${formWords}` : '',
@@ -67,7 +67,7 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
           email: email.trim(),
           message,
           website: honeypotRef.current?.value ?? '',
-          pageTitle: 'Voiceover Word Count Calculator',
+          pageTitle: 'Voiceover Script Timer & Checker',
           pageUrl: typeof window !== 'undefined' ? window.location.href : '',
         }),
       });
