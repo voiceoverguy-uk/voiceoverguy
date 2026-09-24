@@ -7,6 +7,17 @@ import type { NewsItem, Segment } from '@/data/news';
 
 const INITIAL_COUNT = 6;
 
+const generatorNewsItem: NewsItem = {
+  segments: [
+    { type: 'text', text: 'Need a script?', emphasis: true },
+    { type: 'text', text: ' Try our free ' },
+    { type: 'link', text: 'Santa Script Generator', href: '/santa-script-generator', external: false },
+    { type: 'text', text: ' or ' },
+    { type: 'link', text: 'David Attenborough-style Script Generator', href: '/attenborough-script-generator', external: false },
+    { type: 'text', text: ' for a little inspiration.' },
+  ],
+};
+
 const upcomingNewsItem: NewsItem = {
   segments: [
     {
@@ -42,6 +53,9 @@ const mustardNewsItem: NewsItem = {
 
 function renderSegment(segment: Segment, index: number) {
   if (segment.type === 'text') {
+    if (segment.emphasis) {
+      return <strong key={index}>{segment.text}</strong>;
+    }
     return <span key={index}>{segment.text}</span>;
   }
   if (segment.external) {
@@ -60,7 +74,7 @@ function renderSegment(segment: Segment, index: number) {
 
 export default function NewsSection() {
   const [expanded, setExpanded] = useState(false);
-  const homepageNewsItems = [mustardNewsItem, latestNewsItem, upcomingNewsItem, ...newsItems];
+  const homepageNewsItems = [generatorNewsItem, mustardNewsItem, latestNewsItem, upcomingNewsItem, ...newsItems];
   const remaining = homepageNewsItems.length - INITIAL_COUNT;
 
   const now = new Date();

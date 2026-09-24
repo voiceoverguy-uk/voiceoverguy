@@ -4,7 +4,7 @@ const _now = new Date();
 const currentMonth = _now.toLocaleString('en-GB', { month: 'long' });
 const _arabellaHasTurnedThisYear = _now >= new Date(_now.getFullYear(), 5, 4);
 
-export type TextSegment = { type: 'text'; text: string };
+export type TextSegment = { type: 'text'; text: string; emphasis?: boolean };
 export type LinkSegment = { type: 'link'; text: string; href: string; external: boolean };
 export type Segment = TextSegment | LinkSegment;
 
