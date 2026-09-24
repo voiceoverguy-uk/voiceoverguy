@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import CurrentYear from './CurrentYear';
 import EmailReveal from './EmailReveal';
+import ServiceContactLink from './ServiceContactLink';
 
 export default function Footer() {
   return (
@@ -44,7 +45,7 @@ export default function Footer() {
           {' · '}
           <Link href="/privacy-policy">Privacy Policy</Link>
           {' · '}
-          <Link href="/contact-guy">Contact Guy</Link>
+          <ServiceContactLink>Contact Guy</ServiceContactLink>
           {' · '}
           <Link href="/faq">FAQ</Link>
         </p>

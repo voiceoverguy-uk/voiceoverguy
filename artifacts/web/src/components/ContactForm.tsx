@@ -3,6 +3,24 @@
 import { useState, useRef } from 'react';
 
 const MIN_WORDS = 8;
+const GENERATOR_SOURCES = {
+  'santa-script-generator': {
+    pageTitle: 'Santa Script Generator',
+    pageUrl: '/santa-script-generator',
+  },
+  'attenborough-script-generator': {
+    pageTitle: 'David Attenborough Script Generator',
+    pageUrl: '/attenborough-script-generator',
+  },
+} as const;
+
+function getGeneratorSource() {
+  const source = new URLSearchParams(window.location.search).get('source');
+  if (source === 'santa-script-generator' || source === 'attenborough-script-generator') {
+    return GENERATOR_SOURCES[source];
+  }
+  return null;
+}
 
 function countWords(s: string): number {
   return s.trim().replace(/\s+/g, ' ').split(' ').filter(Boolean).length;
@@ -66,6 +84,9 @@ export default function ContactForm({
     setServerError('');
 
     try {
+      // Only the public contact page accepts these two fixed source labels.
+      // No prompt, script, or arbitrary query value is sent for attribution.
+      const generatorSource = pageUrl === '/contact-guy' ? getGeneratorSource() : null;
       const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -73,8 +94,8 @@ export default function ContactForm({
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
-          pageTitle,
-          pageUrl,
+          pageTitle: generatorSource?.pageTitle ?? pageTitle,
+          pageUrl: generatorSource?.pageUrl ?? pageUrl,
           website: honeypotRef.current?.value ?? '',
         }),
       });

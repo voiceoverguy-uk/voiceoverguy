@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import LiveSearch from './LiveSearch';
+import ServiceContactLink from './ServiceContactLink';
 import { voiceDemos, characterDemos } from '@/data/demos';
 
 const videos = [
@@ -310,7 +311,7 @@ export default function Navbar() {
 
             {/* Contact */}
             <li className="nav-item" role="none">
-              <Link href="/contact-guy" className="nav-link nav-link--contact" role="menuitem" onClick={handleContactClick}><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</Link>
+              <ServiceContactLink className="nav-link nav-link--contact" role="menuitem" onClick={handleContactClick}><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</ServiceContactLink>
             </li>
           </ul>
         </div>
