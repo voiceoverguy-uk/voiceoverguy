@@ -1,0 +1,87 @@
+VOICEOVERGUY — SEO, SCHEMA AND CONVERSION AUDIT OF BOTH SCRIPT GENERATORS
+
+Both the Santa Script Generator and David Attenborough Script Generator are now working successfully on the live website.
+
+Please perform a focused audit of these two pages only, with the aim of improving Google Search visibility, AI search discoverability, user experience and genuine voiceover enquiries.
+
+IMPORTANT: This is a PLAN-ONLY audit. Do not change code, content, schema, design, credentials, deployments or any live settings without my separate approval. Do not alter the working generator functionality, prompts, models, security controls or rate limiting.
+
+1. TECHNICAL SEO
+
+Check the live production URLs for both pages.
+
+Verify:
+- HTTP 200 responses and crawlability.
+- Indexability, robots directives and canonical URLs.
+- Inclusion in the XML sitemap.
+- Correct page titles, meta descriptions and H1 headings.
+- Internal links pointing to each generator.
+- Mobile usability and any obvious performance issues.
+- Whether both generators can be used without requiring Googlebot to execute an AI generation request.
+
+Identify any actual issues and distinguish them from optional improvements.
+
+2. STRUCTURED DATA
+
+Inspect the existing JSON-LD on both live pages.
+
+Identify what structured data is already present and whether it is valid and accurately describes the visible content.
+
+Consider whether WebApplication, SoftwareApplication, WebPage, BreadcrumbList, Person or relevant Service schema would be appropriate.
+
+Do not add schema merely to increase the number of schema types.
+
+Do not promise rich results or AI Overview inclusion. Check current Google Search Central guidance before recommending any changes.
+
+3. CONTENT AND SEARCH INTENT
+
+Review whether each page clearly explains:
+- What the free generator does.
+- How visitors can use it.
+- What they receive.
+- The difference between generating a free written script and booking Guy Harris to record a professional voiceover.
+
+Recommend concise improvements only where there is a clear user or SEO benefit.
+
+Preserve the existing premium VoiceoverGuy branding and visual design.
+
+4. CONVERSIONS
+
+Check whether each page provides an obvious, relevant route to booking a professional voiceover.
+
+For the Santa generator, consider a contextual link to Guy's professional Santa voiceover service.
+
+For the Attenborough generator, consider a contextual link to Guy's relevant character voiceover or impression service.
+
+Check whether existing calls to action are visible, appropriately worded and point to the correct live pages.
+
+Avoid intrusive pop-ups or unnecessary additional forms.
+
+5. MEASUREMENT
+
+Identify whether the website currently records:
+- Visits to each generator page.
+- Generate-button interactions.
+- Successful script generations.
+- Failed generation attempts.
+- Clicks from each generator to relevant voiceover service pages.
+- Contact enquiries originating from either generator.
+
+Recommend a simple, privacy-conscious measurement approach using existing analytics where possible.
+
+Do not log visitors' personal prompts, generated messages, API keys or other sensitive data.
+
+6. FINAL REPORT
+
+Provide a concise report for each page showing:
+
+- What is already working correctly.
+- Any genuine technical or SEO problems.
+- Existing structured data and validation results.
+- Recommended improvements, with reasons.
+- Which changes could help visitors become paying voiceover clients.
+- The smallest safe implementation plan.
+
+Prioritise genuine problems over cosmetic changes.
+
+Do not implement anything yet. Wait for my approval after presenting the findings.
