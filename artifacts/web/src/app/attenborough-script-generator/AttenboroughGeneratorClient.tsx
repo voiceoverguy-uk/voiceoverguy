@@ -147,8 +147,8 @@ export default function AttenboroughGeneratorClient() {
             Free Attenborough-Style Script Generator
           </h2>
           <p className="generator-subtitle">
-            Type a short scenario. Watch it transform into an Attenborough-style script.<br />
-            <Link href="/david-attenborough-voice" className="red-link">Get the real VoiceoverGuy</Link> to voice it and make it sound awesome.
+            Type a short scenario and get a free written Attenborough-style script.<br />
+            For a separately bookable professional recording, <Link href="/david-attenborough-voice" className="red-link">get the real VoiceoverGuy</Link> to voice it.
           </p>
 
           <div className="generator-textarea-wrapper">
@@ -211,7 +211,7 @@ export default function AttenboroughGeneratorClient() {
                 Your browser does not support the audio element.
               </audio>
               <br />
-              <Link href="/contact-guy" className="generator-book-link">
+              <Link href="/contact-guy?source=attenborough-script-generator" className="generator-book-link">
                 Book <span style={{ color: '#d42027' }}>Guy</span> Now!
               </Link>
             </div>
@@ -250,56 +250,6 @@ export default function AttenboroughGeneratorClient() {
             isAccessibleForFree: true,
             keywords: 'Attenborough, voiceover, demo, Guy Harris',
             publisher: { '@type': 'Organization', name: 'VoiceoverGuy', url: 'https://www.voiceoverguy.co.uk' },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'What is the David Attenborough Script Generator?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: "It's a fun tool that turns your scene into a nature-style voiceover script using AI. You can then get professional voice actor Guy Harris to voice it like Attenborough.",
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Can I get the script voiced by a real person?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: "Yes! Once your script is generated, you can book Guy Harris - the UK's leading Attenborough-style voiceover artist - to narrate it for you.",
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Is this just for fun or for commercial use?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'The generator is free to play with, but you can commission a polished, studio-quality recording for professional projects.',
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'SoftwareApplication',
-            name: 'David Attenborough Script Generator',
-            applicationCategory: 'Creative Tool',
-            operatingSystem: 'Web',
-            creator: { '@type': 'Person', name: 'Guy Harris' },
-            description: 'A free online script generator that creates David Attenborough-style narration text from user prompts, by UK voiceover artist Guy Harris.',
-            url: 'https://www.voiceoverguy.co.uk/attenborough-script-generator',
           }),
         }}
       />

@@ -1,0 +1,27 @@
+I approve the development work for Task #204, Improve Generator Search Clarity, with the following instructions.
+
+Please proceed with the focused improvements to the Santa and Attenborough script-generator pages.
+
+PRIORITIES
+
+1. Correct the inaccurate or unsupported structured data identified in your audit. Ensure the FAQ markup matches genuinely visible content and correct the Santa audio duration using the actual audio file.
+
+2. Make the distinction between the free written script and the separately bookable professional voiceover clear on both pages. Preserve the existing premium design and avoid adding unnecessary text or duplicate calls to action.
+
+3. Ensure each generator has a clear, contextual link to its existing professional voiceover service page. Do not change working URLs unnecessarily.
+
+4. Implement simple enquiry-source attribution so that, when someone reaches the contact form from either generator and successfully submits an enquiry, the source can be identified. Do not collect or store visitors' prompts or generated scripts for attribution.
+
+5. Check whether an existing analytics provider is already enabled. Do not install a new analytics service, introduce new paid services or add complicated tracking at this stage. Report your findings and any optional recommendations separately.
+
+IMPORTANT
+
+Both generators are now working successfully in production. Do not change their AI prompts, model, API integration, backend relay, security settings, rate limits or generation functionality.
+
+Keep all changes limited to Task #204. Do not modify unrelated website pages, contact-form behaviour beyond the necessary source attribution, or the overall site design.
+
+Run the relevant build, type-check and functional tests. Confirm that both generators, their service links and the contact forms continue working.
+
+Prepare the completed changes for my review, but do not publish or deploy to production until I give separate approval.
+
+Please proceed with the development work now.
