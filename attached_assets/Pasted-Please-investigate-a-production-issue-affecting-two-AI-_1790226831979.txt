@@ -1,0 +1,26 @@
+Please investigate a production issue affecting two AI script generators on my VoiceoverGuy website.
+
+Affected pages:
+https://www.voiceoverguy.co.uk/attenborough-script-generator
+https://www.voiceoverguy.co.uk/santa-script-generator
+
+Both pages load normally, but clicking Generate returns: An error occurred: Server error: 500. Please try again.
+
+Vercel project: voiceoverguy-api-server
+Affected endpoint: /api/generate
+Vercel Observability shows two failed function invocations (100% error rate) and two external API calls to api.openai.com in the last 12 hours.
+
+Please investigate the existing implementation before making any changes.
+
+1. Identify how both generators connect to the API server and whether they share the same backend, API key, OpenAI model and configuration.
+2. Inspect the server-side generation code and error handling. Determine whether the problem is related to the OpenAI API key, billing/quota, model availability, request format, environment variables, deployment configuration or another issue.
+3. Check whether the production Vercel environment variables are correctly configured. Do not reveal or print any API keys or other secrets.
+4. Check whether the frontend is sending the expected requests and whether the API endpoint is returning useful diagnostic information in its server-side logs.
+5. Identify the actual root cause where possible. If you cannot access the production logs or configuration needed to confirm it, tell me exactly what information you need from Vercel or OpenAI.
+6. Recommend the smallest safe fix, preserving the existing generators, their functionality, page content, SEO and website design.
+7. Check whether any other VoiceoverGuy tools use the same generation endpoint and could also be affected.
+8. Explain whether the issue has any connection to the recent Vercel usage warning, and distinguish OpenAI API costs from Vercel hosting usage.
+
+IMPORTANT: This is an investigation and planning request only. Do not modify code, change environment variables, rotate API keys, deploy anything or upgrade any paid services without my approval.
+
+Please report your findings, the evidence supporting the likely cause, and your recommended fix before taking action.

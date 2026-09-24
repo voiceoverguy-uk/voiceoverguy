@@ -5,6 +5,10 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/web run build",
   "outputDirectory": "artifacts/web/out",
+  "proxy": {
+    "entrypoint": "proxy.ts",
+    "matcher": ["/worms-wmd-character-voices", "/worms-wmd-character-voices/"]
+  },
   "redirects": [
     { "source": "/attenborough-voice-generator.php", "destination": "/attenborough-script-generator", "statusCode": 301 },
     { "source": "/voiceover-videos", "destination": "https://www.voiceoverguy.co.uk/voiceover-news", "statusCode": 301 },
