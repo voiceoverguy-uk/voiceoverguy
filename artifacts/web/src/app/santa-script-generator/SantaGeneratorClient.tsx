@@ -147,8 +147,8 @@ export default function SantaGeneratorClient() {
             A Free Santa message generator by The UK&apos;s Voice of Santa, Guy Harris
           </h2>
           <p className="generator-subtitle">
-            Type some info about who the message is for and receive a message back from Santa.<br />
-            Get the <Link href="/santa-voice" className="red-link">Real Santa by VoiceoverGuy</Link> to voice it and make it sound festive!
+            Share who the message is for and get a free written script from Santa.<br />
+            For a separately bookable professional recording, get the <Link href="/santa-voice?source=santa-script-generator" className="red-link">Real Santa by VoiceoverGuy</Link> to voice it.
           </p>
 
           <div className="generator-textarea-wrapper">
@@ -194,7 +194,7 @@ export default function SantaGeneratorClient() {
             <p>🎬 The UK&apos;s Leading Santa Voiceover Artist</p>
             <p>
               If you&apos;d like it reading, copy the text and drop Santa a line on the{' '}
-              <Link href="/contact-guy" className="generator-info-link"><strong>contact page</strong></Link>.
+              <Link href="/contact-guy?source=santa-script-generator" className="generator-info-link"><strong>contact page</strong></Link>.
             </p>
             <ul>
               <li><span className="generator-star">⭐</span> Book the UK&apos;s voice of Santa for your script!</li>
@@ -214,7 +214,7 @@ export default function SantaGeneratorClient() {
                 Your browser does not support the audio element.
               </audio>
               <br />
-              <Link href="/contact-guy" className="generator-book-link">
+              <Link href="/contact-guy?source=santa-script-generator" className="generator-book-link">
                 Book <span style={{ color: '#d42027' }}>Guy</span> Now!
               </Link>
             </div>
@@ -247,47 +247,12 @@ export default function SantaGeneratorClient() {
             thumbnailUrl: 'https://www.voiceoverguy.co.uk/assets/images/santa-script-generator.webp',
             contentUrl: 'https://www.voiceoverguy.co.uk/assets/audio/voice-demo-guy-harris-santa.mp3',
             encodingFormat: 'audio/mpeg',
-            duration: 'PT1M26S',
+            duration: 'PT54S',
             uploadDate: '2025-10-04',
             inLanguage: 'en-GB',
             isAccessibleForFree: true,
             keywords: 'father-christmas, free santa messages, father christmas messages',
             publisher: { '@type': 'Organization', name: 'VoiceoverGuy', url: 'https://www.voiceoverguy.co.uk' },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'What is the Santa Script Generator?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: "It's a fun tool that turns your text and input into a fantastic message from Santa. Then, why not copy it and have Santa voice it for you?",
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Can I get the script voiced by Santa?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: "Yes! Once your script is generated, you can book Guy Harris - the UK's Voice of Santa to read it for you.",
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Is this just for fun or for commercial use?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'The generator is free to play with, but you can commission a polished, studio-quality recording for professional projects.',
-                },
-              },
-            ],
           }),
         }}
       />
