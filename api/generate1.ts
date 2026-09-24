@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { relayGenerator } from '../server/generatorRelay';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const RATE_LIMIT_MAX = 5;
@@ -45,20 +46,6 @@ function checkRateLimit(ip: string): boolean {
   return true;
 }
 
-const SANTA_SYSTEM_PROMPT = `You are a script generator that writes personalised messages from Santa Claus (Father Christmas). The user will provide details about who the message is for. You must create a warm, magical, personalised message from Santa himself.
-
-Rules:
-- Write in first person as Santa Claus / Father Christmas
-- Use a warm, jolly, festive and magical tone
-- Reference specific details the user has provided (names, interests, achievements)
-- Include references to the North Pole, elves, reindeer, the workshop, the naughty/nice list
-- Add gentle humour and warmth
-- Keep the message between 100-200 words
-- Do not break character
-- Make it feel personal and special
-- Use British English spelling
-- Sign off as Santa, Father Christmas, or similar`;
-
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (setCorsHeaders(req, res)) return;
 
@@ -92,36 +79,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return;
   }
 
-  const apiKey = process.env['AI_INTEGRATIONS_OPENAI_API_KEY'];
-
-  if (!apiKey) {
-    res.status(500).json({ error: 'AI service not configured.' });
-    return;
-  }
-
-  try {
-    const { default: OpenAI } = await import('openai');
-    const openai = new OpenAI({ apiKey });
-
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: SANTA_SYSTEM_PROMPT },
-        { role: 'user', content: prompt.trim() },
-      ],
-      max_tokens: 600,
-      temperature: 0.8,
-    });
-
-    const script = completion.choices[0]?.message?.content || '';
-    res.json({ script });
-  } catch (error: unknown) {
-    const status = typeof error === 'object' && error !== null && 'status' in error
-      && typeof error.status === 'number' ? error.status : undefined;
-    const code = typeof error === 'object' && error !== null && 'code' in error
-      && typeof error.code === 'string' && /^[a-z0-9_]{1,64}$/.test(error.code)
-      ? error.code : undefined;
-    console.error('Santa generate error', { status: status ?? 'unknown', code: code ?? 'unknown' });
-    res.status(500).json({ error: 'Generation failed. Please try again.' });
-  }
+  await relayGenerator('/generate1', prompt.trim(), /^[a-fA-F0-9:.]{1,64}$/.test(ip) ? ip : 'unknown', res, 'Santa');
 }

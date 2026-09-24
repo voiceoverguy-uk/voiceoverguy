@@ -1,5 +1,6 @@
 import { Router, Request, Response, NextFunction } from "express";
 import OpenAI from "openai";
+import { timingSafeEqual } from "node:crypto";
 
 const router = Router();
 
@@ -12,8 +13,27 @@ const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 
+function authenticateRelay(req: Request, res: Response, next: NextFunction): void {
+  const secret = process.env.GENERATOR_RELAY_SECRET ||
+    (process.env.NODE_ENV === "development" ? process.env.SESSION_SECRET : undefined);
+  if (!secret) {
+    res.status(503).json({ error: "AI service not configured." });
+    return;
+  }
+  const authorization = req.headers.authorization;
+  const supplied = authorization?.startsWith("Bearer ") ? authorization.slice(7) : "";
+  const expectedBytes = Buffer.from(secret);
+  const suppliedBytes = Buffer.from(supplied);
+  if (suppliedBytes.length !== expectedBytes.length || !timingSafeEqual(suppliedBytes, expectedBytes)) {
+    res.status(401).json({ error: "Unauthorized" });
+    return;
+  }
+  next();
+}
+
 function rateLimit(req: Request, res: Response, next: NextFunction): void {
-  const ip = req.ip || req.socket.remoteAddress || 'unknown';
+  // This header is trusted only after authenticateRelay has checked the caller.
+  const ip = req.header("X-Generator-Client-IP") || req.ip || req.socket.remoteAddress || 'unknown';
   const now = Date.now();
   const entry = rateLimitMap.get(ip);
 
@@ -59,12 +79,17 @@ Rules:
 - Use British English spelling
 - Sign off as Santa, Father Christmas, or similar`;
 
-router.post("/generate", rateLimit, async (req, res) => {
+router.post("/generate", authenticateRelay, rateLimit, async (req, res) => {
   try {
-    const { prompt } = req.body;
+    const { prompt } = req.body ?? {};
 
-    if (!prompt || typeof prompt !== "string") {
+    if (typeof prompt !== "string" || !prompt.trim()) {
       res.status(400).json({ error: "Please provide a prompt" });
+      return;
+    }
+
+    if (prompt.length > 2000) {
+      res.status(400).json({ error: "Prompt too long (2000 characters max)" });
       return;
     }
 
@@ -86,18 +111,24 @@ router.post("/generate", rateLimit, async (req, res) => {
     const script = completion.choices[0]?.message?.content || "";
     res.json({ script });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error("Attenborough generate error:", message);
+    const status = typeof error === 'object' && error !== null && 'status' in error
+      && typeof error.status === 'number' ? error.status : 'unknown';
+    console.error("Attenborough generate error", { status });
     res.status(500).json({ error: "Generation failed. Please try again." });
   }
 });
 
-router.post("/generate1", rateLimit, async (req, res) => {
+router.post("/generate1", authenticateRelay, rateLimit, async (req, res) => {
   try {
-    const { prompt } = req.body;
+    const { prompt } = req.body ?? {};
 
-    if (!prompt || typeof prompt !== "string") {
+    if (typeof prompt !== "string" || !prompt.trim()) {
       res.status(400).json({ error: "Please provide details" });
+      return;
+    }
+
+    if (prompt.length > 2000) {
+      res.status(400).json({ error: "Prompt too long (2000 characters max)" });
       return;
     }
 
@@ -119,8 +150,9 @@ router.post("/generate1", rateLimit, async (req, res) => {
     const script = completion.choices[0]?.message?.content || "";
     res.json({ script });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error("Santa generate error:", message);
+    const status = typeof error === 'object' && error !== null && 'status' in error
+      && typeof error.status === 'number' ? error.status : 'unknown';
+    console.error("Santa generate error", { status });
     res.status(500).json({ error: "Generation failed. Please try again." });
   }
 });
