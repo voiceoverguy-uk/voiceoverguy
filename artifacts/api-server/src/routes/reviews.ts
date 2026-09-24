@@ -23,7 +23,10 @@ async function fetchFromGoogle(): Promise<{ rating: number; reviewCount: number 
     throw new Error(`Google Places API returned ${resp.status}`);
   }
 
-  const data = await resp.json();
+  const data = await resp.json() as {
+    status?: string;
+    result?: { rating?: number; user_ratings_total?: number };
+  };
 
   if (data.status !== "OK") {
     throw new Error(`Google Places API status: ${data.status}`);

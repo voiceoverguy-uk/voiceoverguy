@@ -1,3 +1,5 @@
+/// <reference lib="dom" />
+
 const LEGACY_NEWS_PREFIX = 'voiceover-newslatest-voiceover-news/';
 const WORMS_PATH = '/worms-wmd-character-voices';
 const CANONICAL_URL = 'https://www.voiceoverguy.co.uk/worms-wmd-character-voices';
