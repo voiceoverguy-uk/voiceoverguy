@@ -3,3 +3,4 @@
 - [Vercel query stripping](vercel-query-stripping.md) — configuration redirects forward incoming query strings; use a handler for a truly query-free Location.
 - [Script timer canonical URL](script-timer-canonical-url.md) — keep the expanded timer on the established word-count URL; avoid a competing SEO route.
 - [Vercel firewall API activation](vercel-firewall-api-activation.md) — REST rule insertion can activate immediately, unlike CLI drafts; verify active config after writes.
+- [Generator preview relay](generator-preview-relay.md) — local preview bypasses the public Vercel relay, so protected generator requests return 401 even when live generation works.

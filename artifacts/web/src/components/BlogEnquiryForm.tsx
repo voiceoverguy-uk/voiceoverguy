@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import { generatorSourceForService } from '@/lib/generatorSource';
 
 interface Props {
   pageTitle: string;
@@ -63,6 +64,9 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
     setServerError('');
 
     try {
+      const serviceSource = pageUrl === `https://www.voiceoverguy.co.uk${window.location.pathname}`
+        ? generatorSourceForService(window.location.pathname, window.location.search)
+        : null;
       const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -70,7 +74,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
-          pageTitle,
+          pageTitle: serviceSource ? `${pageTitle} (via ${serviceSource.label})` : pageTitle,
           pageUrl,
           website: honeypotRef.current?.value ?? '',
         }),

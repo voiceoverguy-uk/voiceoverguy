@@ -148,7 +148,7 @@ export default function SantaGeneratorClient() {
           </h2>
           <p className="generator-subtitle">
             Share who the message is for and get a free written script from Santa.<br />
-            For a separately bookable professional recording, get the <Link href="/santa-voice" className="red-link">Real Santa by VoiceoverGuy</Link> to voice it.
+            For a separately bookable professional recording, get the <Link href="/santa-voice?source=santa-script-generator" className="red-link">Real Santa by VoiceoverGuy</Link> to voice it.
           </p>
 
           <div className="generator-textarea-wrapper">

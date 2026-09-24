@@ -148,7 +148,7 @@ export default function AttenboroughGeneratorClient() {
           </h2>
           <p className="generator-subtitle">
             Type a short scenario and get a free written Attenborough-style script.<br />
-            For a separately bookable professional recording, <Link href="/david-attenborough-voice" className="red-link">get the real VoiceoverGuy</Link> to voice it.
+            For a separately bookable professional recording, <Link href="/david-attenborough-voice?source=attenborough-script-generator" className="red-link">get the real VoiceoverGuy</Link> to voice it.
           </p>
 
           <div className="generator-textarea-wrapper">
