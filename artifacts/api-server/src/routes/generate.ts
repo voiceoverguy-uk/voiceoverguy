@@ -99,12 +99,12 @@ router.post("/generate", authenticateRelay, rateLimit, async (req, res) => {
     }
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-5.4-mini",
       messages: [
         { role: "system", content: ATTENBOROUGH_SYSTEM_PROMPT },
         { role: "user", content: prompt.trim() },
       ],
-      max_tokens: 500,
+      max_completion_tokens: 500,
       temperature: 0.8,
     });
 
@@ -138,12 +138,12 @@ router.post("/generate1", authenticateRelay, rateLimit, async (req, res) => {
     }
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-5.4-mini",
       messages: [
         { role: "system", content: SANTA_SYSTEM_PROMPT },
         { role: "user", content: prompt.trim() },
       ],
-      max_tokens: 600,
+      max_completion_tokens: 600,
       temperature: 0.8,
     });
 
