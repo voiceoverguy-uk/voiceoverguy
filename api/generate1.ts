@@ -2,6 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const RATE_LIMIT_MAX = 5;
+const MAX_PROMPT_LENGTH = 2000;
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 
 const ALLOWED_ORIGINS = [
@@ -76,8 +77,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const { prompt } = req.body ?? {};
 
-  if (!prompt || typeof prompt !== 'string') {
+  if (typeof prompt !== 'string' || !prompt.trim()) {
     res.status(400).json({ error: 'Please provide details' });
+    return;
+  }
+
+  if (prompt.length > MAX_PROMPT_LENGTH) {
+    res.status(400).json({ error: 'Prompt too long (2000 characters max)' });
     return;
   }
 
@@ -87,7 +93,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const apiKey = process.env['AI_INTEGRATIONS_OPENAI_API_KEY'];
-  const baseURL = process.env['AI_INTEGRATIONS_OPENAI_BASE_URL'];
 
   if (!apiKey) {
     res.status(500).json({ error: 'AI service not configured.' });
@@ -96,7 +101,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const { default: OpenAI } = await import('openai');
-    const openai = new OpenAI({ apiKey, baseURL });
+    const openai = new OpenAI({ apiKey });
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -111,8 +116,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const script = completion.choices[0]?.message?.content || '';
     res.json({ script });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error('Santa generate error:', message);
+    const status = typeof error === 'object' && error !== null && 'status' in error
+      && typeof error.status === 'number' ? error.status : undefined;
+    const code = typeof error === 'object' && error !== null && 'code' in error
+      && typeof error.code === 'string' && /^[a-z0-9_]{1,64}$/.test(error.code)
+      ? error.code : undefined;
+    console.error('Santa generate error', { status: status ?? 'unknown', code: code ?? 'unknown' });
     res.status(500).json({ error: 'Generation failed. Please try again.' });
   }
 }
