@@ -22,8 +22,15 @@ const upcomingNewsItem: NewsItem = {
   segments: [
     {
       type: 'text',
-      text: "Look and listen out for the new trailer for the movie 'Bad Apples', coming soon to Paramount. I'm the UK trailer voice.",
+      text: "Look and listen out for the new trailer for the movie 'Bad Apples', coming soon to Paramount. I'm the ",
     },
+    {
+      type: 'link',
+      text: 'UK trailer voice',
+      href: 'https://www.youtube.com/shorts/lnu03Et8TJ0',
+      external: true,
+    },
+    { type: 'text', text: '.' },
   ],
 };
 
