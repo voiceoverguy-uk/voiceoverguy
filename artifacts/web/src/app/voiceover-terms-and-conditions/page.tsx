@@ -79,7 +79,7 @@ export default function VoiceoverTermsPage() {
             <p>My fee covers the recording services and the usage specifically agreed in the quote or booking confirmation. Usage depends on the agreed project, media or channels, territory and licence period. It does not automatically include worldwide use, all media, paid advertising, sublicensing or perpetual use.</p>
             <p>Radio usage is <strong>normally licensed for 12 months</strong>, unless our written quote or booking confirmation says otherwise. Other licence periods are agreed for the particular project. Perpetual usage is available only where we expressly agree it in writing and the fee reflects it.</p>
             <p>Please contact me before using a recording beyond the agreed period, territory, media, campaign or end client. We can usually arrange an extension. An edit, cut-down or new version does not extend the original licence or create rights for a different campaign unless we agree that in writing. Existing published material may need a practical takedown timetable; please discuss that with me before a licence expires.</p>
-            <p>Your licence to use the recording for the agreed project and agreed usage begins on delivery. You must pay the applicable invoice by the agreed due date. If payment becomes overdue, VoiceoverGuy Limited may give written notice suspending further licensed use until the overdue amount has been paid in full. Delivery of an audio file, participation in a directed session or payment for recording time does not transfer ownership of my voice or grant rights beyond the agreed usage.</p>
+            <p>The agreed licence takes effect when the applicable invoice has been paid in full. Delivery of an audio file, participation in a directed session or payment for recording time does not transfer ownership of my voice or grant rights beyond the agreed usage.</p>
           </section>
 
           <section id="recordings-delivery-and-changes" className={styles.section}>
@@ -96,7 +96,7 @@ export default function VoiceoverTermsPage() {
 
           <section id="payment" className={styles.section}>
             <h2>5. Payment</h2>
-            <p>Unless the written quote or booking confirmation agreed before the job is accepted states otherwise, payment is due <strong>30 calendar days from the invoice date</strong>. For some new or particular bookings I may agree payment on delivery, within 7 days or within 14 days; any shorter payment period must be agreed in the written quote or booking confirmation before the booking is accepted, not introduced later on the invoice.</p>
+            <p>Unless the quote or invoice states otherwise, payment is due <strong>30 calendar days from the invoice date</strong>. For some new or particular bookings I may agree payment on delivery, within 7 days or within 14 days; that shorter term will be made clear before the booking is confirmed.</p>
             <p>If a business invoice becomes overdue, VoiceoverGuy Limited reserves its rights under the applicable late commercial payment rules. Please raise any genuine invoice query promptly so that we can sort it out sensibly.</p>
           </section>
 
