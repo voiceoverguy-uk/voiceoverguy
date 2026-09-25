@@ -1,0 +1,33 @@
+# Review and refresh the VoiceoverGuy privacy policy
+
+Please review the live privacy policy at https://www.voiceoverguy.co.uk/privacy-policy and the website code. **Work in Plan mode first: do not change or publish the site yet.**
+
+## What I want
+
+A privacy policy that is accurate, easy to scan and sounds like me: professional, straightforward, warm and helpful. Use plain British English and clear headings. Keep the existing privacy-policy URL.
+
+The business is **VoiceoverGuy Limited**, operated by Guy Harris. Check that the company identity and contact details match the new Voiceover Terms & Conditions page and the site’s actual business details.
+
+## Check what the site actually does
+
+Please inspect the contact form and its handling of submitted names, email addresses, messages and scripts. Check hosting, email delivery, spam protection, analytics, cookies, embedded video/audio, payment links and any other services that receive visitor information. Check whether a cookie choice is needed and whether the site’s current behaviour matches what the policy says.
+
+In particular, verify the current claims that contact-form data is not shared with third parties, analytics data is anonymised, and enquiries are not used for marketing. Do not repeat a claim unless you can substantiate it. Distinguish services used on this website from business tools, such as invoicing, that you cannot inspect from the website code.
+
+## Draft the revised policy
+
+Using current ICO guidance, prepare a concise draft covering the information the business actually collects, why it uses it, the relevant lawful bases, service providers, retention, people’s rights, how to contact us and how to complain to the ICO. Cover cookies and embedded content accurately. Mention overseas processing only where it is relevant and can be explained accurately.
+
+Keep the writing human and readable. For example, the opening could explain that when someone gets in touch about a voiceover, I use their details to reply, prepare a quote and manage a booking if we work together. Avoid generic promises such as “we never share your data” if service providers handle it.
+
+## Show me before making changes
+
+Please return:
+
+1. A brief summary of what you found in the website code.
+2. Any important gap between the current policy and what the site does.
+3. The **full proposed replacement text**, with clear headings.
+4. A short list of facts you need me to confirm about my off-site working practices, such as how long I keep enquiries and booking records. Ask only questions that the code cannot answer.
+5. Any separate website or cookie changes you recommend, with your reason for each.
+
+Do not invent providers, retention periods or legal bases to fill gaps. Do not change the live privacy page, cookie behaviour or other pages until I have reviewed the plan and answered the necessary questions.
