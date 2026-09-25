@@ -38,7 +38,7 @@ const DEMO_SCRIPTS = [
     wpm: 150,
     words: 75,
     duration: 'approx. 30 seconds',
-    text: "If you are looking for a voiceover that just sounds like a genuine conversation, this natural pacing hits the sweet spot every time. It is exactly the right speed for explainer videos, corporate presentations, and engaging brand stories. You want your listeners to feel like they are being spoken to by a friend, rather than being lectured at. This conversational rhythm keeps things moving forward nicely while remaining completely clear, approachable, and easy to understand.",
+    text: "If you are looking for a voiceover that just sounds like a genuine conversation, this natural pacing hits the sweet spot every time. It's exactly the right speed for explainer videos, corporate presentations, and engaging brand stories. You want your listeners to feel like they are being spoken to by a friend, rather than being lectured at. This conversational rhythm keeps things moving forward nicely while remaining completely clear, approachable, and easy to understand.",
     audio: "/assets/audio/voiceover-pace-natural-150wpm.mp3"
   },
   {
@@ -46,7 +46,7 @@ const DEMO_SCRIPTS = [
     wpm: 175,
     words: 87,
     duration: 'approx. 30 seconds',
-    text: "When you need to grab attention instantly, a fast and energetic commercial read is exactly what you are looking for! This high impact pacing is perfect for retail promotions, radio adverts, and hard hitting social media campaigns where every second counts. You have a massive amount of information to squeeze into a tiny window, and you need it delivered with absolute confidence, clarity, and enthusiasm. Do not let your audience look away for a moment. Keep the energy soaring right through to the final call to action!",
+    text: "When you need to grab attention instantly, a fast and energetic commercial read is exactly what you are looking for! This high impact pacing is perfect for retail promotions, radio adverts, and hard hitting social media campaigns where every second counts. You have a massive amount of information to squeeze into a tiny window, and you need it delivered with absolute confidence, clarity, and enthusiasm. Don't let your audience look away for a moment. Keep the energy soaring right through to the final call to action!",
     audio: "/assets/audio/voiceover-pace-fast-175wpm.mp3"
   }
 ];
