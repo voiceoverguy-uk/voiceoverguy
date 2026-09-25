@@ -60,8 +60,8 @@ export default function PrivacyPolicyPage() {
           <section id="responsibility" className={styles.section}>
             <h2>Who looks after your information?</h2>
             <p>VoiceoverGuy Limited operates this website and is responsible for the personal information collected through it. I’m Guy Harris, and I handle privacy enquiries.</p>
-            <p>Email <a href="mailto:guy@voiceoverguy.co.uk">guy@voiceoverguy.co.uk</a> or use the <a href="/contact-guy">contact page</a>.</p>
-            <p><strong>Company number:</strong> 07297733.<br /><strong>Registered office:</strong> Suite 2 Rosehill, 165 Lutterworth Road, Blaby, Leicestershire, LE8 4DY.</p>
+            <p>For privacy enquiries, please use the <a href="/contact-guy">contact page</a>.</p>
+            <p><strong>Company number:</strong> 07297733.<br /><strong>Registered office:</strong> Suite 2 Rosehill, Blaby, LE8 4DY.</p>
           </section>
 
           <section id="enquiries" className={styles.section}>
@@ -125,7 +125,7 @@ export default function PrivacyPolicyPage() {
             <p>Depending on the circumstances, you can ask to access or correct your personal information, have it deleted, restrict its use or receive certain information in a portable form. Some information may still need to be kept where the law requires it.</p>
             <p><strong>You can object to processing based on legitimate interests. You can object to direct marketing at any time.</strong></p>
             <p>Where I rely on consent, you can withdraw it without affecting the lawfulness of earlier processing.</p>
-            <p>To make a request, email <a href="mailto:guy@voiceoverguy.co.uk">guy@voiceoverguy.co.uk</a>. I may need enough information to confirm your identity and understand your request.</p>
+            <p>To make a request, please use the <a href="/contact-guy">contact page</a>. I may need enough information to confirm your identity and understand your request.</p>
           </section>
 
           <section id="complaints" className={styles.section}>
