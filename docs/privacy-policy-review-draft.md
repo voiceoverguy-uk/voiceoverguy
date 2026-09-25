@@ -1,6 +1,6 @@
 # Privacy policy — review draft
 
-Not approved for implementation or publication. The policy below is proposed visitor-facing text. In particular, the retention criteria and safeguards for occasional marketing are proposals to adopt, not claims about established procedures. Confirmation notes follow the policy and must not be published.
+Historical review draft. On 25 September 2026 the user explicitly requested integration into the established privacy-policy page so they can sync and publish themselves. The website page is now the implementation source of truth. Provider/account verification and operational review notes below remain unresolved; implementation approval does not verify those facts. These notes are not visitor-facing copy, and the agent has not published the site.
 
 ---
 
