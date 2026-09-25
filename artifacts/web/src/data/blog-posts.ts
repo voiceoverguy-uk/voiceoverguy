@@ -37,6 +37,7 @@ export interface BlogPost {
  nimage4: string; // image paired with ntext4
  conflictsWithCorePage: boolean; // true = slug already handled by a core Next.js page
  localAudio?: string; // optional local MP3 path, replaces SoundCloud embed
+ modifiedDate?: string; // substantial editorial update, preserving original publication date
  audioSrc?: string; // optional full-width audio player with download, shown below text1
  videoStart?: number; // optional YouTube start offset in seconds (whatVideo === '1')
  nvideo1?: string; // optional YouTube ID embedded inside the ntext1 section
@@ -7772,35 +7773,35 @@ const blogPosts: BlogPost[] = [
  {
  "id": 972,
  "url": "ai-guy-human-vs-ai-voiceover",
- "pageTitle": "Human First! GuyAi vs Human Voice!",
- "info": "<p>AI voice technology has its place. But if you want personality, nuance and a bit of sparkle, there’s still no substitute for a real voice actor. </p>",
- "searchTerms": "artificial intelligence, AI voiceover, voice clone, synthetic voice, GuyAi",
- "pageDesc": "AI voice can work, but nothing beats the real thing. Guy Harris offers both – but for quality and impact, it's Human First. Book the voice that delivers.",
- "text1": "<h2><strong>Yes, I Have an AI Voice</strong></h2>\r\n<p>It’s true... I’ve trained an AI version of my voice. It’s available 24/7, doesn’t drink tea, and never forgets a line. Saving Money? Yeah it's ok for explainer videos, internal comms, or projects with tight budgets and tighter deadlines. It’s quick, flexible, and ideal for when time or cost is the biggest concern. However don’t expect it to improvise a punchline or lift a line off the page. For certain tasks and projects, it gets the job done. Just know what you’re getting.</p>\r\n",
- "text2": "<h2><strong>But Here’s the Catch…</strong></h2>\r\n<p>You’ll spend time typing, editing, tweaking, and second-guessing. You might save money, but you’ll pay in faff. And by the time you've got it sounding “okay”, I could’ve given you a perfect human read, probably before your AI version even finished rendering. With me, there’s no guesswork. No robotic tone. Just over two decades of experience, instinct, and a voice that knows exactly how to land your message first time. Just because AI is new, doesn't mean it's better.</p>\r\n",
- "image": "guy-ai-voiceoverguy.webp",
- "video": "<iframe width=\"100%\" height=\"300\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2096818659&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true\"></iframe><div style=\"color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-weight: 100;\"><a href=\"https://soundcloud.com/voiceoverguy\" title=\"VoiceoverGuy\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #cccccc; text-decoration: none;\">VoiceoverGuy</a> · <a href=\"https://soundcloud.com/voiceoverguy/guy-harris-ai-voice-demo-2025\" title=\"Guy Harris - AI Voice Demo 2025\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #cccccc; text-decoration: none;\">Guy Harris - AI Voice Demo 2025</a></div>",
- "metaTitle": "AI Voice vs Real Voice | Human First Voiceovers",
- "bottomText": "<h2><strong>Let’s Talk – Human or AI?</strong></h2>\r\n<p>If you still want to use the AI version of me, I’ll point you to it. But if you’re serious about quality, I’ll give you a voiceover that sings. No setup, no tweaking. Just done.</p>\r\n<p>Use the contact form below and let’s bring it to life the right way.</p>",
+ "pageTitle": "Human First: AI Voice vs a Real Voiceover",
+ "info": "<p>AI can put words into audio. But when a line needs warmth, comic timing or the right pause, it helps to have a person behind the microphone. I'm Guy Harris, a professional British voiceover artist, and every voiceover I supply is a real performance recorded for your brief.</p>",
+ "searchTerms": "human voiceover vs AI, real voice actor, British voiceover, human performance",
+ "pageDesc": "AI can read a script. Guy Harris brings timing, direction and genuine performance to voiceover. Discover when a real human voice makes the difference.",
+ "text1": "<h2>What AI can do</h2><p>Synthetic voices can be useful for rough drafts, placeholders and some repetitive internal material. If you use one, check the source of the voice, permissions and intended usage. A quick output isn't always the right finished performance for a public campaign.</p>",
+ "text2": "<h2>What a human voice brings</h2><p>I can listen to your direction, understand the point of the script and change the read when it needs more energy, restraint or personality. That matters for adverts, explainers, narration and character work where the delivery is as important as the words.</p>",
+ "image": "guy-harris-british-male-voiceover.webp",
+ "video": "",
+ "metaTitle": "Human Voiceover vs AI | Guy Harris",
+ "bottomText": "<h2>Want a real voice for your next project?</h2><p>Send me your script and a little about where it will be used, and I'll help you work out the right read and quote. <a href=\"/contact-guy\">Contact Guy</a>.</p>",
  "rawDate": "May 2025",
  "date": "2025-05-01",
- "whatVideo": "3",
- "alt": "Guy Harris real vs AI voiceover comparison",
+ "whatVideo": "",
+ "alt": "Guy Harris, professional British voiceover artist",
  "rating": "5",
  "blogRating": fromLegacyRating("5"),
  "twitter": "",
- "homeText": "AI is clever – but the real voice still wins.",
+ "homeText": "Human First: find out what a real voiceover brings to your project.",
  "santa": "",
- "ntext1": "<br><h2><strong>When to Use AI (and When Not To)</strong></h2>\r\n<p>✅ Internal training? Yeah it's ok. <br>\r\n✅ Placeholder voice for a pitch? Go for it. <br>\r\n❌ Emotional storytelling? <br>\r\n❌ Brand films? <br>\r\n❌ That big-budget pitch you’ve worked on for 6 months? Don’t.</p>\r\n<p>When it matters, choose <strong>Human First</strong>.</p>",
- "ntext2": "<br><h2><strong>Real Voice. Real Results.</strong></h2>\r\n<p>Voiceover is more than reading lines. It’s about delivering nuance, rhythm, warmth and intent. It’s knowing when to pause. When to punch. When to pull back. That’s the difference a human makes. That’s the difference I make. With every read, I bring decades of experience, instinct, and storytelling to the mic, something no synthetic voice can truly replicate. If your message matters, your voice should too. Let me make it sound exactly right.</p>",
+ "ntext1": "<h2>Working together</h2><p>Tell me where your recording will be used and what it needs to achieve. I can record from my studio, work with you in a directed session and supply broadcast-quality audio in the format agreed for your project. We agree the scope, usage and fee in writing before booking.</p>",
+ "ntext2": "",
  "ntext3": "",
  "ntext4": "",
- "nimage1": "guy-ai-voiceoverguy-robots.webp",
- "nimage2": "guy-ai-voiceoverguy-robots-trash-studio.webp",
+ "nimage1": "",
+ "nimage2": "",
  "nimage3": "",
  "nimage4": "",
  "conflictsWithCorePage": false,
- "localAudio": "/assets/audio/guy-ai-voice-sample-guy-harris.mp3"
+ "modifiedDate": "2026-09-25"
  },
  {
  "id": 973,

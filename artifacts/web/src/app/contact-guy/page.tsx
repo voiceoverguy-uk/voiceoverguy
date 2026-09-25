@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import PayPalButton from '@/components/PayPalButton';
 import EmailReveal from '@/components/EmailReveal';
@@ -71,6 +72,9 @@ export default function ContactGuy() {
                 <li>Indicate the intended usage. ie. web, radio, tv etc</li>
                 <li>We will then send you an accurate quote for your project</li>
               </ul>
+              <p>
+                You can read our <Link href="/voiceover-terms-and-conditions">Voiceover Terms &amp; Conditions</Link> before booking. Sending an enquiry doesn&#39;t commit you to a paid booking; we confirm each project&#39;s scope and fee in writing.
+              </p>
 
               <h2 style={{ marginTop: '28px' }}>Audio <span className="ident">File Formats</span></h2>
               <ul className="contact-bullets">

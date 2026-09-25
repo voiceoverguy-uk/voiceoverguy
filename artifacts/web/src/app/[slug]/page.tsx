@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             alt: imageAlt,
           },
         ],
-        ...(publishedTime ? { publishedTime, modifiedTime: publishedTime } : {}),
+        ...(publishedTime ? { publishedTime, modifiedTime: toIso(post.modifiedDate ?? post.date) } : {}),
       },
       twitter: {
         card: 'summary_large_image',

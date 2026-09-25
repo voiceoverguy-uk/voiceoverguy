@@ -180,9 +180,9 @@ export const newsItems: NewsItem[] = [
   },
   {
     segments: [
-      t("The Artificial Intelligence of - AI GUY! Professional Human Voiceover or AI? "),
-      link("Click Here", "/ai-guy-human-vs-ai-voiceover"),
-      t(" to learn why Human First!"),
+      t("Human First: wondering what a real voiceover brings to your project? "),
+      link("Read Guy's human voiceover vs AI comparison", "/ai-guy-human-vs-ai-voiceover"),
+      t("."),
     ],
   },
   {

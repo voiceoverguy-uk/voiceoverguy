@@ -89,7 +89,7 @@ export function buildBlogPostingSchema(post: BlogPost): Record<string, unknown> 
   if (description) schema.description = description;
   if (isoDate) {
     schema.datePublished = isoDate;
-    schema.dateModified = isoDate;
+    schema.dateModified = toIsoDate(post.modifiedDate ?? post.date);
   }
   if (keywords.length > 0) schema.keywords = keywords;
 
