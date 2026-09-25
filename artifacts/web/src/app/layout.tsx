@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ThirdPartyConsent from '@/components/ThirdPartyConsent';
 import { getYearsExperience } from '@/lib/experience';
 
 const yrs = getYearsExperience();
@@ -52,10 +53,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" href="/assets/images/voiceover-guy-icon.webp" />
       </head>
       <body>
+        <ThirdPartyConsent>
         <div className="top-bar" />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        </ThirdPartyConsent>
       </body>
     </html>
   );

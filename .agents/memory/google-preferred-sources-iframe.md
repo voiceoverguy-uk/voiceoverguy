@@ -1,10 +1,10 @@
 ---
-name: Google Preferred Sources iframe
-description: Non-obvious layout behaviour of Google's generated Preferred Sources control.
+name: Google Preferred Sources privacy
+description: Why the preferred-source control uses a plain link rather than Google's publisher widget.
 ---
 
-Google's Preferred Sources script can force the generated cross-origin iframe to the full width of the element carrying the Google marker, overriding sizing or alignment placed directly on that marker.
+Prefer Google's documented source-preferences link over its publisher widget.
 
-**Why:** Flex alignment and direct width constraints on the marked element left the visible button at the iframe's internal left edge. A separate outer host constrained to the button width aligned the untouched host instead.
+**Why:** A fresh-browser privacy audit observed Google requests and cookies from the publisher widget before visitor consent. A normal link preserves the feature without loading Google resources before navigation.
 
-**How to apply:** When repositioning or aligning this control, keep sizing, clipping and alignment on a wrapper that does not carry the Google marker attribute. Let the script own only the nested marker element.
+**How to apply:** Do not restore the publisher script merely to obtain Google's styled button. Keep a normal link, or require a separately disclosed consent decision before embedding the widget.

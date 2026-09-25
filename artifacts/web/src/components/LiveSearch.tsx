@@ -172,9 +172,6 @@ function useTypewriter(phrases: string[], active: boolean, reducedMotion: boolea
 }
 
 function getBlogThumbnail(post: typeof blogPosts[0]): string {
-  if (post.whatVideo === '1' && post.video) {
-    return `https://img.youtube.com/vi/${post.video}/mqdefault.jpg`;
-  }
   if (post.image) {
     return `/assets/img/blog/${post.image}`;
   }

@@ -3,6 +3,7 @@ import BlogEnquiryForm from '@/components/BlogEnquiryForm';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
+import { ConsentGate } from '@/components/ThirdPartyConsent';
 
 interface Section {
   text?: string;
@@ -40,6 +41,7 @@ function isVimeoId(str: string): boolean {
 
 function VimeoEmbed({ id }: { id: string }) {
   return (
+    <ConsentGate category="media" provider="Vimeo" className="embed-wrap">
     <div className="embed-wrap">
       <iframe
         src={`https://player.vimeo.com/video/${id.trim()}`}
@@ -48,6 +50,7 @@ function VimeoEmbed({ id }: { id: string }) {
         allowFullScreen
       />
     </div>
+    </ConsentGate>
   );
 }
 

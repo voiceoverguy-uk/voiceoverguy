@@ -1,4 +1,4 @@
-- [Google Preferred Sources iframe](google-preferred-sources-iframe.md) — align the generated iframe through an untouched outer host; Google overwrites marker sizing.
+- [Google Preferred Sources privacy](google-preferred-sources-iframe.md) — prefer a normal source-preferences link; the publisher widget made pre-consent Google requests.
 - [Next development cache](next-dev-cache.md) — restart the web workflow after builds; shared Next output can invalidate dev chunks and HMR.
 - [Vercel query stripping](vercel-query-stripping.md) — configuration redirects forward incoming query strings; use a handler for a truly query-free Location.
 - [Script timer canonical URL](script-timer-canonical-url.md) — keep the expanded timer on the established word-count URL; avoid a competing SEO route.

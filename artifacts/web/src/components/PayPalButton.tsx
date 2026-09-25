@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { ConsentGate } from '@/components/ThirdPartyConsent';
 
 declare global {
   interface Window {
@@ -15,8 +16,9 @@ const CLIENT_ID =
 const BUTTON_ID = '88CKT5NKL3DJ6';
 const CONTAINER_ID = 'paypal-container-88CKT5NKL3DJ6';
 
-export default function PayPalButton() {
+function PayPalCheckout() {
   useEffect(() => {
+    let cancelled = false;
     const existing = document.getElementById('paypal-sdk-script');
     if (existing) {
       renderButton();
@@ -26,17 +28,22 @@ export default function PayPalButton() {
     const script = document.createElement('script');
     script.id = 'paypal-sdk-script';
     script.src = `https://www.paypal.com/sdk/js?client-id=${CLIENT_ID}&components=hosted-buttons&disable-funding=venmo&currency=GBP`;
-    script.onload = renderButton;
+    script.onload = () => { if (!cancelled) renderButton(); };
     document.body.appendChild(script);
 
     function renderButton() {
-      if (window.paypal) {
+      if (!cancelled && window.paypal) {
         window.paypal
           .HostedButtons({ hostedButtonId: BUTTON_ID })
           .render(`#${CONTAINER_ID}`);
       }
     }
+    return () => { cancelled = true; };
   }, []);
 
   return <div id={CONTAINER_ID} style={{ marginTop: '16px' }} />;
+}
+
+export default function PayPalButton() {
+  return <ConsentGate category="payments" provider="PayPal"><PayPalCheckout /></ConsentGate>;
 }

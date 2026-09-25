@@ -7,6 +7,7 @@ import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import YouTubePauseCoordinator from '@/components/YouTubePauseCoordinator';
 import { buildAllBlogSchemas } from '@/lib/buildSchema';
 import { normaliseHtml } from '@/lib/normaliseHtml';
+import { ConsentGate } from '@/components/ThirdPartyConsent';
 
 interface Props {
   post: BlogPostType;
@@ -29,6 +30,7 @@ function MediaBlock({ post }: { post: BlogPostType }) {
       params.set('start', String(Math.floor(post.videoStart)));
     }
     return (
+      <ConsentGate category="media" provider="YouTube" className="embed-wrap">
       <div className="embed-wrap">
         <iframe
           src={`https://www.youtube.com/embed/${ytId}?${params.toString()}`}
@@ -37,11 +39,13 @@ function MediaBlock({ post }: { post: BlogPostType }) {
           allowFullScreen
         />
       </div>
+      </ConsentGate>
     );
   }
 
   if (wv === '2' && video && !video.startsWith('<iframe')) {
     return (
+      <ConsentGate category="media" provider="Vimeo" className="embed-wrap">
       <div className="embed-wrap">
         <iframe
           src={`https://player.vimeo.com/video/${video.trim()}`}
@@ -50,15 +54,20 @@ function MediaBlock({ post }: { post: BlogPostType }) {
           allowFullScreen
         />
       </div>
+      </ConsentGate>
     );
   }
 
   if (video.startsWith('<iframe')) {
+    const src = video.match(/<iframe\b[^>]*\bsrc=["']([^"']+)["']/i)?.[1]?.replace(/&amp;/g, '&');
+    const provider = src?.startsWith('https://w.soundcloud.com/player/') ? 'SoundCloud'
+      : src?.startsWith('https://www.youtube.com/embed/') ? 'YouTube'
+      : src?.startsWith('https://player.vimeo.com/video/') ? 'Vimeo' : null;
+    if (!src || !provider) return <p>This external embed is unavailable.</p>;
     return (
-      <div
-        className="sc-embed"
-        dangerouslySetInnerHTML={{ __html: video }}
-      />
+      <ConsentGate category="media" provider={provider} className="sc-embed">
+        <div className="sc-embed"><iframe src={src} title={`${provider}: ${post.pageTitle}`} width="100%" height={video.includes('height="300"') ? 300 : 166} allow="autoplay; fullscreen" loading="lazy" /></div>
+      </ConsentGate>
     );
   }
 
@@ -266,6 +275,7 @@ export default function BlogPost({ post }: Props) {
             ) : null;
             const mediaEl = hasVid ? (
               <div className="blog-media-col">
+                <ConsentGate category="media" provider="YouTube" className="embed-wrap">
                 <div className="embed-wrap">
                   <iframe
                     src={`https://www.youtube.com/embed/${ytId}?enablejsapi=1`}
@@ -274,6 +284,7 @@ export default function BlogPost({ post }: Props) {
                     allowFullScreen
                   />
                 </div>
+                </ConsentGate>
               </div>
             ) : hasImg ? (
               <div className="blog-media-col">

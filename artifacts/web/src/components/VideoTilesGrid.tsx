@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ConsentGate } from '@/components/ThirdPartyConsent';
 
 const videoTiles = [
   {
@@ -61,6 +62,7 @@ export default function VideoTilesGrid() {
       {videoTiles.map(v => (
         <div key={v.ytId} className="video-tile-card">
           {playingId === v.ytId ? (
+            <ConsentGate category="media" provider="YouTube" className="video-inline-frame">
             <div className="video-inline-frame">
               <iframe
                 src={`https://www.youtube.com/embed/${v.ytId}?autoplay=1&rel=0`}
@@ -69,6 +71,7 @@ export default function VideoTilesGrid() {
                 allowFullScreen
               />
             </div>
+            </ConsentGate>
           ) : (
             <button
               type="button"

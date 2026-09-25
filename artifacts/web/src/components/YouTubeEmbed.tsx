@@ -1,11 +1,13 @@
 'use client';
 import React from 'react';
+import { ConsentGate } from '@/components/ThirdPartyConsent';
 
 export default function YouTubeEmbed({ id, poster }: { id: string; poster?: string }) {
   const cleanId = id.replace(/\/.*$/, '').trim();
   const [active, setActive] = React.useState(!poster);
+  const safePoster = poster?.startsWith('/') && !poster.startsWith('//') ? poster : undefined;
 
-  if (!active && poster) {
+  if (!active && safePoster) {
     return (
       <div
         className="embed-wrap yt-poster-wrap"
@@ -13,7 +15,7 @@ export default function YouTubeEmbed({ id, poster }: { id: string; poster?: stri
         style={{ cursor: 'pointer', position: 'relative' }}
       >
         <img
-          src={poster}
+          src={safePoster}
           alt="Play video"
           style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0, borderRadius: 'inherit' }}
         />
@@ -28,13 +30,15 @@ export default function YouTubeEmbed({ id, poster }: { id: string; poster?: stri
   }
 
   return (
-    <div className="embed-wrap">
+    <ConsentGate category="media" provider="YouTube" className="embed-wrap">
+      <div className="embed-wrap">
       <iframe
         src={`https://www.youtube.com/embed/${cleanId}${poster ? '?autoplay=1' : ''}`}
         title="YouTube video"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />
-    </div>
+      </div>
+    </ConsentGate>
   );
 }

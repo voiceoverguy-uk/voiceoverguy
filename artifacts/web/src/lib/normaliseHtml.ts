@@ -16,6 +16,12 @@ function ensureRel(rest: string): string {
 export function normaliseHtml(html: string): string {
   if (!html) return '';
   return html
+    // Legacy HTML is not a consent-aware React tree: remove active embeds and scripts
+    // before insertion, even on server-rendered pages.
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '')
+    .replace(/<(iframe|object|embed)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '')
+    .replace(/<(iframe|object|embed)\b[^>]*\/?>/gi, '')
+    .replace(/<img\b[^>]*\bsrc\s*=\s*["'](?:https?:)?\/\/(?!www\.voiceoverguy\.co\.uk\/assets\/)[^"']*["'][^>]*>/gi, '')
     .replace(SITE_ASSET_RE, '/assets/')
     .replace(SINGLE_SLASH_PROTOCOL_RE, '<a href="$1//$2')
     .replace(ANCHOR_RE, (_match, href: string, rest: string) => {
