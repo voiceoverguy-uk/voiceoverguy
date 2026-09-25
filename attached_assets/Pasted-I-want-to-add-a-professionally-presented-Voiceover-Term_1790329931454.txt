@@ -1,0 +1,91 @@
+I want to add a professionally presented **Voiceover Terms & Conditions** page to voiceoverguy.co.uk. Please work in Plan first: inspect the existing site design, navigation, footer and FAQ; tell me where the page should sit; identify any wording elsewhere on the site that conflicts with these terms; and show me your proposed implementation before making changes.
+
+The page should feel like working with Guy Harris: experienced, straightforward, responsive and fair. Make it pleasant to read on desktop and mobile. Use a comfortable reading width, generous spacing, clear section headings and a short introductory summary. Keep the substantive terms visible and readable; do not hide the whole contract inside accordions or use tiny legal text. Include a contents list with anchor links if helpful. Match the existing site typography and colours. Add an accessible footer link labelled “Voiceover Terms & Conditions”, a sensible page title and meta description, and a visible “Last updated” date set to the actual publication date. Do not add FAQ schema merely because the page contains headings.
+
+Use the following draft as the page copy. You may suggest small clarity edits in the Plan, but do not quietly change the business positions, invent fees, or substitute generic legal boilerplate.
+
+# Voiceover Terms & Conditions
+
+**A clear brief, a great recording and fair terms for everyone.**
+
+I’m Guy Harris, the voice behind VoiceoverGuy. I aim to make booking a voiceover simple: agree what you need, deliver excellent audio promptly and help with the little changes that inevitably crop up. These terms explain how bookings and usage work, and how my recordings and voice may be used.
+
+These terms apply to business bookings of Guy Harris’s voiceover services supplied by VoiceoverGuy Limited. The written quote or booking confirmation for your project sets out its particular scope and price. If we expressly agree a different project term in writing, that agreed term takes priority for that project, **except that AI or synthetic voice rights require a separate, explicit written agreement signed by VoiceoverGuy Limited**.
+
+## 1. Agreeing the job
+
+Before quoting, I’ll normally need to know the script or approximate length, intended use, channels or media, territory, expected start date and how long the recording will be used. Please tell me if it is for paid advertising, broadcast, cinema, streaming, organic social content, a website, an app, a game, an event or another use. If an agency or production company is booking me, please identify the end client and campaign.
+
+A booking is agreed when we confirm its scope and fee in writing, including by email. The quote or booking confirmation and these terms form our agreement. If the intended use changes before or after recording, let me know so that we can agree any additional fee and licence in writing.
+
+## 2. Fees and usage licences
+
+My fee covers the recording services and the usage specifically agreed in the quote or booking confirmation. Usage depends on the agreed project, media or channels, territory and licence period. It does not automatically include worldwide use, all media, paid advertising, sublicensing or perpetual use.
+
+Radio usage is **normally licensed for 12 months**, unless our written quote or booking confirmation says otherwise. Other licence periods are agreed for the particular project. Perpetual usage is available only where we expressly agree it in writing and the fee reflects it.
+
+Please contact me before using a recording beyond the agreed period, territory, media, campaign or end client. We can usually arrange an extension. An edit, cut-down or new version does not extend the original licence or create rights for a different campaign unless we agree that in writing. Existing published material may need a practical takedown timetable; please discuss that with me before a licence expires.
+
+The agreed licence takes effect when the applicable invoice has been paid in full. Delivery of an audio file, participation in a directed session or payment for recording time does not transfer ownership of my voice or grant rights beyond the agreed usage.
+
+## 3. Recordings, delivery and changes
+
+I’ll record to the agreed brief and deliver in the agreed format. Please provide the final approved script, pronunciation guidance and any required technical specifications before recording.
+
+I’m happy to help with minor pickups, pronunciation fixes and small adjustments, and I will generally do those without an extra fee where they are reasonably part of the original brief. I try to turn them around quickly. If the script, direction or scope changes substantially, we’ll discuss a fair additional charge before I do the extra work. I may waive that charge, particularly for established clients; doing so on one project does not change the agreed scope of another.
+
+If I make a recording error against the approved script or agreed brief, I’ll correct it without charge. Please tell me promptly if something needs attention.
+
+## 4. Cancellations
+
+If you cancel before I have recorded the work, I do not normally charge a cancellation fee. If I have already recorded, edited or delivered some or all of the agreed work, I may invoice a fair amount for the work completed, up to the agreed project fee, whether or not the finished recording is ultimately used. Any separately agreed, unavoidable expenses may also be charged.
+
+## 5. Payment
+
+Unless the quote or invoice states otherwise, payment is due **30 calendar days from the invoice date**. For some new or particular bookings I may agree payment on delivery, within 7 days or within 14 days; that shorter term will be made clear before the booking is confirmed.
+
+If a business invoice becomes overdue, VoiceoverGuy Limited reserves its rights under the applicable late commercial payment rules. Please raise any genuine invoice query promptly so that we can sort it out sensibly.
+
+## 6. My voice and AI
+
+**No AI training. No voice cloning. No synthetic Guy Harris performances.**
+
+Your licence is for the agreed use of the real recording I supply. Without a separate, explicit written agreement signed by VoiceoverGuy Limited, you must not use my voice, performances, demos, auditions, live-session recordings, outtakes or delivered files to train, fine-tune, test or improve an AI or machine-learning system; create or enable a voice clone, synthetic voice, text-to-speech voice, voice conversion model or digital double; or generate a new performance that imitates me.
+
+You must not upload or supply those materials to a third-party service for any of those purposes, or authorise an agency, end client, editor, platform or other person to do so. Ordinary editing and mixing of the licensed recording for the agreed project is permitted, provided it does not create a synthetic performance or exceed the agreed usage.
+
+Please take reasonable care when storing and sharing the files, limit access to people working on the agreed project, and tell me promptly if you become aware of an unauthorised AI or synthetic voice use. A general reference to “all rights”, “new technologies” or “all media” in another document does **not** grant AI or synthetic voice rights under these terms.
+
+## 7. Working through an agency or producer
+
+If you book on behalf of someone else, you remain responsible for the booking and payment unless we agree otherwise in writing. Please make sure the end client and anyone receiving the files understands the agreed usage limits and the AI restrictions. You may share the recording with people who need it to produce and distribute the agreed project, but that does not grant them independent rights to reuse or license my voice.
+
+## 8. Scripts, approvals and confidentiality
+
+You are responsible for supplying a script and materials you are entitled to use, for checking factual or regulated claims, and for obtaining any approvals needed to publish the finished project. I will treat confidential scripts and unreleased campaign information with reasonable care. If you need a specific embargo, non-disclosure agreement or security process, please raise it before booking.
+
+I may ask permission to share finished work as a portfolio example once it is public. I will respect any agreed embargo or confidentiality restriction.
+
+## 9. Arabella Harris bookings
+
+Arabella’s voice may be booked through me, but her projects, permissions and usage must be agreed separately in writing. These Guy Harris terms do not, by themselves, grant any rights in Arabella’s voice or recordings. **No AI training, cloning or synthetic use of Arabella’s voice is permitted.**
+
+## 10. Problems and governing law
+
+If something is wrong, please contact me first. I want the chance to put it right promptly and fairly. Nothing in these terms removes rights or responsibilities that cannot lawfully be excluded. Our agreement is governed by the laws of England and Wales, and disputes are subject to the courts of England and Wales.
+
+**VoiceoverGuy Limited** · Company number **07297733** · Registered office: **Suite 2 Rosehill, 165 Lutterworth Road, Blaby, Leicestershire, LE8 4DY**.
+
+---
+
+Also prepare this short line for use in my future quotes and booking confirmations. Show me where I should paste it into my existing workflow; do not automatically add it to unrelated forms:
+
+“By confirming this booking, you agree to the project scope and usage stated above and to VoiceoverGuy Limited’s Voiceover Terms & Conditions at [insert the final live page URL]. No AI training, voice cloning or synthetic voice rights are granted.”
+
+In your Plan, please also:
+
+1. Check whether the site currently offers or describes **GuyAi** or any other AI version of my voice. Older indexed copies of the FAQ appear to mention it, although the current FAQ may have changed. Report the exact live pages and wording you find. Flag any contradiction for my decision; do not remove or rewrite an existing product offering without showing me the proposed change.
+2. Check whether any existing FAQ, rate, service or contact copy conflicts with the proposed licence periods, revisions or payment terms.
+3. Check the registered company details against what the site already displays and flag any discrepancy.
+4. Recommend any brief additions needed for the site to link clients to these terms at the point of booking. Do not make an enquiry form imply that merely sending a question commits someone to a paid booking.
+5. Once I approve the plan, build the page and check it on desktop and mobile, including its navigation, anchor links and footer link.
