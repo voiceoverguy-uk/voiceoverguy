@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import LiveSearch from './LiveSearch';
 import ServiceContactLink from './ServiceContactLink';
@@ -26,6 +26,20 @@ const links = [
   { label: 'Santa Script Generator', subtitle: 'Free festive message tool', href: '/santa-script-generator' },
 ];
 
+function getCurrentTab(pathname: string): string | null {
+  if (pathname === '/') return 'home';
+  if (pathname === '/voiceoverguy') return 'who';
+  if (pathname === '/voiceover-news') return 'news';
+  if (pathname === '/faq') return 'faq';
+  if (pathname === '/contact-guy') return 'contact';
+  if (voiceDemos.some(item => item.href === pathname)) return 'voice';
+  if (characterDemos.some(item => item.href === pathname)) return 'char';
+  if (links.some(item => !item.external && item.href === pathname)) return 'links';
+  return null;
+}
+
+type Indicator = { left: number; width: number; visible: boolean; sweep: number };
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openItem, setOpenItem] = useState<string | null>(null);
@@ -36,6 +50,71 @@ export default function Navbar() {
   const spacerRef = useRef<HTMLDivElement>(null);
   const isFixedRef = useRef(false);
   const pathname = usePathname();
+  const currentTab = getCurrentTab(pathname);
+  const hoveredItemRef = useRef<HTMLElement | null>(null);
+  const focusedItemRef = useRef<HTMLElement | null>(null);
+  const indicatorTargetRef = useRef<HTMLElement | null>(null);
+  const [indicator, setIndicator] = useState<Indicator | null>(null);
+
+  const moveIndicator = useCallback((item: HTMLElement | null) => {
+    const menu = menuRef.current;
+    if (!menu || !window.matchMedia('(min-width: 769px)').matches) return;
+    const link = item?.querySelector<HTMLElement>(':scope > .nav-link');
+    if (!link || !item?.isConnected || link.getClientRects().length === 0) {
+      indicatorTargetRef.current = null;
+      setIndicator(prev => prev && prev.visible ? { ...prev, visible: false } : prev);
+      return;
+    }
+
+    const menuRect = menu.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const left = linkRect.left - menuRect.left;
+    const width = linkRect.width;
+    const changed = indicatorTargetRef.current !== item;
+    indicatorTargetRef.current = item;
+    setIndicator(prev => {
+      if (prev?.visible && prev.left === left && prev.width === width && !changed) return prev;
+      return { left, width, visible: true, sweep: (prev?.sweep ?? 0) + (changed ? 1 : 0) };
+    });
+  }, []);
+
+  const activeItem = useCallback(() => (
+    menuRef.current?.querySelector<HTMLElement>('.nav-item[data-active="true"]') ?? null
+  ), []);
+
+  const preferredItem = useCallback(() => {
+    const focused = focusedItemRef.current;
+    const focusLink = focused?.querySelector<HTMLElement>(':scope > .nav-link');
+    return hoveredItemRef.current ??
+      (focusLink?.matches(':focus-visible') ? focused : null) ??
+      activeItem();
+  }, [activeItem]);
+
+  useLayoutEffect(() => {
+    hoveredItemRef.current = null;
+    focusedItemRef.current = null;
+    moveIndicator(activeItem());
+  }, [pathname, isFixed, activeItem, moveIndicator]);
+
+  useEffect(() => {
+    const menu = menuRef.current;
+    const nav = navRef.current;
+    if (!menu || !nav) return;
+    let mounted = true;
+    const measure = () => moveIndicator(preferredItem());
+    const observer = new ResizeObserver(measure);
+    observer.observe(menu);
+    menu.querySelectorAll(':scope > .nav-item > .nav-link').forEach(link => observer.observe(link));
+    window.addEventListener('resize', measure);
+    nav.addEventListener('transitionend', measure);
+    document.fonts.ready.then(() => { if (mounted) measure(); });
+    return () => {
+      mounted = false;
+      observer.disconnect();
+      window.removeEventListener('resize', measure);
+      nav.removeEventListener('transitionend', measure);
+    };
+  }, [moveIndicator, preferredItem]);
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
@@ -158,22 +237,50 @@ export default function Navbar() {
           </Link>
 
           {/* Nav items */}
-          <ul ref={menuRef} className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar" onClick={(e) => {
-            const target = e.target as HTMLElement;
-            if (target.closest('a')) closeMobile();
-          }}>
-            <li className="nav-item" role="none" data-sticky-hide="true">
-              <Link href="/" className="nav-link" role="menuitem"><img src="/assets/images/voiceover-guy-icon.webp" alt="VoiceoverGuy" className="nav-home-icon" /> Home</Link>
+          <ul ref={menuRef} className={`navbar-nav${mobileOpen ? ' open' : ''}`} role="menubar"
+            onPointerOver={(e) => {
+              if (!window.matchMedia('(min-width: 769px)').matches) return;
+              const item = (e.target as HTMLElement).closest<HTMLElement>('.nav-item');
+              if (item === hoveredItemRef.current) return;
+              hoveredItemRef.current = item;
+              moveIndicator(item ?? preferredItem());
+            }}
+            onPointerLeave={() => {
+              hoveredItemRef.current = null;
+              moveIndicator(preferredItem());
+            }}
+            onFocusCapture={(e) => {
+              if (!window.matchMedia('(min-width: 769px)').matches) return;
+              const item = (e.target as HTMLElement).closest<HTMLElement>('.nav-item');
+              if (item) {
+                focusedItemRef.current = item;
+                moveIndicator(item);
+              }
+            }}
+            onBlurCapture={(e) => {
+              if (!window.matchMedia('(min-width: 769px)').matches) return;
+              const nextItem = (e.relatedTarget as HTMLElement | null)?.closest<HTMLElement>('.nav-item') ?? null;
+              focusedItemRef.current = nextItem && menuRef.current?.contains(nextItem) ? nextItem : null;
+              moveIndicator(preferredItem());
+            }}
+            onClick={(e) => {
+              const target = e.target as HTMLElement;
+              if (target.closest('a')) closeMobile();
+            }}>
+            <li className="nav-item" role="none" data-nav-tab="home" data-active={currentTab === 'home' || undefined} data-sticky-hide="true">
+              <Link href="/" className="nav-link" role="menuitem" aria-current={currentTab === 'home' ? 'page' : undefined}><img src="/assets/images/voiceover-guy-icon.webp" alt="VoiceoverGuy" className="nav-home-icon" /> Home</Link>
             </li>
 
-            <li className="nav-item" role="none">
-              <Link href="/voiceoverguy" className="nav-link" role="menuitem"><span className="nav-icon">ℹ</span>&nbsp;Who&nbsp;</Link>
+            <li className="nav-item" role="none" data-nav-tab="who" data-active={currentTab === 'who' || undefined}>
+              <Link href="/voiceoverguy" className="nav-link" role="menuitem" aria-current={currentTab === 'who' ? 'page' : undefined}><span className="nav-icon">ℹ</span>&nbsp;Who&nbsp;</Link>
             </li>
 
             {/* Voice Demos */}
             <li
               className={`nav-item${openItem === 'voice' ? ' mobile-open' : ''}`}
               role="none"
+              data-nav-tab="voice"
+              data-active={currentTab === 'voice' || undefined}
             >
               <button
                 className="nav-link"
@@ -198,6 +305,8 @@ export default function Navbar() {
             <li
               className={`nav-item${openItem === 'char' ? ' mobile-open' : ''}`}
               role="none"
+              data-nav-tab="char"
+              data-active={currentTab === 'char' || undefined}
             >
               <button
                 className="nav-link"
@@ -229,6 +338,7 @@ export default function Navbar() {
             <li
               className={`nav-item${openItem === 'video' ? ' mobile-open' : ''}`}
               role="none"
+              data-nav-tab="video"
               data-sticky-hide="true"
             >
               <button
@@ -259,19 +369,21 @@ export default function Navbar() {
               </ul>
             </li>
 
-            <li className="nav-item" role="none">
-              <Link href="/voiceover-news" className="nav-link" role="menuitem"><span className="nav-icon">📰</span>&nbsp;<span className="label-full">News &amp; Blog</span><span className="label-short">News</span>&nbsp;</Link>
+            <li className="nav-item" role="none" data-nav-tab="news" data-active={currentTab === 'news' || undefined}>
+              <Link href="/voiceover-news" className="nav-link" role="menuitem" aria-current={currentTab === 'news' ? 'page' : undefined}><span className="nav-icon">📰</span>&nbsp;<span className="label-full">News &amp; Blog</span><span className="label-short">News</span>&nbsp;</Link>
             </li>
 
             {/* FAQ's — hidden in desktop sticky mode */}
-            <li className="nav-item" role="none" data-sticky-hide="true">
-              <Link href="/faq" className="nav-link" role="menuitem"><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
+            <li className="nav-item" role="none" data-nav-tab="faq" data-active={currentTab === 'faq' || undefined} data-sticky-hide="true">
+              <Link href="/faq" className="nav-link" role="menuitem" aria-current={currentTab === 'faq' ? 'page' : undefined}><span className="nav-icon">❓</span>&nbsp;FAQ&apos;s&nbsp;</Link>
             </li>
 
             {/* Links */}
             <li
               className={`nav-item${openItem === 'links' ? ' mobile-open' : ''}`}
               role="none"
+              data-nav-tab="links"
+              data-active={currentTab === 'links' || undefined}
             >
               <button
                 className="nav-link"
@@ -310,9 +422,19 @@ export default function Navbar() {
             </li>
 
             {/* Contact */}
-            <li className="nav-item" role="none">
+            <li className="nav-item" role="none" data-nav-tab="contact" data-active={currentTab === 'contact' || undefined}>
               <ServiceContactLink className="nav-link nav-link--contact" role="menuitem" onClick={handleContactClick}><span className="nav-icon">📞</span>&nbsp;Contact&nbsp;</ServiceContactLink>
             </li>
+            {indicator && (
+              <li
+                className={`nav-slide-indicator${indicator.visible ? ' nav-slide-indicator--visible' : ''}`}
+                role="none"
+                aria-hidden="true"
+                style={{ width: indicator.width, transform: `translate3d(${indicator.left}px, 0, 0)` }}
+              >
+                {indicator.visible && <span key={indicator.sweep} className="nav-slide-indicator-glint" />}
+              </li>
+            )}
           </ul>
         </div>
 
