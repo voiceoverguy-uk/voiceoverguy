@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
 
           <section id="providers" className={styles.section}>
             <h2>Who helps process it?</h2>
-            <p>The website uses <strong>Vercel</strong> for hosting and <strong>Resend</strong> to deliver form enquiries to the business inbox. I use Apple Mail to manage email and <strong>Dropbox</strong> to store audio files. Apple Mail is the email application, rather than the name of the mailbox hosting service. Email and file-storage providers process information held in those services. <strong>QuickBooks</strong> is used for invoicing and accounting.</p>
+            <p>The website uses <strong>Vercel</strong> for hosting and <strong>Resend</strong> to deliver form enquiries to the business inbox. My mailbox is hosted by <strong>Heart Internet</strong>, and I read and manage email in Apple Mail. I use <strong>Dropbox</strong> to store audio files and <strong>QuickBooks</strong> for invoicing and accounting.</p>
             <p>The contact page offers <strong>PayPal</strong> for payments. I keep its payment software switched off until you choose to allow PayPal. Once loaded, PayPal receives technical information about your visit and handles payment information under its own privacy information.</p>
             <p>These services process information as part of providing their hosting, delivery, storage, accounting or payment services.</p>
           </section>
@@ -102,18 +102,18 @@ export default function PrivacyPolicyPage() {
           <section id="marketing" className={styles.section}>
             <h2>Keeping in touch</h2>
             <p>I do not use enquiry or booking details for newsletters or advertising audiences. Replies about an enquiry, quote or current booking are part of dealing with your request.</p>
-            <p>I rarely contact previous clients about further voiceover work, and write personally rather than using a bulk-mailing service. Where a message promotes my services, it is marketing, even if it is a personal email. To opt out, reply to the message or use my <a href="/contact-guy">contact page</a> and ask me not to send marketing messages. You do not need to give a reason.</p>
+            <p>I do not run promotional email campaigns to former clients. I may occasionally send an individual email to check in and let an old client know I’m still voicing. Where that message promotes my services, it counts as marketing, even though it is personal. To opt out of these messages, reply to the email or use my <a href="/contact-guy">contact page</a> and ask me not to send them. You do not need to give a reason.</p>
             <p>For relevant contacts at limited companies and other corporate subscribers, legitimate interests may be appropriate, subject to their privacy rights and right to object. Marketing emails to individuals, sole traders and some partnerships require consent unless an applicable legal exception is available. A previous booking alone does not establish permission.</p>
           </section>
 
           <section id="retention" className={styles.section}>
             <h2>How long information is kept</h2>
-            <p>I do not currently have a fixed deletion schedule for enquiries, scripts or recordings. Clear-outs have been prompted by storage space, rather than a set period, so I cannot promise that messages are deleted after a particular number of months.</p>
+            <p>I do not have a fixed deletion schedule for old emails, scripts or recordings. I review or clear them when storage fills up, rather than after a set period, so I cannot promise that messages are deleted after a particular number of months.</p>
             <p>How long personal information needs to be kept depends on whether an enquiry is still active, whether it is needed to deliver agreed work or revisions, and whether it is needed to document usage rights, meet a legal obligation or resolve a query or dispute. Storage space alone is not a reason to keep personal information indefinitely.</p>
             <p>I retain <strong>past recordings</strong> so that a client returning years later can request another copy without paying for a re-record. Recordings are licensed for the agreed project and usage under the booking terms; payment does not itself transfer ownership. Retaining a recording does not extend the client’s agreed licence.</p>
             <p>Where enquiries, scripts or recordings contain personal information, ownership and licensing do not remove data-protection obligations. Personal information should not be kept longer than necessary for its purpose. You can contact me to ask about information held in connection with your project or to request its deletion; the rights below apply.</p>
             <p><strong>Invoices and accounting records</strong> are kept for the applicable legal period: generally six years from the end of the last company financial year they relate to, and longer where required. That does not automatically apply to every script, recording or enquiry.</p>
-            <p>Copies in archives, backups and providers’ systems need to be considered separately; deleting an inbox message does not necessarily remove every copy.</p>
+            <p>Copies in archives, backups and providers’ systems need to be considered separately; deleting an inbox message does not necessarily remove every copy. I have not confirmed when all backup copies expire.</p>
           </section>
 
           <section id="overseas" className={styles.section}>

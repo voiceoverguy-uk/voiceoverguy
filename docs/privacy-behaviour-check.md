@@ -28,7 +28,13 @@ Known limits: third-party YouTube cookies set after permission remain on YouTube
 - Vercel/Resend use is evidenced in code/config; Apple Mail, Dropbox and QuickBooks are recorded owner confirmations. Apple Mail does not identify the mailbox host. Generator code uses an OpenAI API integration; production account terms, relay hosting and AI retention settings still need account-level confirmation.
 - ICO guidance supports informed affirmative consent and distinguishing corporate subscribers from individuals/sole traders for electronic marketing.
 
-## Facts still requiring owner confirmation
+## Owner clarification after the check
+
+The owner confirmed there is no fixed 18-month rule: older email, scripts and recordings are reviewed or cleared when storage fills up; backup expiry is unknown. Heart Internet hosts the mailbox read through Apple Mail. There are no promotional email campaigns to older clients, but occasional individual check-ins mention continued availability for voiceover work; these can still constitute direct marketing. Provider storage locations, backup/deletion settings and AI retention/training arrangements beyond the public evidence above remain unconfirmed. Do not present them as verified.
+
+The policy now reflects these clarifications. The earlier questions below are retained as the audit trail; the fixed-period and mailbox-host questions have been answered. Recipient categories, permission evidence, opt-out recording, third-party access and account-specific arrangements remain unresolved.
+
+## Questions raised during the check
 
 1. Does any actual inbox review/deletion practice support an approximate 18 months, or is clearing driven only by storage? What event should trigger reviewing old enquiries/scripts/recordings, and what copies/backups exist?
 2. Are former-client marketing recipients only limited companies, or also individuals/sole traders/partnerships? For individual subscribers, what consent or qualifying soft-opt-in evidence exists? How are do-not-contact requests recorded and checked?
