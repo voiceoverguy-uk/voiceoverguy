@@ -102,6 +102,28 @@ You can also complain to the [Information Commissioner’s Office](https://ico.o
 
 Confirmed: company controller, Guy as privacy contact, public email, QuickBooks, approximate 18-month inbox practice, no newsletters/advertising audiences, occasional former-client approaches.
 
+### Owner clarification — 25 September 2026
+
+- Uses Apple Mail for email. This identifies the mail application, not necessarily the mailbox hosting provider; hosting remains unconfirmed.
+- Uses Dropbox for audio files. Other local/cloud copies, backup arrangements and advisers receiving client information remain unconfirmed.
+- Clears material when the hard drive or mail client fills up. A purpose-based review/deletion process has not been confirmed. The visitor-facing wording “I consider…” must not be treated as evidence that such reviews already happen.
+- Retains old recordings to provide another copy when a client returns years later, avoiding a paid re-record. The owner describes bookings as licences for agreed projects and terms, not transfers of ownership. This records the owner's position, not a legal determination of copyright ownership in every recording, script or a voice itself.
+- Rarely sends personal former-client messages and does not use a bulk-mail service. Reports no requests to stop. Recipient legal types, permission/collection arrangements and a method for recording future objections remain unconfirmed; absence of objections does not establish a suppression process.
+
+### Preliminary assessment — proposals, not adopted procedures
+
+Retaining selected finished recordings for replacement delivery is a specific potential legitimate interest shared by the business and returning clients. Necessity and balancing still need assessment: which files are needed, whether scripts or incidental personal details can be removed, clients' expectations, sensitivity, access controls and a workable review trigger. Ownership/licensing does not exempt personal information from data-protection requirements. Storage capacity alone does not establish that retention remains necessary. No fixed deletion schedule is proposed or approved.
+
+For corporate former-client contacts, occasional relevant approaches may support legitimate interests, subject to purpose, necessity and balancing and an effective right to object. Personalised or low-volume emails remain direct marketing when they promote services. Individuals, sole traders and some partnerships need separate electronic-marketing permission checks; a previous booking alone is not sufficient. A minimal do-not-market record is proposed, not confirmed as existing. Accounting duties remain separate from general enquiry and creative-file retention.
+
+Public-page corrections require the owner's approval after the remaining facts and practical safeguards are settled. No website changes or publication are authorised by these answers.
+
+### Review status
+
+The owner declined the remaining clarification form on 25 September 2026, then explicitly requested continuing implementation in the actual page rather than leaving the changes in draft. This authorises incorporating confirmed facts and correcting unsupported process claims, not inventing answers to the declined questions or publishing. The page now reflects Dropbox, personal rather than bulk approaches, storage-capacity clear-outs and retaining recordings for returning clients. It does not claim an adopted review schedule or objection-recording system. The earlier policy text in this document is historical, not a second current policy.
+
+Mailbox hosting, adviser access, other copies/backup expiry, workable purpose-based review criteria, recipient types and objection recording remain unresolved. The preliminary legitimate-interests assessment above is conditional, not a completed assessment or compliance certification. These operational checks are deferred at the owner's request to proceed with implementation; do not block the confirmed copy corrections or repeatedly ask the declined questions. Nothing has been published.
+
 Awaiting owner confirmation:
 1. Approve or adjust the proposed retention criteria. No fixed deletion schedule for enquiries, scripts, recordings or backups has been adopted. Decide a workable review/deletion process and backup criteria; do not imply automatic deletion or apply accounting periods to all material.
 2. Identify actual mailbox/file-storage providers and any advisers receiving client data.
