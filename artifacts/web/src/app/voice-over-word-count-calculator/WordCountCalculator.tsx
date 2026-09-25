@@ -29,7 +29,7 @@ const DEMO_SCRIPTS = [
     pace: 'Measured / Slow',
     wpm: 120,
     words: 60,
-    duration: '30 seconds',
+    duration: 'approx. 30 seconds',
     text: "When you need to deliver a message with real impact, taking your time is the most powerful tool you have. A slower pace allows every single word to breathe. It gives your audience the space they need to absorb the information, building a sense of trust and authority. This measured approach ensures your voiceover feels confident, reassuring, and undeniably professional.",
     audio: "/assets/audio/voiceover-pace-measured-120wpm.mp3"
   },
@@ -37,7 +37,7 @@ const DEMO_SCRIPTS = [
     pace: 'Natural / Conversational',
     wpm: 150,
     words: 75,
-    duration: '30 seconds',
+    duration: 'approx. 30 seconds',
     text: "If you are looking for a voiceover that just sounds like a genuine conversation, this natural pacing hits the sweet spot every time. It is exactly the right speed for explainer videos, corporate presentations, and engaging brand stories. You want your listeners to feel like they are being spoken to by a friend, rather than being lectured at. This conversational rhythm keeps things moving forward nicely while remaining completely clear, approachable, and easy to understand.",
     audio: "/assets/audio/voiceover-pace-natural-150wpm.mp3"
   },
@@ -45,7 +45,7 @@ const DEMO_SCRIPTS = [
     pace: 'Fast / Energetic Commercial',
     wpm: 175,
     words: 87,
-    duration: '30 seconds',
+    duration: 'approx. 30 seconds',
     text: "When you need to grab attention instantly, a fast and energetic commercial read is exactly what you are looking for! This high impact pacing is perfect for retail promotions, radio adverts, and hard hitting social media campaigns where every second counts. You have a massive amount of information to squeeze into a tiny window, and you need it delivered with absolute confidence, clarity, and enthusiasm. Do not let your audience look away for a moment. Keep the energy soaring right through to the final call to action!",
     audio: "/assets/audio/voiceover-pace-fast-175wpm.mp3"
   }
@@ -77,6 +77,8 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
   const [selectedWpm, setSelectedWpm] = useState(150);
   const [copied, setCopied] = useState(false);
   const [copiedDemo, setCopiedDemo] = useState<string | null>(null);
+  const [activeDemo, setActiveDemo] = useState<string | null>(null);
+  const [failedDemos, setFailedDemos] = useState<string[]>([]);
 
   const [targetSeconds, setTargetSeconds] = useState<number | ''>('');
   const [customTargetInput, setCustomTargetInput] = useState('');
@@ -158,6 +160,16 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
     setCopiedDemo(pace);
     setTimeout(() => setCopiedDemo(null), 2000);
   }, [copyText]);
+
+  const handlePlayDemo = useCallback((pace: string) => {
+    setFailedDemos(current => current.filter(item => item !== pace));
+    setActiveDemo(pace);
+  }, []);
+
+  const handleDemoError = useCallback((pace: string) => {
+    setFailedDemos(current => current.includes(pace) ? current : [...current, pace]);
+    setActiveDemo(current => current === pace ? null : current);
+  }, []);
 
   const targetWords = targetSeconds ? Math.round((targetSeconds as number) * (selectedWpm / 60)) : 0;
   const tolerance = targetWords ? Math.max(1, Math.round(targetWords * 0.05)) : 0;
@@ -343,16 +355,34 @@ export default function WordCountCalculator({ onWordCountChange }: Props) {
                 <span className="calc-demo-meta">{demo.words} words • {demo.duration}</span>
               </div>
 
-              {/* TODO: Replace with <audio controls preload="none" src={demo.audio} style={{ width: '100%', marginBottom: '16px', height: '40px' }} /> once Guy uploads the file */}
-              <div className="calc-audio-placeholder" aria-label={`Audio recording pending for ${demo.pace}`}>
-                <div className="calc-audio-placeholder-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
-                </div>
-                <div className="calc-audio-placeholder-text">
-                  <span className="calc-audio-placeholder-status">Recording pending...</span>
-                  <span className="calc-audio-placeholder-path">{demo.audio}</span>
-                </div>
-              </div>
+              {activeDemo === demo.pace ? (
+                <audio
+                  className="calc-demo-audio"
+                  controls
+                  autoPlay
+                  preload="none"
+                  src={demo.audio}
+                  onError={() => handleDemoError(demo.pace)}
+                  aria-label={`${demo.pace}, ${demo.wpm} words per minute, ${demo.duration}, ${demo.words} words`}
+                >
+                  Your browser does not support audio playback.
+                </audio>
+              ) : (
+                <button
+                  type="button"
+                  className={`calc-audio-trigger${failedDemos.includes(demo.pace) ? ' calc-audio-trigger--failed' : ''}`}
+                  onClick={() => handlePlayDemo(demo.pace)}
+                  aria-label={`Listen to Guy's ${demo.pace} demonstration`}
+                >
+                  <span className="calc-audio-trigger-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+                  </span>
+                  <span>
+                    <strong>{failedDemos.includes(demo.pace) ? 'Audio currently unavailable' : 'Listen to this pace'}</strong>
+                    <small>{failedDemos.includes(demo.pace) ? 'Select to try loading the recording again' : 'The recording loads only when selected'}</small>
+                  </span>
+                </button>
+              )}
 
               <div className="calc-demo-script-box">
                 <p className="calc-demo-script-text">"{demo.text}"</p>
