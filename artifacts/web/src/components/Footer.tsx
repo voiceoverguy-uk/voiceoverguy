@@ -45,7 +45,7 @@ export default function Footer() {
           {' · '}
           <Link href="/privacy-policy">Privacy Policy</Link>
           {' · '}
-          <Link href="/voiceover-terms-and-conditions">Voiceover Terms &amp; Conditions</Link>
+          <Link href="/voiceover-terms-and-conditions">Terms and Conditions</Link>
           {' · '}
           <ServiceContactLink>Contact Guy</ServiceContactLink>
           {' · '}
