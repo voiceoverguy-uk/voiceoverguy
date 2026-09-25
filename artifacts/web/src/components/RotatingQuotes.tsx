@@ -47,7 +47,7 @@ export default function RotatingQuotes() {
   return (
     <section className="rotating-quotes-section" aria-label="Why a real voice matters">
       <div className="rotating-quotes-inner">
-        <p className="rotating-quotes-label">The difference a real voice makes</p>
+        <p className="rotating-quotes-label">The difference a human voice makes</p>
         <div className="rotating-quotes-stage">
           <span className="rotating-quotes-deco rotating-quotes-deco--open" aria-hidden="true">&ldquo;</span>
           <blockquote
