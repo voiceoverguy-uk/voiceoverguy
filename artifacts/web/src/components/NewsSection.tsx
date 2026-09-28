@@ -7,6 +7,14 @@ import type { NewsItem, Segment } from '@/data/news';
 
 const INITIAL_COUNT = 6;
 
+const icelandNewsItem: NewsItem = {
+  segments: [
+    { type: 'text', text: 'Event season is well under way. If you are looking for a ' },
+    { type: 'link', text: 'trusted voice', href: '/voice-of-god', external: false },
+    { type: 'text', text: ' then get in touch. Guy just voiced an event for Iceland. Another great brand.' },
+  ],
+};
+
 const generatorNewsItem: NewsItem = {
   segments: [
     { type: 'text', text: 'Need a script?', emphasis: true },
@@ -81,7 +89,7 @@ function renderSegment(segment: Segment, index: number) {
 
 export default function NewsSection() {
   const [expanded, setExpanded] = useState(false);
-  const homepageNewsItems = [generatorNewsItem, mustardNewsItem, latestNewsItem, upcomingNewsItem, ...newsItems];
+  const homepageNewsItems = [icelandNewsItem, generatorNewsItem, mustardNewsItem, latestNewsItem, upcomingNewsItem, ...newsItems];
   const remaining = homepageNewsItems.length - INITIAL_COUNT;
 
   const now = new Date();
