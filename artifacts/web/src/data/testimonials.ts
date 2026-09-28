@@ -14,6 +14,12 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
+    quote: "I have worked with Guy on numerous projects, and he consistently exceeds expectations. His professionalism, reliability, and commitment to delivering high-quality voiceovers make him an invaluable partner.\n\nI would not hesitate to recommend Guy to anyone looking for a voiceover professional who combines outstanding quality, flexibility, and exceptional customer service",
+    name: "Rebecca Sharpe",
+    role: "",
+    company: "Quadrant Events",
+  },
+  {
     quote: "Guy is on my Christmas list every year, and the festive season wouldn't be the same without him. His Santa is not just a seasonal audio treat, it's a Christmas miracle. Plus he's the nicest person to deal with, and never, ever naughty.",
     name: "Jay Espindola",
     role: "Producer",
