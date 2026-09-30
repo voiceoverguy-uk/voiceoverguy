@@ -1,0 +1,123 @@
+Please audit the existing VideoObject structured data across the VoiceoverGuy website in light of Google's current Video structured data documentation.
+
+IMPORTANT: This is an AUDIT / PLAN first. Do not make any code changes yet.
+
+The site is:
+https://www.voiceoverguy.co.uk/
+
+Google's current Video structured data documentation:
+https://developers.google.com/search/docs/appearance/structured-data/video
+
+Please inspect the existing codebase and identify every place where VideoObject structured data is generated or used, including shared components/templates and individual pages.
+
+I particularly want you to check the implementation following Google's September 2026 documentation updates concerning creator/author and interactionStatistic.
+
+For every VideoObject implementation, please audit:
+
+1. `name`
+2. `description`
+3. `thumbnailUrl`
+4. `uploadDate`
+5. `contentUrl` and/or `embedUrl`
+6. `duration`, where available
+7. `creator`
+8. `author`, if currently used
+9. `interactionStatistic`, if currently used
+10. Any other VideoObject properties currently generated
+
+CREATOR / ENTITY CHECK
+
+Please determine whether it would now be appropriate to add or improve the `creator` property.
+
+Where Guy Harris is genuinely the creator/performer of the video content, consider whether the VideoObject should reference the existing Guy Harris Person entity.
+
+Where VoiceoverGuy Ltd is the more appropriate creator/publisher, consider whether it should reference the existing VoiceoverGuy organisation/business entity.
+
+Do NOT create duplicate Person, Organization or LocalBusiness entities if equivalent entities already exist elsewhere in the site's JSON-LD.
+
+Where possible, recommend linking entities consistently using stable `@id` references rather than creating disconnected duplicate entities.
+
+Please explain whether Person, Organization/LocalBusiness, or another approach is most appropriate for this site's actual videos.
+
+UPLOAD DATE
+
+Check that every `uploadDate`:
+- represents the genuine publication/upload date where known;
+- is formatted correctly;
+- includes appropriate timezone information where required/recommended;
+- is not being invented or automatically set to the current date on each build.
+
+THUMBNAILS AND VIDEO URLs
+
+Check that:
+- thumbnail URLs are absolute and crawlable;
+- thumbnails accurately represent the video;
+- Google can access the relevant video/embed URLs;
+- contentUrl/embedUrl are being used appropriately;
+- there aren't conflicting or duplicate VideoObject definitions for the same video.
+
+INTERACTION STATISTICS
+
+If `interactionStatistic` is currently used, compare the implementation with Google's CURRENT supported interaction types.
+
+Do not invent view counts or engagement figures simply to populate this property.
+
+If we don't have reliable interaction data, tell me whether it is better to omit the property.
+
+VISIBLE CONTENT
+
+Confirm that each VideoObject actually corresponds to a video visibly present on the relevant page.
+
+Do not recommend adding VideoObject markup to pages merely because they link to a video elsewhere.
+
+SEO / VALIDATION
+
+Please also check for:
+- duplicate VideoObject entities;
+- conflicting JSON-LD;
+- malformed properties;
+- missing required/recommended Google properties;
+- schema.org-valid markup that nevertheless does not comply with Google's richer-result guidance;
+- incorrect @type or @id relationships;
+- whether VideoObject is properly connected to the existing WebPage, Person, Organization/LocalBusiness or other relevant entities.
+
+IMPORTANT:
+
+Do NOT alter:
+- LocalBusiness schema
+- AudioObject schema
+- FAQPage schema
+- aggregateRating/review schema
+- unrelated metadata
+- canonical tags
+- analytics
+- redirects
+- sitemap configuration
+- unrelated SEO code
+
+unless you discover a genuine conflict involving VideoObject. If you do, report it rather than changing it.
+
+Do not add properties simply because Schema.org supports them. The objective is accurate, useful structured data consistent with Google's current guidance.
+
+At the end, give me a concise report containing:
+
+1. Where VideoObject is currently implemented.
+2. Whether the existing implementation is valid.
+3. Any errors that genuinely need fixing.
+4. Any recommended improvements.
+5. Whether `creator` should be added and exactly how you recommend representing it.
+6. Whether `author` should be used as well or whether that would be unnecessary duplication.
+7. Whether `interactionStatistic` should be changed, retained or omitted.
+8. Any problems with `uploadDate`, thumbnailUrl, contentUrl or embedUrl.
+9. The exact files/components that would need changing.
+10. A proposed implementation plan.
+
+Please classify findings as:
+- REQUIRED FIX
+- RECOMMENDED IMPROVEMENT
+- OPTIONAL
+- NO CHANGE NEEDED
+
+Do not implement anything yet.
+
+Stop after presenting the audit and implementation plan and wait for my approval.
