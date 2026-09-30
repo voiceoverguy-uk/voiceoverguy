@@ -1,10 +1,6 @@
-const SITE = 'https://www.voiceoverguy.co.uk';
+import { verifiedYouTubeVideo } from './verifiedYouTubeVideos';
 
-function toIsoDateTime(dateStr: string): string {
-  const d = new Date(dateStr);
-  if (isNaN(d.getTime())) return dateStr;
-  return d.toISOString().replace(/\.\d{3}Z$/, '+00:00');
-}
+const SITE = 'https://www.voiceoverguy.co.uk';
 
 export const GUY_PERSON_REF = { '@id': `${SITE}/#guyharris` };
 
@@ -155,23 +151,28 @@ export function audioObject(slug: string, name: string, description: string, pat
 }
 
 export function videoObject(slug: string, name: string, description: string, youtubeId: string, uploadDate: string, suffix = '') {
+  // Historical page-supplied dates are not evidence of video publication.
+  // Keep the argument for the existing callers, but never emit it.
+  void uploadDate;
+  const verified = verifiedYouTubeVideo(youtubeId);
+  if (!verified) return null;
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
     '@id': `${SITE}/${slug}#video${suffix}`,
     name,
     description,
-    thumbnailUrl: `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`,
+    thumbnailUrl: verified.thumbnailUrl,
     embedUrl: `https://www.youtube.com/embed/${youtubeId}`,
     url: `https://www.youtube.com/watch?v=${youtubeId}`,
-    uploadDate: toIsoDateTime(uploadDate),
+    uploadDate: verified.uploadDate,
   };
 }
 
-export function SchemaScripts({ schemas }: { schemas: Record<string, unknown>[] }) {
+export function SchemaScripts({ schemas }: { schemas: (Record<string, unknown> | null)[] }) {
   return (
     <>
-      {schemas.map((schema, i) => (
+      {schemas.map((schema, i) => schema && (
         <script
           key={i}
           type="application/ld+json"

@@ -1,5 +1,6 @@
 import type { BlogPost } from '@/data/blog-posts';
 import { getCleanSlug } from '@/lib/slug';
+import { verifiedYouTubeVideo } from '@/lib/verifiedYouTubeVideos';
 
 const SITE_URL = 'https://www.voiceoverguy.co.uk';
 const SITE_NAME = 'VoiceoverGuy';
@@ -142,12 +143,11 @@ export function buildVideoSchema(post: BlogPost): Record<string, unknown> | null
 
   const canonical = getCanonical(post.url);
   const description = getDescription(post);
-  const isoDate = toIsoDate(post.date);
-  const uploadDate = isoDate || '2023-01-01T00:00:00+00:00';
-
   if (wv === '1') {
     const ytId = video.replace(/\/.*$/, '').trim();
     if (!isValidVideoId(ytId)) return null;
+    const verified = verifiedYouTubeVideo(ytId);
+    if (!verified) return null;
     const start = typeof post.videoStart === 'number' && post.videoStart > 0
       ? `?start=${Math.floor(post.videoStart)}`
       : '';
@@ -156,32 +156,18 @@ export function buildVideoSchema(post: BlogPost): Record<string, unknown> | null
       '@type': 'VideoObject',
       '@id': `${canonical}#video`,
       name: post.pageTitle,
-      thumbnailUrl: `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`,
+      thumbnailUrl: verified.thumbnailUrl,
       embedUrl: `https://www.youtube.com/embed/${ytId}${start}`,
-      author: AUTHOR,
-      publisher: PUBLISHER,
       inLanguage: 'en-GB',
-      uploadDate,
+      uploadDate: verified.uploadDate,
     };
     if (description) schema.description = description;
     return schema;
   }
 
   if (wv === '2') {
-    if (!isValidVideoId(video)) return null;
-    const schema: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': 'VideoObject',
-      '@id': `${canonical}#video`,
-      name: post.pageTitle,
-      embedUrl: `https://player.vimeo.com/video/${video}`,
-      author: AUTHOR,
-      publisher: PUBLISHER,
-      inLanguage: 'en-GB',
-      uploadDate,
-    };
-    if (description) schema.description = description;
-    return schema;
+    // No verified Vimeo publication date and thumbnail are available here.
+    return null;
   }
 
   return null;
@@ -220,8 +206,6 @@ function extractFirstHeading(html: string | undefined): string | null {
 
 export function buildExtraVideoSchemas(post: BlogPost): Record<string, unknown>[] {
   const canonical = getCanonical(post.url);
-  const isoDate = toIsoDate(post.date);
-  const uploadDate = isoDate || '2023-01-01T00:00:00+00:00';
   const description = getDescription(post);
 
   const sections: Array<{ id: string | undefined; text: string | undefined }> = [
@@ -234,18 +218,18 @@ export function buildExtraVideoSchemas(post: BlogPost): Record<string, unknown>[
   sections.forEach((sec, i) => {
     const ytId = (sec.id || '').trim();
     if (!isValidVideoId(ytId)) return;
+    const verified = verifiedYouTubeVideo(ytId);
+    if (!verified) return;
     const name = extractFirstHeading(sec.text) || `${post.pageTitle} - clip ${i + 2}`;
     const schema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
       '@id': `${canonical}#video-${i + 2}`,
       name,
-      thumbnailUrl: `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`,
+      thumbnailUrl: verified.thumbnailUrl,
       embedUrl: `https://www.youtube.com/embed/${ytId}`,
-      author: AUTHOR,
-      publisher: PUBLISHER,
       inLanguage: 'en-GB',
-      uploadDate,
+      uploadDate: verified.uploadDate,
     };
     if (description) schema.description = description;
     out.push(schema);

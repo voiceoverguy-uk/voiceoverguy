@@ -514,12 +514,14 @@ export default function Home() {
               },
               {
                 '@type': 'VideoObject',
-                name: 'VoiceoverGuy Commercial Showreel',
-                description: 'Guy Harris commercial voiceover showreel. British male voiceover artist heard on TV, radio and online worldwide.',
+                '@id': 'https://www.voiceoverguy.co.uk/#video-what-i-do',
+                name: 'This is what I do...',
+                description: 'Guy Harris – This is what I do – Voiceover Artist.',
                 thumbnailUrl: 'https://img.youtube.com/vi/TqkdBK8mBW8/hqdefault.jpg',
-                contentUrl: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
                 embedUrl: 'https://www.youtube.com/embed/TqkdBK8mBW8',
-                uploadDate: '2024-01-15T00:00:00+00:00',
+                url: 'https://www.youtube.com/watch?v=TqkdBK8mBW8',
+                uploadDate: '2015-10-21T10:40:08-07:00',
+                creator: { '@id': 'https://www.voiceoverguy.co.uk/#organization' },
               },
               ...testimonials.map((t, i) => ({
                 '@type': 'Review',
