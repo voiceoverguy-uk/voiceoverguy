@@ -7,6 +7,12 @@ import { SchemaScripts, profilePage, webPage, GUY_PERSON_REF, breadcrumb, servic
 
 const data = (pages as Record<string, Record<string, string>>)['seo7'];
 
+const liveEventProof = `
+<h2>Live awards announcing</h2>
+<p>Hal Cruttenden hosted The Print Industry Awards 2026 at The National Conference Centre, Birmingham, at the National Motorcycle Museum, Birmingham. Guy Harris provided the live, in-room Voice of God announcements.</p>
+<p>I’m happy to travel to venues and work alongside production and event teams, taking cues, reading categories and nominees, and handling last-minute script changes.</p>
+`;
+
 export const metadata: Metadata = {
   alternates: {
     canonical: `https://www.voiceoverguy.co.uk/voice-of-god`,
@@ -54,7 +60,7 @@ export default function Page() {
       <div className="inner-bar" />
 
       <InnerPage pageTitle={data.s1} pageSlug="voice-of-god" formIntro="Need an epic Voice of God read? Send me a quick message and I'll get back to you." afterMessageNode={<PreferredSourceButton />} sections={[
-        ...(data.s4 ? [{ text: data.s4, audioSrc: '/assets/audio/voice-of-god-demo-showreel-guy-harris.mp3' }] : []),
+        ...(data.s4 ? [{ text: data.s4 + liveEventProof, audioSrc: '/assets/audio/voice-of-god-demo-showreel-guy-harris.mp3' }] : []),
         ...(data.s7 ? [{ youtubeId: data.s7 }] : []),
         ...(data.s5 ? [{ text: data.s5 }] : []),
         ...(data.s8 ? [{ youtubeId: data.s8 }] : []),

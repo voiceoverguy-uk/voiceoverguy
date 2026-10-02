@@ -32,8 +32,20 @@ function load(path, extra = '') {
   vm.runInNewContext(code, { exports, require }, { filename: path });
   return exports;
 }
-const { schemas, metadata } = JSON.parse(JSON.stringify(load('src/app/voice-of-god/page.tsx', '\nexport { schemas };')));
+const { schemas, metadata, liveEventProof } = JSON.parse(JSON.stringify(load('src/app/voice-of-god/page.tsx', '\nexport { schemas, liveEventProof };')));
 const byType = (type) => schemas.filter((s) => s['@type'] === type);
+
+test('concise live-event proof follows existing examples in the same section before the unchanged demo', () => {
+  const page = read('src/app/voice-of-god/page.tsx');
+  assert.ok(page.includes(`text: data.s4 + liveEventProof, audioSrc: '${demo}'`));
+  assert.ok(liveEventProof.includes('<h2>Live awards announcing</h2>'));
+  assert.ok(liveEventProof.includes('Hal Cruttenden hosted The Print Industry Awards 2026 at The National Conference Centre, Birmingham, at the National Motorcycle Museum, Birmingham.'));
+  assert.ok(liveEventProof.includes('Guy Harris provided the live, in-room Voice of God announcements.'));
+  assert.ok(liveEventProof.includes('I’m happy to travel to venues and work alongside production and event teams, taking cues, reading categories and nominees, and handling last-minute script changes.'));
+  assert.equal((liveEventProof.match(/<p>/g) || []).length, 2);
+  assert.doesNotMatch(liveEventProof, /<img|<video|<iframe|<a\b/);
+  assert.equal(byType('Event').length, 0);
+});
 
 test('homepage changes only the opening sentence within the retained splash', () => {
   const splash = read('src/app/page.tsx').split('{/* CLUSTER B2: AWARDS */}')[1].split('{/* CLUSTER C: CHILD VOICEOVER */}')[0];
@@ -109,6 +121,15 @@ if (process.env.VOG_RENDERED_DIR) {
     assert.ok(html.includes(`<link rel="canonical" href="${site}/voice-of-god"`));
     assert.ok(html.includes('<title>Voice of God – Live Event &amp; Awards Voiceover | VoiceoverGuy</title>'));
     assert.ok(html.includes(demo));
+    const examples = JSON.parse(read('src/data/pages.json')).seo7.s4;
+    const lastExample = examples.match(/<p>[\s\S]*?<\/p>/g).at(-1);
+    const proofAt = html.indexOf('<h2>Live awards announcing</h2>');
+    assert.ok(html.includes(lastExample));
+    assert.ok(proofAt > html.indexOf(lastExample));
+    assert.ok(proofAt < html.indexOf('class="demo-player"'));
+    assert.equal(html.split('<h2>Live awards announcing</h2>').length - 1, 1);
+    assert.ok(html.includes(liveEventProof.trim()));
+    assert.ok(!home.includes('The Print Industry Awards 2026'));
     assert.match(html, /Voice of God<\/span> Announcer &(?:amp;)? Voiceover/);
     assert.ok(html.includes('https://voiceofgod.co.uk'));
   });
