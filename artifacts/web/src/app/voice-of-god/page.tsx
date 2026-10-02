@@ -3,7 +3,7 @@ import PreferredSourceButton from '@/components/PreferredSourceButton';
 import pages from '@/data/pages.json';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import type { Metadata } from 'next';
-import { SchemaScripts, profilePage, breadcrumb, faqPage, serviceSchema, videoObject, audioObject } from '@/lib/staticPageSchema';
+import { SchemaScripts, profilePage, webPage, GUY_PERSON_REF, breadcrumb, serviceSchema, videoObject, audioObject } from '@/lib/staticPageSchema';
 
 const data = (pages as Record<string, Record<string, string>>)['seo7'];
 
@@ -28,15 +28,19 @@ export const metadata: Metadata = {
 };
 
 const schemas = [
-  profilePage('voice-of-god', 'Guy Harris is a professional Voice of God announcer trusted by ITV, Butlins, The Masked Singer, Poundland, the Natural History Museum and national award ceremonies.'),
+  {
+    ...webPage('voice-of-god', data.s1, data.s2),
+    mainEntity: { '@id': 'https://www.voiceoverguy.co.uk/voice-of-god#service' },
+    about: GUY_PERSON_REF,
+  },
+  {
+    '@context': 'https://schema.org',
+    ...profilePage('voice-of-god', 'Guy Harris is a professional Voice of God announcer trusted by ITV, Butlins, The Masked Singer, Poundland, the Natural History Museum and national award ceremonies.').mainEntity,
+  },
   breadcrumb('voice-of-god', 'Voice of God'),
-  faqPage('voice-of-god', [
-    { q: 'What is a Voice of God announcer?', a: 'A Voice of God (VOG) announcer is the unseen voice that introduces speakers, announces awards, and guides audiences at live events, conferences, and stage shows.' },
-    { q: 'Can I book Guy Harris as a Voice of God for my event?', a: 'Yes. Guy Harris is an experienced VOG announcer, trusted by ITV, Butlins, The Masked Singer, Poundland, the Natural History Museum and national award ceremonies.' },
-  ]),
   serviceSchema('voice-of-god', 'Voice of God Announcer', 'Live and pre-recorded Voice of God announcer services for events, awards ceremonies, exhibitions and stage shows across the UK.'),
   videoObject('voice-of-god', 'Voice of God Show Announcer \u2013 Guy Harris', 'Guy Harris performing as Voice of God show announcer for live events and award ceremonies.', 'e0vZ9cxdilo', '2024-02-27'),
-  audioObject('voice-of-god', 'Voice of God Demo \u2013 Guy Harris', 'A compilation of live Voice of God announcements for events, awards, and stage shows.', '/assets/audio/guy-harris-voiceoverguy-commercial-showreel.mp3', 'PT1M14S'),
+  audioObject('voice-of-god', 'Voice of God Demo \u2013 Guy Harris', 'Voice of God demo for events, awards, and stage shows.', '/assets/audio/voice-of-god-demo-showreel-guy-harris.mp3', 'PT49.26S'),
 ];
 
 export default function Page() {
