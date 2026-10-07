@@ -5,3 +5,4 @@
 - [Vercel firewall API activation](vercel-firewall-api-activation.md) — REST rule insertion can activate immediately, unlike CLI drafts; verify active config after writes.
 - [Website operator identity](website-operator-identity.md) — do not infer the privacy-page operator or data controller from the voiceover contracting company.
 - [Video markup evidence](video-markup-evidence.md) — retain visible videos but defer VideoObjects when provider dates or thumbnails cannot be verified.
+- [Deliberately removed pages](deliberately-removed-pages.md) — the Tesco banking app page was intentionally removed; do not restore it to clear Search Console.
