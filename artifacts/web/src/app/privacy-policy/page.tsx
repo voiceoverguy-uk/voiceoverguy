@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
       </div>
       <article className={styles.article}>
         <div className={styles.readingColumn}>
-          <p className={styles.updated}>Last updated: <time dateTime="2026-09-25">25 September 2026</time></p>
+          <p className={styles.updated}>Last updated: <time dateTime="2026-10-10">10 October 2026</time></p>
           <div className={styles.intro}>
             <p>When you get in touch about a voiceover, I use your details to reply, prepare a quote and manage your booking if we work together. Here is how your information is handled.</p>
           </div>
@@ -75,6 +75,7 @@ export default function PrivacyPolicyPage() {
             <p>For enquiries and bookings with you personally, I use information to take steps you request before a contract and to carry out that contract.</p>
             <p>When you represent a business, I rely on legitimate interests in responding to enquiries and managing voiceover work. Legitimate interests also support proportionate website security, troubleshooting and keeping relevant records to resolve queries or disputes.</p>
             <p>Accounting and other records required by law are kept to meet those legal obligations.</p>
+            <p>I use consent for optional Google Analytics tracking, which stays off unless you choose to allow it. You can withdraw that consent using Privacy &amp; third-party settings.</p>
           </section>
 
           <section id="providers" className={styles.section}>
@@ -95,8 +96,10 @@ export default function PrivacyPolicyPage() {
             <h2>Videos, audio and cookies</h2>
             <p>I keep external media from YouTube, Vimeo and SoundCloud, including externally hosted previews, switched off until you allow external media. Once you allow it, those providers can receive your IP address and browser information and may use cookies or similar technologies. You can leave it switched off and still browse the website or contact me.</p>
             <p>The speaking-pace recordings are hosted with this website. Playing them sends a normal file request to the website host.</p>
-            <p>You can choose external media and PayPal separately, reject both, or change your mind using the privacy choices control on the website. I store your choice in your browser so you do not have to make it on every page. Withdrawing permission stops further loading through this website; it cannot undo information already sent or remove cookies held by another provider. You can clear those through your browser settings.</p>
-            <p>The website application does not include a standalone visitor-analytics tracker. The website host still receives technical information needed to serve and protect the site. Following a link to Google reviews or another external website takes you to a service with its own privacy information.</p>
+            <p>You can change your choices using Privacy &amp; third-party settings on the website. I store your choices in your browser so you do not have to make them on every page. Withdrawing permission stops further loading through this website; it cannot undo information already sent or remove cookies held by another provider. You can clear those through your browser settings.</p>
+            <p>If you allow Google Analytics, Google receives information about pages visited, visit times, referrers, browser and device details, and cookie identifiers to help me understand website traffic. Google processes your IP address to derive approximate location; GA4 does not log or store individual IP addresses. The integration does not send form messages or scripts, and removes query strings and fragments from the page and referrer addresses it sends. Advertising consent stays off, and Google signals and advertising personalisation are disabled in the website tag. Google may process information outside the UK. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google’s privacy policy</a>.</p>
+            <p>Analytics cookies such as <code>_ga</code> distinguish visits and sessions and may last up to two years. You can choose Google Analytics, external media and PayPal separately or reject all optional services. Your previous media or PayPal choice does not automatically allow analytics. Withdrawing analytics permission clears its cookies on this site and reloads the page to stop tracking; it does not delete information already collected by Google.</p>
+            <p>The website host still receives technical information needed to serve and protect the site. Following a link to Google reviews or another external website takes you to a service with its own privacy information.</p>
           </section>
 
           <section id="marketing" className={styles.section}>

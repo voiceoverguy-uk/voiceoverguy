@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ThirdPartyConsent from '@/components/ThirdPartyConsent';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { getYearsExperience } from '@/lib/experience';
 
 const yrs = getYearsExperience();
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <ThirdPartyConsent>
+          <GoogleAnalytics />
         <div className="top-bar" />
         <Navbar />
         <main>{children}</main>
