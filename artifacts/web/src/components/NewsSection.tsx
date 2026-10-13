@@ -7,6 +7,12 @@ import type { NewsItem, Segment } from '@/data/news';
 
 const INITIAL_COUNT = 6;
 
+const magicMirrorNewsItem: NewsItem = {
+  segments: [
+    { type: 'text', text: 'Proud to be the voice of the Magic Mirror in this year’s Butlins pantomime, Snow White and Her Magical Friends.' },
+  ],
+};
+
 const icelandNewsItem: NewsItem = {
   segments: [
     { type: 'text', text: 'Event season is well under way. If you are looking for a ' },
@@ -89,7 +95,7 @@ function renderSegment(segment: Segment, index: number) {
 
 export default function NewsSection() {
   const [expanded, setExpanded] = useState(false);
-  const homepageNewsItems = [icelandNewsItem, generatorNewsItem, mustardNewsItem, latestNewsItem, upcomingNewsItem, ...newsItems];
+  const homepageNewsItems = [magicMirrorNewsItem, icelandNewsItem, generatorNewsItem, mustardNewsItem, latestNewsItem, upcomingNewsItem, ...newsItems];
   const remaining = homepageNewsItems.length - INITIAL_COUNT;
 
   const now = new Date();
