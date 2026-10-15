@@ -7522,6 +7522,7 @@ const blogPosts: BlogPost[] = [
  "text2": "<h2>Gurubox: A Hilarious Fishing Parody</h2>\r\n<p>Gurubox is a clever parody of the popular UK TV show Gogglebox, tailored for the angling community. In this series, anglers watch and humorously comment on fishing videos, mirroring the original show's format. By providing a spot-on Craig Cash impression for the narration, I helped Gurubox deliver an authentic and entertaining experience that resonated with their audience.</p>\r\n",
  "image": "craig-cash-gogglebox-voiceover.webp",
  "video": "OmVuCVXsWM4",
+ "videoStart": 32,
  "metaTitle": "Craig Cash Impression for Gurubox – Gogglebox Fishing",
  "bottomText": "<h2>Need a Character Voice?</h2> \r\n<p>If you’re looking for a spot-on impression or a unique character voice, <a href=\"character-voiceover\" title=\"Character Voiceovers\">check out my character work here</a>. Need something bespoke? Use the contact form below</p>\r\n",
  "rawDate": "April 24",
