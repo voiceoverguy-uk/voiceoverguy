@@ -43,6 +43,9 @@ export interface BlogPost {
  nvideo1?: string; // optional YouTube ID embedded inside the ntext1 section
  nvideo2?: string; // optional YouTube ID embedded inside the ntext2 section
  nvideo3?: string; // optional YouTube ID embedded inside the ntext3 section
+ nalt1?: string; // optional alt text for nimage1
+ nalt2?: string; // optional alt text for nimage2
+ nalt3?: string; // optional alt text for nimage3
 }
 
 const blogPosts: BlogPost[] = [
@@ -8612,6 +8615,39 @@ const blogPosts: BlogPost[] = [
   "conflictsWithCorePage": false,
   "nvideo1": "mI_ScAIZe70",
   "nvideo2": "lAioLyRUHWM"
+ },
+ {
+  "id": 1008,
+  "url": "worms-galactic-tactics-voiceover",
+  "pageTitle": "WORMS: Galactic Tactics – Coming in 2027",
+  "info": "<p>WORMS: Galactic Tactics, the new game from Team17, is coming in 2027.</p>",
+  "searchTerms": "WORMS Galactic Tactics, Team17, Worms game 2027, Guy Harris, game voiceover",
+  "pageDesc": "Proud to be associated with WORMS: Galactic Tactics, the new game from Team17 coming in 2027. Watch the trailer and see a moment from the studio.",
+  "text1": "<h2>Coming in 2027</h2>\r\n<p>I’m proud to be associated with <strong>WORMS: Galactic Tactics</strong>, the new game from Team17. Watch the announcement trailer.</p>",
+  "text2": "",
+  "image": "worms-galactic-tactics.webp",
+  "video": "UVcmBd7u6J0",
+  "metaTitle": "WORMS: Galactic Tactics – Team17 Game Coming in 2027",
+  "bottomText": "",
+  "rawDate": "October 2026",
+  "date": "2026-10-16",
+  "whatVideo": "1",
+  "alt": "WORMS: Galactic Tactics game artwork showing Worms characters in a galactic battle.",
+  "rating": "5",
+  "blogRating": fromLegacyRating("5"),
+  "twitter": "%23WORMS %23Team17",
+  "homeText": "Proud to be associated with WORMS: Galactic Tactics, the new Team17 game coming in 2027.",
+  "santa": "",
+  "ntext1": "<h2>In the studio</h2>\r\n<p>A behind-the-scenes moment from the studio recording for WORMS: Galactic Tactics.</p>",
+  "ntext2": "",
+  "ntext3": "",
+  "ntext4": "",
+  "nimage1": "worms-galactic-tactics-studio.webp",
+  "nalt1": "Guy Harris performing in the studio alongside WORMS: Galactic Tactics game artwork.",
+  "nimage2": "",
+  "nimage3": "",
+  "nimage4": "",
+  "conflictsWithCorePage": false
  }
 ];
 

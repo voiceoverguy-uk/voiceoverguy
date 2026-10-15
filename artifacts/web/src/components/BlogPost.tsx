@@ -141,9 +141,9 @@ export default function BlogPost({ post }: Props) {
   const hasText2 = !!(post.text2 && post.text2.trim());
 
   const ntextSections = [
-    { text: post.ntext1, image: post.nimage1, video: post.nvideo1 },
-    { text: post.ntext2, image: post.nimage2, video: post.nvideo2 },
-    { text: post.ntext3, image: post.nimage3, video: post.nvideo3 },
+    { text: post.ntext1, image: post.nimage1, video: post.nvideo1, alt: post.nalt1 },
+    { text: post.ntext2, image: post.nimage2, video: post.nvideo2, alt: post.nalt2 },
+    { text: post.ntext3, image: post.nimage3, video: post.nvideo3, alt: post.nalt3 },
     { text: post.ntext4, image: post.nimage4, video: undefined as string | undefined },
   ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image) || (s.video && s.video.trim()));
 
@@ -288,7 +288,7 @@ export default function BlogPost({ post }: Props) {
               </div>
             ) : hasImg ? (
               <div className="blog-media-col">
-                <NImage filename={sec.image} alt={post.alt || post.pageTitle} />
+                <NImage filename={sec.image} alt={sec.alt || post.alt || post.pageTitle} />
               </div>
             ) : null;
 
