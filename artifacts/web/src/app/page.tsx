@@ -10,6 +10,7 @@ import WaveSurferPlayer from '@/components/WaveSurferPlayer';
 import SeasonalHalloweenPlayer from '@/components/SeasonalHalloweenPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
 import ClientLogosMarquee from '@/components/ClientLogosMarquee';
+import CharacterCreditsSlideshow from '@/components/CharacterCreditsSlideshow';
 import { getYearsExperience } from '@/lib/experience';
 import { testimonials } from '@/data/testimonials';
 
@@ -108,6 +109,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CharacterCreditsSlideshow />
 
       {/* CLIENT LOGOS */}
       <section className="client-logos-section">
