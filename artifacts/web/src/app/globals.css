@@ -6354,6 +6354,13 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   touch-action: pan-y;
 }
 
+@media (min-width: 601px) {
+  .character-credits-stage {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
 .character-credits-slide {
   position: absolute;
   inset: 0;
