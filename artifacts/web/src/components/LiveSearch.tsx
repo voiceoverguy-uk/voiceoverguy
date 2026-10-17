@@ -252,6 +252,13 @@ function searchItems(query: string): SearchResult[] {
 
   results.sort((a, b) => b.relevance - a.relevance);
 
+  if (q === 'santa') {
+    const santaVoiceIndex = results.findIndex(result => result.href === '/santa-voice');
+    if (santaVoiceIndex > 0) {
+      results.unshift(results.splice(santaVoiceIndex, 1)[0]);
+    }
+  }
+
   const seen = new Set<string>();
   const deduped = results.filter(r => {
     if (seen.has(r.href)) return false;
