@@ -54,4 +54,16 @@ export const characterCreditSlides: CharacterCreditSlide[] = [
     production: 'Becca’s Bunch',
     alt: 'Character-credit banner for the voice of Ringo in Becca’s Bunch.',
   },
+  {
+    src: '/assets/images/character-credits/worms-character-voices.webp',
+    character: 'many Worms',
+    production: 'Four Worms games',
+    alt: 'Character-credit banner for multiple voices across four Worms games.',
+  },
+  {
+    src: '/assets/images/character-credits/blueys-big-play-radio-ads.webp',
+    character: 'UK tour radio ads',
+    production: 'Bluey’s Big Play',
+    alt: 'Character-credit banner for the UK tour radio ads for Bluey’s Big Play.',
+  },
 ];
