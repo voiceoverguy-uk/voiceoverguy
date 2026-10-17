@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   useCallback,
   useEffect,
@@ -16,6 +17,7 @@ const CROSSFADE_MS = 700;
 const PRELOAD_NEXT_AFTER_MS = 1800;
 
 export default function CharacterCreditsSlideshow() {
+  const [slides, setSlides] = useState(characterCreditSlides);
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
   const [activeVisible, setActiveVisible] = useState(true);
@@ -25,7 +27,7 @@ export default function CharacterCreditsSlideshow() {
 
   const slideshowRef = useRef<HTMLElement>(null);
   const activeIndexRef = useRef(activeIndex);
-  const preloadedImages = useRef(new Map<number, Promise<void>>());
+  const preloadedImages = useRef(new Map<string, Promise<void>>());
   const navigationRequest = useRef(0);
   const transitionTimer = useRef<number | null>(null);
   const animationFrame = useRef<number | null>(null);
@@ -36,8 +38,19 @@ export default function CharacterCreditsSlideshow() {
     activeIndexRef.current = activeIndex;
   }, [activeIndex]);
 
+  useEffect(() => {
+    const shuffledSlides = [...characterCreditSlides];
+    for (let index = shuffledSlides.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [shuffledSlides[index], shuffledSlides[randomIndex]] =
+        [shuffledSlides[randomIndex], shuffledSlides[index]];
+    }
+    setSlides(shuffledSlides);
+  }, []);
+
   const preloadImage = useCallback((index: number) => {
-    const existing = preloadedImages.current.get(index);
+    const slide = slides[index];
+    const existing = preloadedImages.current.get(slide.src);
     if (existing) return existing;
 
     const promise = new Promise<void>((resolve) => {
@@ -51,13 +64,13 @@ export default function CharacterCreditsSlideshow() {
       image.decoding = 'async';
       image.addEventListener('load', finish, { once: true });
       image.addEventListener('error', finish, { once: true });
-      image.src = characterCreditSlides[index].src;
+      image.src = slide.src;
       if (image.complete) finish();
     });
 
-    preloadedImages.current.set(index, promise);
+    preloadedImages.current.set(slide.src, promise);
     return promise;
-  }, []);
+  }, [slides]);
 
   const navigateTo = useCallback((nextIndex: number) => {
     if (nextIndex === activeIndexRef.current) return;
@@ -129,21 +142,21 @@ export default function CharacterCreditsSlideshow() {
 
   useEffect(() => {
     if (!canRotate) return;
-    const nextIndex = (activeIndex + 1) % characterCreditSlides.length;
+    const nextIndex = (activeIndex + 1) % slides.length;
     const preloadTimer = window.setTimeout(() => {
       void preloadImage(nextIndex);
     }, PRELOAD_NEXT_AFTER_MS);
     return () => window.clearTimeout(preloadTimer);
-  }, [activeIndex, canRotate, preloadImage]);
+  }, [activeIndex, canRotate, preloadImage, slides.length]);
 
   useEffect(() => {
     if (!canRotate) return;
     const timer = window.setTimeout(() => {
-      const nextIndex = (activeIndexRef.current + 1) % characterCreditSlides.length;
+      const nextIndex = (activeIndexRef.current + 1) % slides.length;
       navigateTo(nextIndex);
     }, AUTO_ADVANCE_MS);
     return () => window.clearTimeout(timer);
-  }, [activeIndex, canRotate, navigateTo]);
+  }, [activeIndex, canRotate, navigateTo, slides.length]);
 
   useEffect(() => () => {
     if (transitionTimer.current !== null) window.clearTimeout(transitionTimer.current);
@@ -155,10 +168,10 @@ export default function CharacterCreditsSlideshow() {
     if (!(target instanceof HTMLElement) || !target.closest('.character-credit-controls, .character-credit-dots')) return;
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
-      navigateTo((activeIndexRef.current - 1 + characterCreditSlides.length) % characterCreditSlides.length);
+      navigateTo((activeIndexRef.current - 1 + slides.length) % slides.length);
     } else if (event.key === 'ArrowRight') {
       event.preventDefault();
-      navigateTo((activeIndexRef.current + 1) % characterCreditSlides.length);
+      navigateTo((activeIndexRef.current + 1) % slides.length);
     }
   };
 
@@ -178,7 +191,7 @@ export default function CharacterCreditsSlideshow() {
     if (Math.abs(deltaX) < 44 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) return;
 
     const direction = deltaX < 0 ? 1 : -1;
-    navigateTo((activeIndexRef.current + direction + characterCreditSlides.length) % characterCreditSlides.length);
+    navigateTo((activeIndexRef.current + direction + slides.length) % slides.length);
   };
 
   const handleTouchCancel = () => {
@@ -204,7 +217,7 @@ export default function CharacterCreditsSlideshow() {
           onTouchCancel={handleTouchCancel}
         >
           {renderedIndices.map((index) => {
-            const slide = characterCreditSlides[index];
+            const slide = slides[index];
             const isActive = index === activeIndex;
             const classNames = [
               'character-credits-slide',
@@ -212,6 +225,18 @@ export default function CharacterCreditsSlideshow() {
               isActive && !activeVisible && 'character-credits-slide--entering',
               !isActive && 'character-credits-slide--outgoing',
             ].filter(Boolean).join(' ');
+            const image = (
+              <Image
+                src={slide.src}
+                alt={isActive ? slide.alt : ''}
+                fill
+                priority={index === 0 && activeIndex === 0}
+                sizes="(max-width: 1169px) calc(100vw - 30px), 1140px"
+                unoptimized
+                draggable={false}
+                onLoad={() => preloadedImages.current.set(slide.src, Promise.resolve())}
+              />
+            );
 
             return (
               <div
@@ -219,19 +244,14 @@ export default function CharacterCreditsSlideshow() {
                 className={classNames}
                 role={isActive ? 'group' : undefined}
                 aria-roledescription={isActive ? 'slide' : undefined}
-                aria-label={isActive ? `Slide ${index + 1} of ${characterCreditSlides.length}` : undefined}
+                aria-label={isActive ? `Slide ${index + 1} of ${slides.length}` : undefined}
                 aria-hidden={!isActive}
               >
-                <Image
-                  src={slide.src}
-                  alt={isActive ? slide.alt : ''}
-                  fill
-                  priority={index === 0 && activeIndex === 0}
-                  sizes="(max-width: 1169px) calc(100vw - 30px), 1140px"
-                  unoptimized
-                  draggable={false}
-                  onLoad={() => preloadedImages.current.set(index, Promise.resolve())}
-                />
+                {slide.href ? (
+                  <Link href={slide.href} className="character-credit-slide-link">
+                    {image}
+                  </Link>
+                ) : image}
                 {isActive && (
                   <span className="sr-only">
                     Character: {slide.character}. Production: {slide.production}.
@@ -245,16 +265,16 @@ export default function CharacterCreditsSlideshow() {
             <button
               className="character-credit-control character-credit-control--previous"
               type="button"
-              aria-label={`Previous slide: ${characterCreditSlides[(activeIndex - 1 + characterCreditSlides.length) % characterCreditSlides.length].character}`}
-              onClick={() => navigateTo((activeIndexRef.current - 1 + characterCreditSlides.length) % characterCreditSlides.length)}
+              aria-label={`Previous slide: ${slides[(activeIndex - 1 + slides.length) % slides.length].character}`}
+              onClick={() => navigateTo((activeIndexRef.current - 1 + slides.length) % slides.length)}
             >
               <span aria-hidden="true">‹</span>
             </button>
             <button
               className="character-credit-control character-credit-control--next"
               type="button"
-              aria-label={`Next slide: ${characterCreditSlides[(activeIndex + 1) % characterCreditSlides.length].character}`}
-              onClick={() => navigateTo((activeIndexRef.current + 1) % characterCreditSlides.length)}
+              aria-label={`Next slide: ${slides[(activeIndex + 1) % slides.length].character}`}
+              onClick={() => navigateTo((activeIndexRef.current + 1) % slides.length)}
             >
               <span aria-hidden="true">›</span>
             </button>
@@ -262,7 +282,7 @@ export default function CharacterCreditsSlideshow() {
         </div>
 
         <div className="character-credit-dots" role="group" aria-label="Choose a character credit">
-          {characterCreditSlides.map((slide, index) => (
+          {slides.map((slide, index) => (
             <button
               key={slide.src}
               type="button"

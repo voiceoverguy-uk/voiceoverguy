@@ -6380,6 +6380,14 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   opacity: 1;
 }
 
+.character-credit-slide-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 .character-credits-slide--active.character-credits-slide--entering {
   opacity: 0;
 }
