@@ -6,7 +6,6 @@ import {
   useEffect,
   useRef,
   useState,
-  type FocusEvent,
   type KeyboardEvent,
   type TouchEvent,
 } from 'react';
@@ -20,8 +19,6 @@ export default function CharacterCreditsSlideshow() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
   const [activeVisible, setActiveVisible] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
-  const [hasKeyboardFocus, setHasKeyboardFocus] = useState(false);
   const [isInViewport, setIsInViewport] = useState(false);
   const [isDocumentVisible, setIsDocumentVisible] = useState(true);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -33,8 +30,7 @@ export default function CharacterCreditsSlideshow() {
   const transitionTimer = useRef<number | null>(null);
   const animationFrame = useRef<number | null>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const canRotate = !prefersReducedMotion && !isHovered && !hasKeyboardFocus &&
-    isInViewport && isDocumentVisible;
+  const canRotate = !prefersReducedMotion && isInViewport && isDocumentVisible;
 
   useEffect(() => {
     activeIndexRef.current = activeIndex;
@@ -154,18 +150,6 @@ export default function CharacterCreditsSlideshow() {
     if (animationFrame.current !== null) window.cancelAnimationFrame(animationFrame.current);
   }, []);
 
-  const handleBlur = (event: FocusEvent<HTMLElement>) => {
-    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-      setHasKeyboardFocus(false);
-    }
-  };
-
-  const handleFocus = (event: FocusEvent<HTMLElement>) => {
-    const target = event.target;
-    if (!(target instanceof HTMLElement) || !target.matches(':focus-visible')) return;
-    setHasKeyboardFocus(true);
-  };
-
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     const target = event.target;
     if (!(target instanceof HTMLElement) || !target.closest('.character-credit-controls, .character-credit-dots')) return;
@@ -210,14 +194,6 @@ export default function CharacterCreditsSlideshow() {
       className="character-credits-section"
       aria-label="Character voice credits"
       aria-roledescription="carousel"
-      onPointerEnter={(event) => {
-        if (event.pointerType !== 'touch') setIsHovered(true);
-      }}
-      onPointerLeave={(event) => {
-        if (event.pointerType !== 'touch') setIsHovered(false);
-      }}
-      onFocusCapture={handleFocus}
-      onBlurCapture={handleBlur}
       onKeyDown={handleKeyDown}
     >
       <div className="container">
