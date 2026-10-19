@@ -222,7 +222,7 @@ export default function Home() {
       {/* ROTATING QUOTES */}
       <RotatingQuotes />
 
-      <AICloningNotice />
+      <AICloningNotice yearsExperience={yrs} />
 
       {/* CLUSTER B: WHY CLIENTS */}
       <section className="home-cluster home-cluster--left home-cluster--no-before">

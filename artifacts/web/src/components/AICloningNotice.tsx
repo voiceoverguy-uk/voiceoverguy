@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import CurrentExperienceYears from '@/components/CurrentExperienceYears';
 
-export default function AICloningNotice() {
+interface AICloningNoticeProps {
+  yearsExperience: number;
+}
+
+export default function AICloningNotice({ yearsExperience }: AICloningNoticeProps) {
   return (
     <section
       id="ai-cloning-notice"
@@ -12,10 +17,10 @@ export default function AICloningNotice() {
 
         <div className="ai-cloning-notice__body">
           <p>
-            Your brand deserves a voice with personality, judgement and a real person behind it. When you book me, you get decades of experience, a performance shaped around your message, and someone you can direct—not simply a generated reading.
+            Your brand deserves a voice with personality, authenticity and a real person behind it. When you book me, you get over <CurrentExperienceYears initialYears={yearsExperience} /> years of experience, a performance shaped around your message, and someone you can direct, not simply a generated reading.
           </p>
 
-          <p><strong>My voice is not available for unauthorised AI cloning.</strong></p>
+          <p><strong>My voice is NOT available for unauthorised AI cloning.</strong></p>
 
           <p>
             Permission to use a recording for an agreed project does not include permission to upload it to an AI service, train a voice model or generate new performances. Any such use requires my explicit written agreement.
@@ -41,7 +46,7 @@ export default function AICloningNotice() {
 
           <p>
             If you like the sound of my voice,{' '}
-            <a href="#contact">let’s create something together</a>—with the right performance and clear permission from the start.
+            <a href="#contact">let’s create something together</a>, with the right performance and clear permission from the start.
           </p>
 
           <p className="ai-cloning-notice__terms">
