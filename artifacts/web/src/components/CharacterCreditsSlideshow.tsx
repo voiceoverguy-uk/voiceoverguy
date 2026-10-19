@@ -219,6 +219,7 @@ export default function CharacterCreditsSlideshow() {
           {renderedIndices.map((index) => {
             const slide = slides[index];
             const isActive = index === activeIndex;
+            const isExternalLink = slide.href?.startsWith('https://') ?? false;
             const classNames = [
               'character-credits-slide',
               isActive && 'character-credits-slide--active',
@@ -248,7 +249,15 @@ export default function CharacterCreditsSlideshow() {
                 aria-hidden={!isActive}
               >
                 {slide.href ? (
-                  <Link href={slide.href} className="character-credit-slide-link">
+                  <Link
+                    href={slide.href}
+                    className="character-credit-slide-link"
+                    target={isExternalLink ? '_blank' : undefined}
+                    rel={isExternalLink ? 'noopener noreferrer' : undefined}
+                    aria-label={isExternalLink
+                      ? `Open ${slide.production} on the App Store (opens in a new tab)`
+                      : undefined}
+                  >
                     {image}
                   </Link>
                 ) : image}

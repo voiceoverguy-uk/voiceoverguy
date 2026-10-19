@@ -84,4 +84,11 @@ export const characterCreditSlides: CharacterCreditSlide[] = [
     alt: 'Banner for the voice of LEGO Minifigure Cake Guy at LEGOLAND Windsor.',
     href: '/voice-of-cake-guy-legoland-windsor',
   },
+  {
+    src: '/assets/images/character-credits/santa-dash.webp',
+    character: 'Santa',
+    production: 'Santa Dash: Rooftop Run (iOS game)',
+    alt: 'Santa Dash: Rooftop Run iOS game banner featuring Santa.',
+    href: 'https://apps.apple.com/gb/app/santa-dash-rooftop-run/id1057048397',
+  },
 ];
