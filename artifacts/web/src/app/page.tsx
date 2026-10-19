@@ -11,6 +11,7 @@ import SeasonalHalloweenPlayer from '@/components/SeasonalHalloweenPlayer';
 import AwardsBadges from '@/components/AwardsBadges';
 import ClientLogosMarquee from '@/components/ClientLogosMarquee';
 import CharacterCreditsSlideshow from '@/components/CharacterCreditsSlideshow';
+import AICloningNotice from '@/components/AICloningNotice';
 import { getYearsExperience } from '@/lib/experience';
 import { testimonials } from '@/data/testimonials';
 
@@ -220,6 +221,8 @@ export default function Home() {
 
       {/* ROTATING QUOTES */}
       <RotatingQuotes />
+
+      <AICloningNotice />
 
       {/* CLUSTER B: WHY CLIENTS */}
       <section className="home-cluster home-cluster--left home-cluster--no-before">
