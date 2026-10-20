@@ -1,18 +1,31 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import CurrentExperienceYears from '@/components/CurrentExperienceYears';
+import { autoCloseDisclosure } from '@/lib/autoCloseDisclosure';
 
 interface AICloningNoticeProps {
   yearsExperience: number;
 }
 
 export default function AICloningNotice({ yearsExperience }: AICloningNoticeProps) {
+  const detailsRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    const details = detailsRef.current;
+    const followingSection = details?.closest('section')?.nextElementSibling;
+    if (!details || !followingSection) return;
+    return autoCloseDisclosure(details, followingSection);
+  }, []);
+
   return (
     <section
       id="ai-cloning-notice"
       className="ai-cloning-notice-section"
       aria-label="AI voice cloning permission notice"
     >
-      <details className="ai-cloning-notice">
+      <details ref={detailsRef} className="ai-cloning-notice">
         <summary>AI voice cloning: a note on permission</summary>
 
         <div className="ai-cloning-notice__body">
