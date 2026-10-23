@@ -8,6 +8,13 @@ export type CharacterCreditSlide = {
 
 export const characterCreditSlides: CharacterCreditSlide[] = [
   {
+    src: '/assets/images/character-credits/most-in-demand-attenborough-impersonator.webp',
+    character: 'David Attenborough impersonation',
+    production: 'David Attenborough-style voiceover',
+    alt: 'One of the UK’s most in-demand David Attenborough impersonators, with a wildlife landscape.',
+    href: '/david-attenborough-voice',
+  },
+  {
     src: '/assets/images/character-credits/trusted-voice-of-apple-guy-harris.webp',
     character: 'Voice of iPhone adverts',
     production: 'Apple',
