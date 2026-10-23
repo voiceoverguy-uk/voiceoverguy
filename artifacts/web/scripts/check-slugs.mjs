@@ -19,6 +19,8 @@
  *  6. The retired yorkshire-podcast-studio slug does not appear in generated
  *     blog content or sitemap locations, while its permanent redirects remain
  *     present and correctly configured in the root vercel.json.
+ *  7. Every published blog slug (excluding core-page conflicts) appears
+ *     exactly once as a canonical URL in public/sitemap.xml.
  *
  * Run via: pnpm --filter @workspace/web run check:slugs
  */
@@ -276,6 +278,7 @@ for (const block of entries) {
 console.log('check-slugs: [3] Validating sitemap*.xml <loc> entries …');
 
 const publicDir = join(ROOT, 'public');
+const articleLocations = new Map();
 
 let sitemapFiles = [];
 try {
@@ -306,6 +309,9 @@ for (const file of sitemapFiles) {
   while ((locMatch = LOC_RE.exec(sitemap)) !== null) {
     locCount++;
     const loc = locMatch[1];
+    if (file === 'sitemap.xml') {
+      articleLocations.set(loc, (articleLocations.get(loc) || 0) + 1);
+    }
     if (loc.includes('%20')) {
       fail(`${file} <loc> contains %20: "${loc}"`);
     }
@@ -394,6 +400,28 @@ if (vercelConfig) {
     }
   }
 }
+
+// ─── Check 7: published article coverage ──────────────────────────────────────
+
+console.log('check-slugs: [7] Verifying published articles in sitemap.xml …');
+
+let publishedCount = 0;
+for (const block of entries) {
+  // Match getAllBlogSlugs: core-page conflicts are not published blog routes.
+  if (/"conflictsWithCorePage":\s*true\b/.test(block)) continue;
+  const slug = block.match(/"url":\s*"([^"]*)"/)?.[1]?.trim();
+  // Invalid slugs are already reported by check 1; never add them to the sitemap.
+  if (!slug || !SLUG_RE.test(slug)) continue;
+  publishedCount++;
+  const canonicalUrl = `${CANONICAL_ORIGIN}${slug}`;
+  const count = articleLocations.get(canonicalUrl) || 0;
+  if (count !== 1) {
+    fail(
+      `published article "${slug}" must appear exactly once in sitemap.xml as "${canonicalUrl}" (found ${count})`,
+    );
+  }
+}
+console.log(`check-slugs: checked ${publishedCount} published article URLs`);
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
 
