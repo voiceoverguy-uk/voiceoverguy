@@ -25,6 +25,11 @@ export function autoCloseDisclosure(
     const before = followingSection.getBoundingClientRect().top;
     if (details.getBoundingClientRect().bottom > viewportTop || before > viewportTop) return;
 
+    // A link hidden by the collapse must not keep keyboard focus. Do not steal
+    // focus from readers who have already moved to the following section.
+    if (document.activeElement && details.contains(document.activeElement)) {
+      details.querySelector('summary')?.focus({ preventScroll: true });
+    }
     // Measure after native layout/scroll anchoring, compensating only for any
     // remaining movement rather than subtracting the disclosure height twice.
     details.open = false;

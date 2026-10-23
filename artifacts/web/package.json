@@ -8,6 +8,7 @@
     "build": "node scripts/check-slugs.mjs && next build && node scripts/fix-homepage-trailing-slash.mjs",
     "start": "next start -H 0.0.0.0 -p 22333",
     "check:slugs": "node scripts/check-slugs.mjs",
+    "test:disclosure": "node --test scripts/auto-close-disclosure.test.mjs && playwright test --config playwright.disclosure.config.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit && node scripts/check-slugs.mjs"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "wavesurfer.js": "^7.12.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@types/node": "^25.3.3",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",

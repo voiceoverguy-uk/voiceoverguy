@@ -15,6 +15,10 @@ function browser({ navHeight = 50, anchored = false } = {}) {
   const toggles = new Map();
   let callback;
   let expanded = false;
+  const focusCalls = [];
+  const summary = { focus: options => { focusCalls.push(options); document.activeElement = summary; } };
+  const link = {};
+  const outside = {};
   const window = {
     scrollY: 0,
     addEventListener: (name, listener) => events.set(name, listener),
@@ -27,6 +31,8 @@ function browser({ navHeight = 50, anchored = false } = {}) {
     },
   };
   const details = {
+    contains: element => element === summary || element === link,
+    querySelector: selector => selector === 'summary' ? summary : null,
     get open() { return expanded; },
     set open(value) {
       if (expanded && !value && anchored) window.scrollY -= 700;
@@ -40,13 +46,14 @@ function browser({ navHeight = 50, anchored = false } = {}) {
     getBoundingClientRect: () => ({ top: 1048 + (expanded ? 700 : 0) - window.scrollY }),
   };
   const document = {
+    activeElement: outside,
     querySelector: () => navHeight ? { getBoundingClientRect: () => ({ bottom: navHeight }) } : null,
   };
   const exports = {};
   vm.runInNewContext(code, { exports, window, document });
   const cleanup = exports.autoCloseDisclosure(details, section);
   return {
-    details, section, window, events, toggles, cleanup,
+    details, section, window, events, toggles, cleanup, document, summary, link, outside, focusCalls,
     toggle(open) { details.open = open; toggles.get('toggle')?.(); },
     scroll(y) {
       window.scrollY = y;
@@ -114,3 +121,17 @@ test('manual closing still works and cleanup removes listeners and pending frame
   assert.equal(b.toggles.size, 0);
   assert.equal(b.hasFrame(), false);
 });
+
+for (const focused of ['summary', 'link', 'outside']) {
+  test(`automatic collapse handles ${focused} focus without scrolling to the notice`, () => {
+    const b = browser();
+    b.document.activeElement = b[focused];
+    b.toggle(true);
+    b.scroll(1698);
+    assert.equal(b.details.open, false);
+    assert.equal(b.document.activeElement, focused === 'outside' ? b.outside : b.summary);
+    assert.equal(b.focusCalls.length, focused === 'outside' ? 0 : 1);
+    for (const options of b.focusCalls) assert.equal(options.preventScroll, true);
+    assert.equal(b.section.getBoundingClientRect().top, 50);
+  });
+}
