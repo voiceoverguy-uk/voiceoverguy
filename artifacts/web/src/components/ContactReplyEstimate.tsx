@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { watchContactReplyTiming, type ContactReplyTiming } from '@/lib/contactReplyTiming';
 import { contactReplySettings } from '@/data/contactReplySettings';
+import ReplyEstimateInfo from '@/components/ReplyEstimateInfo';
 
 /** Shared by all contact forms: one schedule, copy and override. */
 export default function ContactReplyEstimate() {
@@ -17,7 +18,7 @@ export default function ContactReplyEstimate() {
   return (
     <div className="contact-reply-time">
       <p className="contact-reply-time-line">
-        <span className="contact-reply-time-label">Currently:</span>{' '}
+        <ReplyEstimateInfo away={Boolean(contactReplySettings.awayMessage?.trim())} />{' '}
         <span className="contact-reply-time-estimate">{replyTiming.estimate}</span>
       </p>
       {replyTiming.localHint && <small className="contact-reply-time-local">{replyTiming.localHint}</small>}

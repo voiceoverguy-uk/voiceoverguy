@@ -14,7 +14,7 @@ const { renderToStaticMarkup } = require('react-dom/server');
 
 // Render real contact components and the shared article template. Unchanged
 // media/schema helpers are stubbed so these tests don't load external providers.
-function presentation(awayMessage = null, visitorGreeting = '') {
+function presentation(awayMessage = null, visitorGreeting = '', infoOpen = false) {
   const cache = new Map();
   function load(path) {
     if (cache.has(path)) return cache.get(path);
@@ -24,6 +24,10 @@ function presentation(awayMessage = null, visitorGreeting = '') {
       // Simulate the post-mount greeting for shared-presentation assertions.
       if (name === 'react' && path.endsWith('/VisitorLocalGreeting.tsx') && visitorGreeting) {
         return { ...React, useState: () => [visitorGreeting, () => {}] };
+      }
+      if (infoOpen && path.endsWith('/ReplyEstimateInfo.tsx')) {
+        if (name === 'react') return { ...React, useState: initial => [initial === false ? true : initial, () => {}] };
+        if (name === 'react-dom') return { createPortal: children => children };
       }
       if (name === '@/data/contactReplySettings') return { contactReplySettings: { awayMessage } };
       if (name === 'next/link') {
@@ -48,7 +52,7 @@ function presentation(awayMessage = null, visitorGreeting = '') {
         esModuleInterop: true,
       },
     }).outputText;
-    vm.runInNewContext(code, { exports, require: localRequire, URLSearchParams }, { filename: path });
+    vm.runInNewContext(code, { exports, require: localRequire, URLSearchParams, document: { body: {} } }, { filename: path });
     return exports;
   }
   const { default: posts, getAllBlogSlugs } = load(resolve(root, 'src/data/blog-posts.ts'));
@@ -64,7 +68,7 @@ function presentation(awayMessage = null, visitorGreeting = '') {
 }
 
 const render = (Component, props = {}) => renderToStaticMarkup(React.createElement(Component, props));
-const countEstimates = html => (html.match(/Currently:/g) || []).length;
+const countEstimates = html => (html.match(/class="contact-reply-time"/g) || []).length;
 
 // Discover actual static form declarations, rather than a hand-maintained route list.
 function staticFormPages() {
@@ -171,7 +175,7 @@ test('homepage copy and shared blog placeholder match the approved wording', () 
     assert.ok(html.includes(`placeholder="${placeholder}"`));
     assert.equal(countEstimates(html), 1);
     assert.ok(!html.includes('impressively quick'));
-    assert.ok(html.includes('Currently:</span> <span class="contact-reply-time-estimate">'));
+    assert.ok(html.includes('Currently:</button> <span class="contact-reply-time-estimate">'));
     assert.ok(!html.includes('Typical reply time'));
     assert.ok(!html.includes('contact-reply-time-note'));
   }
@@ -245,4 +249,47 @@ test('label is site red; estimate is regular dark grey, with no obsolete label o
   assert.match(css, /\.contact-reply-time-label\s*\{[^}]*color:\s*var\(--red\)/);
   assert.match(css, /\.contact-reply-time-estimate\s*\{[^}]*color:\s*var\(--grey-dark\)/);
   assert.match(css, /\.contact-reply-time-estimate\s*\{[^}]*font-weight:\s*400/);
+});
+
+test('shared label is a non-submitting accessible button; explanation is not permanently displayed', () => {
+  const { HomepageContact, BlogEnquiryForm, ContactForm, CalculatorQuoteForm, InnerPage } = presentation();
+  for (const html of [
+    render(HomepageContact),
+    render(BlogEnquiryForm, { pageTitle: 'Blog', pageUrl: '/blog' }),
+    render(ContactForm, { compact: true }),
+    render(CalculatorQuoteForm, { wordCount: 123 }),
+    render(InnerPage, { sections: [], pageTitle: 'Biography', pageSlug: 'voiceoverguy' }),
+  ]) {
+    assert.equal(countEstimates(html), 1);
+    assert.match(html, /<button type="button" class="contact-reply-time-label contact-reply-info-trigger" aria-label="Currently: about this reply estimate" aria-expanded="false">Currently:<\/button>/);
+    assert.ok(!html.includes('role="tooltip"'));
+    assert.ok(!html.includes('usual reply hours of'));
+  }
+});
+
+test('normal tooltip has the exact explanation and an associated accessible description', () => {
+  const { HomepageContact } = presentation(null, '', true);
+  const html = render(HomepageContact);
+  const description = html.match(/aria-describedby="([^"]+)"/)?.[1];
+  assert.ok(description);
+  assert.ok(html.includes(`id="${description}" role="tooltip"`));
+  assert.ok(html.includes('aria-expanded="true"'));
+  assert.ok(html.includes('This estimate updates automatically using Guy’s usual reply hours of 7am–11pm UK time. Any local times shown use your device’s time zone. It’s a guide, rather than live availability.'));
+});
+
+test('active away override explains that the usual hours are not determining the message', () => {
+  const message = 'I’m away until Monday.';
+  const { ContactForm, CalculatorQuoteForm, InnerPage, BlogPost, HomepageContact, posts } = presentation(message, '', true);
+  for (const html of [
+    render(HomepageContact), render(ContactForm), render(CalculatorQuoteForm, { wordCount: 0 }),
+    render(InnerPage, { sections: [], pageTitle: 'Biography', pageSlug: 'voiceoverguy' }),
+    render(BlogPost, { post: posts[0] }),
+  ]) {
+    assert.ok(html.includes(message));
+    assert.ok(html.includes('Guy’s away or holiday message is currently shown instead of the normal reply-hours estimate.'));
+    assert.ok(!html.includes('This estimate updates automatically using Guy’s usual reply hours'));
+    assert.ok(!html.includes('contact-reply-time-local'));
+  }
+  const normal = presentation('   ', '', true);
+  assert.ok(render(normal.HomepageContact).includes('This estimate updates automatically using Guy’s usual reply hours'));
 });
