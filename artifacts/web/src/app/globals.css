@@ -5983,12 +5983,13 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 .contact-reply-time-label {
-  font-weight: 400;
+  color: var(--red);
+  font-weight: 600;
 }
 
 .contact-reply-time-estimate {
-  color: var(--red);
-  font-weight: 600;
+  color: var(--grey-dark);
+  font-weight: 400;
 }
 
 .contact-reply-time-local {
@@ -5998,7 +5999,9 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   margin-top: 4px;
 }
 
-.blog-enquiry-section .contact-reply-time {
+.blog-enquiry-section .contact-reply-time,
+.contact-form-col .contact-reply-time,
+.calc-quote-card .contact-reply-time {
   margin: -4px 0 22px;
   max-width: 640px;
 }

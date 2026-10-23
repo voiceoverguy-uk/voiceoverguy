@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import ContactReplyEstimate from '@/components/ContactReplyEstimate';
+import ContactIntroduction from '@/components/ContactIntroduction';
 
 const MIN_WORDS = 8;
 
@@ -108,8 +108,7 @@ export default function HomepageContact() {
           {/* Left column: heading + intro */}
           <div className="homepage-contact-left">
             <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
-            <p className="homepage-contact-intro">Tell me about your project and the voice you have in mind. Finished script or early ideas — I’m happy to help.</p>
-            <ContactReplyEstimate />
+            <ContactIntroduction className="homepage-contact-intro">Tell me about your project and the voice you have in mind. Finished script or early ideas — I’m happy to help.</ContactIntroduction>
           </div>
 
           {/* Right column: form */}

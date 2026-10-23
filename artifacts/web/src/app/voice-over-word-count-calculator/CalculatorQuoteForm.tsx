@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import ContactIntroduction from '@/components/ContactIntroduction';
 
 interface Props {
   wordCount: number;
@@ -101,9 +102,9 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
   return (
     <div className="calc-card calc-quote-card">
       <h2 className="calc-quote-heading">Need an accurate voiceover quote?</h2>
-      <p className="calc-quote-intro">
+      <ContactIntroduction className="calc-quote-intro">
         Send over the details below and I&apos;ll come back to you with a proper quote based on word count, usage and turnaround.
-      </p>
+      </ContactIntroduction>
 
       <form onSubmit={handleSubmit} noValidate>
         <input
@@ -185,7 +186,7 @@ export default function CalculatorQuoteForm({ wordCount }: Props) {
               id="q-details"
               className={`calc-quote-textarea${errors.details ? ' calc-quote-input--error' : ''}`}
               rows={4}
-              placeholder="Tell me about the project, where the audio will be used, and any deadline."
+              placeholder="Your project, where the audio will be used, and any deadline…"
               value={details}
               onChange={e => setDetails(e.target.value)}
             />

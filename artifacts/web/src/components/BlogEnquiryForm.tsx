@@ -2,14 +2,13 @@
 
 import { useState, useRef } from 'react';
 import { generatorSourceForService } from '@/lib/generatorSource';
-import ContactReplyEstimate from '@/components/ContactReplyEstimate';
+import ContactIntroduction from '@/components/ContactIntroduction';
 
 interface Props {
   pageTitle: string;
   pageUrl: string;
   intro?: string;
   afterMessageNode?: React.ReactNode;
-  showReplyEstimate?: boolean;
 }
 
 const MIN_WORDS = 8;
@@ -24,7 +23,7 @@ interface FieldErrors {
   message?: string;
 }
 
-export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessageNode, showReplyEstimate = false }: Props) {
+export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessageNode }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -111,10 +110,9 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
 
   return (
     <div className="blog-enquiry-section">
-      <p className="blog-enquiry-intro">
+      <ContactIntroduction className="blog-enquiry-intro">
         {intro ?? "Need a voice for something similar? Send me a quick message and I'll get back to you."}
-      </p>
-      {showReplyEstimate && <ContactReplyEstimate />}
+      </ContactIntroduction>
 
       <form onSubmit={handleSubmit} noValidate className="blog-enquiry-form">
         <input

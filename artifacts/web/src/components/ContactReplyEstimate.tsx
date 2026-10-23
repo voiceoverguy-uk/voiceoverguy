@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { watchContactReplyTiming, type ContactReplyTiming } from '@/lib/contactReplyTiming';
 import { contactReplySettings } from '@/data/contactReplySettings';
 
-/** Shared by homepage and blog contact forms: one schedule, copy and override. */
+/** Shared by all contact forms: one schedule, copy and override. */
 export default function ContactReplyEstimate() {
   // Identical server/first-browser markup; personalised clocks run after mount.
   const [replyTiming, setReplyTiming] = useState<ContactReplyTiming>({
@@ -17,7 +17,7 @@ export default function ContactReplyEstimate() {
   return (
     <div className="contact-reply-time">
       <p className="contact-reply-time-line">
-        <span className="contact-reply-time-label">Typical reply time:</span>{' '}
+        <span className="contact-reply-time-label">Currently:</span>{' '}
         <span className="contact-reply-time-estimate">{replyTiming.estimate}</span>
       </p>
       {replyTiming.localHint && <small className="contact-reply-time-local">{replyTiming.localHint}</small>}

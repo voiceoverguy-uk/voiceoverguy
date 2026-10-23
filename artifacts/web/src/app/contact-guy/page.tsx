@@ -42,10 +42,6 @@ export default function ContactGuy() {
           <div className="contact-top-grid">
             <div className="contact-form-col">
               <h2>Contact <span className="ident">Guy</span></h2>
-              <p style={{ fontSize: '14px', marginBottom: '16px', lineHeight: '1.6' }}>
-                It&#39;s always great to hear from new clients — please do get in touch
-                and let&#39;s make your project sound epic!
-              </p>
               <ContactForm compact />
               <p style={{ fontSize: '14px', marginTop: '20px', marginBottom: '0' }}>
                 Prefer to write directly?

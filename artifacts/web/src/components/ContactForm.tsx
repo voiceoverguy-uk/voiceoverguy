@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import ContactIntroduction from '@/components/ContactIntroduction';
 
 const MIN_WORDS = 8;
 const GENERATOR_SOURCES = {
@@ -36,12 +37,14 @@ interface ContactFormProps {
   compact?: boolean;
   pageTitle?: string;
   pageUrl?: string;
+  intro?: string;
 }
 
 export default function ContactForm({
   compact = false,
   pageTitle = 'Contact Guy',
   pageUrl = '/contact-guy',
+  intro = "It's always great to hear from new clients — please do get in touch and let's make your project sound epic!",
 }: ContactFormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -129,6 +132,10 @@ export default function ContactForm({
   const labelStyle = compact ? { fontSize: '12px' } : {};
 
   return (
+    <>
+    <ContactIntroduction className="contact-form-intro" style={{ fontSize: '14px', marginBottom: '16px', lineHeight: '1.6' }}>
+      {intro}
+    </ContactIntroduction>
     <form onSubmit={handleSubmit} noValidate>
       <input
         ref={honeypotRef}
@@ -186,7 +193,7 @@ export default function ContactForm({
           value={message}
           onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
           required
-          placeholder="Tell me a little about your project and usage..."
+          placeholder="Your project, where the audio will be used, and any deadline…"
         />
         {message.length > 0 && (
           <span className={`blog-enquiry-wordcount${messageReady ? ' blog-enquiry-wordcount--ok' : ''}`}>
@@ -212,5 +219,6 @@ export default function ContactForm({
         )}
       </div>
     </form>
+    </>
   );
 }
