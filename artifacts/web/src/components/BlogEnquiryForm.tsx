@@ -165,7 +165,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
             rows={4}
             value={message}
             onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
-            placeholder="Tell me about your project, where the audio will be used and any deadline."
+            placeholder="Your project, where the audio will be used, and any deadline…"
           />
           {message.length > 0 && (
             <span className={`blog-enquiry-wordcount${messageReady ? ' blog-enquiry-wordcount--ok' : ''}`}>

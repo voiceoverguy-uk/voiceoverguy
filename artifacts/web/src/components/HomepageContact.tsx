@@ -108,7 +108,7 @@ export default function HomepageContact() {
           {/* Left column: heading + intro */}
           <div className="homepage-contact-left">
             <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
-            <p className="homepage-contact-intro">Tell me about your project and the voice you have in mind. Whether you have a finished script or are still exploring ideas, I’m happy to help. Send me a message and I’ll get back to you as quickly as I can.</p>
+            <p className="homepage-contact-intro">Tell me about your project and the voice you have in mind. Finished script or early ideas — I’m happy to help.</p>
             <ContactReplyEstimate />
           </div>
 
@@ -172,7 +172,7 @@ export default function HomepageContact() {
                     rows={4}
                     value={message}
                     onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
-                    placeholder="Tell me about your project, where the audio will be used and any deadline."
+                    placeholder="Your project, where the audio will be used, and any deadline…"
                     required
                   />
                   {message.length > 0 && (

@@ -88,7 +88,8 @@ test('homepage and blogs share the same single optional away override', () => {
   ]) {
     assert.equal(countEstimates(html), 1);
     assert.ok(html.includes(awayMessage));
-    assert.ok(html.includes('An estimate, not a guaranteed response time.'));
+    assert.ok(!html.includes('An estimate, not a guaranteed response time.'));
+    assert.ok(!html.includes('contact-reply-time-local'));
   }
 });
 
@@ -107,14 +108,16 @@ test('homepage copy and shared blog placeholder match the approved wording', () 
   const blog = render(BlogEnquiryForm, {
     pageTitle: 'Example article', pageUrl: '/example-article', showReplyEstimate: true,
   });
-  const placeholder = 'Tell me about your project, where the audio will be used and any deadline.';
+  const placeholder = 'Your project, where the audio will be used, and any deadline…';
   const heading = home.match(/<h2 class="homepage-contact-heading">([\s\S]*?)<\/h2>/)?.[1];
   assert.equal(heading?.replace(/<br\s*\/?>/g, ' '), 'Like what you’ve heard? Let’s talk.');
-  assert.ok(home.includes('Tell me about your project and the voice you have in mind. Whether you have a finished script or are still exploring ideas, I’m happy to help. Send me a message and I’ll get back to you as quickly as I can.'));
+  assert.ok(home.includes('Tell me about your project and the voice you have in mind. Finished script or early ideas — I’m happy to help.'));
   assert.ok(blog.includes('Need a voice for something similar? Send me a quick message and I&#x27;ll get back to you.'));
   for (const html of [home, blog]) {
     assert.ok(html.includes(`placeholder="${placeholder}"`));
     assert.equal(countEstimates(html), 1);
     assert.ok(!html.includes('impressively quick'));
+    assert.ok(html.includes('Typical reply time:</span> <span class="contact-reply-time-estimate">'));
+    assert.ok(!html.includes('contact-reply-time-note'));
   }
 });
