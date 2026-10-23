@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { getContactReplyTiming } from '@/lib/contactReplyTiming';
+import ContactReplyEstimate from '@/components/ContactReplyEstimate';
 
 const MIN_WORDS = 8;
 
@@ -36,18 +36,10 @@ export default function HomepageContact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [serverError, setServerError] = useState('');
   const [greeting, setGreeting] = useState('');
-  const [replyTiming, setReplyTiming] = useState('');
   const honeypotRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setGreeting(getTimeGreeting());
-  }, []);
-
-  useEffect(() => {
-    const update = () => setReplyTiming(getContactReplyTiming(new Date()));
-    update();
-    const timer = window.setInterval(update, 30_000);
-    return () => window.clearInterval(timer);
   }, []);
 
   const wordCount = countWords(message);
@@ -116,9 +108,8 @@ export default function HomepageContact() {
           {/* Left column: heading + intro */}
           <div className="homepage-contact-left">
             <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
-            <p className="homepage-contact-intro">From radio commercials, explainer videos, promos and narration to character voices including Santa, Football Commentary, David Attenborough, spooky Halloween voice and more. Send me a quick message and I&rsquo;ll get back to you impressively quick.
-              {replyTiming && <><br /><span>{replyTiming}</span></>}
-            </p>
+            <p className="homepage-contact-intro">Tell me about your project and the voice you have in mind. Whether you have a finished script or are still exploring ideas, I’m happy to help. Send me a message and I’ll get back to you as quickly as I can.</p>
+            <ContactReplyEstimate />
           </div>
 
           {/* Right column: form */}
@@ -181,7 +172,7 @@ export default function HomepageContact() {
                     rows={4}
                     value={message}
                     onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
-                    placeholder="Give me some details, including usage and format"
+                    placeholder="Tell me about your project, where the audio will be used and any deadline."
                     required
                   />
                   {message.length > 0 && (

@@ -2,12 +2,14 @@
 
 import { useState, useRef } from 'react';
 import { generatorSourceForService } from '@/lib/generatorSource';
+import ContactReplyEstimate from '@/components/ContactReplyEstimate';
 
 interface Props {
   pageTitle: string;
   pageUrl: string;
   intro?: string;
   afterMessageNode?: React.ReactNode;
+  showReplyEstimate?: boolean;
 }
 
 const MIN_WORDS = 8;
@@ -22,7 +24,7 @@ interface FieldErrors {
   message?: string;
 }
 
-export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessageNode }: Props) {
+export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessageNode, showReplyEstimate = false }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -112,6 +114,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
       <p className="blog-enquiry-intro">
         {intro ?? "Need a voice for something similar? Send me a quick message and I'll get back to you."}
       </p>
+      {showReplyEstimate && <ContactReplyEstimate />}
 
       <form onSubmit={handleSubmit} noValidate className="blog-enquiry-form">
         <input
@@ -162,7 +165,7 @@ export default function BlogEnquiryForm({ pageTitle, pageUrl, intro, afterMessag
             rows={4}
             value={message}
             onChange={e => { setMessage(e.target.value); setErrors(p => ({ ...p, message: undefined })); }}
-            placeholder="Tell me a little about your project and usage..."
+            placeholder="Tell me about your project, where the audio will be used and any deadline."
           />
           {message.length > 0 && (
             <span className={`blog-enquiry-wordcount${messageReady ? ' blog-enquiry-wordcount--ok' : ''}`}>

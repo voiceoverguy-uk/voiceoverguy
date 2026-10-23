@@ -7,3 +7,4 @@
 - [Video markup evidence](video-markup-evidence.md) — retain visible videos but defer VideoObjects when provider dates or thumbnails cannot be verified.
 - [Deliberately removed pages](deliberately-removed-pages.md) — the Tesco banking app page was intentionally removed; do not restore it to clear Search Console.
 - [Headless UI input verification](headless-ui-input.md) — shell-launched Chromium rendered pages but ignored CDP mouse/key dispatch; verify semantics without claiming physical-input coverage.
+- [Contact reply estimates](contact-reply-policy.md) — estimates describe Guy’s UK availability, not visitor-local time, live online status or a response guarantee.

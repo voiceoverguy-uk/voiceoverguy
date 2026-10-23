@@ -5971,6 +5971,36 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   /* form column */
 }
 
+.contact-reply-time {
+  margin-top: 18px;
+  color: var(--grey-dark);
+}
+
+.contact-reply-time-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.contact-reply-time-estimate {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 6px;
+}
+
+.contact-reply-time-note {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.blog-enquiry-section .contact-reply-time {
+  margin: -4px 0 22px;
+  max-width: 640px;
+}
+
 .homepage-contact-form {
   display: flex;
   flex-direction: column;

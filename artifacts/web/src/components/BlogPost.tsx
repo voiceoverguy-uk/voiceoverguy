@@ -318,7 +318,7 @@ export default function BlogPost({ post }: Props) {
             </Link>
           </div>
 
-          <BlogEnquiryForm pageTitle={post.pageTitle} pageUrl={post.url} />
+          <BlogEnquiryForm pageTitle={post.pageTitle} pageUrl={post.url} showReplyEstimate />
 
         </div>
       </section>
