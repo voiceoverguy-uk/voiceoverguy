@@ -21,6 +21,8 @@
  *     present and correctly configured in the root vercel.json.
  *  7. Every published blog slug (excluding core-page conflicts) appears
  *     exactly once as a canonical URL in public/sitemap.xml.
+ *  8. The FAQ sitemap entry uses /faq and matches the page's canonical metadata,
+ *     with no differently-cased FAQ URLs in any sitemap.
  *
  * Run via: pnpm --filter @workspace/web run check:slugs
  */
@@ -422,6 +424,31 @@ for (const block of entries) {
   }
 }
 console.log(`check-slugs: checked ${publishedCount} published article URLs`);
+
+// ─── Check 8: canonical FAQ sitemap URL ──────────────────────────────────────
+
+console.log('check-slugs: [8] Verifying canonical FAQ sitemap URL …');
+
+const faqCanonical = `${CANONICAL_ORIGIN}faq`;
+const faqPageSrc = readFileSync(join(ROOT, 'src', 'app', 'faq', 'page.tsx'), 'utf8');
+const declaredFaqCanonical = faqPageSrc.match(/canonical:\s*['"]([^'"]+)['"]/)?.[1];
+
+if (declaredFaqCanonical !== faqCanonical) {
+  fail(`FAQ page canonical must be "${faqCanonical}", found "${declaredFaqCanonical}"`);
+}
+
+for (const file of sitemapFiles) {
+  const sitemap = readFileSync(join(publicDir, file), 'utf8');
+  const locations = [...sitemap.matchAll(LOC_RE)].map((match) => match[1]);
+  if (file === 'sitemap.xml' && locations.filter((loc) => loc === faqCanonical).length !== 1) {
+    fail(`sitemap.xml must contain exactly one canonical FAQ <loc>: "${faqCanonical}"`);
+  }
+  for (const loc of locations) {
+    if (loc.toLowerCase() === faqCanonical && loc !== faqCanonical) {
+      fail(`${file} FAQ <loc> must use canonical lowercase URL "${faqCanonical}", found "${loc}"`);
+    }
+  }
+}
 
 // ─── Summary ─────────────────────────────────────────────────────────────────
 
