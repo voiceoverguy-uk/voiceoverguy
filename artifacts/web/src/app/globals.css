@@ -1697,23 +1697,6 @@ audio {
   color: #ffa0a0;
 }
 
-/* Video tile captions */
-.video-caption {
-  text-align: center;
-  padding: 8px 0;
-}
-
-.video-caption p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.video-caption p .text-red {
-  color: var(--red);
-  font-weight: 600;
-}
-
 .section h2 {
   font-size: 1.8rem;
   color: var(--red);
