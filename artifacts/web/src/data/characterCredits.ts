@@ -8,6 +8,13 @@ export type CharacterCreditSlide = {
 
 export const characterCreditSlides: CharacterCreditSlide[] = [
   {
+    src: '/assets/images/character-credits/trusted-voice-of-apple-guy-harris.webp',
+    character: 'Voice of iPhone adverts',
+    production: 'Apple',
+    alt: 'A trusted voice for Apple: Guy Harris, voice of iPhone adverts.',
+    href: '/apple-voice-style',
+  },
+  {
     src: '/assets/images/character-credits/mr-messy.webp',
     character: 'Mr Messy',
     production: 'Mr. Men',
