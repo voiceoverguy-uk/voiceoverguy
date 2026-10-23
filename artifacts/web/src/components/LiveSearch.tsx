@@ -374,9 +374,12 @@ export default function LiveSearch({ compact = false }: { compact?: boolean }) {
   const phrases = useMemo(() => compact ? PHRASES_COMPACT : getSeasonalPhrases(), [compact]);
   const reducedMotion = useReducedMotion();
   const [greetingActive, setGreetingActive] = useState(true);
-  const [greeting] = useState(() => getGreeting());
+  // Keep the server and first browser render identical, regardless of timezone
+  // or when a static export was built. Personalise only after hydration.
+  const [greeting, setGreeting] = useState('Welcome to VoiceoverGuy.co.uk!');
 
   useEffect(() => {
+    setGreeting(getGreeting());
     const timer = setTimeout(() => setGreetingActive(false), 3000);
     return () => clearTimeout(timer);
   }, []);
