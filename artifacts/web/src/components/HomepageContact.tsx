@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { getContactReplyTiming } from '@/lib/contactReplyTiming';
 
 const MIN_WORDS = 8;
 
@@ -35,10 +36,18 @@ export default function HomepageContact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [serverError, setServerError] = useState('');
   const [greeting, setGreeting] = useState('');
+  const [replyTiming, setReplyTiming] = useState('');
   const honeypotRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setGreeting(getTimeGreeting());
+  }, []);
+
+  useEffect(() => {
+    const update = () => setReplyTiming(getContactReplyTiming(new Date()));
+    update();
+    const timer = window.setInterval(update, 30_000);
+    return () => window.clearInterval(timer);
   }, []);
 
   const wordCount = countWords(message);
@@ -107,7 +116,9 @@ export default function HomepageContact() {
           {/* Left column: heading + intro */}
           <div className="homepage-contact-left">
             <h2 className="homepage-contact-heading">Like what you&rsquo;ve heard?<br />Let&rsquo;s talk.</h2>
-            <p className="homepage-contact-intro">From radio commercials, explainer videos, promos and narration to character voices including Santa, Football Commentary, David Attenborough, spooky Halloween voice and more. Send me a quick message and I&rsquo;ll get back to you impressively quick.</p>
+            <p className="homepage-contact-intro">From radio commercials, explainer videos, promos and narration to character voices including Santa, Football Commentary, David Attenborough, spooky Halloween voice and more. Send me a quick message and I&rsquo;ll get back to you impressively quick.
+              {replyTiming && <><br /><span>{replyTiming}</span></>}
+            </p>
           </div>
 
           {/* Right column: form */}
