@@ -45,6 +45,7 @@ Thumbs.db
 .github/instructions/nx.instructions.md
 
 # Build output
+/generated-artifacts/
 artifacts/web/out/
 artifacts/web/.next/
 
