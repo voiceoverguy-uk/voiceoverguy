@@ -10,6 +10,7 @@
     "check:slugs": "node scripts/check-slugs.mjs",
     "check:blog-links": "node scripts/check-blog-links.mjs",
     "test:blog-links": "node --test scripts/check-blog-links.test.mjs",
+    "test:dead-blog-links": "node --test scripts/dead-blog-links.test.mjs",
     "test:disclosure": "node --test scripts/auto-close-disclosure.test.mjs && playwright test --config playwright.disclosure.config.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit && node scripts/check-slugs.mjs"
   },
