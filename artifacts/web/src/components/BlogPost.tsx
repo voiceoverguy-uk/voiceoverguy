@@ -143,10 +143,10 @@ export default function BlogPost({ post }: Props) {
   const isNorthernIrishGuide = post.url === 'guide-to-a-northern-irish-accent';
 
   const ntextSections = [
-    { text: post.ntext1, image: post.nimage1, video: post.nvideo1, alt: post.nalt1 },
-    { text: post.ntext2, image: post.nimage2, video: post.nvideo2, alt: post.nalt2 },
-    { text: post.ntext3, image: post.nimage3, video: post.nvideo3, alt: post.nalt3 },
-    { text: post.ntext4, image: post.nimage4, video: undefined as string | undefined },
+    { text: post.ntext1, image: post.nimage1, video: post.nvideo1, alt: post.nalt1, caption: post.ncaption1 },
+    { text: post.ntext2, image: post.nimage2, video: post.nvideo2, alt: post.nalt2, caption: undefined as string | undefined },
+    { text: post.ntext3, image: post.nimage3, video: post.nvideo3, alt: post.nalt3, caption: undefined as string | undefined },
+    { text: post.ntext4, image: post.nimage4, video: undefined as string | undefined, caption: undefined as string | undefined },
   ].filter(s => (s.text && s.text.trim()) || isValidImageFilename(s.image) || (s.video && s.video.trim()));
 
   const relatedPosts = getRelatedPosts(post.id, 3);
@@ -292,7 +292,14 @@ export default function BlogPost({ post }: Props) {
               </div>
             ) : hasImg ? (
               <div className="blog-media-col">
-                <NImage filename={sec.image} alt={sec.alt || post.alt || post.pageTitle} />
+                {sec.caption ? (
+                  <div className="blog-post-img-card">
+                    <NImage filename={sec.image} alt={sec.alt || post.alt || post.pageTitle} />
+                    <p className="blog-post-img-caption">{sec.caption}</p>
+                  </div>
+                ) : (
+                  <NImage filename={sec.image} alt={sec.alt || post.alt || post.pageTitle} />
+                )}
               </div>
             ) : null;
 

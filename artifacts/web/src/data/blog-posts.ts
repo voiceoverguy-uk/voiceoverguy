@@ -44,6 +44,7 @@ export interface BlogPost {
  nvideo2?: string; // optional YouTube ID embedded inside the ntext2 section
  nvideo3?: string; // optional YouTube ID embedded inside the ntext3 section
  nalt1?: string; // optional alt text for nimage1
+ ncaption1?: string; // optional caption for nimage1
  nalt2?: string; // optional alt text for nimage2
  nalt3?: string; // optional alt text for nimage3
 }
@@ -4750,6 +4751,7 @@ const blogPosts: BlogPost[] = [
  "ntext4": "",
  "nimage1": "guide-to-a-northern-irish-accent3.webp",
  "nalt1": "Highland cow in a green Northern Ireland landscape",
+ "ncaption1": "The “ow” vowel (as in Cow)",
  "nimage2": "",
  "nimage3": "",
  "nimage4": "",
