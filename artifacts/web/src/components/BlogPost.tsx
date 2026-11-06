@@ -8,6 +8,7 @@ import YouTubePauseCoordinator from '@/components/YouTubePauseCoordinator';
 import { buildAllBlogSchemas } from '@/lib/buildSchema';
 import { normaliseHtml } from '@/lib/normaliseHtml';
 import { ConsentGate } from '@/components/ThirdPartyConsent';
+import { NorthernIrishGuideKeepExploring, NorthernIrishGuideListeningBlock } from '@/components/NorthernIrishAccentGuideExtras';
 
 interface Props {
   post: BlogPostType;
@@ -139,6 +140,7 @@ export default function BlogPost({ post }: Props) {
 
   const hasImage = isValidImageFilename(post.image);
   const hasText2 = !!(post.text2 && post.text2.trim());
+  const isNorthernIrishGuide = post.url === 'guide-to-a-northern-irish-accent';
 
   const ntextSections = [
     { text: post.ntext1, image: post.nimage1, video: post.nvideo1, alt: post.nalt1 },
@@ -193,6 +195,8 @@ export default function BlogPost({ post }: Props) {
           </div>
         </div>
       </div>
+
+      {isNorthernIrishGuide && <NorthernIrishGuideListeningBlock />}
 
       <section className="blog-post-body">
         <div className="container">
@@ -319,6 +323,8 @@ export default function BlogPost({ post }: Props) {
           </div>
 
           <BlogEnquiryForm pageTitle={post.pageTitle} pageUrl={post.url} />
+
+          {isNorthernIrishGuide && <NorthernIrishGuideKeepExploring />}
 
         </div>
       </section>

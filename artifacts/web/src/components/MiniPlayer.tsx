@@ -6,6 +6,7 @@ interface MiniPlayerProps {
   src: string;
   title: string;
   artwork?: string;
+  onPlaybackStart?: () => void;
 }
 
 function formatTime(s: number) {
@@ -15,7 +16,7 @@ function formatTime(s: number) {
   return `${m}:${sec.toString().padStart(2, '0')}`;
 }
 
-export default function MiniPlayer({ src, title, artwork }: MiniPlayerProps) {
+export default function MiniPlayer({ src, title, artwork, onPlaybackStart }: MiniPlayerProps) {
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -65,7 +66,7 @@ export default function MiniPlayer({ src, title, artwork }: MiniPlayerProps) {
 
   return (
     <div className="mini-player">
-      <audio ref={audioRef} src={src} preload="metadata" />
+      <audio ref={audioRef} src={src} preload="metadata" onPlay={onPlaybackStart} />
 
       <div className="mini-player-artwork">
         {artwork ? (

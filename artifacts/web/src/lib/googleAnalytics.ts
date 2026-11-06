@@ -41,6 +41,11 @@ export function trackPage(pathname: string) {
   browser.gtag?.('event', 'page_view', page);
 }
 
+export function trackEvent(eventName: string, parameters: Record<string, string>) {
+  const browser = window as AnalyticsWindow;
+  browser.gtag?.('event', eventName, parameters);
+}
+
 export function withdrawAnalytics() {
   const browser = window as AnalyticsWindow;
   browser[`ga-disable-${GA_MEASUREMENT_ID}`] = true;

@@ -3976,6 +3976,72 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
   padding: 40px 0 48px;
 }
 
+.ni-guide-listening-wrap {
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+
+.ni-guide-listening {
+  max-width: 860px;
+  padding: 16px 20px;
+  background: #f7f7f7;
+  border-left: 4px solid var(--red);
+  border-radius: 6px;
+}
+
+.ni-guide-listening-copy h2,
+.ni-guide-keep-exploring h2 {
+  margin: 0 0 6px;
+  color: var(--red);
+  font-size: 1.12rem;
+}
+
+.ni-guide-listening-copy p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.ni-guide-style-label {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: #ececec;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ni-guide-listening .mini-player {
+  margin: 10px 0;
+}
+
+.ni-guide-library-link {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ni-guide-keep-exploring {
+  border-top: 1px solid var(--grey-mid);
+  margin-top: 28px;
+  padding-top: 20px;
+}
+
+.ni-guide-keep-exploring p {
+  margin: 0;
+}
+
+.ni-guide-keep-exploring a {
+  color: var(--red);
+}
+
+.ni-guide-contact-link {
+  font-size: 14px;
+}
+
 .blog-post-date {
   font-size: 13px;
   color: var(--grey-dark);
@@ -4104,6 +4170,14 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 
 .blog-text-col p {
   margin-bottom: 14px;
+}
+
+.ni-celebrity-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(6, auto);
+  grid-auto-flow: column;
+  column-gap: 36px;
 }
 
 .blog-text-col a {
@@ -4392,6 +4466,24 @@ a.isred:hover { color: var(--red-dark); text-decoration: underline; }
 }
 
 @media (max-width: 600px) {
+  .ni-celebrity-list {
+    display: block;
+  }
+  .ni-guide-listening-wrap {
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+  .ni-guide-listening {
+    padding: 12px;
+  }
+  .ni-guide-listening .mini-player {
+    margin: 8px 0;
+    padding: 12px;
+  }
+  .ni-guide-keep-exploring {
+    margin-top: 20px;
+    padding-top: 16px;
+  }
   .blog-grid {
     grid-template-columns: 1fr;
   }
