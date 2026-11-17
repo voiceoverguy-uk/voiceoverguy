@@ -181,4 +181,10 @@ export const testimonials: Testimonial[] = [
     role: "Producer",
     company: "Bay Radio Network, Malta",
   },
+  {
+    quote: "We have used Guy on our awards ceremony for many years, he has been superb everytime, always prompt, professional and ready to help. Would highly recommend.",
+    name: "Colin Thompson",
+    role: "",
+    company: "Clever Duck Media Ltd",
+  },
 ];
